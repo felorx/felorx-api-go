@@ -22,11 +22,11 @@ func Test_puupee_StorageObjectAPIService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test StorageObjectAPIService GetFileOrCredentials", func(t *testing.T) {
+	t.Run("Test StorageObjectAPIService GetFileCredential", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.StorageObjectAPI.GetFileOrCredentials(context.Background()).Execute()
+		resp, httpRes, err := apiClient.StorageObjectAPI.GetFileCredential(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

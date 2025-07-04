@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Privacy** | Pointer to **string** |  | [optional] 
-**PrivacyUrl** | Pointer to **string** |  | [optional] 
-**HomePage** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Privacy** | Pointer to **NullableString** |  | [optional] 
+**PrivacyUrl** | Pointer to **NullableString** |  | [optional] 
+**HomePage** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *CreateOrUpdateAppSdkDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *CreateOrUpdateAppSdkDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDescription
 
 `func (o *CreateOrUpdateAppSdkDto) GetDescription() string`
@@ -79,6 +89,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *CreateOrUpdateAppSdkDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *CreateOrUpdateAppSdkDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetPrivacy
 
 `func (o *CreateOrUpdateAppSdkDto) GetPrivacy() string`
@@ -104,6 +124,16 @@ SetPrivacy sets Privacy field to given value.
 
 HasPrivacy returns a boolean if a field has been set.
 
+### SetPrivacyNil
+
+`func (o *CreateOrUpdateAppSdkDto) SetPrivacyNil(b bool)`
+
+ SetPrivacyNil sets the value for Privacy to be an explicit nil
+
+### UnsetPrivacy
+`func (o *CreateOrUpdateAppSdkDto) UnsetPrivacy()`
+
+UnsetPrivacy ensures that no value is present for Privacy, not even an explicit nil
 ### GetPrivacyUrl
 
 `func (o *CreateOrUpdateAppSdkDto) GetPrivacyUrl() string`
@@ -129,6 +159,16 @@ SetPrivacyUrl sets PrivacyUrl field to given value.
 
 HasPrivacyUrl returns a boolean if a field has been set.
 
+### SetPrivacyUrlNil
+
+`func (o *CreateOrUpdateAppSdkDto) SetPrivacyUrlNil(b bool)`
+
+ SetPrivacyUrlNil sets the value for PrivacyUrl to be an explicit nil
+
+### UnsetPrivacyUrl
+`func (o *CreateOrUpdateAppSdkDto) UnsetPrivacyUrl()`
+
+UnsetPrivacyUrl ensures that no value is present for PrivacyUrl, not even an explicit nil
 ### GetHomePage
 
 `func (o *CreateOrUpdateAppSdkDto) GetHomePage() string`
@@ -154,6 +194,16 @@ SetHomePage sets HomePage field to given value.
 
 HasHomePage returns a boolean if a field has been set.
 
+### SetHomePageNil
+
+`func (o *CreateOrUpdateAppSdkDto) SetHomePageNil(b bool)`
+
+ SetHomePageNil sets the value for HomePage to be an explicit nil
+
+### UnsetHomePage
+`func (o *CreateOrUpdateAppSdkDto) UnsetHomePage()`
+
+UnsetHomePage ensures that no value is present for HomePage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

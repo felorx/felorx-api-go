@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** |  | [optional] 
-**TypeSimple** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 **DisplayName** | Pointer to [**LocalizableStringDto**](LocalizableStringDto.md) |  | [optional] 
 **Api** | Pointer to [**ExtensionPropertyApiDto**](ExtensionPropertyApiDto.md) |  | [optional] 
 **Ui** | Pointer to [**ExtensionPropertyUiDto**](ExtensionPropertyUiDto.md) |  | [optional] 
 **Attributes** | Pointer to [**[]ExtensionPropertyAttributeDto**](ExtensionPropertyAttributeDto.md) |  | [optional] 
-**Configuration** | Pointer to **map[string]map[string]interface{}** |  | [optional] 
-**DefaultValue** | Pointer to **map[string]interface{}** |  | [optional] 
+**Configuration** | Pointer to **map[string]interface{}** |  | [optional] 
+**DefaultValue** | Pointer to **interface{}** |  | [optional] 
 
 ## Methods
 
@@ -57,6 +57,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *ExtensionPropertyDto) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *ExtensionPropertyDto) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTypeSimple
 
 `func (o *ExtensionPropertyDto) GetTypeSimple() string`
@@ -82,6 +92,16 @@ SetTypeSimple sets TypeSimple field to given value.
 
 HasTypeSimple returns a boolean if a field has been set.
 
+### SetTypeSimpleNil
+
+`func (o *ExtensionPropertyDto) SetTypeSimpleNil(b bool)`
+
+ SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
+
+### UnsetTypeSimple
+`func (o *ExtensionPropertyDto) UnsetTypeSimple()`
+
+UnsetTypeSimple ensures that no value is present for TypeSimple, not even an explicit nil
 ### GetDisplayName
 
 `func (o *ExtensionPropertyDto) GetDisplayName() LocalizableStringDto`
@@ -182,22 +202,32 @@ SetAttributes sets Attributes field to given value.
 
 HasAttributes returns a boolean if a field has been set.
 
+### SetAttributesNil
+
+`func (o *ExtensionPropertyDto) SetAttributesNil(b bool)`
+
+ SetAttributesNil sets the value for Attributes to be an explicit nil
+
+### UnsetAttributes
+`func (o *ExtensionPropertyDto) UnsetAttributes()`
+
+UnsetAttributes ensures that no value is present for Attributes, not even an explicit nil
 ### GetConfiguration
 
-`func (o *ExtensionPropertyDto) GetConfiguration() map[string]map[string]interface{}`
+`func (o *ExtensionPropertyDto) GetConfiguration() map[string]interface{}`
 
 GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
 
 ### GetConfigurationOk
 
-`func (o *ExtensionPropertyDto) GetConfigurationOk() (*map[string]map[string]interface{}, bool)`
+`func (o *ExtensionPropertyDto) GetConfigurationOk() (*map[string]interface{}, bool)`
 
 GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguration
 
-`func (o *ExtensionPropertyDto) SetConfiguration(v map[string]map[string]interface{})`
+`func (o *ExtensionPropertyDto) SetConfiguration(v map[string]interface{})`
 
 SetConfiguration sets Configuration field to given value.
 
@@ -207,22 +237,32 @@ SetConfiguration sets Configuration field to given value.
 
 HasConfiguration returns a boolean if a field has been set.
 
+### SetConfigurationNil
+
+`func (o *ExtensionPropertyDto) SetConfigurationNil(b bool)`
+
+ SetConfigurationNil sets the value for Configuration to be an explicit nil
+
+### UnsetConfiguration
+`func (o *ExtensionPropertyDto) UnsetConfiguration()`
+
+UnsetConfiguration ensures that no value is present for Configuration, not even an explicit nil
 ### GetDefaultValue
 
-`func (o *ExtensionPropertyDto) GetDefaultValue() map[string]interface{}`
+`func (o *ExtensionPropertyDto) GetDefaultValue() interface{}`
 
 GetDefaultValue returns the DefaultValue field if non-nil, zero value otherwise.
 
 ### GetDefaultValueOk
 
-`func (o *ExtensionPropertyDto) GetDefaultValueOk() (*map[string]interface{}, bool)`
+`func (o *ExtensionPropertyDto) GetDefaultValueOk() (*interface{}, bool)`
 
 GetDefaultValueOk returns a tuple with the DefaultValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultValue
 
-`func (o *ExtensionPropertyDto) SetDefaultValue(v map[string]interface{})`
+`func (o *ExtensionPropertyDto) SetDefaultValue(v interface{})`
 
 SetDefaultValue sets DefaultValue field to given value.
 
@@ -232,6 +272,16 @@ SetDefaultValue sets DefaultValue field to given value.
 
 HasDefaultValue returns a boolean if a field has been set.
 
+### SetDefaultValueNil
+
+`func (o *ExtensionPropertyDto) SetDefaultValueNil(b bool)`
+
+ SetDefaultValueNil sets the value for DefaultValue to be an explicit nil
+
+### UnsetDefaultValue
+`func (o *ExtensionPropertyDto) UnsetDefaultValue()`
+
+UnsetDefaultValue ensures that no value is present for DefaultValue, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

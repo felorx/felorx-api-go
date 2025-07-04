@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateMessageTemplate
 
-> MessageTemplateDto CreateMessageTemplate(ctx).Body(body).Execute()
+> MessageTemplateDto CreateMessageTemplate(ctx).CreateOrUpdateMessageTemplateDto(createOrUpdateMessageTemplateDto).Execute()
 
 
 
@@ -31,11 +31,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrUpdateMessageTemplateDto() // CreateOrUpdateMessageTemplateDto |  (optional)
+	createOrUpdateMessageTemplateDto := *openapiclient.NewCreateOrUpdateMessageTemplateDto() // CreateOrUpdateMessageTemplateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MessageTemplateAPI.CreateMessageTemplate(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.MessageTemplateAPI.CreateMessageTemplate(context.Background()).CreateOrUpdateMessageTemplateDto(createOrUpdateMessageTemplateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageTemplateAPI.CreateMessageTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateMessageTemplateReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
+ **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
 
 ### Return type
 
@@ -271,7 +271,7 @@ Other parameters are passed through a pointer to a apiGetMessageTemplateListRequ
 
 ## UpdateMessageTemplate
 
-> MessageTemplateDto UpdateMessageTemplate(ctx, id).Body(body).Execute()
+> MessageTemplateDto UpdateMessageTemplate(ctx, id).CreateOrUpdateMessageTemplateDto(createOrUpdateMessageTemplateDto).Execute()
 
 
 
@@ -289,11 +289,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateOrUpdateMessageTemplateDto() // CreateOrUpdateMessageTemplateDto |  (optional)
+	createOrUpdateMessageTemplateDto := *openapiclient.NewCreateOrUpdateMessageTemplateDto() // CreateOrUpdateMessageTemplateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MessageTemplateAPI.UpdateMessageTemplate(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.MessageTemplateAPI.UpdateMessageTemplate(context.Background(), id).CreateOrUpdateMessageTemplateDto(createOrUpdateMessageTemplateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageTemplateAPI.UpdateMessageTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -319,7 +319,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageTemplateReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
+ **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
 
 ### Return type
 

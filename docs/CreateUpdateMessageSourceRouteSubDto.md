@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RouteId** | Pointer to **string** |  | [optional] 
-**Path** | Pointer to **string** |  | [optional] 
-**Values** | Pointer to **map[string]interface{}** |  | [optional] 
+**Path** | Pointer to **NullableString** |  | [optional] 
+**Values** | Pointer to **interface{}** |  | [optional] 
 
 ## Methods
 
@@ -77,22 +77,32 @@ SetPath sets Path field to given value.
 
 HasPath returns a boolean if a field has been set.
 
+### SetPathNil
+
+`func (o *CreateUpdateMessageSourceRouteSubDto) SetPathNil(b bool)`
+
+ SetPathNil sets the value for Path to be an explicit nil
+
+### UnsetPath
+`func (o *CreateUpdateMessageSourceRouteSubDto) UnsetPath()`
+
+UnsetPath ensures that no value is present for Path, not even an explicit nil
 ### GetValues
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) GetValues() map[string]interface{}`
+`func (o *CreateUpdateMessageSourceRouteSubDto) GetValues() interface{}`
 
 GetValues returns the Values field if non-nil, zero value otherwise.
 
 ### GetValuesOk
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) GetValuesOk() (*map[string]interface{}, bool)`
+`func (o *CreateUpdateMessageSourceRouteSubDto) GetValuesOk() (*interface{}, bool)`
 
 GetValuesOk returns a tuple with the Values field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValues
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) SetValues(v map[string]interface{})`
+`func (o *CreateUpdateMessageSourceRouteSubDto) SetValues(v interface{})`
 
 SetValues sets Values field to given value.
 
@@ -102,6 +112,16 @@ SetValues sets Values field to given value.
 
 HasValues returns a boolean if a field has been set.
 
+### SetValuesNil
+
+`func (o *CreateUpdateMessageSourceRouteSubDto) SetValuesNil(b bool)`
+
+ SetValuesNil sets the value for Values to be an explicit nil
+
+### UnsetValues
+`func (o *CreateUpdateMessageSourceRouteSubDto) UnsetValues()`
+
+UnsetValues ensures that no value is present for Values, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

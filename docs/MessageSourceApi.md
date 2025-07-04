@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateMessageSource
 
-> CreateUpdateMessageSourceDto CreateMessageSource(ctx).Body(body).Execute()
+> CreateUpdateMessageSourceDto CreateMessageSource(ctx).CreateUpdateMessageSourceDto(createUpdateMessageSourceDto).Execute()
 
 
 
@@ -31,11 +31,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateUpdateMessageSourceDto() // CreateUpdateMessageSourceDto |  (optional)
+	createUpdateMessageSourceDto := *openapiclient.NewCreateUpdateMessageSourceDto() // CreateUpdateMessageSourceDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MessageSourceAPI.CreateMessageSource(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.MessageSourceAPI.CreateMessageSource(context.Background()).CreateUpdateMessageSourceDto(createUpdateMessageSourceDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageSourceAPI.CreateMessageSource``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateMessageSourceRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
+ **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
 
 ### Return type
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ## UpdateMessageSource
 
-> CreateUpdateMessageSourceDto UpdateMessageSource(ctx, id).Body(body).Execute()
+> CreateUpdateMessageSourceDto UpdateMessageSource(ctx, id).CreateUpdateMessageSourceDto(createUpdateMessageSourceDto).Execute()
 
 
 
@@ -294,11 +294,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateUpdateMessageSourceDto() // CreateUpdateMessageSourceDto |  (optional)
+	createUpdateMessageSourceDto := *openapiclient.NewCreateUpdateMessageSourceDto() // CreateUpdateMessageSourceDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MessageSourceAPI.UpdateMessageSource(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.MessageSourceAPI.UpdateMessageSource(context.Background(), id).CreateUpdateMessageSourceDto(createUpdateMessageSourceDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageSourceAPI.UpdateMessageSource``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -324,7 +324,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageSourceRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
+ **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
 
 ### Return type
 

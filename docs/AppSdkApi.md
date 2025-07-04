@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateAppSdk
 
-> AppSdkDto CreateAppSdk(ctx).Body(body).Execute()
+> AppSdkDto CreateAppSdk(ctx).CreateOrUpdateAppSdkDto(createOrUpdateAppSdkDto).Execute()
 
 
 
@@ -30,11 +30,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrUpdateAppSdkDto() // CreateOrUpdateAppSdkDto |  (optional)
+	createOrUpdateAppSdkDto := *openapiclient.NewCreateOrUpdateAppSdkDto() // CreateOrUpdateAppSdkDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppSdkAPI.CreateAppSdk(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.AppSdkAPI.CreateAppSdk(context.Background()).CreateOrUpdateAppSdkDto(createOrUpdateAppSdkDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppSdkAPI.CreateAppSdk``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateAppSdkRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
+ **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
 
 ### Return type
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ## UpdateAppSdk
 
-> AppSdkDto UpdateAppSdk(ctx, id).Body(body).Execute()
+> AppSdkDto UpdateAppSdk(ctx, id).CreateOrUpdateAppSdkDto(createOrUpdateAppSdkDto).Execute()
 
 
 
@@ -229,11 +229,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateOrUpdateAppSdkDto() // CreateOrUpdateAppSdkDto |  (optional)
+	createOrUpdateAppSdkDto := *openapiclient.NewCreateOrUpdateAppSdkDto() // CreateOrUpdateAppSdkDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppSdkAPI.UpdateAppSdk(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.AppSdkAPI.UpdateAppSdk(context.Background(), id).CreateOrUpdateAppSdkDto(createOrUpdateAppSdkDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppSdkAPI.UpdateAppSdk``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -259,7 +259,7 @@ Other parameters are passed through a pointer to a apiUpdateAppSdkRequest struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
+ **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
 
 ### Return type
 

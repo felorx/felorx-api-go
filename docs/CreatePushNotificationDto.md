@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**PuupeeId** | Pointer to **string** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**App** | Pointer to **string** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**PuupeeId** | Pointer to **NullableString** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**App** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetTitle sets Title field to given value.
 
 HasTitle returns a boolean if a field has been set.
 
+### SetTitleNil
+
+`func (o *CreatePushNotificationDto) SetTitleNil(b bool)`
+
+ SetTitleNil sets the value for Title to be an explicit nil
+
+### UnsetTitle
+`func (o *CreatePushNotificationDto) UnsetTitle()`
+
+UnsetTitle ensures that no value is present for Title, not even an explicit nil
 ### GetDescription
 
 `func (o *CreatePushNotificationDto) GetDescription() string`
@@ -79,6 +89,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *CreatePushNotificationDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *CreatePushNotificationDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetPuupeeId
 
 `func (o *CreatePushNotificationDto) GetPuupeeId() string`
@@ -104,6 +124,16 @@ SetPuupeeId sets PuupeeId field to given value.
 
 HasPuupeeId returns a boolean if a field has been set.
 
+### SetPuupeeIdNil
+
+`func (o *CreatePushNotificationDto) SetPuupeeIdNil(b bool)`
+
+ SetPuupeeIdNil sets the value for PuupeeId to be an explicit nil
+
+### UnsetPuupeeId
+`func (o *CreatePushNotificationDto) UnsetPuupeeId()`
+
+UnsetPuupeeId ensures that no value is present for PuupeeId, not even an explicit nil
 ### GetCreatorId
 
 `func (o *CreatePushNotificationDto) GetCreatorId() string`
@@ -129,6 +159,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *CreatePushNotificationDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *CreatePushNotificationDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetApp
 
 `func (o *CreatePushNotificationDto) GetApp() string`
@@ -154,6 +194,16 @@ SetApp sets App field to given value.
 
 HasApp returns a boolean if a field has been set.
 
+### SetAppNil
+
+`func (o *CreatePushNotificationDto) SetAppNil(b bool)`
+
+ SetAppNil sets the value for App to be an explicit nil
+
+### UnsetApp
+`func (o *CreatePushNotificationDto) UnsetApp()`
+
+UnsetApp ensures that no value is present for App, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CultureName** | Pointer to **string** |  | [optional] 
-**UiCultureName** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**TwoLetterISOLanguageName** | Pointer to **string** |  | [optional] [readonly] 
-**FlagIcon** | Pointer to **string** |  | [optional] 
+**CultureName** | Pointer to **NullableString** |  | [optional] 
+**UiCultureName** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**TwoLetterISOLanguageName** | Pointer to **NullableString** |  | [optional] [readonly] 
+**FlagIcon** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetCultureName sets CultureName field to given value.
 
 HasCultureName returns a boolean if a field has been set.
 
+### SetCultureNameNil
+
+`func (o *LanguageInfo) SetCultureNameNil(b bool)`
+
+ SetCultureNameNil sets the value for CultureName to be an explicit nil
+
+### UnsetCultureName
+`func (o *LanguageInfo) UnsetCultureName()`
+
+UnsetCultureName ensures that no value is present for CultureName, not even an explicit nil
 ### GetUiCultureName
 
 `func (o *LanguageInfo) GetUiCultureName() string`
@@ -79,6 +89,16 @@ SetUiCultureName sets UiCultureName field to given value.
 
 HasUiCultureName returns a boolean if a field has been set.
 
+### SetUiCultureNameNil
+
+`func (o *LanguageInfo) SetUiCultureNameNil(b bool)`
+
+ SetUiCultureNameNil sets the value for UiCultureName to be an explicit nil
+
+### UnsetUiCultureName
+`func (o *LanguageInfo) UnsetUiCultureName()`
+
+UnsetUiCultureName ensures that no value is present for UiCultureName, not even an explicit nil
 ### GetDisplayName
 
 `func (o *LanguageInfo) GetDisplayName() string`
@@ -104,6 +124,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *LanguageInfo) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *LanguageInfo) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetTwoLetterISOLanguageName
 
 `func (o *LanguageInfo) GetTwoLetterISOLanguageName() string`
@@ -129,6 +159,16 @@ SetTwoLetterISOLanguageName sets TwoLetterISOLanguageName field to given value.
 
 HasTwoLetterISOLanguageName returns a boolean if a field has been set.
 
+### SetTwoLetterISOLanguageNameNil
+
+`func (o *LanguageInfo) SetTwoLetterISOLanguageNameNil(b bool)`
+
+ SetTwoLetterISOLanguageNameNil sets the value for TwoLetterISOLanguageName to be an explicit nil
+
+### UnsetTwoLetterISOLanguageName
+`func (o *LanguageInfo) UnsetTwoLetterISOLanguageName()`
+
+UnsetTwoLetterISOLanguageName ensures that no value is present for TwoLetterISOLanguageName, not even an explicit nil
 ### GetFlagIcon
 
 `func (o *LanguageInfo) GetFlagIcon() string`
@@ -154,6 +194,16 @@ SetFlagIcon sets FlagIcon field to given value.
 
 HasFlagIcon returns a boolean if a field has been set.
 
+### SetFlagIconNil
+
+`func (o *LanguageInfo) SetFlagIconNil(b bool)`
+
+ SetFlagIconNil sets the value for FlagIcon to be an explicit nil
+
+### UnsetFlagIcon
+`func (o *LanguageInfo) UnsetFlagIcon()`
+
+UnsetFlagIcon ensures that no value is present for FlagIcon, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** |  | [optional] 
+**Message** | Pointer to **NullableString** |  | [optional] 
 **Members** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
@@ -51,6 +51,16 @@ SetMessage sets Message field to given value.
 
 HasMessage returns a boolean if a field has been set.
 
+### SetMessageNil
+
+`func (o *RemoteServiceValidationErrorInfo) SetMessageNil(b bool)`
+
+ SetMessageNil sets the value for Message to be an explicit nil
+
+### UnsetMessage
+`func (o *RemoteServiceValidationErrorInfo) UnsetMessage()`
+
+UnsetMessage ensures that no value is present for Message, not even an explicit nil
 ### GetMembers
 
 `func (o *RemoteServiceValidationErrorInfo) GetMembers() []string`
@@ -76,6 +86,16 @@ SetMembers sets Members field to given value.
 
 HasMembers returns a boolean if a field has been set.
 
+### SetMembersNil
+
+`func (o *RemoteServiceValidationErrorInfo) SetMembersNil(b bool)`
+
+ SetMembersNil sets the value for Members to be an explicit nil
+
+### UnsetMembers
+`func (o *RemoteServiceValidationErrorInfo) UnsetMembers()`
+
+UnsetMembers ensures that no value is present for Members, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

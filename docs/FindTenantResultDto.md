@@ -5,8 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Success** | Pointer to **bool** |  | [optional] 
-**TenantId** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
+**TenantId** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**NormalizedName** | Pointer to **NullableString** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
 
 ## Methods
@@ -78,6 +79,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *FindTenantResultDto) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *FindTenantResultDto) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetName
 
 `func (o *FindTenantResultDto) GetName() string`
@@ -103,6 +114,51 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *FindTenantResultDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *FindTenantResultDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
+### GetNormalizedName
+
+`func (o *FindTenantResultDto) GetNormalizedName() string`
+
+GetNormalizedName returns the NormalizedName field if non-nil, zero value otherwise.
+
+### GetNormalizedNameOk
+
+`func (o *FindTenantResultDto) GetNormalizedNameOk() (*string, bool)`
+
+GetNormalizedNameOk returns a tuple with the NormalizedName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNormalizedName
+
+`func (o *FindTenantResultDto) SetNormalizedName(v string)`
+
+SetNormalizedName sets NormalizedName field to given value.
+
+### HasNormalizedName
+
+`func (o *FindTenantResultDto) HasNormalizedName() bool`
+
+HasNormalizedName returns a boolean if a field has been set.
+
+### SetNormalizedNameNil
+
+`func (o *FindTenantResultDto) SetNormalizedNameNil(b bool)`
+
+ SetNormalizedNameNil sets the value for NormalizedName to be an explicit nil
+
+### UnsetNormalizedName
+`func (o *FindTenantResultDto) UnsetNormalizedName()`
+
+UnsetNormalizedName ensures that no value is present for NormalizedName, not even an explicit nil
 ### GetIsActive
 
 `func (o *FindTenantResultDto) GetIsActive() bool`

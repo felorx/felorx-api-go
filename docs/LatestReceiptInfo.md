@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Quantity** | Pointer to **string** |  | [optional] 
-**ProductId** | Pointer to **string** |  | [optional] 
-**TransactionId** | Pointer to **string** |  | [optional] 
-**OriginalTransactionId** | Pointer to **string** |  | [optional] 
-**PurchaseDate** | Pointer to **string** |  | [optional] 
-**PurchaseDateMs** | Pointer to **string** |  | [optional] 
-**PurchaseDatePst** | Pointer to **string** |  | [optional] 
-**OriginalPurchaseDate** | Pointer to **string** |  | [optional] 
-**OriginalPurchaseDateMs** | Pointer to **string** |  | [optional] 
-**OriginalPurchaseDatePst** | Pointer to **string** |  | [optional] 
-**ExpiresDate** | Pointer to **string** |  | [optional] 
-**ExpiresDateMs** | Pointer to **string** |  | [optional] 
-**ExpiresDatePst** | Pointer to **string** |  | [optional] 
-**WebOrderLineItemId** | Pointer to **string** |  | [optional] 
-**IsTrialPeriod** | Pointer to **string** |  | [optional] 
-**IsInIntroOfferPeriod** | Pointer to **string** |  | [optional] 
+**Quantity** | Pointer to **NullableString** |  | [optional] 
+**ProductId** | Pointer to **NullableString** |  | [optional] 
+**TransactionId** | Pointer to **NullableString** |  | [optional] 
+**OriginalTransactionId** | Pointer to **NullableString** |  | [optional] 
+**PurchaseDate** | Pointer to **NullableString** |  | [optional] 
+**PurchaseDateMs** | Pointer to **NullableString** |  | [optional] 
+**PurchaseDatePst** | Pointer to **NullableString** |  | [optional] 
+**OriginalPurchaseDate** | Pointer to **NullableString** |  | [optional] 
+**OriginalPurchaseDateMs** | Pointer to **NullableString** |  | [optional] 
+**OriginalPurchaseDatePst** | Pointer to **NullableString** |  | [optional] 
+**ExpiresDate** | Pointer to **NullableString** |  | [optional] 
+**ExpiresDateMs** | Pointer to **NullableString** |  | [optional] 
+**ExpiresDatePst** | Pointer to **NullableString** |  | [optional] 
+**WebOrderLineItemId** | Pointer to **NullableString** |  | [optional] 
+**IsTrialPeriod** | Pointer to **NullableString** |  | [optional] 
+**IsInIntroOfferPeriod** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -65,6 +65,16 @@ SetQuantity sets Quantity field to given value.
 
 HasQuantity returns a boolean if a field has been set.
 
+### SetQuantityNil
+
+`func (o *LatestReceiptInfo) SetQuantityNil(b bool)`
+
+ SetQuantityNil sets the value for Quantity to be an explicit nil
+
+### UnsetQuantity
+`func (o *LatestReceiptInfo) UnsetQuantity()`
+
+UnsetQuantity ensures that no value is present for Quantity, not even an explicit nil
 ### GetProductId
 
 `func (o *LatestReceiptInfo) GetProductId() string`
@@ -90,6 +100,16 @@ SetProductId sets ProductId field to given value.
 
 HasProductId returns a boolean if a field has been set.
 
+### SetProductIdNil
+
+`func (o *LatestReceiptInfo) SetProductIdNil(b bool)`
+
+ SetProductIdNil sets the value for ProductId to be an explicit nil
+
+### UnsetProductId
+`func (o *LatestReceiptInfo) UnsetProductId()`
+
+UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
 ### GetTransactionId
 
 `func (o *LatestReceiptInfo) GetTransactionId() string`
@@ -115,6 +135,16 @@ SetTransactionId sets TransactionId field to given value.
 
 HasTransactionId returns a boolean if a field has been set.
 
+### SetTransactionIdNil
+
+`func (o *LatestReceiptInfo) SetTransactionIdNil(b bool)`
+
+ SetTransactionIdNil sets the value for TransactionId to be an explicit nil
+
+### UnsetTransactionId
+`func (o *LatestReceiptInfo) UnsetTransactionId()`
+
+UnsetTransactionId ensures that no value is present for TransactionId, not even an explicit nil
 ### GetOriginalTransactionId
 
 `func (o *LatestReceiptInfo) GetOriginalTransactionId() string`
@@ -140,6 +170,16 @@ SetOriginalTransactionId sets OriginalTransactionId field to given value.
 
 HasOriginalTransactionId returns a boolean if a field has been set.
 
+### SetOriginalTransactionIdNil
+
+`func (o *LatestReceiptInfo) SetOriginalTransactionIdNil(b bool)`
+
+ SetOriginalTransactionIdNil sets the value for OriginalTransactionId to be an explicit nil
+
+### UnsetOriginalTransactionId
+`func (o *LatestReceiptInfo) UnsetOriginalTransactionId()`
+
+UnsetOriginalTransactionId ensures that no value is present for OriginalTransactionId, not even an explicit nil
 ### GetPurchaseDate
 
 `func (o *LatestReceiptInfo) GetPurchaseDate() string`
@@ -165,6 +205,16 @@ SetPurchaseDate sets PurchaseDate field to given value.
 
 HasPurchaseDate returns a boolean if a field has been set.
 
+### SetPurchaseDateNil
+
+`func (o *LatestReceiptInfo) SetPurchaseDateNil(b bool)`
+
+ SetPurchaseDateNil sets the value for PurchaseDate to be an explicit nil
+
+### UnsetPurchaseDate
+`func (o *LatestReceiptInfo) UnsetPurchaseDate()`
+
+UnsetPurchaseDate ensures that no value is present for PurchaseDate, not even an explicit nil
 ### GetPurchaseDateMs
 
 `func (o *LatestReceiptInfo) GetPurchaseDateMs() string`
@@ -190,6 +240,16 @@ SetPurchaseDateMs sets PurchaseDateMs field to given value.
 
 HasPurchaseDateMs returns a boolean if a field has been set.
 
+### SetPurchaseDateMsNil
+
+`func (o *LatestReceiptInfo) SetPurchaseDateMsNil(b bool)`
+
+ SetPurchaseDateMsNil sets the value for PurchaseDateMs to be an explicit nil
+
+### UnsetPurchaseDateMs
+`func (o *LatestReceiptInfo) UnsetPurchaseDateMs()`
+
+UnsetPurchaseDateMs ensures that no value is present for PurchaseDateMs, not even an explicit nil
 ### GetPurchaseDatePst
 
 `func (o *LatestReceiptInfo) GetPurchaseDatePst() string`
@@ -215,6 +275,16 @@ SetPurchaseDatePst sets PurchaseDatePst field to given value.
 
 HasPurchaseDatePst returns a boolean if a field has been set.
 
+### SetPurchaseDatePstNil
+
+`func (o *LatestReceiptInfo) SetPurchaseDatePstNil(b bool)`
+
+ SetPurchaseDatePstNil sets the value for PurchaseDatePst to be an explicit nil
+
+### UnsetPurchaseDatePst
+`func (o *LatestReceiptInfo) UnsetPurchaseDatePst()`
+
+UnsetPurchaseDatePst ensures that no value is present for PurchaseDatePst, not even an explicit nil
 ### GetOriginalPurchaseDate
 
 `func (o *LatestReceiptInfo) GetOriginalPurchaseDate() string`
@@ -240,6 +310,16 @@ SetOriginalPurchaseDate sets OriginalPurchaseDate field to given value.
 
 HasOriginalPurchaseDate returns a boolean if a field has been set.
 
+### SetOriginalPurchaseDateNil
+
+`func (o *LatestReceiptInfo) SetOriginalPurchaseDateNil(b bool)`
+
+ SetOriginalPurchaseDateNil sets the value for OriginalPurchaseDate to be an explicit nil
+
+### UnsetOriginalPurchaseDate
+`func (o *LatestReceiptInfo) UnsetOriginalPurchaseDate()`
+
+UnsetOriginalPurchaseDate ensures that no value is present for OriginalPurchaseDate, not even an explicit nil
 ### GetOriginalPurchaseDateMs
 
 `func (o *LatestReceiptInfo) GetOriginalPurchaseDateMs() string`
@@ -265,6 +345,16 @@ SetOriginalPurchaseDateMs sets OriginalPurchaseDateMs field to given value.
 
 HasOriginalPurchaseDateMs returns a boolean if a field has been set.
 
+### SetOriginalPurchaseDateMsNil
+
+`func (o *LatestReceiptInfo) SetOriginalPurchaseDateMsNil(b bool)`
+
+ SetOriginalPurchaseDateMsNil sets the value for OriginalPurchaseDateMs to be an explicit nil
+
+### UnsetOriginalPurchaseDateMs
+`func (o *LatestReceiptInfo) UnsetOriginalPurchaseDateMs()`
+
+UnsetOriginalPurchaseDateMs ensures that no value is present for OriginalPurchaseDateMs, not even an explicit nil
 ### GetOriginalPurchaseDatePst
 
 `func (o *LatestReceiptInfo) GetOriginalPurchaseDatePst() string`
@@ -290,6 +380,16 @@ SetOriginalPurchaseDatePst sets OriginalPurchaseDatePst field to given value.
 
 HasOriginalPurchaseDatePst returns a boolean if a field has been set.
 
+### SetOriginalPurchaseDatePstNil
+
+`func (o *LatestReceiptInfo) SetOriginalPurchaseDatePstNil(b bool)`
+
+ SetOriginalPurchaseDatePstNil sets the value for OriginalPurchaseDatePst to be an explicit nil
+
+### UnsetOriginalPurchaseDatePst
+`func (o *LatestReceiptInfo) UnsetOriginalPurchaseDatePst()`
+
+UnsetOriginalPurchaseDatePst ensures that no value is present for OriginalPurchaseDatePst, not even an explicit nil
 ### GetExpiresDate
 
 `func (o *LatestReceiptInfo) GetExpiresDate() string`
@@ -315,6 +415,16 @@ SetExpiresDate sets ExpiresDate field to given value.
 
 HasExpiresDate returns a boolean if a field has been set.
 
+### SetExpiresDateNil
+
+`func (o *LatestReceiptInfo) SetExpiresDateNil(b bool)`
+
+ SetExpiresDateNil sets the value for ExpiresDate to be an explicit nil
+
+### UnsetExpiresDate
+`func (o *LatestReceiptInfo) UnsetExpiresDate()`
+
+UnsetExpiresDate ensures that no value is present for ExpiresDate, not even an explicit nil
 ### GetExpiresDateMs
 
 `func (o *LatestReceiptInfo) GetExpiresDateMs() string`
@@ -340,6 +450,16 @@ SetExpiresDateMs sets ExpiresDateMs field to given value.
 
 HasExpiresDateMs returns a boolean if a field has been set.
 
+### SetExpiresDateMsNil
+
+`func (o *LatestReceiptInfo) SetExpiresDateMsNil(b bool)`
+
+ SetExpiresDateMsNil sets the value for ExpiresDateMs to be an explicit nil
+
+### UnsetExpiresDateMs
+`func (o *LatestReceiptInfo) UnsetExpiresDateMs()`
+
+UnsetExpiresDateMs ensures that no value is present for ExpiresDateMs, not even an explicit nil
 ### GetExpiresDatePst
 
 `func (o *LatestReceiptInfo) GetExpiresDatePst() string`
@@ -365,6 +485,16 @@ SetExpiresDatePst sets ExpiresDatePst field to given value.
 
 HasExpiresDatePst returns a boolean if a field has been set.
 
+### SetExpiresDatePstNil
+
+`func (o *LatestReceiptInfo) SetExpiresDatePstNil(b bool)`
+
+ SetExpiresDatePstNil sets the value for ExpiresDatePst to be an explicit nil
+
+### UnsetExpiresDatePst
+`func (o *LatestReceiptInfo) UnsetExpiresDatePst()`
+
+UnsetExpiresDatePst ensures that no value is present for ExpiresDatePst, not even an explicit nil
 ### GetWebOrderLineItemId
 
 `func (o *LatestReceiptInfo) GetWebOrderLineItemId() string`
@@ -390,6 +520,16 @@ SetWebOrderLineItemId sets WebOrderLineItemId field to given value.
 
 HasWebOrderLineItemId returns a boolean if a field has been set.
 
+### SetWebOrderLineItemIdNil
+
+`func (o *LatestReceiptInfo) SetWebOrderLineItemIdNil(b bool)`
+
+ SetWebOrderLineItemIdNil sets the value for WebOrderLineItemId to be an explicit nil
+
+### UnsetWebOrderLineItemId
+`func (o *LatestReceiptInfo) UnsetWebOrderLineItemId()`
+
+UnsetWebOrderLineItemId ensures that no value is present for WebOrderLineItemId, not even an explicit nil
 ### GetIsTrialPeriod
 
 `func (o *LatestReceiptInfo) GetIsTrialPeriod() string`
@@ -415,6 +555,16 @@ SetIsTrialPeriod sets IsTrialPeriod field to given value.
 
 HasIsTrialPeriod returns a boolean if a field has been set.
 
+### SetIsTrialPeriodNil
+
+`func (o *LatestReceiptInfo) SetIsTrialPeriodNil(b bool)`
+
+ SetIsTrialPeriodNil sets the value for IsTrialPeriod to be an explicit nil
+
+### UnsetIsTrialPeriod
+`func (o *LatestReceiptInfo) UnsetIsTrialPeriod()`
+
+UnsetIsTrialPeriod ensures that no value is present for IsTrialPeriod, not even an explicit nil
 ### GetIsInIntroOfferPeriod
 
 `func (o *LatestReceiptInfo) GetIsInIntroOfferPeriod() string`
@@ -440,6 +590,16 @@ SetIsInIntroOfferPeriod sets IsInIntroOfferPeriod field to given value.
 
 HasIsInIntroOfferPeriod returns a boolean if a field has been set.
 
+### SetIsInIntroOfferPeriodNil
+
+`func (o *LatestReceiptInfo) SetIsInIntroOfferPeriodNil(b bool)`
+
+ SetIsInIntroOfferPeriodNil sets the value for IsInIntroOfferPeriod to be an explicit nil
+
+### UnsetIsInIntroOfferPeriod
+`func (o *LatestReceiptInfo) UnsetIsInIntroOfferPeriod()`
+
+UnsetIsInIntroOfferPeriod ensures that no value is present for IsInIntroOfferPeriod, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

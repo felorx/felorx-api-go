@@ -6,23 +6,23 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
 **AppId** | Pointer to **string** |  | [optional] 
-**AppName** | Pointer to **string** |  | [optional] 
-**Args** | Pointer to **map[string]interface{}** |  | [optional] 
-**Envs** | Pointer to **map[string]interface{}** |  | [optional] 
+**AppName** | Pointer to **NullableString** |  | [optional] 
+**Args** | Pointer to **interface{}** |  | [optional] 
+**Envs** | Pointer to **interface{}** |  | [optional] 
 **Status** | Pointer to [**AppRunStatus**](AppRunStatus.md) |  | [optional] 
-**Result** | Pointer to **string** |  | [optional] 
-**Error** | Pointer to **string** |  | [optional] 
-**FinishAt** | Pointer to **time.Time** |  | [optional] 
-**Output** | Pointer to **string** |  | [optional] 
-**WorkerId** | Pointer to **string** |  | [optional] 
-**WorkerName** | Pointer to **string** |  | [optional] 
+**Result** | Pointer to **NullableString** |  | [optional] 
+**Error** | Pointer to **NullableString** |  | [optional] 
+**FinishAt** | Pointer to **NullableTime** |  | [optional] 
+**Output** | Pointer to **NullableString** |  | [optional] 
+**WorkerId** | Pointer to **NullableString** |  | [optional] 
+**WorkerName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -118,6 +118,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *AppRunRecordDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *AppRunRecordDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *AppRunRecordDto) GetLastModificationTime() time.Time`
@@ -143,6 +153,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *AppRunRecordDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *AppRunRecordDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *AppRunRecordDto) GetLastModifierId() string`
@@ -168,6 +188,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *AppRunRecordDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *AppRunRecordDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *AppRunRecordDto) GetIsDeleted() bool`
@@ -218,6 +248,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *AppRunRecordDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *AppRunRecordDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *AppRunRecordDto) GetDeletionTime() time.Time`
@@ -243,6 +283,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *AppRunRecordDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *AppRunRecordDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetAppId
 
 `func (o *AppRunRecordDto) GetAppId() string`
@@ -293,22 +343,32 @@ SetAppName sets AppName field to given value.
 
 HasAppName returns a boolean if a field has been set.
 
+### SetAppNameNil
+
+`func (o *AppRunRecordDto) SetAppNameNil(b bool)`
+
+ SetAppNameNil sets the value for AppName to be an explicit nil
+
+### UnsetAppName
+`func (o *AppRunRecordDto) UnsetAppName()`
+
+UnsetAppName ensures that no value is present for AppName, not even an explicit nil
 ### GetArgs
 
-`func (o *AppRunRecordDto) GetArgs() map[string]interface{}`
+`func (o *AppRunRecordDto) GetArgs() interface{}`
 
 GetArgs returns the Args field if non-nil, zero value otherwise.
 
 ### GetArgsOk
 
-`func (o *AppRunRecordDto) GetArgsOk() (*map[string]interface{}, bool)`
+`func (o *AppRunRecordDto) GetArgsOk() (*interface{}, bool)`
 
 GetArgsOk returns a tuple with the Args field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArgs
 
-`func (o *AppRunRecordDto) SetArgs(v map[string]interface{})`
+`func (o *AppRunRecordDto) SetArgs(v interface{})`
 
 SetArgs sets Args field to given value.
 
@@ -318,22 +378,32 @@ SetArgs sets Args field to given value.
 
 HasArgs returns a boolean if a field has been set.
 
+### SetArgsNil
+
+`func (o *AppRunRecordDto) SetArgsNil(b bool)`
+
+ SetArgsNil sets the value for Args to be an explicit nil
+
+### UnsetArgs
+`func (o *AppRunRecordDto) UnsetArgs()`
+
+UnsetArgs ensures that no value is present for Args, not even an explicit nil
 ### GetEnvs
 
-`func (o *AppRunRecordDto) GetEnvs() map[string]interface{}`
+`func (o *AppRunRecordDto) GetEnvs() interface{}`
 
 GetEnvs returns the Envs field if non-nil, zero value otherwise.
 
 ### GetEnvsOk
 
-`func (o *AppRunRecordDto) GetEnvsOk() (*map[string]interface{}, bool)`
+`func (o *AppRunRecordDto) GetEnvsOk() (*interface{}, bool)`
 
 GetEnvsOk returns a tuple with the Envs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnvs
 
-`func (o *AppRunRecordDto) SetEnvs(v map[string]interface{})`
+`func (o *AppRunRecordDto) SetEnvs(v interface{})`
 
 SetEnvs sets Envs field to given value.
 
@@ -343,6 +413,16 @@ SetEnvs sets Envs field to given value.
 
 HasEnvs returns a boolean if a field has been set.
 
+### SetEnvsNil
+
+`func (o *AppRunRecordDto) SetEnvsNil(b bool)`
+
+ SetEnvsNil sets the value for Envs to be an explicit nil
+
+### UnsetEnvs
+`func (o *AppRunRecordDto) UnsetEnvs()`
+
+UnsetEnvs ensures that no value is present for Envs, not even an explicit nil
 ### GetStatus
 
 `func (o *AppRunRecordDto) GetStatus() AppRunStatus`
@@ -393,6 +473,16 @@ SetResult sets Result field to given value.
 
 HasResult returns a boolean if a field has been set.
 
+### SetResultNil
+
+`func (o *AppRunRecordDto) SetResultNil(b bool)`
+
+ SetResultNil sets the value for Result to be an explicit nil
+
+### UnsetResult
+`func (o *AppRunRecordDto) UnsetResult()`
+
+UnsetResult ensures that no value is present for Result, not even an explicit nil
 ### GetError
 
 `func (o *AppRunRecordDto) GetError() string`
@@ -418,6 +508,16 @@ SetError sets Error field to given value.
 
 HasError returns a boolean if a field has been set.
 
+### SetErrorNil
+
+`func (o *AppRunRecordDto) SetErrorNil(b bool)`
+
+ SetErrorNil sets the value for Error to be an explicit nil
+
+### UnsetError
+`func (o *AppRunRecordDto) UnsetError()`
+
+UnsetError ensures that no value is present for Error, not even an explicit nil
 ### GetFinishAt
 
 `func (o *AppRunRecordDto) GetFinishAt() time.Time`
@@ -443,6 +543,16 @@ SetFinishAt sets FinishAt field to given value.
 
 HasFinishAt returns a boolean if a field has been set.
 
+### SetFinishAtNil
+
+`func (o *AppRunRecordDto) SetFinishAtNil(b bool)`
+
+ SetFinishAtNil sets the value for FinishAt to be an explicit nil
+
+### UnsetFinishAt
+`func (o *AppRunRecordDto) UnsetFinishAt()`
+
+UnsetFinishAt ensures that no value is present for FinishAt, not even an explicit nil
 ### GetOutput
 
 `func (o *AppRunRecordDto) GetOutput() string`
@@ -468,6 +578,16 @@ SetOutput sets Output field to given value.
 
 HasOutput returns a boolean if a field has been set.
 
+### SetOutputNil
+
+`func (o *AppRunRecordDto) SetOutputNil(b bool)`
+
+ SetOutputNil sets the value for Output to be an explicit nil
+
+### UnsetOutput
+`func (o *AppRunRecordDto) UnsetOutput()`
+
+UnsetOutput ensures that no value is present for Output, not even an explicit nil
 ### GetWorkerId
 
 `func (o *AppRunRecordDto) GetWorkerId() string`
@@ -493,6 +613,16 @@ SetWorkerId sets WorkerId field to given value.
 
 HasWorkerId returns a boolean if a field has been set.
 
+### SetWorkerIdNil
+
+`func (o *AppRunRecordDto) SetWorkerIdNil(b bool)`
+
+ SetWorkerIdNil sets the value for WorkerId to be an explicit nil
+
+### UnsetWorkerId
+`func (o *AppRunRecordDto) UnsetWorkerId()`
+
+UnsetWorkerId ensures that no value is present for WorkerId, not even an explicit nil
 ### GetWorkerName
 
 `func (o *AppRunRecordDto) GetWorkerName() string`
@@ -518,6 +648,16 @@ SetWorkerName sets WorkerName field to given value.
 
 HasWorkerName returns a boolean if a field has been set.
 
+### SetWorkerNameNil
+
+`func (o *AppRunRecordDto) SetWorkerNameNil(b bool)`
+
+ SetWorkerNameNil sets the value for WorkerName to be an explicit nil
+
+### UnsetWorkerName
+`func (o *AppRunRecordDto) UnsetWorkerName()`
+
+UnsetWorkerName ensures that no value is present for WorkerName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

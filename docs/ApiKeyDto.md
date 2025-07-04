@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**Key** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Key** | Pointer to **NullableString** |  | [optional] 
 **Active** | Pointer to **bool** |  | [optional] 
-**ExpireAt** | Pointer to **time.Time** |  | [optional] 
+**ExpireAt** | Pointer to **NullableTime** |  | [optional] 
 
 ## Methods
 
@@ -79,6 +79,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *ApiKeyDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *ApiKeyDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetKey
 
 `func (o *ApiKeyDto) GetKey() string`
@@ -104,6 +114,16 @@ SetKey sets Key field to given value.
 
 HasKey returns a boolean if a field has been set.
 
+### SetKeyNil
+
+`func (o *ApiKeyDto) SetKeyNil(b bool)`
+
+ SetKeyNil sets the value for Key to be an explicit nil
+
+### UnsetKey
+`func (o *ApiKeyDto) UnsetKey()`
+
+UnsetKey ensures that no value is present for Key, not even an explicit nil
 ### GetActive
 
 `func (o *ApiKeyDto) GetActive() bool`
@@ -154,6 +174,16 @@ SetExpireAt sets ExpireAt field to given value.
 
 HasExpireAt returns a boolean if a field has been set.
 
+### SetExpireAtNil
+
+`func (o *ApiKeyDto) SetExpireAtNil(b bool)`
+
+ SetExpireAtNil sets the value for ExpireAt to be an explicit nil
+
+### UnsetExpireAt
+`func (o *ApiKeyDto) UnsetExpireAt()`
+
+UnsetExpireAt ensures that no value is present for ExpireAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

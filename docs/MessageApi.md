@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## Publish
 
-> Publish(ctx).Body(body).Execute()
+> Publish(ctx).MessagePublishDto(messagePublishDto).Execute()
 
 
 
@@ -30,11 +30,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewMessagePublishDto() // MessagePublishDto |  (optional)
+	messagePublishDto := *openapiclient.NewMessagePublishDto() // MessagePublishDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageAPI.Publish(context.Background()).Body(body).Execute()
+	r, err := apiClient.MessageAPI.Publish(context.Background()).MessagePublishDto(messagePublishDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageAPI.Publish``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiPublishRequest struct via 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**MessagePublishDto**](MessagePublishDto.md) |  | 
+ **messagePublishDto** | [**MessagePublishDto**](MessagePublishDto.md) |  | 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ## Recall
 
-> Recall(ctx).Body(body).Execute()
+> Recall(ctx).MessageRecallDto(messageRecallDto).Execute()
 
 
 
@@ -92,11 +92,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewMessageRecallDto() // MessageRecallDto |  (optional)
+	messageRecallDto := *openapiclient.NewMessageRecallDto() // MessageRecallDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageAPI.Recall(context.Background()).Body(body).Execute()
+	r, err := apiClient.MessageAPI.Recall(context.Background()).MessageRecallDto(messageRecallDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageAPI.Recall``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -115,7 +115,7 @@ Other parameters are passed through a pointer to a apiRecallRequest struct via t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**MessageRecallDto**](MessageRecallDto.md) |  | 
+ **messageRecallDto** | [**MessageRecallDto**](MessageRecallDto.md) |  | 
 
 ### Return type
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ## Subscribe
 
-> Subscribe(ctx).Body(body).Execute()
+> Subscribe(ctx).MessageSubscribeDto(messageSubscribeDto).Execute()
 
 
 
@@ -154,11 +154,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewMessageSubscribeDto() // MessageSubscribeDto |  (optional)
+	messageSubscribeDto := *openapiclient.NewMessageSubscribeDto() // MessageSubscribeDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageAPI.Subscribe(context.Background()).Body(body).Execute()
+	r, err := apiClient.MessageAPI.Subscribe(context.Background()).MessageSubscribeDto(messageSubscribeDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageAPI.Subscribe``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -177,7 +177,7 @@ Other parameters are passed through a pointer to a apiSubscribeRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**MessageSubscribeDto**](MessageSubscribeDto.md) |  | 
+ **messageSubscribeDto** | [**MessageSubscribeDto**](MessageSubscribeDto.md) |  | 
 
 ### Return type
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ## Unsubscribe
 
-> Unsubscribe(ctx).Body(body).Execute()
+> Unsubscribe(ctx).MessageUnsubscribeDto(messageUnsubscribeDto).Execute()
 
 
 
@@ -216,11 +216,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewMessageUnsubscribeDto() // MessageUnsubscribeDto |  (optional)
+	messageUnsubscribeDto := *openapiclient.NewMessageUnsubscribeDto() // MessageUnsubscribeDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageAPI.Unsubscribe(context.Background()).Body(body).Execute()
+	r, err := apiClient.MessageAPI.Unsubscribe(context.Background()).MessageUnsubscribeDto(messageUnsubscribeDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageAPI.Unsubscribe``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -239,7 +239,7 @@ Other parameters are passed through a pointer to a apiUnsubscribeRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md) |  | 
+ **messageUnsubscribeDto** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md) |  | 
 
 ### Return type
 

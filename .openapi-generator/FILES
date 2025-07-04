@@ -14,13 +14,13 @@ api_app_pricing.go
 api_app_pricing_item.go
 api_app_release.go
 api_app_sdk.go
+api_app_tester.go
 api_app_user_score.go
 api_avatar.go
 api_device.go
 api_dynamic_claims.go
 api_email_settings.go
 api_features.go
-api_login.go
 api_message.go
 api_message_source.go
 api_message_source_category.go
@@ -44,7 +44,6 @@ configuration.go
 docs/AbpApiDefinitionAPI.md
 docs/AbpApplicationConfigurationAPI.md
 docs/AbpApplicationLocalizationAPI.md
-docs/AbpLoginResult.md
 docs/AbpTenantAPI.md
 docs/AccountAPI.md
 docs/AccountDeletionDto.md
@@ -79,6 +78,9 @@ docs/AppRunStatus.md
 docs/AppSdkAPI.md
 docs/AppSdkDto.md
 docs/AppSdkDtoPagedResultDto.md
+docs/AppTesterAPI.md
+docs/AppTesterDto.md
+docs/AppTesterDtoPagedResultDto.md
 docs/AppType.md
 docs/AppUserScoreAPI.md
 docs/AppUserScoreDto.md
@@ -118,6 +120,7 @@ docs/CreateOrUpdateAppSdkDto.md
 docs/CreateOrUpdateAppUserScoreDto.md
 docs/CreateOrUpdateMessageTemplateDto.md
 docs/CreatePushNotificationDto.md
+docs/CreateUpdateAppTesterDto.md
 docs/CreateUpdateMessageSourceDto.md
 docs/CreateUpdateMessageSourceRouteDto.md
 docs/CreateUpdateMessageSourceRouteSubDto.md
@@ -177,8 +180,6 @@ docs/InterfaceMethodApiDescriptionModel.md
 docs/LanguageInfo.md
 docs/LatestReceiptInfo.md
 docs/LocalizableStringDto.md
-docs/LoginAPI.md
-docs/LoginResultType.md
 docs/MessageAPI.md
 docs/MessagePublishDto.md
 docs/MessageRecallDto.md
@@ -228,8 +229,6 @@ docs/SendTestEmailInput.md
 docs/SendVerificationCodeDto.md
 docs/StorageObjectAPI.md
 docs/StorageObjectCredentials.md
-docs/StorageObjectDto.md
-docs/StorageObjectOrCredentialsDto.md
 docs/SubscriptionAPI.md
 docs/SubscriptionDto.md
 docs/SubscriptionOrderDto.md
@@ -253,7 +252,6 @@ docs/UpdateProfileDto.md
 docs/UserAPI.md
 docs/UserData.md
 docs/UserDataListResultDto.md
-docs/UserLoginInfo.md
 docs/UserLookupAPI.md
 docs/UserProfileDto.md
 docs/UserStorageDto.md
@@ -266,7 +264,6 @@ docs/WindowsTimeZone.md
 git_push.sh
 go.mod
 go.sum
-model_abp_login_result.go
 model_account_deletion_dto.go
 model_action_api_description_model.go
 model_api_key_create_dto.go
@@ -292,6 +289,8 @@ model_app_run_record_update_dto.go
 model_app_run_status.go
 model_app_sdk_dto.go
 model_app_sdk_dto_paged_result_dto.go
+model_app_tester_dto.go
+model_app_tester_dto_paged_result_dto.go
 model_app_type.go
 model_app_user_score_dto.go
 model_app_with_user_dto.go
@@ -329,6 +328,7 @@ model_create_or_update_app_sdk_dto.go
 model_create_or_update_app_user_score_dto.go
 model_create_or_update_message_template_dto.go
 model_create_push_notification_dto.go
+model_create_update_app_tester_dto.go
 model_create_update_message_source_dto.go
 model_create_update_message_source_route_dto.go
 model_create_update_message_source_route_sub_dto.go
@@ -384,7 +384,6 @@ model_interface_method_api_description_model.go
 model_language_info.go
 model_latest_receipt_info.go
 model_localizable_string_dto.go
-model_login_result_type.go
 model_message_publish_dto.go
 model_message_recall_dto.go
 model_message_source_category_dto.go
@@ -422,8 +421,6 @@ model_send_password_reset_code_dto.go
 model_send_test_email_input.go
 model_send_verification_code_dto.go
 model_storage_object_credentials.go
-model_storage_object_dto.go
-model_storage_object_or_credentials_dto.go
 model_subscription_dto.go
 model_subscription_order_dto.go
 model_subscription_order_status.go
@@ -443,7 +440,6 @@ model_update_permissions_dto.go
 model_update_profile_dto.go
 model_user_data.go
 model_user_data_list_result_dto.go
-model_user_login_info.go
 model_user_profile_dto.go
 model_user_storage_dto.go
 model_user_storage_item_dto.go
@@ -464,13 +460,13 @@ test/api_app_pricing_test.go
 test/api_app_release_test.go
 test/api_app_sdk_test.go
 test/api_app_test.go
+test/api_app_tester_test.go
 test/api_app_user_score_test.go
 test/api_avatar_test.go
 test/api_device_test.go
 test/api_dynamic_claims_test.go
 test/api_email_settings_test.go
 test/api_features_test.go
-test/api_login_test.go
 test/api_message_source_category_test.go
 test/api_message_source_route_sub_test.go
 test/api_message_source_route_test.go

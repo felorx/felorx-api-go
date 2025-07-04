@@ -51,6 +51,16 @@ SetModules sets Modules field to given value.
 
 HasModules returns a boolean if a field has been set.
 
+### SetModulesNil
+
+`func (o *ObjectExtensionsDto) SetModulesNil(b bool)`
+
+ SetModulesNil sets the value for Modules to be an explicit nil
+
+### UnsetModules
+`func (o *ObjectExtensionsDto) UnsetModules()`
+
+UnsetModules ensures that no value is present for Modules, not even an explicit nil
 ### GetEnums
 
 `func (o *ObjectExtensionsDto) GetEnums() map[string]ExtensionEnumDto`
@@ -76,6 +86,16 @@ SetEnums sets Enums field to given value.
 
 HasEnums returns a boolean if a field has been set.
 
+### SetEnumsNil
+
+`func (o *ObjectExtensionsDto) SetEnumsNil(b bool)`
+
+ SetEnumsNil sets the value for Enums to be an explicit nil
+
+### UnsetEnums
+`func (o *ObjectExtensionsDto) UnsetEnums()`
+
+UnsetEnums ensures that no value is present for Enums, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

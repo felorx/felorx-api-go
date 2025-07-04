@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
 **ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional] 
 **ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional] 
 
@@ -52,6 +52,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *InterfaceMethodApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *InterfaceMethodApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetParametersOnMethod
 
 `func (o *InterfaceMethodApiDescriptionModel) GetParametersOnMethod() []MethodParameterApiDescriptionModel`
@@ -77,6 +87,16 @@ SetParametersOnMethod sets ParametersOnMethod field to given value.
 
 HasParametersOnMethod returns a boolean if a field has been set.
 
+### SetParametersOnMethodNil
+
+`func (o *InterfaceMethodApiDescriptionModel) SetParametersOnMethodNil(b bool)`
+
+ SetParametersOnMethodNil sets the value for ParametersOnMethod to be an explicit nil
+
+### UnsetParametersOnMethod
+`func (o *InterfaceMethodApiDescriptionModel) UnsetParametersOnMethod()`
+
+UnsetParametersOnMethod ensures that no value is present for ParametersOnMethod, not even an explicit nil
 ### GetReturnValue
 
 `func (o *InterfaceMethodApiDescriptionModel) GetReturnValue() ReturnValueApiDescriptionModel`

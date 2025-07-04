@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateAvatar
 
-> AvatarDto CreateAvatar(ctx).Body(body).Execute()
+> AvatarDto CreateAvatar(ctx).CreateAvatarDto(createAvatarDto).Execute()
 
 
 
@@ -28,11 +28,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateAvatarDto() // CreateAvatarDto |  (optional)
+	createAvatarDto := *openapiclient.NewCreateAvatarDto() // CreateAvatarDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AvatarAPI.CreateAvatar(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.AvatarAPI.CreateAvatar(context.Background()).CreateAvatarDto(createAvatarDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AvatarAPI.CreateAvatar``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiCreateAvatarRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateAvatarDto**](CreateAvatarDto.md) |  | 
+ **createAvatarDto** | [**CreateAvatarDto**](CreateAvatarDto.md) |  | 
 
 ### Return type
 

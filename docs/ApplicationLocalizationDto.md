@@ -50,6 +50,16 @@ SetResources sets Resources field to given value.
 
 HasResources returns a boolean if a field has been set.
 
+### SetResourcesNil
+
+`func (o *ApplicationLocalizationDto) SetResourcesNil(b bool)`
+
+ SetResourcesNil sets the value for Resources to be an explicit nil
+
+### UnsetResources
+`func (o *ApplicationLocalizationDto) UnsetResources()`
+
+UnsetResources ensures that no value is present for Resources, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

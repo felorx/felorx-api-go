@@ -51,6 +51,16 @@ SetModules sets Modules field to given value.
 
 HasModules returns a boolean if a field has been set.
 
+### SetModulesNil
+
+`func (o *ApplicationApiDescriptionModel) SetModulesNil(b bool)`
+
+ SetModulesNil sets the value for Modules to be an explicit nil
+
+### UnsetModules
+`func (o *ApplicationApiDescriptionModel) UnsetModules()`
+
+UnsetModules ensures that no value is present for Modules, not even an explicit nil
 ### GetTypes
 
 `func (o *ApplicationApiDescriptionModel) GetTypes() map[string]TypeApiDescriptionModel`
@@ -76,6 +86,16 @@ SetTypes sets Types field to given value.
 
 HasTypes returns a boolean if a field has been set.
 
+### SetTypesNil
+
+`func (o *ApplicationApiDescriptionModel) SetTypesNil(b bool)`
+
+ SetTypesNil sets the value for Types to be an explicit nil
+
+### UnsetTypes
+`func (o *ApplicationApiDescriptionModel) UnsetTypes()`
+
+UnsetTypes ensures that no value is present for Types, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

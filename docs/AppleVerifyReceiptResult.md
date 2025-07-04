@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Environment** | Pointer to **string** |  | [optional] 
+**Environment** | Pointer to **NullableString** |  | [optional] 
 **IsRetryable** | Pointer to **bool** |  | [optional] 
 **Status** | Pointer to **int32** | 订阅订单状态 | [optional] 
 **LatestReceiptInfo** | Pointer to [**[]LatestReceiptInfo**](LatestReceiptInfo.md) |  | [optional] 
-**LatestReceipt** | Pointer to **string** |  | [optional] 
+**LatestReceipt** | Pointer to **NullableString** |  | [optional] 
 **PendingRenewalInfo** | Pointer to [**[]PendingRenewalInfo**](PendingRenewalInfo.md) |  | [optional] 
 **Receipt** | Pointer to [**Receipt**](Receipt.md) |  | [optional] 
 
@@ -56,6 +56,16 @@ SetEnvironment sets Environment field to given value.
 
 HasEnvironment returns a boolean if a field has been set.
 
+### SetEnvironmentNil
+
+`func (o *AppleVerifyReceiptResult) SetEnvironmentNil(b bool)`
+
+ SetEnvironmentNil sets the value for Environment to be an explicit nil
+
+### UnsetEnvironment
+`func (o *AppleVerifyReceiptResult) UnsetEnvironment()`
+
+UnsetEnvironment ensures that no value is present for Environment, not even an explicit nil
 ### GetIsRetryable
 
 `func (o *AppleVerifyReceiptResult) GetIsRetryable() bool`
@@ -131,6 +141,16 @@ SetLatestReceiptInfo sets LatestReceiptInfo field to given value.
 
 HasLatestReceiptInfo returns a boolean if a field has been set.
 
+### SetLatestReceiptInfoNil
+
+`func (o *AppleVerifyReceiptResult) SetLatestReceiptInfoNil(b bool)`
+
+ SetLatestReceiptInfoNil sets the value for LatestReceiptInfo to be an explicit nil
+
+### UnsetLatestReceiptInfo
+`func (o *AppleVerifyReceiptResult) UnsetLatestReceiptInfo()`
+
+UnsetLatestReceiptInfo ensures that no value is present for LatestReceiptInfo, not even an explicit nil
 ### GetLatestReceipt
 
 `func (o *AppleVerifyReceiptResult) GetLatestReceipt() string`
@@ -156,6 +176,16 @@ SetLatestReceipt sets LatestReceipt field to given value.
 
 HasLatestReceipt returns a boolean if a field has been set.
 
+### SetLatestReceiptNil
+
+`func (o *AppleVerifyReceiptResult) SetLatestReceiptNil(b bool)`
+
+ SetLatestReceiptNil sets the value for LatestReceipt to be an explicit nil
+
+### UnsetLatestReceipt
+`func (o *AppleVerifyReceiptResult) UnsetLatestReceipt()`
+
+UnsetLatestReceipt ensures that no value is present for LatestReceipt, not even an explicit nil
 ### GetPendingRenewalInfo
 
 `func (o *AppleVerifyReceiptResult) GetPendingRenewalInfo() []PendingRenewalInfo`
@@ -181,6 +211,16 @@ SetPendingRenewalInfo sets PendingRenewalInfo field to given value.
 
 HasPendingRenewalInfo returns a boolean if a field has been set.
 
+### SetPendingRenewalInfoNil
+
+`func (o *AppleVerifyReceiptResult) SetPendingRenewalInfoNil(b bool)`
+
+ SetPendingRenewalInfoNil sets the value for PendingRenewalInfo to be an explicit nil
+
+### UnsetPendingRenewalInfo
+`func (o *AppleVerifyReceiptResult) UnsetPendingRenewalInfo()`
+
+UnsetPendingRenewalInfo ensures that no value is present for PendingRenewalInfo, not even an explicit nil
 ### GetReceipt
 
 `func (o *AppleVerifyReceiptResult) GetReceipt() Receipt`

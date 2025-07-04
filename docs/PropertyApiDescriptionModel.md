@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**JsonName** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
-**TypeSimple** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**JsonName** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 **IsRequired** | Pointer to **bool** |  | [optional] 
-**MinLength** | Pointer to **int32** |  | [optional] 
-**MaxLength** | Pointer to **int32** |  | [optional] 
-**Minimum** | Pointer to **string** |  | [optional] 
-**Maximum** | Pointer to **string** |  | [optional] 
-**Regex** | Pointer to **string** |  | [optional] 
+**MinLength** | Pointer to **NullableInt32** |  | [optional] 
+**MaxLength** | Pointer to **NullableInt32** |  | [optional] 
+**Minimum** | Pointer to **NullableString** |  | [optional] 
+**Maximum** | Pointer to **NullableString** |  | [optional] 
+**Regex** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -59,6 +59,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *PropertyApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *PropertyApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetJsonName
 
 `func (o *PropertyApiDescriptionModel) GetJsonName() string`
@@ -84,6 +94,16 @@ SetJsonName sets JsonName field to given value.
 
 HasJsonName returns a boolean if a field has been set.
 
+### SetJsonNameNil
+
+`func (o *PropertyApiDescriptionModel) SetJsonNameNil(b bool)`
+
+ SetJsonNameNil sets the value for JsonName to be an explicit nil
+
+### UnsetJsonName
+`func (o *PropertyApiDescriptionModel) UnsetJsonName()`
+
+UnsetJsonName ensures that no value is present for JsonName, not even an explicit nil
 ### GetType
 
 `func (o *PropertyApiDescriptionModel) GetType() string`
@@ -109,6 +129,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *PropertyApiDescriptionModel) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *PropertyApiDescriptionModel) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTypeSimple
 
 `func (o *PropertyApiDescriptionModel) GetTypeSimple() string`
@@ -134,6 +164,16 @@ SetTypeSimple sets TypeSimple field to given value.
 
 HasTypeSimple returns a boolean if a field has been set.
 
+### SetTypeSimpleNil
+
+`func (o *PropertyApiDescriptionModel) SetTypeSimpleNil(b bool)`
+
+ SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
+
+### UnsetTypeSimple
+`func (o *PropertyApiDescriptionModel) UnsetTypeSimple()`
+
+UnsetTypeSimple ensures that no value is present for TypeSimple, not even an explicit nil
 ### GetIsRequired
 
 `func (o *PropertyApiDescriptionModel) GetIsRequired() bool`
@@ -184,6 +224,16 @@ SetMinLength sets MinLength field to given value.
 
 HasMinLength returns a boolean if a field has been set.
 
+### SetMinLengthNil
+
+`func (o *PropertyApiDescriptionModel) SetMinLengthNil(b bool)`
+
+ SetMinLengthNil sets the value for MinLength to be an explicit nil
+
+### UnsetMinLength
+`func (o *PropertyApiDescriptionModel) UnsetMinLength()`
+
+UnsetMinLength ensures that no value is present for MinLength, not even an explicit nil
 ### GetMaxLength
 
 `func (o *PropertyApiDescriptionModel) GetMaxLength() int32`
@@ -209,6 +259,16 @@ SetMaxLength sets MaxLength field to given value.
 
 HasMaxLength returns a boolean if a field has been set.
 
+### SetMaxLengthNil
+
+`func (o *PropertyApiDescriptionModel) SetMaxLengthNil(b bool)`
+
+ SetMaxLengthNil sets the value for MaxLength to be an explicit nil
+
+### UnsetMaxLength
+`func (o *PropertyApiDescriptionModel) UnsetMaxLength()`
+
+UnsetMaxLength ensures that no value is present for MaxLength, not even an explicit nil
 ### GetMinimum
 
 `func (o *PropertyApiDescriptionModel) GetMinimum() string`
@@ -234,6 +294,16 @@ SetMinimum sets Minimum field to given value.
 
 HasMinimum returns a boolean if a field has been set.
 
+### SetMinimumNil
+
+`func (o *PropertyApiDescriptionModel) SetMinimumNil(b bool)`
+
+ SetMinimumNil sets the value for Minimum to be an explicit nil
+
+### UnsetMinimum
+`func (o *PropertyApiDescriptionModel) UnsetMinimum()`
+
+UnsetMinimum ensures that no value is present for Minimum, not even an explicit nil
 ### GetMaximum
 
 `func (o *PropertyApiDescriptionModel) GetMaximum() string`
@@ -259,6 +329,16 @@ SetMaximum sets Maximum field to given value.
 
 HasMaximum returns a boolean if a field has been set.
 
+### SetMaximumNil
+
+`func (o *PropertyApiDescriptionModel) SetMaximumNil(b bool)`
+
+ SetMaximumNil sets the value for Maximum to be an explicit nil
+
+### UnsetMaximum
+`func (o *PropertyApiDescriptionModel) UnsetMaximum()`
+
+UnsetMaximum ensures that no value is present for Maximum, not even an explicit nil
 ### GetRegex
 
 `func (o *PropertyApiDescriptionModel) GetRegex() string`
@@ -284,6 +364,16 @@ SetRegex sets Regex field to given value.
 
 HasRegex returns a boolean if a field has been set.
 
+### SetRegexNil
+
+`func (o *PropertyApiDescriptionModel) SetRegexNil(b bool)`
+
+ SetRegexNil sets the value for Regex to be an explicit nil
+
+### UnsetRegex
+`func (o *PropertyApiDescriptionModel) UnsetRegex()`
+
+UnsetRegex ensures that no value is present for Regex, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

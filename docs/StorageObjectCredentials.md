@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StorageClass** | Pointer to **string** |  | [optional] 
-**EndPoint** | Pointer to **string** |  | [optional] 
-**Protocal** | Pointer to **string** |  | [optional] 
-**BucketName** | Pointer to **string** |  | [optional] 
-**RegionId** | Pointer to **string** |  | [optional] 
-**SecurityToken** | Pointer to **string** |  | [optional] 
-**AccessKeyId** | Pointer to **string** |  | [optional] 
-**AccessKeySecret** | Pointer to **string** |  | [optional] 
-**Expiration** | Pointer to **string** |  | [optional] 
+**StorageClass** | Pointer to **NullableString** |  | [optional] 
+**EndPoint** | Pointer to **NullableString** |  | [optional] 
+**Protocal** | Pointer to **NullableString** |  | [optional] 
+**BucketName** | Pointer to **NullableString** |  | [optional] 
+**RegionId** | Pointer to **NullableString** |  | [optional] 
+**SecurityToken** | Pointer to **NullableString** |  | [optional] 
+**AccessKeyId** | Pointer to **NullableString** |  | [optional] 
+**AccessKeySecret** | Pointer to **NullableString** |  | [optional] 
+**Expiration** | Pointer to **NullableString** |  | [optional] 
 **ExpiredTime** | Pointer to **int64** |  | [optional] 
-**AppId** | Pointer to **string** |  | [optional] 
+**AppId** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -60,6 +60,16 @@ SetStorageClass sets StorageClass field to given value.
 
 HasStorageClass returns a boolean if a field has been set.
 
+### SetStorageClassNil
+
+`func (o *StorageObjectCredentials) SetStorageClassNil(b bool)`
+
+ SetStorageClassNil sets the value for StorageClass to be an explicit nil
+
+### UnsetStorageClass
+`func (o *StorageObjectCredentials) UnsetStorageClass()`
+
+UnsetStorageClass ensures that no value is present for StorageClass, not even an explicit nil
 ### GetEndPoint
 
 `func (o *StorageObjectCredentials) GetEndPoint() string`
@@ -85,6 +95,16 @@ SetEndPoint sets EndPoint field to given value.
 
 HasEndPoint returns a boolean if a field has been set.
 
+### SetEndPointNil
+
+`func (o *StorageObjectCredentials) SetEndPointNil(b bool)`
+
+ SetEndPointNil sets the value for EndPoint to be an explicit nil
+
+### UnsetEndPoint
+`func (o *StorageObjectCredentials) UnsetEndPoint()`
+
+UnsetEndPoint ensures that no value is present for EndPoint, not even an explicit nil
 ### GetProtocal
 
 `func (o *StorageObjectCredentials) GetProtocal() string`
@@ -110,6 +130,16 @@ SetProtocal sets Protocal field to given value.
 
 HasProtocal returns a boolean if a field has been set.
 
+### SetProtocalNil
+
+`func (o *StorageObjectCredentials) SetProtocalNil(b bool)`
+
+ SetProtocalNil sets the value for Protocal to be an explicit nil
+
+### UnsetProtocal
+`func (o *StorageObjectCredentials) UnsetProtocal()`
+
+UnsetProtocal ensures that no value is present for Protocal, not even an explicit nil
 ### GetBucketName
 
 `func (o *StorageObjectCredentials) GetBucketName() string`
@@ -135,6 +165,16 @@ SetBucketName sets BucketName field to given value.
 
 HasBucketName returns a boolean if a field has been set.
 
+### SetBucketNameNil
+
+`func (o *StorageObjectCredentials) SetBucketNameNil(b bool)`
+
+ SetBucketNameNil sets the value for BucketName to be an explicit nil
+
+### UnsetBucketName
+`func (o *StorageObjectCredentials) UnsetBucketName()`
+
+UnsetBucketName ensures that no value is present for BucketName, not even an explicit nil
 ### GetRegionId
 
 `func (o *StorageObjectCredentials) GetRegionId() string`
@@ -160,6 +200,16 @@ SetRegionId sets RegionId field to given value.
 
 HasRegionId returns a boolean if a field has been set.
 
+### SetRegionIdNil
+
+`func (o *StorageObjectCredentials) SetRegionIdNil(b bool)`
+
+ SetRegionIdNil sets the value for RegionId to be an explicit nil
+
+### UnsetRegionId
+`func (o *StorageObjectCredentials) UnsetRegionId()`
+
+UnsetRegionId ensures that no value is present for RegionId, not even an explicit nil
 ### GetSecurityToken
 
 `func (o *StorageObjectCredentials) GetSecurityToken() string`
@@ -185,6 +235,16 @@ SetSecurityToken sets SecurityToken field to given value.
 
 HasSecurityToken returns a boolean if a field has been set.
 
+### SetSecurityTokenNil
+
+`func (o *StorageObjectCredentials) SetSecurityTokenNil(b bool)`
+
+ SetSecurityTokenNil sets the value for SecurityToken to be an explicit nil
+
+### UnsetSecurityToken
+`func (o *StorageObjectCredentials) UnsetSecurityToken()`
+
+UnsetSecurityToken ensures that no value is present for SecurityToken, not even an explicit nil
 ### GetAccessKeyId
 
 `func (o *StorageObjectCredentials) GetAccessKeyId() string`
@@ -210,6 +270,16 @@ SetAccessKeyId sets AccessKeyId field to given value.
 
 HasAccessKeyId returns a boolean if a field has been set.
 
+### SetAccessKeyIdNil
+
+`func (o *StorageObjectCredentials) SetAccessKeyIdNil(b bool)`
+
+ SetAccessKeyIdNil sets the value for AccessKeyId to be an explicit nil
+
+### UnsetAccessKeyId
+`func (o *StorageObjectCredentials) UnsetAccessKeyId()`
+
+UnsetAccessKeyId ensures that no value is present for AccessKeyId, not even an explicit nil
 ### GetAccessKeySecret
 
 `func (o *StorageObjectCredentials) GetAccessKeySecret() string`
@@ -235,6 +305,16 @@ SetAccessKeySecret sets AccessKeySecret field to given value.
 
 HasAccessKeySecret returns a boolean if a field has been set.
 
+### SetAccessKeySecretNil
+
+`func (o *StorageObjectCredentials) SetAccessKeySecretNil(b bool)`
+
+ SetAccessKeySecretNil sets the value for AccessKeySecret to be an explicit nil
+
+### UnsetAccessKeySecret
+`func (o *StorageObjectCredentials) UnsetAccessKeySecret()`
+
+UnsetAccessKeySecret ensures that no value is present for AccessKeySecret, not even an explicit nil
 ### GetExpiration
 
 `func (o *StorageObjectCredentials) GetExpiration() string`
@@ -260,6 +340,16 @@ SetExpiration sets Expiration field to given value.
 
 HasExpiration returns a boolean if a field has been set.
 
+### SetExpirationNil
+
+`func (o *StorageObjectCredentials) SetExpirationNil(b bool)`
+
+ SetExpirationNil sets the value for Expiration to be an explicit nil
+
+### UnsetExpiration
+`func (o *StorageObjectCredentials) UnsetExpiration()`
+
+UnsetExpiration ensures that no value is present for Expiration, not even an explicit nil
 ### GetExpiredTime
 
 `func (o *StorageObjectCredentials) GetExpiredTime() int64`
@@ -310,6 +400,16 @@ SetAppId sets AppId field to given value.
 
 HasAppId returns a boolean if a field has been set.
 
+### SetAppIdNil
+
+`func (o *StorageObjectCredentials) SetAppIdNil(b bool)`
+
+ SetAppIdNil sets the value for AppId to be an explicit nil
+
+### UnsetAppId
+`func (o *StorageObjectCredentials) UnsetAppId()`
+
+UnsetAppId ensures that no value is present for AppId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

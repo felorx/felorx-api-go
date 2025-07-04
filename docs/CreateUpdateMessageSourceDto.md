@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
 **IsPublished** | Pointer to **bool** |  | [optional] 
-**IconUrl** | Pointer to **string** |  | [optional] 
+**IconUrl** | Pointer to **NullableString** |  | [optional] 
 **Routes** | Pointer to [**[]CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | [optional] 
 
 ## Methods
@@ -54,6 +54,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *CreateUpdateMessageSourceDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *CreateUpdateMessageSourceDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDescription
 
 `func (o *CreateUpdateMessageSourceDto) GetDescription() string`
@@ -79,6 +89,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *CreateUpdateMessageSourceDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *CreateUpdateMessageSourceDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetIsPublished
 
 `func (o *CreateUpdateMessageSourceDto) GetIsPublished() bool`
@@ -129,6 +149,16 @@ SetIconUrl sets IconUrl field to given value.
 
 HasIconUrl returns a boolean if a field has been set.
 
+### SetIconUrlNil
+
+`func (o *CreateUpdateMessageSourceDto) SetIconUrlNil(b bool)`
+
+ SetIconUrlNil sets the value for IconUrl to be an explicit nil
+
+### UnsetIconUrl
+`func (o *CreateUpdateMessageSourceDto) UnsetIconUrl()`
+
+UnsetIconUrl ensures that no value is present for IconUrl, not even an explicit nil
 ### GetRoutes
 
 `func (o *CreateUpdateMessageSourceDto) GetRoutes() []CreateUpdateMessageSourceRouteSubDto`
@@ -154,6 +184,16 @@ SetRoutes sets Routes field to given value.
 
 HasRoutes returns a boolean if a field has been set.
 
+### SetRoutesNil
+
+`func (o *CreateUpdateMessageSourceDto) SetRoutesNil(b bool)`
+
+ SetRoutesNil sets the value for Routes to be an explicit nil
+
+### UnsetRoutes
+`func (o *CreateUpdateMessageSourceDto) UnsetRoutes()`
+
+UnsetRoutes ensures that no value is present for Routes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

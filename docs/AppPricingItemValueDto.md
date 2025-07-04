@@ -6,18 +6,18 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
 **IsAvailable** | Pointer to **bool** | 是否可用 | [optional] 
 **HasValue** | Pointer to **bool** | 是否有值 | [optional] 
 **IntValue** | Pointer to **int64** |  | [optional] 
-**StringValue** | Pointer to **string** |  | [optional] 
+**StringValue** | Pointer to **NullableString** |  | [optional] 
 **BoolValue** | Pointer to **bool** |  | [optional] 
-**IntValueType** | Pointer to **string** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional] 
+**IntValueType** | Pointer to **NullableString** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional] 
 
 ## Methods
 
@@ -113,6 +113,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *AppPricingItemValueDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *AppPricingItemValueDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *AppPricingItemValueDto) GetLastModificationTime() time.Time`
@@ -138,6 +148,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *AppPricingItemValueDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *AppPricingItemValueDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *AppPricingItemValueDto) GetLastModifierId() string`
@@ -163,6 +183,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *AppPricingItemValueDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *AppPricingItemValueDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *AppPricingItemValueDto) GetIsDeleted() bool`
@@ -213,6 +243,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *AppPricingItemValueDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *AppPricingItemValueDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *AppPricingItemValueDto) GetDeletionTime() time.Time`
@@ -238,6 +278,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *AppPricingItemValueDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *AppPricingItemValueDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetIsAvailable
 
 `func (o *AppPricingItemValueDto) GetIsAvailable() bool`
@@ -338,6 +388,16 @@ SetStringValue sets StringValue field to given value.
 
 HasStringValue returns a boolean if a field has been set.
 
+### SetStringValueNil
+
+`func (o *AppPricingItemValueDto) SetStringValueNil(b bool)`
+
+ SetStringValueNil sets the value for StringValue to be an explicit nil
+
+### UnsetStringValue
+`func (o *AppPricingItemValueDto) UnsetStringValue()`
+
+UnsetStringValue ensures that no value is present for StringValue, not even an explicit nil
 ### GetBoolValue
 
 `func (o *AppPricingItemValueDto) GetBoolValue() bool`
@@ -388,6 +448,16 @@ SetIntValueType sets IntValueType field to given value.
 
 HasIntValueType returns a boolean if a field has been set.
 
+### SetIntValueTypeNil
+
+`func (o *AppPricingItemValueDto) SetIntValueTypeNil(b bool)`
+
+ SetIntValueTypeNil sets the value for IntValueType to be an explicit nil
+
+### UnsetIntValueType
+`func (o *AppPricingItemValueDto) UnsetIntValueType()`
+
+UnsetIntValueType ensures that no value is present for IntValueType, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisplayName** | Pointer to **string** |  | [optional] 
-**EnglishName** | Pointer to **string** |  | [optional] 
-**ThreeLetterIsoLanguageName** | Pointer to **string** |  | [optional] 
-**TwoLetterIsoLanguageName** | Pointer to **string** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**EnglishName** | Pointer to **NullableString** |  | [optional] 
+**ThreeLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional] 
+**TwoLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional] 
 **IsRightToLeft** | Pointer to **bool** |  | [optional] 
-**CultureName** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**NativeName** | Pointer to **string** |  | [optional] 
+**CultureName** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**NativeName** | Pointer to **NullableString** |  | [optional] 
 **DateTimeFormat** | Pointer to [**DateTimeFormatDto**](DateTimeFormatDto.md) |  | [optional] 
 
 ## Methods
@@ -58,6 +58,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *CurrentCultureDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *CurrentCultureDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetEnglishName
 
 `func (o *CurrentCultureDto) GetEnglishName() string`
@@ -83,6 +93,16 @@ SetEnglishName sets EnglishName field to given value.
 
 HasEnglishName returns a boolean if a field has been set.
 
+### SetEnglishNameNil
+
+`func (o *CurrentCultureDto) SetEnglishNameNil(b bool)`
+
+ SetEnglishNameNil sets the value for EnglishName to be an explicit nil
+
+### UnsetEnglishName
+`func (o *CurrentCultureDto) UnsetEnglishName()`
+
+UnsetEnglishName ensures that no value is present for EnglishName, not even an explicit nil
 ### GetThreeLetterIsoLanguageName
 
 `func (o *CurrentCultureDto) GetThreeLetterIsoLanguageName() string`
@@ -108,6 +128,16 @@ SetThreeLetterIsoLanguageName sets ThreeLetterIsoLanguageName field to given val
 
 HasThreeLetterIsoLanguageName returns a boolean if a field has been set.
 
+### SetThreeLetterIsoLanguageNameNil
+
+`func (o *CurrentCultureDto) SetThreeLetterIsoLanguageNameNil(b bool)`
+
+ SetThreeLetterIsoLanguageNameNil sets the value for ThreeLetterIsoLanguageName to be an explicit nil
+
+### UnsetThreeLetterIsoLanguageName
+`func (o *CurrentCultureDto) UnsetThreeLetterIsoLanguageName()`
+
+UnsetThreeLetterIsoLanguageName ensures that no value is present for ThreeLetterIsoLanguageName, not even an explicit nil
 ### GetTwoLetterIsoLanguageName
 
 `func (o *CurrentCultureDto) GetTwoLetterIsoLanguageName() string`
@@ -133,6 +163,16 @@ SetTwoLetterIsoLanguageName sets TwoLetterIsoLanguageName field to given value.
 
 HasTwoLetterIsoLanguageName returns a boolean if a field has been set.
 
+### SetTwoLetterIsoLanguageNameNil
+
+`func (o *CurrentCultureDto) SetTwoLetterIsoLanguageNameNil(b bool)`
+
+ SetTwoLetterIsoLanguageNameNil sets the value for TwoLetterIsoLanguageName to be an explicit nil
+
+### UnsetTwoLetterIsoLanguageName
+`func (o *CurrentCultureDto) UnsetTwoLetterIsoLanguageName()`
+
+UnsetTwoLetterIsoLanguageName ensures that no value is present for TwoLetterIsoLanguageName, not even an explicit nil
 ### GetIsRightToLeft
 
 `func (o *CurrentCultureDto) GetIsRightToLeft() bool`
@@ -183,6 +223,16 @@ SetCultureName sets CultureName field to given value.
 
 HasCultureName returns a boolean if a field has been set.
 
+### SetCultureNameNil
+
+`func (o *CurrentCultureDto) SetCultureNameNil(b bool)`
+
+ SetCultureNameNil sets the value for CultureName to be an explicit nil
+
+### UnsetCultureName
+`func (o *CurrentCultureDto) UnsetCultureName()`
+
+UnsetCultureName ensures that no value is present for CultureName, not even an explicit nil
 ### GetName
 
 `func (o *CurrentCultureDto) GetName() string`
@@ -208,6 +258,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *CurrentCultureDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *CurrentCultureDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetNativeName
 
 `func (o *CurrentCultureDto) GetNativeName() string`
@@ -233,6 +293,16 @@ SetNativeName sets NativeName field to given value.
 
 HasNativeName returns a boolean if a field has been set.
 
+### SetNativeNameNil
+
+`func (o *CurrentCultureDto) SetNativeNameNil(b bool)`
+
+ SetNativeNameNil sets the value for NativeName to be an explicit nil
+
+### UnsetNativeName
+`func (o *CurrentCultureDto) UnsetNativeName()`
+
+UnsetNativeName ensures that no value is present for NativeName, not even an explicit nil
 ### GetDateTimeFormat
 
 `func (o *CurrentCultureDto) GetDateTimeFormat() DateTimeFormatDto`

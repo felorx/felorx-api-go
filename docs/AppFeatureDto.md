@@ -6,17 +6,17 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Details** | Pointer to **string** |  | [optional] 
-**ScreenshotKeys** | Pointer to **string** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Details** | Pointer to **NullableString** |  | [optional] 
+**ScreenshotKeys** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -112,6 +112,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *AppFeatureDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *AppFeatureDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *AppFeatureDto) GetLastModificationTime() time.Time`
@@ -137,6 +147,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *AppFeatureDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *AppFeatureDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *AppFeatureDto) GetLastModifierId() string`
@@ -162,6 +182,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *AppFeatureDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *AppFeatureDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *AppFeatureDto) GetIsDeleted() bool`
@@ -212,6 +242,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *AppFeatureDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *AppFeatureDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *AppFeatureDto) GetDeletionTime() time.Time`
@@ -237,6 +277,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *AppFeatureDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *AppFeatureDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetName
 
 `func (o *AppFeatureDto) GetName() string`
@@ -262,6 +312,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *AppFeatureDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *AppFeatureDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *AppFeatureDto) GetDisplayName() string`
@@ -287,6 +347,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *AppFeatureDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *AppFeatureDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetDescription
 
 `func (o *AppFeatureDto) GetDescription() string`
@@ -312,6 +382,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *AppFeatureDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *AppFeatureDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetDetails
 
 `func (o *AppFeatureDto) GetDetails() string`
@@ -337,6 +417,16 @@ SetDetails sets Details field to given value.
 
 HasDetails returns a boolean if a field has been set.
 
+### SetDetailsNil
+
+`func (o *AppFeatureDto) SetDetailsNil(b bool)`
+
+ SetDetailsNil sets the value for Details to be an explicit nil
+
+### UnsetDetails
+`func (o *AppFeatureDto) UnsetDetails()`
+
+UnsetDetails ensures that no value is present for Details, not even an explicit nil
 ### GetScreenshotKeys
 
 `func (o *AppFeatureDto) GetScreenshotKeys() string`
@@ -362,6 +452,16 @@ SetScreenshotKeys sets ScreenshotKeys field to given value.
 
 HasScreenshotKeys returns a boolean if a field has been set.
 
+### SetScreenshotKeysNil
+
+`func (o *AppFeatureDto) SetScreenshotKeysNil(b bool)`
+
+ SetScreenshotKeysNil sets the value for ScreenshotKeys to be an explicit nil
+
+### UnsetScreenshotKeys
+`func (o *AppFeatureDto) UnsetScreenshotKeys()`
+
+UnsetScreenshotKeys ensures that no value is present for ScreenshotKeys, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

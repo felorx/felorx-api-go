@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Fields** | Pointer to [**[]ExtensionEnumFieldDto**](ExtensionEnumFieldDto.md) |  | [optional] 
-**LocalizationResource** | Pointer to **string** |  | [optional] 
+**LocalizationResource** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetFields sets Fields field to given value.
 
 HasFields returns a boolean if a field has been set.
 
+### SetFieldsNil
+
+`func (o *ExtensionEnumDto) SetFieldsNil(b bool)`
+
+ SetFieldsNil sets the value for Fields to be an explicit nil
+
+### UnsetFields
+`func (o *ExtensionEnumDto) UnsetFields()`
+
+UnsetFields ensures that no value is present for Fields, not even an explicit nil
 ### GetLocalizationResource
 
 `func (o *ExtensionEnumDto) GetLocalizationResource() string`
@@ -76,6 +86,16 @@ SetLocalizationResource sets LocalizationResource field to given value.
 
 HasLocalizationResource returns a boolean if a field has been set.
 
+### SetLocalizationResourceNil
+
+`func (o *ExtensionEnumDto) SetLocalizationResourceNil(b bool)`
+
+ SetLocalizationResourceNil sets the value for LocalizationResource to be an explicit nil
+
+### UnsetLocalizationResource
+`func (o *ExtensionEnumDto) UnsetLocalizationResource()`
+
+UnsetLocalizationResource ensures that no value is present for LocalizationResource, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

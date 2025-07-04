@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | 
 **Active** | Pointer to **bool** |  | [optional] 
-**ExpireAt** | Pointer to **time.Time** |  | [optional] 
+**ExpireAt** | Pointer to **NullableTime** |  | [optional] 
 
 ## Methods
 
@@ -97,6 +97,16 @@ SetExpireAt sets ExpireAt field to given value.
 
 HasExpireAt returns a boolean if a field has been set.
 
+### SetExpireAtNil
+
+`func (o *ApiKeyCreateDto) SetExpireAtNil(b bool)`
+
+ SetExpireAtNil sets the value for ExpireAt to be an explicit nil
+
+### UnsetExpireAt
+`func (o *ApiKeyCreateDto) UnsetExpireAt()`
+
+UnsetExpireAt ensures that no value is present for ExpireAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

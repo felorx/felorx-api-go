@@ -4,23 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
 **Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional] 
 **AppType** | Pointer to [**AppType**](AppType.md) |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Icon** | Pointer to **string** |  | [optional] 
-**HomePage** | Pointer to **string** | 产品首页 | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Icon** | Pointer to **NullableString** |  | [optional] 
+**HomePage** | Pointer to **NullableString** | 产品首页 | [optional] 
 **SortIndex** | Pointer to **int32** | 显示排序 | [optional] 
-**GitRepository** | Pointer to **string** |  | [optional] 
+**GitRepository** | Pointer to **NullableString** |  | [optional] 
 **GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional] 
 **IsEnabled** | Pointer to **bool** |  | [optional] 
-**WebhookUrl** | Pointer to **string** | Webhook Url 各种事件回调地址 | [optional] 
-**BusinessDomain** | Pointer to **string** | 业务域名 | [optional] 
-**BusinessUrl** | Pointer to **string** | 业务地址 | [optional] 
-**SubscriptionPlatforms** | Pointer to **string** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
-**FreePlatforms** | Pointer to **string** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
-**SpecJsonSchema** | Pointer to **string** | 声明格式 | [optional] 
+**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional] 
+**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional] 
+**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional] 
+**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
+**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
+**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional] 
 **DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional] 
 **DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional] 
 **IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional] 
@@ -70,6 +70,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *CreateOrUpdateAppDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *CreateOrUpdateAppDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *CreateOrUpdateAppDto) GetDisplayName() string`
@@ -95,6 +105,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *CreateOrUpdateAppDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *CreateOrUpdateAppDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetFramework
 
 `func (o *CreateOrUpdateAppDto) GetFramework() AppFramework`
@@ -170,6 +190,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *CreateOrUpdateAppDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *CreateOrUpdateAppDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetIcon
 
 `func (o *CreateOrUpdateAppDto) GetIcon() string`
@@ -195,6 +225,16 @@ SetIcon sets Icon field to given value.
 
 HasIcon returns a boolean if a field has been set.
 
+### SetIconNil
+
+`func (o *CreateOrUpdateAppDto) SetIconNil(b bool)`
+
+ SetIconNil sets the value for Icon to be an explicit nil
+
+### UnsetIcon
+`func (o *CreateOrUpdateAppDto) UnsetIcon()`
+
+UnsetIcon ensures that no value is present for Icon, not even an explicit nil
 ### GetHomePage
 
 `func (o *CreateOrUpdateAppDto) GetHomePage() string`
@@ -220,6 +260,16 @@ SetHomePage sets HomePage field to given value.
 
 HasHomePage returns a boolean if a field has been set.
 
+### SetHomePageNil
+
+`func (o *CreateOrUpdateAppDto) SetHomePageNil(b bool)`
+
+ SetHomePageNil sets the value for HomePage to be an explicit nil
+
+### UnsetHomePage
+`func (o *CreateOrUpdateAppDto) UnsetHomePage()`
+
+UnsetHomePage ensures that no value is present for HomePage, not even an explicit nil
 ### GetSortIndex
 
 `func (o *CreateOrUpdateAppDto) GetSortIndex() int32`
@@ -270,6 +320,16 @@ SetGitRepository sets GitRepository field to given value.
 
 HasGitRepository returns a boolean if a field has been set.
 
+### SetGitRepositoryNil
+
+`func (o *CreateOrUpdateAppDto) SetGitRepositoryNil(b bool)`
+
+ SetGitRepositoryNil sets the value for GitRepository to be an explicit nil
+
+### UnsetGitRepository
+`func (o *CreateOrUpdateAppDto) UnsetGitRepository()`
+
+UnsetGitRepository ensures that no value is present for GitRepository, not even an explicit nil
 ### GetGitRepositoryType
 
 `func (o *CreateOrUpdateAppDto) GetGitRepositoryType() GitRepositoryType`
@@ -345,6 +405,16 @@ SetWebhookUrl sets WebhookUrl field to given value.
 
 HasWebhookUrl returns a boolean if a field has been set.
 
+### SetWebhookUrlNil
+
+`func (o *CreateOrUpdateAppDto) SetWebhookUrlNil(b bool)`
+
+ SetWebhookUrlNil sets the value for WebhookUrl to be an explicit nil
+
+### UnsetWebhookUrl
+`func (o *CreateOrUpdateAppDto) UnsetWebhookUrl()`
+
+UnsetWebhookUrl ensures that no value is present for WebhookUrl, not even an explicit nil
 ### GetBusinessDomain
 
 `func (o *CreateOrUpdateAppDto) GetBusinessDomain() string`
@@ -370,6 +440,16 @@ SetBusinessDomain sets BusinessDomain field to given value.
 
 HasBusinessDomain returns a boolean if a field has been set.
 
+### SetBusinessDomainNil
+
+`func (o *CreateOrUpdateAppDto) SetBusinessDomainNil(b bool)`
+
+ SetBusinessDomainNil sets the value for BusinessDomain to be an explicit nil
+
+### UnsetBusinessDomain
+`func (o *CreateOrUpdateAppDto) UnsetBusinessDomain()`
+
+UnsetBusinessDomain ensures that no value is present for BusinessDomain, not even an explicit nil
 ### GetBusinessUrl
 
 `func (o *CreateOrUpdateAppDto) GetBusinessUrl() string`
@@ -395,6 +475,16 @@ SetBusinessUrl sets BusinessUrl field to given value.
 
 HasBusinessUrl returns a boolean if a field has been set.
 
+### SetBusinessUrlNil
+
+`func (o *CreateOrUpdateAppDto) SetBusinessUrlNil(b bool)`
+
+ SetBusinessUrlNil sets the value for BusinessUrl to be an explicit nil
+
+### UnsetBusinessUrl
+`func (o *CreateOrUpdateAppDto) UnsetBusinessUrl()`
+
+UnsetBusinessUrl ensures that no value is present for BusinessUrl, not even an explicit nil
 ### GetSubscriptionPlatforms
 
 `func (o *CreateOrUpdateAppDto) GetSubscriptionPlatforms() string`
@@ -420,6 +510,16 @@ SetSubscriptionPlatforms sets SubscriptionPlatforms field to given value.
 
 HasSubscriptionPlatforms returns a boolean if a field has been set.
 
+### SetSubscriptionPlatformsNil
+
+`func (o *CreateOrUpdateAppDto) SetSubscriptionPlatformsNil(b bool)`
+
+ SetSubscriptionPlatformsNil sets the value for SubscriptionPlatforms to be an explicit nil
+
+### UnsetSubscriptionPlatforms
+`func (o *CreateOrUpdateAppDto) UnsetSubscriptionPlatforms()`
+
+UnsetSubscriptionPlatforms ensures that no value is present for SubscriptionPlatforms, not even an explicit nil
 ### GetFreePlatforms
 
 `func (o *CreateOrUpdateAppDto) GetFreePlatforms() string`
@@ -445,6 +545,16 @@ SetFreePlatforms sets FreePlatforms field to given value.
 
 HasFreePlatforms returns a boolean if a field has been set.
 
+### SetFreePlatformsNil
+
+`func (o *CreateOrUpdateAppDto) SetFreePlatformsNil(b bool)`
+
+ SetFreePlatformsNil sets the value for FreePlatforms to be an explicit nil
+
+### UnsetFreePlatforms
+`func (o *CreateOrUpdateAppDto) UnsetFreePlatforms()`
+
+UnsetFreePlatforms ensures that no value is present for FreePlatforms, not even an explicit nil
 ### GetSpecJsonSchema
 
 `func (o *CreateOrUpdateAppDto) GetSpecJsonSchema() string`
@@ -470,6 +580,16 @@ SetSpecJsonSchema sets SpecJsonSchema field to given value.
 
 HasSpecJsonSchema returns a boolean if a field has been set.
 
+### SetSpecJsonSchemaNil
+
+`func (o *CreateOrUpdateAppDto) SetSpecJsonSchemaNil(b bool)`
+
+ SetSpecJsonSchemaNil sets the value for SpecJsonSchema to be an explicit nil
+
+### UnsetSpecJsonSchema
+`func (o *CreateOrUpdateAppDto) UnsetSpecJsonSchema()`
+
+UnsetSpecJsonSchema ensures that no value is present for SpecJsonSchema, not even an explicit nil
 ### GetDefaultStorageSize
 
 `func (o *CreateOrUpdateAppDto) GetDefaultStorageSize() int64`

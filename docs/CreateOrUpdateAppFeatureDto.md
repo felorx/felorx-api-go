@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Details** | Pointer to **string** |  | [optional] 
-**ScreenshotKeys** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Details** | Pointer to **NullableString** |  | [optional] 
+**ScreenshotKeys** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *CreateOrUpdateAppFeatureDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *CreateOrUpdateAppFeatureDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *CreateOrUpdateAppFeatureDto) GetDisplayName() string`
@@ -79,6 +89,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *CreateOrUpdateAppFeatureDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *CreateOrUpdateAppFeatureDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetDescription
 
 `func (o *CreateOrUpdateAppFeatureDto) GetDescription() string`
@@ -104,6 +124,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *CreateOrUpdateAppFeatureDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *CreateOrUpdateAppFeatureDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetDetails
 
 `func (o *CreateOrUpdateAppFeatureDto) GetDetails() string`
@@ -129,6 +159,16 @@ SetDetails sets Details field to given value.
 
 HasDetails returns a boolean if a field has been set.
 
+### SetDetailsNil
+
+`func (o *CreateOrUpdateAppFeatureDto) SetDetailsNil(b bool)`
+
+ SetDetailsNil sets the value for Details to be an explicit nil
+
+### UnsetDetails
+`func (o *CreateOrUpdateAppFeatureDto) UnsetDetails()`
+
+UnsetDetails ensures that no value is present for Details, not even an explicit nil
 ### GetScreenshotKeys
 
 `func (o *CreateOrUpdateAppFeatureDto) GetScreenshotKeys() string`
@@ -154,6 +194,16 @@ SetScreenshotKeys sets ScreenshotKeys field to given value.
 
 HasScreenshotKeys returns a boolean if a field has been set.
 
+### SetScreenshotKeysNil
+
+`func (o *CreateOrUpdateAppFeatureDto) SetScreenshotKeysNil(b bool)`
+
+ SetScreenshotKeysNil sets the value for ScreenshotKeys to be an explicit nil
+
+### UnsetScreenshotKeys
+`func (o *CreateOrUpdateAppFeatureDto) UnsetScreenshotKeys()`
+
+UnsetScreenshotKeys ensures that no value is present for ScreenshotKeys, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,23 +6,23 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] [readonly] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] [readonly] 
-**CreatorId** | Pointer to **string** |  | [optional] [readonly] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] [readonly] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
 **Deleter** | Pointer to [**IdentityUser**](IdentityUser.md) |  | [optional] 
 **Creator** | Pointer to [**IdentityUser**](IdentityUser.md) |  | [optional] 
 **LastModifier** | Pointer to [**IdentityUser**](IdentityUser.md) |  | [optional] 
 **OrderId** | Pointer to **string** |  | [optional] 
-**ReceiptData** | Pointer to **string** |  | [optional] 
+**ReceiptData** | Pointer to **NullableString** |  | [optional] 
 **Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
-**DeviceToken** | Pointer to **string** |  | [optional] 
+**DeviceToken** | Pointer to **NullableString** |  | [optional] 
 **Ok** | Pointer to **bool** |  | [optional] 
-**StatusCode** | Pointer to **string** |  | [optional] 
-**Message** | Pointer to **string** |  | [optional] 
-**ResultData** | Pointer to **string** |  | [optional] 
+**StatusCode** | Pointer to **NullableString** |  | [optional] 
+**Message** | Pointer to **NullableString** |  | [optional] 
+**ResultData** | Pointer to **NullableString** |  | [optional] 
 **RecordId** | Pointer to **string** |  | [optional] 
 **AppleVerifyReceiptResult** | Pointer to [**AppleVerifyReceiptResult**](AppleVerifyReceiptResult.md) |  | [optional] 
 
@@ -120,6 +120,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *VerifyReceiptResult) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *VerifyReceiptResult) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *VerifyReceiptResult) GetLastModificationTime() time.Time`
@@ -145,6 +155,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *VerifyReceiptResult) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *VerifyReceiptResult) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *VerifyReceiptResult) GetLastModifierId() string`
@@ -170,6 +190,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *VerifyReceiptResult) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *VerifyReceiptResult) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *VerifyReceiptResult) GetIsDeleted() bool`
@@ -220,6 +250,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *VerifyReceiptResult) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *VerifyReceiptResult) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *VerifyReceiptResult) GetDeletionTime() time.Time`
@@ -245,6 +285,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *VerifyReceiptResult) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *VerifyReceiptResult) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetDeleter
 
 `func (o *VerifyReceiptResult) GetDeleter() IdentityUser`
@@ -370,6 +420,16 @@ SetReceiptData sets ReceiptData field to given value.
 
 HasReceiptData returns a boolean if a field has been set.
 
+### SetReceiptDataNil
+
+`func (o *VerifyReceiptResult) SetReceiptDataNil(b bool)`
+
+ SetReceiptDataNil sets the value for ReceiptData to be an explicit nil
+
+### UnsetReceiptData
+`func (o *VerifyReceiptResult) UnsetReceiptData()`
+
+UnsetReceiptData ensures that no value is present for ReceiptData, not even an explicit nil
 ### GetPlatform
 
 `func (o *VerifyReceiptResult) GetPlatform() AppPlatform`
@@ -420,6 +480,16 @@ SetDeviceToken sets DeviceToken field to given value.
 
 HasDeviceToken returns a boolean if a field has been set.
 
+### SetDeviceTokenNil
+
+`func (o *VerifyReceiptResult) SetDeviceTokenNil(b bool)`
+
+ SetDeviceTokenNil sets the value for DeviceToken to be an explicit nil
+
+### UnsetDeviceToken
+`func (o *VerifyReceiptResult) UnsetDeviceToken()`
+
+UnsetDeviceToken ensures that no value is present for DeviceToken, not even an explicit nil
 ### GetOk
 
 `func (o *VerifyReceiptResult) GetOk() bool`
@@ -470,6 +540,16 @@ SetStatusCode sets StatusCode field to given value.
 
 HasStatusCode returns a boolean if a field has been set.
 
+### SetStatusCodeNil
+
+`func (o *VerifyReceiptResult) SetStatusCodeNil(b bool)`
+
+ SetStatusCodeNil sets the value for StatusCode to be an explicit nil
+
+### UnsetStatusCode
+`func (o *VerifyReceiptResult) UnsetStatusCode()`
+
+UnsetStatusCode ensures that no value is present for StatusCode, not even an explicit nil
 ### GetMessage
 
 `func (o *VerifyReceiptResult) GetMessage() string`
@@ -495,6 +575,16 @@ SetMessage sets Message field to given value.
 
 HasMessage returns a boolean if a field has been set.
 
+### SetMessageNil
+
+`func (o *VerifyReceiptResult) SetMessageNil(b bool)`
+
+ SetMessageNil sets the value for Message to be an explicit nil
+
+### UnsetMessage
+`func (o *VerifyReceiptResult) UnsetMessage()`
+
+UnsetMessage ensures that no value is present for Message, not even an explicit nil
 ### GetResultData
 
 `func (o *VerifyReceiptResult) GetResultData() string`
@@ -520,6 +610,16 @@ SetResultData sets ResultData field to given value.
 
 HasResultData returns a boolean if a field has been set.
 
+### SetResultDataNil
+
+`func (o *VerifyReceiptResult) SetResultDataNil(b bool)`
+
+ SetResultDataNil sets the value for ResultData to be an explicit nil
+
+### UnsetResultData
+`func (o *VerifyReceiptResult) UnsetResultData()`
+
+UnsetResultData ensures that no value is present for ResultData, not even an explicit nil
 ### GetRecordId
 
 `func (o *VerifyReceiptResult) GetRecordId() string`

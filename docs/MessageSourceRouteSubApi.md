@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateMessageSourceRouteSub
 
-> CreateMessageSourceRouteSub(ctx).Body(body).Execute()
+> CreateMessageSourceRouteSub(ctx).CreateUpdateMessageSourceRouteSubDto(createUpdateMessageSourceRouteSubDto).Execute()
 
 
 
@@ -31,11 +31,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateUpdateMessageSourceRouteSubDto() // CreateUpdateMessageSourceRouteSubDto |  (optional)
+	createUpdateMessageSourceRouteSubDto := *openapiclient.NewCreateUpdateMessageSourceRouteSubDto() // CreateUpdateMessageSourceRouteSubDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageSourceRouteSubAPI.CreateMessageSourceRouteSub(context.Background()).Body(body).Execute()
+	r, err := apiClient.MessageSourceRouteSubAPI.CreateMessageSourceRouteSub(context.Background()).CreateUpdateMessageSourceRouteSubDto(createUpdateMessageSourceRouteSubDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageSourceRouteSubAPI.CreateMessageSourceRouteSub``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -54,7 +54,7 @@ Other parameters are passed through a pointer to a apiCreateMessageSourceRouteSu
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ Other parameters are passed through a pointer to a apiGetMessageSourceRouteSubLi
 
 ## UpdateMessageSourceRouteSub
 
-> UpdateMessageSourceRouteSub(ctx, id).Body(body).Execute()
+> UpdateMessageSourceRouteSub(ctx, id).CreateUpdateMessageSourceRouteSubDto(createUpdateMessageSourceRouteSubDto).Execute()
 
 
 
@@ -287,11 +287,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateUpdateMessageSourceRouteSubDto() // CreateUpdateMessageSourceRouteSubDto |  (optional)
+	createUpdateMessageSourceRouteSubDto := *openapiclient.NewCreateUpdateMessageSourceRouteSubDto() // CreateUpdateMessageSourceRouteSubDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.MessageSourceRouteSubAPI.UpdateMessageSourceRouteSub(context.Background(), id).Body(body).Execute()
+	r, err := apiClient.MessageSourceRouteSubAPI.UpdateMessageSourceRouteSub(context.Background(), id).CreateUpdateMessageSourceRouteSubDto(createUpdateMessageSourceRouteSubDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MessageSourceRouteSubAPI.UpdateMessageSourceRouteSub``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -315,7 +315,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageSourceRouteSu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
 
 ### Return type
 

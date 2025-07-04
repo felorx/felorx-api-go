@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]map[string]interface{}** |  | [optional] [readonly] 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
 **Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
 **IsDefault** | Pointer to **bool** |  | [optional] 
 **IsStatic** | Pointer to **bool** |  | [optional] 
 **IsPublic** | Pointer to **bool** |  | [optional] 
-**ConcurrencyStamp** | Pointer to **string** |  | [optional] 
+**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -33,20 +33,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetExtraProperties
 
-`func (o *IdentityRoleDto) GetExtraProperties() map[string]map[string]interface{}`
+`func (o *IdentityRoleDto) GetExtraProperties() map[string]interface{}`
 
 GetExtraProperties returns the ExtraProperties field if non-nil, zero value otherwise.
 
 ### GetExtraPropertiesOk
 
-`func (o *IdentityRoleDto) GetExtraPropertiesOk() (*map[string]map[string]interface{}, bool)`
+`func (o *IdentityRoleDto) GetExtraPropertiesOk() (*map[string]interface{}, bool)`
 
 GetExtraPropertiesOk returns a tuple with the ExtraProperties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtraProperties
 
-`func (o *IdentityRoleDto) SetExtraProperties(v map[string]map[string]interface{})`
+`func (o *IdentityRoleDto) SetExtraProperties(v map[string]interface{})`
 
 SetExtraProperties sets ExtraProperties field to given value.
 
@@ -56,6 +56,16 @@ SetExtraProperties sets ExtraProperties field to given value.
 
 HasExtraProperties returns a boolean if a field has been set.
 
+### SetExtraPropertiesNil
+
+`func (o *IdentityRoleDto) SetExtraPropertiesNil(b bool)`
+
+ SetExtraPropertiesNil sets the value for ExtraProperties to be an explicit nil
+
+### UnsetExtraProperties
+`func (o *IdentityRoleDto) UnsetExtraProperties()`
+
+UnsetExtraProperties ensures that no value is present for ExtraProperties, not even an explicit nil
 ### GetId
 
 `func (o *IdentityRoleDto) GetId() string`
@@ -106,6 +116,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *IdentityRoleDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *IdentityRoleDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetIsDefault
 
 `func (o *IdentityRoleDto) GetIsDefault() bool`
@@ -206,6 +226,16 @@ SetConcurrencyStamp sets ConcurrencyStamp field to given value.
 
 HasConcurrencyStamp returns a boolean if a field has been set.
 
+### SetConcurrencyStampNil
+
+`func (o *IdentityRoleDto) SetConcurrencyStampNil(b bool)`
+
+ SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
+
+### UnsetConcurrencyStamp
+`func (o *IdentityRoleDto) UnsetConcurrencyStamp()`
+
+UnsetConcurrencyStamp ensures that no value is present for ConcurrencyStamp, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

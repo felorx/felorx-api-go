@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**Value** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Value** | Pointer to **NullableString** |  | [optional] 
 **Provider** | Pointer to [**FeatureProviderDto**](FeatureProviderDto.md) |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
 **ValueType** | Pointer to [**IStringValueType**](IStringValueType.md) |  | [optional] 
 **Depth** | Pointer to **int32** |  | [optional] 
-**ParentName** | Pointer to **string** |  | [optional] 
+**ParentName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -57,6 +57,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *FeatureDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *FeatureDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *FeatureDto) GetDisplayName() string`
@@ -82,6 +92,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *FeatureDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *FeatureDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetValue
 
 `func (o *FeatureDto) GetValue() string`
@@ -107,6 +127,16 @@ SetValue sets Value field to given value.
 
 HasValue returns a boolean if a field has been set.
 
+### SetValueNil
+
+`func (o *FeatureDto) SetValueNil(b bool)`
+
+ SetValueNil sets the value for Value to be an explicit nil
+
+### UnsetValue
+`func (o *FeatureDto) UnsetValue()`
+
+UnsetValue ensures that no value is present for Value, not even an explicit nil
 ### GetProvider
 
 `func (o *FeatureDto) GetProvider() FeatureProviderDto`
@@ -157,6 +187,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *FeatureDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *FeatureDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetValueType
 
 `func (o *FeatureDto) GetValueType() IStringValueType`
@@ -232,6 +272,16 @@ SetParentName sets ParentName field to given value.
 
 HasParentName returns a boolean if a field has been set.
 
+### SetParentNameNil
+
+`func (o *FeatureDto) SetParentNameNil(b bool)`
+
+ SetParentNameNil sets the value for ParentName to be an explicit nil
+
+### UnsetParentName
+`func (o *FeatureDto) UnsetParentName()`
+
+UnsetParentName ensures that no value is present for ParentName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

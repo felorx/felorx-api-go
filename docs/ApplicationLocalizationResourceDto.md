@@ -51,6 +51,16 @@ SetTexts sets Texts field to given value.
 
 HasTexts returns a boolean if a field has been set.
 
+### SetTextsNil
+
+`func (o *ApplicationLocalizationResourceDto) SetTextsNil(b bool)`
+
+ SetTextsNil sets the value for Texts to be an explicit nil
+
+### UnsetTexts
+`func (o *ApplicationLocalizationResourceDto) UnsetTexts()`
+
+UnsetTexts ensures that no value is present for Texts, not even an explicit nil
 ### GetBaseResources
 
 `func (o *ApplicationLocalizationResourceDto) GetBaseResources() []string`
@@ -76,6 +86,16 @@ SetBaseResources sets BaseResources field to given value.
 
 HasBaseResources returns a boolean if a field has been set.
 
+### SetBaseResourcesNil
+
+`func (o *ApplicationLocalizationResourceDto) SetBaseResourcesNil(b bool)`
+
+ SetBaseResourcesNil sets the value for BaseResources to be an explicit nil
+
+### UnsetBaseResources
+`func (o *ApplicationLocalizationResourceDto) UnsetBaseResources()`
+
+UnsetBaseResources ensures that no value is present for BaseResources, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

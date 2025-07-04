@@ -6,19 +6,19 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
-**Token** | Pointer to **string** |  | [optional] 
-**TpnsToken** | Pointer to **string** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Token** | Pointer to **NullableString** |  | [optional] 
+**TpnsToken** | Pointer to **NullableString** |  | [optional] 
 **IsPhysicalDevice** | Pointer to **bool** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
 **Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
-**Brand** | Pointer to **string** |  | [optional] 
-**SystemVersion** | Pointer to **string** |  | [optional] 
+**Brand** | Pointer to **NullableString** |  | [optional] 
+**SystemVersion** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -114,6 +114,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *DeviceDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *DeviceDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *DeviceDto) GetLastModificationTime() time.Time`
@@ -139,6 +149,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *DeviceDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *DeviceDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *DeviceDto) GetLastModifierId() string`
@@ -164,6 +184,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *DeviceDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *DeviceDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *DeviceDto) GetIsDeleted() bool`
@@ -214,6 +244,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *DeviceDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *DeviceDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *DeviceDto) GetDeletionTime() time.Time`
@@ -239,6 +279,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *DeviceDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *DeviceDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetToken
 
 `func (o *DeviceDto) GetToken() string`
@@ -264,6 +314,16 @@ SetToken sets Token field to given value.
 
 HasToken returns a boolean if a field has been set.
 
+### SetTokenNil
+
+`func (o *DeviceDto) SetTokenNil(b bool)`
+
+ SetTokenNil sets the value for Token to be an explicit nil
+
+### UnsetToken
+`func (o *DeviceDto) UnsetToken()`
+
+UnsetToken ensures that no value is present for Token, not even an explicit nil
 ### GetTpnsToken
 
 `func (o *DeviceDto) GetTpnsToken() string`
@@ -289,6 +349,16 @@ SetTpnsToken sets TpnsToken field to given value.
 
 HasTpnsToken returns a boolean if a field has been set.
 
+### SetTpnsTokenNil
+
+`func (o *DeviceDto) SetTpnsTokenNil(b bool)`
+
+ SetTpnsTokenNil sets the value for TpnsToken to be an explicit nil
+
+### UnsetTpnsToken
+`func (o *DeviceDto) UnsetTpnsToken()`
+
+UnsetTpnsToken ensures that no value is present for TpnsToken, not even an explicit nil
 ### GetIsPhysicalDevice
 
 `func (o *DeviceDto) GetIsPhysicalDevice() bool`
@@ -339,6 +409,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *DeviceDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *DeviceDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetPlatform
 
 `func (o *DeviceDto) GetPlatform() AppPlatform`
@@ -389,6 +469,16 @@ SetBrand sets Brand field to given value.
 
 HasBrand returns a boolean if a field has been set.
 
+### SetBrandNil
+
+`func (o *DeviceDto) SetBrandNil(b bool)`
+
+ SetBrandNil sets the value for Brand to be an explicit nil
+
+### UnsetBrand
+`func (o *DeviceDto) UnsetBrand()`
+
+UnsetBrand ensures that no value is present for Brand, not even an explicit nil
 ### GetSystemVersion
 
 `func (o *DeviceDto) GetSystemVersion() string`
@@ -414,6 +504,16 @@ SetSystemVersion sets SystemVersion field to given value.
 
 HasSystemVersion returns a boolean if a field has been set.
 
+### SetSystemVersionNil
+
+`func (o *DeviceDto) SetSystemVersionNil(b bool)`
+
+ SetSystemVersionNil sets the value for SystemVersion to be an explicit nil
+
+### UnsetSystemVersion
+`func (o *DeviceDto) UnsetSystemVersion()`
+
+UnsetSystemVersion ensures that no value is present for SystemVersion, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

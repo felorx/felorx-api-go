@@ -71,7 +71,7 @@ Other parameters are passed through a pointer to a apiGetEmailSettingsRequest st
 
 ## SendTestEmail
 
-> SendTestEmail(ctx).Body(body).Execute()
+> SendTestEmail(ctx).SendTestEmailInput(sendTestEmailInput).Execute()
 
 
 
@@ -88,11 +88,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewSendTestEmailInput("SenderEmailAddress_example", "TargetEmailAddress_example", "Subject_example") // SendTestEmailInput |  (optional)
+	sendTestEmailInput := *openapiclient.NewSendTestEmailInput("SenderEmailAddress_example", "TargetEmailAddress_example", "Subject_example") // SendTestEmailInput |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.EmailSettingsAPI.SendTestEmail(context.Background()).Body(body).Execute()
+	r, err := apiClient.EmailSettingsAPI.SendTestEmail(context.Background()).SendTestEmailInput(sendTestEmailInput).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `EmailSettingsAPI.SendTestEmail``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -111,7 +111,7 @@ Other parameters are passed through a pointer to a apiSendTestEmailRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SendTestEmailInput**](SendTestEmailInput.md) |  | 
+ **sendTestEmailInput** | [**SendTestEmailInput**](SendTestEmailInput.md) |  | 
 
 ### Return type
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ## UpdateEmailSettings
 
-> UpdateEmailSettings(ctx).Body(body).Execute()
+> UpdateEmailSettings(ctx).UpdateEmailSettingsDto(updateEmailSettingsDto).Execute()
 
 
 
@@ -150,11 +150,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewUpdateEmailSettingsDto("DefaultFromAddress_example", "DefaultFromDisplayName_example") // UpdateEmailSettingsDto |  (optional)
+	updateEmailSettingsDto := *openapiclient.NewUpdateEmailSettingsDto("DefaultFromAddress_example", "DefaultFromDisplayName_example") // UpdateEmailSettingsDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.EmailSettingsAPI.UpdateEmailSettings(context.Background()).Body(body).Execute()
+	r, err := apiClient.EmailSettingsAPI.UpdateEmailSettings(context.Background()).UpdateEmailSettingsDto(updateEmailSettingsDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `EmailSettingsAPI.UpdateEmailSettings``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -173,7 +173,7 @@ Other parameters are passed through a pointer to a apiUpdateEmailSettingsRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md) |  | 
+ **updateEmailSettingsDto** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md) |  | 
 
 ### Return type
 

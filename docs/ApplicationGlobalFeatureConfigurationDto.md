@@ -50,6 +50,16 @@ SetEnabledFeatures sets EnabledFeatures field to given value.
 
 HasEnabledFeatures returns a boolean if a field has been set.
 
+### SetEnabledFeaturesNil
+
+`func (o *ApplicationGlobalFeatureConfigurationDto) SetEnabledFeaturesNil(b bool)`
+
+ SetEnabledFeaturesNil sets the value for EnabledFeatures to be an explicit nil
+
+### UnsetEnabledFeatures
+`func (o *ApplicationGlobalFeatureConfigurationDto) UnsetEnabledFeatures()`
+
+UnsetEnabledFeatures ensures that no value is present for EnabledFeatures, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

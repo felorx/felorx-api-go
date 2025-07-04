@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **SenderEmailAddress** | **string** |  | 
 **TargetEmailAddress** | **string** |  | 
 **Subject** | **string** |  | 
-**Body** | Pointer to **string** |  | [optional] 
+**Body** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -113,6 +113,16 @@ SetBody sets Body field to given value.
 
 HasBody returns a boolean if a field has been set.
 
+### SetBodyNil
+
+`func (o *SendTestEmailInput) SetBodyNil(b bool)`
+
+ SetBodyNil sets the value for Body to be an explicit nil
+
+### UnsetBody
+`func (o *SendTestEmailInput) UnsetBody()`
+
+UnsetBody ensures that no value is present for Body, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

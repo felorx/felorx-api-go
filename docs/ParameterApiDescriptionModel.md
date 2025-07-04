@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NameOnMethod** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**JsonName** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
-**TypeSimple** | Pointer to **string** |  | [optional] 
+**NameOnMethod** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**JsonName** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 **IsOptional** | Pointer to **bool** |  | [optional] 
-**DefaultValue** | Pointer to **map[string]interface{}** |  | [optional] 
+**DefaultValue** | Pointer to **interface{}** |  | [optional] 
 **ConstraintTypes** | Pointer to **[]string** |  | [optional] 
-**BindingSourceId** | Pointer to **string** |  | [optional] 
-**DescriptorName** | Pointer to **string** |  | [optional] 
+**BindingSourceId** | Pointer to **NullableString** |  | [optional] 
+**DescriptorName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -59,6 +59,16 @@ SetNameOnMethod sets NameOnMethod field to given value.
 
 HasNameOnMethod returns a boolean if a field has been set.
 
+### SetNameOnMethodNil
+
+`func (o *ParameterApiDescriptionModel) SetNameOnMethodNil(b bool)`
+
+ SetNameOnMethodNil sets the value for NameOnMethod to be an explicit nil
+
+### UnsetNameOnMethod
+`func (o *ParameterApiDescriptionModel) UnsetNameOnMethod()`
+
+UnsetNameOnMethod ensures that no value is present for NameOnMethod, not even an explicit nil
 ### GetName
 
 `func (o *ParameterApiDescriptionModel) GetName() string`
@@ -84,6 +94,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *ParameterApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *ParameterApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetJsonName
 
 `func (o *ParameterApiDescriptionModel) GetJsonName() string`
@@ -109,6 +129,16 @@ SetJsonName sets JsonName field to given value.
 
 HasJsonName returns a boolean if a field has been set.
 
+### SetJsonNameNil
+
+`func (o *ParameterApiDescriptionModel) SetJsonNameNil(b bool)`
+
+ SetJsonNameNil sets the value for JsonName to be an explicit nil
+
+### UnsetJsonName
+`func (o *ParameterApiDescriptionModel) UnsetJsonName()`
+
+UnsetJsonName ensures that no value is present for JsonName, not even an explicit nil
 ### GetType
 
 `func (o *ParameterApiDescriptionModel) GetType() string`
@@ -134,6 +164,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *ParameterApiDescriptionModel) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *ParameterApiDescriptionModel) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTypeSimple
 
 `func (o *ParameterApiDescriptionModel) GetTypeSimple() string`
@@ -159,6 +199,16 @@ SetTypeSimple sets TypeSimple field to given value.
 
 HasTypeSimple returns a boolean if a field has been set.
 
+### SetTypeSimpleNil
+
+`func (o *ParameterApiDescriptionModel) SetTypeSimpleNil(b bool)`
+
+ SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
+
+### UnsetTypeSimple
+`func (o *ParameterApiDescriptionModel) UnsetTypeSimple()`
+
+UnsetTypeSimple ensures that no value is present for TypeSimple, not even an explicit nil
 ### GetIsOptional
 
 `func (o *ParameterApiDescriptionModel) GetIsOptional() bool`
@@ -186,20 +236,20 @@ HasIsOptional returns a boolean if a field has been set.
 
 ### GetDefaultValue
 
-`func (o *ParameterApiDescriptionModel) GetDefaultValue() map[string]interface{}`
+`func (o *ParameterApiDescriptionModel) GetDefaultValue() interface{}`
 
 GetDefaultValue returns the DefaultValue field if non-nil, zero value otherwise.
 
 ### GetDefaultValueOk
 
-`func (o *ParameterApiDescriptionModel) GetDefaultValueOk() (*map[string]interface{}, bool)`
+`func (o *ParameterApiDescriptionModel) GetDefaultValueOk() (*interface{}, bool)`
 
 GetDefaultValueOk returns a tuple with the DefaultValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultValue
 
-`func (o *ParameterApiDescriptionModel) SetDefaultValue(v map[string]interface{})`
+`func (o *ParameterApiDescriptionModel) SetDefaultValue(v interface{})`
 
 SetDefaultValue sets DefaultValue field to given value.
 
@@ -209,6 +259,16 @@ SetDefaultValue sets DefaultValue field to given value.
 
 HasDefaultValue returns a boolean if a field has been set.
 
+### SetDefaultValueNil
+
+`func (o *ParameterApiDescriptionModel) SetDefaultValueNil(b bool)`
+
+ SetDefaultValueNil sets the value for DefaultValue to be an explicit nil
+
+### UnsetDefaultValue
+`func (o *ParameterApiDescriptionModel) UnsetDefaultValue()`
+
+UnsetDefaultValue ensures that no value is present for DefaultValue, not even an explicit nil
 ### GetConstraintTypes
 
 `func (o *ParameterApiDescriptionModel) GetConstraintTypes() []string`
@@ -234,6 +294,16 @@ SetConstraintTypes sets ConstraintTypes field to given value.
 
 HasConstraintTypes returns a boolean if a field has been set.
 
+### SetConstraintTypesNil
+
+`func (o *ParameterApiDescriptionModel) SetConstraintTypesNil(b bool)`
+
+ SetConstraintTypesNil sets the value for ConstraintTypes to be an explicit nil
+
+### UnsetConstraintTypes
+`func (o *ParameterApiDescriptionModel) UnsetConstraintTypes()`
+
+UnsetConstraintTypes ensures that no value is present for ConstraintTypes, not even an explicit nil
 ### GetBindingSourceId
 
 `func (o *ParameterApiDescriptionModel) GetBindingSourceId() string`
@@ -259,6 +329,16 @@ SetBindingSourceId sets BindingSourceId field to given value.
 
 HasBindingSourceId returns a boolean if a field has been set.
 
+### SetBindingSourceIdNil
+
+`func (o *ParameterApiDescriptionModel) SetBindingSourceIdNil(b bool)`
+
+ SetBindingSourceIdNil sets the value for BindingSourceId to be an explicit nil
+
+### UnsetBindingSourceId
+`func (o *ParameterApiDescriptionModel) UnsetBindingSourceId()`
+
+UnsetBindingSourceId ensures that no value is present for BindingSourceId, not even an explicit nil
 ### GetDescriptorName
 
 `func (o *ParameterApiDescriptionModel) GetDescriptorName() string`
@@ -284,6 +364,16 @@ SetDescriptorName sets DescriptorName field to given value.
 
 HasDescriptorName returns a boolean if a field has been set.
 
+### SetDescriptorNameNil
+
+`func (o *ParameterApiDescriptionModel) SetDescriptorNameNil(b bool)`
+
+ SetDescriptorNameNil sets the value for DescriptorName to be an explicit nil
+
+### UnsetDescriptorName
+`func (o *ParameterApiDescriptionModel) UnsetDescriptorName()`
+
+UnsetDescriptorName ensures that no value is present for DescriptorName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

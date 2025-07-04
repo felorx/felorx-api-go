@@ -6,30 +6,30 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
 **Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional] 
 **AppType** | Pointer to [**AppType**](AppType.md) |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
-**Icon** | Pointer to **string** |  | [optional] 
-**HomePage** | Pointer to **string** | 产品首页 | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Icon** | Pointer to **NullableString** |  | [optional] 
+**HomePage** | Pointer to **NullableString** | 产品首页 | [optional] 
 **SortIndex** | Pointer to **int32** | 显示排序 | [optional] 
-**GitRepository** | Pointer to **string** |  | [optional] 
+**GitRepository** | Pointer to **NullableString** |  | [optional] 
 **GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional] 
 **IsEnabled** | Pointer to **bool** |  | [optional] 
 **IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional] 
-**WebhookUrl** | Pointer to **string** | Webhook Url 各种事件回调地址 | [optional] 
-**BusinessDomain** | Pointer to **string** | 业务域名 | [optional] 
-**BusinessUrl** | Pointer to **string** | 业务地址 | [optional] 
-**SubscriptionPlatforms** | Pointer to **string** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
-**FreePlatforms** | Pointer to **string** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
-**SpecJsonSchema** | Pointer to **string** | 声明格式 | [optional] 
+**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional] 
+**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional] 
+**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional] 
+**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
+**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
+**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional] 
 **DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional] 
 **DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional] 
 **LatestReleases** | Pointer to [**[]AppReleaseDto**](AppReleaseDto.md) |  | [optional] 
@@ -131,6 +131,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *AppDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *AppDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *AppDto) GetLastModificationTime() time.Time`
@@ -156,6 +166,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *AppDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *AppDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *AppDto) GetLastModifierId() string`
@@ -181,6 +201,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *AppDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *AppDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *AppDto) GetIsDeleted() bool`
@@ -231,6 +261,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *AppDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *AppDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *AppDto) GetDeletionTime() time.Time`
@@ -256,6 +296,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *AppDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *AppDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetName
 
 `func (o *AppDto) GetName() string`
@@ -281,6 +331,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *AppDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *AppDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *AppDto) GetDisplayName() string`
@@ -306,6 +366,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *AppDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *AppDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetFramework
 
 `func (o *AppDto) GetFramework() AppFramework`
@@ -381,6 +451,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *AppDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *AppDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetIcon
 
 `func (o *AppDto) GetIcon() string`
@@ -406,6 +486,16 @@ SetIcon sets Icon field to given value.
 
 HasIcon returns a boolean if a field has been set.
 
+### SetIconNil
+
+`func (o *AppDto) SetIconNil(b bool)`
+
+ SetIconNil sets the value for Icon to be an explicit nil
+
+### UnsetIcon
+`func (o *AppDto) UnsetIcon()`
+
+UnsetIcon ensures that no value is present for Icon, not even an explicit nil
 ### GetHomePage
 
 `func (o *AppDto) GetHomePage() string`
@@ -431,6 +521,16 @@ SetHomePage sets HomePage field to given value.
 
 HasHomePage returns a boolean if a field has been set.
 
+### SetHomePageNil
+
+`func (o *AppDto) SetHomePageNil(b bool)`
+
+ SetHomePageNil sets the value for HomePage to be an explicit nil
+
+### UnsetHomePage
+`func (o *AppDto) UnsetHomePage()`
+
+UnsetHomePage ensures that no value is present for HomePage, not even an explicit nil
 ### GetSortIndex
 
 `func (o *AppDto) GetSortIndex() int32`
@@ -481,6 +581,16 @@ SetGitRepository sets GitRepository field to given value.
 
 HasGitRepository returns a boolean if a field has been set.
 
+### SetGitRepositoryNil
+
+`func (o *AppDto) SetGitRepositoryNil(b bool)`
+
+ SetGitRepositoryNil sets the value for GitRepository to be an explicit nil
+
+### UnsetGitRepository
+`func (o *AppDto) UnsetGitRepository()`
+
+UnsetGitRepository ensures that no value is present for GitRepository, not even an explicit nil
 ### GetGitRepositoryType
 
 `func (o *AppDto) GetGitRepositoryType() GitRepositoryType`
@@ -581,6 +691,16 @@ SetWebhookUrl sets WebhookUrl field to given value.
 
 HasWebhookUrl returns a boolean if a field has been set.
 
+### SetWebhookUrlNil
+
+`func (o *AppDto) SetWebhookUrlNil(b bool)`
+
+ SetWebhookUrlNil sets the value for WebhookUrl to be an explicit nil
+
+### UnsetWebhookUrl
+`func (o *AppDto) UnsetWebhookUrl()`
+
+UnsetWebhookUrl ensures that no value is present for WebhookUrl, not even an explicit nil
 ### GetBusinessDomain
 
 `func (o *AppDto) GetBusinessDomain() string`
@@ -606,6 +726,16 @@ SetBusinessDomain sets BusinessDomain field to given value.
 
 HasBusinessDomain returns a boolean if a field has been set.
 
+### SetBusinessDomainNil
+
+`func (o *AppDto) SetBusinessDomainNil(b bool)`
+
+ SetBusinessDomainNil sets the value for BusinessDomain to be an explicit nil
+
+### UnsetBusinessDomain
+`func (o *AppDto) UnsetBusinessDomain()`
+
+UnsetBusinessDomain ensures that no value is present for BusinessDomain, not even an explicit nil
 ### GetBusinessUrl
 
 `func (o *AppDto) GetBusinessUrl() string`
@@ -631,6 +761,16 @@ SetBusinessUrl sets BusinessUrl field to given value.
 
 HasBusinessUrl returns a boolean if a field has been set.
 
+### SetBusinessUrlNil
+
+`func (o *AppDto) SetBusinessUrlNil(b bool)`
+
+ SetBusinessUrlNil sets the value for BusinessUrl to be an explicit nil
+
+### UnsetBusinessUrl
+`func (o *AppDto) UnsetBusinessUrl()`
+
+UnsetBusinessUrl ensures that no value is present for BusinessUrl, not even an explicit nil
 ### GetSubscriptionPlatforms
 
 `func (o *AppDto) GetSubscriptionPlatforms() string`
@@ -656,6 +796,16 @@ SetSubscriptionPlatforms sets SubscriptionPlatforms field to given value.
 
 HasSubscriptionPlatforms returns a boolean if a field has been set.
 
+### SetSubscriptionPlatformsNil
+
+`func (o *AppDto) SetSubscriptionPlatformsNil(b bool)`
+
+ SetSubscriptionPlatformsNil sets the value for SubscriptionPlatforms to be an explicit nil
+
+### UnsetSubscriptionPlatforms
+`func (o *AppDto) UnsetSubscriptionPlatforms()`
+
+UnsetSubscriptionPlatforms ensures that no value is present for SubscriptionPlatforms, not even an explicit nil
 ### GetFreePlatforms
 
 `func (o *AppDto) GetFreePlatforms() string`
@@ -681,6 +831,16 @@ SetFreePlatforms sets FreePlatforms field to given value.
 
 HasFreePlatforms returns a boolean if a field has been set.
 
+### SetFreePlatformsNil
+
+`func (o *AppDto) SetFreePlatformsNil(b bool)`
+
+ SetFreePlatformsNil sets the value for FreePlatforms to be an explicit nil
+
+### UnsetFreePlatforms
+`func (o *AppDto) UnsetFreePlatforms()`
+
+UnsetFreePlatforms ensures that no value is present for FreePlatforms, not even an explicit nil
 ### GetSpecJsonSchema
 
 `func (o *AppDto) GetSpecJsonSchema() string`
@@ -706,6 +866,16 @@ SetSpecJsonSchema sets SpecJsonSchema field to given value.
 
 HasSpecJsonSchema returns a boolean if a field has been set.
 
+### SetSpecJsonSchemaNil
+
+`func (o *AppDto) SetSpecJsonSchemaNil(b bool)`
+
+ SetSpecJsonSchemaNil sets the value for SpecJsonSchema to be an explicit nil
+
+### UnsetSpecJsonSchema
+`func (o *AppDto) UnsetSpecJsonSchema()`
+
+UnsetSpecJsonSchema ensures that no value is present for SpecJsonSchema, not even an explicit nil
 ### GetDefaultStorageSize
 
 `func (o *AppDto) GetDefaultStorageSize() int64`
@@ -781,6 +951,16 @@ SetLatestReleases sets LatestReleases field to given value.
 
 HasLatestReleases returns a boolean if a field has been set.
 
+### SetLatestReleasesNil
+
+`func (o *AppDto) SetLatestReleasesNil(b bool)`
+
+ SetLatestReleasesNil sets the value for LatestReleases to be an explicit nil
+
+### UnsetLatestReleases
+`func (o *AppDto) UnsetLatestReleases()`
+
+UnsetLatestReleases ensures that no value is present for LatestReleases, not even an explicit nil
 ### GetCreator
 
 `func (o *AppDto) GetCreator() IdentityUserDto`
@@ -831,6 +1011,16 @@ SetFeatures sets Features field to given value.
 
 HasFeatures returns a boolean if a field has been set.
 
+### SetFeaturesNil
+
+`func (o *AppDto) SetFeaturesNil(b bool)`
+
+ SetFeaturesNil sets the value for Features to be an explicit nil
+
+### UnsetFeatures
+`func (o *AppDto) UnsetFeatures()`
+
+UnsetFeatures ensures that no value is present for Features, not even an explicit nil
 ### GetSdks
 
 `func (o *AppDto) GetSdks() []AppSdkDto`
@@ -856,6 +1046,16 @@ SetSdks sets Sdks field to given value.
 
 HasSdks returns a boolean if a field has been set.
 
+### SetSdksNil
+
+`func (o *AppDto) SetSdksNil(b bool)`
+
+ SetSdksNil sets the value for Sdks to be an explicit nil
+
+### UnsetSdks
+`func (o *AppDto) UnsetSdks()`
+
+UnsetSdks ensures that no value is present for Sdks, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

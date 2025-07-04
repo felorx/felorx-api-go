@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AutoRenewProductId** | Pointer to **string** |  | [optional] 
-**AutoRenewStatus** | Pointer to **string** |  | [optional] 
-**IsInBillingRetryPeriod** | Pointer to **string** |  | [optional] 
-**OriginalTransactionId** | Pointer to **string** |  | [optional] 
-**ProductId** | Pointer to **string** |  | [optional] 
-**ExpirationIntent** | Pointer to **string** |  | [optional] 
-**PriceConsentStatus** | Pointer to **string** |  | [optional] 
-**GracePeriodExpiresDate** | Pointer to **string** |  | [optional] 
-**GracePeriodExpiresDateMs** | Pointer to **string** |  | [optional] 
-**GracePeriodExpiresDatePst** | Pointer to **string** |  | [optional] 
+**AutoRenewProductId** | Pointer to **NullableString** |  | [optional] 
+**AutoRenewStatus** | Pointer to **NullableString** |  | [optional] 
+**IsInBillingRetryPeriod** | Pointer to **NullableString** |  | [optional] 
+**OriginalTransactionId** | Pointer to **NullableString** |  | [optional] 
+**ProductId** | Pointer to **NullableString** |  | [optional] 
+**ExpirationIntent** | Pointer to **NullableString** |  | [optional] 
+**PriceConsentStatus** | Pointer to **NullableString** |  | [optional] 
+**GracePeriodExpiresDate** | Pointer to **NullableString** |  | [optional] 
+**GracePeriodExpiresDateMs** | Pointer to **NullableString** |  | [optional] 
+**GracePeriodExpiresDatePst** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -59,6 +59,16 @@ SetAutoRenewProductId sets AutoRenewProductId field to given value.
 
 HasAutoRenewProductId returns a boolean if a field has been set.
 
+### SetAutoRenewProductIdNil
+
+`func (o *PendingRenewalInfo) SetAutoRenewProductIdNil(b bool)`
+
+ SetAutoRenewProductIdNil sets the value for AutoRenewProductId to be an explicit nil
+
+### UnsetAutoRenewProductId
+`func (o *PendingRenewalInfo) UnsetAutoRenewProductId()`
+
+UnsetAutoRenewProductId ensures that no value is present for AutoRenewProductId, not even an explicit nil
 ### GetAutoRenewStatus
 
 `func (o *PendingRenewalInfo) GetAutoRenewStatus() string`
@@ -84,6 +94,16 @@ SetAutoRenewStatus sets AutoRenewStatus field to given value.
 
 HasAutoRenewStatus returns a boolean if a field has been set.
 
+### SetAutoRenewStatusNil
+
+`func (o *PendingRenewalInfo) SetAutoRenewStatusNil(b bool)`
+
+ SetAutoRenewStatusNil sets the value for AutoRenewStatus to be an explicit nil
+
+### UnsetAutoRenewStatus
+`func (o *PendingRenewalInfo) UnsetAutoRenewStatus()`
+
+UnsetAutoRenewStatus ensures that no value is present for AutoRenewStatus, not even an explicit nil
 ### GetIsInBillingRetryPeriod
 
 `func (o *PendingRenewalInfo) GetIsInBillingRetryPeriod() string`
@@ -109,6 +129,16 @@ SetIsInBillingRetryPeriod sets IsInBillingRetryPeriod field to given value.
 
 HasIsInBillingRetryPeriod returns a boolean if a field has been set.
 
+### SetIsInBillingRetryPeriodNil
+
+`func (o *PendingRenewalInfo) SetIsInBillingRetryPeriodNil(b bool)`
+
+ SetIsInBillingRetryPeriodNil sets the value for IsInBillingRetryPeriod to be an explicit nil
+
+### UnsetIsInBillingRetryPeriod
+`func (o *PendingRenewalInfo) UnsetIsInBillingRetryPeriod()`
+
+UnsetIsInBillingRetryPeriod ensures that no value is present for IsInBillingRetryPeriod, not even an explicit nil
 ### GetOriginalTransactionId
 
 `func (o *PendingRenewalInfo) GetOriginalTransactionId() string`
@@ -134,6 +164,16 @@ SetOriginalTransactionId sets OriginalTransactionId field to given value.
 
 HasOriginalTransactionId returns a boolean if a field has been set.
 
+### SetOriginalTransactionIdNil
+
+`func (o *PendingRenewalInfo) SetOriginalTransactionIdNil(b bool)`
+
+ SetOriginalTransactionIdNil sets the value for OriginalTransactionId to be an explicit nil
+
+### UnsetOriginalTransactionId
+`func (o *PendingRenewalInfo) UnsetOriginalTransactionId()`
+
+UnsetOriginalTransactionId ensures that no value is present for OriginalTransactionId, not even an explicit nil
 ### GetProductId
 
 `func (o *PendingRenewalInfo) GetProductId() string`
@@ -159,6 +199,16 @@ SetProductId sets ProductId field to given value.
 
 HasProductId returns a boolean if a field has been set.
 
+### SetProductIdNil
+
+`func (o *PendingRenewalInfo) SetProductIdNil(b bool)`
+
+ SetProductIdNil sets the value for ProductId to be an explicit nil
+
+### UnsetProductId
+`func (o *PendingRenewalInfo) UnsetProductId()`
+
+UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
 ### GetExpirationIntent
 
 `func (o *PendingRenewalInfo) GetExpirationIntent() string`
@@ -184,6 +234,16 @@ SetExpirationIntent sets ExpirationIntent field to given value.
 
 HasExpirationIntent returns a boolean if a field has been set.
 
+### SetExpirationIntentNil
+
+`func (o *PendingRenewalInfo) SetExpirationIntentNil(b bool)`
+
+ SetExpirationIntentNil sets the value for ExpirationIntent to be an explicit nil
+
+### UnsetExpirationIntent
+`func (o *PendingRenewalInfo) UnsetExpirationIntent()`
+
+UnsetExpirationIntent ensures that no value is present for ExpirationIntent, not even an explicit nil
 ### GetPriceConsentStatus
 
 `func (o *PendingRenewalInfo) GetPriceConsentStatus() string`
@@ -209,6 +269,16 @@ SetPriceConsentStatus sets PriceConsentStatus field to given value.
 
 HasPriceConsentStatus returns a boolean if a field has been set.
 
+### SetPriceConsentStatusNil
+
+`func (o *PendingRenewalInfo) SetPriceConsentStatusNil(b bool)`
+
+ SetPriceConsentStatusNil sets the value for PriceConsentStatus to be an explicit nil
+
+### UnsetPriceConsentStatus
+`func (o *PendingRenewalInfo) UnsetPriceConsentStatus()`
+
+UnsetPriceConsentStatus ensures that no value is present for PriceConsentStatus, not even an explicit nil
 ### GetGracePeriodExpiresDate
 
 `func (o *PendingRenewalInfo) GetGracePeriodExpiresDate() string`
@@ -234,6 +304,16 @@ SetGracePeriodExpiresDate sets GracePeriodExpiresDate field to given value.
 
 HasGracePeriodExpiresDate returns a boolean if a field has been set.
 
+### SetGracePeriodExpiresDateNil
+
+`func (o *PendingRenewalInfo) SetGracePeriodExpiresDateNil(b bool)`
+
+ SetGracePeriodExpiresDateNil sets the value for GracePeriodExpiresDate to be an explicit nil
+
+### UnsetGracePeriodExpiresDate
+`func (o *PendingRenewalInfo) UnsetGracePeriodExpiresDate()`
+
+UnsetGracePeriodExpiresDate ensures that no value is present for GracePeriodExpiresDate, not even an explicit nil
 ### GetGracePeriodExpiresDateMs
 
 `func (o *PendingRenewalInfo) GetGracePeriodExpiresDateMs() string`
@@ -259,6 +339,16 @@ SetGracePeriodExpiresDateMs sets GracePeriodExpiresDateMs field to given value.
 
 HasGracePeriodExpiresDateMs returns a boolean if a field has been set.
 
+### SetGracePeriodExpiresDateMsNil
+
+`func (o *PendingRenewalInfo) SetGracePeriodExpiresDateMsNil(b bool)`
+
+ SetGracePeriodExpiresDateMsNil sets the value for GracePeriodExpiresDateMs to be an explicit nil
+
+### UnsetGracePeriodExpiresDateMs
+`func (o *PendingRenewalInfo) UnsetGracePeriodExpiresDateMs()`
+
+UnsetGracePeriodExpiresDateMs ensures that no value is present for GracePeriodExpiresDateMs, not even an explicit nil
 ### GetGracePeriodExpiresDatePst
 
 `func (o *PendingRenewalInfo) GetGracePeriodExpiresDatePst() string`
@@ -284,6 +374,16 @@ SetGracePeriodExpiresDatePst sets GracePeriodExpiresDatePst field to given value
 
 HasGracePeriodExpiresDatePst returns a boolean if a field has been set.
 
+### SetGracePeriodExpiresDatePstNil
+
+`func (o *PendingRenewalInfo) SetGracePeriodExpiresDatePstNil(b bool)`
+
+ SetGracePeriodExpiresDatePstNil sets the value for GracePeriodExpiresDatePst to be an explicit nil
+
+### UnsetGracePeriodExpiresDatePst
+`func (o *PendingRenewalInfo) UnsetGracePeriodExpiresDatePst()`
+
+UnsetGracePeriodExpiresDatePst ensures that no value is present for GracePeriodExpiresDatePst, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

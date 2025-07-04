@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EntityDisplayName** | Pointer to **string** |  | [optional] 
+**EntityDisplayName** | Pointer to **NullableString** |  | [optional] 
 **Groups** | Pointer to [**[]PermissionGroupDto**](PermissionGroupDto.md) |  | [optional] 
 
 ## Methods
@@ -51,6 +51,16 @@ SetEntityDisplayName sets EntityDisplayName field to given value.
 
 HasEntityDisplayName returns a boolean if a field has been set.
 
+### SetEntityDisplayNameNil
+
+`func (o *GetPermissionListResultDto) SetEntityDisplayNameNil(b bool)`
+
+ SetEntityDisplayNameNil sets the value for EntityDisplayName to be an explicit nil
+
+### UnsetEntityDisplayName
+`func (o *GetPermissionListResultDto) UnsetEntityDisplayName()`
+
+UnsetEntityDisplayName ensures that no value is present for EntityDisplayName, not even an explicit nil
 ### GetGroups
 
 `func (o *GetPermissionListResultDto) GetGroups() []PermissionGroupDto`
@@ -76,6 +86,16 @@ SetGroups sets Groups field to given value.
 
 HasGroups returns a boolean if a field has been set.
 
+### SetGroupsNil
+
+`func (o *GetPermissionListResultDto) SetGroupsNil(b bool)`
+
+ SetGroupsNil sets the value for Groups to be an explicit nil
+
+### UnsetGroups
+`func (o *GetPermissionListResultDto) UnsetGroups()`
+
+UnsetGroups ensures that no value is present for Groups, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

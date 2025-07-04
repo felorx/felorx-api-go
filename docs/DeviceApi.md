@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## Bind
 
-> Bind(ctx).Body(body).Execute()
+> Bind(ctx).BindDeviceDto(bindDeviceDto).Execute()
 
 
 
@@ -32,11 +32,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewBindDeviceDto() // BindDeviceDto |  (optional)
+	bindDeviceDto := *openapiclient.NewBindDeviceDto() // BindDeviceDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.DeviceAPI.Bind(context.Background()).Body(body).Execute()
+	r, err := apiClient.DeviceAPI.Bind(context.Background()).BindDeviceDto(bindDeviceDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DeviceAPI.Bind``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiBindRequest struct via the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**BindDeviceDto**](BindDeviceDto.md) |  | 
+ **bindDeviceDto** | [**BindDeviceDto**](BindDeviceDto.md) |  | 
 
 ### Return type
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 
 ## RefreshDevice
 
-> RefreshDevice(ctx).Body(body).Execute()
+> RefreshDevice(ctx).RefreshDeviceStatusDto(refreshDeviceStatusDto).Execute()
 
 
 
@@ -294,11 +294,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewRefreshDeviceStatusDto() // RefreshDeviceStatusDto |  (optional)
+	refreshDeviceStatusDto := *openapiclient.NewRefreshDeviceStatusDto() // RefreshDeviceStatusDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.DeviceAPI.RefreshDevice(context.Background()).Body(body).Execute()
+	r, err := apiClient.DeviceAPI.RefreshDevice(context.Background()).RefreshDeviceStatusDto(refreshDeviceStatusDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `DeviceAPI.RefreshDevice``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -317,7 +317,7 @@ Other parameters are passed through a pointer to a apiRefreshDeviceRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md) |  | 
+ **refreshDeviceStatusDto** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md) |  | 
 
 ### Return type
 

@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] [readonly] 
-**TenantId** | Pointer to **string** |  | [optional] [readonly] 
-**ClaimType** | Pointer to **string** |  | [optional] [readonly] 
-**ClaimValue** | Pointer to **string** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ClaimType** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ClaimValue** | Pointer to **NullableString** |  | [optional] [readonly] 
 **UserId** | Pointer to **string** |  | [optional] 
 
 ## Methods
@@ -79,6 +79,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *IdentityUserClaim) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *IdentityUserClaim) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetClaimType
 
 `func (o *IdentityUserClaim) GetClaimType() string`
@@ -104,6 +114,16 @@ SetClaimType sets ClaimType field to given value.
 
 HasClaimType returns a boolean if a field has been set.
 
+### SetClaimTypeNil
+
+`func (o *IdentityUserClaim) SetClaimTypeNil(b bool)`
+
+ SetClaimTypeNil sets the value for ClaimType to be an explicit nil
+
+### UnsetClaimType
+`func (o *IdentityUserClaim) UnsetClaimType()`
+
+UnsetClaimType ensures that no value is present for ClaimType, not even an explicit nil
 ### GetClaimValue
 
 `func (o *IdentityUserClaim) GetClaimValue() string`
@@ -129,6 +149,16 @@ SetClaimValue sets ClaimValue field to given value.
 
 HasClaimValue returns a boolean if a field has been set.
 
+### SetClaimValueNil
+
+`func (o *IdentityUserClaim) SetClaimValueNil(b bool)`
+
+ SetClaimValueNil sets the value for ClaimValue to be an explicit nil
+
+### UnsetClaimValue
+`func (o *IdentityUserClaim) UnsetClaimValue()`
+
+UnsetClaimValue ensures that no value is present for ClaimValue, not even an explicit nil
 ### GetUserId
 
 `func (o *IdentityUserClaim) GetUserId() string`

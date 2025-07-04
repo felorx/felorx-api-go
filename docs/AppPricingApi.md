@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateAppPricing
 
-> AppPricingDto CreateAppPricing(ctx).Body(body).Execute()
+> AppPricingDto CreateAppPricing(ctx).CreateOrUpdateAppPricingDto(createOrUpdateAppPricingDto).Execute()
 
 
 
@@ -33,11 +33,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrUpdateAppPricingDto() // CreateOrUpdateAppPricingDto |  (optional)
+	createOrUpdateAppPricingDto := *openapiclient.NewCreateOrUpdateAppPricingDto() // CreateOrUpdateAppPricingDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppPricingAPI.CreateAppPricing(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.AppPricingAPI.CreateAppPricing(context.Background()).CreateOrUpdateAppPricingDto(createOrUpdateAppPricingDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingAPI.CreateAppPricing``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -58,7 +58,7 @@ Other parameters are passed through a pointer to a apiCreateAppPricingRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
+ **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
 
 ### Return type
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ## UpdateAppPricing
 
-> AppPricingDto UpdateAppPricing(ctx, id).Body(body).Execute()
+> AppPricingDto UpdateAppPricing(ctx, id).CreateOrUpdateAppPricingDto(createOrUpdateAppPricingDto).Execute()
 
 
 
@@ -436,11 +436,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateOrUpdateAppPricingDto() // CreateOrUpdateAppPricingDto |  (optional)
+	createOrUpdateAppPricingDto := *openapiclient.NewCreateOrUpdateAppPricingDto() // CreateOrUpdateAppPricingDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppPricingAPI.UpdateAppPricing(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.AppPricingAPI.UpdateAppPricing(context.Background(), id).CreateOrUpdateAppPricingDto(createOrUpdateAppPricingDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingAPI.UpdateAppPricing``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -466,7 +466,7 @@ Other parameters are passed through a pointer to a apiUpdateAppPricingRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
+ **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
 
 ### Return type
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Entities** | Pointer to [**map[string]EntityExtensionDto**](EntityExtensionDto.md) |  | [optional] 
-**Configuration** | Pointer to **map[string]map[string]interface{}** |  | [optional] 
+**Configuration** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -51,22 +51,32 @@ SetEntities sets Entities field to given value.
 
 HasEntities returns a boolean if a field has been set.
 
+### SetEntitiesNil
+
+`func (o *ModuleExtensionDto) SetEntitiesNil(b bool)`
+
+ SetEntitiesNil sets the value for Entities to be an explicit nil
+
+### UnsetEntities
+`func (o *ModuleExtensionDto) UnsetEntities()`
+
+UnsetEntities ensures that no value is present for Entities, not even an explicit nil
 ### GetConfiguration
 
-`func (o *ModuleExtensionDto) GetConfiguration() map[string]map[string]interface{}`
+`func (o *ModuleExtensionDto) GetConfiguration() map[string]interface{}`
 
 GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
 
 ### GetConfigurationOk
 
-`func (o *ModuleExtensionDto) GetConfigurationOk() (*map[string]map[string]interface{}, bool)`
+`func (o *ModuleExtensionDto) GetConfigurationOk() (*map[string]interface{}, bool)`
 
 GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConfiguration
 
-`func (o *ModuleExtensionDto) SetConfiguration(v map[string]map[string]interface{})`
+`func (o *ModuleExtensionDto) SetConfiguration(v map[string]interface{})`
 
 SetConfiguration sets Configuration field to given value.
 
@@ -76,6 +86,16 @@ SetConfiguration sets Configuration field to given value.
 
 HasConfiguration returns a boolean if a field has been set.
 
+### SetConfigurationNil
+
+`func (o *ModuleExtensionDto) SetConfigurationNil(b bool)`
+
+ SetConfigurationNil sets the value for Configuration to be an explicit nil
+
+### UnsetConfiguration
+`func (o *ModuleExtensionDto) UnsetConfiguration()`
+
+UnsetConfiguration ensures that no value is present for Configuration, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## AppleNotifications
 
-> AppleNotifications(ctx).Body(body).Execute()
+> AppleNotifications(ctx).AppleNotificaionDto(appleNotificaionDto).Execute()
 
 苹果订阅 Callback 地址
 
@@ -30,11 +30,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewAppleNotificaionDto() // AppleNotificaionDto |  (optional)
+	appleNotificaionDto := *openapiclient.NewAppleNotificaionDto() // AppleNotificaionDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.SubscriptionAPI.AppleNotifications(context.Background()).Body(body).Execute()
+	r, err := apiClient.SubscriptionAPI.AppleNotifications(context.Background()).AppleNotificaionDto(appleNotificaionDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.AppleNotifications``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiAppleNotificationsRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**AppleNotificaionDto**](AppleNotificaionDto.md) |  | 
+ **appleNotificaionDto** | [**AppleNotificaionDto**](AppleNotificaionDto.md) |  | 
 
 ### Return type
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrder
 
-> SubscriptionOrderDto CreateOrder(ctx).Body(body).Execute()
+> SubscriptionOrderDto CreateOrder(ctx).CreateOrGetSubscriptionOrderDto(createOrGetSubscriptionOrderDto).Execute()
 
 
 
@@ -92,11 +92,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrGetSubscriptionOrderDto() // CreateOrGetSubscriptionOrderDto |  (optional)
+	createOrGetSubscriptionOrderDto := *openapiclient.NewCreateOrGetSubscriptionOrderDto() // CreateOrGetSubscriptionOrderDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SubscriptionAPI.CreateOrder(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.SubscriptionAPI.CreateOrder(context.Background()).CreateOrGetSubscriptionOrderDto(createOrGetSubscriptionOrderDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.CreateOrder``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -117,7 +117,7 @@ Other parameters are passed through a pointer to a apiCreateOrderRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrGetSubscriptionOrderDto**](CreateOrGetSubscriptionOrderDto.md) |  | 
+ **createOrGetSubscriptionOrderDto** | [**CreateOrGetSubscriptionOrderDto**](CreateOrGetSubscriptionOrderDto.md) |  | 
 
 ### Return type
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ## VerifyReceipt
 
-> VerifyReceiptResult VerifyReceipt(ctx).Body(body).Execute()
+> VerifyReceiptResult VerifyReceipt(ctx).VerifyReceiptDto(verifyReceiptDto).Execute()
 
 
 
@@ -220,11 +220,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewVerifyReceiptDto("OrderId_example", "ReceiptData_example", openapiclient.AppPlatform("None"), "DeviceToken_example") // VerifyReceiptDto |  (optional)
+	verifyReceiptDto := *openapiclient.NewVerifyReceiptDto("OrderId_example", "ReceiptData_example", openapiclient.AppPlatform("None"), "DeviceToken_example") // VerifyReceiptDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SubscriptionAPI.VerifyReceipt(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.SubscriptionAPI.VerifyReceipt(context.Background()).VerifyReceiptDto(verifyReceiptDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.VerifyReceipt``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -245,7 +245,7 @@ Other parameters are passed through a pointer to a apiVerifyReceiptRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**VerifyReceiptDto**](VerifyReceiptDto.md) |  | 
+ **verifyReceiptDto** | [**VerifyReceiptDto**](VerifyReceiptDto.md) |  | 
 
 ### Return type
 

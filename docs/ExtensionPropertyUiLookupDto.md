@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** |  | [optional] 
-**ResultListPropertyName** | Pointer to **string** |  | [optional] 
-**DisplayPropertyName** | Pointer to **string** |  | [optional] 
-**ValuePropertyName** | Pointer to **string** |  | [optional] 
-**FilterParamName** | Pointer to **string** |  | [optional] 
+**Url** | Pointer to **NullableString** |  | [optional] 
+**ResultListPropertyName** | Pointer to **NullableString** |  | [optional] 
+**DisplayPropertyName** | Pointer to **NullableString** |  | [optional] 
+**ValuePropertyName** | Pointer to **NullableString** |  | [optional] 
+**FilterParamName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### SetUrlNil
+
+`func (o *ExtensionPropertyUiLookupDto) SetUrlNil(b bool)`
+
+ SetUrlNil sets the value for Url to be an explicit nil
+
+### UnsetUrl
+`func (o *ExtensionPropertyUiLookupDto) UnsetUrl()`
+
+UnsetUrl ensures that no value is present for Url, not even an explicit nil
 ### GetResultListPropertyName
 
 `func (o *ExtensionPropertyUiLookupDto) GetResultListPropertyName() string`
@@ -79,6 +89,16 @@ SetResultListPropertyName sets ResultListPropertyName field to given value.
 
 HasResultListPropertyName returns a boolean if a field has been set.
 
+### SetResultListPropertyNameNil
+
+`func (o *ExtensionPropertyUiLookupDto) SetResultListPropertyNameNil(b bool)`
+
+ SetResultListPropertyNameNil sets the value for ResultListPropertyName to be an explicit nil
+
+### UnsetResultListPropertyName
+`func (o *ExtensionPropertyUiLookupDto) UnsetResultListPropertyName()`
+
+UnsetResultListPropertyName ensures that no value is present for ResultListPropertyName, not even an explicit nil
 ### GetDisplayPropertyName
 
 `func (o *ExtensionPropertyUiLookupDto) GetDisplayPropertyName() string`
@@ -104,6 +124,16 @@ SetDisplayPropertyName sets DisplayPropertyName field to given value.
 
 HasDisplayPropertyName returns a boolean if a field has been set.
 
+### SetDisplayPropertyNameNil
+
+`func (o *ExtensionPropertyUiLookupDto) SetDisplayPropertyNameNil(b bool)`
+
+ SetDisplayPropertyNameNil sets the value for DisplayPropertyName to be an explicit nil
+
+### UnsetDisplayPropertyName
+`func (o *ExtensionPropertyUiLookupDto) UnsetDisplayPropertyName()`
+
+UnsetDisplayPropertyName ensures that no value is present for DisplayPropertyName, not even an explicit nil
 ### GetValuePropertyName
 
 `func (o *ExtensionPropertyUiLookupDto) GetValuePropertyName() string`
@@ -129,6 +159,16 @@ SetValuePropertyName sets ValuePropertyName field to given value.
 
 HasValuePropertyName returns a boolean if a field has been set.
 
+### SetValuePropertyNameNil
+
+`func (o *ExtensionPropertyUiLookupDto) SetValuePropertyNameNil(b bool)`
+
+ SetValuePropertyNameNil sets the value for ValuePropertyName to be an explicit nil
+
+### UnsetValuePropertyName
+`func (o *ExtensionPropertyUiLookupDto) UnsetValuePropertyName()`
+
+UnsetValuePropertyName ensures that no value is present for ValuePropertyName, not even an explicit nil
 ### GetFilterParamName
 
 `func (o *ExtensionPropertyUiLookupDto) GetFilterParamName() string`
@@ -154,6 +194,16 @@ SetFilterParamName sets FilterParamName field to given value.
 
 HasFilterParamName returns a boolean if a field has been set.
 
+### SetFilterParamNameNil
+
+`func (o *ExtensionPropertyUiLookupDto) SetFilterParamNameNil(b bool)`
+
+ SetFilterParamNameNil sets the value for FilterParamName to be an explicit nil
+
+### UnsetFilterParamName
+`func (o *ExtensionPropertyUiLookupDto) UnsetFilterParamName()`
+
+UnsetFilterParamName ensures that no value is present for FilterParamName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

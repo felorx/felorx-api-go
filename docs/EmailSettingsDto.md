@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SmtpHost** | Pointer to **string** |  | [optional] 
+**SmtpHost** | Pointer to **NullableString** |  | [optional] 
 **SmtpPort** | Pointer to **int32** |  | [optional] 
-**SmtpUserName** | Pointer to **string** |  | [optional] 
-**SmtpPassword** | Pointer to **string** |  | [optional] 
-**SmtpDomain** | Pointer to **string** |  | [optional] 
+**SmtpUserName** | Pointer to **NullableString** |  | [optional] 
+**SmtpPassword** | Pointer to **NullableString** |  | [optional] 
+**SmtpDomain** | Pointer to **NullableString** |  | [optional] 
 **SmtpEnableSsl** | Pointer to **bool** |  | [optional] 
 **SmtpUseDefaultCredentials** | Pointer to **bool** |  | [optional] 
-**DefaultFromAddress** | Pointer to **string** |  | [optional] 
-**DefaultFromDisplayName** | Pointer to **string** |  | [optional] 
+**DefaultFromAddress** | Pointer to **NullableString** |  | [optional] 
+**DefaultFromDisplayName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -58,6 +58,16 @@ SetSmtpHost sets SmtpHost field to given value.
 
 HasSmtpHost returns a boolean if a field has been set.
 
+### SetSmtpHostNil
+
+`func (o *EmailSettingsDto) SetSmtpHostNil(b bool)`
+
+ SetSmtpHostNil sets the value for SmtpHost to be an explicit nil
+
+### UnsetSmtpHost
+`func (o *EmailSettingsDto) UnsetSmtpHost()`
+
+UnsetSmtpHost ensures that no value is present for SmtpHost, not even an explicit nil
 ### GetSmtpPort
 
 `func (o *EmailSettingsDto) GetSmtpPort() int32`
@@ -108,6 +118,16 @@ SetSmtpUserName sets SmtpUserName field to given value.
 
 HasSmtpUserName returns a boolean if a field has been set.
 
+### SetSmtpUserNameNil
+
+`func (o *EmailSettingsDto) SetSmtpUserNameNil(b bool)`
+
+ SetSmtpUserNameNil sets the value for SmtpUserName to be an explicit nil
+
+### UnsetSmtpUserName
+`func (o *EmailSettingsDto) UnsetSmtpUserName()`
+
+UnsetSmtpUserName ensures that no value is present for SmtpUserName, not even an explicit nil
 ### GetSmtpPassword
 
 `func (o *EmailSettingsDto) GetSmtpPassword() string`
@@ -133,6 +153,16 @@ SetSmtpPassword sets SmtpPassword field to given value.
 
 HasSmtpPassword returns a boolean if a field has been set.
 
+### SetSmtpPasswordNil
+
+`func (o *EmailSettingsDto) SetSmtpPasswordNil(b bool)`
+
+ SetSmtpPasswordNil sets the value for SmtpPassword to be an explicit nil
+
+### UnsetSmtpPassword
+`func (o *EmailSettingsDto) UnsetSmtpPassword()`
+
+UnsetSmtpPassword ensures that no value is present for SmtpPassword, not even an explicit nil
 ### GetSmtpDomain
 
 `func (o *EmailSettingsDto) GetSmtpDomain() string`
@@ -158,6 +188,16 @@ SetSmtpDomain sets SmtpDomain field to given value.
 
 HasSmtpDomain returns a boolean if a field has been set.
 
+### SetSmtpDomainNil
+
+`func (o *EmailSettingsDto) SetSmtpDomainNil(b bool)`
+
+ SetSmtpDomainNil sets the value for SmtpDomain to be an explicit nil
+
+### UnsetSmtpDomain
+`func (o *EmailSettingsDto) UnsetSmtpDomain()`
+
+UnsetSmtpDomain ensures that no value is present for SmtpDomain, not even an explicit nil
 ### GetSmtpEnableSsl
 
 `func (o *EmailSettingsDto) GetSmtpEnableSsl() bool`
@@ -233,6 +273,16 @@ SetDefaultFromAddress sets DefaultFromAddress field to given value.
 
 HasDefaultFromAddress returns a boolean if a field has been set.
 
+### SetDefaultFromAddressNil
+
+`func (o *EmailSettingsDto) SetDefaultFromAddressNil(b bool)`
+
+ SetDefaultFromAddressNil sets the value for DefaultFromAddress to be an explicit nil
+
+### UnsetDefaultFromAddress
+`func (o *EmailSettingsDto) UnsetDefaultFromAddress()`
+
+UnsetDefaultFromAddress ensures that no value is present for DefaultFromAddress, not even an explicit nil
 ### GetDefaultFromDisplayName
 
 `func (o *EmailSettingsDto) GetDefaultFromDisplayName() string`
@@ -258,6 +308,16 @@ SetDefaultFromDisplayName sets DefaultFromDisplayName field to given value.
 
 HasDefaultFromDisplayName returns a boolean if a field has been set.
 
+### SetDefaultFromDisplayNameNil
+
+`func (o *EmailSettingsDto) SetDefaultFromDisplayNameNil(b bool)`
+
+ SetDefaultFromDisplayNameNil sets the value for DefaultFromDisplayName to be an explicit nil
+
+### UnsetDefaultFromDisplayName
+`func (o *EmailSettingsDto) UnsetDefaultFromDisplayName()`
+
+UnsetDefaultFromDisplayName ensures that no value is present for DefaultFromDisplayName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

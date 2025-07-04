@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## ChangePassword
 
-> ChangePassword(ctx).Body(body).Execute()
+> ChangePassword(ctx).ChangePasswordInput(changePasswordInput).Execute()
 
 
 
@@ -29,11 +29,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewChangePasswordInput("NewPassword_example") // ChangePasswordInput |  (optional)
+	changePasswordInput := *openapiclient.NewChangePasswordInput("NewPassword_example") // ChangePasswordInput |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.ProfileAPI.ChangePassword(context.Background()).Body(body).Execute()
+	r, err := apiClient.ProfileAPI.ChangePassword(context.Background()).ChangePasswordInput(changePasswordInput).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ProfileAPI.ChangePassword``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -52,7 +52,7 @@ Other parameters are passed through a pointer to a apiChangePasswordRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ChangePasswordInput**](ChangePasswordInput.md) |  | 
+ **changePasswordInput** | [**ChangePasswordInput**](ChangePasswordInput.md) |  | 
 
 ### Return type
 
@@ -133,7 +133,7 @@ Other parameters are passed through a pointer to a apiGetProfileRequest struct v
 
 ## UpdateProfile
 
-> ProfileDto UpdateProfile(ctx).Body(body).Execute()
+> ProfileDto UpdateProfile(ctx).UpdateProfileDto(updateProfileDto).Execute()
 
 
 
@@ -150,11 +150,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewUpdateProfileDto() // UpdateProfileDto |  (optional)
+	updateProfileDto := *openapiclient.NewUpdateProfileDto() // UpdateProfileDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ProfileAPI.UpdateProfile(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.ProfileAPI.UpdateProfile(context.Background()).UpdateProfileDto(updateProfileDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ProfileAPI.UpdateProfile``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -175,7 +175,7 @@ Other parameters are passed through a pointer to a apiUpdateProfileRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**UpdateProfileDto**](UpdateProfileDto.md) |  | 
+ **updateProfileDto** | [**UpdateProfileDto**](UpdateProfileDto.md) |  | 
 
 ### Return type
 

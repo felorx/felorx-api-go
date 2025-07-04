@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TimeZoneId** | Pointer to **string** |  | [optional] 
+**TimeZoneId** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetTimeZoneId sets TimeZoneId field to given value.
 
 HasTimeZoneId returns a boolean if a field has been set.
 
+### SetTimeZoneIdNil
+
+`func (o *WindowsTimeZone) SetTimeZoneIdNil(b bool)`
+
+ SetTimeZoneIdNil sets the value for TimeZoneId to be an explicit nil
+
+### UnsetTimeZoneId
+`func (o *WindowsTimeZone) UnsetTimeZoneId()`
+
+UnsetTimeZoneId ensures that no value is present for TimeZoneId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
 **Methods** | Pointer to [**[]InterfaceMethodApiDescriptionModel**](InterfaceMethodApiDescriptionModel.md) |  | [optional] 
 
 ## Methods
@@ -52,6 +52,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *ControllerInterfaceApiDescriptionModel) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *ControllerInterfaceApiDescriptionModel) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetName
 
 `func (o *ControllerInterfaceApiDescriptionModel) GetName() string`
@@ -77,6 +87,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *ControllerInterfaceApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *ControllerInterfaceApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetMethods
 
 `func (o *ControllerInterfaceApiDescriptionModel) GetMethods() []InterfaceMethodApiDescriptionModel`
@@ -102,6 +122,16 @@ SetMethods sets Methods field to given value.
 
 HasMethods returns a boolean if a field has been set.
 
+### SetMethodsNil
+
+`func (o *ControllerInterfaceApiDescriptionModel) SetMethodsNil(b bool)`
+
+ SetMethodsNil sets the value for Methods to be an explicit nil
+
+### UnsetMethods
+`func (o *ControllerInterfaceApiDescriptionModel) UnsetMethods()`
+
+UnsetMethods ensures that no value is present for Methods, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

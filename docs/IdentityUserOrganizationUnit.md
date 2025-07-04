@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CreationTime** | Pointer to **time.Time** |  | [optional] [readonly] 
-**CreatorId** | Pointer to **string** |  | [optional] [readonly] 
-**TenantId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] 
 **UserId** | Pointer to **string** |  | [optional] 
 **OrganizationUnitId** | Pointer to **string** |  | [optional] 
 
@@ -79,6 +79,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *IdentityUserOrganizationUnit) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *IdentityUserOrganizationUnit) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetTenantId
 
 `func (o *IdentityUserOrganizationUnit) GetTenantId() string`
@@ -104,6 +114,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *IdentityUserOrganizationUnit) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *IdentityUserOrganizationUnit) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetUserId
 
 `func (o *IdentityUserOrganizationUnit) GetUserId() string`

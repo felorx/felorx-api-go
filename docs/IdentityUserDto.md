@@ -4,30 +4,30 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]map[string]interface{}** |  | [optional] [readonly] 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
 **Id** | Pointer to **string** |  | [optional] 
 **CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **string** |  | [optional] 
-**LastModificationTime** | Pointer to **time.Time** |  | [optional] 
-**LastModifierId** | Pointer to **string** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
 **IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **string** |  | [optional] 
-**DeletionTime** | Pointer to **time.Time** |  | [optional] 
-**TenantId** | Pointer to **string** |  | [optional] 
-**UserName** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**Surname** | Pointer to **string** |  | [optional] 
-**Email** | Pointer to **string** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**TenantId** | Pointer to **NullableString** |  | [optional] 
+**UserName** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Surname** | Pointer to **NullableString** |  | [optional] 
+**Email** | Pointer to **NullableString** |  | [optional] 
 **EmailConfirmed** | Pointer to **bool** |  | [optional] 
-**PhoneNumber** | Pointer to **string** |  | [optional] 
+**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
 **PhoneNumberConfirmed** | Pointer to **bool** |  | [optional] 
 **IsActive** | Pointer to **bool** |  | [optional] 
 **LockoutEnabled** | Pointer to **bool** |  | [optional] 
 **AccessFailedCount** | Pointer to **int32** |  | [optional] 
-**LockoutEnd** | Pointer to **time.Time** |  | [optional] 
-**ConcurrencyStamp** | Pointer to **string** |  | [optional] 
+**LockoutEnd** | Pointer to **NullableTime** |  | [optional] 
+**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional] 
 **EntityVersion** | Pointer to **int32** |  | [optional] 
-**LastPasswordChangeTime** | Pointer to **time.Time** |  | [optional] 
+**LastPasswordChangeTime** | Pointer to **NullableTime** |  | [optional] 
 
 ## Methods
 
@@ -50,20 +50,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetExtraProperties
 
-`func (o *IdentityUserDto) GetExtraProperties() map[string]map[string]interface{}`
+`func (o *IdentityUserDto) GetExtraProperties() map[string]interface{}`
 
 GetExtraProperties returns the ExtraProperties field if non-nil, zero value otherwise.
 
 ### GetExtraPropertiesOk
 
-`func (o *IdentityUserDto) GetExtraPropertiesOk() (*map[string]map[string]interface{}, bool)`
+`func (o *IdentityUserDto) GetExtraPropertiesOk() (*map[string]interface{}, bool)`
 
 GetExtraPropertiesOk returns a tuple with the ExtraProperties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtraProperties
 
-`func (o *IdentityUserDto) SetExtraProperties(v map[string]map[string]interface{})`
+`func (o *IdentityUserDto) SetExtraProperties(v map[string]interface{})`
 
 SetExtraProperties sets ExtraProperties field to given value.
 
@@ -73,6 +73,16 @@ SetExtraProperties sets ExtraProperties field to given value.
 
 HasExtraProperties returns a boolean if a field has been set.
 
+### SetExtraPropertiesNil
+
+`func (o *IdentityUserDto) SetExtraPropertiesNil(b bool)`
+
+ SetExtraPropertiesNil sets the value for ExtraProperties to be an explicit nil
+
+### UnsetExtraProperties
+`func (o *IdentityUserDto) UnsetExtraProperties()`
+
+UnsetExtraProperties ensures that no value is present for ExtraProperties, not even an explicit nil
 ### GetId
 
 `func (o *IdentityUserDto) GetId() string`
@@ -148,6 +158,16 @@ SetCreatorId sets CreatorId field to given value.
 
 HasCreatorId returns a boolean if a field has been set.
 
+### SetCreatorIdNil
+
+`func (o *IdentityUserDto) SetCreatorIdNil(b bool)`
+
+ SetCreatorIdNil sets the value for CreatorId to be an explicit nil
+
+### UnsetCreatorId
+`func (o *IdentityUserDto) UnsetCreatorId()`
+
+UnsetCreatorId ensures that no value is present for CreatorId, not even an explicit nil
 ### GetLastModificationTime
 
 `func (o *IdentityUserDto) GetLastModificationTime() time.Time`
@@ -173,6 +193,16 @@ SetLastModificationTime sets LastModificationTime field to given value.
 
 HasLastModificationTime returns a boolean if a field has been set.
 
+### SetLastModificationTimeNil
+
+`func (o *IdentityUserDto) SetLastModificationTimeNil(b bool)`
+
+ SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
+
+### UnsetLastModificationTime
+`func (o *IdentityUserDto) UnsetLastModificationTime()`
+
+UnsetLastModificationTime ensures that no value is present for LastModificationTime, not even an explicit nil
 ### GetLastModifierId
 
 `func (o *IdentityUserDto) GetLastModifierId() string`
@@ -198,6 +228,16 @@ SetLastModifierId sets LastModifierId field to given value.
 
 HasLastModifierId returns a boolean if a field has been set.
 
+### SetLastModifierIdNil
+
+`func (o *IdentityUserDto) SetLastModifierIdNil(b bool)`
+
+ SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
+
+### UnsetLastModifierId
+`func (o *IdentityUserDto) UnsetLastModifierId()`
+
+UnsetLastModifierId ensures that no value is present for LastModifierId, not even an explicit nil
 ### GetIsDeleted
 
 `func (o *IdentityUserDto) GetIsDeleted() bool`
@@ -248,6 +288,16 @@ SetDeleterId sets DeleterId field to given value.
 
 HasDeleterId returns a boolean if a field has been set.
 
+### SetDeleterIdNil
+
+`func (o *IdentityUserDto) SetDeleterIdNil(b bool)`
+
+ SetDeleterIdNil sets the value for DeleterId to be an explicit nil
+
+### UnsetDeleterId
+`func (o *IdentityUserDto) UnsetDeleterId()`
+
+UnsetDeleterId ensures that no value is present for DeleterId, not even an explicit nil
 ### GetDeletionTime
 
 `func (o *IdentityUserDto) GetDeletionTime() time.Time`
@@ -273,6 +323,16 @@ SetDeletionTime sets DeletionTime field to given value.
 
 HasDeletionTime returns a boolean if a field has been set.
 
+### SetDeletionTimeNil
+
+`func (o *IdentityUserDto) SetDeletionTimeNil(b bool)`
+
+ SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
+
+### UnsetDeletionTime
+`func (o *IdentityUserDto) UnsetDeletionTime()`
+
+UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 ### GetTenantId
 
 `func (o *IdentityUserDto) GetTenantId() string`
@@ -298,6 +358,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *IdentityUserDto) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *IdentityUserDto) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetUserName
 
 `func (o *IdentityUserDto) GetUserName() string`
@@ -323,6 +393,16 @@ SetUserName sets UserName field to given value.
 
 HasUserName returns a boolean if a field has been set.
 
+### SetUserNameNil
+
+`func (o *IdentityUserDto) SetUserNameNil(b bool)`
+
+ SetUserNameNil sets the value for UserName to be an explicit nil
+
+### UnsetUserName
+`func (o *IdentityUserDto) UnsetUserName()`
+
+UnsetUserName ensures that no value is present for UserName, not even an explicit nil
 ### GetName
 
 `func (o *IdentityUserDto) GetName() string`
@@ -348,6 +428,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *IdentityUserDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *IdentityUserDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetSurname
 
 `func (o *IdentityUserDto) GetSurname() string`
@@ -373,6 +463,16 @@ SetSurname sets Surname field to given value.
 
 HasSurname returns a boolean if a field has been set.
 
+### SetSurnameNil
+
+`func (o *IdentityUserDto) SetSurnameNil(b bool)`
+
+ SetSurnameNil sets the value for Surname to be an explicit nil
+
+### UnsetSurname
+`func (o *IdentityUserDto) UnsetSurname()`
+
+UnsetSurname ensures that no value is present for Surname, not even an explicit nil
 ### GetEmail
 
 `func (o *IdentityUserDto) GetEmail() string`
@@ -398,6 +498,16 @@ SetEmail sets Email field to given value.
 
 HasEmail returns a boolean if a field has been set.
 
+### SetEmailNil
+
+`func (o *IdentityUserDto) SetEmailNil(b bool)`
+
+ SetEmailNil sets the value for Email to be an explicit nil
+
+### UnsetEmail
+`func (o *IdentityUserDto) UnsetEmail()`
+
+UnsetEmail ensures that no value is present for Email, not even an explicit nil
 ### GetEmailConfirmed
 
 `func (o *IdentityUserDto) GetEmailConfirmed() bool`
@@ -448,6 +558,16 @@ SetPhoneNumber sets PhoneNumber field to given value.
 
 HasPhoneNumber returns a boolean if a field has been set.
 
+### SetPhoneNumberNil
+
+`func (o *IdentityUserDto) SetPhoneNumberNil(b bool)`
+
+ SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
+
+### UnsetPhoneNumber
+`func (o *IdentityUserDto) UnsetPhoneNumber()`
+
+UnsetPhoneNumber ensures that no value is present for PhoneNumber, not even an explicit nil
 ### GetPhoneNumberConfirmed
 
 `func (o *IdentityUserDto) GetPhoneNumberConfirmed() bool`
@@ -573,6 +693,16 @@ SetLockoutEnd sets LockoutEnd field to given value.
 
 HasLockoutEnd returns a boolean if a field has been set.
 
+### SetLockoutEndNil
+
+`func (o *IdentityUserDto) SetLockoutEndNil(b bool)`
+
+ SetLockoutEndNil sets the value for LockoutEnd to be an explicit nil
+
+### UnsetLockoutEnd
+`func (o *IdentityUserDto) UnsetLockoutEnd()`
+
+UnsetLockoutEnd ensures that no value is present for LockoutEnd, not even an explicit nil
 ### GetConcurrencyStamp
 
 `func (o *IdentityUserDto) GetConcurrencyStamp() string`
@@ -598,6 +728,16 @@ SetConcurrencyStamp sets ConcurrencyStamp field to given value.
 
 HasConcurrencyStamp returns a boolean if a field has been set.
 
+### SetConcurrencyStampNil
+
+`func (o *IdentityUserDto) SetConcurrencyStampNil(b bool)`
+
+ SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
+
+### UnsetConcurrencyStamp
+`func (o *IdentityUserDto) UnsetConcurrencyStamp()`
+
+UnsetConcurrencyStamp ensures that no value is present for ConcurrencyStamp, not even an explicit nil
 ### GetEntityVersion
 
 `func (o *IdentityUserDto) GetEntityVersion() int32`
@@ -648,6 +788,16 @@ SetLastPasswordChangeTime sets LastPasswordChangeTime field to given value.
 
 HasLastPasswordChangeTime returns a boolean if a field has been set.
 
+### SetLastPasswordChangeTimeNil
+
+`func (o *IdentityUserDto) SetLastPasswordChangeTimeNil(b bool)`
+
+ SetLastPasswordChangeTimeNil sets the value for LastPasswordChangeTime to be an explicit nil
+
+### UnsetLastPasswordChangeTime
+`func (o *IdentityUserDto) UnsetLastPasswordChangeTime()`
+
+UnsetLastPasswordChangeTime ensures that no value is present for LastPasswordChangeTime, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

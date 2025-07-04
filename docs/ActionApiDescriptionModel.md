@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UniqueName** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**HttpMethod** | Pointer to **string** |  | [optional] 
-**Url** | Pointer to **string** |  | [optional] 
+**UniqueName** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**HttpMethod** | Pointer to **NullableString** |  | [optional] 
+**Url** | Pointer to **NullableString** |  | [optional] 
 **SupportedVersions** | Pointer to **[]string** |  | [optional] 
 **ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional] 
 **Parameters** | Pointer to [**[]ParameterApiDescriptionModel**](ParameterApiDescriptionModel.md) |  | [optional] 
 **ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional] 
-**AllowAnonymous** | Pointer to **bool** |  | [optional] 
-**ImplementFrom** | Pointer to **string** |  | [optional] 
+**AllowAnonymous** | Pointer to **NullableBool** |  | [optional] 
+**ImplementFrom** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -59,6 +59,16 @@ SetUniqueName sets UniqueName field to given value.
 
 HasUniqueName returns a boolean if a field has been set.
 
+### SetUniqueNameNil
+
+`func (o *ActionApiDescriptionModel) SetUniqueNameNil(b bool)`
+
+ SetUniqueNameNil sets the value for UniqueName to be an explicit nil
+
+### UnsetUniqueName
+`func (o *ActionApiDescriptionModel) UnsetUniqueName()`
+
+UnsetUniqueName ensures that no value is present for UniqueName, not even an explicit nil
 ### GetName
 
 `func (o *ActionApiDescriptionModel) GetName() string`
@@ -84,6 +94,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *ActionApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *ActionApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetHttpMethod
 
 `func (o *ActionApiDescriptionModel) GetHttpMethod() string`
@@ -109,6 +129,16 @@ SetHttpMethod sets HttpMethod field to given value.
 
 HasHttpMethod returns a boolean if a field has been set.
 
+### SetHttpMethodNil
+
+`func (o *ActionApiDescriptionModel) SetHttpMethodNil(b bool)`
+
+ SetHttpMethodNil sets the value for HttpMethod to be an explicit nil
+
+### UnsetHttpMethod
+`func (o *ActionApiDescriptionModel) UnsetHttpMethod()`
+
+UnsetHttpMethod ensures that no value is present for HttpMethod, not even an explicit nil
 ### GetUrl
 
 `func (o *ActionApiDescriptionModel) GetUrl() string`
@@ -134,6 +164,16 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### SetUrlNil
+
+`func (o *ActionApiDescriptionModel) SetUrlNil(b bool)`
+
+ SetUrlNil sets the value for Url to be an explicit nil
+
+### UnsetUrl
+`func (o *ActionApiDescriptionModel) UnsetUrl()`
+
+UnsetUrl ensures that no value is present for Url, not even an explicit nil
 ### GetSupportedVersions
 
 `func (o *ActionApiDescriptionModel) GetSupportedVersions() []string`
@@ -159,6 +199,16 @@ SetSupportedVersions sets SupportedVersions field to given value.
 
 HasSupportedVersions returns a boolean if a field has been set.
 
+### SetSupportedVersionsNil
+
+`func (o *ActionApiDescriptionModel) SetSupportedVersionsNil(b bool)`
+
+ SetSupportedVersionsNil sets the value for SupportedVersions to be an explicit nil
+
+### UnsetSupportedVersions
+`func (o *ActionApiDescriptionModel) UnsetSupportedVersions()`
+
+UnsetSupportedVersions ensures that no value is present for SupportedVersions, not even an explicit nil
 ### GetParametersOnMethod
 
 `func (o *ActionApiDescriptionModel) GetParametersOnMethod() []MethodParameterApiDescriptionModel`
@@ -184,6 +234,16 @@ SetParametersOnMethod sets ParametersOnMethod field to given value.
 
 HasParametersOnMethod returns a boolean if a field has been set.
 
+### SetParametersOnMethodNil
+
+`func (o *ActionApiDescriptionModel) SetParametersOnMethodNil(b bool)`
+
+ SetParametersOnMethodNil sets the value for ParametersOnMethod to be an explicit nil
+
+### UnsetParametersOnMethod
+`func (o *ActionApiDescriptionModel) UnsetParametersOnMethod()`
+
+UnsetParametersOnMethod ensures that no value is present for ParametersOnMethod, not even an explicit nil
 ### GetParameters
 
 `func (o *ActionApiDescriptionModel) GetParameters() []ParameterApiDescriptionModel`
@@ -209,6 +269,16 @@ SetParameters sets Parameters field to given value.
 
 HasParameters returns a boolean if a field has been set.
 
+### SetParametersNil
+
+`func (o *ActionApiDescriptionModel) SetParametersNil(b bool)`
+
+ SetParametersNil sets the value for Parameters to be an explicit nil
+
+### UnsetParameters
+`func (o *ActionApiDescriptionModel) UnsetParameters()`
+
+UnsetParameters ensures that no value is present for Parameters, not even an explicit nil
 ### GetReturnValue
 
 `func (o *ActionApiDescriptionModel) GetReturnValue() ReturnValueApiDescriptionModel`
@@ -259,6 +329,16 @@ SetAllowAnonymous sets AllowAnonymous field to given value.
 
 HasAllowAnonymous returns a boolean if a field has been set.
 
+### SetAllowAnonymousNil
+
+`func (o *ActionApiDescriptionModel) SetAllowAnonymousNil(b bool)`
+
+ SetAllowAnonymousNil sets the value for AllowAnonymous to be an explicit nil
+
+### UnsetAllowAnonymous
+`func (o *ActionApiDescriptionModel) UnsetAllowAnonymous()`
+
+UnsetAllowAnonymous ensures that no value is present for AllowAnonymous, not even an explicit nil
 ### GetImplementFrom
 
 `func (o *ActionApiDescriptionModel) GetImplementFrom() string`
@@ -284,6 +364,16 @@ SetImplementFrom sets ImplementFrom field to given value.
 
 HasImplementFrom returns a boolean if a field has been set.
 
+### SetImplementFromNil
+
+`func (o *ActionApiDescriptionModel) SetImplementFromNil(b bool)`
+
+ SetImplementFromNil sets the value for ImplementFrom to be an explicit nil
+
+### UnsetImplementFrom
+`func (o *ActionApiDescriptionModel) UnsetImplementFrom()`
+
+UnsetImplementFrom ensures that no value is present for ImplementFrom, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

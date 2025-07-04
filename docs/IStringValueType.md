@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] [readonly] 
-**Properties** | Pointer to **map[string]map[string]interface{}** |  | [optional] [readonly] 
+**Name** | Pointer to **NullableString** |  | [optional] [readonly] 
+**Properties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
 **Validator** | Pointer to [**IValueValidator**](IValueValidator.md) |  | [optional] 
 
 ## Methods
@@ -52,22 +52,32 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *IStringValueType) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *IStringValueType) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetProperties
 
-`func (o *IStringValueType) GetProperties() map[string]map[string]interface{}`
+`func (o *IStringValueType) GetProperties() map[string]interface{}`
 
 GetProperties returns the Properties field if non-nil, zero value otherwise.
 
 ### GetPropertiesOk
 
-`func (o *IStringValueType) GetPropertiesOk() (*map[string]map[string]interface{}, bool)`
+`func (o *IStringValueType) GetPropertiesOk() (*map[string]interface{}, bool)`
 
 GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProperties
 
-`func (o *IStringValueType) SetProperties(v map[string]map[string]interface{})`
+`func (o *IStringValueType) SetProperties(v map[string]interface{})`
 
 SetProperties sets Properties field to given value.
 
@@ -77,6 +87,16 @@ SetProperties sets Properties field to given value.
 
 HasProperties returns a boolean if a field has been set.
 
+### SetPropertiesNil
+
+`func (o *IStringValueType) SetPropertiesNil(b bool)`
+
+ SetPropertiesNil sets the value for Properties to be an explicit nil
+
+### UnsetProperties
+`func (o *IStringValueType) UnsetProperties()`
+
+UnsetProperties ensures that no value is present for Properties, not even an explicit nil
 ### GetValidator
 
 `func (o *IStringValueType) GetValidator() IValueValidator`

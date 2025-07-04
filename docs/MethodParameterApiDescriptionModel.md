@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**TypeAsString** | Pointer to **string** |  | [optional] 
-**Type** | Pointer to **string** |  | [optional] 
-**TypeSimple** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**TypeAsString** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 **IsOptional** | Pointer to **bool** |  | [optional] 
-**DefaultValue** | Pointer to **map[string]interface{}** |  | [optional] 
+**DefaultValue** | Pointer to **interface{}** |  | [optional] 
 
 ## Methods
 
@@ -55,6 +55,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *MethodParameterApiDescriptionModel) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *MethodParameterApiDescriptionModel) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetTypeAsString
 
 `func (o *MethodParameterApiDescriptionModel) GetTypeAsString() string`
@@ -80,6 +90,16 @@ SetTypeAsString sets TypeAsString field to given value.
 
 HasTypeAsString returns a boolean if a field has been set.
 
+### SetTypeAsStringNil
+
+`func (o *MethodParameterApiDescriptionModel) SetTypeAsStringNil(b bool)`
+
+ SetTypeAsStringNil sets the value for TypeAsString to be an explicit nil
+
+### UnsetTypeAsString
+`func (o *MethodParameterApiDescriptionModel) UnsetTypeAsString()`
+
+UnsetTypeAsString ensures that no value is present for TypeAsString, not even an explicit nil
 ### GetType
 
 `func (o *MethodParameterApiDescriptionModel) GetType() string`
@@ -105,6 +125,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *MethodParameterApiDescriptionModel) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *MethodParameterApiDescriptionModel) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTypeSimple
 
 `func (o *MethodParameterApiDescriptionModel) GetTypeSimple() string`
@@ -130,6 +160,16 @@ SetTypeSimple sets TypeSimple field to given value.
 
 HasTypeSimple returns a boolean if a field has been set.
 
+### SetTypeSimpleNil
+
+`func (o *MethodParameterApiDescriptionModel) SetTypeSimpleNil(b bool)`
+
+ SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
+
+### UnsetTypeSimple
+`func (o *MethodParameterApiDescriptionModel) UnsetTypeSimple()`
+
+UnsetTypeSimple ensures that no value is present for TypeSimple, not even an explicit nil
 ### GetIsOptional
 
 `func (o *MethodParameterApiDescriptionModel) GetIsOptional() bool`
@@ -157,20 +197,20 @@ HasIsOptional returns a boolean if a field has been set.
 
 ### GetDefaultValue
 
-`func (o *MethodParameterApiDescriptionModel) GetDefaultValue() map[string]interface{}`
+`func (o *MethodParameterApiDescriptionModel) GetDefaultValue() interface{}`
 
 GetDefaultValue returns the DefaultValue field if non-nil, zero value otherwise.
 
 ### GetDefaultValueOk
 
-`func (o *MethodParameterApiDescriptionModel) GetDefaultValueOk() (*map[string]interface{}, bool)`
+`func (o *MethodParameterApiDescriptionModel) GetDefaultValueOk() (*interface{}, bool)`
 
 GetDefaultValueOk returns a tuple with the DefaultValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultValue
 
-`func (o *MethodParameterApiDescriptionModel) SetDefaultValue(v map[string]interface{})`
+`func (o *MethodParameterApiDescriptionModel) SetDefaultValue(v interface{})`
 
 SetDefaultValue sets DefaultValue field to given value.
 
@@ -180,6 +220,16 @@ SetDefaultValue sets DefaultValue field to given value.
 
 HasDefaultValue returns a boolean if a field has been set.
 
+### SetDefaultValueNil
+
+`func (o *MethodParameterApiDescriptionModel) SetDefaultValueNil(b bool)`
+
+ SetDefaultValueNil sets the value for DefaultValue to be an explicit nil
+
+### UnsetDefaultValue
+`func (o *MethodParameterApiDescriptionModel) UnsetDefaultValue()`
+
+UnsetDefaultValue ensures that no value is present for DefaultValue, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

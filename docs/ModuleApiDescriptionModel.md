@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RootPath** | Pointer to **string** |  | [optional] 
-**RemoteServiceName** | Pointer to **string** |  | [optional] 
+**RootPath** | Pointer to **NullableString** |  | [optional] 
+**RemoteServiceName** | Pointer to **NullableString** |  | [optional] 
 **Controllers** | Pointer to [**map[string]ControllerApiDescriptionModel**](ControllerApiDescriptionModel.md) |  | [optional] 
 
 ## Methods
@@ -52,6 +52,16 @@ SetRootPath sets RootPath field to given value.
 
 HasRootPath returns a boolean if a field has been set.
 
+### SetRootPathNil
+
+`func (o *ModuleApiDescriptionModel) SetRootPathNil(b bool)`
+
+ SetRootPathNil sets the value for RootPath to be an explicit nil
+
+### UnsetRootPath
+`func (o *ModuleApiDescriptionModel) UnsetRootPath()`
+
+UnsetRootPath ensures that no value is present for RootPath, not even an explicit nil
 ### GetRemoteServiceName
 
 `func (o *ModuleApiDescriptionModel) GetRemoteServiceName() string`
@@ -77,6 +87,16 @@ SetRemoteServiceName sets RemoteServiceName field to given value.
 
 HasRemoteServiceName returns a boolean if a field has been set.
 
+### SetRemoteServiceNameNil
+
+`func (o *ModuleApiDescriptionModel) SetRemoteServiceNameNil(b bool)`
+
+ SetRemoteServiceNameNil sets the value for RemoteServiceName to be an explicit nil
+
+### UnsetRemoteServiceName
+`func (o *ModuleApiDescriptionModel) UnsetRemoteServiceName()`
+
+UnsetRemoteServiceName ensures that no value is present for RemoteServiceName, not even an explicit nil
 ### GetControllers
 
 `func (o *ModuleApiDescriptionModel) GetControllers() map[string]ControllerApiDescriptionModel`
@@ -102,6 +122,16 @@ SetControllers sets Controllers field to given value.
 
 HasControllers returns a boolean if a field has been set.
 
+### SetControllersNil
+
+`func (o *ModuleApiDescriptionModel) SetControllersNil(b bool)`
+
+ SetControllersNil sets the value for Controllers to be an explicit nil
+
+### UnsetControllers
+`func (o *ModuleApiDescriptionModel) UnsetControllers()`
+
+UnsetControllers ensures that no value is present for Controllers, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Resources** | Pointer to [**map[string]ApplicationLocalizationResourceDto**](ApplicationLocalizationResourceDto.md) |  | [optional] 
 **Languages** | Pointer to [**[]LanguageInfo**](LanguageInfo.md) |  | [optional] 
 **CurrentCulture** | Pointer to [**CurrentCultureDto**](CurrentCultureDto.md) |  | [optional] 
-**DefaultResourceName** | Pointer to **string** |  | [optional] 
+**DefaultResourceName** | Pointer to **NullableString** |  | [optional] 
 **LanguagesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional] 
 **LanguageFilesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional] 
 
@@ -56,6 +56,16 @@ SetValues sets Values field to given value.
 
 HasValues returns a boolean if a field has been set.
 
+### SetValuesNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetValuesNil(b bool)`
+
+ SetValuesNil sets the value for Values to be an explicit nil
+
+### UnsetValues
+`func (o *ApplicationLocalizationConfigurationDto) UnsetValues()`
+
+UnsetValues ensures that no value is present for Values, not even an explicit nil
 ### GetResources
 
 `func (o *ApplicationLocalizationConfigurationDto) GetResources() map[string]ApplicationLocalizationResourceDto`
@@ -81,6 +91,16 @@ SetResources sets Resources field to given value.
 
 HasResources returns a boolean if a field has been set.
 
+### SetResourcesNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetResourcesNil(b bool)`
+
+ SetResourcesNil sets the value for Resources to be an explicit nil
+
+### UnsetResources
+`func (o *ApplicationLocalizationConfigurationDto) UnsetResources()`
+
+UnsetResources ensures that no value is present for Resources, not even an explicit nil
 ### GetLanguages
 
 `func (o *ApplicationLocalizationConfigurationDto) GetLanguages() []LanguageInfo`
@@ -106,6 +126,16 @@ SetLanguages sets Languages field to given value.
 
 HasLanguages returns a boolean if a field has been set.
 
+### SetLanguagesNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetLanguagesNil(b bool)`
+
+ SetLanguagesNil sets the value for Languages to be an explicit nil
+
+### UnsetLanguages
+`func (o *ApplicationLocalizationConfigurationDto) UnsetLanguages()`
+
+UnsetLanguages ensures that no value is present for Languages, not even an explicit nil
 ### GetCurrentCulture
 
 `func (o *ApplicationLocalizationConfigurationDto) GetCurrentCulture() CurrentCultureDto`
@@ -156,6 +186,16 @@ SetDefaultResourceName sets DefaultResourceName field to given value.
 
 HasDefaultResourceName returns a boolean if a field has been set.
 
+### SetDefaultResourceNameNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetDefaultResourceNameNil(b bool)`
+
+ SetDefaultResourceNameNil sets the value for DefaultResourceName to be an explicit nil
+
+### UnsetDefaultResourceName
+`func (o *ApplicationLocalizationConfigurationDto) UnsetDefaultResourceName()`
+
+UnsetDefaultResourceName ensures that no value is present for DefaultResourceName, not even an explicit nil
 ### GetLanguagesMap
 
 `func (o *ApplicationLocalizationConfigurationDto) GetLanguagesMap() map[string][]NameValue`
@@ -181,6 +221,16 @@ SetLanguagesMap sets LanguagesMap field to given value.
 
 HasLanguagesMap returns a boolean if a field has been set.
 
+### SetLanguagesMapNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetLanguagesMapNil(b bool)`
+
+ SetLanguagesMapNil sets the value for LanguagesMap to be an explicit nil
+
+### UnsetLanguagesMap
+`func (o *ApplicationLocalizationConfigurationDto) UnsetLanguagesMap()`
+
+UnsetLanguagesMap ensures that no value is present for LanguagesMap, not even an explicit nil
 ### GetLanguageFilesMap
 
 `func (o *ApplicationLocalizationConfigurationDto) GetLanguageFilesMap() map[string][]NameValue`
@@ -206,6 +256,16 @@ SetLanguageFilesMap sets LanguageFilesMap field to given value.
 
 HasLanguageFilesMap returns a boolean if a field has been set.
 
+### SetLanguageFilesMapNil
+
+`func (o *ApplicationLocalizationConfigurationDto) SetLanguageFilesMapNil(b bool)`
+
+ SetLanguageFilesMapNil sets the value for LanguageFilesMap to be an explicit nil
+
+### UnsetLanguageFilesMap
+`func (o *ApplicationLocalizationConfigurationDto) UnsetLanguageFilesMap()`
+
+UnsetLanguageFilesMap ensures that no value is present for LanguageFilesMap, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

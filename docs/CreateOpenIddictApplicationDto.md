@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**DisplayNames** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**DisplayNames** | Pointer to **NullableString** |  | [optional] 
 **Permissions** | Pointer to **[]string** |  | [optional] 
-**PostLogoutRedirectUris** | Pointer to **string** |  | [optional] 
-**Properties** | Pointer to **string** |  | [optional] 
-**RedirectUris** | Pointer to **string** |  | [optional] 
-**Requirements** | Pointer to **string** |  | [optional] 
-**ClientUri** | Pointer to **string** |  | [optional] 
-**LogoUri** | Pointer to **string** |  | [optional] 
+**PostLogoutRedirectUris** | Pointer to **NullableString** |  | [optional] 
+**Properties** | Pointer to **NullableString** |  | [optional] 
+**RedirectUris** | Pointer to **NullableString** |  | [optional] 
+**Requirements** | Pointer to **NullableString** |  | [optional] 
+**ClientUri** | Pointer to **NullableString** |  | [optional] 
+**LogoUri** | Pointer to **NullableString** |  | [optional] 
 **GrantTypes** | Pointer to **[]string** |  | [optional] 
 **Scopes** | Pointer to **[]string** |  | [optional] 
 
@@ -61,6 +61,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *CreateOpenIddictApplicationDto) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *CreateOpenIddictApplicationDto) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetDisplayName
 
 `func (o *CreateOpenIddictApplicationDto) GetDisplayName() string`
@@ -86,6 +96,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *CreateOpenIddictApplicationDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *CreateOpenIddictApplicationDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetDisplayNames
 
 `func (o *CreateOpenIddictApplicationDto) GetDisplayNames() string`
@@ -111,6 +131,16 @@ SetDisplayNames sets DisplayNames field to given value.
 
 HasDisplayNames returns a boolean if a field has been set.
 
+### SetDisplayNamesNil
+
+`func (o *CreateOpenIddictApplicationDto) SetDisplayNamesNil(b bool)`
+
+ SetDisplayNamesNil sets the value for DisplayNames to be an explicit nil
+
+### UnsetDisplayNames
+`func (o *CreateOpenIddictApplicationDto) UnsetDisplayNames()`
+
+UnsetDisplayNames ensures that no value is present for DisplayNames, not even an explicit nil
 ### GetPermissions
 
 `func (o *CreateOpenIddictApplicationDto) GetPermissions() []string`
@@ -136,6 +166,16 @@ SetPermissions sets Permissions field to given value.
 
 HasPermissions returns a boolean if a field has been set.
 
+### SetPermissionsNil
+
+`func (o *CreateOpenIddictApplicationDto) SetPermissionsNil(b bool)`
+
+ SetPermissionsNil sets the value for Permissions to be an explicit nil
+
+### UnsetPermissions
+`func (o *CreateOpenIddictApplicationDto) UnsetPermissions()`
+
+UnsetPermissions ensures that no value is present for Permissions, not even an explicit nil
 ### GetPostLogoutRedirectUris
 
 `func (o *CreateOpenIddictApplicationDto) GetPostLogoutRedirectUris() string`
@@ -161,6 +201,16 @@ SetPostLogoutRedirectUris sets PostLogoutRedirectUris field to given value.
 
 HasPostLogoutRedirectUris returns a boolean if a field has been set.
 
+### SetPostLogoutRedirectUrisNil
+
+`func (o *CreateOpenIddictApplicationDto) SetPostLogoutRedirectUrisNil(b bool)`
+
+ SetPostLogoutRedirectUrisNil sets the value for PostLogoutRedirectUris to be an explicit nil
+
+### UnsetPostLogoutRedirectUris
+`func (o *CreateOpenIddictApplicationDto) UnsetPostLogoutRedirectUris()`
+
+UnsetPostLogoutRedirectUris ensures that no value is present for PostLogoutRedirectUris, not even an explicit nil
 ### GetProperties
 
 `func (o *CreateOpenIddictApplicationDto) GetProperties() string`
@@ -186,6 +236,16 @@ SetProperties sets Properties field to given value.
 
 HasProperties returns a boolean if a field has been set.
 
+### SetPropertiesNil
+
+`func (o *CreateOpenIddictApplicationDto) SetPropertiesNil(b bool)`
+
+ SetPropertiesNil sets the value for Properties to be an explicit nil
+
+### UnsetProperties
+`func (o *CreateOpenIddictApplicationDto) UnsetProperties()`
+
+UnsetProperties ensures that no value is present for Properties, not even an explicit nil
 ### GetRedirectUris
 
 `func (o *CreateOpenIddictApplicationDto) GetRedirectUris() string`
@@ -211,6 +271,16 @@ SetRedirectUris sets RedirectUris field to given value.
 
 HasRedirectUris returns a boolean if a field has been set.
 
+### SetRedirectUrisNil
+
+`func (o *CreateOpenIddictApplicationDto) SetRedirectUrisNil(b bool)`
+
+ SetRedirectUrisNil sets the value for RedirectUris to be an explicit nil
+
+### UnsetRedirectUris
+`func (o *CreateOpenIddictApplicationDto) UnsetRedirectUris()`
+
+UnsetRedirectUris ensures that no value is present for RedirectUris, not even an explicit nil
 ### GetRequirements
 
 `func (o *CreateOpenIddictApplicationDto) GetRequirements() string`
@@ -236,6 +306,16 @@ SetRequirements sets Requirements field to given value.
 
 HasRequirements returns a boolean if a field has been set.
 
+### SetRequirementsNil
+
+`func (o *CreateOpenIddictApplicationDto) SetRequirementsNil(b bool)`
+
+ SetRequirementsNil sets the value for Requirements to be an explicit nil
+
+### UnsetRequirements
+`func (o *CreateOpenIddictApplicationDto) UnsetRequirements()`
+
+UnsetRequirements ensures that no value is present for Requirements, not even an explicit nil
 ### GetClientUri
 
 `func (o *CreateOpenIddictApplicationDto) GetClientUri() string`
@@ -261,6 +341,16 @@ SetClientUri sets ClientUri field to given value.
 
 HasClientUri returns a boolean if a field has been set.
 
+### SetClientUriNil
+
+`func (o *CreateOpenIddictApplicationDto) SetClientUriNil(b bool)`
+
+ SetClientUriNil sets the value for ClientUri to be an explicit nil
+
+### UnsetClientUri
+`func (o *CreateOpenIddictApplicationDto) UnsetClientUri()`
+
+UnsetClientUri ensures that no value is present for ClientUri, not even an explicit nil
 ### GetLogoUri
 
 `func (o *CreateOpenIddictApplicationDto) GetLogoUri() string`
@@ -286,6 +376,16 @@ SetLogoUri sets LogoUri field to given value.
 
 HasLogoUri returns a boolean if a field has been set.
 
+### SetLogoUriNil
+
+`func (o *CreateOpenIddictApplicationDto) SetLogoUriNil(b bool)`
+
+ SetLogoUriNil sets the value for LogoUri to be an explicit nil
+
+### UnsetLogoUri
+`func (o *CreateOpenIddictApplicationDto) UnsetLogoUri()`
+
+UnsetLogoUri ensures that no value is present for LogoUri, not even an explicit nil
 ### GetGrantTypes
 
 `func (o *CreateOpenIddictApplicationDto) GetGrantTypes() []string`
@@ -311,6 +411,16 @@ SetGrantTypes sets GrantTypes field to given value.
 
 HasGrantTypes returns a boolean if a field has been set.
 
+### SetGrantTypesNil
+
+`func (o *CreateOpenIddictApplicationDto) SetGrantTypesNil(b bool)`
+
+ SetGrantTypesNil sets the value for GrantTypes to be an explicit nil
+
+### UnsetGrantTypes
+`func (o *CreateOpenIddictApplicationDto) UnsetGrantTypes()`
+
+UnsetGrantTypes ensures that no value is present for GrantTypes, not even an explicit nil
 ### GetScopes
 
 `func (o *CreateOpenIddictApplicationDto) GetScopes() []string`
@@ -336,6 +446,16 @@ SetScopes sets Scopes field to given value.
 
 HasScopes returns a boolean if a field has been set.
 
+### SetScopesNil
+
+`func (o *CreateOpenIddictApplicationDto) SetScopesNil(b bool)`
+
+ SetScopesNil sets the value for Scopes to be an explicit nil
+
+### UnsetScopes
+`func (o *CreateOpenIddictApplicationDto) UnsetScopes()`
+
+UnsetScopes ensures that no value is present for Scopes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

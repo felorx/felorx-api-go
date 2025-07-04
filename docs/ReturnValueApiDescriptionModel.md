@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** |  | [optional] 
-**TypeSimple** | Pointer to **string** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *ReturnValueApiDescriptionModel) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *ReturnValueApiDescriptionModel) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 ### GetTypeSimple
 
 `func (o *ReturnValueApiDescriptionModel) GetTypeSimple() string`
@@ -76,6 +86,16 @@ SetTypeSimple sets TypeSimple field to given value.
 
 HasTypeSimple returns a boolean if a field has been set.
 
+### SetTypeSimpleNil
+
+`func (o *ReturnValueApiDescriptionModel) SetTypeSimpleNil(b bool)`
+
+ SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
+
+### UnsetTypeSimple
+`func (o *ReturnValueApiDescriptionModel) UnsetTypeSimple()`
+
+UnsetTypeSimple ensures that no value is present for TypeSimple, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

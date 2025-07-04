@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateApiKeys
 
-> ApiKeyDto CreateApiKeys(ctx).Body(body).Execute()
+> ApiKeyDto CreateApiKeys(ctx).ApiKeyCreateDto(apiKeyCreateDto).Execute()
 
 
 
@@ -31,11 +31,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewApiKeyCreateDto("Name_example") // ApiKeyCreateDto |  (optional)
+	apiKeyCreateDto := *openapiclient.NewApiKeyCreateDto("Name_example") // ApiKeyCreateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ApiKeysAPI.CreateApiKeys(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.ApiKeysAPI.CreateApiKeys(context.Background()).ApiKeyCreateDto(apiKeyCreateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ApiKeysAPI.CreateApiKeys``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateApiKeysRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md) |  | 
+ **apiKeyCreateDto** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md) |  | 
 
 ### Return type
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ## UpdateApiKeys
 
-> ApiKeyDto UpdateApiKeys(ctx, id).Body(body).Execute()
+> ApiKeyDto UpdateApiKeys(ctx, id).ApiKeyUpdateDto(apiKeyUpdateDto).Execute()
 
 
 
@@ -298,11 +298,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewApiKeyUpdateDto("Name_example") // ApiKeyUpdateDto |  (optional)
+	apiKeyUpdateDto := *openapiclient.NewApiKeyUpdateDto("Name_example") // ApiKeyUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ApiKeysAPI.UpdateApiKeys(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.ApiKeysAPI.UpdateApiKeys(context.Background(), id).ApiKeyUpdateDto(apiKeyUpdateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ApiKeysAPI.UpdateApiKeys``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -328,7 +328,7 @@ Other parameters are passed through a pointer to a apiUpdateApiKeysRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md) |  | 
+ **apiKeyUpdateDto** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md) |  | 
 
 ### Return type
 

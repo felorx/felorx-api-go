@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProviderName** | Pointer to **string** |  | [optional] 
-**ProviderKey** | Pointer to **string** |  | [optional] 
+**ProviderName** | Pointer to **NullableString** |  | [optional] 
+**ProviderKey** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetProviderName sets ProviderName field to given value.
 
 HasProviderName returns a boolean if a field has been set.
 
+### SetProviderNameNil
+
+`func (o *ProviderInfoDto) SetProviderNameNil(b bool)`
+
+ SetProviderNameNil sets the value for ProviderName to be an explicit nil
+
+### UnsetProviderName
+`func (o *ProviderInfoDto) UnsetProviderName()`
+
+UnsetProviderName ensures that no value is present for ProviderName, not even an explicit nil
 ### GetProviderKey
 
 `func (o *ProviderInfoDto) GetProviderKey() string`
@@ -76,6 +86,16 @@ SetProviderKey sets ProviderKey field to given value.
 
 HasProviderKey returns a boolean if a field has been set.
 
+### SetProviderKeyNil
+
+`func (o *ProviderInfoDto) SetProviderKeyNil(b bool)`
+
+ SetProviderKeyNil sets the value for ProviderKey to be an explicit nil
+
+### UnsetProviderKey
+`func (o *ProviderInfoDto) UnsetProviderKey()`
+
+UnsetProviderKey ensures that no value is present for ProviderKey, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

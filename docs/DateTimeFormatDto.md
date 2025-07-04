@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CalendarAlgorithmType** | Pointer to **string** |  | [optional] 
-**DateTimeFormatLong** | Pointer to **string** |  | [optional] 
-**ShortDatePattern** | Pointer to **string** |  | [optional] 
-**FullDateTimePattern** | Pointer to **string** |  | [optional] 
-**DateSeparator** | Pointer to **string** |  | [optional] 
-**ShortTimePattern** | Pointer to **string** |  | [optional] 
-**LongTimePattern** | Pointer to **string** |  | [optional] 
+**CalendarAlgorithmType** | Pointer to **NullableString** |  | [optional] 
+**DateTimeFormatLong** | Pointer to **NullableString** |  | [optional] 
+**ShortDatePattern** | Pointer to **NullableString** |  | [optional] 
+**FullDateTimePattern** | Pointer to **NullableString** |  | [optional] 
+**DateSeparator** | Pointer to **NullableString** |  | [optional] 
+**ShortTimePattern** | Pointer to **NullableString** |  | [optional] 
+**LongTimePattern** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -56,6 +56,16 @@ SetCalendarAlgorithmType sets CalendarAlgorithmType field to given value.
 
 HasCalendarAlgorithmType returns a boolean if a field has been set.
 
+### SetCalendarAlgorithmTypeNil
+
+`func (o *DateTimeFormatDto) SetCalendarAlgorithmTypeNil(b bool)`
+
+ SetCalendarAlgorithmTypeNil sets the value for CalendarAlgorithmType to be an explicit nil
+
+### UnsetCalendarAlgorithmType
+`func (o *DateTimeFormatDto) UnsetCalendarAlgorithmType()`
+
+UnsetCalendarAlgorithmType ensures that no value is present for CalendarAlgorithmType, not even an explicit nil
 ### GetDateTimeFormatLong
 
 `func (o *DateTimeFormatDto) GetDateTimeFormatLong() string`
@@ -81,6 +91,16 @@ SetDateTimeFormatLong sets DateTimeFormatLong field to given value.
 
 HasDateTimeFormatLong returns a boolean if a field has been set.
 
+### SetDateTimeFormatLongNil
+
+`func (o *DateTimeFormatDto) SetDateTimeFormatLongNil(b bool)`
+
+ SetDateTimeFormatLongNil sets the value for DateTimeFormatLong to be an explicit nil
+
+### UnsetDateTimeFormatLong
+`func (o *DateTimeFormatDto) UnsetDateTimeFormatLong()`
+
+UnsetDateTimeFormatLong ensures that no value is present for DateTimeFormatLong, not even an explicit nil
 ### GetShortDatePattern
 
 `func (o *DateTimeFormatDto) GetShortDatePattern() string`
@@ -106,6 +126,16 @@ SetShortDatePattern sets ShortDatePattern field to given value.
 
 HasShortDatePattern returns a boolean if a field has been set.
 
+### SetShortDatePatternNil
+
+`func (o *DateTimeFormatDto) SetShortDatePatternNil(b bool)`
+
+ SetShortDatePatternNil sets the value for ShortDatePattern to be an explicit nil
+
+### UnsetShortDatePattern
+`func (o *DateTimeFormatDto) UnsetShortDatePattern()`
+
+UnsetShortDatePattern ensures that no value is present for ShortDatePattern, not even an explicit nil
 ### GetFullDateTimePattern
 
 `func (o *DateTimeFormatDto) GetFullDateTimePattern() string`
@@ -131,6 +161,16 @@ SetFullDateTimePattern sets FullDateTimePattern field to given value.
 
 HasFullDateTimePattern returns a boolean if a field has been set.
 
+### SetFullDateTimePatternNil
+
+`func (o *DateTimeFormatDto) SetFullDateTimePatternNil(b bool)`
+
+ SetFullDateTimePatternNil sets the value for FullDateTimePattern to be an explicit nil
+
+### UnsetFullDateTimePattern
+`func (o *DateTimeFormatDto) UnsetFullDateTimePattern()`
+
+UnsetFullDateTimePattern ensures that no value is present for FullDateTimePattern, not even an explicit nil
 ### GetDateSeparator
 
 `func (o *DateTimeFormatDto) GetDateSeparator() string`
@@ -156,6 +196,16 @@ SetDateSeparator sets DateSeparator field to given value.
 
 HasDateSeparator returns a boolean if a field has been set.
 
+### SetDateSeparatorNil
+
+`func (o *DateTimeFormatDto) SetDateSeparatorNil(b bool)`
+
+ SetDateSeparatorNil sets the value for DateSeparator to be an explicit nil
+
+### UnsetDateSeparator
+`func (o *DateTimeFormatDto) UnsetDateSeparator()`
+
+UnsetDateSeparator ensures that no value is present for DateSeparator, not even an explicit nil
 ### GetShortTimePattern
 
 `func (o *DateTimeFormatDto) GetShortTimePattern() string`
@@ -181,6 +231,16 @@ SetShortTimePattern sets ShortTimePattern field to given value.
 
 HasShortTimePattern returns a boolean if a field has been set.
 
+### SetShortTimePatternNil
+
+`func (o *DateTimeFormatDto) SetShortTimePatternNil(b bool)`
+
+ SetShortTimePatternNil sets the value for ShortTimePattern to be an explicit nil
+
+### UnsetShortTimePattern
+`func (o *DateTimeFormatDto) UnsetShortTimePattern()`
+
+UnsetShortTimePattern ensures that no value is present for ShortTimePattern, not even an explicit nil
 ### GetLongTimePattern
 
 `func (o *DateTimeFormatDto) GetLongTimePattern() string`
@@ -206,6 +266,16 @@ SetLongTimePattern sets LongTimePattern field to given value.
 
 HasLongTimePattern returns a boolean if a field has been set.
 
+### SetLongTimePatternNil
+
+`func (o *DateTimeFormatDto) SetLongTimePatternNil(b bool)`
+
+ SetLongTimePatternNil sets the value for LongTimePattern to be an explicit nil
+
+### UnsetLongTimePattern
+`func (o *DateTimeFormatDto) UnsetLongTimePattern()`
+
+UnsetLongTimePattern ensures that no value is present for LongTimePattern, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

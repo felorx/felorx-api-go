@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**UserName** | Pointer to **string** |  | [optional] 
-**AvatarUrl** | Pointer to **string** |  | [optional] 
-**Email** | Pointer to **string** |  | [optional] 
-**PhoneNumber** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**UserName** | Pointer to **NullableString** |  | [optional] 
+**AvatarUrl** | Pointer to **NullableString** |  | [optional] 
+**Email** | Pointer to **NullableString** |  | [optional] 
+**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
 **HasPassword** | Pointer to **bool** |  | [optional] 
 
 ## Methods
@@ -81,6 +81,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *UserProfileDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *UserProfileDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetUserName
 
 `func (o *UserProfileDto) GetUserName() string`
@@ -106,6 +116,16 @@ SetUserName sets UserName field to given value.
 
 HasUserName returns a boolean if a field has been set.
 
+### SetUserNameNil
+
+`func (o *UserProfileDto) SetUserNameNil(b bool)`
+
+ SetUserNameNil sets the value for UserName to be an explicit nil
+
+### UnsetUserName
+`func (o *UserProfileDto) UnsetUserName()`
+
+UnsetUserName ensures that no value is present for UserName, not even an explicit nil
 ### GetAvatarUrl
 
 `func (o *UserProfileDto) GetAvatarUrl() string`
@@ -131,6 +151,16 @@ SetAvatarUrl sets AvatarUrl field to given value.
 
 HasAvatarUrl returns a boolean if a field has been set.
 
+### SetAvatarUrlNil
+
+`func (o *UserProfileDto) SetAvatarUrlNil(b bool)`
+
+ SetAvatarUrlNil sets the value for AvatarUrl to be an explicit nil
+
+### UnsetAvatarUrl
+`func (o *UserProfileDto) UnsetAvatarUrl()`
+
+UnsetAvatarUrl ensures that no value is present for AvatarUrl, not even an explicit nil
 ### GetEmail
 
 `func (o *UserProfileDto) GetEmail() string`
@@ -156,6 +186,16 @@ SetEmail sets Email field to given value.
 
 HasEmail returns a boolean if a field has been set.
 
+### SetEmailNil
+
+`func (o *UserProfileDto) SetEmailNil(b bool)`
+
+ SetEmailNil sets the value for Email to be an explicit nil
+
+### UnsetEmail
+`func (o *UserProfileDto) UnsetEmail()`
+
+UnsetEmail ensures that no value is present for Email, not even an explicit nil
 ### GetPhoneNumber
 
 `func (o *UserProfileDto) GetPhoneNumber() string`
@@ -181,6 +221,16 @@ SetPhoneNumber sets PhoneNumber field to given value.
 
 HasPhoneNumber returns a boolean if a field has been set.
 
+### SetPhoneNumberNil
+
+`func (o *UserProfileDto) SetPhoneNumberNil(b bool)`
+
+ SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
+
+### UnsetPhoneNumber
+`func (o *UserProfileDto) UnsetPhoneNumber()`
+
+UnsetPhoneNumber ensures that no value is present for PhoneNumber, not even an explicit nil
 ### GetHasPassword
 
 `func (o *UserProfileDto) GetHasPassword() bool`

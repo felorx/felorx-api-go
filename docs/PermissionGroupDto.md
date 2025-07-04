@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**DisplayNameKey** | Pointer to **string** |  | [optional] 
-**DisplayNameResource** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**DisplayNameKey** | Pointer to **NullableString** |  | [optional] 
+**DisplayNameResource** | Pointer to **NullableString** |  | [optional] 
 **Permissions** | Pointer to [**[]PermissionGrantInfoDto**](PermissionGrantInfoDto.md) |  | [optional] 
 
 ## Methods
@@ -54,6 +54,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *PermissionGroupDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *PermissionGroupDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *PermissionGroupDto) GetDisplayName() string`
@@ -79,6 +89,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *PermissionGroupDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *PermissionGroupDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetDisplayNameKey
 
 `func (o *PermissionGroupDto) GetDisplayNameKey() string`
@@ -104,6 +124,16 @@ SetDisplayNameKey sets DisplayNameKey field to given value.
 
 HasDisplayNameKey returns a boolean if a field has been set.
 
+### SetDisplayNameKeyNil
+
+`func (o *PermissionGroupDto) SetDisplayNameKeyNil(b bool)`
+
+ SetDisplayNameKeyNil sets the value for DisplayNameKey to be an explicit nil
+
+### UnsetDisplayNameKey
+`func (o *PermissionGroupDto) UnsetDisplayNameKey()`
+
+UnsetDisplayNameKey ensures that no value is present for DisplayNameKey, not even an explicit nil
 ### GetDisplayNameResource
 
 `func (o *PermissionGroupDto) GetDisplayNameResource() string`
@@ -129,6 +159,16 @@ SetDisplayNameResource sets DisplayNameResource field to given value.
 
 HasDisplayNameResource returns a boolean if a field has been set.
 
+### SetDisplayNameResourceNil
+
+`func (o *PermissionGroupDto) SetDisplayNameResourceNil(b bool)`
+
+ SetDisplayNameResourceNil sets the value for DisplayNameResource to be an explicit nil
+
+### UnsetDisplayNameResource
+`func (o *PermissionGroupDto) UnsetDisplayNameResource()`
+
+UnsetDisplayNameResource ensures that no value is present for DisplayNameResource, not even an explicit nil
 ### GetPermissions
 
 `func (o *PermissionGroupDto) GetPermissions() []PermissionGrantInfoDto`
@@ -154,6 +194,16 @@ SetPermissions sets Permissions field to given value.
 
 HasPermissions returns a boolean if a field has been set.
 
+### SetPermissionsNil
+
+`func (o *PermissionGroupDto) SetPermissionsNil(b bool)`
+
+ SetPermissionsNil sets the value for Permissions to be an explicit nil
+
+### UnsetPermissions
+`func (o *PermissionGroupDto) UnsetPermissions()`
+
+UnsetPermissions ensures that no value is present for Permissions, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

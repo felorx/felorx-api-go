@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | Pointer to **string** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
 **UserId** | Pointer to **string** |  | [optional] [readonly] 
-**LoginProvider** | Pointer to **string** |  | [optional] [readonly] 
-**Name** | Pointer to **string** |  | [optional] [readonly] 
-**Value** | Pointer to **string** |  | [optional] 
+**LoginProvider** | Pointer to **NullableString** |  | [optional] [readonly] 
+**Name** | Pointer to **NullableString** |  | [optional] [readonly] 
+**Value** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *IdentityUserToken) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *IdentityUserToken) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetUserId
 
 `func (o *IdentityUserToken) GetUserId() string`
@@ -104,6 +114,16 @@ SetLoginProvider sets LoginProvider field to given value.
 
 HasLoginProvider returns a boolean if a field has been set.
 
+### SetLoginProviderNil
+
+`func (o *IdentityUserToken) SetLoginProviderNil(b bool)`
+
+ SetLoginProviderNil sets the value for LoginProvider to be an explicit nil
+
+### UnsetLoginProvider
+`func (o *IdentityUserToken) UnsetLoginProvider()`
+
+UnsetLoginProvider ensures that no value is present for LoginProvider, not even an explicit nil
 ### GetName
 
 `func (o *IdentityUserToken) GetName() string`
@@ -129,6 +149,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *IdentityUserToken) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *IdentityUserToken) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetValue
 
 `func (o *IdentityUserToken) GetValue() string`
@@ -154,6 +184,16 @@ SetValue sets Value field to given value.
 
 HasValue returns a boolean if a field has been set.
 
+### SetValueNil
+
+`func (o *IdentityUserToken) SetValueNil(b bool)`
+
+ SetValueNil sets the value for Value to be an explicit nil
+
+### UnsetValue
+`func (o *IdentityUserToken) UnsetValue()`
+
+UnsetValue ensures that no value is present for Value, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

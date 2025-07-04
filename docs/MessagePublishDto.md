@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** |  | [optional] 
-**Description** | Pointer to **string** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
 **AppId** | Pointer to **string** |  | [optional] 
-**Template** | Pointer to **string** | 模板名称, 包含版本号  puupee/wechat-app-msg?version&#x3D;1 微信应用消息模板  puupee/wechat-official-msg?version&#x3D;2 微信公众号消息模板 | [optional] 
-**Data** | Pointer to **map[string]map[string]interface{}** | JSON格式数据 | [optional] 
+**Template** | Pointer to **NullableString** | 模板名称, 包含版本号  puupee/wechat-app-msg?version&#x3D;1 微信应用消息模板  puupee/wechat-official-msg?version&#x3D;2 微信公众号消息模板 | [optional] 
+**Data** | Pointer to **map[string]interface{}** | JSON格式数据 | [optional] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetTitle sets Title field to given value.
 
 HasTitle returns a boolean if a field has been set.
 
+### SetTitleNil
+
+`func (o *MessagePublishDto) SetTitleNil(b bool)`
+
+ SetTitleNil sets the value for Title to be an explicit nil
+
+### UnsetTitle
+`func (o *MessagePublishDto) UnsetTitle()`
+
+UnsetTitle ensures that no value is present for Title, not even an explicit nil
 ### GetDescription
 
 `func (o *MessagePublishDto) GetDescription() string`
@@ -79,6 +89,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *MessagePublishDto) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *MessagePublishDto) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetAppId
 
 `func (o *MessagePublishDto) GetAppId() string`
@@ -129,22 +149,32 @@ SetTemplate sets Template field to given value.
 
 HasTemplate returns a boolean if a field has been set.
 
+### SetTemplateNil
+
+`func (o *MessagePublishDto) SetTemplateNil(b bool)`
+
+ SetTemplateNil sets the value for Template to be an explicit nil
+
+### UnsetTemplate
+`func (o *MessagePublishDto) UnsetTemplate()`
+
+UnsetTemplate ensures that no value is present for Template, not even an explicit nil
 ### GetData
 
-`func (o *MessagePublishDto) GetData() map[string]map[string]interface{}`
+`func (o *MessagePublishDto) GetData() map[string]interface{}`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *MessagePublishDto) GetDataOk() (*map[string]map[string]interface{}, bool)`
+`func (o *MessagePublishDto) GetDataOk() (*map[string]interface{}, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *MessagePublishDto) SetData(v map[string]map[string]interface{})`
+`func (o *MessagePublishDto) SetData(v map[string]interface{})`
 
 SetData sets Data field to given value.
 
@@ -154,6 +184,16 @@ SetData sets Data field to given value.
 
 HasData returns a boolean if a field has been set.
 
+### SetDataNil
+
+`func (o *MessagePublishDto) SetDataNil(b bool)`
+
+ SetDataNil sets the value for Data to be an explicit nil
+
+### UnsetData
+`func (o *MessagePublishDto) UnsetData()`
+
+UnsetData ensures that no value is present for Data, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

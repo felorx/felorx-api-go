@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## SendCode
 
-> SendCode(ctx).Body(body).Execute()
+> SendCode(ctx).SendVerificationCodeDto(sendVerificationCodeDto).Execute()
 
 
 
@@ -28,11 +28,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewSendVerificationCodeDto() // SendVerificationCodeDto |  (optional)
+	sendVerificationCodeDto := *openapiclient.NewSendVerificationCodeDto() // SendVerificationCodeDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.VerificationAPI.SendCode(context.Background()).Body(body).Execute()
+	r, err := apiClient.VerificationAPI.SendCode(context.Background()).SendVerificationCodeDto(sendVerificationCodeDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VerificationAPI.SendCode``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -51,7 +51,7 @@ Other parameters are passed through a pointer to a apiSendCodeRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
 
 ### Return type
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ## SendCodeAnonymous
 
-> SendCodeAnonymous(ctx).Body(body).Execute()
+> SendCodeAnonymous(ctx).SendVerificationCodeDto(sendVerificationCodeDto).Execute()
 
 
 
@@ -90,11 +90,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewSendVerificationCodeDto() // SendVerificationCodeDto |  (optional)
+	sendVerificationCodeDto := *openapiclient.NewSendVerificationCodeDto() // SendVerificationCodeDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.VerificationAPI.SendCodeAnonymous(context.Background()).Body(body).Execute()
+	r, err := apiClient.VerificationAPI.SendCodeAnonymous(context.Background()).SendVerificationCodeDto(sendVerificationCodeDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VerificationAPI.SendCodeAnonymous``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -113,7 +113,7 @@ Other parameters are passed through a pointer to a apiSendCodeAnonymousRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
 
 ### Return type
 

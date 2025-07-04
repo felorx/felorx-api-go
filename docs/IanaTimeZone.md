@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TimeZoneName** | Pointer to **string** |  | [optional] 
+**TimeZoneName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetTimeZoneName sets TimeZoneName field to given value.
 
 HasTimeZoneName returns a boolean if a field has been set.
 
+### SetTimeZoneNameNil
+
+`func (o *IanaTimeZone) SetTimeZoneNameNil(b bool)`
+
+ SetTimeZoneNameNil sets the value for TimeZoneName to be an explicit nil
+
+### UnsetTimeZoneName
+`func (o *IanaTimeZone) UnsetTimeZoneName()`
+
+UnsetTimeZoneName ensures that no value is present for TimeZoneName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

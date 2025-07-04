@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]map[string]interface{}** |  | [optional] [readonly] 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
 **UserName** | **string** |  | 
 **EmailAddress** | **string** |  | 
 **Password** | **string** |  | 
@@ -31,20 +31,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetExtraProperties
 
-`func (o *RegisterDto) GetExtraProperties() map[string]map[string]interface{}`
+`func (o *RegisterDto) GetExtraProperties() map[string]interface{}`
 
 GetExtraProperties returns the ExtraProperties field if non-nil, zero value otherwise.
 
 ### GetExtraPropertiesOk
 
-`func (o *RegisterDto) GetExtraPropertiesOk() (*map[string]map[string]interface{}, bool)`
+`func (o *RegisterDto) GetExtraPropertiesOk() (*map[string]interface{}, bool)`
 
 GetExtraPropertiesOk returns a tuple with the ExtraProperties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtraProperties
 
-`func (o *RegisterDto) SetExtraProperties(v map[string]map[string]interface{})`
+`func (o *RegisterDto) SetExtraProperties(v map[string]interface{})`
 
 SetExtraProperties sets ExtraProperties field to given value.
 
@@ -54,6 +54,16 @@ SetExtraProperties sets ExtraProperties field to given value.
 
 HasExtraProperties returns a boolean if a field has been set.
 
+### SetExtraPropertiesNil
+
+`func (o *RegisterDto) SetExtraPropertiesNil(b bool)`
+
+ SetExtraPropertiesNil sets the value for ExtraProperties to be an explicit nil
+
+### UnsetExtraProperties
+`func (o *RegisterDto) UnsetExtraProperties()`
+
+UnsetExtraProperties ensures that no value is present for ExtraProperties, not even an explicit nil
 ### GetUserName
 
 `func (o *RegisterDto) GetUserName() string`

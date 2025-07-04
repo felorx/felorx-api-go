@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateAppFeature
 
-> AppFeatureDto CreateAppFeature(ctx).Body(body).Execute()
+> AppFeatureDto CreateAppFeature(ctx).CreateOrUpdateAppFeatureDto(createOrUpdateAppFeatureDto).Execute()
 
 
 
@@ -30,11 +30,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrUpdateAppFeatureDto() // CreateOrUpdateAppFeatureDto |  (optional)
+	createOrUpdateAppFeatureDto := *openapiclient.NewCreateOrUpdateAppFeatureDto() // CreateOrUpdateAppFeatureDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppFeatureAPI.CreateAppFeature(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.AppFeatureAPI.CreateAppFeature(context.Background()).CreateOrUpdateAppFeatureDto(createOrUpdateAppFeatureDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppFeatureAPI.CreateAppFeature``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateAppFeatureRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
 
 ### Return type
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ## UpdateAppFeature
 
-> AppFeatureDto UpdateAppFeature(ctx, id).Body(body).Execute()
+> AppFeatureDto UpdateAppFeature(ctx, id).CreateOrUpdateAppFeatureDto(createOrUpdateAppFeatureDto).Execute()
 
 
 
@@ -229,11 +229,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateOrUpdateAppFeatureDto() // CreateOrUpdateAppFeatureDto |  (optional)
+	createOrUpdateAppFeatureDto := *openapiclient.NewCreateOrUpdateAppFeatureDto() // CreateOrUpdateAppFeatureDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppFeatureAPI.UpdateAppFeature(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.AppFeatureAPI.UpdateAppFeature(context.Background(), id).CreateOrUpdateAppFeatureDto(createOrUpdateAppFeatureDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppFeatureAPI.UpdateAppFeature``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -259,7 +259,7 @@ Other parameters are passed through a pointer to a apiUpdateAppFeatureRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
 
 ### Return type
 

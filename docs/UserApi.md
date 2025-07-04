@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## CreateIdentityUser
 
-> IdentityUserDto CreateIdentityUser(ctx).Body(body).Execute()
+> IdentityUserDto CreateIdentityUser(ctx).IdentityUserCreateDto(identityUserCreateDto).Execute()
 
 
 
@@ -36,11 +36,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewIdentityUserCreateDto("UserName_example", "Email_example", "Password_example") // IdentityUserCreateDto |  (optional)
+	identityUserCreateDto := *openapiclient.NewIdentityUserCreateDto("UserName_example", "Email_example", "Password_example") // IdentityUserCreateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserAPI.CreateIdentityUser(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.UserAPI.CreateIdentityUser(context.Background()).IdentityUserCreateDto(identityUserCreateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.CreateIdentityUser``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateIdentityUserRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md) |  | 
+ **identityUserCreateDto** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md) |  | 
 
 ### Return type
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 
 ## UpdateIdentityUser
 
-> IdentityUserDto UpdateIdentityUser(ctx, id).Body(body).Execute()
+> IdentityUserDto UpdateIdentityUser(ctx, id).IdentityUserUpdateDto(identityUserUpdateDto).Execute()
 
 
 
@@ -568,11 +568,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewIdentityUserUpdateDto("UserName_example", "Email_example") // IdentityUserUpdateDto |  (optional)
+	identityUserUpdateDto := *openapiclient.NewIdentityUserUpdateDto("UserName_example", "Email_example") // IdentityUserUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UserAPI.UpdateIdentityUser(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.UserAPI.UpdateIdentityUser(context.Background(), id).IdentityUserUpdateDto(identityUserUpdateDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateIdentityUser``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -598,7 +598,7 @@ Other parameters are passed through a pointer to a apiUpdateIdentityUserRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md) |  | 
+ **identityUserUpdateDto** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md) |  | 
 
 ### Return type
 
@@ -620,7 +620,7 @@ Name | Type | Description  | Notes
 
 ## UpdateRoles
 
-> UpdateRoles(ctx, id).Body(body).Execute()
+> UpdateRoles(ctx, id).IdentityUserUpdateRolesDto(identityUserUpdateRolesDto).Execute()
 
 
 
@@ -638,11 +638,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewIdentityUserUpdateRolesDto([]string{"RoleNames_example"}) // IdentityUserUpdateRolesDto |  (optional)
+	identityUserUpdateRolesDto := *openapiclient.NewIdentityUserUpdateRolesDto([]string{"RoleNames_example"}) // IdentityUserUpdateRolesDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.UserAPI.UpdateRoles(context.Background(), id).Body(body).Execute()
+	r, err := apiClient.UserAPI.UpdateRoles(context.Background(), id).IdentityUserUpdateRolesDto(identityUserUpdateRolesDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UserAPI.UpdateRoles``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -666,7 +666,7 @@ Other parameters are passed through a pointer to a apiUpdateRolesRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md) |  | 
+ **identityUserUpdateRolesDto** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md) |  | 
 
 ### Return type
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** |  | [optional] 
-**DisplayName** | Pointer to **string** |  | [optional] 
-**ParentName** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**ParentName** | Pointer to **NullableString** |  | [optional] 
 **IsGranted** | Pointer to **bool** |  | [optional] 
 **AllowedProviders** | Pointer to **[]string** |  | [optional] 
 **GrantedProviders** | Pointer to [**[]ProviderInfoDto**](ProviderInfoDto.md) |  | [optional] 
@@ -55,6 +55,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *PermissionGrantInfoDto) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *PermissionGrantInfoDto) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetDisplayName
 
 `func (o *PermissionGrantInfoDto) GetDisplayName() string`
@@ -80,6 +90,16 @@ SetDisplayName sets DisplayName field to given value.
 
 HasDisplayName returns a boolean if a field has been set.
 
+### SetDisplayNameNil
+
+`func (o *PermissionGrantInfoDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *PermissionGrantInfoDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetParentName
 
 `func (o *PermissionGrantInfoDto) GetParentName() string`
@@ -105,6 +125,16 @@ SetParentName sets ParentName field to given value.
 
 HasParentName returns a boolean if a field has been set.
 
+### SetParentNameNil
+
+`func (o *PermissionGrantInfoDto) SetParentNameNil(b bool)`
+
+ SetParentNameNil sets the value for ParentName to be an explicit nil
+
+### UnsetParentName
+`func (o *PermissionGrantInfoDto) UnsetParentName()`
+
+UnsetParentName ensures that no value is present for ParentName, not even an explicit nil
 ### GetIsGranted
 
 `func (o *PermissionGrantInfoDto) GetIsGranted() bool`
@@ -155,6 +185,16 @@ SetAllowedProviders sets AllowedProviders field to given value.
 
 HasAllowedProviders returns a boolean if a field has been set.
 
+### SetAllowedProvidersNil
+
+`func (o *PermissionGrantInfoDto) SetAllowedProvidersNil(b bool)`
+
+ SetAllowedProvidersNil sets the value for AllowedProviders to be an explicit nil
+
+### UnsetAllowedProviders
+`func (o *PermissionGrantInfoDto) UnsetAllowedProviders()`
+
+UnsetAllowedProviders ensures that no value is present for AllowedProviders, not even an explicit nil
 ### GetGrantedProviders
 
 `func (o *PermissionGrantInfoDto) GetGrantedProviders() []ProviderInfoDto`
@@ -180,6 +220,16 @@ SetGrantedProviders sets GrantedProviders field to given value.
 
 HasGrantedProviders returns a boolean if a field has been set.
 
+### SetGrantedProvidersNil
+
+`func (o *PermissionGrantInfoDto) SetGrantedProvidersNil(b bool)`
+
+ SetGrantedProvidersNil sets the value for GrantedProviders to be an explicit nil
+
+### UnsetGrantedProviders
+`func (o *PermissionGrantInfoDto) UnsetGrantedProviders()`
+
+UnsetGrantedProviders ensures that no value is present for GrantedProviders, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

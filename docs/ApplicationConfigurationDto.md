@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Timing** | Pointer to [**TimingDto**](TimingDto.md) |  | [optional] 
 **Clock** | Pointer to [**ClockDto**](ClockDto.md) |  | [optional] 
 **ObjectExtensions** | Pointer to [**ObjectExtensionsDto**](ObjectExtensionsDto.md) |  | [optional] 
-**ExtraProperties** | Pointer to **map[string]map[string]interface{}** |  | [optional] 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -313,20 +313,20 @@ HasObjectExtensions returns a boolean if a field has been set.
 
 ### GetExtraProperties
 
-`func (o *ApplicationConfigurationDto) GetExtraProperties() map[string]map[string]interface{}`
+`func (o *ApplicationConfigurationDto) GetExtraProperties() map[string]interface{}`
 
 GetExtraProperties returns the ExtraProperties field if non-nil, zero value otherwise.
 
 ### GetExtraPropertiesOk
 
-`func (o *ApplicationConfigurationDto) GetExtraPropertiesOk() (*map[string]map[string]interface{}, bool)`
+`func (o *ApplicationConfigurationDto) GetExtraPropertiesOk() (*map[string]interface{}, bool)`
 
 GetExtraPropertiesOk returns a tuple with the ExtraProperties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExtraProperties
 
-`func (o *ApplicationConfigurationDto) SetExtraProperties(v map[string]map[string]interface{})`
+`func (o *ApplicationConfigurationDto) SetExtraProperties(v map[string]interface{})`
 
 SetExtraProperties sets ExtraProperties field to given value.
 
@@ -336,6 +336,16 @@ SetExtraProperties sets ExtraProperties field to given value.
 
 HasExtraProperties returns a boolean if a field has been set.
 
+### SetExtraPropertiesNil
+
+`func (o *ApplicationConfigurationDto) SetExtraPropertiesNil(b bool)`
+
+ SetExtraPropertiesNil sets the value for ExtraProperties to be an explicit nil
+
+### UnsetExtraProperties
+`func (o *ApplicationConfigurationDto) UnsetExtraProperties()`
+
+UnsetExtraProperties ensures that no value is present for ExtraProperties, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

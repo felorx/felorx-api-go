@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AppId** | Pointer to **string** | 所属应用 | [optional] 
-**AppName** | Pointer to **string** | 应用名称 | [optional] 
+**AppName** | Pointer to **NullableString** | 应用名称 | [optional] 
 **PriceNaming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional] 
 **Size** | Pointer to **int64** | 用户存储容量 | [optional] 
 **CurrentSize** | Pointer to **int64** | 当前使用大小 | [optional] 
 **TotalCount** | Pointer to **int32** |  | [optional] 
 **SingleFileMaxSize** | Pointer to **int64** | 单文件最大大小 | [optional] 
-**ExpireAt** | Pointer to **time.Time** | 过期时间, 为空表示永久有效, 一般是订阅产品的过期时间 | [optional] 
+**ExpireAt** | Pointer to **NullableTime** | 过期时间, 为空表示永久有效, 一般是订阅产品的过期时间 | [optional] 
 **Items** | Pointer to [**[]UserStorageItemDto**](UserStorageItemDto.md) |  | [optional] 
 
 ## Methods
@@ -83,6 +83,16 @@ SetAppName sets AppName field to given value.
 
 HasAppName returns a boolean if a field has been set.
 
+### SetAppNameNil
+
+`func (o *UserStorageDto) SetAppNameNil(b bool)`
+
+ SetAppNameNil sets the value for AppName to be an explicit nil
+
+### UnsetAppName
+`func (o *UserStorageDto) UnsetAppName()`
+
+UnsetAppName ensures that no value is present for AppName, not even an explicit nil
 ### GetPriceNaming
 
 `func (o *UserStorageDto) GetPriceNaming() AppPriceNaming`
@@ -233,6 +243,16 @@ SetExpireAt sets ExpireAt field to given value.
 
 HasExpireAt returns a boolean if a field has been set.
 
+### SetExpireAtNil
+
+`func (o *UserStorageDto) SetExpireAtNil(b bool)`
+
+ SetExpireAtNil sets the value for ExpireAt to be an explicit nil
+
+### UnsetExpireAt
+`func (o *UserStorageDto) UnsetExpireAt()`
+
+UnsetExpireAt ensures that no value is present for ExpireAt, not even an explicit nil
 ### GetItems
 
 `func (o *UserStorageDto) GetItems() []UserStorageItemDto`
@@ -258,6 +278,16 @@ SetItems sets Items field to given value.
 
 HasItems returns a boolean if a field has been set.
 
+### SetItemsNil
+
+`func (o *UserStorageDto) SetItemsNil(b bool)`
+
+ SetItemsNil sets the value for Items to be an explicit nil
+
+### UnsetItems
+`func (o *UserStorageDto) UnsetItems()`
+
+UnsetItems ensures that no value is present for Items, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

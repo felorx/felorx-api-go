@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetFileOrCredentials**](StorageObjectAPI.md#GetFileOrCredentials) | **Get** /api/app/storage-object/file-or-credentials | 
+[**GetFileCredential**](StorageObjectAPI.md#GetFileCredential) | **Get** /api/app/storage-object/file-credential | 
 [**GetUserStorages**](StorageObjectAPI.md#GetUserStorages) | **Get** /api/app/storage-object/user-storages | 
 [**PreSignUrl**](StorageObjectAPI.md#PreSignUrl) | **Post** /api/app/storage-object/pre-sign-url | 
 
 
 
-## GetFileOrCredentials
+## GetFileCredential
 
-> StorageObjectOrCredentialsDto GetFileOrCredentials(ctx).RapidCode(rapidCode).Bucket(bucket).Key(key).Execute()
+> StorageObjectCredentials GetFileCredential(ctx).UserTotalSize(userTotalSize).RapidCode(rapidCode).Usage(usage).Key(key).Execute()
 
 
 
@@ -29,19 +29,20 @@ import (
 )
 
 func main() {
+	userTotalSize := int64(789) // int64 |  (optional)
 	rapidCode := "rapidCode_example" // string |  (optional)
-	bucket := "bucket_example" // string |  (optional)
+	usage := "usage_example" // string |  (optional)
 	key := "key_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.StorageObjectAPI.GetFileOrCredentials(context.Background()).RapidCode(rapidCode).Bucket(bucket).Key(key).Execute()
+	resp, r, err := apiClient.StorageObjectAPI.GetFileCredential(context.Background()).UserTotalSize(userTotalSize).RapidCode(rapidCode).Usage(usage).Key(key).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `StorageObjectAPI.GetFileOrCredentials``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `StorageObjectAPI.GetFileCredential``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetFileOrCredentials`: StorageObjectOrCredentialsDto
-	fmt.Fprintf(os.Stdout, "Response from `StorageObjectAPI.GetFileOrCredentials`: %v\n", resp)
+	// response from `GetFileCredential`: StorageObjectCredentials
+	fmt.Fprintf(os.Stdout, "Response from `StorageObjectAPI.GetFileCredential`: %v\n", resp)
 }
 ```
 
@@ -51,18 +52,19 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetFileOrCredentialsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetFileCredentialRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **userTotalSize** | **int64** |  | 
  **rapidCode** | **string** |  | 
- **bucket** | **string** |  | 
+ **usage** | **string** |  | 
  **key** | **string** |  | 
 
 ### Return type
 
-[**StorageObjectOrCredentialsDto**](StorageObjectOrCredentialsDto.md)
+[**StorageObjectCredentials**](StorageObjectCredentials.md)
 
 ### Authorization
 
@@ -139,7 +141,7 @@ Other parameters are passed through a pointer to a apiGetUserStoragesRequest str
 
 ## PreSignUrl
 
-> string PreSignUrl(ctx).Key(key).Bucket(bucket).Execute()
+> string PreSignUrl(ctx).Bucket(bucket).Key(key).Execute()
 
 
 
@@ -156,12 +158,12 @@ import (
 )
 
 func main() {
-	key := "key_example" // string |  (optional)
 	bucket := "bucket_example" // string |  (optional)
+	key := "key_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.StorageObjectAPI.PreSignUrl(context.Background()).Key(key).Bucket(bucket).Execute()
+	resp, r, err := apiClient.StorageObjectAPI.PreSignUrl(context.Background()).Bucket(bucket).Key(key).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `StorageObjectAPI.PreSignUrl``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -182,8 +184,8 @@ Other parameters are passed through a pointer to a apiPreSignUrlRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string** |  | 
  **bucket** | **string** |  | 
+ **key** | **string** |  | 
 
 ### Return type
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateAppPricingItem
 
-> AppPricingItemDto CreateAppPricingItem(ctx).Body(body).Execute()
+> AppPricingItemDto CreateAppPricingItem(ctx).CreateOrUpdateAppPricingItemDto(createOrUpdateAppPricingItemDto).Execute()
 
 
 
@@ -31,11 +31,11 @@ import (
 )
 
 func main() {
-	body := *openapiclient.NewCreateOrUpdateAppPricingItemDto() // CreateOrUpdateAppPricingItemDto |  (optional)
+	createOrUpdateAppPricingItemDto := *openapiclient.NewCreateOrUpdateAppPricingItemDto() // CreateOrUpdateAppPricingItemDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppPricingItemAPI.CreateAppPricingItem(context.Background()).Body(body).Execute()
+	resp, r, err := apiClient.AppPricingItemAPI.CreateAppPricingItem(context.Background()).CreateOrUpdateAppPricingItemDto(createOrUpdateAppPricingItemDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingItemAPI.CreateAppPricingItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateAppPricingItemReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md) |  | 
+ **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md) |  | 
 
 ### Return type
 
@@ -271,7 +271,7 @@ Other parameters are passed through a pointer to a apiGetAppPricingItemListReque
 
 ## UpdateAppPricingItem
 
-> AppPricingItemDto UpdateAppPricingItem(ctx, id).Body(body).Execute()
+> AppPricingItemDto UpdateAppPricingItem(ctx, id).CreateOrUpdateAppPricingItemDto(createOrUpdateAppPricingItemDto).Execute()
 
 
 
@@ -289,11 +289,11 @@ import (
 
 func main() {
 	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-	body := *openapiclient.NewCreateOrUpdateAppPricingItemDto() // CreateOrUpdateAppPricingItemDto |  (optional)
+	createOrUpdateAppPricingItemDto := *openapiclient.NewCreateOrUpdateAppPricingItemDto() // CreateOrUpdateAppPricingItemDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppPricingItemAPI.UpdateAppPricingItem(context.Background(), id).Body(body).Execute()
+	resp, r, err := apiClient.AppPricingItemAPI.UpdateAppPricingItem(context.Background(), id).CreateOrUpdateAppPricingItemDto(createOrUpdateAppPricingItemDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingItemAPI.UpdateAppPricingItem``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -319,7 +319,7 @@ Other parameters are passed through a pointer to a apiUpdateAppPricingItemReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md) |  | 
+ **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md) |  | 
 
 ### Return type
 

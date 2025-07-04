@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | Pointer to **string** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
 **UserId** | Pointer to **string** |  | [optional] [readonly] 
-**LoginProvider** | Pointer to **string** |  | [optional] [readonly] 
-**ProviderKey** | Pointer to **string** |  | [optional] [readonly] 
-**ProviderDisplayName** | Pointer to **string** |  | [optional] [readonly] 
+**LoginProvider** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ProviderKey** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ProviderDisplayName** | Pointer to **NullableString** |  | [optional] [readonly] 
 
 ## Methods
 
@@ -54,6 +54,16 @@ SetTenantId sets TenantId field to given value.
 
 HasTenantId returns a boolean if a field has been set.
 
+### SetTenantIdNil
+
+`func (o *IdentityUserLogin) SetTenantIdNil(b bool)`
+
+ SetTenantIdNil sets the value for TenantId to be an explicit nil
+
+### UnsetTenantId
+`func (o *IdentityUserLogin) UnsetTenantId()`
+
+UnsetTenantId ensures that no value is present for TenantId, not even an explicit nil
 ### GetUserId
 
 `func (o *IdentityUserLogin) GetUserId() string`
@@ -104,6 +114,16 @@ SetLoginProvider sets LoginProvider field to given value.
 
 HasLoginProvider returns a boolean if a field has been set.
 
+### SetLoginProviderNil
+
+`func (o *IdentityUserLogin) SetLoginProviderNil(b bool)`
+
+ SetLoginProviderNil sets the value for LoginProvider to be an explicit nil
+
+### UnsetLoginProvider
+`func (o *IdentityUserLogin) UnsetLoginProvider()`
+
+UnsetLoginProvider ensures that no value is present for LoginProvider, not even an explicit nil
 ### GetProviderKey
 
 `func (o *IdentityUserLogin) GetProviderKey() string`
@@ -129,6 +149,16 @@ SetProviderKey sets ProviderKey field to given value.
 
 HasProviderKey returns a boolean if a field has been set.
 
+### SetProviderKeyNil
+
+`func (o *IdentityUserLogin) SetProviderKeyNil(b bool)`
+
+ SetProviderKeyNil sets the value for ProviderKey to be an explicit nil
+
+### UnsetProviderKey
+`func (o *IdentityUserLogin) UnsetProviderKey()`
+
+UnsetProviderKey ensures that no value is present for ProviderKey, not even an explicit nil
 ### GetProviderDisplayName
 
 `func (o *IdentityUserLogin) GetProviderDisplayName() string`
@@ -154,6 +184,16 @@ SetProviderDisplayName sets ProviderDisplayName field to given value.
 
 HasProviderDisplayName returns a boolean if a field has been set.
 
+### SetProviderDisplayNameNil
+
+`func (o *IdentityUserLogin) SetProviderDisplayNameNil(b bool)`
+
+ SetProviderDisplayNameNil sets the value for ProviderDisplayName to be an explicit nil
+
+### UnsetProviderDisplayName
+`func (o *IdentityUserLogin) UnsetProviderDisplayName()`
+
+UnsetProviderDisplayName ensures that no value is present for ProviderDisplayName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

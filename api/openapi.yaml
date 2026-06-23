@@ -24754,8 +24754,8 @@ components:
     oauth2:
       flows:
         authorizationCode:
-          authorizationUrl: https://dev.auth.puupee.com/connect/authorize
+          authorizationUrl: https://dev.auth.felorx.com/connect/authorize
           scopes:
             Puupees: Puupees API
-          tokenUrl: https://dev.auth.puupee.com/connect/token
+          tokenUrl: https://dev.auth.felorx.com/connect/token
       type: oauth2

@@ -1,4 +1,4 @@
-module github.com/puupee/puupee-api-go
+module github.com/felorx/felorx-api-go
 
 go 1.18
 

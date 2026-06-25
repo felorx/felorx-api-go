@@ -25,7 +25,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/puupee/puupee-api-go"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func main() {
@@ -89,7 +89,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/puupee/puupee-api-go"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func main() {
@@ -155,7 +155,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/puupee/puupee-api-go"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func main() {

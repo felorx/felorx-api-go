@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Puupee API
+  title: Felorx API
   version: 1.17.37
 servers:
 - url: /
@@ -24756,6 +24756,6 @@ components:
         authorizationCode:
           authorizationUrl: https://dev.auth.felorx.com/connect/authorize
           scopes:
-            Puupees: Puupees API
+            Puupees: Felorx API
           tokenUrl: https://dev.auth.felorx.com/connect/token
       type: oauth2

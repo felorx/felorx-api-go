@@ -1,5 +1,5 @@
 /*
-Puupee API
+Felorx API
 
 Testing MessageTemplateReleaseAPIService
 

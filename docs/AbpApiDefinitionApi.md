@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAbpApiDefinition**](AbpApiDefinitionAPI.md#GetAbpApiDefinition) | **Get** /api/abp/api-definition | 
+[**GetAbpApiDefinition**](AbpApiDefinitionAPI.md#GetAbpApiDefinition) | **Get** /api/abp/api-definition |
 
 
 
@@ -52,7 +52,7 @@ Other parameters are passed through a pointer to a apiGetAbpApiDefinitionRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeTypes** | **bool** |  | 
+ **includeTypes** | **bool** |  |
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

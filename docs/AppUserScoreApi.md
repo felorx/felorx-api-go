@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppUserScore**](AppUserScoreAPI.md#CreateAppUserScore) | **Post** /api/app/app-user-score | 
+[**CreateAppUserScore**](AppUserScoreAPI.md#CreateAppUserScore) | **Post** /api/app/app-user-score |
 
 
 
@@ -52,7 +52,7 @@ Other parameters are passed through a pointer to a apiCreateAppUserScoreRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppUserScoreDto** | [**CreateOrUpdateAppUserScoreDto**](CreateOrUpdateAppUserScoreDto.md) |  | 
+ **createOrUpdateAppUserScoreDto** | [**CreateOrUpdateAppUserScoreDto**](CreateOrUpdateAppUserScoreDto.md) |  |
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

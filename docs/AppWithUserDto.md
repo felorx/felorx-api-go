@@ -4,39 +4,37 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional] 
-**AppType** | Pointer to [**AppType**](AppType.md) |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Icon** | Pointer to **NullableString** |  | [optional] 
-**HomePage** | Pointer to **NullableString** | 产品首页 | [optional] 
-**SortIndex** | Pointer to **int32** | 显示排序 | [optional] 
-**GitRepository** | Pointer to **NullableString** |  | [optional] 
-**GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional] 
-**IsEnabled** | Pointer to **bool** |  | [optional] 
-**IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional] 
-**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional] 
-**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional] 
-**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional] 
-**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
-**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
-**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional] 
-**DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional] 
-**DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional] 
-**LatestReleases** | Pointer to [**[]AppReleaseDto**](AppReleaseDto.md) |  | [optional] 
-**Creator** | Pointer to [**IdentityUserDto**](IdentityUserDto.md) |  | [optional] 
-**Features** | Pointer to [**[]AppFeatureDto**](AppFeatureDto.md) |  | [optional] 
-**Sdks** | Pointer to [**[]AppSdkDto**](AppSdkDto.md) |  | [optional] 
-**Subscribed** | Pointer to **bool** | 是否已经订阅 | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**DisplayName** | Pointer to **NullableString** | 根据 Accept-Language 解析的展示标题（非持久化字段，来自语言包）。 | [optional]
+**Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional]
+**AppType** | Pointer to [**AppType**](AppType.md) |  | [optional]
+**Description** | Pointer to **NullableString** | 根据 Accept-Language 解析的短描述（非持久化字段）。 | [optional]
+**Icon** | Pointer to **NullableString** | 根据 Accept-Language 解析的图标存储键或 URL（非持久化字段）。 | [optional]
+**HomePage** | Pointer to **NullableString** | 产品首页 | [optional]
+**SortIndex** | Pointer to **int32** | 显示排序 | [optional]
+**GitRepository** | Pointer to **NullableString** |  | [optional]
+**GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional]
+**IsEnabled** | Pointer to **bool** |  | [optional]
+**IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional]
+**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional]
+**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional]
+**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional]
+**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional]
+**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional]
+**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional]
+**DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional]
+**DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional]
+**LatestReleases** | Pointer to [**[]AppReleaseDto**](AppReleaseDto.md) |  | [optional]
+**Creator** | Pointer to [**IdentityUserDto**](IdentityUserDto.md) |  | [optional]
+**Subscribed** | Pointer to **bool** | 是否已经订阅 | [optional]
 
 ## Methods
 
@@ -987,76 +985,6 @@ SetCreator sets Creator field to given value.
 
 HasCreator returns a boolean if a field has been set.
 
-### GetFeatures
-
-`func (o *AppWithUserDto) GetFeatures() []AppFeatureDto`
-
-GetFeatures returns the Features field if non-nil, zero value otherwise.
-
-### GetFeaturesOk
-
-`func (o *AppWithUserDto) GetFeaturesOk() (*[]AppFeatureDto, bool)`
-
-GetFeaturesOk returns a tuple with the Features field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFeatures
-
-`func (o *AppWithUserDto) SetFeatures(v []AppFeatureDto)`
-
-SetFeatures sets Features field to given value.
-
-### HasFeatures
-
-`func (o *AppWithUserDto) HasFeatures() bool`
-
-HasFeatures returns a boolean if a field has been set.
-
-### SetFeaturesNil
-
-`func (o *AppWithUserDto) SetFeaturesNil(b bool)`
-
- SetFeaturesNil sets the value for Features to be an explicit nil
-
-### UnsetFeatures
-`func (o *AppWithUserDto) UnsetFeatures()`
-
-UnsetFeatures ensures that no value is present for Features, not even an explicit nil
-### GetSdks
-
-`func (o *AppWithUserDto) GetSdks() []AppSdkDto`
-
-GetSdks returns the Sdks field if non-nil, zero value otherwise.
-
-### GetSdksOk
-
-`func (o *AppWithUserDto) GetSdksOk() (*[]AppSdkDto, bool)`
-
-GetSdksOk returns a tuple with the Sdks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSdks
-
-`func (o *AppWithUserDto) SetSdks(v []AppSdkDto)`
-
-SetSdks sets Sdks field to given value.
-
-### HasSdks
-
-`func (o *AppWithUserDto) HasSdks() bool`
-
-HasSdks returns a boolean if a field has been set.
-
-### SetSdksNil
-
-`func (o *AppWithUserDto) SetSdksNil(b bool)`
-
- SetSdksNil sets the value for Sdks to be an explicit nil
-
-### UnsetSdks
-`func (o *AppWithUserDto) UnsetSdks()`
-
-UnsetSdks ensures that no value is present for Sdks, not even an explicit nil
 ### GetSubscribed
 
 `func (o *AppWithUserDto) GetSubscribed() bool`

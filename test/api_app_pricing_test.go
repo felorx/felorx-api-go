@@ -22,6 +22,20 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
+	t.Run("Test AppPricingAPIService AppPricingGetListByAppId", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		var appId string
+
+		resp, httpRes, err := apiClient.AppPricingAPI.AppPricingGetListByAppId(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test AppPricingAPIService CreateAppPricing", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
@@ -66,20 +80,6 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.AppPricingAPI.GetAppPricingList(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test AppPricingAPIService GetListByAppId", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var appId string
-
-		resp, httpRes, err := apiClient.AppPricingAPI.GetListByAppId(context.Background(), appId).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

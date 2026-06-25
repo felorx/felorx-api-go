@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**TenantId** | Pointer to **NullableString** |  | [optional] 
-**UserName** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Surname** | Pointer to **NullableString** |  | [optional] 
-**IsActive** | Pointer to **bool** |  | [optional] 
-**Email** | Pointer to **NullableString** |  | [optional] 
-**EmailConfirmed** | Pointer to **bool** |  | [optional] 
-**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
-**PhoneNumberConfirmed** | Pointer to **bool** |  | [optional] 
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**Id** | Pointer to **string** |  | [optional]
+**TenantId** | Pointer to **NullableString** |  | [optional]
+**UserName** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**Surname** | Pointer to **NullableString** |  | [optional]
+**IsActive** | Pointer to **bool** |  | [optional]
+**Email** | Pointer to **NullableString** |  | [optional]
+**EmailConfirmed** | Pointer to **bool** |  | [optional]
+**PhoneNumber** | Pointer to **NullableString** |  | [optional]
+**PhoneNumberConfirmed** | Pointer to **bool** |  | [optional]
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
 
 ## Methods
 

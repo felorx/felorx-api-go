@@ -4,21 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**Token** | Pointer to **NullableString** |  | [optional] 
-**TpnsToken** | Pointer to **NullableString** |  | [optional] 
-**IsPhysicalDevice** | Pointer to **bool** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
-**Brand** | Pointer to **NullableString** |  | [optional] 
-**SystemVersion** | Pointer to **NullableString** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**Token** | Pointer to **NullableString** |  | [optional]
+**IsPhysicalDevice** | Pointer to **bool** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
+**Brand** | Pointer to **NullableString** |  | [optional]
+**SystemVersion** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -324,41 +323,6 @@ HasToken returns a boolean if a field has been set.
 `func (o *DeviceDto) UnsetToken()`
 
 UnsetToken ensures that no value is present for Token, not even an explicit nil
-### GetTpnsToken
-
-`func (o *DeviceDto) GetTpnsToken() string`
-
-GetTpnsToken returns the TpnsToken field if non-nil, zero value otherwise.
-
-### GetTpnsTokenOk
-
-`func (o *DeviceDto) GetTpnsTokenOk() (*string, bool)`
-
-GetTpnsTokenOk returns a tuple with the TpnsToken field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTpnsToken
-
-`func (o *DeviceDto) SetTpnsToken(v string)`
-
-SetTpnsToken sets TpnsToken field to given value.
-
-### HasTpnsToken
-
-`func (o *DeviceDto) HasTpnsToken() bool`
-
-HasTpnsToken returns a boolean if a field has been set.
-
-### SetTpnsTokenNil
-
-`func (o *DeviceDto) SetTpnsTokenNil(b bool)`
-
- SetTpnsTokenNil sets the value for TpnsToken to be an explicit nil
-
-### UnsetTpnsToken
-`func (o *DeviceDto) UnsetTpnsToken()`
-
-UnsetTpnsToken ensures that no value is present for TpnsToken, not even an explicit nil
 ### GetIsPhysicalDevice
 
 `func (o *DeviceDto) GetIsPhysicalDevice() bool`

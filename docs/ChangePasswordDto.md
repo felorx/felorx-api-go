@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **NullableString** |  | [optional] 
-**Password** | Pointer to **NullableString** |  | [optional] 
+**Code** | Pointer to **NullableString** |  | [optional]
+**Password** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

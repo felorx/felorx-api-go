@@ -4,19 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Details** | Pointer to **NullableString** |  | [optional] 
-**ScreenshotKeys** | Pointer to **NullableString** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**AppId** | Pointer to **string** | 所属应用ID | [optional]
+**Name** | Pointer to **NullableString** | 功能名称（唯一标识，同一应用内唯一） | [optional]
+**Sort** | Pointer to **int32** |  | [optional]
+**FeatureLocales** | Pointer to [**[]AppFeatureLocaleDto**](AppFeatureLocaleDto.md) |  | [optional]
 
 ## Methods
 
@@ -287,6 +286,31 @@ HasDeletionTime returns a boolean if a field has been set.
 `func (o *AppFeatureDto) UnsetDeletionTime()`
 
 UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
+### GetAppId
+
+`func (o *AppFeatureDto) GetAppId() string`
+
+GetAppId returns the AppId field if non-nil, zero value otherwise.
+
+### GetAppIdOk
+
+`func (o *AppFeatureDto) GetAppIdOk() (*string, bool)`
+
+GetAppIdOk returns a tuple with the AppId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppId
+
+`func (o *AppFeatureDto) SetAppId(v string)`
+
+SetAppId sets AppId field to given value.
+
+### HasAppId
+
+`func (o *AppFeatureDto) HasAppId() bool`
+
+HasAppId returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *AppFeatureDto) GetName() string`
@@ -322,146 +346,66 @@ HasName returns a boolean if a field has been set.
 `func (o *AppFeatureDto) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
-### GetDisplayName
+### GetSort
 
-`func (o *AppFeatureDto) GetDisplayName() string`
+`func (o *AppFeatureDto) GetSort() int32`
 
-GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
+GetSort returns the Sort field if non-nil, zero value otherwise.
 
-### GetDisplayNameOk
+### GetSortOk
 
-`func (o *AppFeatureDto) GetDisplayNameOk() (*string, bool)`
+`func (o *AppFeatureDto) GetSortOk() (*int32, bool)`
 
-GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
+GetSortOk returns a tuple with the Sort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisplayName
+### SetSort
 
-`func (o *AppFeatureDto) SetDisplayName(v string)`
+`func (o *AppFeatureDto) SetSort(v int32)`
 
-SetDisplayName sets DisplayName field to given value.
+SetSort sets Sort field to given value.
 
-### HasDisplayName
+### HasSort
 
-`func (o *AppFeatureDto) HasDisplayName() bool`
+`func (o *AppFeatureDto) HasSort() bool`
 
-HasDisplayName returns a boolean if a field has been set.
+HasSort returns a boolean if a field has been set.
 
-### SetDisplayNameNil
+### GetFeatureLocales
 
-`func (o *AppFeatureDto) SetDisplayNameNil(b bool)`
+`func (o *AppFeatureDto) GetFeatureLocales() []AppFeatureLocaleDto`
 
- SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+GetFeatureLocales returns the FeatureLocales field if non-nil, zero value otherwise.
 
-### UnsetDisplayName
-`func (o *AppFeatureDto) UnsetDisplayName()`
+### GetFeatureLocalesOk
 
-UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
-### GetDescription
+`func (o *AppFeatureDto) GetFeatureLocalesOk() (*[]AppFeatureLocaleDto, bool)`
 
-`func (o *AppFeatureDto) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *AppFeatureDto) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetFeatureLocalesOk returns a tuple with the FeatureLocales field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetFeatureLocales
 
-`func (o *AppFeatureDto) SetDescription(v string)`
+`func (o *AppFeatureDto) SetFeatureLocales(v []AppFeatureLocaleDto)`
 
-SetDescription sets Description field to given value.
+SetFeatureLocales sets FeatureLocales field to given value.
 
-### HasDescription
+### HasFeatureLocales
 
-`func (o *AppFeatureDto) HasDescription() bool`
+`func (o *AppFeatureDto) HasFeatureLocales() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasFeatureLocales returns a boolean if a field has been set.
 
-### SetDescriptionNil
+### SetFeatureLocalesNil
 
-`func (o *AppFeatureDto) SetDescriptionNil(b bool)`
+`func (o *AppFeatureDto) SetFeatureLocalesNil(b bool)`
 
- SetDescriptionNil sets the value for Description to be an explicit nil
+ SetFeatureLocalesNil sets the value for FeatureLocales to be an explicit nil
 
-### UnsetDescription
-`func (o *AppFeatureDto) UnsetDescription()`
+### UnsetFeatureLocales
+`func (o *AppFeatureDto) UnsetFeatureLocales()`
 
-UnsetDescription ensures that no value is present for Description, not even an explicit nil
-### GetDetails
-
-`func (o *AppFeatureDto) GetDetails() string`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *AppFeatureDto) GetDetailsOk() (*string, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *AppFeatureDto) SetDetails(v string)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *AppFeatureDto) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### SetDetailsNil
-
-`func (o *AppFeatureDto) SetDetailsNil(b bool)`
-
- SetDetailsNil sets the value for Details to be an explicit nil
-
-### UnsetDetails
-`func (o *AppFeatureDto) UnsetDetails()`
-
-UnsetDetails ensures that no value is present for Details, not even an explicit nil
-### GetScreenshotKeys
-
-`func (o *AppFeatureDto) GetScreenshotKeys() string`
-
-GetScreenshotKeys returns the ScreenshotKeys field if non-nil, zero value otherwise.
-
-### GetScreenshotKeysOk
-
-`func (o *AppFeatureDto) GetScreenshotKeysOk() (*string, bool)`
-
-GetScreenshotKeysOk returns a tuple with the ScreenshotKeys field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScreenshotKeys
-
-`func (o *AppFeatureDto) SetScreenshotKeys(v string)`
-
-SetScreenshotKeys sets ScreenshotKeys field to given value.
-
-### HasScreenshotKeys
-
-`func (o *AppFeatureDto) HasScreenshotKeys() bool`
-
-HasScreenshotKeys returns a boolean if a field has been set.
-
-### SetScreenshotKeysNil
-
-`func (o *AppFeatureDto) SetScreenshotKeysNil(b bool)`
-
- SetScreenshotKeysNil sets the value for ScreenshotKeys to be an explicit nil
-
-### UnsetScreenshotKeys
-`func (o *AppFeatureDto) UnsetScreenshotKeys()`
-
-UnsetScreenshotKeys ensures that no value is present for ScreenshotKeys, not even an explicit nil
+UnsetFeatureLocales ensures that no value is present for FeatureLocales, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

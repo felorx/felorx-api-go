@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SmtpHost** | Pointer to **NullableString** |  | [optional] 
-**SmtpPort** | Pointer to **int32** |  | [optional] 
-**SmtpUserName** | Pointer to **NullableString** |  | [optional] 
-**SmtpPassword** | Pointer to **NullableString** |  | [optional] 
-**SmtpDomain** | Pointer to **NullableString** |  | [optional] 
-**SmtpEnableSsl** | Pointer to **bool** |  | [optional] 
-**SmtpUseDefaultCredentials** | Pointer to **bool** |  | [optional] 
-**DefaultFromAddress** | **string** |  | 
-**DefaultFromDisplayName** | **string** |  | 
+**SmtpHost** | Pointer to **NullableString** |  | [optional]
+**SmtpPort** | Pointer to **int32** |  | [optional]
+**SmtpUserName** | Pointer to **NullableString** |  | [optional]
+**SmtpPassword** | Pointer to **NullableString** |  | [optional]
+**SmtpDomain** | Pointer to **NullableString** |  | [optional]
+**SmtpEnableSsl** | Pointer to **bool** |  | [optional]
+**SmtpUseDefaultCredentials** | Pointer to **bool** |  | [optional]
+**DefaultFromAddress** | **string** |  |
+**DefaultFromDisplayName** | **string** |  |
 
 ## Methods
 

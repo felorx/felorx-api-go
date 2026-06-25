@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Token** | Pointer to **NullableString** |  | [optional] 
-**Status** | Pointer to [**DeviceStatus**](DeviceStatus.md) |  | [optional] 
+**Token** | Pointer to **NullableString** |  | [optional]
+**Status** | Pointer to [**DeviceStatus**](DeviceStatus.md) |  | [optional]
 
 ## Methods
 

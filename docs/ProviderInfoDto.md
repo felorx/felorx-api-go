@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProviderName** | Pointer to **NullableString** |  | [optional] 
-**ProviderKey** | Pointer to **NullableString** |  | [optional] 
+**ProviderName** | Pointer to **NullableString** |  | [optional]
+**ProviderKey** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

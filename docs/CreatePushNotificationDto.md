@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**PuupeeId** | Pointer to **NullableString** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**App** | Pointer to **NullableString** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional]
+**Description** | Pointer to **NullableString** |  | [optional]
+**Body** | Pointer to **NullableString** |  | [optional]
+**Url** | Pointer to **NullableString** |  | [optional]
+**FelorxId** | Pointer to **NullableString** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**App** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -99,41 +101,111 @@ HasDescription returns a boolean if a field has been set.
 `func (o *CreatePushNotificationDto) UnsetDescription()`
 
 UnsetDescription ensures that no value is present for Description, not even an explicit nil
-### GetPuupeeId
+### GetBody
 
-`func (o *CreatePushNotificationDto) GetPuupeeId() string`
+`func (o *CreatePushNotificationDto) GetBody() string`
 
-GetPuupeeId returns the PuupeeId field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetPuupeeIdOk
+### GetBodyOk
 
-`func (o *CreatePushNotificationDto) GetPuupeeIdOk() (*string, bool)`
+`func (o *CreatePushNotificationDto) GetBodyOk() (*string, bool)`
 
-GetPuupeeIdOk returns a tuple with the PuupeeId field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPuupeeId
+### SetBody
 
-`func (o *CreatePushNotificationDto) SetPuupeeId(v string)`
+`func (o *CreatePushNotificationDto) SetBody(v string)`
 
-SetPuupeeId sets PuupeeId field to given value.
+SetBody sets Body field to given value.
 
-### HasPuupeeId
+### HasBody
 
-`func (o *CreatePushNotificationDto) HasPuupeeId() bool`
+`func (o *CreatePushNotificationDto) HasBody() bool`
 
-HasPuupeeId returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### SetPuupeeIdNil
+### SetBodyNil
 
-`func (o *CreatePushNotificationDto) SetPuupeeIdNil(b bool)`
+`func (o *CreatePushNotificationDto) SetBodyNil(b bool)`
 
- SetPuupeeIdNil sets the value for PuupeeId to be an explicit nil
+ SetBodyNil sets the value for Body to be an explicit nil
 
-### UnsetPuupeeId
-`func (o *CreatePushNotificationDto) UnsetPuupeeId()`
+### UnsetBody
+`func (o *CreatePushNotificationDto) UnsetBody()`
 
-UnsetPuupeeId ensures that no value is present for PuupeeId, not even an explicit nil
+UnsetBody ensures that no value is present for Body, not even an explicit nil
+### GetUrl
+
+`func (o *CreatePushNotificationDto) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *CreatePushNotificationDto) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *CreatePushNotificationDto) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *CreatePushNotificationDto) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### SetUrlNil
+
+`func (o *CreatePushNotificationDto) SetUrlNil(b bool)`
+
+ SetUrlNil sets the value for Url to be an explicit nil
+
+### UnsetUrl
+`func (o *CreatePushNotificationDto) UnsetUrl()`
+
+UnsetUrl ensures that no value is present for Url, not even an explicit nil
+### GetFelorxId
+
+`func (o *CreatePushNotificationDto) GetFelorxId() string`
+
+GetFelorxId returns the FelorxId field if non-nil, zero value otherwise.
+
+### GetFelorxIdOk
+
+`func (o *CreatePushNotificationDto) GetFelorxIdOk() (*string, bool)`
+
+GetFelorxIdOk returns a tuple with the FelorxId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFelorxId
+
+`func (o *CreatePushNotificationDto) SetFelorxId(v string)`
+
+SetFelorxId sets FelorxId field to given value.
+
+### HasFelorxId
+
+`func (o *CreatePushNotificationDto) HasFelorxId() bool`
+
+HasFelorxId returns a boolean if a field has been set.
+
+### SetFelorxIdNil
+
+`func (o *CreatePushNotificationDto) SetFelorxIdNil(b bool)`
+
+ SetFelorxIdNil sets the value for FelorxId to be an explicit nil
+
+### UnsetFelorxId
+`func (o *CreatePushNotificationDto) UnsetFelorxId()`
+
+UnsetFelorxId ensures that no value is present for FelorxId, not even an explicit nil
 ### GetCreatorId
 
 `func (o *CreatePushNotificationDto) GetCreatorId() string`

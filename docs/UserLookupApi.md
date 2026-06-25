@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FindById**](UserLookupAPI.md#FindById) | **Get** /api/identity/users/lookup/{id} | 
-[**FindByUserName**](UserLookupAPI.md#FindByUserName) | **Get** /api/identity/users/lookup/by-username/{userName} | 
-[**GetCount**](UserLookupAPI.md#GetCount) | **Get** /api/identity/users/lookup/count | 
-[**Search**](UserLookupAPI.md#Search) | **Get** /api/identity/users/lookup/search | 
+[**FindById**](UserLookupAPI.md#FindById) | **Get** /api/identity/users/lookup/{id} |
+[**FindByUserName**](UserLookupAPI.md#FindByUserName) | **Get** /api/identity/users/lookup/by-username/{userName} |
+[**GetCount**](UserLookupAPI.md#GetCount) | **Get** /api/identity/users/lookup/count |
+[**Search**](UserLookupAPI.md#Search) | **Get** /api/identity/users/lookup/search |
 
 
 
@@ -30,7 +30,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -50,7 +50,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -98,7 +98,7 @@ import (
 )
 
 func main() {
-	userName := "userName_example" // string | 
+	userName := "userName_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userName** | **string** |  | 
+**userName** | **string** |  |
 
 ### Other Parameters
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -191,7 +191,7 @@ Other parameters are passed through a pointer to a apiGetCountRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  | 
+ **filter** | **string** |  |
 
 ### Return type
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -258,10 +258,10 @@ Other parameters are passed through a pointer to a apiSearchRequest struct via t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  | 
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **filter** | **string** |  |
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

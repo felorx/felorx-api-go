@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Publish**](MessageAPI.md#Publish) | **Post** /api/app/message/publish | 
-[**Recall**](MessageAPI.md#Recall) | **Post** /api/app/message/recall | 
-[**Subscribe**](MessageAPI.md#Subscribe) | **Post** /api/app/message/subscribe | 
-[**Unsubscribe**](MessageAPI.md#Unsubscribe) | **Post** /api/app/message/unsubscribe | 
+[**Publish**](MessageAPI.md#Publish) | **Post** /api/app/message/publish |
+[**Recall**](MessageAPI.md#Recall) | **Post** /api/app/message/recall |
+[**Subscribe**](MessageAPI.md#Subscribe) | **Post** /api/app/message/subscribe |
+[**Unsubscribe**](MessageAPI.md#Unsubscribe) | **Post** /api/app/message/unsubscribe |
 
 
 
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiPublishRequest struct via 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messagePublishDto** | [**MessagePublishDto**](MessagePublishDto.md) |  | 
+ **messagePublishDto** | [**MessagePublishDto**](MessagePublishDto.md) |  |
 
 ### Return type
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -115,7 +115,7 @@ Other parameters are passed through a pointer to a apiRecallRequest struct via t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageRecallDto** | [**MessageRecallDto**](MessageRecallDto.md) |  | 
+ **messageRecallDto** | [**MessageRecallDto**](MessageRecallDto.md) |  |
 
 ### Return type
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -177,7 +177,7 @@ Other parameters are passed through a pointer to a apiSubscribeRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageSubscribeDto** | [**MessageSubscribeDto**](MessageSubscribeDto.md) |  | 
+ **messageSubscribeDto** | [**MessageSubscribeDto**](MessageSubscribeDto.md) |  |
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -239,7 +239,7 @@ Other parameters are passed through a pointer to a apiUnsubscribeRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageUnsubscribeDto** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md) |  | 
+ **messageUnsubscribeDto** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md) |  |
 
 ### Return type
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

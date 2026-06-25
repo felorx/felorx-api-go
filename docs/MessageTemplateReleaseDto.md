@@ -4,18 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**TemplateName** | Pointer to **NullableString** |  | [optional] 
-**Version** | Pointer to **int32** |  | [optional] 
-**Content** | Pointer to **NullableString** |  | [optional] 
-**TemplateId** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**TemplateName** | Pointer to **NullableString** |  | [optional]
+**Version** | Pointer to **int32** |  | [optional]
+**Content** | Pointer to **NullableString** |  | [optional]
+**SchemaVersion** | Pointer to **int32** |  | [optional]
+**ContentHash** | Pointer to **NullableString** |  | [optional]
+**Status** | Pointer to **NullableString** |  | [optional]
+**PublishedAt** | Pointer to **NullableTime** |  | [optional]
+**TemplateId** | Pointer to **string** |  | [optional]
 
 ## Methods
 
@@ -381,6 +385,136 @@ HasContent returns a boolean if a field has been set.
 `func (o *MessageTemplateReleaseDto) UnsetContent()`
 
 UnsetContent ensures that no value is present for Content, not even an explicit nil
+### GetSchemaVersion
+
+`func (o *MessageTemplateReleaseDto) GetSchemaVersion() int32`
+
+GetSchemaVersion returns the SchemaVersion field if non-nil, zero value otherwise.
+
+### GetSchemaVersionOk
+
+`func (o *MessageTemplateReleaseDto) GetSchemaVersionOk() (*int32, bool)`
+
+GetSchemaVersionOk returns a tuple with the SchemaVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSchemaVersion
+
+`func (o *MessageTemplateReleaseDto) SetSchemaVersion(v int32)`
+
+SetSchemaVersion sets SchemaVersion field to given value.
+
+### HasSchemaVersion
+
+`func (o *MessageTemplateReleaseDto) HasSchemaVersion() bool`
+
+HasSchemaVersion returns a boolean if a field has been set.
+
+### GetContentHash
+
+`func (o *MessageTemplateReleaseDto) GetContentHash() string`
+
+GetContentHash returns the ContentHash field if non-nil, zero value otherwise.
+
+### GetContentHashOk
+
+`func (o *MessageTemplateReleaseDto) GetContentHashOk() (*string, bool)`
+
+GetContentHashOk returns a tuple with the ContentHash field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContentHash
+
+`func (o *MessageTemplateReleaseDto) SetContentHash(v string)`
+
+SetContentHash sets ContentHash field to given value.
+
+### HasContentHash
+
+`func (o *MessageTemplateReleaseDto) HasContentHash() bool`
+
+HasContentHash returns a boolean if a field has been set.
+
+### SetContentHashNil
+
+`func (o *MessageTemplateReleaseDto) SetContentHashNil(b bool)`
+
+ SetContentHashNil sets the value for ContentHash to be an explicit nil
+
+### UnsetContentHash
+`func (o *MessageTemplateReleaseDto) UnsetContentHash()`
+
+UnsetContentHash ensures that no value is present for ContentHash, not even an explicit nil
+### GetStatus
+
+`func (o *MessageTemplateReleaseDto) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *MessageTemplateReleaseDto) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *MessageTemplateReleaseDto) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *MessageTemplateReleaseDto) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### SetStatusNil
+
+`func (o *MessageTemplateReleaseDto) SetStatusNil(b bool)`
+
+ SetStatusNil sets the value for Status to be an explicit nil
+
+### UnsetStatus
+`func (o *MessageTemplateReleaseDto) UnsetStatus()`
+
+UnsetStatus ensures that no value is present for Status, not even an explicit nil
+### GetPublishedAt
+
+`func (o *MessageTemplateReleaseDto) GetPublishedAt() time.Time`
+
+GetPublishedAt returns the PublishedAt field if non-nil, zero value otherwise.
+
+### GetPublishedAtOk
+
+`func (o *MessageTemplateReleaseDto) GetPublishedAtOk() (*time.Time, bool)`
+
+GetPublishedAtOk returns a tuple with the PublishedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublishedAt
+
+`func (o *MessageTemplateReleaseDto) SetPublishedAt(v time.Time)`
+
+SetPublishedAt sets PublishedAt field to given value.
+
+### HasPublishedAt
+
+`func (o *MessageTemplateReleaseDto) HasPublishedAt() bool`
+
+HasPublishedAt returns a boolean if a field has been set.
+
+### SetPublishedAtNil
+
+`func (o *MessageTemplateReleaseDto) SetPublishedAtNil(b bool)`
+
+ SetPublishedAtNil sets the value for PublishedAt to be an explicit nil
+
+### UnsetPublishedAt
+`func (o *MessageTemplateReleaseDto) UnsetPublishedAt()`
+
+UnsetPublishedAt ensures that no value is present for PublishedAt, not even an explicit nil
 ### GetTemplateId
 
 `func (o *MessageTemplateReleaseDto) GetTemplateId() string`

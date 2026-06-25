@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageSourceRouteSub**](MessageSourceRouteSubAPI.md#CreateMessageSourceRouteSub) | **Post** /api/app/message-source-route-sub | 
-[**DeleteMessageSourceRouteSubById**](MessageSourceRouteSubAPI.md#DeleteMessageSourceRouteSubById) | **Delete** /api/app/message-source-route-sub/{id} | 
-[**GetMessageSourceRouteSubById**](MessageSourceRouteSubAPI.md#GetMessageSourceRouteSubById) | **Get** /api/app/message-source-route-sub/{id} | 
-[**GetMessageSourceRouteSubList**](MessageSourceRouteSubAPI.md#GetMessageSourceRouteSubList) | **Get** /api/app/message-source-route-sub | 
-[**UpdateMessageSourceRouteSub**](MessageSourceRouteSubAPI.md#UpdateMessageSourceRouteSub) | **Put** /api/app/message-source-route-sub/{id} | 
+[**CreateMessageSourceRouteSub**](MessageSourceRouteSubAPI.md#CreateMessageSourceRouteSub) | **Post** /api/app/message-source-route-sub |
+[**DeleteMessageSourceRouteSubById**](MessageSourceRouteSubAPI.md#DeleteMessageSourceRouteSubById) | **Delete** /api/app/message-source-route-sub/{id} |
+[**GetMessageSourceRouteSubById**](MessageSourceRouteSubAPI.md#GetMessageSourceRouteSubById) | **Get** /api/app/message-source-route-sub/{id} |
+[**GetMessageSourceRouteSubList**](MessageSourceRouteSubAPI.md#GetMessageSourceRouteSubList) | **Get** /api/app/message-source-route-sub |
+[**UpdateMessageSourceRouteSub**](MessageSourceRouteSubAPI.md#UpdateMessageSourceRouteSub) | **Put** /api/app/message-source-route-sub/{id} |
 
 
 
@@ -54,7 +54,7 @@ Other parameters are passed through a pointer to a apiCreateMessageSourceRouteSu
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  |
 
 ### Return type
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -93,7 +93,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -111,7 +111,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -159,7 +159,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -179,7 +179,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -255,7 +255,7 @@ Other parameters are passed through a pointer to a apiGetMessageSourceRouteSubLi
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -286,7 +286,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	createUpdateMessageSourceRouteSubDto := *openapiclient.NewCreateUpdateMessageSourceRouteSubDto() // CreateUpdateMessageSourceRouteSubDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -305,7 +305,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -315,7 +315,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageSourceRouteSu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | 
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  |
 
 ### Return type
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

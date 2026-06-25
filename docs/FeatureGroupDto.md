@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**Features** | Pointer to [**[]FeatureDto**](FeatureDto.md) |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**DisplayName** | Pointer to **NullableString** |  | [optional]
+**Features** | Pointer to [**[]FeatureDto**](FeatureDto.md) |  | [optional]
 
 ## Methods
 

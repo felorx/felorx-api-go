@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Environment** | Pointer to **NullableString** |  | [optional] 
-**IsRetryable** | Pointer to **bool** |  | [optional] 
-**Status** | Pointer to **int32** | 订阅订单状态 | [optional] 
-**LatestReceiptInfo** | Pointer to [**[]LatestReceiptInfo**](LatestReceiptInfo.md) |  | [optional] 
-**LatestReceipt** | Pointer to **NullableString** |  | [optional] 
-**PendingRenewalInfo** | Pointer to [**[]PendingRenewalInfo**](PendingRenewalInfo.md) |  | [optional] 
-**Receipt** | Pointer to [**Receipt**](Receipt.md) |  | [optional] 
+**Environment** | Pointer to **NullableString** |  | [optional]
+**IsRetryable** | Pointer to **bool** |  | [optional]
+**Status** | Pointer to **int32** | 订阅订单状态 | [optional]
+**LatestReceiptInfo** | Pointer to [**[]LatestReceiptInfo**](LatestReceiptInfo.md) |  | [optional]
+**LatestReceipt** | Pointer to **NullableString** |  | [optional]
+**PendingRenewalInfo** | Pointer to [**[]PendingRenewalInfo**](PendingRenewalInfo.md) |  | [optional]
+**Receipt** | Pointer to [**Receipt**](Receipt.md) |  | [optional]
 
 ## Methods
 

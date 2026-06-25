@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EntityDisplayName** | Pointer to **NullableString** |  | [optional] 
-**Groups** | Pointer to [**[]PermissionGroupDto**](PermissionGroupDto.md) |  | [optional] 
+**EntityDisplayName** | Pointer to **NullableString** |  | [optional]
+**Groups** | Pointer to [**[]PermissionGroupDto**](PermissionGroupDto.md) |  | [optional]
 
 ## Methods
 

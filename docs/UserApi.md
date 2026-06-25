@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateIdentityUser**](UserAPI.md#CreateIdentityUser) | **Post** /api/identity/users | 
-[**DeleteIdentityUserById**](UserAPI.md#DeleteIdentityUserById) | **Delete** /api/identity/users/{id} | 
-[**FindByEmail**](UserAPI.md#FindByEmail) | **Get** /api/identity/users/by-email/{email} | 
-[**FindByUsername**](UserAPI.md#FindByUsername) | **Get** /api/identity/users/by-username/{userName} | 
-[**GetAssignableRoles**](UserAPI.md#GetAssignableRoles) | **Get** /api/identity/users/assignable-roles | 
-[**GetIdentityUserById**](UserAPI.md#GetIdentityUserById) | **Get** /api/identity/users/{id} | 
-[**GetIdentityUserList**](UserAPI.md#GetIdentityUserList) | **Get** /api/identity/users | 
-[**GetRoles**](UserAPI.md#GetRoles) | **Get** /api/identity/users/{id}/roles | 
-[**UpdateIdentityUser**](UserAPI.md#UpdateIdentityUser) | **Put** /api/identity/users/{id} | 
-[**UpdateRoles**](UserAPI.md#UpdateRoles) | **Put** /api/identity/users/{id}/roles | 
+[**CreateIdentityUser**](UserAPI.md#CreateIdentityUser) | **Post** /api/identity/users |
+[**DeleteIdentityUserById**](UserAPI.md#DeleteIdentityUserById) | **Delete** /api/identity/users/{id} |
+[**FindByEmail**](UserAPI.md#FindByEmail) | **Get** /api/identity/users/by-email/{email} |
+[**FindByUsername**](UserAPI.md#FindByUsername) | **Get** /api/identity/users/by-username/{userName} |
+[**GetAssignableRoles**](UserAPI.md#GetAssignableRoles) | **Get** /api/identity/users/assignable-roles |
+[**GetIdentityUserById**](UserAPI.md#GetIdentityUserById) | **Get** /api/identity/users/{id} |
+[**GetIdentityUserList**](UserAPI.md#GetIdentityUserList) | **Get** /api/identity/users |
+[**GetRoles**](UserAPI.md#GetRoles) | **Get** /api/identity/users/{id}/roles |
+[**UpdateIdentityUser**](UserAPI.md#UpdateIdentityUser) | **Put** /api/identity/users/{id} |
+[**UpdateRoles**](UserAPI.md#UpdateRoles) | **Put** /api/identity/users/{id}/roles |
 
 
 
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateIdentityUserRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identityUserCreateDto** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md) |  | 
+ **identityUserCreateDto** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md) |  |
 
 ### Return type
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -100,7 +100,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -166,7 +166,7 @@ import (
 )
 
 func main() {
-	email := "email_example" // string | 
+	email := "email_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -186,7 +186,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**email** | **string** |  | 
+**email** | **string** |  |
 
 ### Other Parameters
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -234,7 +234,7 @@ import (
 )
 
 func main() {
-	userName := "userName_example" // string | 
+	userName := "userName_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userName** | **string** |  | 
+**userName** | **string** |  |
 
 ### Other Parameters
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -330,7 +330,7 @@ Other parameters are passed through a pointer to a apiGetAssignableRolesRequest 
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -361,7 +361,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -381,7 +381,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -457,10 +457,10 @@ Other parameters are passed through a pointer to a apiGetIdentityUserListRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  | 
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **filter** | **string** |  |
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -499,7 +499,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -519,7 +519,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -567,7 +567,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	identityUserUpdateDto := *openapiclient.NewIdentityUserUpdateDto("UserName_example", "Email_example") // IdentityUserUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -588,7 +588,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -598,7 +598,7 @@ Other parameters are passed through a pointer to a apiUpdateIdentityUserRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **identityUserUpdateDto** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md) |  | 
+ **identityUserUpdateDto** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md) |  |
 
 ### Return type
 
@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -637,7 +637,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	identityUserUpdateRolesDto := *openapiclient.NewIdentityUserUpdateRolesDto([]string{"RoleNames_example"}) // IdentityUserUpdateRolesDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -656,7 +656,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -666,7 +666,7 @@ Other parameters are passed through a pointer to a apiUpdateRolesRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **identityUserUpdateRolesDto** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md) |  | 
+ **identityUserUpdateRolesDto** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md) |  |
 
 ### Return type
 
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

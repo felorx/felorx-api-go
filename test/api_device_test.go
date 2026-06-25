@@ -71,6 +71,17 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test DeviceAPIService Logout", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		httpRes, err := apiClient.DeviceAPI.Logout(context.Background()).Execute()
+
+		require.Nil(t, err)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DeviceAPIService RefreshDevice", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test

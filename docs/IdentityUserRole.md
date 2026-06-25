@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
-**UserId** | Pointer to **string** |  | [optional] [readonly] 
-**RoleId** | Pointer to **string** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly]
+**UserId** | Pointer to **string** |  | [optional] [readonly]
+**RoleId** | Pointer to **string** |  | [optional] [readonly]
 
 ## Methods
 

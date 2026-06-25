@@ -4,19 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**Type** | Pointer to [**SubscriptionOrderType**](SubscriptionOrderType.md) |  | [optional] 
-**Status** | Pointer to [**SubscriptionOrderStatus**](SubscriptionOrderStatus.md) |  | [optional] 
-**AppId** | Pointer to **string** |  | [optional] 
-**PricingId** | Pointer to **string** |  | [optional] 
-**ProductId** | Pointer to **NullableString** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**Type** | Pointer to [**SubscriptionOrderType**](SubscriptionOrderType.md) |  | [optional]
+**Status** | Pointer to [**SubscriptionOrderStatus**](SubscriptionOrderStatus.md) |  | [optional]
+**AppId** | Pointer to **string** |  | [optional]
+**PricingId** | Pointer to **string** |  | [optional]
+**PlanPriceId** | Pointer to **NullableString** |  | [optional]
+**ProductId** | Pointer to **NullableString** |  | [optional]
+**Provider** | Pointer to [**BillingProvider**](BillingProvider.md) |  | [optional]
+**BillingPeriod** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
+**BillingMode** | Pointer to [**BillingMode**](BillingMode.md) |  | [optional]
+**Amount** | Pointer to **float64** |  | [optional]
+**Currency** | Pointer to **NullableString** |  | [optional]
+**ApprovalUrl** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -387,6 +394,41 @@ SetPricingId sets PricingId field to given value.
 
 HasPricingId returns a boolean if a field has been set.
 
+### GetPlanPriceId
+
+`func (o *SubscriptionOrderDto) GetPlanPriceId() string`
+
+GetPlanPriceId returns the PlanPriceId field if non-nil, zero value otherwise.
+
+### GetPlanPriceIdOk
+
+`func (o *SubscriptionOrderDto) GetPlanPriceIdOk() (*string, bool)`
+
+GetPlanPriceIdOk returns a tuple with the PlanPriceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlanPriceId
+
+`func (o *SubscriptionOrderDto) SetPlanPriceId(v string)`
+
+SetPlanPriceId sets PlanPriceId field to given value.
+
+### HasPlanPriceId
+
+`func (o *SubscriptionOrderDto) HasPlanPriceId() bool`
+
+HasPlanPriceId returns a boolean if a field has been set.
+
+### SetPlanPriceIdNil
+
+`func (o *SubscriptionOrderDto) SetPlanPriceIdNil(b bool)`
+
+ SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
+
+### UnsetPlanPriceId
+`func (o *SubscriptionOrderDto) UnsetPlanPriceId()`
+
+UnsetPlanPriceId ensures that no value is present for PlanPriceId, not even an explicit nil
 ### GetProductId
 
 `func (o *SubscriptionOrderDto) GetProductId() string`
@@ -422,6 +464,176 @@ HasProductId returns a boolean if a field has been set.
 `func (o *SubscriptionOrderDto) UnsetProductId()`
 
 UnsetProductId ensures that no value is present for ProductId, not even an explicit nil
+### GetProvider
+
+`func (o *SubscriptionOrderDto) GetProvider() BillingProvider`
+
+GetProvider returns the Provider field if non-nil, zero value otherwise.
+
+### GetProviderOk
+
+`func (o *SubscriptionOrderDto) GetProviderOk() (*BillingProvider, bool)`
+
+GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProvider
+
+`func (o *SubscriptionOrderDto) SetProvider(v BillingProvider)`
+
+SetProvider sets Provider field to given value.
+
+### HasProvider
+
+`func (o *SubscriptionOrderDto) HasProvider() bool`
+
+HasProvider returns a boolean if a field has been set.
+
+### GetBillingPeriod
+
+`func (o *SubscriptionOrderDto) GetBillingPeriod() SubBillingPeriod`
+
+GetBillingPeriod returns the BillingPeriod field if non-nil, zero value otherwise.
+
+### GetBillingPeriodOk
+
+`func (o *SubscriptionOrderDto) GetBillingPeriodOk() (*SubBillingPeriod, bool)`
+
+GetBillingPeriodOk returns a tuple with the BillingPeriod field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBillingPeriod
+
+`func (o *SubscriptionOrderDto) SetBillingPeriod(v SubBillingPeriod)`
+
+SetBillingPeriod sets BillingPeriod field to given value.
+
+### HasBillingPeriod
+
+`func (o *SubscriptionOrderDto) HasBillingPeriod() bool`
+
+HasBillingPeriod returns a boolean if a field has been set.
+
+### GetBillingMode
+
+`func (o *SubscriptionOrderDto) GetBillingMode() BillingMode`
+
+GetBillingMode returns the BillingMode field if non-nil, zero value otherwise.
+
+### GetBillingModeOk
+
+`func (o *SubscriptionOrderDto) GetBillingModeOk() (*BillingMode, bool)`
+
+GetBillingModeOk returns a tuple with the BillingMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBillingMode
+
+`func (o *SubscriptionOrderDto) SetBillingMode(v BillingMode)`
+
+SetBillingMode sets BillingMode field to given value.
+
+### HasBillingMode
+
+`func (o *SubscriptionOrderDto) HasBillingMode() bool`
+
+HasBillingMode returns a boolean if a field has been set.
+
+### GetAmount
+
+`func (o *SubscriptionOrderDto) GetAmount() float64`
+
+GetAmount returns the Amount field if non-nil, zero value otherwise.
+
+### GetAmountOk
+
+`func (o *SubscriptionOrderDto) GetAmountOk() (*float64, bool)`
+
+GetAmountOk returns a tuple with the Amount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAmount
+
+`func (o *SubscriptionOrderDto) SetAmount(v float64)`
+
+SetAmount sets Amount field to given value.
+
+### HasAmount
+
+`func (o *SubscriptionOrderDto) HasAmount() bool`
+
+HasAmount returns a boolean if a field has been set.
+
+### GetCurrency
+
+`func (o *SubscriptionOrderDto) GetCurrency() string`
+
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
+
+### GetCurrencyOk
+
+`func (o *SubscriptionOrderDto) GetCurrencyOk() (*string, bool)`
+
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrency
+
+`func (o *SubscriptionOrderDto) SetCurrency(v string)`
+
+SetCurrency sets Currency field to given value.
+
+### HasCurrency
+
+`func (o *SubscriptionOrderDto) HasCurrency() bool`
+
+HasCurrency returns a boolean if a field has been set.
+
+### SetCurrencyNil
+
+`func (o *SubscriptionOrderDto) SetCurrencyNil(b bool)`
+
+ SetCurrencyNil sets the value for Currency to be an explicit nil
+
+### UnsetCurrency
+`func (o *SubscriptionOrderDto) UnsetCurrency()`
+
+UnsetCurrency ensures that no value is present for Currency, not even an explicit nil
+### GetApprovalUrl
+
+`func (o *SubscriptionOrderDto) GetApprovalUrl() string`
+
+GetApprovalUrl returns the ApprovalUrl field if non-nil, zero value otherwise.
+
+### GetApprovalUrlOk
+
+`func (o *SubscriptionOrderDto) GetApprovalUrlOk() (*string, bool)`
+
+GetApprovalUrlOk returns a tuple with the ApprovalUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApprovalUrl
+
+`func (o *SubscriptionOrderDto) SetApprovalUrl(v string)`
+
+SetApprovalUrl sets ApprovalUrl field to given value.
+
+### HasApprovalUrl
+
+`func (o *SubscriptionOrderDto) HasApprovalUrl() bool`
+
+HasApprovalUrl returns a boolean if a field has been set.
+
+### SetApprovalUrlNil
+
+`func (o *SubscriptionOrderDto) SetApprovalUrlNil(b bool)`
+
+ SetApprovalUrlNil sets the value for ApprovalUrl to be an explicit nil
+
+### UnsetApprovalUrl
+`func (o *SubscriptionOrderDto) UnsetApprovalUrl()`
+
+UnsetApprovalUrl ensures that no value is present for ApprovalUrl, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

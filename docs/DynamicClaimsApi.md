@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Refresh**](DynamicClaimsAPI.md#Refresh) | **Post** /api/account/dynamic-claims/refresh | 
+[**Refresh**](DynamicClaimsAPI.md#Refresh) | **Post** /api/account/dynamic-claims/refresh |
 
 
 
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiRefreshRequest struct via 
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

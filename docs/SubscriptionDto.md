@@ -4,18 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**ExpireAt** | Pointer to **NullableTime** | 会员过期时间 | [optional] 
-**AppId** | Pointer to **string** | 应用 ID | [optional] 
-**PriceNaming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional] 
-**PricingId** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**ExpireAt** | Pointer to **NullableTime** | 会员过期时间 | [optional]
+**AppId** | Pointer to **string** | 应用 ID | [optional]
+**PriceNaming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional]
+**PricingId** | Pointer to **string** |  | [optional]
+**PlanPriceId** | Pointer to **NullableString** |  | [optional]
+**Provider** | Pointer to [**BillingProvider**](BillingProvider.md) |  | [optional]
+**BillingPeriod** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
+**BillingMode** | Pointer to [**BillingMode**](BillingMode.md) |  | [optional]
+**Status** | Pointer to [**SubscriptionEntitlementStatus**](SubscriptionEntitlementStatus.md) |  | [optional]
+**IsLifetime** | Pointer to **bool** |  | [optional]
+**ExternalSubscriptionId** | Pointer to **NullableString** |  | [optional]
+**LastVerifiedAt** | Pointer to **NullableTime** |  | [optional]
 
 ## Methods
 
@@ -396,6 +404,236 @@ SetPricingId sets PricingId field to given value.
 
 HasPricingId returns a boolean if a field has been set.
 
+### GetPlanPriceId
+
+`func (o *SubscriptionDto) GetPlanPriceId() string`
+
+GetPlanPriceId returns the PlanPriceId field if non-nil, zero value otherwise.
+
+### GetPlanPriceIdOk
+
+`func (o *SubscriptionDto) GetPlanPriceIdOk() (*string, bool)`
+
+GetPlanPriceIdOk returns a tuple with the PlanPriceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlanPriceId
+
+`func (o *SubscriptionDto) SetPlanPriceId(v string)`
+
+SetPlanPriceId sets PlanPriceId field to given value.
+
+### HasPlanPriceId
+
+`func (o *SubscriptionDto) HasPlanPriceId() bool`
+
+HasPlanPriceId returns a boolean if a field has been set.
+
+### SetPlanPriceIdNil
+
+`func (o *SubscriptionDto) SetPlanPriceIdNil(b bool)`
+
+ SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
+
+### UnsetPlanPriceId
+`func (o *SubscriptionDto) UnsetPlanPriceId()`
+
+UnsetPlanPriceId ensures that no value is present for PlanPriceId, not even an explicit nil
+### GetProvider
+
+`func (o *SubscriptionDto) GetProvider() BillingProvider`
+
+GetProvider returns the Provider field if non-nil, zero value otherwise.
+
+### GetProviderOk
+
+`func (o *SubscriptionDto) GetProviderOk() (*BillingProvider, bool)`
+
+GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProvider
+
+`func (o *SubscriptionDto) SetProvider(v BillingProvider)`
+
+SetProvider sets Provider field to given value.
+
+### HasProvider
+
+`func (o *SubscriptionDto) HasProvider() bool`
+
+HasProvider returns a boolean if a field has been set.
+
+### GetBillingPeriod
+
+`func (o *SubscriptionDto) GetBillingPeriod() SubBillingPeriod`
+
+GetBillingPeriod returns the BillingPeriod field if non-nil, zero value otherwise.
+
+### GetBillingPeriodOk
+
+`func (o *SubscriptionDto) GetBillingPeriodOk() (*SubBillingPeriod, bool)`
+
+GetBillingPeriodOk returns a tuple with the BillingPeriod field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBillingPeriod
+
+`func (o *SubscriptionDto) SetBillingPeriod(v SubBillingPeriod)`
+
+SetBillingPeriod sets BillingPeriod field to given value.
+
+### HasBillingPeriod
+
+`func (o *SubscriptionDto) HasBillingPeriod() bool`
+
+HasBillingPeriod returns a boolean if a field has been set.
+
+### GetBillingMode
+
+`func (o *SubscriptionDto) GetBillingMode() BillingMode`
+
+GetBillingMode returns the BillingMode field if non-nil, zero value otherwise.
+
+### GetBillingModeOk
+
+`func (o *SubscriptionDto) GetBillingModeOk() (*BillingMode, bool)`
+
+GetBillingModeOk returns a tuple with the BillingMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBillingMode
+
+`func (o *SubscriptionDto) SetBillingMode(v BillingMode)`
+
+SetBillingMode sets BillingMode field to given value.
+
+### HasBillingMode
+
+`func (o *SubscriptionDto) HasBillingMode() bool`
+
+HasBillingMode returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *SubscriptionDto) GetStatus() SubscriptionEntitlementStatus`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *SubscriptionDto) GetStatusOk() (*SubscriptionEntitlementStatus, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *SubscriptionDto) SetStatus(v SubscriptionEntitlementStatus)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *SubscriptionDto) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetIsLifetime
+
+`func (o *SubscriptionDto) GetIsLifetime() bool`
+
+GetIsLifetime returns the IsLifetime field if non-nil, zero value otherwise.
+
+### GetIsLifetimeOk
+
+`func (o *SubscriptionDto) GetIsLifetimeOk() (*bool, bool)`
+
+GetIsLifetimeOk returns a tuple with the IsLifetime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsLifetime
+
+`func (o *SubscriptionDto) SetIsLifetime(v bool)`
+
+SetIsLifetime sets IsLifetime field to given value.
+
+### HasIsLifetime
+
+`func (o *SubscriptionDto) HasIsLifetime() bool`
+
+HasIsLifetime returns a boolean if a field has been set.
+
+### GetExternalSubscriptionId
+
+`func (o *SubscriptionDto) GetExternalSubscriptionId() string`
+
+GetExternalSubscriptionId returns the ExternalSubscriptionId field if non-nil, zero value otherwise.
+
+### GetExternalSubscriptionIdOk
+
+`func (o *SubscriptionDto) GetExternalSubscriptionIdOk() (*string, bool)`
+
+GetExternalSubscriptionIdOk returns a tuple with the ExternalSubscriptionId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExternalSubscriptionId
+
+`func (o *SubscriptionDto) SetExternalSubscriptionId(v string)`
+
+SetExternalSubscriptionId sets ExternalSubscriptionId field to given value.
+
+### HasExternalSubscriptionId
+
+`func (o *SubscriptionDto) HasExternalSubscriptionId() bool`
+
+HasExternalSubscriptionId returns a boolean if a field has been set.
+
+### SetExternalSubscriptionIdNil
+
+`func (o *SubscriptionDto) SetExternalSubscriptionIdNil(b bool)`
+
+ SetExternalSubscriptionIdNil sets the value for ExternalSubscriptionId to be an explicit nil
+
+### UnsetExternalSubscriptionId
+`func (o *SubscriptionDto) UnsetExternalSubscriptionId()`
+
+UnsetExternalSubscriptionId ensures that no value is present for ExternalSubscriptionId, not even an explicit nil
+### GetLastVerifiedAt
+
+`func (o *SubscriptionDto) GetLastVerifiedAt() time.Time`
+
+GetLastVerifiedAt returns the LastVerifiedAt field if non-nil, zero value otherwise.
+
+### GetLastVerifiedAtOk
+
+`func (o *SubscriptionDto) GetLastVerifiedAtOk() (*time.Time, bool)`
+
+GetLastVerifiedAtOk returns a tuple with the LastVerifiedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastVerifiedAt
+
+`func (o *SubscriptionDto) SetLastVerifiedAt(v time.Time)`
+
+SetLastVerifiedAt sets LastVerifiedAt field to given value.
+
+### HasLastVerifiedAt
+
+`func (o *SubscriptionDto) HasLastVerifiedAt() bool`
+
+HasLastVerifiedAt returns a boolean if a field has been set.
+
+### SetLastVerifiedAtNil
+
+`func (o *SubscriptionDto) SetLastVerifiedAtNil(b bool)`
+
+ SetLastVerifiedAtNil sets the value for LastVerifiedAt to be an explicit nil
+
+### UnsetLastVerifiedAt
+`func (o *SubscriptionDto) UnsetLastVerifiedAt()`
+
+UnsetLastVerifiedAt ensures that no value is present for LastVerifiedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

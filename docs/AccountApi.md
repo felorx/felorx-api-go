@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password | 
+[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password |
 [**CheckSyncAuth**](AccountAPI.md#CheckSyncAuth) | **Post** /api/app/account/check-sync-auth | 检查同步认证
-[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account | 
-[**GetAccount**](AccountAPI.md#GetAccount) | **Get** /api/app/account | 
-[**Register**](AccountAPI.md#Register) | **Post** /api/account/register | 
-[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password | 
-[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code | 
-[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token | 
+[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account |
+[**GetAccount**](AccountAPI.md#GetAccount) | **Get** /api/app/account |
+[**Register**](AccountAPI.md#Register) | **Post** /api/account/register |
+[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password |
+[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code |
+[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token |
 
 
 
@@ -57,7 +57,7 @@ Other parameters are passed through a pointer to a apiChangeAccountPasswordReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  | 
+ **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  |
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -124,7 +124,7 @@ Other parameters are passed through a pointer to a apiCheckSyncAuthRequest struc
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -178,7 +178,7 @@ Other parameters are passed through a pointer to a apiDestroyAccountRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  | 
+ **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  |
 
 ### Return type
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -245,7 +245,7 @@ Other parameters are passed through a pointer to a apiGetAccountRequest struct v
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -301,7 +301,7 @@ Other parameters are passed through a pointer to a apiRegisterRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registerDto** | [**RegisterDto**](RegisterDto.md) |  | 
+ **registerDto** | [**RegisterDto**](RegisterDto.md) |  |
 
 ### Return type
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -363,7 +363,7 @@ Other parameters are passed through a pointer to a apiResetPasswordRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  | 
+ **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  |
 
 ### Return type
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -425,7 +425,7 @@ Other parameters are passed through a pointer to a apiSendPasswordResetCodeReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  | 
+ **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  |
 
 ### Return type
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -489,7 +489,7 @@ Other parameters are passed through a pointer to a apiVerifyPasswordResetTokenRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  | 
+ **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  |
 
 ### Return type
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

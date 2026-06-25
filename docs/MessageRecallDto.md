@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PuupeeId** | Pointer to **string** |  | [optional] 
+**FelorxId** | Pointer to **string** |  | [optional]
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewMessageRecallDtoWithDefaults instantiates a new MessageRecallDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPuupeeId
+### GetFelorxId
 
-`func (o *MessageRecallDto) GetPuupeeId() string`
+`func (o *MessageRecallDto) GetFelorxId() string`
 
-GetPuupeeId returns the PuupeeId field if non-nil, zero value otherwise.
+GetFelorxId returns the FelorxId field if non-nil, zero value otherwise.
 
-### GetPuupeeIdOk
+### GetFelorxIdOk
 
-`func (o *MessageRecallDto) GetPuupeeIdOk() (*string, bool)`
+`func (o *MessageRecallDto) GetFelorxIdOk() (*string, bool)`
 
-GetPuupeeIdOk returns a tuple with the PuupeeId field if it's non-nil, zero value otherwise
+GetFelorxIdOk returns a tuple with the FelorxId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPuupeeId
+### SetFelorxId
 
-`func (o *MessageRecallDto) SetPuupeeId(v string)`
+`func (o *MessageRecallDto) SetFelorxId(v string)`
 
-SetPuupeeId sets PuupeeId field to given value.
+SetFelorxId sets FelorxId field to given value.
 
-### HasPuupeeId
+### HasFelorxId
 
-`func (o *MessageRecallDto) HasPuupeeId() bool`
+`func (o *MessageRecallDto) HasFelorxId() bool`
 
-HasPuupeeId returns a boolean if a field has been set.
+HasFelorxId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

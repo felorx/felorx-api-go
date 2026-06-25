@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Error** | Pointer to [**RemoteServiceErrorInfo**](RemoteServiceErrorInfo.md) |  | [optional] 
+**Error** | Pointer to [**RemoteServiceErrorInfo**](RemoteServiceErrorInfo.md) |  | [optional]
 
 ## Methods
 

@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsAuthenticated** | Pointer to **bool** |  | [optional] 
-**Id** | Pointer to **NullableString** |  | [optional] 
-**TenantId** | Pointer to **NullableString** |  | [optional] 
-**ImpersonatorUserId** | Pointer to **NullableString** |  | [optional] 
-**ImpersonatorTenantId** | Pointer to **NullableString** |  | [optional] 
-**ImpersonatorUserName** | Pointer to **NullableString** |  | [optional] 
-**ImpersonatorTenantName** | Pointer to **NullableString** |  | [optional] 
-**UserName** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**SurName** | Pointer to **NullableString** |  | [optional] 
-**Email** | Pointer to **NullableString** |  | [optional] 
-**EmailVerified** | Pointer to **bool** |  | [optional] 
-**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
-**PhoneNumberVerified** | Pointer to **bool** |  | [optional] 
-**Roles** | Pointer to **[]string** |  | [optional] 
+**IsAuthenticated** | Pointer to **bool** |  | [optional]
+**Id** | Pointer to **NullableString** |  | [optional]
+**TenantId** | Pointer to **NullableString** |  | [optional]
+**ImpersonatorUserId** | Pointer to **NullableString** |  | [optional]
+**ImpersonatorTenantId** | Pointer to **NullableString** |  | [optional]
+**ImpersonatorUserName** | Pointer to **NullableString** |  | [optional]
+**ImpersonatorTenantName** | Pointer to **NullableString** |  | [optional]
+**UserName** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**SurName** | Pointer to **NullableString** |  | [optional]
+**Email** | Pointer to **NullableString** |  | [optional]
+**EmailVerified** | Pointer to **bool** |  | [optional]
+**PhoneNumber** | Pointer to **NullableString** |  | [optional]
+**PhoneNumberVerified** | Pointer to **bool** |  | [optional]
+**Roles** | Pointer to **[]string** |  | [optional]
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iana** | Pointer to [**IanaTimeZone**](IanaTimeZone.md) |  | [optional] 
-**Windows** | Pointer to [**WindowsTimeZone**](WindowsTimeZone.md) |  | [optional] 
+**Iana** | Pointer to [**IanaTimeZone**](IanaTimeZone.md) |  | [optional]
+**Windows** | Pointer to [**WindowsTimeZone**](WindowsTimeZone.md) |  | [optional]
 
 ## Methods
 

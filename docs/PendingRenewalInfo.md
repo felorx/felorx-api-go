@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AutoRenewProductId** | Pointer to **NullableString** |  | [optional] 
-**AutoRenewStatus** | Pointer to **NullableString** |  | [optional] 
-**IsInBillingRetryPeriod** | Pointer to **NullableString** |  | [optional] 
-**OriginalTransactionId** | Pointer to **NullableString** |  | [optional] 
-**ProductId** | Pointer to **NullableString** |  | [optional] 
-**ExpirationIntent** | Pointer to **NullableString** |  | [optional] 
-**PriceConsentStatus** | Pointer to **NullableString** |  | [optional] 
-**GracePeriodExpiresDate** | Pointer to **NullableString** |  | [optional] 
-**GracePeriodExpiresDateMs** | Pointer to **NullableString** |  | [optional] 
-**GracePeriodExpiresDatePst** | Pointer to **NullableString** |  | [optional] 
+**AutoRenewProductId** | Pointer to **NullableString** |  | [optional]
+**AutoRenewStatus** | Pointer to **NullableString** |  | [optional]
+**IsInBillingRetryPeriod** | Pointer to **NullableString** |  | [optional]
+**OriginalTransactionId** | Pointer to **NullableString** |  | [optional]
+**ProductId** | Pointer to **NullableString** |  | [optional]
+**ExpirationIntent** | Pointer to **NullableString** |  | [optional]
+**PriceConsentStatus** | Pointer to **NullableString** |  | [optional]
+**GracePeriodExpiresDate** | Pointer to **NullableString** |  | [optional]
+**GracePeriodExpiresDateMs** | Pointer to **NullableString** |  | [optional]
+**GracePeriodExpiresDatePst** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

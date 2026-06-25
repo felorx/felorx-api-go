@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **NullableString** |  | [optional] 
-**TypeSimple** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to [**LocalizableStringDto**](LocalizableStringDto.md) |  | [optional] 
-**Api** | Pointer to [**ExtensionPropertyApiDto**](ExtensionPropertyApiDto.md) |  | [optional] 
-**Ui** | Pointer to [**ExtensionPropertyUiDto**](ExtensionPropertyUiDto.md) |  | [optional] 
-**Attributes** | Pointer to [**[]ExtensionPropertyAttributeDto**](ExtensionPropertyAttributeDto.md) |  | [optional] 
-**Configuration** | Pointer to **map[string]interface{}** |  | [optional] 
-**DefaultValue** | Pointer to **interface{}** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional]
+**TypeSimple** | Pointer to **NullableString** |  | [optional]
+**DisplayName** | Pointer to [**LocalizableStringDto**](LocalizableStringDto.md) |  | [optional]
+**Api** | Pointer to [**ExtensionPropertyApiDto**](ExtensionPropertyApiDto.md) |  | [optional]
+**Ui** | Pointer to [**ExtensionPropertyUiDto**](ExtensionPropertyUiDto.md) |  | [optional]
+**Attributes** | Pointer to [**[]ExtensionPropertyAttributeDto**](ExtensionPropertyAttributeDto.md) |  | [optional]
+**Configuration** | Pointer to **map[string]interface{}** |  | [optional]
+**DefaultValue** | Pointer to **interface{}** |  | [optional]
 
 ## Methods
 

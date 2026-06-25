@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UniqueName** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**HttpMethod** | Pointer to **NullableString** |  | [optional] 
-**Url** | Pointer to **NullableString** |  | [optional] 
-**SupportedVersions** | Pointer to **[]string** |  | [optional] 
-**ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional] 
-**Parameters** | Pointer to [**[]ParameterApiDescriptionModel**](ParameterApiDescriptionModel.md) |  | [optional] 
-**ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional] 
-**AllowAnonymous** | Pointer to **NullableBool** |  | [optional] 
-**ImplementFrom** | Pointer to **NullableString** |  | [optional] 
+**UniqueName** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**HttpMethod** | Pointer to **NullableString** |  | [optional]
+**Url** | Pointer to **NullableString** |  | [optional]
+**SupportedVersions** | Pointer to **[]string** |  | [optional]
+**ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional]
+**Parameters** | Pointer to [**[]ParameterApiDescriptionModel**](ParameterApiDescriptionModel.md) |  | [optional]
+**ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional]
+**AllowAnonymous** | Pointer to **NullableBool** |  | [optional]
+**ImplementFrom** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

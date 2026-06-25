@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAvatar**](AvatarAPI.md#CreateAvatar) | **Post** /api/app/avatar | 
-[**GetCredentials**](AvatarAPI.md#GetCredentials) | **Get** /api/app/avatar/credentials | 
+[**CreateAvatar**](AvatarAPI.md#CreateAvatar) | **Post** /api/app/avatar |
+[**GetCredentials**](AvatarAPI.md#GetCredentials) | **Get** /api/app/avatar/credentials |
 
 
 
@@ -53,7 +53,7 @@ Other parameters are passed through a pointer to a apiCreateAvatarRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createAvatarDto** | [**CreateAvatarDto**](CreateAvatarDto.md) |  | 
+ **createAvatarDto** | [**CreateAvatarDto**](CreateAvatarDto.md) |  |
 
 ### Return type
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -117,7 +117,7 @@ Other parameters are passed through a pointer to a apiGetCredentialsRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string** |  | 
+ **key** | **string** |  |
 
 ### Return type
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

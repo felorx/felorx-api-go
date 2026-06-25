@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Features** | Pointer to [**[]UpdateFeatureDto**](UpdateFeatureDto.md) |  | [optional] 
+**Features** | Pointer to [**[]UpdateFeatureDto**](UpdateFeatureDto.md) |  | [optional]
 
 ## Methods
 

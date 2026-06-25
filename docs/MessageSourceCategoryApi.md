@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMessageSourceCategoryList**](MessageSourceCategoryAPI.md#GetMessageSourceCategoryList) | **Get** /api/app/message-source-category | 
+[**GetMessageSourceCategoryList**](MessageSourceCategoryAPI.md#GetMessageSourceCategoryList) | **Get** /api/app/message-source-category |
 
 
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiGetMessageSourceCategoryLi
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

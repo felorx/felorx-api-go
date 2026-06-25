@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NameOnMethod** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**JsonName** | Pointer to **NullableString** |  | [optional] 
-**Type** | Pointer to **NullableString** |  | [optional] 
-**TypeSimple** | Pointer to **NullableString** |  | [optional] 
-**IsOptional** | Pointer to **bool** |  | [optional] 
-**DefaultValue** | Pointer to **interface{}** |  | [optional] 
-**ConstraintTypes** | Pointer to **[]string** |  | [optional] 
-**BindingSourceId** | Pointer to **NullableString** |  | [optional] 
-**DescriptorName** | Pointer to **NullableString** |  | [optional] 
+**NameOnMethod** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**JsonName** | Pointer to **NullableString** |  | [optional]
+**Type** | Pointer to **NullableString** |  | [optional]
+**TypeSimple** | Pointer to **NullableString** |  | [optional]
+**IsOptional** | Pointer to **bool** |  | [optional]
+**DefaultValue** | Pointer to **interface{}** |  | [optional]
+**ConstraintTypes** | Pointer to **[]string** |  | [optional]
+**BindingSourceId** | Pointer to **NullableString** |  | [optional]
+**DescriptorName** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

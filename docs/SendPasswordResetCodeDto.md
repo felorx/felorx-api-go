@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** |  | 
-**AppName** | **string** |  | 
-**ReturnUrl** | Pointer to **NullableString** |  | [optional] 
-**ReturnUrlHash** | Pointer to **NullableString** |  | [optional] 
+**Email** | **string** |  |
+**AppName** | **string** |  |
+**ReturnUrl** | Pointer to **NullableString** |  | [optional]
+**ReturnUrlHash** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

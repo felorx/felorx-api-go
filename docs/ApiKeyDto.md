@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Key** | Pointer to **NullableString** |  | [optional] 
-**Active** | Pointer to **bool** |  | [optional] 
-**ExpireAt** | Pointer to **NullableTime** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**Key** | Pointer to **NullableString** |  | [optional]
+**Active** | Pointer to **bool** |  | [optional]
+**ExpireAt** | Pointer to **NullableTime** |  | [optional]
 
 ## Methods
 

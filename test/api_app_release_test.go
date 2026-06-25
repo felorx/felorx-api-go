@@ -85,6 +85,18 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test AppReleaseAPIService GetListByDeveloper", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		resp, httpRes, err := apiClient.AppReleaseAPI.GetListByDeveloper(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test AppReleaseAPIService UpdateAppRelease", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test

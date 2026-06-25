@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional] 
-**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional] 
-**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional] 
-**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional] 
-**SortIndex** | Pointer to **int32** | 排序 | [optional] 
+**Key** | Pointer to **NullableString** | 键值, 例如: Seat, MaxListCount（见 AppPricingItemKeys） | [optional]
+**AppId** | Pointer to **NullableString** | 所属应用 | [optional]
+**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional]
+**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional]
+**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional]
+**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional]
+**SortIndex** | Pointer to **int32** | 排序 | [optional]
 
 ## Methods
 
@@ -29,6 +31,76 @@ NewCreateOrUpdateAppPricingItemDtoWithDefaults instantiates a new CreateOrUpdate
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetKey
+
+`func (o *CreateOrUpdateAppPricingItemDto) GetKey() string`
+
+GetKey returns the Key field if non-nil, zero value otherwise.
+
+### GetKeyOk
+
+`func (o *CreateOrUpdateAppPricingItemDto) GetKeyOk() (*string, bool)`
+
+GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKey
+
+`func (o *CreateOrUpdateAppPricingItemDto) SetKey(v string)`
+
+SetKey sets Key field to given value.
+
+### HasKey
+
+`func (o *CreateOrUpdateAppPricingItemDto) HasKey() bool`
+
+HasKey returns a boolean if a field has been set.
+
+### SetKeyNil
+
+`func (o *CreateOrUpdateAppPricingItemDto) SetKeyNil(b bool)`
+
+ SetKeyNil sets the value for Key to be an explicit nil
+
+### UnsetKey
+`func (o *CreateOrUpdateAppPricingItemDto) UnsetKey()`
+
+UnsetKey ensures that no value is present for Key, not even an explicit nil
+### GetAppId
+
+`func (o *CreateOrUpdateAppPricingItemDto) GetAppId() string`
+
+GetAppId returns the AppId field if non-nil, zero value otherwise.
+
+### GetAppIdOk
+
+`func (o *CreateOrUpdateAppPricingItemDto) GetAppIdOk() (*string, bool)`
+
+GetAppIdOk returns a tuple with the AppId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppId
+
+`func (o *CreateOrUpdateAppPricingItemDto) SetAppId(v string)`
+
+SetAppId sets AppId field to given value.
+
+### HasAppId
+
+`func (o *CreateOrUpdateAppPricingItemDto) HasAppId() bool`
+
+HasAppId returns a boolean if a field has been set.
+
+### SetAppIdNil
+
+`func (o *CreateOrUpdateAppPricingItemDto) SetAppIdNil(b bool)`
+
+ SetAppIdNil sets the value for AppId to be an explicit nil
+
+### UnsetAppId
+`func (o *CreateOrUpdateAppPricingItemDto) UnsetAppId()`
+
+UnsetAppId ensures that no value is present for AppId, not even an explicit nil
 ### GetName
 
 `func (o *CreateOrUpdateAppPricingItemDto) GetName() string`

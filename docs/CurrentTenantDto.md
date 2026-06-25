@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**IsAvailable** | Pointer to **bool** |  | [optional] 
+**Id** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**IsAvailable** | Pointer to **bool** |  | [optional]
 
 ## Methods
 

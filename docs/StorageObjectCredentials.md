@@ -4,17 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StorageClass** | Pointer to **NullableString** |  | [optional] 
-**EndPoint** | Pointer to **NullableString** |  | [optional] 
-**Protocal** | Pointer to **NullableString** |  | [optional] 
-**BucketName** | Pointer to **NullableString** |  | [optional] 
-**RegionId** | Pointer to **NullableString** |  | [optional] 
-**SecurityToken** | Pointer to **NullableString** |  | [optional] 
-**AccessKeyId** | Pointer to **NullableString** |  | [optional] 
-**AccessKeySecret** | Pointer to **NullableString** |  | [optional] 
-**Expiration** | Pointer to **NullableString** |  | [optional] 
-**ExpiredTime** | Pointer to **int64** |  | [optional] 
-**AppId** | Pointer to **NullableString** |  | [optional] 
+**StorageClass** | Pointer to **NullableString** |  | [optional]
+**EndPoint** | Pointer to **NullableString** |  | [optional]
+**Protocal** | Pointer to **NullableString** |  | [optional]
+**BucketName** | Pointer to **NullableString** |  | [optional]
+**RegionId** | Pointer to **NullableString** |  | [optional]
+**SecurityToken** | Pointer to **NullableString** |  | [optional]
+**AccessKeyId** | Pointer to **NullableString** |  | [optional]
+**AccessKeySecret** | Pointer to **NullableString** |  | [optional]
+**Expiration** | Pointer to **NullableString** |  | [optional]
+**ExpiredTime** | Pointer to **int64** |  | [optional]
+**AppId** | Pointer to **NullableString** |  | [optional]
+**CdnDomain** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -410,6 +411,41 @@ HasAppId returns a boolean if a field has been set.
 `func (o *StorageObjectCredentials) UnsetAppId()`
 
 UnsetAppId ensures that no value is present for AppId, not even an explicit nil
+### GetCdnDomain
+
+`func (o *StorageObjectCredentials) GetCdnDomain() string`
+
+GetCdnDomain returns the CdnDomain field if non-nil, zero value otherwise.
+
+### GetCdnDomainOk
+
+`func (o *StorageObjectCredentials) GetCdnDomainOk() (*string, bool)`
+
+GetCdnDomainOk returns a tuple with the CdnDomain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCdnDomain
+
+`func (o *StorageObjectCredentials) SetCdnDomain(v string)`
+
+SetCdnDomain sets CdnDomain field to given value.
+
+### HasCdnDomain
+
+`func (o *StorageObjectCredentials) HasCdnDomain() bool`
+
+HasCdnDomain returns a boolean if a field has been set.
+
+### SetCdnDomainNil
+
+`func (o *StorageObjectCredentials) SetCdnDomainNil(b bool)`
+
+ SetCdnDomainNil sets the value for CdnDomain to be an explicit nil
+
+### UnsetCdnDomain
+`func (o *StorageObjectCredentials) UnsetCdnDomain()`
+
+UnsetCdnDomain ensures that no value is present for CdnDomain, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

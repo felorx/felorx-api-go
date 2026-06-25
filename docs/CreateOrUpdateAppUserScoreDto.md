@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **NullableString** |  | [optional] 
-**Score** | Pointer to **int32** |  | [optional] 
-**Comment** | Pointer to **NullableString** |  | [optional] 
+**AppId** | Pointer to **NullableString** |  | [optional]
+**Score** | Pointer to **int32** |  | [optional]
+**Comment** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

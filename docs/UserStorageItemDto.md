@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Title** | Pointer to **NullableString** |  | [optional] 
-**Count** | Pointer to **int32** |  | [optional] 
-**Size** | Pointer to **int64** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**Title** | Pointer to **NullableString** |  | [optional]
+**Count** | Pointer to **int32** |  | [optional]
+**Size** | Pointer to **int64** |  | [optional]
 
 ## Methods
 

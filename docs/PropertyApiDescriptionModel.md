@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**JsonName** | Pointer to **NullableString** |  | [optional] 
-**Type** | Pointer to **NullableString** |  | [optional] 
-**TypeSimple** | Pointer to **NullableString** |  | [optional] 
-**IsRequired** | Pointer to **bool** |  | [optional] 
-**MinLength** | Pointer to **NullableInt32** |  | [optional] 
-**MaxLength** | Pointer to **NullableInt32** |  | [optional] 
-**Minimum** | Pointer to **NullableString** |  | [optional] 
-**Maximum** | Pointer to **NullableString** |  | [optional] 
-**Regex** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**JsonName** | Pointer to **NullableString** |  | [optional]
+**Type** | Pointer to **NullableString** |  | [optional]
+**TypeSimple** | Pointer to **NullableString** |  | [optional]
+**IsRequired** | Pointer to **bool** |  | [optional]
+**MinLength** | Pointer to **NullableInt32** |  | [optional]
+**MaxLength** | Pointer to **NullableInt32** |  | [optional]
+**Minimum** | Pointer to **NullableString** |  | [optional]
+**Maximum** | Pointer to **NullableString** |  | [optional]
+**Regex** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

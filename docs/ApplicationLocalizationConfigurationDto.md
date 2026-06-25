@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Values** | Pointer to **map[string]map[string]string** |  | [optional] 
-**Resources** | Pointer to [**map[string]ApplicationLocalizationResourceDto**](ApplicationLocalizationResourceDto.md) |  | [optional] 
-**Languages** | Pointer to [**[]LanguageInfo**](LanguageInfo.md) |  | [optional] 
-**CurrentCulture** | Pointer to [**CurrentCultureDto**](CurrentCultureDto.md) |  | [optional] 
-**DefaultResourceName** | Pointer to **NullableString** |  | [optional] 
-**LanguagesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional] 
-**LanguageFilesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional] 
+**Values** | Pointer to **map[string]map[string]string** |  | [optional]
+**Resources** | Pointer to [**map[string]ApplicationLocalizationResourceDto**](ApplicationLocalizationResourceDto.md) |  | [optional]
+**Languages** | Pointer to [**[]LanguageInfo**](LanguageInfo.md) |  | [optional]
+**CurrentCulture** | Pointer to [**CurrentCultureDto**](CurrentCultureDto.md) |  | [optional]
+**DefaultResourceName** | Pointer to **NullableString** |  | [optional]
+**LanguagesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional]
+**LanguageFilesMap** | Pointer to [**map[string][]NameValue**](array.md) |  | [optional]
 
 ## Methods
 

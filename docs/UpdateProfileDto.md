@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
-**UserName** | Pointer to **NullableString** |  | [optional] 
-**Email** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Surname** | Pointer to **NullableString** |  | [optional] 
-**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
-**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional] 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
+**UserName** | Pointer to **NullableString** |  | [optional]
+**Email** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**Surname** | Pointer to **NullableString** |  | [optional]
+**PhoneNumber** | Pointer to **NullableString** |  | [optional]
+**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

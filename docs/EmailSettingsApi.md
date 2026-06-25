@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetEmailSettings**](EmailSettingsAPI.md#GetEmailSettings) | **Get** /api/setting-management/emailing | 
-[**SendTestEmail**](EmailSettingsAPI.md#SendTestEmail) | **Post** /api/setting-management/emailing/send-test-email | 
-[**UpdateEmailSettings**](EmailSettingsAPI.md#UpdateEmailSettings) | **Post** /api/setting-management/emailing | 
+[**GetEmailSettings**](EmailSettingsAPI.md#GetEmailSettings) | **Get** /api/setting-management/emailing |
+[**SendTestEmail**](EmailSettingsAPI.md#SendTestEmail) | **Post** /api/setting-management/emailing/send-test-email |
+[**UpdateEmailSettings**](EmailSettingsAPI.md#UpdateEmailSettings) | **Post** /api/setting-management/emailing |
 
 
 
@@ -57,7 +57,7 @@ Other parameters are passed through a pointer to a apiGetEmailSettingsRequest st
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,7 +111,7 @@ Other parameters are passed through a pointer to a apiSendTestEmailRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendTestEmailInput** | [**SendTestEmailInput**](SendTestEmailInput.md) |  | 
+ **sendTestEmailInput** | [**SendTestEmailInput**](SendTestEmailInput.md) |  |
 
 ### Return type
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -173,7 +173,7 @@ Other parameters are passed through a pointer to a apiUpdateEmailSettingsRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateEmailSettingsDto** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md) |  | 
+ **updateEmailSettingsDto** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md) |  |
 
 ### Return type
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

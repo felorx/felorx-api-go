@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
-**UserName** | **string** |  | 
-**EmailAddress** | **string** |  | 
-**Password** | **string** |  | 
-**AppName** | **string** |  | 
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
+**UserName** | **string** |  |
+**EmailAddress** | **string** |  |
+**Password** | **string** |  |
+**AppName** | **string** |  |
 
 ## Methods
 

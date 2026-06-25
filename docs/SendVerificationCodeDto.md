@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CodeSender** | Pointer to **NullableString** | 验证码发送器 暂时支持: SMS: 手机短信验证码 | [optional] 
-**Account** | Pointer to **NullableString** | 验证码接受者, 用户账户 | [optional] 
-**Purpose** | Pointer to **NullableString** | 验证码用途 | [optional] 
+**CodeSender** | Pointer to **NullableString** | 验证码发送器 暂时支持: SMS: 手机短信验证码 | [optional]
+**Account** | Pointer to **NullableString** | 验证码接受者, 用户账户 | [optional]
+**Purpose** | Pointer to **NullableString** | 验证码用途 | [optional]
 
 ## Methods
 

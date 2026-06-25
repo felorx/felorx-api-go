@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Value** | Pointer to **interface{}** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**Value** | Pointer to **interface{}** |  | [optional]
 
 ## Methods
 

@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Details** | Pointer to **NullableString** |  | [optional] 
-**ScreenshotKeys** | Pointer to **NullableString** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**Sort** | Pointer to **int32** |  | [optional]
+**FeatureLocales** | Pointer to [**[]CreateOrUpdateAppFeatureLocaleDto**](CreateOrUpdateAppFeatureLocaleDto.md) |  | [optional]
 
 ## Methods
 
@@ -28,6 +27,31 @@ will change when the set of required properties is changed
 NewCreateOrUpdateAppFeatureDtoWithDefaults instantiates a new CreateOrUpdateAppFeatureDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAppId
+
+`func (o *CreateOrUpdateAppFeatureDto) GetAppId() string`
+
+GetAppId returns the AppId field if non-nil, zero value otherwise.
+
+### GetAppIdOk
+
+`func (o *CreateOrUpdateAppFeatureDto) GetAppIdOk() (*string, bool)`
+
+GetAppIdOk returns a tuple with the AppId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppId
+
+`func (o *CreateOrUpdateAppFeatureDto) SetAppId(v string)`
+
+SetAppId sets AppId field to given value.
+
+### HasAppId
+
+`func (o *CreateOrUpdateAppFeatureDto) HasAppId() bool`
+
+HasAppId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -64,146 +88,66 @@ HasName returns a boolean if a field has been set.
 `func (o *CreateOrUpdateAppFeatureDto) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
-### GetDisplayName
+### GetSort
 
-`func (o *CreateOrUpdateAppFeatureDto) GetDisplayName() string`
+`func (o *CreateOrUpdateAppFeatureDto) GetSort() int32`
 
-GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
+GetSort returns the Sort field if non-nil, zero value otherwise.
 
-### GetDisplayNameOk
+### GetSortOk
 
-`func (o *CreateOrUpdateAppFeatureDto) GetDisplayNameOk() (*string, bool)`
+`func (o *CreateOrUpdateAppFeatureDto) GetSortOk() (*int32, bool)`
 
-GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
+GetSortOk returns a tuple with the Sort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisplayName
+### SetSort
 
-`func (o *CreateOrUpdateAppFeatureDto) SetDisplayName(v string)`
+`func (o *CreateOrUpdateAppFeatureDto) SetSort(v int32)`
 
-SetDisplayName sets DisplayName field to given value.
+SetSort sets Sort field to given value.
 
-### HasDisplayName
+### HasSort
 
-`func (o *CreateOrUpdateAppFeatureDto) HasDisplayName() bool`
+`func (o *CreateOrUpdateAppFeatureDto) HasSort() bool`
 
-HasDisplayName returns a boolean if a field has been set.
+HasSort returns a boolean if a field has been set.
 
-### SetDisplayNameNil
+### GetFeatureLocales
 
-`func (o *CreateOrUpdateAppFeatureDto) SetDisplayNameNil(b bool)`
+`func (o *CreateOrUpdateAppFeatureDto) GetFeatureLocales() []CreateOrUpdateAppFeatureLocaleDto`
 
- SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+GetFeatureLocales returns the FeatureLocales field if non-nil, zero value otherwise.
 
-### UnsetDisplayName
-`func (o *CreateOrUpdateAppFeatureDto) UnsetDisplayName()`
+### GetFeatureLocalesOk
 
-UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
-### GetDescription
+`func (o *CreateOrUpdateAppFeatureDto) GetFeatureLocalesOk() (*[]CreateOrUpdateAppFeatureLocaleDto, bool)`
 
-`func (o *CreateOrUpdateAppFeatureDto) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *CreateOrUpdateAppFeatureDto) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetFeatureLocalesOk returns a tuple with the FeatureLocales field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetFeatureLocales
 
-`func (o *CreateOrUpdateAppFeatureDto) SetDescription(v string)`
+`func (o *CreateOrUpdateAppFeatureDto) SetFeatureLocales(v []CreateOrUpdateAppFeatureLocaleDto)`
 
-SetDescription sets Description field to given value.
+SetFeatureLocales sets FeatureLocales field to given value.
 
-### HasDescription
+### HasFeatureLocales
 
-`func (o *CreateOrUpdateAppFeatureDto) HasDescription() bool`
+`func (o *CreateOrUpdateAppFeatureDto) HasFeatureLocales() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasFeatureLocales returns a boolean if a field has been set.
 
-### SetDescriptionNil
+### SetFeatureLocalesNil
 
-`func (o *CreateOrUpdateAppFeatureDto) SetDescriptionNil(b bool)`
+`func (o *CreateOrUpdateAppFeatureDto) SetFeatureLocalesNil(b bool)`
 
- SetDescriptionNil sets the value for Description to be an explicit nil
+ SetFeatureLocalesNil sets the value for FeatureLocales to be an explicit nil
 
-### UnsetDescription
-`func (o *CreateOrUpdateAppFeatureDto) UnsetDescription()`
+### UnsetFeatureLocales
+`func (o *CreateOrUpdateAppFeatureDto) UnsetFeatureLocales()`
 
-UnsetDescription ensures that no value is present for Description, not even an explicit nil
-### GetDetails
-
-`func (o *CreateOrUpdateAppFeatureDto) GetDetails() string`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *CreateOrUpdateAppFeatureDto) GetDetailsOk() (*string, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *CreateOrUpdateAppFeatureDto) SetDetails(v string)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *CreateOrUpdateAppFeatureDto) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### SetDetailsNil
-
-`func (o *CreateOrUpdateAppFeatureDto) SetDetailsNil(b bool)`
-
- SetDetailsNil sets the value for Details to be an explicit nil
-
-### UnsetDetails
-`func (o *CreateOrUpdateAppFeatureDto) UnsetDetails()`
-
-UnsetDetails ensures that no value is present for Details, not even an explicit nil
-### GetScreenshotKeys
-
-`func (o *CreateOrUpdateAppFeatureDto) GetScreenshotKeys() string`
-
-GetScreenshotKeys returns the ScreenshotKeys field if non-nil, zero value otherwise.
-
-### GetScreenshotKeysOk
-
-`func (o *CreateOrUpdateAppFeatureDto) GetScreenshotKeysOk() (*string, bool)`
-
-GetScreenshotKeysOk returns a tuple with the ScreenshotKeys field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScreenshotKeys
-
-`func (o *CreateOrUpdateAppFeatureDto) SetScreenshotKeys(v string)`
-
-SetScreenshotKeys sets ScreenshotKeys field to given value.
-
-### HasScreenshotKeys
-
-`func (o *CreateOrUpdateAppFeatureDto) HasScreenshotKeys() bool`
-
-HasScreenshotKeys returns a boolean if a field has been set.
-
-### SetScreenshotKeysNil
-
-`func (o *CreateOrUpdateAppFeatureDto) SetScreenshotKeysNil(b bool)`
-
- SetScreenshotKeysNil sets the value for ScreenshotKeys to be an explicit nil
-
-### UnsetScreenshotKeys
-`func (o *CreateOrUpdateAppFeatureDto) UnsetScreenshotKeys()`
-
-UnsetScreenshotKeys ensures that no value is present for ScreenshotKeys, not even an explicit nil
+UnsetFeatureLocales ensures that no value is present for FeatureLocales, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

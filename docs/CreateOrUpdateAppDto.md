@@ -4,27 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional] 
-**AppType** | Pointer to [**AppType**](AppType.md) |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Icon** | Pointer to **NullableString** |  | [optional] 
-**HomePage** | Pointer to **NullableString** | 产品首页 | [optional] 
-**SortIndex** | Pointer to **int32** | 显示排序 | [optional] 
-**GitRepository** | Pointer to **NullableString** |  | [optional] 
-**GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional] 
-**IsEnabled** | Pointer to **bool** |  | [optional] 
-**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional] 
-**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional] 
-**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional] 
-**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional] 
-**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional] 
-**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional] 
-**DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional] 
-**DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional] 
-**IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional] 
-**OpenClient** | Pointer to [**CreateOpenIddictApplicationDto**](CreateOpenIddictApplicationDto.md) |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**Framework** | Pointer to [**AppFramework**](AppFramework.md) |  | [optional]
+**AppType** | Pointer to [**AppType**](AppType.md) |  | [optional]
+**HomePage** | Pointer to **NullableString** | 产品首页 | [optional]
+**SortIndex** | Pointer to **int32** | 显示排序 | [optional]
+**GitRepository** | Pointer to **NullableString** |  | [optional]
+**GitRepositoryType** | Pointer to [**GitRepositoryType**](GitRepositoryType.md) |  | [optional]
+**IsEnabled** | Pointer to **bool** |  | [optional]
+**WebhookUrl** | Pointer to **NullableString** | Webhook Url 各种事件回调地址 | [optional]
+**BusinessDomain** | Pointer to **NullableString** | 业务域名 | [optional]
+**BusinessUrl** | Pointer to **NullableString** | 业务地址 | [optional]
+**SubscriptionPlatforms** | Pointer to **NullableString** | 可以订阅的平台 Platform 枚举, 并用\&quot;,\&quot;分割 | [optional]
+**FreePlatforms** | Pointer to **NullableString** | 暂时免费的平台, 付费功能免费用的平台, 用\&quot;,\&quot;分割 | [optional]
+**SpecJsonSchema** | Pointer to **NullableString** | 声明格式 | [optional]
+**DefaultStorageSize** | Pointer to **int64** | 默认存储空间大小 | [optional]
+**DefaultSingleFileMaxSize** | Pointer to **int64** | 默认单文件最大大小 | [optional]
+**IsPublished** | Pointer to **bool** | 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用 | [optional]
+**OpenClient** | Pointer to [**CreateOpenIddictApplicationDto**](CreateOpenIddictApplicationDto.md) |  | [optional]
 
 ## Methods
 
@@ -80,41 +77,6 @@ HasName returns a boolean if a field has been set.
 `func (o *CreateOrUpdateAppDto) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
-### GetDisplayName
-
-`func (o *CreateOrUpdateAppDto) GetDisplayName() string`
-
-GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
-
-### GetDisplayNameOk
-
-`func (o *CreateOrUpdateAppDto) GetDisplayNameOk() (*string, bool)`
-
-GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDisplayName
-
-`func (o *CreateOrUpdateAppDto) SetDisplayName(v string)`
-
-SetDisplayName sets DisplayName field to given value.
-
-### HasDisplayName
-
-`func (o *CreateOrUpdateAppDto) HasDisplayName() bool`
-
-HasDisplayName returns a boolean if a field has been set.
-
-### SetDisplayNameNil
-
-`func (o *CreateOrUpdateAppDto) SetDisplayNameNil(b bool)`
-
- SetDisplayNameNil sets the value for DisplayName to be an explicit nil
-
-### UnsetDisplayName
-`func (o *CreateOrUpdateAppDto) UnsetDisplayName()`
-
-UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetFramework
 
 `func (o *CreateOrUpdateAppDto) GetFramework() AppFramework`
@@ -165,76 +127,6 @@ SetAppType sets AppType field to given value.
 
 HasAppType returns a boolean if a field has been set.
 
-### GetDescription
-
-`func (o *CreateOrUpdateAppDto) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *CreateOrUpdateAppDto) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *CreateOrUpdateAppDto) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *CreateOrUpdateAppDto) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### SetDescriptionNil
-
-`func (o *CreateOrUpdateAppDto) SetDescriptionNil(b bool)`
-
- SetDescriptionNil sets the value for Description to be an explicit nil
-
-### UnsetDescription
-`func (o *CreateOrUpdateAppDto) UnsetDescription()`
-
-UnsetDescription ensures that no value is present for Description, not even an explicit nil
-### GetIcon
-
-`func (o *CreateOrUpdateAppDto) GetIcon() string`
-
-GetIcon returns the Icon field if non-nil, zero value otherwise.
-
-### GetIconOk
-
-`func (o *CreateOrUpdateAppDto) GetIconOk() (*string, bool)`
-
-GetIconOk returns a tuple with the Icon field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIcon
-
-`func (o *CreateOrUpdateAppDto) SetIcon(v string)`
-
-SetIcon sets Icon field to given value.
-
-### HasIcon
-
-`func (o *CreateOrUpdateAppDto) HasIcon() bool`
-
-HasIcon returns a boolean if a field has been set.
-
-### SetIconNil
-
-`func (o *CreateOrUpdateAppDto) SetIconNil(b bool)`
-
- SetIconNil sets the value for Icon to be an explicit nil
-
-### UnsetIcon
-`func (o *CreateOrUpdateAppDto) UnsetIcon()`
-
-UnsetIcon ensures that no value is present for Icon, not even an explicit nil
 ### GetHomePage
 
 `func (o *CreateOrUpdateAppDto) GetHomePage() string`

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsAvailable** | Pointer to **bool** |  | [optional] 
+**IsAvailable** | Pointer to **bool** |  | [optional]
 
 ## Methods
 

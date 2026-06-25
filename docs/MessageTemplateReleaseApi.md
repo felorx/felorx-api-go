@@ -4,9 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageTemplateRelease**](MessageTemplateReleaseAPI.md#CreateMessageTemplateRelease) | **Post** /api/app/message-template-release | 
-[**GetMessageTemplateReleaseById**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseById) | **Get** /api/app/message-template-release/{id} | 
-[**GetMessageTemplateReleaseList**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseList) | **Get** /api/app/message-template-release | 
+[**CreateMessageTemplateRelease**](MessageTemplateReleaseAPI.md#CreateMessageTemplateRelease) | **Post** /api/app/message-template-release |
+[**GetByTemplateNameAndVersion**](MessageTemplateReleaseAPI.md#GetByTemplateNameAndVersion) | **Get** /by-template |
+[**GetMessageTemplateReleaseById**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseById) | **Get** /api/app/message-template-release/{id} |
+[**GetMessageTemplateReleaseList**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseList) | **Get** /api/app/message-template-release |
 
 
 
@@ -54,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateMessageTemplateRelea
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md) |  | 
+ **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md) |  |
 
 ### Return type
 
@@ -62,11 +63,77 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetByTemplateNameAndVersion
+
+> MessageTemplateReleaseDto GetByTemplateNameAndVersion(ctx).TemplateName(templateName).Version(version).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	templateName := "templateName_example" // string |  (optional)
+	version := int32(56) // int32 |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.MessageTemplateReleaseAPI.GetByTemplateNameAndVersion(context.Background()).TemplateName(templateName).Version(version).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `MessageTemplateReleaseAPI.GetByTemplateNameAndVersion``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetByTemplateNameAndVersion`: MessageTemplateReleaseDto
+	fmt.Fprintf(os.Stdout, "Response from `MessageTemplateReleaseAPI.GetByTemplateNameAndVersion`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetByTemplateNameAndVersionRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **templateName** | **string** |  |
+ **version** | **int32** |  |
+
+### Return type
+
+[**MessageTemplateReleaseDto**](MessageTemplateReleaseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -93,7 +160,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +180,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -130,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -186,7 +253,7 @@ Other parameters are passed through a pointer to a apiGetMessageTemplateReleaseL
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **string** |  | 
+ **templateId** | **string** |  |
 
 ### Return type
 
@@ -194,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

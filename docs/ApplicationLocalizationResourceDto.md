@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Texts** | Pointer to **map[string]string** |  | [optional] 
-**BaseResources** | Pointer to **[]string** |  | [optional] 
+**Texts** | Pointer to **map[string]string** |  | [optional]
+**BaseResources** | Pointer to **[]string** |  | [optional]
 
 ## Methods
 

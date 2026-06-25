@@ -4,21 +4,23 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateApp**](AppAPI.md#CreateApp) | **Post** /api/app/app | 创建新应用
-[**DeleteAppById**](AppAPI.md#DeleteAppById) | **Delete** /api/app/app/{id} | 删除应用
-[**GetAppById**](AppAPI.md#GetAppById) | **Get** /api/app/app/{id} | 获取 APP 详情
-[**GetAppList**](AppAPI.md#GetAppList) | **Get** /api/app/app | 获取当前用户的应用列表
-[**GetByName**](AppAPI.md#GetByName) | **Get** /api/app/app/by-name | 获取 APP 详情
-[**GetFeatureList**](AppAPI.md#GetFeatureList) | **Get** /api/app/app/feature-list/{appId} | 
-[**GetListByDeveloperAll**](AppAPI.md#GetListByDeveloperAll) | **Get** /api/app/app/by-developer-all | 获取开发者所有 APP 包括未发布的
-[**GetListPublic**](AppAPI.md#GetListPublic) | **Get** /api/app/app/public | 所有开发者已发布 APP 列表
-[**GetListWithUser**](AppAPI.md#GetListWithUser) | **Get** /api/app/app/with-user | 获取APP列表包含用户订阅信息
-[**GetSdksById**](AppAPI.md#GetSdksById) | **Get** /api/app/app/sdks-by-id/{appId} | 
-[**GetUploadCredentials**](AppAPI.md#GetUploadCredentials) | **Get** /api/app/app/upload-credentials | 获取上传凭证
-[**GetWithUser**](AppAPI.md#GetWithUser) | **Get** /api/app/app/{id}/with-user | 获取 APP 详情
-[**Run**](AppAPI.md#Run) | **Post** /api/app/app/run | 
-[**UpdateApp**](AppAPI.md#UpdateApp) | **Put** /api/app/app/{id} | 更新 APP 信息
-[**UpdateRunState**](AppAPI.md#UpdateRunState) | **Put** /api/app/app/{id}/run-state | 
+[**CreateApp**](AppAPI.md#CreateApp) | **Post** /api/app/app |
+[**DeleteAppById**](AppAPI.md#DeleteAppById) | **Delete** /api/app/app/{id} |
+[**GetAppById**](AppAPI.md#GetAppById) | **Get** /api/app/app/{id} |
+[**GetAppList**](AppAPI.md#GetAppList) | **Get** /api/app/app |
+[**GetByName**](AppAPI.md#GetByName) | **Get** /api/app/app/by-name |
+[**GetFeatureList**](AppAPI.md#GetFeatureList) | **Get** /api/app/app/feature-list/{appId} |
+[**GetListByDeveloperAll**](AppAPI.md#GetListByDeveloperAll) | **Get** /api/app/app/by-developer-all |
+[**GetListPublic**](AppAPI.md#GetListPublic) | **Get** /api/app/app/public |
+[**GetListWithUser**](AppAPI.md#GetListWithUser) | **Get** /api/app/app/with-user |
+[**GetSdksById**](AppAPI.md#GetSdksById) | **Get** /api/app/app/sdks-by-id/{appId} |
+[**GetStorefrontLanding**](AppAPI.md#GetStorefrontLanding) | **Get** /api/app/app/storefront-landing/{appId} |
+[**GetUploadCredentials**](AppAPI.md#GetUploadCredentials) | **Get** /api/app/app/upload-credentials |
+[**GetWithUser**](AppAPI.md#GetWithUser) | **Get** /api/app/app/{id}/with-user |
+[**Run**](AppAPI.md#Run) | **Post** /api/app/app/run |
+[**SetLinkedSdks**](AppAPI.md#SetLinkedSdks) | **Post** /api/app/app/set-linked-sdks/{appId} |
+[**UpdateApp**](AppAPI.md#UpdateApp) | **Put** /api/app/app/{id} |
+[**UpdateRunState**](AppAPI.md#UpdateRunState) | **Put** /api/app/app/{id}/run-state |
 
 
 
@@ -26,7 +28,7 @@ Method | HTTP request | Description
 
 > AppDto CreateApp(ctx).CreateOrUpdateAppDto(createOrUpdateAppDto).Execute()
 
-创建新应用
+
 
 ### Example
 
@@ -66,7 +68,7 @@ Other parameters are passed through a pointer to a apiCreateAppRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  | 
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  |
 
 ### Return type
 
@@ -74,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -90,7 +92,7 @@ Name | Type | Description  | Notes
 
 > DeleteAppById(ctx, id).Execute()
 
-删除应用
+
 
 ### Example
 
@@ -105,7 +107,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -123,7 +125,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -140,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -156,7 +158,7 @@ Name | Type | Description  | Notes
 
 > AppDto GetAppById(ctx, id).Execute()
 
-获取 APP 详情
+
 
 ### Example
 
@@ -171,7 +173,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -191,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -208,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -224,7 +226,7 @@ Name | Type | Description  | Notes
 
 > AppDtoPagedResultDto GetAppList(ctx).CreatorId(creatorId).Sorting(sorting).SkipCount(skipCount).MaxResultCount(maxResultCount).Execute()
 
-获取当前用户的应用列表
+
 
 ### Example
 
@@ -267,10 +269,10 @@ Other parameters are passed through a pointer to a apiGetAppListRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **creatorId** | **string** |  | 
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **creatorId** | **string** |  |
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -278,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -294,7 +296,7 @@ Name | Type | Description  | Notes
 
 > AppDto GetByName(ctx).Name(name).Execute()
 
-获取 APP 详情
+
 
 ### Example
 
@@ -334,7 +336,7 @@ Other parameters are passed through a pointer to a apiGetByNameRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string** |  | 
+ **name** | **string** |  |
 
 ### Return type
 
@@ -342,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -373,7 +375,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	env := "env_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -394,7 +396,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  | 
+**appId** | **string** |  |
 
 ### Other Parameters
 
@@ -404,7 +406,7 @@ Other parameters are passed through a pointer to a apiGetFeatureListRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **env** | **string** |  | 
+ **env** | **string** |  |
 
 ### Return type
 
@@ -412,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -428,7 +430,7 @@ Name | Type | Description  | Notes
 
 > AppDtoPagedResultDto GetListByDeveloperAll(ctx).DeveloperAccount(developerAccount).Execute()
 
-获取开发者所有 APP 包括未发布的
+
 
 ### Example
 
@@ -468,7 +470,7 @@ Other parameters are passed through a pointer to a apiGetListByDeveloperAllReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **developerAccount** | **string** |  | 
+ **developerAccount** | **string** |  |
 
 ### Return type
 
@@ -476,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -492,7 +494,7 @@ Name | Type | Description  | Notes
 
 > AppDtoPagedResultDto GetListPublic(ctx).Type_(type_).DeveloperAccount(developerAccount).CurrentAppName(currentAppName).Execute()
 
-所有开发者已发布 APP 列表
+
 
 ### Example
 
@@ -534,9 +536,9 @@ Other parameters are passed through a pointer to a apiGetListPublicRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_** | **string** |  | 
- **developerAccount** | **string** |  | 
- **currentAppName** | **string** |  | 
+ **type_** | **string** |  |
+ **developerAccount** | **string** |  |
+ **currentAppName** | **string** |  |
 
 ### Return type
 
@@ -544,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -560,7 +562,7 @@ Name | Type | Description  | Notes
 
 > AppWithUserDtoPagedResultDto GetListWithUser(ctx).Type_(type_).SearchKey(searchKey).Sorting(sorting).SkipCount(skipCount).MaxResultCount(maxResultCount).Execute()
 
-获取APP列表包含用户订阅信息
+
 
 ### Example
 
@@ -604,11 +606,11 @@ Other parameters are passed through a pointer to a apiGetListWithUserRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_** | **string** |  | 
- **searchKey** | **string** |  | 
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **type_** | **string** |  |
+ **searchKey** | **string** |  |
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -616,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -647,7 +649,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	env := "env_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -668,7 +670,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  | 
+**appId** | **string** |  |
 
 ### Other Parameters
 
@@ -678,7 +680,7 @@ Other parameters are passed through a pointer to a apiGetSdksByIdRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **env** | **string** |  | 
+ **env** | **string** |  |
 
 ### Return type
 
@@ -686,7 +688,75 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetStorefrontLanding
+
+> AppStorefrontLandingDto GetStorefrontLanding(ctx, appId).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AppAPI.GetStorefrontLanding(context.Background(), appId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AppAPI.GetStorefrontLanding``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetStorefrontLanding`: AppStorefrontLandingDto
+	fmt.Fprintf(os.Stdout, "Response from `AppAPI.GetStorefrontLanding`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string** |  |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetStorefrontLandingRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**AppStorefrontLandingDto**](AppStorefrontLandingDto.md)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -702,7 +772,7 @@ Name | Type | Description  | Notes
 
 > StorageObjectCredentials GetUploadCredentials(ctx).Key(key).Execute()
 
-获取上传凭证
+
 
 ### Example
 
@@ -742,7 +812,7 @@ Other parameters are passed through a pointer to a apiGetUploadCredentialsReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string** |  | 
+ **key** | **string** |  |
 
 ### Return type
 
@@ -750,7 +820,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -766,7 +836,7 @@ Name | Type | Description  | Notes
 
 > AppWithUserDto GetWithUser(ctx, id).Execute()
 
-获取 APP 详情
+
 
 ### Example
 
@@ -781,7 +851,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -801,7 +871,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -818,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -874,7 +944,7 @@ Other parameters are passed through a pointer to a apiRunRequest struct via the 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appRunDto** | [**AppRunDto**](AppRunDto.md) |  | 
+ **appRunDto** | [**AppRunDto**](AppRunDto.md) |  |
 
 ### Return type
 
@@ -882,7 +952,75 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SetLinkedSdks
+
+> SetLinkedSdks(ctx, appId).SetAppLinkedSdksDto(setAppLinkedSdksDto).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	setAppLinkedSdksDto := *openapiclient.NewSetAppLinkedSdksDto() // SetAppLinkedSdksDto |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.AppAPI.SetLinkedSdks(context.Background(), appId).SetAppLinkedSdksDto(setAppLinkedSdksDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AppAPI.SetLinkedSdks``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string** |  |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSetLinkedSdksRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **setAppLinkedSdksDto** | [**SetAppLinkedSdksDto**](SetAppLinkedSdksDto.md) |  |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -898,7 +1036,7 @@ Name | Type | Description  | Notes
 
 > AppDto UpdateApp(ctx, id).CreateOrUpdateAppDto(createOrUpdateAppDto).Execute()
 
-更新 APP 信息
+
 
 ### Example
 
@@ -913,7 +1051,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	createOrUpdateAppDto := *openapiclient.NewCreateOrUpdateAppDto() // CreateOrUpdateAppDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -934,7 +1072,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -944,7 +1082,7 @@ Other parameters are passed through a pointer to a apiUpdateAppRequest struct vi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  | 
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  |
 
 ### Return type
 
@@ -952,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -983,7 +1121,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	appRunRecordUpdateDto := *openapiclient.NewAppRunRecordUpdateDto(openapiclient.AppRunStatus("Pending"), "WorkerId_example", "WorkerName_example") // AppRunRecordUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1004,7 +1142,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -1014,7 +1152,7 @@ Other parameters are passed through a pointer to a apiUpdateRunStateRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md) |  | 
+ **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md) |  |
 
 ### Return type
 
@@ -1022,7 +1160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

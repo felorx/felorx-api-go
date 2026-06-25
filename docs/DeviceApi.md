@@ -4,12 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Bind**](DeviceAPI.md#Bind) | **Post** /api/app/device/bind | 
-[**GetByToken**](DeviceAPI.md#GetByToken) | **Get** /api/app/device/by-token | 
-[**GetDeviceById**](DeviceAPI.md#GetDeviceById) | **Get** /api/app/device/{id} | 
-[**GetDeviceList**](DeviceAPI.md#GetDeviceList) | **Get** /api/app/device | 
-[**RefreshDevice**](DeviceAPI.md#RefreshDevice) | **Post** /api/app/device/refresh-device | 
-[**Remove**](DeviceAPI.md#Remove) | **Delete** /api/app/device | 
+[**Bind**](DeviceAPI.md#Bind) | **Post** /api/app/device/bind |
+[**GetByToken**](DeviceAPI.md#GetByToken) | **Get** /api/app/device/by-token |
+[**GetDeviceById**](DeviceAPI.md#GetDeviceById) | **Get** /api/app/device/{id} |
+[**GetDeviceList**](DeviceAPI.md#GetDeviceList) | **Get** /api/app/device |
+[**Logout**](DeviceAPI.md#Logout) | **Post** /api/app/device/logout |
+[**RefreshDevice**](DeviceAPI.md#RefreshDevice) | **Post** /api/app/device/refresh-device |
+[**Remove**](DeviceAPI.md#Remove) | **Delete** /api/app/device |
 
 
 
@@ -55,7 +56,7 @@ Other parameters are passed through a pointer to a apiBindRequest struct via the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bindDeviceDto** | [**BindDeviceDto**](BindDeviceDto.md) |  | 
+ **bindDeviceDto** | [**BindDeviceDto**](BindDeviceDto.md) |  |
 
 ### Return type
 
@@ -63,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -119,7 +120,7 @@ Other parameters are passed through a pointer to a apiGetByTokenRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **string** |  | 
+ **token** | **string** |  |
 
 ### Return type
 
@@ -127,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -158,7 +159,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -178,7 +179,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -195,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -253,9 +254,9 @@ Other parameters are passed through a pointer to a apiGetDeviceListRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -263,7 +264,69 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## Logout
+
+> Logout(ctx).Token(token).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	token := "token_example" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.DeviceAPI.Logout(context.Background()).Token(token).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DeviceAPI.Logout``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiLogoutRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string** |  |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
 
 ### HTTP request headers
 
@@ -317,7 +380,7 @@ Other parameters are passed through a pointer to a apiRefreshDeviceRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **refreshDeviceStatusDto** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md) |  | 
+ **refreshDeviceStatusDto** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md) |  |
 
 ### Return type
 
@@ -325,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -379,7 +442,7 @@ Other parameters are passed through a pointer to a apiRemoveRequest struct via t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **string** |  | 
+ **token** | **string** |  |
 
 ### Return type
 
@@ -387,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

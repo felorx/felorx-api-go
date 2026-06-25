@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional] 
-**ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**ParametersOnMethod** | Pointer to [**[]MethodParameterApiDescriptionModel**](MethodParameterApiDescriptionModel.md) |  | [optional]
+**ReturnValue** | Pointer to [**ReturnValueApiDescriptionModel**](ReturnValueApiDescriptionModel.md) |  | [optional]
 
 ## Methods
 

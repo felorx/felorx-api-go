@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**DisplayName** | Pointer to **NullableString** |  | [optional]
+**Description** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -61,6 +62,41 @@ HasName returns a boolean if a field has been set.
 `func (o *CreateOrUpdateMessageTemplateDto) UnsetName()`
 
 UnsetName ensures that no value is present for Name, not even an explicit nil
+### GetDisplayName
+
+`func (o *CreateOrUpdateMessageTemplateDto) GetDisplayName() string`
+
+GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
+
+### GetDisplayNameOk
+
+`func (o *CreateOrUpdateMessageTemplateDto) GetDisplayNameOk() (*string, bool)`
+
+GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDisplayName
+
+`func (o *CreateOrUpdateMessageTemplateDto) SetDisplayName(v string)`
+
+SetDisplayName sets DisplayName field to given value.
+
+### HasDisplayName
+
+`func (o *CreateOrUpdateMessageTemplateDto) HasDisplayName() bool`
+
+HasDisplayName returns a boolean if a field has been set.
+
+### SetDisplayNameNil
+
+`func (o *CreateOrUpdateMessageTemplateDto) SetDisplayNameNil(b bool)`
+
+ SetDisplayNameNil sets the value for DisplayName to be an explicit nil
+
+### UnsetDisplayName
+`func (o *CreateOrUpdateMessageTemplateDto) UnsetDisplayName()`
+
+UnsetDisplayName ensures that no value is present for DisplayName, not even an explicit nil
 ### GetDescription
 
 `func (o *CreateOrUpdateMessageTemplateDto) GetDescription() string`

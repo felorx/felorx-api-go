@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**Title** | Pointer to **NullableString** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**Title** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

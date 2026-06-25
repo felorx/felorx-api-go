@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SendCode**](VerificationAPI.md#SendCode) | **Post** /api/app/verification/send-code | 
-[**SendCodeAnonymous**](VerificationAPI.md#SendCodeAnonymous) | **Post** /api/app/verification/send-code-anonymous | 
+[**SendCode**](VerificationAPI.md#SendCode) | **Post** /api/app/verification/send-code |
+[**SendCodeAnonymous**](VerificationAPI.md#SendCodeAnonymous) | **Post** /api/app/verification/send-code-anonymous |
 
 
 
@@ -51,7 +51,7 @@ Other parameters are passed through a pointer to a apiSendCodeRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  |
 
 ### Return type
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -113,7 +113,7 @@ Other parameters are passed through a pointer to a apiSendCodeAnonymousRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  | 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md) |  |
 
 ### Return type
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

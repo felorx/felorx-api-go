@@ -4,20 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**CreationTime** | Pointer to **time.Time** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
-**LastModifierId** | Pointer to **NullableString** |  | [optional] 
-**IsDeleted** | Pointer to **bool** |  | [optional] 
-**DeleterId** | Pointer to **NullableString** |  | [optional] 
-**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
-**IsAvailable** | Pointer to **bool** | 是否可用 | [optional] 
-**HasValue** | Pointer to **bool** | 是否有值 | [optional] 
-**IntValue** | Pointer to **int64** |  | [optional] 
-**StringValue** | Pointer to **NullableString** |  | [optional] 
-**BoolValue** | Pointer to **bool** |  | [optional] 
-**IntValueType** | Pointer to **NullableString** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional] 
+**Id** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
+**LastModifierId** | Pointer to **NullableString** |  | [optional]
+**IsDeleted** | Pointer to **bool** |  | [optional]
+**DeleterId** | Pointer to **NullableString** |  | [optional]
+**DeletionTime** | Pointer to **NullableTime** |  | [optional]
+**Key** | Pointer to **NullableString** | 收费点键，与 AppPricingItem.Key 对应（如 MaxListCount） | [optional]
+**IsAvailable** | Pointer to **bool** | 是否可用 | [optional]
+**HasValue** | Pointer to **bool** | 是否有值 | [optional]
+**IntValue** | Pointer to **int64** |  | [optional]
+**StringValue** | Pointer to **NullableString** |  | [optional]
+**BoolValue** | Pointer to **bool** |  | [optional]
+**IntValueType** | Pointer to **NullableString** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional]
 
 ## Methods
 
@@ -288,6 +289,41 @@ HasDeletionTime returns a boolean if a field has been set.
 `func (o *AppPricingItemValueDto) UnsetDeletionTime()`
 
 UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
+### GetKey
+
+`func (o *AppPricingItemValueDto) GetKey() string`
+
+GetKey returns the Key field if non-nil, zero value otherwise.
+
+### GetKeyOk
+
+`func (o *AppPricingItemValueDto) GetKeyOk() (*string, bool)`
+
+GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKey
+
+`func (o *AppPricingItemValueDto) SetKey(v string)`
+
+SetKey sets Key field to given value.
+
+### HasKey
+
+`func (o *AppPricingItemValueDto) HasKey() bool`
+
+HasKey returns a boolean if a field has been set.
+
+### SetKeyNil
+
+`func (o *AppPricingItemValueDto) SetKeyNil(b bool)`
+
+ SetKeyNil sets the value for Key to be an explicit nil
+
+### UnsetKey
+`func (o *AppPricingItemValueDto) UnsetKey()`
+
+UnsetKey ensures that no value is present for Key, not even an explicit nil
 ### GetIsAvailable
 
 `func (o *AppPricingItemValueDto) GetIsAvailable() bool`

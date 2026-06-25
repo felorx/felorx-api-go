@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Modules** | Pointer to [**map[string]ModuleExtensionDto**](ModuleExtensionDto.md) |  | [optional] 
-**Enums** | Pointer to [**map[string]ExtensionEnumDto**](ExtensionEnumDto.md) |  | [optional] 
+**Modules** | Pointer to [**map[string]ModuleExtensionDto**](ModuleExtensionDto.md) |  | [optional]
+**Enums** | Pointer to [**map[string]ExtensionEnumDto**](ExtensionEnumDto.md) |  | [optional]
 
 ## Methods
 

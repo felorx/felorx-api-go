@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Localization** | Pointer to [**ApplicationLocalizationConfigurationDto**](ApplicationLocalizationConfigurationDto.md) |  | [optional] 
-**Auth** | Pointer to [**ApplicationAuthConfigurationDto**](ApplicationAuthConfigurationDto.md) |  | [optional] 
-**Setting** | Pointer to [**ApplicationSettingConfigurationDto**](ApplicationSettingConfigurationDto.md) |  | [optional] 
-**CurrentUser** | Pointer to [**CurrentUserDto**](CurrentUserDto.md) |  | [optional] 
-**Features** | Pointer to [**ApplicationFeatureConfigurationDto**](ApplicationFeatureConfigurationDto.md) |  | [optional] 
-**GlobalFeatures** | Pointer to [**ApplicationGlobalFeatureConfigurationDto**](ApplicationGlobalFeatureConfigurationDto.md) |  | [optional] 
-**MultiTenancy** | Pointer to [**MultiTenancyInfoDto**](MultiTenancyInfoDto.md) |  | [optional] 
-**CurrentTenant** | Pointer to [**CurrentTenantDto**](CurrentTenantDto.md) |  | [optional] 
-**Timing** | Pointer to [**TimingDto**](TimingDto.md) |  | [optional] 
-**Clock** | Pointer to [**ClockDto**](ClockDto.md) |  | [optional] 
-**ObjectExtensions** | Pointer to [**ObjectExtensionsDto**](ObjectExtensionsDto.md) |  | [optional] 
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] 
+**Localization** | Pointer to [**ApplicationLocalizationConfigurationDto**](ApplicationLocalizationConfigurationDto.md) |  | [optional]
+**Auth** | Pointer to [**ApplicationAuthConfigurationDto**](ApplicationAuthConfigurationDto.md) |  | [optional]
+**Setting** | Pointer to [**ApplicationSettingConfigurationDto**](ApplicationSettingConfigurationDto.md) |  | [optional]
+**CurrentUser** | Pointer to [**CurrentUserDto**](CurrentUserDto.md) |  | [optional]
+**Features** | Pointer to [**ApplicationFeatureConfigurationDto**](ApplicationFeatureConfigurationDto.md) |  | [optional]
+**GlobalFeatures** | Pointer to [**ApplicationGlobalFeatureConfigurationDto**](ApplicationGlobalFeatureConfigurationDto.md) |  | [optional]
+**MultiTenancy** | Pointer to [**MultiTenancyInfoDto**](MultiTenancyInfoDto.md) |  | [optional]
+**CurrentTenant** | Pointer to [**CurrentTenantDto**](CurrentTenantDto.md) |  | [optional]
+**Timing** | Pointer to [**TimingDto**](TimingDto.md) |  | [optional]
+**Clock** | Pointer to [**ClockDto**](ClockDto.md) |  | [optional]
+**ObjectExtensions** | Pointer to [**ObjectExtensionsDto**](ObjectExtensionsDto.md) |  | [optional]
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional]
 
 ## Methods
 

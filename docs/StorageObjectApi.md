@@ -4,10 +4,70 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetFileCredential**](StorageObjectAPI.md#GetFileCredential) | **Get** /api/app/storage-object/file-credential | 
-[**GetUserStorages**](StorageObjectAPI.md#GetUserStorages) | **Get** /api/app/storage-object/user-storages | 
-[**PreSignUrl**](StorageObjectAPI.md#PreSignUrl) | **Post** /api/app/storage-object/pre-sign-url | 
+[**GetCdnDomains**](StorageObjectAPI.md#GetCdnDomains) | **Get** /api/app/storage-object/cdn-domains | 获取所有 CDN Domain 配置
+[**GetFileCredential**](StorageObjectAPI.md#GetFileCredential) | **Get** /api/app/storage-object/file-credential |
+[**GetUserStorages**](StorageObjectAPI.md#GetUserStorages) | **Get** /api/app/storage-object/user-storages |
+[**PreSignUrl**](StorageObjectAPI.md#PreSignUrl) | **Post** /api/app/storage-object/pre-sign-url |
 
+
+
+## GetCdnDomains
+
+> []CdnDomainDto GetCdnDomains(ctx).Execute()
+
+获取所有 CDN Domain 配置
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.StorageObjectAPI.GetCdnDomains(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `StorageObjectAPI.GetCdnDomains``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetCdnDomains`: []CdnDomainDto
+	fmt.Fprintf(os.Stdout, "Response from `StorageObjectAPI.GetCdnDomains`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetCdnDomainsRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]CdnDomainDto**](CdnDomainDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## GetFileCredential
@@ -57,10 +117,10 @@ Other parameters are passed through a pointer to a apiGetFileCredentialRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userTotalSize** | **int64** |  | 
- **rapidCode** | **string** |  | 
- **usage** | **string** |  | 
- **key** | **string** |  | 
+ **userTotalSize** | **int64** |  |
+ **rapidCode** | **string** |  |
+ **usage** | **string** |  |
+ **key** | **string** |  |
 
 ### Return type
 
@@ -68,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -127,7 +187,7 @@ Other parameters are passed through a pointer to a apiGetUserStoragesRequest str
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -184,8 +244,8 @@ Other parameters are passed through a pointer to a apiPreSignUrlRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bucket** | **string** |  | 
- **key** | **string** |  | 
+ **bucket** | **string** |  |
+ **key** | **string** |  |
 
 ### Return type
 
@@ -193,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

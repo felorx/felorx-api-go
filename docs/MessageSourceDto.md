@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**IsPublished** | Pointer to **bool** |  | [optional] 
-**IconUrl** | Pointer to **NullableString** |  | [optional] 
-**Routes** | Pointer to [**[]MessageSourceRouteSubDto**](MessageSourceRouteSubDto.md) |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**Description** | Pointer to **NullableString** |  | [optional]
+**IsPublished** | Pointer to **bool** |  | [optional]
+**IconUrl** | Pointer to **NullableString** |  | [optional]
+**Routes** | Pointer to [**[]MessageSourceRouteSubDto**](MessageSourceRouteSubDto.md) |  | [optional]
 
 ## Methods
 

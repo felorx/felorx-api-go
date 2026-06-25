@@ -34,6 +34,18 @@ func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test MessageTemplateReleaseAPIService GetByTemplateNameAndVersion", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		resp, httpRes, err := apiClient.MessageTemplateReleaseAPI.GetByTemplateNameAndVersion(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test MessageTemplateReleaseAPIService GetMessageTemplateReleaseById", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test

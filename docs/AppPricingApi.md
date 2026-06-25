@@ -4,14 +4,82 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppPricing**](AppPricingAPI.md#CreateAppPricing) | **Post** /api/app/app-pricing | 
-[**DeleteAppPricingById**](AppPricingAPI.md#DeleteAppPricingById) | **Delete** /api/app/app-pricing/{id} | 
-[**GetAppPricingById**](AppPricingAPI.md#GetAppPricingById) | **Get** /api/app/app-pricing/{id} | 
-[**GetAppPricingList**](AppPricingAPI.md#GetAppPricingList) | **Get** /api/app/app-pricing | 
-[**GetListByAppId**](AppPricingAPI.md#GetListByAppId) | **Get** /api/app/app-pricing/by-app-id/{appId} | 
-[**GetPricingItemsByAppId**](AppPricingAPI.md#GetPricingItemsByAppId) | **Get** /api/app/app-pricing/pricing-items-by-app-id/{appId} | 
-[**UpdateAppPricing**](AppPricingAPI.md#UpdateAppPricing) | **Put** /api/app/app-pricing/{id} | 
+[**AppPricingGetListByAppId**](AppPricingAPI.md#AppPricingGetListByAppId) | **Get** /api/app/app-pricing/by-app-id/{appId} | 获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
+[**CreateAppPricing**](AppPricingAPI.md#CreateAppPricing) | **Post** /api/app/app-pricing |
+[**DeleteAppPricingById**](AppPricingAPI.md#DeleteAppPricingById) | **Delete** /api/app/app-pricing/{id} |
+[**GetAppPricingById**](AppPricingAPI.md#GetAppPricingById) | **Get** /api/app/app-pricing/{id} | 获取单条定价方案详情，允许匿名访问（与列表/商店展示一致）
+[**GetAppPricingList**](AppPricingAPI.md#GetAppPricingList) | **Get** /api/app/app-pricing | 分页获取定价方案列表，允许匿名访问
+[**GetPricingItemsByAppId**](AppPricingAPI.md#GetPricingItemsByAppId) | **Get** /api/app/app-pricing/pricing-items-by-app-id/{appId} | 获取应用定价功能项定义（与客户端「功能对比」行一致），允许匿名访问供官网等场景展示
+[**UpdateAppPricing**](AppPricingAPI.md#UpdateAppPricing) | **Put** /api/app/app-pricing/{id} |
 
+
+
+## AppPricingGetListByAppId
+
+> []AppPricingDto AppPricingGetListByAppId(ctx, appId).Execute()
+
+获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AppPricingAPI.AppPricingGetListByAppId(context.Background(), appId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingAPI.AppPricingGetListByAppId``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AppPricingGetListByAppId`: []AppPricingDto
+	fmt.Fprintf(os.Stdout, "Response from `AppPricingAPI.AppPricingGetListByAppId`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string** |  |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiAppPricingGetListByAppIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]AppPricingDto**](AppPricingDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## CreateAppPricing
@@ -58,7 +126,7 @@ Other parameters are passed through a pointer to a apiCreateAppPricingRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
+ **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  |
 
 ### Return type
 
@@ -66,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -97,7 +165,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -115,7 +183,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -132,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -148,7 +216,7 @@ Name | Type | Description  | Notes
 
 > AppPricingDto GetAppPricingById(ctx, id).Execute()
 
-
+获取单条定价方案详情，允许匿名访问（与列表/商店展示一致）
 
 ### Example
 
@@ -163,7 +231,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -183,7 +251,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -200,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -216,7 +284,7 @@ Name | Type | Description  | Notes
 
 > AppPricingDtoPagedResultDto GetAppPricingList(ctx).Sorting(sorting).SkipCount(skipCount).MaxResultCount(maxResultCount).Execute()
 
-
+分页获取定价方案列表，允许匿名访问
 
 ### Example
 
@@ -258,9 +326,9 @@ Other parameters are passed through a pointer to a apiGetAppPricingListRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -268,75 +336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetListByAppId
-
-> []AppPricingDto GetListByAppId(ctx, appId).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppPricingAPI.GetListByAppId(context.Background(), appId).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AppPricingAPI.GetListByAppId``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `GetListByAppId`: []AppPricingDto
-	fmt.Fprintf(os.Stdout, "Response from `AppPricingAPI.GetListByAppId`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetListByAppIdRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**[]AppPricingDto**](AppPricingDto.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 > []AppPricingItemDto GetPricingItemsByAppId(ctx, appId).Execute()
 
-
+获取应用定价功能项定义（与客户端「功能对比」行一致），允许匿名访问供官网等场景展示
 
 ### Example
 
@@ -367,7 +367,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -387,7 +387,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  | 
+**appId** | **string** |  |
 
 ### Other Parameters
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -435,7 +435,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	createOrUpdateAppPricingDto := *openapiclient.NewCreateOrUpdateAppPricingDto() // CreateOrUpdateAppPricingDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -456,7 +456,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -466,7 +466,7 @@ Other parameters are passed through a pointer to a apiUpdateAppPricingRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  | 
+ **createOrUpdateAppPricingDto** | [**CreateOrUpdateAppPricingDto**](CreateOrUpdateAppPricingDto.md) |  |
 
 ### Return type
 
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

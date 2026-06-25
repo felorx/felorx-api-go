@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TypeSimple** | Pointer to **NullableString** |  | [optional] 
-**Config** | Pointer to **map[string]interface{}** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional]
+**Config** | Pointer to **map[string]interface{}** |  | [optional]
 
 ## Methods
 

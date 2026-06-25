@@ -149,6 +149,20 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test AppAPIService GetStorefrontLanding", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		var appId string
+
+		resp, httpRes, err := apiClient.AppAPI.GetStorefrontLanding(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test AppAPIService GetUploadCredentials", func(t *testing.T) {
 
 		t.Skip("skip test") // remove to run test
@@ -183,6 +197,19 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test AppAPIService SetLinkedSdks", func(t *testing.T) {
+
+		t.Skip("skip test") // remove to run test
+
+		var appId string
+
+		httpRes, err := apiClient.AppAPI.SetLinkedSdks(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

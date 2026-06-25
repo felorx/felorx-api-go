@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAbpApplicationConfiguration**](AbpApplicationConfigurationAPI.md#GetAbpApplicationConfiguration) | **Get** /api/abp/application-configuration | 
+[**GetAbpApplicationConfiguration**](AbpApplicationConfigurationAPI.md#GetAbpApplicationConfiguration) | **Get** /api/abp/application-configuration |
 
 
 
@@ -52,7 +52,7 @@ Other parameters are passed through a pointer to a apiGetAbpApplicationConfigura
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeLocalizationResources** | **bool** |  | 
+ **includeLocalizationResources** | **bool** |  |
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

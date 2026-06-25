@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RootPath** | Pointer to **NullableString** |  | [optional] 
-**RemoteServiceName** | Pointer to **NullableString** |  | [optional] 
-**Controllers** | Pointer to [**map[string]ControllerApiDescriptionModel**](ControllerApiDescriptionModel.md) |  | [optional] 
+**RootPath** | Pointer to **NullableString** |  | [optional]
+**RemoteServiceName** | Pointer to **NullableString** |  | [optional]
+**Controllers** | Pointer to [**map[string]ControllerApiDescriptionModel**](ControllerApiDescriptionModel.md) |  | [optional]
 
 ## Methods
 

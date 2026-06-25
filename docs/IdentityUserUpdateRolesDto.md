@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RoleNames** | **[]string** |  | 
+**RoleNames** | **[]string** |  |
 
 ## Methods
 

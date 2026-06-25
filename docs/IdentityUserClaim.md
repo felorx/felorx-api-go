@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] [readonly] 
-**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
-**ClaimType** | Pointer to **NullableString** |  | [optional] [readonly] 
-**ClaimValue** | Pointer to **NullableString** |  | [optional] [readonly] 
-**UserId** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** |  | [optional] [readonly]
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly]
+**ClaimType** | Pointer to **NullableString** |  | [optional] [readonly]
+**ClaimValue** | Pointer to **NullableString** |  | [optional] [readonly]
+**UserId** | Pointer to **string** |  | [optional]
 
 ## Methods
 

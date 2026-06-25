@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChangePassword**](ProfileAPI.md#ChangePassword) | **Post** /api/account/my-profile/change-password | 
-[**GetProfile**](ProfileAPI.md#GetProfile) | **Get** /api/account/my-profile | 
-[**UpdateProfile**](ProfileAPI.md#UpdateProfile) | **Put** /api/account/my-profile | 
+[**ChangePassword**](ProfileAPI.md#ChangePassword) | **Post** /api/account/my-profile/change-password |
+[**GetProfile**](ProfileAPI.md#GetProfile) | **Get** /api/account/my-profile |
+[**UpdateProfile**](ProfileAPI.md#UpdateProfile) | **Put** /api/account/my-profile |
 
 
 
@@ -52,7 +52,7 @@ Other parameters are passed through a pointer to a apiChangePasswordRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordInput** | [**ChangePasswordInput**](ChangePasswordInput.md) |  | 
+ **changePasswordInput** | [**ChangePasswordInput**](ChangePasswordInput.md) |  |
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -119,7 +119,7 @@ Other parameters are passed through a pointer to a apiGetProfileRequest struct v
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -175,7 +175,7 @@ Other parameters are passed through a pointer to a apiUpdateProfileRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateProfileDto** | [**UpdateProfileDto**](UpdateProfileDto.md) |  | 
+ **updateProfileDto** | [**UpdateProfileDto**](UpdateProfileDto.md) |  |
 
 ### Return type
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

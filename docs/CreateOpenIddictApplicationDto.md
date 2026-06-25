@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **NullableString** |  | [optional] 
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**DisplayNames** | Pointer to **NullableString** |  | [optional] 
-**Permissions** | Pointer to **[]string** |  | [optional] 
-**PostLogoutRedirectUris** | Pointer to **NullableString** |  | [optional] 
-**Properties** | Pointer to **NullableString** |  | [optional] 
-**RedirectUris** | Pointer to **NullableString** |  | [optional] 
-**Requirements** | Pointer to **NullableString** |  | [optional] 
-**ClientUri** | Pointer to **NullableString** |  | [optional] 
-**LogoUri** | Pointer to **NullableString** |  | [optional] 
-**GrantTypes** | Pointer to **[]string** |  | [optional] 
-**Scopes** | Pointer to **[]string** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional]
+**DisplayName** | Pointer to **NullableString** |  | [optional]
+**DisplayNames** | Pointer to **NullableString** |  | [optional]
+**Permissions** | Pointer to **[]string** |  | [optional]
+**PostLogoutRedirectUris** | Pointer to **NullableString** |  | [optional]
+**Properties** | Pointer to **NullableString** |  | [optional]
+**RedirectUris** | Pointer to **NullableString** |  | [optional]
+**Requirements** | Pointer to **NullableString** |  | [optional]
+**ClientUri** | Pointer to **NullableString** |  | [optional]
+**LogoUri** | Pointer to **NullableString** |  | [optional]
+**GrantTypes** | Pointer to **[]string** |  | [optional]
+**Scopes** | Pointer to **[]string** |  | [optional]
 
 ## Methods
 

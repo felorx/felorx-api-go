@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Modules** | Pointer to [**map[string]ModuleApiDescriptionModel**](ModuleApiDescriptionModel.md) |  | [optional] 
-**Types** | Pointer to [**map[string]TypeApiDescriptionModel**](TypeApiDescriptionModel.md) |  | [optional] 
+**Modules** | Pointer to [**map[string]ModuleApiDescriptionModel**](ModuleApiDescriptionModel.md) |  | [optional]
+**Types** | Pointer to [**map[string]TypeApiDescriptionModel**](TypeApiDescriptionModel.md) |  | [optional]
 
 ## Methods
 

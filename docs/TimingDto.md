@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TimeZone** | Pointer to [**TimeZone**](TimeZone.md) |  | [optional] 
+**TimeZone** | Pointer to [**TimeZone**](TimeZone.md) |  | [optional]
 
 ## Methods
 

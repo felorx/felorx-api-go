@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FindTenantById**](AbpTenantAPI.md#FindTenantById) | **Get** /api/abp/multi-tenancy/tenants/by-id/{id} | 
-[**FindTenantByName**](AbpTenantAPI.md#FindTenantByName) | **Get** /api/abp/multi-tenancy/tenants/by-name/{name} | 
+[**FindTenantById**](AbpTenantAPI.md#FindTenantById) | **Get** /api/abp/multi-tenancy/tenants/by-id/{id} |
+[**FindTenantByName**](AbpTenantAPI.md#FindTenantByName) | **Get** /api/abp/multi-tenancy/tenants/by-name/{name} |
 
 
 
@@ -28,7 +28,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -48,7 +48,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -96,7 +96,7 @@ import (
 )
 
 func main() {
-	name := "name_example" // string | 
+	name := "name_example" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -116,7 +116,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**name** | **string** |  | 
+**name** | **string** |  |
 
 ### Other Parameters
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

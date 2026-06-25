@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisplayName** | Pointer to **NullableString** |  | [optional] 
-**EnglishName** | Pointer to **NullableString** |  | [optional] 
-**ThreeLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional] 
-**TwoLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional] 
-**IsRightToLeft** | Pointer to **bool** |  | [optional] 
-**CultureName** | Pointer to **NullableString** |  | [optional] 
-**Name** | Pointer to **NullableString** |  | [optional] 
-**NativeName** | Pointer to **NullableString** |  | [optional] 
-**DateTimeFormat** | Pointer to [**DateTimeFormatDto**](DateTimeFormatDto.md) |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional]
+**EnglishName** | Pointer to **NullableString** |  | [optional]
+**ThreeLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional]
+**TwoLetterIsoLanguageName** | Pointer to **NullableString** |  | [optional]
+**IsRightToLeft** | Pointer to **bool** |  | [optional]
+**CultureName** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional]
+**NativeName** | Pointer to **NullableString** |  | [optional]
+**DateTimeFormat** | Pointer to [**DateTimeFormatDto**](DateTimeFormatDto.md) |  | [optional]
 
 ## Methods
 

@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Version** | Pointer to **NullableString** |  | [optional] 
-**VersionName** | Pointer to **NullableString** | 版本名称 | [optional] 
-**VersionCode** | Pointer to **int64** | 构建编号 | [optional] 
-**Notes** | Pointer to **NullableString** |  | [optional] 
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
-**Key** | Pointer to **NullableString** |  | [optional] 
-**RapidCode** | Pointer to **NullableString** |  | [optional] 
-**Size** | Pointer to **NullableInt64** |  | [optional] 
-**Md5** | Pointer to **NullableString** |  | [optional] 
-**SliceMd5** | Pointer to **NullableString** |  | [optional] 
-**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional] 
-**IsForceUpdate** | Pointer to **bool** |  | [optional] 
-**AppId** | Pointer to **string** |  | [optional] 
-**IsEnabled** | Pointer to **bool** |  | [optional] 
-**Channel** | Pointer to **NullableString** |  | [optional] 
-**Environment** | Pointer to **NullableString** |  | [optional] 
+**Version** | Pointer to **NullableString** |  | [optional]
+**VersionName** | Pointer to **NullableString** | 版本名称 | [optional]
+**VersionCode** | Pointer to **int64** | 构建编号 | [optional]
+**Notes** | Pointer to **NullableString** |  | [optional]
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
+**Key** | Pointer to **NullableString** |  | [optional]
+**RapidCode** | Pointer to **NullableString** |  | [optional]
+**Size** | Pointer to **NullableInt64** |  | [optional]
+**Hash** | Pointer to **NullableString** |  | [optional]
+**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional]
+**Publisher** | Pointer to [**AppPublisher**](AppPublisher.md) |  | [optional]
+**IsForceUpdate** | Pointer to **bool** |  | [optional]
+**AppId** | Pointer to **string** |  | [optional]
+**IsEnabled** | Pointer to **bool** |  | [optional]
+**Channel** | Pointer to [**ReleaseChannel**](ReleaseChannel.md) |  | [optional]
+**BuildRecordId** | Pointer to **NullableString** | 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode） | [optional]
 
 ## Methods
 
@@ -300,76 +300,41 @@ HasSize returns a boolean if a field has been set.
 `func (o *CreateOrUpdateAppReleaseDto) UnsetSize()`
 
 UnsetSize ensures that no value is present for Size, not even an explicit nil
-### GetMd5
+### GetHash
 
-`func (o *CreateOrUpdateAppReleaseDto) GetMd5() string`
+`func (o *CreateOrUpdateAppReleaseDto) GetHash() string`
 
-GetMd5 returns the Md5 field if non-nil, zero value otherwise.
+GetHash returns the Hash field if non-nil, zero value otherwise.
 
-### GetMd5Ok
+### GetHashOk
 
-`func (o *CreateOrUpdateAppReleaseDto) GetMd5Ok() (*string, bool)`
+`func (o *CreateOrUpdateAppReleaseDto) GetHashOk() (*string, bool)`
 
-GetMd5Ok returns a tuple with the Md5 field if it's non-nil, zero value otherwise
+GetHashOk returns a tuple with the Hash field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMd5
+### SetHash
 
-`func (o *CreateOrUpdateAppReleaseDto) SetMd5(v string)`
+`func (o *CreateOrUpdateAppReleaseDto) SetHash(v string)`
 
-SetMd5 sets Md5 field to given value.
+SetHash sets Hash field to given value.
 
-### HasMd5
+### HasHash
 
-`func (o *CreateOrUpdateAppReleaseDto) HasMd5() bool`
+`func (o *CreateOrUpdateAppReleaseDto) HasHash() bool`
 
-HasMd5 returns a boolean if a field has been set.
+HasHash returns a boolean if a field has been set.
 
-### SetMd5Nil
+### SetHashNil
 
-`func (o *CreateOrUpdateAppReleaseDto) SetMd5Nil(b bool)`
+`func (o *CreateOrUpdateAppReleaseDto) SetHashNil(b bool)`
 
- SetMd5Nil sets the value for Md5 to be an explicit nil
+ SetHashNil sets the value for Hash to be an explicit nil
 
-### UnsetMd5
-`func (o *CreateOrUpdateAppReleaseDto) UnsetMd5()`
+### UnsetHash
+`func (o *CreateOrUpdateAppReleaseDto) UnsetHash()`
 
-UnsetMd5 ensures that no value is present for Md5, not even an explicit nil
-### GetSliceMd5
-
-`func (o *CreateOrUpdateAppReleaseDto) GetSliceMd5() string`
-
-GetSliceMd5 returns the SliceMd5 field if non-nil, zero value otherwise.
-
-### GetSliceMd5Ok
-
-`func (o *CreateOrUpdateAppReleaseDto) GetSliceMd5Ok() (*string, bool)`
-
-GetSliceMd5Ok returns a tuple with the SliceMd5 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSliceMd5
-
-`func (o *CreateOrUpdateAppReleaseDto) SetSliceMd5(v string)`
-
-SetSliceMd5 sets SliceMd5 field to given value.
-
-### HasSliceMd5
-
-`func (o *CreateOrUpdateAppReleaseDto) HasSliceMd5() bool`
-
-HasSliceMd5 returns a boolean if a field has been set.
-
-### SetSliceMd5Nil
-
-`func (o *CreateOrUpdateAppReleaseDto) SetSliceMd5Nil(b bool)`
-
- SetSliceMd5Nil sets the value for SliceMd5 to be an explicit nil
-
-### UnsetSliceMd5
-`func (o *CreateOrUpdateAppReleaseDto) UnsetSliceMd5()`
-
-UnsetSliceMd5 ensures that no value is present for SliceMd5, not even an explicit nil
+UnsetHash ensures that no value is present for Hash, not even an explicit nil
 ### GetArtifactType
 
 `func (o *CreateOrUpdateAppReleaseDto) GetArtifactType() ArtifactType`
@@ -394,6 +359,31 @@ SetArtifactType sets ArtifactType field to given value.
 `func (o *CreateOrUpdateAppReleaseDto) HasArtifactType() bool`
 
 HasArtifactType returns a boolean if a field has been set.
+
+### GetPublisher
+
+`func (o *CreateOrUpdateAppReleaseDto) GetPublisher() AppPublisher`
+
+GetPublisher returns the Publisher field if non-nil, zero value otherwise.
+
+### GetPublisherOk
+
+`func (o *CreateOrUpdateAppReleaseDto) GetPublisherOk() (*AppPublisher, bool)`
+
+GetPublisherOk returns a tuple with the Publisher field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublisher
+
+`func (o *CreateOrUpdateAppReleaseDto) SetPublisher(v AppPublisher)`
+
+SetPublisher sets Publisher field to given value.
+
+### HasPublisher
+
+`func (o *CreateOrUpdateAppReleaseDto) HasPublisher() bool`
+
+HasPublisher returns a boolean if a field has been set.
 
 ### GetIsForceUpdate
 
@@ -472,20 +462,20 @@ HasIsEnabled returns a boolean if a field has been set.
 
 ### GetChannel
 
-`func (o *CreateOrUpdateAppReleaseDto) GetChannel() string`
+`func (o *CreateOrUpdateAppReleaseDto) GetChannel() ReleaseChannel`
 
 GetChannel returns the Channel field if non-nil, zero value otherwise.
 
 ### GetChannelOk
 
-`func (o *CreateOrUpdateAppReleaseDto) GetChannelOk() (*string, bool)`
+`func (o *CreateOrUpdateAppReleaseDto) GetChannelOk() (*ReleaseChannel, bool)`
 
 GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChannel
 
-`func (o *CreateOrUpdateAppReleaseDto) SetChannel(v string)`
+`func (o *CreateOrUpdateAppReleaseDto) SetChannel(v ReleaseChannel)`
 
 SetChannel sets Channel field to given value.
 
@@ -495,51 +485,41 @@ SetChannel sets Channel field to given value.
 
 HasChannel returns a boolean if a field has been set.
 
-### SetChannelNil
+### GetBuildRecordId
 
-`func (o *CreateOrUpdateAppReleaseDto) SetChannelNil(b bool)`
+`func (o *CreateOrUpdateAppReleaseDto) GetBuildRecordId() string`
 
- SetChannelNil sets the value for Channel to be an explicit nil
+GetBuildRecordId returns the BuildRecordId field if non-nil, zero value otherwise.
 
-### UnsetChannel
-`func (o *CreateOrUpdateAppReleaseDto) UnsetChannel()`
+### GetBuildRecordIdOk
 
-UnsetChannel ensures that no value is present for Channel, not even an explicit nil
-### GetEnvironment
+`func (o *CreateOrUpdateAppReleaseDto) GetBuildRecordIdOk() (*string, bool)`
 
-`func (o *CreateOrUpdateAppReleaseDto) GetEnvironment() string`
-
-GetEnvironment returns the Environment field if non-nil, zero value otherwise.
-
-### GetEnvironmentOk
-
-`func (o *CreateOrUpdateAppReleaseDto) GetEnvironmentOk() (*string, bool)`
-
-GetEnvironmentOk returns a tuple with the Environment field if it's non-nil, zero value otherwise
+GetBuildRecordIdOk returns a tuple with the BuildRecordId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnvironment
+### SetBuildRecordId
 
-`func (o *CreateOrUpdateAppReleaseDto) SetEnvironment(v string)`
+`func (o *CreateOrUpdateAppReleaseDto) SetBuildRecordId(v string)`
 
-SetEnvironment sets Environment field to given value.
+SetBuildRecordId sets BuildRecordId field to given value.
 
-### HasEnvironment
+### HasBuildRecordId
 
-`func (o *CreateOrUpdateAppReleaseDto) HasEnvironment() bool`
+`func (o *CreateOrUpdateAppReleaseDto) HasBuildRecordId() bool`
 
-HasEnvironment returns a boolean if a field has been set.
+HasBuildRecordId returns a boolean if a field has been set.
 
-### SetEnvironmentNil
+### SetBuildRecordIdNil
 
-`func (o *CreateOrUpdateAppReleaseDto) SetEnvironmentNil(b bool)`
+`func (o *CreateOrUpdateAppReleaseDto) SetBuildRecordIdNil(b bool)`
 
- SetEnvironmentNil sets the value for Environment to be an explicit nil
+ SetBuildRecordIdNil sets the value for BuildRecordId to be an explicit nil
 
-### UnsetEnvironment
-`func (o *CreateOrUpdateAppReleaseDto) UnsetEnvironment()`
+### UnsetBuildRecordId
+`func (o *CreateOrUpdateAppReleaseDto) UnsetBuildRecordId()`
 
-UnsetEnvironment ensures that no value is present for Environment, not even an explicit nil
+UnsetBuildRecordId ensures that no value is present for BuildRecordId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

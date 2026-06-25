@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]UserData**](UserData.md) |  | [optional] 
+**Items** | Pointer to [**[]UserData**](UserData.md) |  | [optional]
 
 ## Methods
 

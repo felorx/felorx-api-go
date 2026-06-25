@@ -3,31 +3,37 @@
 ## Enum
 
 
+* `AAB` (value: `"Aab"`)
+
 * `APK` (value: `"Apk"`)
 
-* `IPA` (value: `"Ipa"`)
-
-* `EXE` (value: `"Exe"`)
-
-* `MSI` (value: `"Msi"`)
-
-* `DMG` (value: `"Dmg"`)
-
-* `PKG` (value: `"Pkg"`)
+* `APP` (value: `"App"`)
 
 * `APP_IMAGE` (value: `"AppImage"`)
 
-* `WEB` (value: `"Web"`)
+* `DEB` (value: `"Deb"`)
 
-* `SERVICE` (value: `"Service"`)
+* `DMG` (value: `"Dmg"`)
 
-* `APP_STORE` (value: `"AppStore"`)
+* `DOCKER` (value: `"Docker"`)
 
-* `GOOGLE_PLAY` (value: `"GooglePlay"`)
+* `EXE` (value: `"Exe"`)
 
-* `MAC_APP_STORE` (value: `"MacAppStore"`)
+* `HAP` (value: `"Hap"`)
 
-* `MICROSOFT_STORE` (value: `"MicrosoftStore"`)
+* `IPA` (value: `"Ipa"`)
+
+* `MSI` (value: `"Msi"`)
+
+* `MSIX` (value: `"Msix"`)
+
+* `PKG` (value: `"Pkg"`)
+
+* `RPM` (value: `"Rpm"`)
+
+* `ZIP` (value: `"Zip"`)
+
+* `BIN` (value: `"Bin"`)
 
 * `OTHER` (value: `"Other"`)
 

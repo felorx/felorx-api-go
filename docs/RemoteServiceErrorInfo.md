@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **NullableString** |  | [optional] 
-**Message** | Pointer to **NullableString** |  | [optional] 
-**Details** | Pointer to **NullableString** |  | [optional] 
-**Data** | Pointer to **map[string]interface{}** |  | [optional] 
-**ValidationErrors** | Pointer to [**[]RemoteServiceValidationErrorInfo**](RemoteServiceValidationErrorInfo.md) |  | [optional] 
+**Code** | Pointer to **NullableString** |  | [optional]
+**Message** | Pointer to **NullableString** |  | [optional]
+**Details** | Pointer to **NullableString** |  | [optional]
+**Data** | Pointer to **map[string]interface{}** |  | [optional]
+**ValidationErrors** | Pointer to [**[]RemoteServiceValidationErrorInfo**](RemoteServiceValidationErrorInfo.md) |  | [optional]
 
 ## Methods
 

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateIdentityRole**](RoleAPI.md#CreateIdentityRole) | **Post** /api/identity/roles | 
-[**DeleteIdentityRoleById**](RoleAPI.md#DeleteIdentityRoleById) | **Delete** /api/identity/roles/{id} | 
-[**GetAllList**](RoleAPI.md#GetAllList) | **Get** /api/identity/roles/all | 
-[**GetIdentityRoleById**](RoleAPI.md#GetIdentityRoleById) | **Get** /api/identity/roles/{id} | 
-[**GetIdentityRoleList**](RoleAPI.md#GetIdentityRoleList) | **Get** /api/identity/roles | 
-[**UpdateIdentityRole**](RoleAPI.md#UpdateIdentityRole) | **Put** /api/identity/roles/{id} | 
+[**CreateIdentityRole**](RoleAPI.md#CreateIdentityRole) | **Post** /api/identity/roles |
+[**DeleteIdentityRoleById**](RoleAPI.md#DeleteIdentityRoleById) | **Delete** /api/identity/roles/{id} |
+[**GetAllList**](RoleAPI.md#GetAllList) | **Get** /api/identity/roles/all |
+[**GetIdentityRoleById**](RoleAPI.md#GetIdentityRoleById) | **Get** /api/identity/roles/{id} |
+[**GetIdentityRoleList**](RoleAPI.md#GetIdentityRoleList) | **Get** /api/identity/roles |
+[**UpdateIdentityRole**](RoleAPI.md#UpdateIdentityRole) | **Put** /api/identity/roles/{id} |
 
 
 
@@ -57,7 +57,7 @@ Other parameters are passed through a pointer to a apiCreateIdentityRoleRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identityRoleCreateDto** | [**IdentityRoleCreateDto**](IdentityRoleCreateDto.md) |  | 
+ **identityRoleCreateDto** | [**IdentityRoleCreateDto**](IdentityRoleCreateDto.md) |  |
 
 ### Return type
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -96,7 +96,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -190,7 +190,7 @@ Other parameters are passed through a pointer to a apiGetAllListRequest struct v
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -221,7 +221,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -241,7 +241,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -317,10 +317,10 @@ Other parameters are passed through a pointer to a apiGetIdentityRoleListRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  | 
- **sorting** | **string** |  | 
- **skipCount** | **int32** |  | 
- **maxResultCount** | **int32** |  | 
+ **filter** | **string** |  |
+ **sorting** | **string** |  |
+ **skipCount** | **int32** |  |
+ **maxResultCount** | **int32** |  |
 
 ### Return type
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -359,7 +359,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
 	identityRoleUpdateDto := *openapiclient.NewIdentityRoleUpdateDto("Name_example") // IdentityRoleUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -380,7 +380,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  | 
+**id** | **string** |  |
 
 ### Other Parameters
 
@@ -390,7 +390,7 @@ Other parameters are passed through a pointer to a apiUpdateIdentityRoleRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **identityRoleUpdateDto** | [**IdentityRoleUpdateDto**](IdentityRoleUpdateDto.md) |  | 
+ **identityRoleUpdateDto** | [**IdentityRoleUpdateDto**](IdentityRoleUpdateDto.md) |  |
 
 ### Return type
 
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

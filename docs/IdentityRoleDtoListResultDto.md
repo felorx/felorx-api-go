@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]IdentityRoleDto**](IdentityRoleDto.md) |  | [optional] 
+**Items** | Pointer to [**[]IdentityRoleDto**](IdentityRoleDto.md) |  | [optional]
 
 ## Methods
 

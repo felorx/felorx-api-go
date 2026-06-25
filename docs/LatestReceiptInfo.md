@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Quantity** | Pointer to **NullableString** |  | [optional] 
-**ProductId** | Pointer to **NullableString** |  | [optional] 
-**TransactionId** | Pointer to **NullableString** |  | [optional] 
-**OriginalTransactionId** | Pointer to **NullableString** |  | [optional] 
-**PurchaseDate** | Pointer to **NullableString** |  | [optional] 
-**PurchaseDateMs** | Pointer to **NullableString** |  | [optional] 
-**PurchaseDatePst** | Pointer to **NullableString** |  | [optional] 
-**OriginalPurchaseDate** | Pointer to **NullableString** |  | [optional] 
-**OriginalPurchaseDateMs** | Pointer to **NullableString** |  | [optional] 
-**OriginalPurchaseDatePst** | Pointer to **NullableString** |  | [optional] 
-**ExpiresDate** | Pointer to **NullableString** |  | [optional] 
-**ExpiresDateMs** | Pointer to **NullableString** |  | [optional] 
-**ExpiresDatePst** | Pointer to **NullableString** |  | [optional] 
-**WebOrderLineItemId** | Pointer to **NullableString** |  | [optional] 
-**IsTrialPeriod** | Pointer to **NullableString** |  | [optional] 
-**IsInIntroOfferPeriod** | Pointer to **NullableString** |  | [optional] 
+**Quantity** | Pointer to **NullableString** |  | [optional]
+**ProductId** | Pointer to **NullableString** |  | [optional]
+**TransactionId** | Pointer to **NullableString** |  | [optional]
+**OriginalTransactionId** | Pointer to **NullableString** |  | [optional]
+**PurchaseDate** | Pointer to **NullableString** |  | [optional]
+**PurchaseDateMs** | Pointer to **NullableString** |  | [optional]
+**PurchaseDatePst** | Pointer to **NullableString** |  | [optional]
+**OriginalPurchaseDate** | Pointer to **NullableString** |  | [optional]
+**OriginalPurchaseDateMs** | Pointer to **NullableString** |  | [optional]
+**OriginalPurchaseDatePst** | Pointer to **NullableString** |  | [optional]
+**ExpiresDate** | Pointer to **NullableString** |  | [optional]
+**ExpiresDateMs** | Pointer to **NullableString** |  | [optional]
+**ExpiresDatePst** | Pointer to **NullableString** |  | [optional]
+**WebOrderLineItemId** | Pointer to **NullableString** |  | [optional]
+**IsTrialPeriod** | Pointer to **NullableString** |  | [optional]
+**IsInIntroOfferPeriod** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 

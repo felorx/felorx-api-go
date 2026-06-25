@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RouteId** | Pointer to **string** |  | [optional] 
-**Path** | Pointer to **NullableString** |  | [optional] 
-**Values** | Pointer to **interface{}** |  | [optional] 
+**RouteId** | Pointer to **string** |  | [optional]
+**Path** | Pointer to **NullableString** |  | [optional]
+**Values** | Pointer to **interface{}** |  | [optional]
 
 ## Methods
 

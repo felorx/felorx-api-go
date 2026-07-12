@@ -34,6 +34,7 @@ const (
 	ARTIFACTTYPE_MSIX      ArtifactType = "Msix"
 	ARTIFACTTYPE_PKG       ArtifactType = "Pkg"
 	ARTIFACTTYPE_RPM       ArtifactType = "Rpm"
+	ARTIFACTTYPE_FDU       ArtifactType = "Fdu"
 	ARTIFACTTYPE_ZIP       ArtifactType = "Zip"
 	ARTIFACTTYPE_BIN       ArtifactType = "Bin"
 	ARTIFACTTYPE_OTHER     ArtifactType = "Other"
@@ -55,6 +56,7 @@ var AllowedArtifactTypeEnumValues = []ArtifactType{
 	"Msix",
 	"Pkg",
 	"Rpm",
+	"Fdu",
 	"Zip",
 	"Bin",
 	"Other",

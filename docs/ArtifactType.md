@@ -31,6 +31,8 @@
 
 * `RPM` (value: `"Rpm"`)
 
+* `FDU` (value: `"Fdu"`)
+
 * `ZIP` (value: `"Zip"`)
 
 * `BIN` (value: `"Bin"`)
@@ -39,5 +41,3 @@
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

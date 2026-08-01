@@ -26300,33 +26300,23 @@ components:
     AppPricingDto:
       additionalProperties: false
       example:
-        monthProductId: monthProductId
         creationTime: 2000-01-23T04:56:07.000+00:00
         lastModificationTime: 2000-01-23T04:56:07.000+00:00
-        sortIndex: 7
+        sortIndex: 0
         creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         description: description
         deletionTime: 2000-01-23T04:56:07.000+00:00
-        yearProductId: yearProductId
         isDeleted: true
-        yearDiscountPrice: 2.3021358869347655
+        naming: Free
         appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        monthDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-        yearPrice: 5.962133916683182
-        monthDiscount: 6.027456183070403
-        yearDiscountEndAt: 2000-01-23T04:56:07.000+00:00
-        yearDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-        monthPrice: 0.8008281904610115
-        naming: Free
-        monthDiscountEndAt: 2000-01-23T04:56:07.000+00:00
         deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         items:
         - isAvailable: true
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          intValue: 9
+          intValue: 6
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           hasValue: true
@@ -26341,7 +26331,7 @@ components:
         - isAvailable: true
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          intValue: 9
+          intValue: 6
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           hasValue: true
@@ -26353,8 +26343,6 @@ components:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
-        monthDiscountPrice: 1.4658129805029452
-        yearDiscount: 5.637376656633329
       properties:
         id:
           format: uuid
@@ -26386,14 +26374,6 @@ components:
           type: string
         naming:
           $ref: "#/components/schemas/AppPriceNaming"
-        monthProductId:
-          description: 商店订阅产品 ID
-          nullable: true
-          type: string
-        yearProductId:
-          description: 商店订阅产品 ID
-          nullable: true
-          type: string
         description:
           description: "简单描述\r\n适用于个人网站和任何想用基本的聊天方式与游客交流的人。\r\n适用于希望改善客户关系的早期创业公司。\
             \r\n为需要全功能解决方案与客户沟通的公司而设。"
@@ -26402,54 +26382,6 @@ components:
         appId:
           description: APPID
           format: uuid
-          type: string
-        monthPrice:
-          description: 价格
-          format: double
-          type: number
-        monthDiscount:
-          description: 折扣
-          format: double
-          nullable: true
-          type: number
-        monthDiscountPrice:
-          description: 折扣后价格 DiscountPrice = Price * Discount
-          format: double
-          nullable: true
-          type: number
-        monthDiscountStartAt:
-          description: 折扣开始时间
-          format: date-time
-          nullable: true
-          type: string
-        monthDiscountEndAt:
-          description: 折扣结束时间
-          format: date-time
-          nullable: true
-          type: string
-        yearPrice:
-          description: 价格
-          format: double
-          type: number
-        yearDiscount:
-          description: 折扣
-          format: double
-          nullable: true
-          type: number
-        yearDiscountPrice:
-          description: 折扣后价格 DiscountPrice = Price * Discount
-          format: double
-          nullable: true
-          type: number
-        yearDiscountStartAt:
-          description: 折扣开始时间
-          format: date-time
-          nullable: true
-          type: string
-        yearDiscountEndAt:
-          description: 折扣结束时间
-          format: date-time
-          nullable: true
           type: string
         sortIndex:
           description: 排序
@@ -26465,35 +26397,25 @@ components:
     AppPricingDtoPagedResultDto:
       additionalProperties: false
       example:
-        totalCount: 3
+        totalCount: 1
         items:
-        - monthProductId: monthProductId
-          creationTime: 2000-01-23T04:56:07.000+00:00
+        - creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          sortIndex: 7
+          sortIndex: 0
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           description: description
           deletionTime: 2000-01-23T04:56:07.000+00:00
-          yearProductId: yearProductId
           isDeleted: true
-          yearDiscountPrice: 2.3021358869347655
+          naming: Free
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          monthDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-          yearPrice: 5.962133916683182
-          monthDiscount: 6.027456183070403
-          yearDiscountEndAt: 2000-01-23T04:56:07.000+00:00
-          yearDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-          monthPrice: 0.8008281904610115
-          naming: Free
-          monthDiscountEndAt: 2000-01-23T04:56:07.000+00:00
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           items:
           - isAvailable: true
             creationTime: 2000-01-23T04:56:07.000+00:00
             lastModificationTime: 2000-01-23T04:56:07.000+00:00
-            intValue: 9
+            intValue: 6
             creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deletionTime: 2000-01-23T04:56:07.000+00:00
             hasValue: true
@@ -26508,7 +26430,7 @@ components:
           - isAvailable: true
             creationTime: 2000-01-23T04:56:07.000+00:00
             lastModificationTime: 2000-01-23T04:56:07.000+00:00
-            intValue: 9
+            intValue: 6
             creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deletionTime: 2000-01-23T04:56:07.000+00:00
             hasValue: true
@@ -26520,35 +26442,23 @@ components:
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
-          monthDiscountPrice: 1.4658129805029452
-          yearDiscount: 5.637376656633329
-        - monthProductId: monthProductId
-          creationTime: 2000-01-23T04:56:07.000+00:00
+        - creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          sortIndex: 7
+          sortIndex: 0
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           description: description
           deletionTime: 2000-01-23T04:56:07.000+00:00
-          yearProductId: yearProductId
           isDeleted: true
-          yearDiscountPrice: 2.3021358869347655
+          naming: Free
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          monthDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-          yearPrice: 5.962133916683182
-          monthDiscount: 6.027456183070403
-          yearDiscountEndAt: 2000-01-23T04:56:07.000+00:00
-          yearDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-          monthPrice: 0.8008281904610115
-          naming: Free
-          monthDiscountEndAt: 2000-01-23T04:56:07.000+00:00
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           items:
           - isAvailable: true
             creationTime: 2000-01-23T04:56:07.000+00:00
             lastModificationTime: 2000-01-23T04:56:07.000+00:00
-            intValue: 9
+            intValue: 6
             creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deletionTime: 2000-01-23T04:56:07.000+00:00
             hasValue: true
@@ -26563,7 +26473,7 @@ components:
           - isAvailable: true
             creationTime: 2000-01-23T04:56:07.000+00:00
             lastModificationTime: 2000-01-23T04:56:07.000+00:00
-            intValue: 9
+            intValue: 6
             creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deletionTime: 2000-01-23T04:56:07.000+00:00
             hasValue: true
@@ -26575,8 +26485,6 @@ components:
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
-          monthDiscountPrice: 1.4658129805029452
-          yearDiscount: 5.637376656633329
       properties:
         items:
           items:
@@ -26669,7 +26577,7 @@ components:
         isAvailable: true
         creationTime: 2000-01-23T04:56:07.000+00:00
         lastModificationTime: 2000-01-23T04:56:07.000+00:00
-        intValue: 9
+        intValue: 6
         creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         deletionTime: 2000-01-23T04:56:07.000+00:00
         hasValue: true
@@ -30235,25 +30143,15 @@ components:
     CreateOrUpdateAppPricingDto:
       additionalProperties: false
       example:
-        monthProductId: monthProductId
-        sortIndex: 7
-        description: description
-        yearProductId: yearProductId
-        monthDiscount: 6.027456183070403
-        yearDiscountEndAt: 2000-01-23T04:56:07.000+00:00
-        yearDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-        monthPrice: 0.8008281904610115
-        yearDiscountPrice: 2.3021358869347655
+        sortIndex: 0
         naming: Free
         appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        monthDiscountEndAt: 2000-01-23T04:56:07.000+00:00
-        monthDiscountStartAt: 2000-01-23T04:56:07.000+00:00
-        yearPrice: 5.962133916683182
+        description: description
         items:
         - isAvailable: true
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          intValue: 9
+          intValue: 6
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           hasValue: true
@@ -30268,7 +30166,7 @@ components:
         - isAvailable: true
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
-          intValue: 9
+          intValue: 6
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           hasValue: true
@@ -30280,19 +30178,9 @@ components:
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
-        monthDiscountPrice: 1.4658129805029452
-        yearDiscount: 5.637376656633329
       properties:
         naming:
           $ref: "#/components/schemas/AppPriceNaming"
-        monthProductId:
-          description: 商店订阅产品 ID
-          nullable: true
-          type: string
-        yearProductId:
-          description: 商店订阅产品 ID
-          nullable: true
-          type: string
         description:
           description: "简单描述\r\n适用于个人网站和任何想用基本的聊天方式与游客交流的人。\r\n适用于希望改善客户关系的早期创业公司。\
             \r\n为需要全功能解决方案与客户沟通的公司而设。"
@@ -30301,54 +30189,6 @@ components:
         appId:
           description: APPID
           format: uuid
-          type: string
-        monthPrice:
-          description: 价格
-          format: double
-          type: number
-        monthDiscount:
-          description: 折扣
-          format: double
-          nullable: true
-          type: number
-        monthDiscountPrice:
-          description: 折扣后价格 DiscountPrice = Price * Discount
-          format: double
-          nullable: true
-          type: number
-        monthDiscountStartAt:
-          description: 折扣开始时间
-          format: date-time
-          nullable: true
-          type: string
-        monthDiscountEndAt:
-          description: 折扣结束时间
-          format: date-time
-          nullable: true
-          type: string
-        yearPrice:
-          description: 价格
-          format: double
-          type: number
-        yearDiscount:
-          description: 折扣
-          format: double
-          nullable: true
-          type: number
-        yearDiscountPrice:
-          description: 折扣后价格 DiscountPrice = Price * Discount
-          format: double
-          nullable: true
-          type: number
-        yearDiscountStartAt:
-          description: 折扣开始时间
-          format: date-time
-          nullable: true
-          type: string
-        yearDiscountEndAt:
-          description: 折扣结束时间
-          format: date-time
-          nullable: true
           type: string
         sortIndex:
           description: 排序

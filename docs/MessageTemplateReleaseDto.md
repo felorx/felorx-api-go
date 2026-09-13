@@ -4,22 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**TemplateName** | Pointer to **NullableString** |  | [optional]
-**Version** | Pointer to **int32** |  | [optional]
-**Content** | Pointer to **NullableString** |  | [optional]
-**SchemaVersion** | Pointer to **int32** |  | [optional]
-**ContentHash** | Pointer to **NullableString** |  | [optional]
-**Status** | Pointer to **NullableString** |  | [optional]
-**PublishedAt** | Pointer to **NullableTime** |  | [optional]
-**TemplateId** | Pointer to **string** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**TemplateName** | Pointer to **NullableString** |  | [optional] 
+**Version** | Pointer to **int32** |  | [optional] 
+**Content** | Pointer to **NullableString** |  | [optional] 
+**SchemaVersion** | Pointer to **int32** |  | [optional] 
+**ContentHash** | Pointer to **NullableString** |  | [optional] 
+**Status** | Pointer to **NullableString** |  | [optional] 
+**PublishedAt** | Pointer to **NullableTime** |  | [optional] 
+**TemplateId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 

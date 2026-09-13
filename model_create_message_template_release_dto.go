@@ -19,10 +19,10 @@ var _ MappedNullable = &CreateMessageTemplateReleaseDto{}
 
 // CreateMessageTemplateReleaseDto struct for CreateMessageTemplateReleaseDto
 type CreateMessageTemplateReleaseDto struct {
-	Content       NullableString `json:"content,omitempty"`
-	SchemaVersion *int32         `json:"schemaVersion,omitempty"`
-	Status        NullableString `json:"status,omitempty"`
-	TemplateId    *string        `json:"templateId,omitempty"`
+	Content NullableString `json:"content,omitempty"`
+	SchemaVersion *int32 `json:"schemaVersion,omitempty"`
+	Status NullableString `json:"status,omitempty"`
+	TemplateId *string `json:"templateId,omitempty"`
 }
 
 // NewCreateMessageTemplateReleaseDto instantiates a new CreateMessageTemplateReleaseDto object
@@ -74,7 +74,6 @@ func (o *CreateMessageTemplateReleaseDto) HasContent() bool {
 func (o *CreateMessageTemplateReleaseDto) SetContent(v string) {
 	o.Content.Set(&v)
 }
-
 // SetContentNil sets the value for Content to be an explicit nil
 func (o *CreateMessageTemplateReleaseDto) SetContentNil() {
 	o.Content.Set(nil)
@@ -149,7 +148,6 @@ func (o *CreateMessageTemplateReleaseDto) HasStatus() bool {
 func (o *CreateMessageTemplateReleaseDto) SetStatus(v string) {
 	o.Status.Set(&v)
 }
-
 // SetStatusNil sets the value for Status to be an explicit nil
 func (o *CreateMessageTemplateReleaseDto) SetStatusNil() {
 	o.Status.Set(nil)
@@ -193,7 +191,7 @@ func (o *CreateMessageTemplateReleaseDto) SetTemplateId(v string) {
 }
 
 func (o CreateMessageTemplateReleaseDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -252,3 +250,5 @@ func (v *NullableCreateMessageTemplateReleaseDto) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

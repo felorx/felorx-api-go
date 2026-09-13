@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**Sort** | Pointer to **int32** |  | [optional]
-**FeatureLocales** | Pointer to [**[]CreateOrUpdateAppFeatureLocaleDto**](CreateOrUpdateAppFeatureLocaleDto.md) |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Sort** | Pointer to **int32** |  | [optional] 
+**FeatureLocales** | Pointer to [**[]CreateOrUpdateAppFeatureLocaleDto**](CreateOrUpdateAppFeatureLocaleDto.md) |  | [optional] 
 
 ## Methods
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** |  |
-**PackageId** | **string** |  |
-**ReturnUrl** | Pointer to **NullableString** |  | [optional]
-**CancelUrl** | Pointer to **NullableString** |  | [optional]
+**AppId** | **string** |  | 
+**PackageId** | **string** |  | 
+**ReturnUrl** | Pointer to **NullableString** |  | [optional] 
+**CancelUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

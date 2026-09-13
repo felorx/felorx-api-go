@@ -19,7 +19,7 @@ var _ MappedNullable = &SetDefaultAiModelDto{}
 
 // SetDefaultAiModelDto struct for SetDefaultAiModelDto
 type SetDefaultAiModelDto struct {
-	ModelId    *string       `json:"model_id,omitempty"`
+	ModelId *string `json:"model_id,omitempty"`
 	Capability *AiCapability `json:"capability,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *SetDefaultAiModelDto) SetCapability(v AiCapability) {
 }
 
 func (o SetDefaultAiModelDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,3 +158,5 @@ func (v *NullableSetDefaultAiModelDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -19,49 +19,49 @@ import (
 	"strings"
 )
 
+
 // CreditAPIService CreditAPI service
 type CreditAPIService service
 
-type ApiCreateAlipayOrderRequest struct {
-	ctx                        context.Context
-	ApiService                 *CreditAPIService
+type ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest struct {
+	ctx context.Context
+	ApiService *CreditAPIService
 	createCreditAlipayOrderDto *CreateCreditAlipayOrderDto
 }
 
-func (r ApiCreateAlipayOrderRequest) CreateCreditAlipayOrderDto(createCreditAlipayOrderDto CreateCreditAlipayOrderDto) ApiCreateAlipayOrderRequest {
+func (r ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest) CreateCreditAlipayOrderDto(createCreditAlipayOrderDto CreateCreditAlipayOrderDto) ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest {
 	r.createCreditAlipayOrderDto = &createCreditAlipayOrderDto
 	return r
 }
 
-func (r ApiCreateAlipayOrderRequest) Execute() (*CreateCreditAlipayOrderResultDto, *http.Response, error) {
-	return r.ApiService.CreateAlipayOrderExecute(r)
+func (r ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest) Execute() (*CreateCreditAlipayOrderResultDto, *http.Response, error) {
+	return r.ApiService.CreateAlipayOrderPostApiAppCreditAlipayOrderExecute(r)
 }
 
 /*
-CreateAlipayOrder Method for CreateAlipayOrder
+CreateAlipayOrderPostApiAppCreditAlipayOrder Method for CreateAlipayOrderPostApiAppCreditAlipayOrder
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAlipayOrderRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest
 */
-func (a *CreditAPIService) CreateAlipayOrder(ctx context.Context) ApiCreateAlipayOrderRequest {
-	return ApiCreateAlipayOrderRequest{
+func (a *CreditAPIService) CreateAlipayOrderPostApiAppCreditAlipayOrder(ctx context.Context) ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest {
+	return ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return CreateCreditAlipayOrderResultDto
-func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderRequest) (*CreateCreditAlipayOrderResultDto, *http.Response, error) {
+//  @return CreateCreditAlipayOrderResultDto
+func (a *CreditAPIService) CreateAlipayOrderPostApiAppCreditAlipayOrderExecute(r ApiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest) (*CreateCreditAlipayOrderResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *CreateCreditAlipayOrderResultDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *CreateCreditAlipayOrderResultDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.CreateAlipayOrder")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.CreateAlipayOrderPostApiAppCreditAlipayOrder")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -120,8 +120,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -193,46 +193,45 @@ func (a *CreditAPIService) CreateAlipayOrderExecute(r ApiCreateAlipayOrderReques
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiCreatePayPalOrderRequest struct {
-	ctx                        context.Context
-	ApiService                 *CreditAPIService
+type ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest struct {
+	ctx context.Context
+	ApiService *CreditAPIService
 	createCreditPayPalOrderDto *CreateCreditPayPalOrderDto
 }
 
-func (r ApiCreatePayPalOrderRequest) CreateCreditPayPalOrderDto(createCreditPayPalOrderDto CreateCreditPayPalOrderDto) ApiCreatePayPalOrderRequest {
+func (r ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest) CreateCreditPayPalOrderDto(createCreditPayPalOrderDto CreateCreditPayPalOrderDto) ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest {
 	r.createCreditPayPalOrderDto = &createCreditPayPalOrderDto
 	return r
 }
 
-func (r ApiCreatePayPalOrderRequest) Execute() (*CreateCreditPayPalOrderResultDto, *http.Response, error) {
-	return r.ApiService.CreatePayPalOrderExecute(r)
+func (r ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest) Execute() (*CreateCreditPayPalOrderResultDto, *http.Response, error) {
+	return r.ApiService.CreatePayPalOrderPostApiAppCreditPayPalOrderExecute(r)
 }
 
 /*
-CreatePayPalOrder Method for CreatePayPalOrder
+CreatePayPalOrderPostApiAppCreditPayPalOrder Method for CreatePayPalOrderPostApiAppCreditPayPalOrder
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreatePayPalOrderRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest
 */
-func (a *CreditAPIService) CreatePayPalOrder(ctx context.Context) ApiCreatePayPalOrderRequest {
-	return ApiCreatePayPalOrderRequest{
+func (a *CreditAPIService) CreatePayPalOrderPostApiAppCreditPayPalOrder(ctx context.Context) ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest {
+	return ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return CreateCreditPayPalOrderResultDto
-func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderRequest) (*CreateCreditPayPalOrderResultDto, *http.Response, error) {
+//  @return CreateCreditPayPalOrderResultDto
+func (a *CreditAPIService) CreatePayPalOrderPostApiAppCreditPayPalOrderExecute(r ApiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest) (*CreateCreditPayPalOrderResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *CreateCreditPayPalOrderResultDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *CreateCreditPayPalOrderResultDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.CreatePayPalOrder")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.CreatePayPalOrderPostApiAppCreditPayPalOrder")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -291,8 +290,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -302,8 +301,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -313,8 +312,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -324,8 +323,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -335,8 +334,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -346,8 +345,8 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -364,43 +363,42 @@ func (a *CreditAPIService) CreatePayPalOrderExecute(r ApiCreatePayPalOrderReques
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiCreditGetAccountRequest struct {
-	ctx        context.Context
+type ApiGetAccountGetApiAppCreditAccountAppIdRequest struct {
+	ctx context.Context
 	ApiService *CreditAPIService
-	appId      string
+	appId string
 }
 
-func (r ApiCreditGetAccountRequest) Execute() (*CreditAccountDto, *http.Response, error) {
-	return r.ApiService.CreditGetAccountExecute(r)
+func (r ApiGetAccountGetApiAppCreditAccountAppIdRequest) Execute() (*CreditAccountDto, *http.Response, error) {
+	return r.ApiService.GetAccountGetApiAppCreditAccountAppIdExecute(r)
 }
 
 /*
-CreditGetAccount Method for CreditGetAccount
+GetAccountGetApiAppCreditAccountAppId Method for GetAccountGetApiAppCreditAccountAppId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiCreditGetAccountRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetAccountGetApiAppCreditAccountAppIdRequest
 */
-func (a *CreditAPIService) CreditGetAccount(ctx context.Context, appId string) ApiCreditGetAccountRequest {
-	return ApiCreditGetAccountRequest{
+func (a *CreditAPIService) GetAccountGetApiAppCreditAccountAppId(ctx context.Context, appId string) ApiGetAccountGetApiAppCreditAccountAppIdRequest {
+	return ApiGetAccountGetApiAppCreditAccountAppIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
+		ctx: ctx,
+		appId: appId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return CreditAccountDto
-func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest) (*CreditAccountDto, *http.Response, error) {
+//  @return CreditAccountDto
+func (a *CreditAPIService) GetAccountGetApiAppCreditAccountAppIdExecute(r ApiGetAccountGetApiAppCreditAccountAppIdRequest) (*CreditAccountDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *CreditAccountDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *CreditAccountDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.CreditGetAccount")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.GetAccountGetApiAppCreditAccountAppId")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -458,8 +456,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -469,8 +467,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -480,8 +478,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -491,8 +489,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -502,8 +500,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -513,8 +511,8 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -532,9 +530,9 @@ func (a *CreditAPIService) CreditGetAccountExecute(r ApiCreditGetAccountRequest)
 }
 
 type ApiGetPackagesRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *CreditAPIService
-	appId      string
+	appId string
 }
 
 func (r ApiGetPackagesRequest) Execute() ([]CreditPackageDto, *http.Response, error) {
@@ -544,27 +542,26 @@ func (r ApiGetPackagesRequest) Execute() ([]CreditPackageDto, *http.Response, er
 /*
 GetPackages Method for GetPackages
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiGetPackagesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetPackagesRequest
 */
 func (a *CreditAPIService) GetPackages(ctx context.Context, appId string) ApiGetPackagesRequest {
 	return ApiGetPackagesRequest{
 		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
+		ctx: ctx,
+		appId: appId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []CreditPackageDto
+//  @return []CreditPackageDto
 func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]CreditPackageDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []CreditPackageDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CreditPackageDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.GetPackages")
@@ -625,8 +622,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -636,8 +633,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -647,8 +644,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -658,8 +655,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -669,8 +666,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -680,8 +677,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -699,8 +696,8 @@ func (a *CreditAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]Credit
 }
 
 type ApiRefundRequest struct {
-	ctx              context.Context
-	ApiService       *CreditAPIService
+	ctx context.Context
+	ApiService *CreditAPIService
 	adjustCreditsDto *AdjustCreditsDto
 }
 
@@ -716,25 +713,24 @@ func (r ApiRefundRequest) Execute() (*AdjustCreditsResultDto, *http.Response, er
 /*
 Refund Method for Refund
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiRefundRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiRefundRequest
 */
 func (a *CreditAPIService) Refund(ctx context.Context) ApiRefundRequest {
 	return ApiRefundRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AdjustCreditsResultDto
+//  @return AdjustCreditsResultDto
 func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AdjustCreditsResultDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AdjustCreditsResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.Refund")
@@ -796,8 +792,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -807,8 +803,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -818,8 +814,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -829,8 +825,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -840,8 +836,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -851,8 +847,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -870,8 +866,8 @@ func (a *CreditAPIService) RefundExecute(r ApiRefundRequest) (*AdjustCreditsResu
 }
 
 type ApiSpendRequest struct {
-	ctx              context.Context
-	ApiService       *CreditAPIService
+	ctx context.Context
+	ApiService *CreditAPIService
 	adjustCreditsDto *AdjustCreditsDto
 }
 
@@ -887,25 +883,24 @@ func (r ApiSpendRequest) Execute() (*AdjustCreditsResultDto, *http.Response, err
 /*
 Spend Method for Spend
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiSpendRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSpendRequest
 */
 func (a *CreditAPIService) Spend(ctx context.Context) ApiSpendRequest {
 	return ApiSpendRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AdjustCreditsResultDto
+//  @return AdjustCreditsResultDto
 func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AdjustCreditsResultDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AdjustCreditsResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CreditAPIService.Spend")
@@ -967,8 +962,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -978,8 +973,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -989,8 +984,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1000,8 +995,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1011,8 +1006,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1022,8 +1017,8 @@ func (a *CreditAPIService) SpendExecute(r ApiSpendRequest) (*AdjustCreditsResult
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

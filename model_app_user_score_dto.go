@@ -20,17 +20,17 @@ var _ MappedNullable = &AppUserScoreDto{}
 
 // AppUserScoreDto struct for AppUserScoreDto
 type AppUserScoreDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	AppId                NullableString `json:"appId,omitempty"`
-	Score                *int32         `json:"score,omitempty"`
-	Comment              NullableString `json:"comment,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId NullableString `json:"appId,omitempty"`
+	Score *int32 `json:"score,omitempty"`
+	Comment NullableString `json:"comment,omitempty"`
 }
 
 // NewAppUserScoreDto instantiates a new AppUserScoreDto object
@@ -146,7 +146,6 @@ func (o *AppUserScoreDto) HasCreatorId() bool {
 func (o *AppUserScoreDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppUserScoreDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -189,7 +188,6 @@ func (o *AppUserScoreDto) HasLastModificationTime() bool {
 func (o *AppUserScoreDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppUserScoreDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -232,7 +230,6 @@ func (o *AppUserScoreDto) HasLastModifierId() bool {
 func (o *AppUserScoreDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppUserScoreDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -307,7 +304,6 @@ func (o *AppUserScoreDto) HasDeleterId() bool {
 func (o *AppUserScoreDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppUserScoreDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -350,7 +346,6 @@ func (o *AppUserScoreDto) HasDeletionTime() bool {
 func (o *AppUserScoreDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppUserScoreDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -393,7 +388,6 @@ func (o *AppUserScoreDto) HasAppId() bool {
 func (o *AppUserScoreDto) SetAppId(v string) {
 	o.AppId.Set(&v)
 }
-
 // SetAppIdNil sets the value for AppId to be an explicit nil
 func (o *AppUserScoreDto) SetAppIdNil() {
 	o.AppId.Set(nil)
@@ -468,7 +462,6 @@ func (o *AppUserScoreDto) HasComment() bool {
 func (o *AppUserScoreDto) SetComment(v string) {
 	o.Comment.Set(&v)
 }
-
 // SetCommentNil sets the value for Comment to be an explicit nil
 func (o *AppUserScoreDto) SetCommentNil() {
 	o.Comment.Set(nil)
@@ -480,7 +473,7 @@ func (o *AppUserScoreDto) UnsetComment() {
 }
 
 func (o AppUserScoreDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -560,3 +553,5 @@ func (v *NullableAppUserScoreDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

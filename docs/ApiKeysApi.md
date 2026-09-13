@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateApiKeys**](ApiKeysAPI.md#CreateApiKeys) | **Post** /api/api-keys |
-[**DeleteApiKeysById**](ApiKeysAPI.md#DeleteApiKeysById) | **Delete** /api/api-keys/{id} |
-[**GetApiKeysById**](ApiKeysAPI.md#GetApiKeysById) | **Get** /api/api-keys/{id} |
-[**GetApiKeysList**](ApiKeysAPI.md#GetApiKeysList) | **Get** /api/api-keys |
-[**UpdateApiKeys**](ApiKeysAPI.md#UpdateApiKeys) | **Put** /api/api-keys/{id} |
+[**CreateApiKeys**](ApiKeysAPI.md#CreateApiKeys) | **Post** /api/api-keys | 
+[**DeleteApiKeysById**](ApiKeysAPI.md#DeleteApiKeysById) | **Delete** /api/api-keys/{id} | 
+[**GetApiKeysById**](ApiKeysAPI.md#GetApiKeysById) | **Get** /api/api-keys/{id} | 
+[**GetApiKeysList**](ApiKeysAPI.md#GetApiKeysList) | **Get** /api/api-keys | 
+[**UpdateApiKeys**](ApiKeysAPI.md#UpdateApiKeys) | **Put** /api/api-keys/{id} | 
 
 
 
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateApiKeysRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiKeyCreateDto** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md) |  |
+ **apiKeyCreateDto** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md) |  | 
 
 ### Return type
 
@@ -95,7 +95,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +113,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -161,7 +161,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -256,9 +256,9 @@ Other parameters are passed through a pointer to a apiGetApiKeysListRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -297,7 +297,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	apiKeyUpdateDto := *openapiclient.NewApiKeyUpdateDto("Name_example") // ApiKeyUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -318,7 +318,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -328,7 +328,7 @@ Other parameters are passed through a pointer to a apiUpdateApiKeysRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **apiKeyUpdateDto** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md) |  |
+ **apiKeyUpdateDto** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md) |  | 
 
 ### Return type
 

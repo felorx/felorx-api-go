@@ -4,22 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Version** | Pointer to **NullableString** |  | [optional]
-**VersionName** | Pointer to **NullableString** | 版本名称 | [optional]
-**VersionCode** | Pointer to **int64** | 构建编号 | [optional]
-**Notes** | Pointer to **NullableString** |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**Key** | Pointer to **NullableString** |  | [optional]
-**RapidCode** | Pointer to **NullableString** |  | [optional]
-**Size** | Pointer to **NullableInt64** |  | [optional]
-**Hash** | Pointer to **NullableString** |  | [optional]
-**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional]
-**Publisher** | Pointer to [**AppPublisher**](AppPublisher.md) |  | [optional]
-**IsForceUpdate** | Pointer to **bool** |  | [optional]
-**AppId** | Pointer to **string** |  | [optional]
-**IsEnabled** | Pointer to **bool** |  | [optional]
-**Channel** | Pointer to [**ReleaseChannel**](ReleaseChannel.md) |  | [optional]
-**BuildRecordId** | Pointer to **NullableString** | 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode） | [optional]
+**Version** | Pointer to **NullableString** |  | [optional] 
+**VersionName** | Pointer to **NullableString** | 版本名称 | [optional] 
+**VersionCode** | Pointer to **int64** | 构建编号 | [optional] 
+**Notes** | Pointer to **NullableString** |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**Key** | Pointer to **NullableString** |  | [optional] 
+**RapidCode** | Pointer to **NullableString** |  | [optional] 
+**Size** | Pointer to **NullableInt64** |  | [optional] 
+**Hash** | Pointer to **NullableString** |  | [optional] 
+**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional] 
+**Architecture** | Pointer to **NullableString** |  | [optional] 
+**Publisher** | Pointer to [**AppPublisher**](AppPublisher.md) |  | [optional] 
+**IsForceUpdate** | Pointer to **bool** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional] 
+**IsEnabled** | Pointer to **bool** |  | [optional] 
+**Channel** | Pointer to [**ReleaseChannel**](ReleaseChannel.md) |  | [optional] 
+**BuildRecordId** | Pointer to **NullableString** | 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode） | [optional] 
 
 ## Methods
 
@@ -360,6 +361,41 @@ SetArtifactType sets ArtifactType field to given value.
 
 HasArtifactType returns a boolean if a field has been set.
 
+### GetArchitecture
+
+`func (o *CreateOrUpdateAppReleaseDto) GetArchitecture() string`
+
+GetArchitecture returns the Architecture field if non-nil, zero value otherwise.
+
+### GetArchitectureOk
+
+`func (o *CreateOrUpdateAppReleaseDto) GetArchitectureOk() (*string, bool)`
+
+GetArchitectureOk returns a tuple with the Architecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArchitecture
+
+`func (o *CreateOrUpdateAppReleaseDto) SetArchitecture(v string)`
+
+SetArchitecture sets Architecture field to given value.
+
+### HasArchitecture
+
+`func (o *CreateOrUpdateAppReleaseDto) HasArchitecture() bool`
+
+HasArchitecture returns a boolean if a field has been set.
+
+### SetArchitectureNil
+
+`func (o *CreateOrUpdateAppReleaseDto) SetArchitectureNil(b bool)`
+
+ SetArchitectureNil sets the value for Architecture to be an explicit nil
+
+### UnsetArchitecture
+`func (o *CreateOrUpdateAppReleaseDto) UnsetArchitecture()`
+
+UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
 ### GetPublisher
 
 `func (o *CreateOrUpdateAppReleaseDto) GetPublisher() AppPublisher`

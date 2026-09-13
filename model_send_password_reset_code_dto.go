@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,9 +21,9 @@ var _ MappedNullable = &SendPasswordResetCodeDto{}
 
 // SendPasswordResetCodeDto struct for SendPasswordResetCodeDto
 type SendPasswordResetCodeDto struct {
-	Email         string         `json:"email"`
-	AppName       string         `json:"appName"`
-	ReturnUrl     NullableString `json:"returnUrl,omitempty"`
+	Email string `json:"email"`
+	AppName string `json:"appName"`
+	ReturnUrl NullableString `json:"returnUrl,omitempty"`
 	ReturnUrlHash NullableString `json:"returnUrlHash,omitempty"`
 }
 
@@ -128,7 +128,6 @@ func (o *SendPasswordResetCodeDto) HasReturnUrl() bool {
 func (o *SendPasswordResetCodeDto) SetReturnUrl(v string) {
 	o.ReturnUrl.Set(&v)
 }
-
 // SetReturnUrlNil sets the value for ReturnUrl to be an explicit nil
 func (o *SendPasswordResetCodeDto) SetReturnUrlNil() {
 	o.ReturnUrl.Set(nil)
@@ -171,7 +170,6 @@ func (o *SendPasswordResetCodeDto) HasReturnUrlHash() bool {
 func (o *SendPasswordResetCodeDto) SetReturnUrlHash(v string) {
 	o.ReturnUrlHash.Set(&v)
 }
-
 // SetReturnUrlHashNil sets the value for ReturnUrlHash to be an explicit nil
 func (o *SendPasswordResetCodeDto) SetReturnUrlHashNil() {
 	o.ReturnUrlHash.Set(nil)
@@ -183,7 +181,7 @@ func (o *SendPasswordResetCodeDto) UnsetReturnUrlHash() {
 }
 
 func (o SendPasswordResetCodeDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,10 +215,10 @@ func (o *SendPasswordResetCodeDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -276,3 +274,5 @@ func (v *NullableSendPasswordResetCodeDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

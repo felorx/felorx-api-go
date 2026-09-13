@@ -19,16 +19,16 @@ var _ MappedNullable = &CreateUpdateMessageSourceRouteDto{}
 
 // CreateUpdateMessageSourceRouteDto struct for CreateUpdateMessageSourceRouteDto
 type CreateUpdateMessageSourceRouteDto struct {
-	Title       NullableString `json:"title,omitempty"`
+	Title NullableString `json:"title,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Path        NullableString `json:"path,omitempty"`
-	SourceId    *string        `json:"sourceId,omitempty"`
-	Extra       NullableString `json:"extra,omitempty"`
-	Anticrawler *bool          `json:"anticrawler,omitempty"`
-	Radar       *bool          `json:"radar,omitempty"`
-	Rssbud      *bool          `json:"rssbud,omitempty"`
-	IsPublished *bool          `json:"isPublished,omitempty"`
-	IconUrl     NullableString `json:"iconUrl,omitempty"`
+	Path NullableString `json:"path,omitempty"`
+	SourceId *string `json:"sourceId,omitempty"`
+	Extra NullableString `json:"extra,omitempty"`
+	Anticrawler *bool `json:"anticrawler,omitempty"`
+	Radar *bool `json:"radar,omitempty"`
+	Rssbud *bool `json:"rssbud,omitempty"`
+	IsPublished *bool `json:"isPublished,omitempty"`
+	IconUrl NullableString `json:"iconUrl,omitempty"`
 }
 
 // NewCreateUpdateMessageSourceRouteDto instantiates a new CreateUpdateMessageSourceRouteDto object
@@ -80,7 +80,6 @@ func (o *CreateUpdateMessageSourceRouteDto) HasTitle() bool {
 func (o *CreateUpdateMessageSourceRouteDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *CreateUpdateMessageSourceRouteDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -123,7 +122,6 @@ func (o *CreateUpdateMessageSourceRouteDto) HasDescription() bool {
 func (o *CreateUpdateMessageSourceRouteDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateUpdateMessageSourceRouteDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -166,7 +164,6 @@ func (o *CreateUpdateMessageSourceRouteDto) HasPath() bool {
 func (o *CreateUpdateMessageSourceRouteDto) SetPath(v string) {
 	o.Path.Set(&v)
 }
-
 // SetPathNil sets the value for Path to be an explicit nil
 func (o *CreateUpdateMessageSourceRouteDto) SetPathNil() {
 	o.Path.Set(nil)
@@ -241,7 +238,6 @@ func (o *CreateUpdateMessageSourceRouteDto) HasExtra() bool {
 func (o *CreateUpdateMessageSourceRouteDto) SetExtra(v string) {
 	o.Extra.Set(&v)
 }
-
 // SetExtraNil sets the value for Extra to be an explicit nil
 func (o *CreateUpdateMessageSourceRouteDto) SetExtraNil() {
 	o.Extra.Set(nil)
@@ -412,7 +408,6 @@ func (o *CreateUpdateMessageSourceRouteDto) HasIconUrl() bool {
 func (o *CreateUpdateMessageSourceRouteDto) SetIconUrl(v string) {
 	o.IconUrl.Set(&v)
 }
-
 // SetIconUrlNil sets the value for IconUrl to be an explicit nil
 func (o *CreateUpdateMessageSourceRouteDto) SetIconUrlNil() {
 	o.IconUrl.Set(nil)
@@ -424,7 +419,7 @@ func (o *CreateUpdateMessageSourceRouteDto) UnsetIconUrl() {
 }
 
 func (o CreateUpdateMessageSourceRouteDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -501,3 +496,5 @@ func (v *NullableCreateUpdateMessageSourceRouteDto) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

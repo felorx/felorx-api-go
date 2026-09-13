@@ -19,7 +19,7 @@ var _ MappedNullable = &NameValue{}
 
 // NameValue struct for NameValue
 type NameValue struct {
-	Name  NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Value NullableString `json:"value,omitempty"`
 }
 
@@ -72,7 +72,6 @@ func (o *NameValue) HasName() bool {
 func (o *NameValue) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *NameValue) SetNameNil() {
 	o.Name.Set(nil)
@@ -115,7 +114,6 @@ func (o *NameValue) HasValue() bool {
 func (o *NameValue) SetValue(v string) {
 	o.Value.Set(&v)
 }
-
 // SetValueNil sets the value for Value to be an explicit nil
 func (o *NameValue) SetValueNil() {
 	o.Value.Set(nil)
@@ -127,7 +125,7 @@ func (o *NameValue) UnsetValue() {
 }
 
 func (o NameValue) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableNameValue) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Reply** | **string** | 回复内容 |
+**Reply** | **string** | 回复内容 | 
 
 ## Methods
 

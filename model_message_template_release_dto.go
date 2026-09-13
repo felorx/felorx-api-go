@@ -20,22 +20,22 @@ var _ MappedNullable = &MessageTemplateReleaseDto{}
 
 // MessageTemplateReleaseDto struct for MessageTemplateReleaseDto
 type MessageTemplateReleaseDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	TemplateName         NullableString `json:"templateName,omitempty"`
-	Version              *int32         `json:"version,omitempty"`
-	Content              NullableString `json:"content,omitempty"`
-	SchemaVersion        *int32         `json:"schemaVersion,omitempty"`
-	ContentHash          NullableString `json:"contentHash,omitempty"`
-	Status               NullableString `json:"status,omitempty"`
-	PublishedAt          NullableTime   `json:"publishedAt,omitempty"`
-	TemplateId           *string        `json:"templateId,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	TemplateName NullableString `json:"templateName,omitempty"`
+	Version *int32 `json:"version,omitempty"`
+	Content NullableString `json:"content,omitempty"`
+	SchemaVersion *int32 `json:"schemaVersion,omitempty"`
+	ContentHash NullableString `json:"contentHash,omitempty"`
+	Status NullableString `json:"status,omitempty"`
+	PublishedAt NullableTime `json:"publishedAt,omitempty"`
+	TemplateId *string `json:"templateId,omitempty"`
 }
 
 // NewMessageTemplateReleaseDto instantiates a new MessageTemplateReleaseDto object
@@ -151,7 +151,6 @@ func (o *MessageTemplateReleaseDto) HasCreatorId() bool {
 func (o *MessageTemplateReleaseDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -194,7 +193,6 @@ func (o *MessageTemplateReleaseDto) HasLastModificationTime() bool {
 func (o *MessageTemplateReleaseDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -237,7 +235,6 @@ func (o *MessageTemplateReleaseDto) HasLastModifierId() bool {
 func (o *MessageTemplateReleaseDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -312,7 +309,6 @@ func (o *MessageTemplateReleaseDto) HasDeleterId() bool {
 func (o *MessageTemplateReleaseDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -355,7 +351,6 @@ func (o *MessageTemplateReleaseDto) HasDeletionTime() bool {
 func (o *MessageTemplateReleaseDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -398,7 +393,6 @@ func (o *MessageTemplateReleaseDto) HasTemplateName() bool {
 func (o *MessageTemplateReleaseDto) SetTemplateName(v string) {
 	o.TemplateName.Set(&v)
 }
-
 // SetTemplateNameNil sets the value for TemplateName to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetTemplateNameNil() {
 	o.TemplateName.Set(nil)
@@ -473,7 +467,6 @@ func (o *MessageTemplateReleaseDto) HasContent() bool {
 func (o *MessageTemplateReleaseDto) SetContent(v string) {
 	o.Content.Set(&v)
 }
-
 // SetContentNil sets the value for Content to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetContentNil() {
 	o.Content.Set(nil)
@@ -548,7 +541,6 @@ func (o *MessageTemplateReleaseDto) HasContentHash() bool {
 func (o *MessageTemplateReleaseDto) SetContentHash(v string) {
 	o.ContentHash.Set(&v)
 }
-
 // SetContentHashNil sets the value for ContentHash to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetContentHashNil() {
 	o.ContentHash.Set(nil)
@@ -591,7 +583,6 @@ func (o *MessageTemplateReleaseDto) HasStatus() bool {
 func (o *MessageTemplateReleaseDto) SetStatus(v string) {
 	o.Status.Set(&v)
 }
-
 // SetStatusNil sets the value for Status to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetStatusNil() {
 	o.Status.Set(nil)
@@ -634,7 +625,6 @@ func (o *MessageTemplateReleaseDto) HasPublishedAt() bool {
 func (o *MessageTemplateReleaseDto) SetPublishedAt(v time.Time) {
 	o.PublishedAt.Set(&v)
 }
-
 // SetPublishedAtNil sets the value for PublishedAt to be an explicit nil
 func (o *MessageTemplateReleaseDto) SetPublishedAtNil() {
 	o.PublishedAt.Set(nil)
@@ -678,7 +668,7 @@ func (o *MessageTemplateReleaseDto) SetTemplateId(v string) {
 }
 
 func (o MessageTemplateReleaseDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -773,3 +763,5 @@ func (v *NullableMessageTemplateReleaseDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

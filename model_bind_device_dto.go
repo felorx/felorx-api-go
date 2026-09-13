@@ -19,12 +19,14 @@ var _ MappedNullable = &BindDeviceDto{}
 
 // BindDeviceDto struct for BindDeviceDto
 type BindDeviceDto struct {
-	Token            NullableString `json:"token,omitempty"`
-	IsPhysicalDevice *bool          `json:"isPhysicalDevice,omitempty"`
-	Name             NullableString `json:"name,omitempty"`
-	Platform         *AppPlatform   `json:"platform,omitempty"`
-	Brand            NullableString `json:"brand,omitempty"`
-	SystemVersion    NullableString `json:"systemVersion,omitempty"`
+	Token NullableString `json:"token,omitempty"`
+	IsPhysicalDevice *bool `json:"isPhysicalDevice,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Brand NullableString `json:"brand,omitempty"`
+	SystemVersion NullableString `json:"systemVersion,omitempty"`
+	// 发起绑定的应用名。服务端优先使用访问令牌中的可信 app_name 声明。
+	AppName NullableString `json:"appName,omitempty"`
 }
 
 // NewBindDeviceDto instantiates a new BindDeviceDto object
@@ -76,7 +78,6 @@ func (o *BindDeviceDto) HasToken() bool {
 func (o *BindDeviceDto) SetToken(v string) {
 	o.Token.Set(&v)
 }
-
 // SetTokenNil sets the value for Token to be an explicit nil
 func (o *BindDeviceDto) SetTokenNil() {
 	o.Token.Set(nil)
@@ -151,7 +152,6 @@ func (o *BindDeviceDto) HasName() bool {
 func (o *BindDeviceDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *BindDeviceDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -226,7 +226,6 @@ func (o *BindDeviceDto) HasBrand() bool {
 func (o *BindDeviceDto) SetBrand(v string) {
 	o.Brand.Set(&v)
 }
-
 // SetBrandNil sets the value for Brand to be an explicit nil
 func (o *BindDeviceDto) SetBrandNil() {
 	o.Brand.Set(nil)
@@ -269,7 +268,6 @@ func (o *BindDeviceDto) HasSystemVersion() bool {
 func (o *BindDeviceDto) SetSystemVersion(v string) {
 	o.SystemVersion.Set(&v)
 }
-
 // SetSystemVersionNil sets the value for SystemVersion to be an explicit nil
 func (o *BindDeviceDto) SetSystemVersionNil() {
 	o.SystemVersion.Set(nil)
@@ -280,8 +278,50 @@ func (o *BindDeviceDto) UnsetSystemVersion() {
 	o.SystemVersion.Unset()
 }
 
+// GetAppName returns the AppName field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *BindDeviceDto) GetAppName() string {
+	if o == nil || IsNil(o.AppName.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.AppName.Get()
+}
+
+// GetAppNameOk returns a tuple with the AppName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *BindDeviceDto) GetAppNameOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.AppName.Get(), o.AppName.IsSet()
+}
+
+// HasAppName returns a boolean if a field has been set.
+func (o *BindDeviceDto) HasAppName() bool {
+	if o != nil && o.AppName.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetAppName gets a reference to the given NullableString and assigns it to the AppName field.
+func (o *BindDeviceDto) SetAppName(v string) {
+	o.AppName.Set(&v)
+}
+// SetAppNameNil sets the value for AppName to be an explicit nil
+func (o *BindDeviceDto) SetAppNameNil() {
+	o.AppName.Set(nil)
+}
+
+// UnsetAppName ensures that no value is present for AppName, not even an explicit nil
+func (o *BindDeviceDto) UnsetAppName() {
+	o.AppName.Unset()
+}
+
 func (o BindDeviceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -307,6 +347,9 @@ func (o BindDeviceDto) ToMap() (map[string]interface{}, error) {
 	}
 	if o.SystemVersion.IsSet() {
 		toSerialize["systemVersion"] = o.SystemVersion.Get()
+	}
+	if o.AppName.IsSet() {
+		toSerialize["appName"] = o.AppName.Get()
 	}
 	return toSerialize, nil
 }
@@ -346,3 +389,5 @@ func (v *NullableBindDeviceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -19,8 +19,8 @@ var _ MappedNullable = &ApiKeyDtoPagedResultDto{}
 
 // ApiKeyDtoPagedResultDto struct for ApiKeyDtoPagedResultDto
 type ApiKeyDtoPagedResultDto struct {
-	Items      []ApiKeyDto `json:"items,omitempty"`
-	TotalCount *int64      `json:"totalCount,omitempty"`
+	Items []ApiKeyDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewApiKeyDtoPagedResultDto instantiates a new ApiKeyDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *ApiKeyDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o ApiKeyDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableApiKeyDtoPagedResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

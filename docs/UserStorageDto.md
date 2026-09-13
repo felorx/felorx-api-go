@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** | 所属应用 | [optional]
-**AppName** | Pointer to **NullableString** | 应用名称 | [optional]
-**PriceNaming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional]
-**Size** | Pointer to **int64** | 用户存储容量 | [optional]
-**CurrentSize** | Pointer to **int64** | 当前使用大小 | [optional]
-**TotalCount** | Pointer to **int32** |  | [optional]
-**SingleFileMaxSize** | Pointer to **int64** | 单文件最大大小 | [optional]
-**ExpireAt** | Pointer to **NullableTime** | 过期时间, 为空表示永久有效, 一般是订阅产品的过期时间 | [optional]
-**Items** | Pointer to [**[]UserStorageItemDto**](UserStorageItemDto.md) |  | [optional]
+**AppId** | Pointer to **string** | 所属应用 | [optional] 
+**AppName** | Pointer to **NullableString** | 应用名称 | [optional] 
+**PriceNaming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional] 
+**Size** | Pointer to **int64** | 用户存储容量 | [optional] 
+**CurrentSize** | Pointer to **int64** | 当前使用大小 | [optional] 
+**TotalCount** | Pointer to **int32** |  | [optional] 
+**SingleFileMaxSize** | Pointer to **int64** | 单文件最大大小 | [optional] 
+**ExpireAt** | Pointer to **NullableTime** | 过期时间, 为空表示永久有效, 一般是订阅产品的过期时间 | [optional] 
+**Items** | Pointer to [**[]UserStorageItemDto**](UserStorageItemDto.md) |  | [optional] 
 
 ## Methods
 

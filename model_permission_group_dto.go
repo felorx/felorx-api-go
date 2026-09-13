@@ -19,11 +19,11 @@ var _ MappedNullable = &PermissionGroupDto{}
 
 // PermissionGroupDto struct for PermissionGroupDto
 type PermissionGroupDto struct {
-	Name                NullableString           `json:"name,omitempty"`
-	DisplayName         NullableString           `json:"displayName,omitempty"`
-	DisplayNameKey      NullableString           `json:"displayNameKey,omitempty"`
-	DisplayNameResource NullableString           `json:"displayNameResource,omitempty"`
-	Permissions         []PermissionGrantInfoDto `json:"permissions,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	DisplayNameKey NullableString `json:"displayNameKey,omitempty"`
+	DisplayNameResource NullableString `json:"displayNameResource,omitempty"`
+	Permissions []PermissionGrantInfoDto `json:"permissions,omitempty"`
 }
 
 // NewPermissionGroupDto instantiates a new PermissionGroupDto object
@@ -75,7 +75,6 @@ func (o *PermissionGroupDto) HasName() bool {
 func (o *PermissionGroupDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *PermissionGroupDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -118,7 +117,6 @@ func (o *PermissionGroupDto) HasDisplayName() bool {
 func (o *PermissionGroupDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *PermissionGroupDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -161,7 +159,6 @@ func (o *PermissionGroupDto) HasDisplayNameKey() bool {
 func (o *PermissionGroupDto) SetDisplayNameKey(v string) {
 	o.DisplayNameKey.Set(&v)
 }
-
 // SetDisplayNameKeyNil sets the value for DisplayNameKey to be an explicit nil
 func (o *PermissionGroupDto) SetDisplayNameKeyNil() {
 	o.DisplayNameKey.Set(nil)
@@ -204,7 +201,6 @@ func (o *PermissionGroupDto) HasDisplayNameResource() bool {
 func (o *PermissionGroupDto) SetDisplayNameResource(v string) {
 	o.DisplayNameResource.Set(&v)
 }
-
 // SetDisplayNameResourceNil sets the value for DisplayNameResource to be an explicit nil
 func (o *PermissionGroupDto) SetDisplayNameResourceNil() {
 	o.DisplayNameResource.Set(nil)
@@ -249,7 +245,7 @@ func (o *PermissionGroupDto) SetPermissions(v []PermissionGrantInfoDto) {
 }
 
 func (o PermissionGroupDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -311,3 +307,5 @@ func (v *NullablePermissionGroupDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

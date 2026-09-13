@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Naming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional]
-**Description** | Pointer to **NullableString** | 简单描述  适用于个人网站和任何想用基本的聊天方式与游客交流的人。  适用于希望改善客户关系的早期创业公司。  为需要全功能解决方案与客户沟通的公司而设。 | [optional]
-**AppId** | Pointer to **string** | APPID | [optional]
-**SortIndex** | Pointer to **int32** | 排序 | [optional]
-**Items** | Pointer to [**[]AppPricingItemValueDto**](AppPricingItemValueDto.md) | 收费点 | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Naming** | Pointer to [**AppPriceNaming**](AppPriceNaming.md) |  | [optional] 
+**Description** | Pointer to **NullableString** | 简单描述  适用于个人网站和任何想用基本的聊天方式与游客交流的人。  适用于希望改善客户关系的早期创业公司。  为需要全功能解决方案与客户沟通的公司而设。 | [optional] 
+**AppId** | Pointer to **string** | APPID | [optional] 
+**SortIndex** | Pointer to **int32** | 排序 | [optional] 
+**Items** | Pointer to [**[]AppPricingItemValueDto**](AppPricingItemValueDto.md) | 收费点 | [optional] 
 
 ## Methods
 

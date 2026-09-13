@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_MessageSourceAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_MessageSourceAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceAPIService CreateMessageSource", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageSourceAPI.CreateMessageSource(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_MessageSourceAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceAPIService DeleteMessageSourceById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_MessageSourceAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceAPIService GetMessageSourceById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +63,7 @@ func Test_felorx_MessageSourceAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceAPIService GetMessageSourceList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageSourceAPI.GetMessageSourceList(context.Background()).Execute()
 
@@ -75,7 +75,7 @@ func Test_felorx_MessageSourceAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceAPIService UpdateMessageSource", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

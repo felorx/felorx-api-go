@@ -4,17 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** | 应用ID |
-**Version** | **string** | 版本号 |
-**Branch** | **string** | 分支名称 |
-**CommitHash** | **string** | 提交哈希 |
-**Trigger** | Pointer to [**BuildTrigger**](BuildTrigger.md) |  | [optional]
-**Platform** | [**AppPlatform**](AppPlatform.md) |  |
-**ArtifactType** | [**ArtifactType**](ArtifactType.md) |  |
-**Environment** | Pointer to **NullableString** | 环境 | [optional]
-**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional]
-**CiBuildId** | Pointer to **NullableString** | CI/CD 构建ID | [optional]
-**CiBuildUrl** | Pointer to **NullableString** | CI/CD 构建URL | [optional]
+**AppId** | **string** | 应用ID | 
+**Version** | **string** | 版本号 | 
+**Branch** | **string** | 分支名称 | 
+**CommitHash** | **string** | 提交哈希 | 
+**Trigger** | Pointer to [**BuildTrigger**](BuildTrigger.md) |  | [optional] 
+**Platform** | [**AppPlatform**](AppPlatform.md) |  | 
+**ArtifactType** | [**ArtifactType**](ArtifactType.md) |  | 
+**Architecture** | Pointer to **NullableString** | 目标架构（x64、arm64、arm、riscv64、universal 或 multiarch）。 | [optional] 
+**Environment** | Pointer to **NullableString** | 环境 | [optional] 
+**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional] 
+**CiBuildId** | Pointer to **NullableString** | CI/CD 构建ID | [optional] 
+**CiBuildUrl** | Pointer to **NullableString** | CI/CD 构建URL | [optional] 
 
 ## Methods
 
@@ -180,6 +181,41 @@ and a boolean to check if the value has been set.
 SetArtifactType sets ArtifactType field to given value.
 
 
+### GetArchitecture
+
+`func (o *CreateBuildRecordDto) GetArchitecture() string`
+
+GetArchitecture returns the Architecture field if non-nil, zero value otherwise.
+
+### GetArchitectureOk
+
+`func (o *CreateBuildRecordDto) GetArchitectureOk() (*string, bool)`
+
+GetArchitectureOk returns a tuple with the Architecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArchitecture
+
+`func (o *CreateBuildRecordDto) SetArchitecture(v string)`
+
+SetArchitecture sets Architecture field to given value.
+
+### HasArchitecture
+
+`func (o *CreateBuildRecordDto) HasArchitecture() bool`
+
+HasArchitecture returns a boolean if a field has been set.
+
+### SetArchitectureNil
+
+`func (o *CreateBuildRecordDto) SetArchitectureNil(b bool)`
+
+ SetArchitectureNil sets the value for Architecture to be an explicit nil
+
+### UnsetArchitecture
+`func (o *CreateBuildRecordDto) UnsetArchitecture()`
+
+UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
 ### GetEnvironment
 
 `func (o *CreateBuildRecordDto) GetEnvironment() string`

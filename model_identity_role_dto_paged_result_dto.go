@@ -19,8 +19,8 @@ var _ MappedNullable = &IdentityRoleDtoPagedResultDto{}
 
 // IdentityRoleDtoPagedResultDto struct for IdentityRoleDtoPagedResultDto
 type IdentityRoleDtoPagedResultDto struct {
-	Items      []IdentityRoleDto `json:"items,omitempty"`
-	TotalCount *int64            `json:"totalCount,omitempty"`
+	Items []IdentityRoleDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewIdentityRoleDtoPagedResultDto instantiates a new IdentityRoleDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *IdentityRoleDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o IdentityRoleDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableIdentityRoleDtoPagedResultDto) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

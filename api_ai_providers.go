@@ -19,375 +19,49 @@ import (
 	"strings"
 )
 
+
 // AiProvidersAPIService AiProvidersAPI service
 type AiProvidersAPIService service
 
-type ApiAiProvidersSetDefaultModelRequest struct {
-	ctx                  context.Context
-	ApiService           *AiProvidersAPIService
-	setDefaultAiModelDto *SetDefaultAiModelDto
-}
-
-func (r ApiAiProvidersSetDefaultModelRequest) SetDefaultAiModelDto(setDefaultAiModelDto SetDefaultAiModelDto) ApiAiProvidersSetDefaultModelRequest {
-	r.setDefaultAiModelDto = &setDefaultAiModelDto
-	return r
-}
-
-func (r ApiAiProvidersSetDefaultModelRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.AiProvidersSetDefaultModelExecute(r)
-}
-
-/*
-AiProvidersSetDefaultModel Method for AiProvidersSetDefaultModel
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiAiProvidersSetDefaultModelRequest
-*/
-func (a *AiProvidersAPIService) AiProvidersSetDefaultModel(ctx context.Context) ApiAiProvidersSetDefaultModelRequest {
-	return ApiAiProvidersSetDefaultModelRequest{
-		ApiService: a,
-		ctx:        ctx,
-	}
-}
-
-// Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProvidersAPIService) AiProvidersSetDefaultModelExecute(r ApiAiProvidersSetDefaultModelRequest) (*AiProviderDto, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.AiProvidersSetDefaultModel")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/ai/providers/default-model"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.setDefaultAiModelDto
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiAiProvidersSetEnabledRequest struct {
-	ctx                     context.Context
-	ApiService              *AiProvidersAPIService
-	id                      string
-	setAiProviderEnabledDto *SetAiProviderEnabledDto
-}
-
-func (r ApiAiProvidersSetEnabledRequest) SetAiProviderEnabledDto(setAiProviderEnabledDto SetAiProviderEnabledDto) ApiAiProvidersSetEnabledRequest {
-	r.setAiProviderEnabledDto = &setAiProviderEnabledDto
-	return r
-}
-
-func (r ApiAiProvidersSetEnabledRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.AiProvidersSetEnabledExecute(r)
-}
-
-/*
-AiProvidersSetEnabled Method for AiProvidersSetEnabled
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiAiProvidersSetEnabledRequest
-*/
-func (a *AiProvidersAPIService) AiProvidersSetEnabled(ctx context.Context, id string) ApiAiProvidersSetEnabledRequest {
-	return ApiAiProvidersSetEnabledRequest{
-		ApiService: a,
-		ctx:        ctx,
-		id:         id,
-	}
-}
-
-// Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProvidersAPIService) AiProvidersSetEnabledExecute(r ApiAiProvidersSetEnabledRequest) (*AiProviderDto, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.AiProvidersSetEnabled")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/ai/providers/{id}/enabled"
-	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.setAiProviderEnabledDto
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiAiProvidersTestRequest struct {
-	ctx               context.Context
-	ApiService        *AiProvidersAPIService
-	id                string
-	testAiProviderDto *TestAiProviderDto
-}
-
-func (r ApiAiProvidersTestRequest) TestAiProviderDto(testAiProviderDto TestAiProviderDto) ApiAiProvidersTestRequest {
-	r.testAiProviderDto = &testAiProviderDto
-	return r
-}
-
-func (r ApiAiProvidersTestRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.AiProvidersTestExecute(r)
-}
-
-/*
-AiProvidersTest Method for AiProvidersTest
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiAiProvidersTestRequest
-*/
-func (a *AiProvidersAPIService) AiProvidersTest(ctx context.Context, id string) ApiAiProvidersTestRequest {
-	return ApiAiProvidersTestRequest{
-		ApiService: a,
-		ctx:        ctx,
-		id:         id,
-	}
-}
-
-// Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProvidersAPIService) AiProvidersTestExecute(r ApiAiProvidersTestRequest) (*AiProviderDto, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.AiProvidersTest")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/ai/providers/{id}/test"
-	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	// body params
-	localVarPostBody = r.testAiProviderDto
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
-type ApiCreateRequest struct {
-	ctx                         context.Context
-	ApiService                  *AiProvidersAPIService
+type ApiCreatePostApiAiProvidersRequest struct {
+	ctx context.Context
+	ApiService *AiProvidersAPIService
 	createOrUpdateAiProviderDto *CreateOrUpdateAiProviderDto
 }
 
-func (r ApiCreateRequest) CreateOrUpdateAiProviderDto(createOrUpdateAiProviderDto CreateOrUpdateAiProviderDto) ApiCreateRequest {
+func (r ApiCreatePostApiAiProvidersRequest) CreateOrUpdateAiProviderDto(createOrUpdateAiProviderDto CreateOrUpdateAiProviderDto) ApiCreatePostApiAiProvidersRequest {
 	r.createOrUpdateAiProviderDto = &createOrUpdateAiProviderDto
 	return r
 }
 
-func (r ApiCreateRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.CreateExecute(r)
+func (r ApiCreatePostApiAiProvidersRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.CreatePostApiAiProvidersExecute(r)
 }
 
 /*
-Create Method for Create
+CreatePostApiAiProviders Method for CreatePostApiAiProviders
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreatePostApiAiProvidersRequest
 */
-func (a *AiProvidersAPIService) Create(ctx context.Context) ApiCreateRequest {
-	return ApiCreateRequest{
+func (a *AiProvidersAPIService) CreatePostApiAiProviders(ctx context.Context) ApiCreatePostApiAiProvidersRequest {
+	return ApiCreatePostApiAiProvidersRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProvidersAPIService) CreateExecute(r ApiCreateRequest) (*AiProviderDto, *http.Response, error) {
+//  @return AiProviderDto
+func (a *AiProvidersAPIService) CreatePostApiAiProvidersExecute(r ApiCreatePostApiAiProvidersRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.Create")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.CreatePostApiAiProviders")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -455,9 +129,9 @@ func (a *AiProvidersAPIService) CreateExecute(r ApiCreateRequest) (*AiProviderDt
 }
 
 type ApiDeleteByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AiProvidersAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteByIdRequest) Execute() (*http.Response, error) {
@@ -467,24 +141,24 @@ func (r ApiDeleteByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteById Method for DeleteById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteByIdRequest
 */
 func (a *AiProvidersAPIService) DeleteById(ctx context.Context, id string) ApiDeleteByIdRequest {
 	return ApiDeleteByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AiProvidersAPIService) DeleteByIdExecute(r ApiDeleteByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.DeleteById")
@@ -545,9 +219,9 @@ func (a *AiProvidersAPIService) DeleteByIdExecute(r ApiDeleteByIdRequest) (*http
 }
 
 type ApiGetByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AiProvidersAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetByIdRequest) Execute() (*AiProviderDto, *http.Response, error) {
@@ -557,27 +231,26 @@ func (r ApiGetByIdRequest) Execute() (*AiProviderDto, *http.Response, error) {
 /*
 GetById Method for GetById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetByIdRequest
 */
 func (a *AiProvidersAPIService) GetById(ctx context.Context, id string) ApiGetByIdRequest {
 	return ApiGetByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
+//  @return AiProviderDto
 func (a *AiProvidersAPIService) GetByIdExecute(r ApiGetByIdRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.GetById")
@@ -647,16 +320,16 @@ func (a *AiProvidersAPIService) GetByIdExecute(r ApiGetByIdRequest) (*AiProvider
 }
 
 type ApiGetListRequest struct {
-	ctx            context.Context
-	ApiService     *AiProvidersAPIService
-	filter         *string
-	providerType   *AiProviderType
-	providerType2  *AiProviderType
-	capability     *AiCapability
-	enabled        *bool
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AiProvidersAPIService
+	filter *string
+	providerType *AiProviderType
+	providerType2 *AiProviderType
+	capability *AiCapability
+	enabled *bool
+	skipCount *int32
 	maxResultCount *int32
-	sorting        *string
+	sorting *string
 }
 
 func (r ApiGetListRequest) Filter(filter string) ApiGetListRequest {
@@ -706,25 +379,24 @@ func (r ApiGetListRequest) Execute() (*AiProviderDtoPagedResultDto, *http.Respon
 /*
 GetList Method for GetList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetListRequest
 */
 func (a *AiProvidersAPIService) GetList(ctx context.Context) ApiGetListRequest {
 	return ApiGetListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDtoPagedResultDto
+//  @return AiProviderDtoPagedResultDto
 func (a *AiProvidersAPIService) GetListExecute(r ApiGetListRequest) (*AiProviderDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.GetList")
@@ -756,16 +428,16 @@ func (a *AiProvidersAPIService) GetListExecute(r ApiGetListRequest) (*AiProvider
 	if r.skipCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "skipCount", r.skipCount, "form", "")
 	} else {
-		var defaultValue int32 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "skipCount", defaultValue, "form", "")
-		r.skipCount = &defaultValue
+        var defaultValue int32 = 0
+        parameterAddToHeaderOrQuery(localVarQueryParams, "skipCount", defaultValue, "form", "")
+        r.skipCount = &defaultValue
 	}
 	if r.maxResultCount != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "maxResultCount", r.maxResultCount, "form", "")
 	} else {
-		var defaultValue int32 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maxResultCount", defaultValue, "form", "")
-		r.maxResultCount = &defaultValue
+        var defaultValue int32 = 10
+        parameterAddToHeaderOrQuery(localVarQueryParams, "maxResultCount", defaultValue, "form", "")
+        r.maxResultCount = &defaultValue
 	}
 	if r.sorting != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sorting", r.sorting, "form", "")
@@ -824,10 +496,333 @@ func (a *AiProvidersAPIService) GetListExecute(r ApiGetListRequest) (*AiProvider
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest struct {
+	ctx context.Context
+	ApiService *AiProvidersAPIService
+	setDefaultAiModelDto *SetDefaultAiModelDto
+}
+
+func (r ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest) SetDefaultAiModelDto(setDefaultAiModelDto SetDefaultAiModelDto) ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest {
+	r.setDefaultAiModelDto = &setDefaultAiModelDto
+	return r
+}
+
+func (r ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.SetDefaultModelPostApiAiProvidersDefaultModelExecute(r)
+}
+
+/*
+SetDefaultModelPostApiAiProvidersDefaultModel Method for SetDefaultModelPostApiAiProvidersDefaultModel
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest
+*/
+func (a *AiProvidersAPIService) SetDefaultModelPostApiAiProvidersDefaultModel(ctx context.Context) ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest {
+	return ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return AiProviderDto
+func (a *AiProvidersAPIService) SetDefaultModelPostApiAiProvidersDefaultModelExecute(r ApiSetDefaultModelPostApiAiProvidersDefaultModelRequest) (*AiProviderDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.SetDefaultModelPostApiAiProvidersDefaultModel")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/api/ai/providers/default-model"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.setDefaultAiModelDto
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiSetEnabledPostApiAiProvidersIdEnabledRequest struct {
+	ctx context.Context
+	ApiService *AiProvidersAPIService
+	id string
+	setAiProviderEnabledDto *SetAiProviderEnabledDto
+}
+
+func (r ApiSetEnabledPostApiAiProvidersIdEnabledRequest) SetAiProviderEnabledDto(setAiProviderEnabledDto SetAiProviderEnabledDto) ApiSetEnabledPostApiAiProvidersIdEnabledRequest {
+	r.setAiProviderEnabledDto = &setAiProviderEnabledDto
+	return r
+}
+
+func (r ApiSetEnabledPostApiAiProvidersIdEnabledRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.SetEnabledPostApiAiProvidersIdEnabledExecute(r)
+}
+
+/*
+SetEnabledPostApiAiProvidersIdEnabled Method for SetEnabledPostApiAiProvidersIdEnabled
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiSetEnabledPostApiAiProvidersIdEnabledRequest
+*/
+func (a *AiProvidersAPIService) SetEnabledPostApiAiProvidersIdEnabled(ctx context.Context, id string) ApiSetEnabledPostApiAiProvidersIdEnabledRequest {
+	return ApiSetEnabledPostApiAiProvidersIdEnabledRequest{
+		ApiService: a,
+		ctx: ctx,
+		id: id,
+	}
+}
+
+// Execute executes the request
+//  @return AiProviderDto
+func (a *AiProvidersAPIService) SetEnabledPostApiAiProvidersIdEnabledExecute(r ApiSetEnabledPostApiAiProvidersIdEnabledRequest) (*AiProviderDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.SetEnabledPostApiAiProvidersIdEnabled")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/api/ai/providers/{id}/enabled"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.setAiProviderEnabledDto
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiTestPostApiAiProvidersIdTestRequest struct {
+	ctx context.Context
+	ApiService *AiProvidersAPIService
+	id string
+	testAiProviderDto *TestAiProviderDto
+}
+
+func (r ApiTestPostApiAiProvidersIdTestRequest) TestAiProviderDto(testAiProviderDto TestAiProviderDto) ApiTestPostApiAiProvidersIdTestRequest {
+	r.testAiProviderDto = &testAiProviderDto
+	return r
+}
+
+func (r ApiTestPostApiAiProvidersIdTestRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.TestPostApiAiProvidersIdTestExecute(r)
+}
+
+/*
+TestPostApiAiProvidersIdTest Method for TestPostApiAiProvidersIdTest
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiTestPostApiAiProvidersIdTestRequest
+*/
+func (a *AiProvidersAPIService) TestPostApiAiProvidersIdTest(ctx context.Context, id string) ApiTestPostApiAiProvidersIdTestRequest {
+	return ApiTestPostApiAiProvidersIdTestRequest{
+		ApiService: a,
+		ctx: ctx,
+		id: id,
+	}
+}
+
+// Execute executes the request
+//  @return AiProviderDto
+func (a *AiProvidersAPIService) TestPostApiAiProvidersIdTestExecute(r ApiTestPostApiAiProvidersIdTestRequest) (*AiProviderDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.TestPostApiAiProvidersIdTest")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/api/ai/providers/{id}/test"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", url.PathEscape(parameterValueToString(r.id, "id")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json", "text/json", "application/*+json"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.testAiProviderDto
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUpdateRequest struct {
-	ctx                         context.Context
-	ApiService                  *AiProvidersAPIService
-	id                          string
+	ctx context.Context
+	ApiService *AiProvidersAPIService
+	id string
 	createOrUpdateAiProviderDto *CreateOrUpdateAiProviderDto
 }
 
@@ -843,27 +838,26 @@ func (r ApiUpdateRequest) Execute() (*AiProviderDto, *http.Response, error) {
 /*
 Update Method for Update
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateRequest
 */
 func (a *AiProvidersAPIService) Update(ctx context.Context, id string) ApiUpdateRequest {
 	return ApiUpdateRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
+//  @return AiProviderDto
 func (a *AiProvidersAPIService) UpdateExecute(r ApiUpdateRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProvidersAPIService.Update")

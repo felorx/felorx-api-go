@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** |  |
-**PackageId** | **string** |  |
-**CheckoutMode** | Pointer to **NullableString** |  | [optional]
-**ReturnUrl** | Pointer to **NullableString** |  | [optional]
-**QuitUrl** | Pointer to **NullableString** |  | [optional]
+**AppId** | **string** |  | 
+**PackageId** | **string** |  | 
+**CheckoutMode** | Pointer to **NullableString** |  | [optional] 
+**ReturnUrl** | Pointer to **NullableString** |  | [optional] 
+**QuitUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

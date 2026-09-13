@@ -4,34 +4,36 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**AppId** | Pointer to **string** | 应用ID | [optional]
-**AppName** | Pointer to **NullableString** | 应用名称 | [optional]
-**Version** | Pointer to **NullableString** | 版本号 | [optional]
-**Branch** | Pointer to **NullableString** | 分支名称 | [optional]
-**CommitHash** | Pointer to **NullableString** | 提交哈希 | [optional]
-**Trigger** | Pointer to [**BuildTrigger**](BuildTrigger.md) |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional]
-**Environment** | Pointer to **NullableString** | 环境 | [optional]
-**BuildNumber** | Pointer to **NullableInt64** | 构建号 | [optional]
-**Status** | Pointer to [**BuildStatus**](BuildStatus.md) |  | [optional]
-**StartedAt** | Pointer to **time.Time** | 开始时间 | [optional]
-**CompletedAt** | Pointer to **NullableTime** | 结束时间 | [optional]
-**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional]
-**ArtifactUrl** | Pointer to **NullableString** | 构建产物下载地址 | [optional]
-**ArtifactSize** | Pointer to **NullableInt64** | 构建产物大小 (字节) | [optional]
-**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional]
-**CiBuildId** | Pointer to **NullableString** | CI/CD 构建ID | [optional]
-**CiBuildUrl** | Pointer to **NullableString** | CI/CD 构建URL | [optional]
-**Duration** | Pointer to **NullableInt32** | 构建持续时间 (秒) | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**AppId** | Pointer to **string** | 应用ID | [optional] 
+**AppName** | Pointer to **NullableString** | 应用名称 | [optional] 
+**Version** | Pointer to **NullableString** | 版本号 | [optional] 
+**Branch** | Pointer to **NullableString** | 分支名称 | [optional] 
+**CommitHash** | Pointer to **NullableString** | 提交哈希 | [optional] 
+**Trigger** | Pointer to [**BuildTrigger**](BuildTrigger.md) |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional] 
+**Architecture** | Pointer to **NullableString** | 目标架构；空值或空字符串表示通用制品。 | [optional] 
+**Environment** | Pointer to **NullableString** | 环境 | [optional] 
+**BuildNumber** | Pointer to **NullableInt64** | 构建号 | [optional] 
+**Status** | Pointer to [**BuildStatus**](BuildStatus.md) |  | [optional] 
+**StartedAt** | Pointer to **time.Time** | 开始时间 | [optional] 
+**CompletedAt** | Pointer to **NullableTime** | 结束时间 | [optional] 
+**Logs** | Pointer to **NullableString** | 构建日志 | [optional] 
+**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional] 
+**ArtifactUrl** | Pointer to **NullableString** | 构建产物下载地址 | [optional] 
+**ArtifactSize** | Pointer to **NullableInt64** | 构建产物大小 (字节) | [optional] 
+**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional] 
+**CiBuildId** | Pointer to **NullableString** | CI/CD 构建ID | [optional] 
+**CiBuildUrl** | Pointer to **NullableString** | CI/CD 构建URL | [optional] 
+**Duration** | Pointer to **NullableInt32** | 构建持续时间 (秒) | [optional] 
 
 ## Methods
 
@@ -542,6 +544,41 @@ SetArtifactType sets ArtifactType field to given value.
 
 HasArtifactType returns a boolean if a field has been set.
 
+### GetArchitecture
+
+`func (o *BuildRecordDto) GetArchitecture() string`
+
+GetArchitecture returns the Architecture field if non-nil, zero value otherwise.
+
+### GetArchitectureOk
+
+`func (o *BuildRecordDto) GetArchitectureOk() (*string, bool)`
+
+GetArchitectureOk returns a tuple with the Architecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArchitecture
+
+`func (o *BuildRecordDto) SetArchitecture(v string)`
+
+SetArchitecture sets Architecture field to given value.
+
+### HasArchitecture
+
+`func (o *BuildRecordDto) HasArchitecture() bool`
+
+HasArchitecture returns a boolean if a field has been set.
+
+### SetArchitectureNil
+
+`func (o *BuildRecordDto) SetArchitectureNil(b bool)`
+
+ SetArchitectureNil sets the value for Architecture to be an explicit nil
+
+### UnsetArchitecture
+`func (o *BuildRecordDto) UnsetArchitecture()`
+
+UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
 ### GetEnvironment
 
 `func (o *BuildRecordDto) GetEnvironment() string`
@@ -697,6 +734,41 @@ HasCompletedAt returns a boolean if a field has been set.
 `func (o *BuildRecordDto) UnsetCompletedAt()`
 
 UnsetCompletedAt ensures that no value is present for CompletedAt, not even an explicit nil
+### GetLogs
+
+`func (o *BuildRecordDto) GetLogs() string`
+
+GetLogs returns the Logs field if non-nil, zero value otherwise.
+
+### GetLogsOk
+
+`func (o *BuildRecordDto) GetLogsOk() (*string, bool)`
+
+GetLogsOk returns a tuple with the Logs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogs
+
+`func (o *BuildRecordDto) SetLogs(v string)`
+
+SetLogs sets Logs field to given value.
+
+### HasLogs
+
+`func (o *BuildRecordDto) HasLogs() bool`
+
+HasLogs returns a boolean if a field has been set.
+
+### SetLogsNil
+
+`func (o *BuildRecordDto) SetLogsNil(b bool)`
+
+ SetLogsNil sets the value for Logs to be an explicit nil
+
+### UnsetLogs
+`func (o *BuildRecordDto) UnsetLogs()`
+
+UnsetLogs ensures that no value is present for Logs, not even an explicit nil
 ### GetErrorMessage
 
 `func (o *BuildRecordDto) GetErrorMessage() string`

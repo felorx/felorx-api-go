@@ -19,15 +19,15 @@ var _ MappedNullable = &CreditPackageDto{}
 
 // CreditPackageDto struct for CreditPackageDto
 type CreditPackageDto struct {
-	Id             *string        `json:"id,omitempty"`
-	AppId          *string        `json:"appId,omitempty"`
-	Code           NullableString `json:"code,omitempty"`
-	Title          NullableString `json:"title,omitempty"`
-	Description    NullableString `json:"description,omitempty"`
-	Credits        *int32         `json:"credits,omitempty"`
-	Amount         *float64       `json:"amount,omitempty"`
-	Currency       NullableString `json:"currency,omitempty"`
-	IsPopular      *bool          `json:"isPopular,omitempty"`
+	Id *string `json:"id,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	Code NullableString `json:"code,omitempty"`
+	Title NullableString `json:"title,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	Credits *int32 `json:"credits,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	Currency NullableString `json:"currency,omitempty"`
+	IsPopular *bool `json:"isPopular,omitempty"`
 	StoreProductId NullableString `json:"storeProductId,omitempty"`
 }
 
@@ -144,7 +144,6 @@ func (o *CreditPackageDto) HasCode() bool {
 func (o *CreditPackageDto) SetCode(v string) {
 	o.Code.Set(&v)
 }
-
 // SetCodeNil sets the value for Code to be an explicit nil
 func (o *CreditPackageDto) SetCodeNil() {
 	o.Code.Set(nil)
@@ -187,7 +186,6 @@ func (o *CreditPackageDto) HasTitle() bool {
 func (o *CreditPackageDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *CreditPackageDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -230,7 +228,6 @@ func (o *CreditPackageDto) HasDescription() bool {
 func (o *CreditPackageDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreditPackageDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -337,7 +334,6 @@ func (o *CreditPackageDto) HasCurrency() bool {
 func (o *CreditPackageDto) SetCurrency(v string) {
 	o.Currency.Set(&v)
 }
-
 // SetCurrencyNil sets the value for Currency to be an explicit nil
 func (o *CreditPackageDto) SetCurrencyNil() {
 	o.Currency.Set(nil)
@@ -412,7 +408,6 @@ func (o *CreditPackageDto) HasStoreProductId() bool {
 func (o *CreditPackageDto) SetStoreProductId(v string) {
 	o.StoreProductId.Set(&v)
 }
-
 // SetStoreProductIdNil sets the value for StoreProductId to be an explicit nil
 func (o *CreditPackageDto) SetStoreProductIdNil() {
 	o.StoreProductId.Set(nil)
@@ -424,7 +419,7 @@ func (o *CreditPackageDto) UnsetStoreProductId() {
 }
 
 func (o CreditPackageDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -501,3 +496,5 @@ func (v *NullableCreditPackageDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

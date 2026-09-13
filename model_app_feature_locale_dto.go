@@ -20,21 +20,21 @@ var _ MappedNullable = &AppFeatureLocaleDto{}
 
 // AppFeatureLocaleDto struct for AppFeatureLocaleDto
 type AppFeatureLocaleDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	AppFeatureId         *string        `json:"appFeatureId,omitempty"`
-	AppLocaleId          *string        `json:"appLocaleId,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppFeatureId *string `json:"appFeatureId,omitempty"`
+	AppLocaleId *string `json:"appLocaleId,omitempty"`
 	// 冗余：方便客户端展示，取自关联的 AppLocale。
-	LangCode    NullableString `json:"langCode,omitempty"`
+	LangCode NullableString `json:"langCode,omitempty"`
 	DisplayName NullableString `json:"displayName,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Details     NullableString `json:"details,omitempty"`
+	Details NullableString `json:"details,omitempty"`
 }
 
 // NewAppFeatureLocaleDto instantiates a new AppFeatureLocaleDto object
@@ -150,7 +150,6 @@ func (o *AppFeatureLocaleDto) HasCreatorId() bool {
 func (o *AppFeatureLocaleDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppFeatureLocaleDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -193,7 +192,6 @@ func (o *AppFeatureLocaleDto) HasLastModificationTime() bool {
 func (o *AppFeatureLocaleDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppFeatureLocaleDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -236,7 +234,6 @@ func (o *AppFeatureLocaleDto) HasLastModifierId() bool {
 func (o *AppFeatureLocaleDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppFeatureLocaleDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -311,7 +308,6 @@ func (o *AppFeatureLocaleDto) HasDeleterId() bool {
 func (o *AppFeatureLocaleDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppFeatureLocaleDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -354,7 +350,6 @@ func (o *AppFeatureLocaleDto) HasDeletionTime() bool {
 func (o *AppFeatureLocaleDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppFeatureLocaleDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -461,7 +456,6 @@ func (o *AppFeatureLocaleDto) HasLangCode() bool {
 func (o *AppFeatureLocaleDto) SetLangCode(v string) {
 	o.LangCode.Set(&v)
 }
-
 // SetLangCodeNil sets the value for LangCode to be an explicit nil
 func (o *AppFeatureLocaleDto) SetLangCodeNil() {
 	o.LangCode.Set(nil)
@@ -504,7 +498,6 @@ func (o *AppFeatureLocaleDto) HasDisplayName() bool {
 func (o *AppFeatureLocaleDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AppFeatureLocaleDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -547,7 +540,6 @@ func (o *AppFeatureLocaleDto) HasDescription() bool {
 func (o *AppFeatureLocaleDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppFeatureLocaleDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -590,7 +582,6 @@ func (o *AppFeatureLocaleDto) HasDetails() bool {
 func (o *AppFeatureLocaleDto) SetDetails(v string) {
 	o.Details.Set(&v)
 }
-
 // SetDetailsNil sets the value for Details to be an explicit nil
 func (o *AppFeatureLocaleDto) SetDetailsNil() {
 	o.Details.Set(nil)
@@ -602,7 +593,7 @@ func (o *AppFeatureLocaleDto) UnsetDetails() {
 }
 
 func (o AppFeatureLocaleDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -691,3 +682,5 @@ func (v *NullableAppFeatureLocaleDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderId** | Pointer to **string** |  | [optional]
-**PayPalOrderId** | Pointer to **NullableString** |  | [optional]
-**ApprovalUrl** | Pointer to **NullableString** |  | [optional]
+**OrderId** | Pointer to **string** |  | [optional] 
+**PayPalOrderId** | Pointer to **NullableString** |  | [optional] 
+**ApprovalUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

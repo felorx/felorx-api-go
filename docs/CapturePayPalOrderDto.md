@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayPalOrderId** | Pointer to **NullableString** | PayPal 订单 ID | [optional]
-**PayPalSubscriptionId** | Pointer to **NullableString** | PayPal 订阅 ID。自动续费场景使用该字段。 | [optional]
+**PayPalOrderId** | Pointer to **NullableString** | PayPal 订单 ID | [optional] 
+**PayPalSubscriptionId** | Pointer to **NullableString** | PayPal 订阅 ID。自动续费场景使用该字段。 | [optional] 
 
 ## Methods
 

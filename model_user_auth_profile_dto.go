@@ -19,13 +19,13 @@ var _ MappedNullable = &UserAuthProfileDto{}
 
 // UserAuthProfileDto struct for UserAuthProfileDto
 type UserAuthProfileDto struct {
-	Id          *string        `json:"id,omitempty"`
-	Name        NullableString `json:"name,omitempty"`
-	UserName    NullableString `json:"userName,omitempty"`
-	AvatarUrl   NullableString `json:"avatarUrl,omitempty"`
-	Email       NullableString `json:"email,omitempty"`
+	Id *string `json:"id,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	UserName NullableString `json:"userName,omitempty"`
+	AvatarUrl NullableString `json:"avatarUrl,omitempty"`
+	Email NullableString `json:"email,omitempty"`
 	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
-	HasPassword *bool          `json:"hasPassword,omitempty"`
+	HasPassword *bool `json:"hasPassword,omitempty"`
 }
 
 // NewUserAuthProfileDto instantiates a new UserAuthProfileDto object
@@ -109,7 +109,6 @@ func (o *UserAuthProfileDto) HasName() bool {
 func (o *UserAuthProfileDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *UserAuthProfileDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -152,7 +151,6 @@ func (o *UserAuthProfileDto) HasUserName() bool {
 func (o *UserAuthProfileDto) SetUserName(v string) {
 	o.UserName.Set(&v)
 }
-
 // SetUserNameNil sets the value for UserName to be an explicit nil
 func (o *UserAuthProfileDto) SetUserNameNil() {
 	o.UserName.Set(nil)
@@ -195,7 +193,6 @@ func (o *UserAuthProfileDto) HasAvatarUrl() bool {
 func (o *UserAuthProfileDto) SetAvatarUrl(v string) {
 	o.AvatarUrl.Set(&v)
 }
-
 // SetAvatarUrlNil sets the value for AvatarUrl to be an explicit nil
 func (o *UserAuthProfileDto) SetAvatarUrlNil() {
 	o.AvatarUrl.Set(nil)
@@ -238,7 +235,6 @@ func (o *UserAuthProfileDto) HasEmail() bool {
 func (o *UserAuthProfileDto) SetEmail(v string) {
 	o.Email.Set(&v)
 }
-
 // SetEmailNil sets the value for Email to be an explicit nil
 func (o *UserAuthProfileDto) SetEmailNil() {
 	o.Email.Set(nil)
@@ -281,7 +277,6 @@ func (o *UserAuthProfileDto) HasPhoneNumber() bool {
 func (o *UserAuthProfileDto) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *UserAuthProfileDto) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -325,7 +320,7 @@ func (o *UserAuthProfileDto) SetHasPassword(v bool) {
 }
 
 func (o UserAuthProfileDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -393,3 +388,5 @@ func (v *NullableUserAuthProfileDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

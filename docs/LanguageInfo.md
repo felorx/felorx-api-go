@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CultureName** | Pointer to **NullableString** |  | [optional]
-**UiCultureName** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**TwoLetterISOLanguageName** | Pointer to **NullableString** |  | [optional] [readonly]
-**FlagIcon** | Pointer to **NullableString** |  | [optional]
+**CultureName** | Pointer to **NullableString** |  | [optional] 
+**UiCultureName** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**TwoLetterISOLanguageName** | Pointer to **NullableString** |  | [optional] [readonly] 
+**FlagIcon** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

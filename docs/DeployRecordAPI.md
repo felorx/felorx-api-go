@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateDeployRecord**](DeployRecordAPI.md#CreateDeployRecord) | **Post** /api/app/deploy-record |
-[**DeleteDeployRecordById**](DeployRecordAPI.md#DeleteDeployRecordById) | **Delete** /api/app/deploy-record/{id} |
-[**DeployRecordGetLatest**](DeployRecordAPI.md#DeployRecordGetLatest) | **Get** /api/app/deploy-record/latest/{appId} |
-[**DeployRecordMarkAsCanceled**](DeployRecordAPI.md#DeployRecordMarkAsCanceled) | **Post** /api/app/deploy-record/{id}/mark-as-canceled |
-[**DeployRecordMarkAsFailed**](DeployRecordAPI.md#DeployRecordMarkAsFailed) | **Post** /api/app/deploy-record/{id}/mark-as-failed |
-[**DeployRecordMarkAsSucceeded**](DeployRecordAPI.md#DeployRecordMarkAsSucceeded) | **Post** /api/app/deploy-record/{id}/mark-as-succeeded |
-[**GetByCiDeployId**](DeployRecordAPI.md#GetByCiDeployId) | **Get** /api/app/deploy-record/by-ci-deploy-id/{ciDeployId} |
-[**GetDeployRecordById**](DeployRecordAPI.md#GetDeployRecordById) | **Get** /api/app/deploy-record/{id} |
-[**GetDeployRecordList**](DeployRecordAPI.md#GetDeployRecordList) | **Get** /api/app/deploy-record |
-[**GetListByBuildRecordId**](DeployRecordAPI.md#GetListByBuildRecordId) | **Get** /api/app/deploy-record/by-build-record-id/{buildRecordId} |
-[**MarkAsDeploying**](DeployRecordAPI.md#MarkAsDeploying) | **Post** /api/app/deploy-record/{id}/mark-as-deploying |
-[**UpdateDeployRecord**](DeployRecordAPI.md#UpdateDeployRecord) | **Put** /api/app/deploy-record/{id} |
+[**CreateDeployRecord**](DeployRecordAPI.md#CreateDeployRecord) | **Post** /api/app/deploy-record | 
+[**DeleteDeployRecordById**](DeployRecordAPI.md#DeleteDeployRecordById) | **Delete** /api/app/deploy-record/{id} | 
+[**GetByCiDeployId**](DeployRecordAPI.md#GetByCiDeployId) | **Get** /api/app/deploy-record/by-ci-deploy-id/{ciDeployId} | 
+[**GetDeployRecordById**](DeployRecordAPI.md#GetDeployRecordById) | **Get** /api/app/deploy-record/{id} | 
+[**GetDeployRecordList**](DeployRecordAPI.md#GetDeployRecordList) | **Get** /api/app/deploy-record | 
+[**GetLatestGetApiAppDeployRecordLatestAppId**](DeployRecordAPI.md#GetLatestGetApiAppDeployRecordLatestAppId) | **Get** /api/app/deploy-record/latest/{appId} | 
+[**GetListByBuildRecordId**](DeployRecordAPI.md#GetListByBuildRecordId) | **Get** /api/app/deploy-record/by-build-record-id/{buildRecordId} | 
+[**MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled**](DeployRecordAPI.md#MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled) | **Post** /api/app/deploy-record/{id}/mark-as-canceled | 
+[**MarkAsDeploying**](DeployRecordAPI.md#MarkAsDeploying) | **Post** /api/app/deploy-record/{id}/mark-as-deploying | 
+[**MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed**](DeployRecordAPI.md#MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed) | **Post** /api/app/deploy-record/{id}/mark-as-failed | 
+[**MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded**](DeployRecordAPI.md#MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded) | **Post** /api/app/deploy-record/{id}/mark-as-succeeded | 
+[**UpdateDeployRecord**](DeployRecordAPI.md#UpdateDeployRecord) | **Put** /api/app/deploy-record/{id} | 
 
 
 
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateDeployRecordRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createDeployRecordDto** | [**CreateDeployRecordDto**](CreateDeployRecordDto.md) |  |
+ **createDeployRecordDto** | [**CreateDeployRecordDto**](CreateDeployRecordDto.md) |  | 
 
 ### Return type
 
@@ -102,7 +102,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -134,286 +134,6 @@ Name | Type | Description  | Notes
 ### Return type
 
  (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DeployRecordGetLatest
-
-> DeployRecordDto DeployRecordGetLatest(ctx, appId).Platform(platform).Environment(environment).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
-	platform := openapiclient.AppPlatform("None") // AppPlatform |  (optional)
-	environment := "environment_example" // string |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DeployRecordAPI.DeployRecordGetLatest(context.Background(), appId).Platform(platform).Environment(environment).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.DeployRecordGetLatest``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `DeployRecordGetLatest`: DeployRecordDto
-	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.DeployRecordGetLatest`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDeployRecordGetLatestRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **platform** | [**AppPlatform**](AppPlatform.md) |  |
- **environment** | **string** |  |
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DeployRecordMarkAsCanceled
-
-> DeployRecordDto DeployRecordMarkAsCanceled(ctx, id).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DeployRecordAPI.DeployRecordMarkAsCanceled(context.Background(), id).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.DeployRecordMarkAsCanceled``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `DeployRecordMarkAsCanceled`: DeployRecordDto
-	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.DeployRecordMarkAsCanceled`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDeployRecordMarkAsCanceledRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DeployRecordMarkAsFailed
-
-> DeployRecordDto DeployRecordMarkAsFailed(ctx, id).ErrorMessage(errorMessage).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
-	errorMessage := "errorMessage_example" // string |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DeployRecordAPI.DeployRecordMarkAsFailed(context.Background(), id).ErrorMessage(errorMessage).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.DeployRecordMarkAsFailed``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `DeployRecordMarkAsFailed`: DeployRecordDto
-	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.DeployRecordMarkAsFailed`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDeployRecordMarkAsFailedRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **errorMessage** | **string** |  |
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## DeployRecordMarkAsSucceeded
-
-> DeployRecordDto DeployRecordMarkAsSucceeded(ctx, id).DeployUrl(deployUrl).Execute()
-
-
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
-	deployUrl := "deployUrl_example" // string |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.DeployRecordAPI.DeployRecordMarkAsSucceeded(context.Background(), id).DeployUrl(deployUrl).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.DeployRecordMarkAsSucceeded``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `DeployRecordMarkAsSucceeded`: DeployRecordDto
-	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.DeployRecordMarkAsSucceeded`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiDeployRecordMarkAsSucceededRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **deployUrl** | **string** |  |
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
 
 ### Authorization
 
@@ -448,7 +168,7 @@ import (
 )
 
 func main() {
-	ciDeployId := "ciDeployId_example" // string |
+	ciDeployId := "ciDeployId_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -468,7 +188,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ciDeployId** | **string** |  |
+**ciDeployId** | **string** |  | 
 
 ### Other Parameters
 
@@ -516,7 +236,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -536,7 +256,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -617,19 +337,91 @@ Other parameters are passed through a pointer to a apiGetDeployRecordListRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string** | 应用ID |
- **status** | [**DeployStatus**](DeployStatus.md) | 部署状态 |
- **platform** | [**AppPlatform**](AppPlatform.md) | 目标平台 |
- **environment** | **string** | 部署环境 |
- **version** | **string** | 版本号 |
- **buildRecordId** | **string** | 构建记录ID |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **appId** | **string** | 应用ID | 
+ **status** | [**DeployStatus**](DeployStatus.md) | 部署状态 | 
+ **platform** | [**AppPlatform**](AppPlatform.md) | 目标平台 | 
+ **environment** | **string** | 部署环境 | 
+ **version** | **string** | 版本号 | 
+ **buildRecordId** | **string** | 构建记录ID | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
 [**DeployRecordDtoPagedResultDto**](DeployRecordDtoPagedResultDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetLatestGetApiAppDeployRecordLatestAppId
+
+> DeployRecordDto GetLatestGetApiAppDeployRecordLatestAppId(ctx, appId).Platform(platform).Environment(environment).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	platform := openapiclient.AppPlatform("None") // AppPlatform |  (optional)
+	environment := "environment_example" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DeployRecordAPI.GetLatestGetApiAppDeployRecordLatestAppId(context.Background(), appId).Platform(platform).Environment(environment).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.GetLatestGetApiAppDeployRecordLatestAppId``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetLatestGetApiAppDeployRecordLatestAppId`: DeployRecordDto
+	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.GetLatestGetApiAppDeployRecordLatestAppId`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetLatestGetApiAppDeployRecordLatestAppIdRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **platform** | [**AppPlatform**](AppPlatform.md) |  | 
+ **environment** | **string** |  | 
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
 
 ### Authorization
 
@@ -664,7 +456,7 @@ import (
 )
 
 func main() {
-	buildRecordId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	buildRecordId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -684,7 +476,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**buildRecordId** | **string** |  |
+**buildRecordId** | **string** |  | 
 
 ### Other Parameters
 
@@ -698,6 +490,74 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled
+
+> DeployRecordDto MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(ctx, id).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DeployRecordAPI.MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(context.Background(), id).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled`: DeployRecordDto
+	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiMarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceledRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
 
 ### Authorization
 
@@ -732,7 +592,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -752,7 +612,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -762,6 +622,146 @@ Other parameters are passed through a pointer to a apiMarkAsDeployingRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed
+
+> DeployRecordDto MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed(ctx, id).ErrorMessage(errorMessage).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	errorMessage := "errorMessage_example" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DeployRecordAPI.MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed(context.Background(), id).ErrorMessage(errorMessage).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed`: DeployRecordDto
+	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiMarkAsFailedPostApiAppDeployRecordIdMarkAsFailedRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **errorMessage** | **string** |  | 
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded
+
+> DeployRecordDto MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(ctx, id).DeployUrl(deployUrl).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	deployUrl := "deployUrl_example" // string |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DeployRecordAPI.MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(context.Background(), id).DeployUrl(deployUrl).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DeployRecordAPI.MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded`: DeployRecordDto
+	fmt.Fprintf(os.Stdout, "Response from `DeployRecordAPI.MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**id** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiMarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceededRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **deployUrl** | **string** |  | 
 
 ### Return type
 
@@ -800,7 +800,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	updateDeployRecordDto := *openapiclient.NewUpdateDeployRecordDto(openapiclient.DeployStatus("Pending")) // UpdateDeployRecordDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -821,7 +821,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -831,7 +831,7 @@ Other parameters are passed through a pointer to a apiUpdateDeployRecordRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeployRecordDto** | [**UpdateDeployRecordDto**](UpdateDeployRecordDto.md) |  |
+ **updateDeployRecordDto** | [**UpdateDeployRecordDto**](UpdateDeployRecordDto.md) |  | 
 
 ### Return type
 

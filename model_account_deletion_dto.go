@@ -20,6 +20,8 @@ var _ MappedNullable = &AccountDeletionDto{}
 // AccountDeletionDto struct for AccountDeletionDto
 type AccountDeletionDto struct {
 	Code NullableString `json:"code,omitempty"`
+	ClientRequestId NullableString `json:"clientRequestId,omitempty"`
+	StatusToken NullableString `json:"statusToken,omitempty" validate:"regexp=^[A-Za-z0-9_-]{43}$"`
 }
 
 // NewAccountDeletionDto instantiates a new AccountDeletionDto object
@@ -71,7 +73,6 @@ func (o *AccountDeletionDto) HasCode() bool {
 func (o *AccountDeletionDto) SetCode(v string) {
 	o.Code.Set(&v)
 }
-
 // SetCodeNil sets the value for Code to be an explicit nil
 func (o *AccountDeletionDto) SetCodeNil() {
 	o.Code.Set(nil)
@@ -82,8 +83,92 @@ func (o *AccountDeletionDto) UnsetCode() {
 	o.Code.Unset()
 }
 
+// GetClientRequestId returns the ClientRequestId field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AccountDeletionDto) GetClientRequestId() string {
+	if o == nil || IsNil(o.ClientRequestId.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.ClientRequestId.Get()
+}
+
+// GetClientRequestIdOk returns a tuple with the ClientRequestId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AccountDeletionDto) GetClientRequestIdOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ClientRequestId.Get(), o.ClientRequestId.IsSet()
+}
+
+// HasClientRequestId returns a boolean if a field has been set.
+func (o *AccountDeletionDto) HasClientRequestId() bool {
+	if o != nil && o.ClientRequestId.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetClientRequestId gets a reference to the given NullableString and assigns it to the ClientRequestId field.
+func (o *AccountDeletionDto) SetClientRequestId(v string) {
+	o.ClientRequestId.Set(&v)
+}
+// SetClientRequestIdNil sets the value for ClientRequestId to be an explicit nil
+func (o *AccountDeletionDto) SetClientRequestIdNil() {
+	o.ClientRequestId.Set(nil)
+}
+
+// UnsetClientRequestId ensures that no value is present for ClientRequestId, not even an explicit nil
+func (o *AccountDeletionDto) UnsetClientRequestId() {
+	o.ClientRequestId.Unset()
+}
+
+// GetStatusToken returns the StatusToken field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AccountDeletionDto) GetStatusToken() string {
+	if o == nil || IsNil(o.StatusToken.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.StatusToken.Get()
+}
+
+// GetStatusTokenOk returns a tuple with the StatusToken field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AccountDeletionDto) GetStatusTokenOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.StatusToken.Get(), o.StatusToken.IsSet()
+}
+
+// HasStatusToken returns a boolean if a field has been set.
+func (o *AccountDeletionDto) HasStatusToken() bool {
+	if o != nil && o.StatusToken.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetStatusToken gets a reference to the given NullableString and assigns it to the StatusToken field.
+func (o *AccountDeletionDto) SetStatusToken(v string) {
+	o.StatusToken.Set(&v)
+}
+// SetStatusTokenNil sets the value for StatusToken to be an explicit nil
+func (o *AccountDeletionDto) SetStatusTokenNil() {
+	o.StatusToken.Set(nil)
+}
+
+// UnsetStatusToken ensures that no value is present for StatusToken, not even an explicit nil
+func (o *AccountDeletionDto) UnsetStatusToken() {
+	o.StatusToken.Unset()
+}
+
 func (o AccountDeletionDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -94,6 +179,12 @@ func (o AccountDeletionDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Code.IsSet() {
 		toSerialize["code"] = o.Code.Get()
+	}
+	if o.ClientRequestId.IsSet() {
+		toSerialize["clientRequestId"] = o.ClientRequestId.Get()
+	}
+	if o.StatusToken.IsSet() {
+		toSerialize["statusToken"] = o.StatusToken.Get()
 	}
 	return toSerialize, nil
 }
@@ -133,3 +224,5 @@ func (v *NullableAccountDeletionDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

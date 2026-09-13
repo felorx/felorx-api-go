@@ -23,18 +23,18 @@ type UserStorageDto struct {
 	// 所属应用
 	AppId *string `json:"appId,omitempty"`
 	// 应用名称
-	AppName     NullableString  `json:"appName,omitempty"`
+	AppName NullableString `json:"appName,omitempty"`
 	PriceNaming *AppPriceNaming `json:"priceNaming,omitempty"`
 	// 用户存储容量
 	Size *int64 `json:"size,omitempty"`
 	// 当前使用大小
 	CurrentSize *int64 `json:"currentSize,omitempty"`
-	TotalCount  *int32 `json:"totalCount,omitempty"`
+	TotalCount *int32 `json:"totalCount,omitempty"`
 	// 单文件最大大小
 	SingleFileMaxSize *int64 `json:"singleFileMaxSize,omitempty"`
 	// 过期时间, 为空表示永久有效, 一般是订阅产品的过期时间
-	ExpireAt NullableTime         `json:"expireAt,omitempty"`
-	Items    []UserStorageItemDto `json:"items,omitempty"`
+	ExpireAt NullableTime `json:"expireAt,omitempty"`
+	Items []UserStorageItemDto `json:"items,omitempty"`
 }
 
 // NewUserStorageDto instantiates a new UserStorageDto object
@@ -118,7 +118,6 @@ func (o *UserStorageDto) HasAppName() bool {
 func (o *UserStorageDto) SetAppName(v string) {
 	o.AppName.Set(&v)
 }
-
 // SetAppNameNil sets the value for AppName to be an explicit nil
 func (o *UserStorageDto) SetAppNameNil() {
 	o.AppName.Set(nil)
@@ -321,7 +320,6 @@ func (o *UserStorageDto) HasExpireAt() bool {
 func (o *UserStorageDto) SetExpireAt(v time.Time) {
 	o.ExpireAt.Set(&v)
 }
-
 // SetExpireAtNil sets the value for ExpireAt to be an explicit nil
 func (o *UserStorageDto) SetExpireAtNil() {
 	o.ExpireAt.Set(nil)
@@ -366,7 +364,7 @@ func (o *UserStorageDto) SetItems(v []UserStorageItemDto) {
 }
 
 func (o UserStorageDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -440,3 +438,5 @@ func (v *NullableUserStorageDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

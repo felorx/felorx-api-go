@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMessageSourceCategoryList**](MessageSourceCategoryAPI.md#GetMessageSourceCategoryList) | **Get** /api/app/message-source-category |
+[**GetMessageSourceCategoryList**](MessageSourceCategoryAPI.md#GetMessageSourceCategoryList) | **Get** /api/app/message-source-category | 
 
 
 

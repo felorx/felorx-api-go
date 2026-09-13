@@ -20,9 +20,9 @@ type DeviceStatus string
 
 // List of DeviceStatus
 const (
-	DEVICESTATUS_NONE    DeviceStatus = "None"
-	DEVICESTATUS_UNKNOW  DeviceStatus = "Unknow"
-	DEVICESTATUS_ONLINE  DeviceStatus = "Online"
+	DEVICESTATUS_NONE DeviceStatus = "None"
+	DEVICESTATUS_UNKNOW DeviceStatus = "Unknow"
+	DEVICESTATUS_ONLINE DeviceStatus = "Online"
 	DEVICESTATUS_OFFLINE DeviceStatus = "Offline"
 )
 
@@ -112,3 +112,4 @@ func (v *NullableDeviceStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

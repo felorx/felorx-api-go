@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BaseType** | Pointer to **NullableString** |  | [optional]
-**IsEnum** | Pointer to **bool** |  | [optional]
-**EnumNames** | Pointer to **[]string** |  | [optional]
-**EnumValues** | Pointer to **[]interface{}** |  | [optional]
-**GenericArguments** | Pointer to **[]string** |  | [optional]
-**Properties** | Pointer to [**[]PropertyApiDescriptionModel**](PropertyApiDescriptionModel.md) |  | [optional]
+**BaseType** | Pointer to **NullableString** |  | [optional] 
+**IsEnum** | Pointer to **bool** |  | [optional] 
+**EnumNames** | Pointer to **[]string** |  | [optional] 
+**EnumValues** | Pointer to **[]interface{}** |  | [optional] 
+**GenericArguments** | Pointer to **[]string** |  | [optional] 
+**Properties** | Pointer to [**[]PropertyApiDescriptionModel**](PropertyApiDescriptionModel.md) |  | [optional] 
 
 ## Methods
 

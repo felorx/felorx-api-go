@@ -19,9 +19,9 @@ var _ MappedNullable = &AiUsageDto{}
 
 // AiUsageDto struct for AiUsageDto
 type AiUsageDto struct {
-	PromptTokens     NullableInt32 `json:"prompt_tokens,omitempty"`
+	PromptTokens NullableInt32 `json:"prompt_tokens,omitempty"`
 	CompletionTokens NullableInt32 `json:"completion_tokens,omitempty"`
-	TotalTokens      NullableInt32 `json:"total_tokens,omitempty"`
+	TotalTokens NullableInt32 `json:"total_tokens,omitempty"`
 }
 
 // NewAiUsageDto instantiates a new AiUsageDto object
@@ -73,7 +73,6 @@ func (o *AiUsageDto) HasPromptTokens() bool {
 func (o *AiUsageDto) SetPromptTokens(v int32) {
 	o.PromptTokens.Set(&v)
 }
-
 // SetPromptTokensNil sets the value for PromptTokens to be an explicit nil
 func (o *AiUsageDto) SetPromptTokensNil() {
 	o.PromptTokens.Set(nil)
@@ -116,7 +115,6 @@ func (o *AiUsageDto) HasCompletionTokens() bool {
 func (o *AiUsageDto) SetCompletionTokens(v int32) {
 	o.CompletionTokens.Set(&v)
 }
-
 // SetCompletionTokensNil sets the value for CompletionTokens to be an explicit nil
 func (o *AiUsageDto) SetCompletionTokensNil() {
 	o.CompletionTokens.Set(nil)
@@ -159,7 +157,6 @@ func (o *AiUsageDto) HasTotalTokens() bool {
 func (o *AiUsageDto) SetTotalTokens(v int32) {
 	o.TotalTokens.Set(&v)
 }
-
 // SetTotalTokensNil sets the value for TotalTokens to be an explicit nil
 func (o *AiUsageDto) SetTotalTokensNil() {
 	o.TotalTokens.Set(nil)
@@ -171,7 +168,7 @@ func (o *AiUsageDto) UnsetTotalTokens() {
 }
 
 func (o AiUsageDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -227,3 +224,5 @@ func (v *NullableAiUsageDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,7 +20,7 @@ var _ MappedNullable = &FeatureProviderDto{}
 // FeatureProviderDto struct for FeatureProviderDto
 type FeatureProviderDto struct {
 	Name NullableString `json:"name,omitempty"`
-	Key  NullableString `json:"key,omitempty"`
+	Key NullableString `json:"key,omitempty"`
 }
 
 // NewFeatureProviderDto instantiates a new FeatureProviderDto object
@@ -72,7 +72,6 @@ func (o *FeatureProviderDto) HasName() bool {
 func (o *FeatureProviderDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *FeatureProviderDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -115,7 +114,6 @@ func (o *FeatureProviderDto) HasKey() bool {
 func (o *FeatureProviderDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *FeatureProviderDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -127,7 +125,7 @@ func (o *FeatureProviderDto) UnsetKey() {
 }
 
 func (o FeatureProviderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableFeatureProviderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

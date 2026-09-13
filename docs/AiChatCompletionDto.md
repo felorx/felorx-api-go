@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableString** |  | [optional]
-**Object** | Pointer to **NullableString** |  | [optional]
-**Created** | Pointer to **int64** |  | [optional]
-**Model** | Pointer to **NullableString** |  | [optional]
-**Choices** | Pointer to [**[]AiChatChoiceDto**](AiChatChoiceDto.md) |  | [optional]
-**Usage** | Pointer to [**AiUsageDto**](AiUsageDto.md) |  | [optional]
+**Id** | Pointer to **NullableString** |  | [optional] 
+**Object** | Pointer to **NullableString** |  | [optional] 
+**Created** | Pointer to **int64** |  | [optional] 
+**Model** | Pointer to **NullableString** |  | [optional] 
+**Choices** | Pointer to [**[]AiChatChoiceDto**](AiChatChoiceDto.md) |  | [optional] 
+**Usage** | Pointer to [**AiUsageDto**](AiUsageDto.md) |  | [optional] 
 
 ## Methods
 

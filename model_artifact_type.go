@@ -20,24 +20,24 @@ type ArtifactType string
 
 // List of ArtifactType
 const (
-	ARTIFACTTYPE_AAB       ArtifactType = "Aab"
-	ARTIFACTTYPE_APK       ArtifactType = "Apk"
-	ARTIFACTTYPE_APP       ArtifactType = "App"
+	ARTIFACTTYPE_AAB ArtifactType = "Aab"
+	ARTIFACTTYPE_APK ArtifactType = "Apk"
+	ARTIFACTTYPE_APP ArtifactType = "App"
 	ARTIFACTTYPE_APP_IMAGE ArtifactType = "AppImage"
-	ARTIFACTTYPE_DEB       ArtifactType = "Deb"
-	ARTIFACTTYPE_DMG       ArtifactType = "Dmg"
-	ARTIFACTTYPE_DOCKER    ArtifactType = "Docker"
-	ARTIFACTTYPE_EXE       ArtifactType = "Exe"
-	ARTIFACTTYPE_HAP       ArtifactType = "Hap"
-	ARTIFACTTYPE_IPA       ArtifactType = "Ipa"
-	ARTIFACTTYPE_MSI       ArtifactType = "Msi"
-	ARTIFACTTYPE_MSIX      ArtifactType = "Msix"
-	ARTIFACTTYPE_PKG       ArtifactType = "Pkg"
-	ARTIFACTTYPE_RPM       ArtifactType = "Rpm"
-	ARTIFACTTYPE_FDU       ArtifactType = "Fdu"
-	ARTIFACTTYPE_ZIP       ArtifactType = "Zip"
-	ARTIFACTTYPE_BIN       ArtifactType = "Bin"
-	ARTIFACTTYPE_OTHER     ArtifactType = "Other"
+	ARTIFACTTYPE_DEB ArtifactType = "Deb"
+	ARTIFACTTYPE_DMG ArtifactType = "Dmg"
+	ARTIFACTTYPE_DOCKER ArtifactType = "Docker"
+	ARTIFACTTYPE_EXE ArtifactType = "Exe"
+	ARTIFACTTYPE_HAP ArtifactType = "Hap"
+	ARTIFACTTYPE_IPA ArtifactType = "Ipa"
+	ARTIFACTTYPE_MSI ArtifactType = "Msi"
+	ARTIFACTTYPE_MSIX ArtifactType = "Msix"
+	ARTIFACTTYPE_PKG ArtifactType = "Pkg"
+	ARTIFACTTYPE_RPM ArtifactType = "Rpm"
+	ARTIFACTTYPE_ZIP ArtifactType = "Zip"
+	ARTIFACTTYPE_BIN ArtifactType = "Bin"
+	ARTIFACTTYPE_OTHER ArtifactType = "Other"
+	ARTIFACTTYPE_FDU ArtifactType = "Fdu"
 )
 
 // All allowed values of ArtifactType enum
@@ -56,10 +56,10 @@ var AllowedArtifactTypeEnumValues = []ArtifactType{
 	"Msix",
 	"Pkg",
 	"Rpm",
-	"Fdu",
 	"Zip",
 	"Bin",
 	"Other",
+	"Fdu",
 }
 
 func (v *ArtifactType) UnmarshalJSON(src []byte) error {
@@ -140,3 +140,4 @@ func (v *NullableArtifactType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

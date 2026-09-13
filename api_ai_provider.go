@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // AiProviderAPIService AiProviderAPI service
 type AiProviderAPIService service
 
 type ApiCreateAiProviderRequest struct {
-	ctx                         context.Context
-	ApiService                  *AiProviderAPIService
+	ctx context.Context
+	ApiService *AiProviderAPIService
 	createOrUpdateAiProviderDto *CreateOrUpdateAiProviderDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateAiProviderRequest) Execute() (*AiProviderDto, *http.Response, e
 /*
 CreateAiProvider Method for CreateAiProvider
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAiProviderRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAiProviderRequest
 */
 func (a *AiProviderAPIService) CreateAiProvider(ctx context.Context) ApiCreateAiProviderRequest {
 	return ApiCreateAiProviderRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
+//  @return AiProviderDto
 func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.CreateAiProvider")
@@ -120,8 +120,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *AiProviderAPIService) CreateAiProviderExecute(r ApiCreateAiProviderRequ
 }
 
 type ApiDeleteAiProviderByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AiProviderAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAiProviderByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeleteAiProviderByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAiProviderById Method for DeleteAiProviderById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAiProviderByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAiProviderByIdRequest
 */
 func (a *AiProviderAPIService) DeleteAiProviderById(ctx context.Context, id string) ApiDeleteAiProviderByIdRequest {
 	return ApiDeleteAiProviderByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProviderByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.DeleteAiProviderById")
@@ -284,8 +284,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,9 +349,9 @@ func (a *AiProviderAPIService) DeleteAiProviderByIdExecute(r ApiDeleteAiProvider
 }
 
 type ApiGetAiProviderByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AiProviderAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetAiProviderByIdRequest) Execute() (*AiProviderDto, *http.Response, error) {
@@ -361,27 +361,26 @@ func (r ApiGetAiProviderByIdRequest) Execute() (*AiProviderDto, *http.Response, 
 /*
 GetAiProviderById Method for GetAiProviderById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetAiProviderByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetAiProviderByIdRequest
 */
 func (a *AiProviderAPIService) GetAiProviderById(ctx context.Context, id string) ApiGetAiProviderByIdRequest {
 	return ApiGetAiProviderByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
+//  @return AiProviderDto
 func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.GetAiProviderById")
@@ -442,8 +441,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -453,8 +452,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -464,8 +463,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -475,8 +474,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -486,8 +485,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -497,8 +496,8 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -516,14 +515,14 @@ func (a *AiProviderAPIService) GetAiProviderByIdExecute(r ApiGetAiProviderByIdRe
 }
 
 type ApiGetAiProviderListRequest struct {
-	ctx            context.Context
-	ApiService     *AiProviderAPIService
-	filter         *string
-	providerType   *AiProviderType
-	capability     *AiCapability
-	enabled        *bool
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AiProviderAPIService
+	filter *string
+	providerType *AiProviderType
+	capability *AiCapability
+	enabled *bool
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -569,25 +568,24 @@ func (r ApiGetAiProviderListRequest) Execute() (*AiProviderDtoPagedResultDto, *h
 /*
 GetAiProviderList Method for GetAiProviderList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAiProviderListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAiProviderListRequest
 */
 func (a *AiProviderAPIService) GetAiProviderList(ctx context.Context) ApiGetAiProviderListRequest {
 	return ApiGetAiProviderListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDtoPagedResultDto
+//  @return AiProviderDtoPagedResultDto
 func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRequest) (*AiProviderDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.GetAiProviderList")
@@ -668,8 +666,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -679,8 +677,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -690,8 +688,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -701,8 +699,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -712,8 +710,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -723,8 +721,8 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -741,46 +739,45 @@ func (a *AiProviderAPIService) GetAiProviderListExecute(r ApiGetAiProviderListRe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSetDefaultModelRequest struct {
-	ctx                  context.Context
-	ApiService           *AiProviderAPIService
+type ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest struct {
+	ctx context.Context
+	ApiService *AiProviderAPIService
 	setDefaultAiModelDto *SetDefaultAiModelDto
 }
 
-func (r ApiSetDefaultModelRequest) SetDefaultAiModelDto(setDefaultAiModelDto SetDefaultAiModelDto) ApiSetDefaultModelRequest {
+func (r ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest) SetDefaultAiModelDto(setDefaultAiModelDto SetDefaultAiModelDto) ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest {
 	r.setDefaultAiModelDto = &setDefaultAiModelDto
 	return r
 }
 
-func (r ApiSetDefaultModelRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.SetDefaultModelExecute(r)
+func (r ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.SetDefaultModelPostApiAppAiProviderSetDefaultModelExecute(r)
 }
 
 /*
-SetDefaultModel Method for SetDefaultModel
+SetDefaultModelPostApiAppAiProviderSetDefaultModel Method for SetDefaultModelPostApiAppAiProviderSetDefaultModel
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiSetDefaultModelRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest
 */
-func (a *AiProviderAPIService) SetDefaultModel(ctx context.Context) ApiSetDefaultModelRequest {
-	return ApiSetDefaultModelRequest{
+func (a *AiProviderAPIService) SetDefaultModelPostApiAppAiProviderSetDefaultModel(ctx context.Context) ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest {
+	return ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelRequest) (*AiProviderDto, *http.Response, error) {
+//  @return AiProviderDto
+func (a *AiProviderAPIService) SetDefaultModelPostApiAppAiProviderSetDefaultModelExecute(r ApiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.SetDefaultModel")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.SetDefaultModelPostApiAppAiProviderSetDefaultModel")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -839,8 +836,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -850,8 +847,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -861,8 +858,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -872,8 +869,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -883,8 +880,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -894,8 +891,8 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -912,49 +909,48 @@ func (a *AiProviderAPIService) SetDefaultModelExecute(r ApiSetDefaultModelReques
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSetEnabledRequest struct {
-	ctx                     context.Context
-	ApiService              *AiProviderAPIService
-	id                      string
+type ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest struct {
+	ctx context.Context
+	ApiService *AiProviderAPIService
+	id string
 	setAiProviderEnabledDto *SetAiProviderEnabledDto
 }
 
-func (r ApiSetEnabledRequest) SetAiProviderEnabledDto(setAiProviderEnabledDto SetAiProviderEnabledDto) ApiSetEnabledRequest {
+func (r ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest) SetAiProviderEnabledDto(setAiProviderEnabledDto SetAiProviderEnabledDto) ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest {
 	r.setAiProviderEnabledDto = &setAiProviderEnabledDto
 	return r
 }
 
-func (r ApiSetEnabledRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.SetEnabledExecute(r)
+func (r ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.SetEnabledPostApiAppAiProviderIdSetEnabledExecute(r)
 }
 
 /*
-SetEnabled Method for SetEnabled
+SetEnabledPostApiAppAiProviderIdSetEnabled Method for SetEnabledPostApiAppAiProviderIdSetEnabled
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiSetEnabledRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest
 */
-func (a *AiProviderAPIService) SetEnabled(ctx context.Context, id string) ApiSetEnabledRequest {
-	return ApiSetEnabledRequest{
+func (a *AiProviderAPIService) SetEnabledPostApiAppAiProviderIdSetEnabled(ctx context.Context, id string) ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest {
+	return ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiProviderDto, *http.Response, error) {
+//  @return AiProviderDto
+func (a *AiProviderAPIService) SetEnabledPostApiAppAiProviderIdSetEnabledExecute(r ApiSetEnabledPostApiAppAiProviderIdSetEnabledRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.SetEnabled")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.SetEnabledPostApiAppAiProviderIdSetEnabled")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -1014,8 +1010,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1025,8 +1021,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1036,8 +1032,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1047,8 +1043,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1058,8 +1054,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1069,8 +1065,8 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1087,49 +1083,48 @@ func (a *AiProviderAPIService) SetEnabledExecute(r ApiSetEnabledRequest) (*AiPro
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiTestRequest struct {
-	ctx               context.Context
-	ApiService        *AiProviderAPIService
-	id                string
+type ApiTestPostApiAppAiProviderIdTestRequest struct {
+	ctx context.Context
+	ApiService *AiProviderAPIService
+	id string
 	testAiProviderDto *TestAiProviderDto
 }
 
-func (r ApiTestRequest) TestAiProviderDto(testAiProviderDto TestAiProviderDto) ApiTestRequest {
+func (r ApiTestPostApiAppAiProviderIdTestRequest) TestAiProviderDto(testAiProviderDto TestAiProviderDto) ApiTestPostApiAppAiProviderIdTestRequest {
 	r.testAiProviderDto = &testAiProviderDto
 	return r
 }
 
-func (r ApiTestRequest) Execute() (*AiProviderDto, *http.Response, error) {
-	return r.ApiService.TestExecute(r)
+func (r ApiTestPostApiAppAiProviderIdTestRequest) Execute() (*AiProviderDto, *http.Response, error) {
+	return r.ApiService.TestPostApiAppAiProviderIdTestExecute(r)
 }
 
 /*
-Test Method for Test
+TestPostApiAppAiProviderIdTest Method for TestPostApiAppAiProviderIdTest
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiTestRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiTestPostApiAppAiProviderIdTestRequest
 */
-func (a *AiProviderAPIService) Test(ctx context.Context, id string) ApiTestRequest {
-	return ApiTestRequest{
+func (a *AiProviderAPIService) TestPostApiAppAiProviderIdTest(ctx context.Context, id string) ApiTestPostApiAppAiProviderIdTestRequest {
+	return ApiTestPostApiAppAiProviderIdTestRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
-func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *http.Response, error) {
+//  @return AiProviderDto
+func (a *AiProviderAPIService) TestPostApiAppAiProviderIdTestExecute(r ApiTestPostApiAppAiProviderIdTestRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.Test")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.TestPostApiAppAiProviderIdTest")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -1189,8 +1184,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1200,8 +1195,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1211,8 +1206,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1222,8 +1217,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1233,8 +1228,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1244,8 +1239,8 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1263,9 +1258,9 @@ func (a *AiProviderAPIService) TestExecute(r ApiTestRequest) (*AiProviderDto, *h
 }
 
 type ApiUpdateAiProviderRequest struct {
-	ctx                         context.Context
-	ApiService                  *AiProviderAPIService
-	id                          string
+	ctx context.Context
+	ApiService *AiProviderAPIService
+	id string
 	createOrUpdateAiProviderDto *CreateOrUpdateAiProviderDto
 }
 
@@ -1281,27 +1276,26 @@ func (r ApiUpdateAiProviderRequest) Execute() (*AiProviderDto, *http.Response, e
 /*
 UpdateAiProvider Method for UpdateAiProvider
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAiProviderRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateAiProviderRequest
 */
 func (a *AiProviderAPIService) UpdateAiProvider(ctx context.Context, id string) ApiUpdateAiProviderRequest {
 	return ApiUpdateAiProviderRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiProviderDto
+//  @return AiProviderDto
 func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequest) (*AiProviderDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiProviderDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiProviderDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AiProviderAPIService.UpdateAiProvider")
@@ -1364,8 +1358,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1375,8 +1369,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1386,8 +1380,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1397,8 +1391,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1408,8 +1402,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1419,8 +1413,8 @@ func (a *AiProviderAPIService) UpdateAiProviderExecute(r ApiUpdateAiProviderRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

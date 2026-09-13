@@ -19,8 +19,8 @@ var _ MappedNullable = &UpdatePermissionDto{}
 
 // UpdatePermissionDto struct for UpdatePermissionDto
 type UpdatePermissionDto struct {
-	Name      NullableString `json:"name,omitempty"`
-	IsGranted *bool          `json:"isGranted,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	IsGranted *bool `json:"isGranted,omitempty"`
 }
 
 // NewUpdatePermissionDto instantiates a new UpdatePermissionDto object
@@ -72,7 +72,6 @@ func (o *UpdatePermissionDto) HasName() bool {
 func (o *UpdatePermissionDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *UpdatePermissionDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -116,7 +115,7 @@ func (o *UpdatePermissionDto) SetIsGranted(v bool) {
 }
 
 func (o UpdatePermissionDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -169,3 +168,5 @@ func (v *NullableUpdatePermissionDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

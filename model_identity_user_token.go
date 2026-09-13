@@ -19,11 +19,11 @@ var _ MappedNullable = &IdentityUserToken{}
 
 // IdentityUserToken struct for IdentityUserToken
 type IdentityUserToken struct {
-	TenantId      NullableString `json:"tenantId,omitempty"`
-	UserId        *string        `json:"userId,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	UserId *string `json:"userId,omitempty"`
 	LoginProvider NullableString `json:"loginProvider,omitempty"`
-	Name          NullableString `json:"name,omitempty"`
-	Value         NullableString `json:"value,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Value NullableString `json:"value,omitempty"`
 }
 
 // NewIdentityUserToken instantiates a new IdentityUserToken object
@@ -75,7 +75,6 @@ func (o *IdentityUserToken) HasTenantId() bool {
 func (o *IdentityUserToken) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUserToken) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -150,7 +149,6 @@ func (o *IdentityUserToken) HasLoginProvider() bool {
 func (o *IdentityUserToken) SetLoginProvider(v string) {
 	o.LoginProvider.Set(&v)
 }
-
 // SetLoginProviderNil sets the value for LoginProvider to be an explicit nil
 func (o *IdentityUserToken) SetLoginProviderNil() {
 	o.LoginProvider.Set(nil)
@@ -193,7 +191,6 @@ func (o *IdentityUserToken) HasName() bool {
 func (o *IdentityUserToken) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IdentityUserToken) SetNameNil() {
 	o.Name.Set(nil)
@@ -236,7 +233,6 @@ func (o *IdentityUserToken) HasValue() bool {
 func (o *IdentityUserToken) SetValue(v string) {
 	o.Value.Set(&v)
 }
-
 // SetValueNil sets the value for Value to be an explicit nil
 func (o *IdentityUserToken) SetValueNil() {
 	o.Value.Set(nil)
@@ -248,7 +244,7 @@ func (o *IdentityUserToken) UnsetValue() {
 }
 
 func (o IdentityUserToken) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -310,3 +306,5 @@ func (v *NullableIdentityUserToken) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

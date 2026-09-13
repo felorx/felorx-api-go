@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // AppPricingItemAPIService AppPricingItemAPI service
 type AppPricingItemAPIService service
 
 type ApiCreateAppPricingItemRequest struct {
-	ctx                             context.Context
-	ApiService                      *AppPricingItemAPIService
+	ctx context.Context
+	ApiService *AppPricingItemAPIService
 	createOrUpdateAppPricingItemDto *CreateOrUpdateAppPricingItemDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateAppPricingItemRequest) Execute() (*AppPricingItemDto, *http.Res
 /*
 CreateAppPricingItem Method for CreateAppPricingItem
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppPricingItemRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppPricingItemRequest
 */
 func (a *AppPricingItemAPIService) CreateAppPricingItem(ctx context.Context) ApiCreateAppPricingItemRequest {
 	return ApiCreateAppPricingItemRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPricingItemDto
+//  @return AppPricingItemDto
 func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPricingItemRequest) (*AppPricingItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPricingItemDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPricingItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPricingItemAPIService.CreateAppPricingItem")
@@ -120,8 +120,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *AppPricingItemAPIService) CreateAppPricingItemExecute(r ApiCreateAppPri
 }
 
 type ApiDeleteAppPricingItemByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppPricingItemAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppPricingItemByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeleteAppPricingItemByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppPricingItemById Method for DeleteAppPricingItemById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppPricingItemByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAppPricingItemByIdRequest
 */
 func (a *AppPricingItemAPIService) DeleteAppPricingItemById(ctx context.Context, id string) ApiDeleteAppPricingItemByIdRequest {
 	return ApiDeleteAppPricingItemByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAppPricingItemByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPricingItemAPIService.DeleteAppPricingItemById")
@@ -284,8 +284,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,9 +349,9 @@ func (a *AppPricingItemAPIService) DeleteAppPricingItemByIdExecute(r ApiDeleteAp
 }
 
 type ApiGetAppPricingItemByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppPricingItemAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetAppPricingItemByIdRequest) Execute() (*AppPricingItemDto, *http.Response, error) {
@@ -361,27 +361,26 @@ func (r ApiGetAppPricingItemByIdRequest) Execute() (*AppPricingItemDto, *http.Re
 /*
 GetAppPricingItemById Method for GetAppPricingItemById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetAppPricingItemByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetAppPricingItemByIdRequest
 */
 func (a *AppPricingItemAPIService) GetAppPricingItemById(ctx context.Context, id string) ApiGetAppPricingItemByIdRequest {
 	return ApiGetAppPricingItemByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPricingItemDto
+//  @return AppPricingItemDto
 func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPricingItemByIdRequest) (*AppPricingItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPricingItemDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPricingItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPricingItemAPIService.GetAppPricingItemById")
@@ -442,8 +441,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -453,8 +452,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -464,8 +463,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -475,8 +474,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -486,8 +485,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -497,8 +496,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -516,7 +515,7 @@ func (a *AppPricingItemAPIService) GetAppPricingItemByIdExecute(r ApiGetAppPrici
 }
 
 type ApiGetAppPricingItemListRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppPricingItemAPIService
 }
 
@@ -527,25 +526,24 @@ func (r ApiGetAppPricingItemListRequest) Execute() ([]AppPricingItemDto, *http.R
 /*
 GetAppPricingItemList Method for GetAppPricingItemList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAppPricingItemListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAppPricingItemListRequest
 */
 func (a *AppPricingItemAPIService) GetAppPricingItemList(ctx context.Context) ApiGetAppPricingItemListRequest {
 	return ApiGetAppPricingItemListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []AppPricingItemDto
+//  @return []AppPricingItemDto
 func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPricingItemListRequest) ([]AppPricingItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []AppPricingItemDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []AppPricingItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPricingItemAPIService.GetAppPricingItemList")
@@ -605,8 +603,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -616,8 +614,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -627,8 +625,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -638,8 +636,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -649,8 +647,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -660,8 +658,8 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -679,9 +677,9 @@ func (a *AppPricingItemAPIService) GetAppPricingItemListExecute(r ApiGetAppPrici
 }
 
 type ApiUpdateAppPricingItemRequest struct {
-	ctx                             context.Context
-	ApiService                      *AppPricingItemAPIService
-	id                              string
+	ctx context.Context
+	ApiService *AppPricingItemAPIService
+	id string
 	createOrUpdateAppPricingItemDto *CreateOrUpdateAppPricingItemDto
 }
 
@@ -697,27 +695,26 @@ func (r ApiUpdateAppPricingItemRequest) Execute() (*AppPricingItemDto, *http.Res
 /*
 UpdateAppPricingItem Method for UpdateAppPricingItem
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAppPricingItemRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateAppPricingItemRequest
 */
 func (a *AppPricingItemAPIService) UpdateAppPricingItem(ctx context.Context, id string) ApiUpdateAppPricingItemRequest {
 	return ApiUpdateAppPricingItemRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPricingItemDto
+//  @return AppPricingItemDto
 func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPricingItemRequest) (*AppPricingItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPricingItemDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPricingItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppPricingItemAPIService.UpdateAppPricingItem")
@@ -780,8 +777,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -791,8 +788,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -802,8 +799,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -813,8 +810,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -824,8 +821,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -835,8 +832,8 @@ func (a *AppPricingItemAPIService) UpdateAppPricingItemExecute(r ApiUpdateAppPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

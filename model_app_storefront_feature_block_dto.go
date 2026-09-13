@@ -19,12 +19,12 @@ var _ MappedNullable = &AppStorefrontFeatureBlockDto{}
 
 // AppStorefrontFeatureBlockDto struct for AppStorefrontFeatureBlockDto
 type AppStorefrontFeatureBlockDto struct {
-	FeatureId   *string        `json:"featureId,omitempty"`
-	Name        NullableString `json:"name,omitempty"`
+	FeatureId *string `json:"featureId,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	DisplayName NullableString `json:"displayName,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	PhoneUrl    NullableString `json:"phoneUrl,omitempty"`
-	TabletUrl   NullableString `json:"tabletUrl,omitempty"`
+	PhoneUrl NullableString `json:"phoneUrl,omitempty"`
+	TabletUrl NullableString `json:"tabletUrl,omitempty"`
 }
 
 // NewAppStorefrontFeatureBlockDto instantiates a new AppStorefrontFeatureBlockDto object
@@ -108,7 +108,6 @@ func (o *AppStorefrontFeatureBlockDto) HasName() bool {
 func (o *AppStorefrontFeatureBlockDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AppStorefrontFeatureBlockDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -151,7 +150,6 @@ func (o *AppStorefrontFeatureBlockDto) HasDisplayName() bool {
 func (o *AppStorefrontFeatureBlockDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AppStorefrontFeatureBlockDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -194,7 +192,6 @@ func (o *AppStorefrontFeatureBlockDto) HasDescription() bool {
 func (o *AppStorefrontFeatureBlockDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppStorefrontFeatureBlockDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -237,7 +234,6 @@ func (o *AppStorefrontFeatureBlockDto) HasPhoneUrl() bool {
 func (o *AppStorefrontFeatureBlockDto) SetPhoneUrl(v string) {
 	o.PhoneUrl.Set(&v)
 }
-
 // SetPhoneUrlNil sets the value for PhoneUrl to be an explicit nil
 func (o *AppStorefrontFeatureBlockDto) SetPhoneUrlNil() {
 	o.PhoneUrl.Set(nil)
@@ -280,7 +276,6 @@ func (o *AppStorefrontFeatureBlockDto) HasTabletUrl() bool {
 func (o *AppStorefrontFeatureBlockDto) SetTabletUrl(v string) {
 	o.TabletUrl.Set(&v)
 }
-
 // SetTabletUrlNil sets the value for TabletUrl to be an explicit nil
 func (o *AppStorefrontFeatureBlockDto) SetTabletUrlNil() {
 	o.TabletUrl.Set(nil)
@@ -292,7 +287,7 @@ func (o *AppStorefrontFeatureBlockDto) UnsetTabletUrl() {
 }
 
 func (o AppStorefrontFeatureBlockDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -357,3 +352,5 @@ func (v *NullableAppStorefrontFeatureBlockDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,12 +20,12 @@ var _ MappedNullable = &DateTimeFormatDto{}
 // DateTimeFormatDto struct for DateTimeFormatDto
 type DateTimeFormatDto struct {
 	CalendarAlgorithmType NullableString `json:"calendarAlgorithmType,omitempty"`
-	DateTimeFormatLong    NullableString `json:"dateTimeFormatLong,omitempty"`
-	ShortDatePattern      NullableString `json:"shortDatePattern,omitempty"`
-	FullDateTimePattern   NullableString `json:"fullDateTimePattern,omitempty"`
-	DateSeparator         NullableString `json:"dateSeparator,omitempty"`
-	ShortTimePattern      NullableString `json:"shortTimePattern,omitempty"`
-	LongTimePattern       NullableString `json:"longTimePattern,omitempty"`
+	DateTimeFormatLong NullableString `json:"dateTimeFormatLong,omitempty"`
+	ShortDatePattern NullableString `json:"shortDatePattern,omitempty"`
+	FullDateTimePattern NullableString `json:"fullDateTimePattern,omitempty"`
+	DateSeparator NullableString `json:"dateSeparator,omitempty"`
+	ShortTimePattern NullableString `json:"shortTimePattern,omitempty"`
+	LongTimePattern NullableString `json:"longTimePattern,omitempty"`
 }
 
 // NewDateTimeFormatDto instantiates a new DateTimeFormatDto object
@@ -77,7 +77,6 @@ func (o *DateTimeFormatDto) HasCalendarAlgorithmType() bool {
 func (o *DateTimeFormatDto) SetCalendarAlgorithmType(v string) {
 	o.CalendarAlgorithmType.Set(&v)
 }
-
 // SetCalendarAlgorithmTypeNil sets the value for CalendarAlgorithmType to be an explicit nil
 func (o *DateTimeFormatDto) SetCalendarAlgorithmTypeNil() {
 	o.CalendarAlgorithmType.Set(nil)
@@ -120,7 +119,6 @@ func (o *DateTimeFormatDto) HasDateTimeFormatLong() bool {
 func (o *DateTimeFormatDto) SetDateTimeFormatLong(v string) {
 	o.DateTimeFormatLong.Set(&v)
 }
-
 // SetDateTimeFormatLongNil sets the value for DateTimeFormatLong to be an explicit nil
 func (o *DateTimeFormatDto) SetDateTimeFormatLongNil() {
 	o.DateTimeFormatLong.Set(nil)
@@ -163,7 +161,6 @@ func (o *DateTimeFormatDto) HasShortDatePattern() bool {
 func (o *DateTimeFormatDto) SetShortDatePattern(v string) {
 	o.ShortDatePattern.Set(&v)
 }
-
 // SetShortDatePatternNil sets the value for ShortDatePattern to be an explicit nil
 func (o *DateTimeFormatDto) SetShortDatePatternNil() {
 	o.ShortDatePattern.Set(nil)
@@ -206,7 +203,6 @@ func (o *DateTimeFormatDto) HasFullDateTimePattern() bool {
 func (o *DateTimeFormatDto) SetFullDateTimePattern(v string) {
 	o.FullDateTimePattern.Set(&v)
 }
-
 // SetFullDateTimePatternNil sets the value for FullDateTimePattern to be an explicit nil
 func (o *DateTimeFormatDto) SetFullDateTimePatternNil() {
 	o.FullDateTimePattern.Set(nil)
@@ -249,7 +245,6 @@ func (o *DateTimeFormatDto) HasDateSeparator() bool {
 func (o *DateTimeFormatDto) SetDateSeparator(v string) {
 	o.DateSeparator.Set(&v)
 }
-
 // SetDateSeparatorNil sets the value for DateSeparator to be an explicit nil
 func (o *DateTimeFormatDto) SetDateSeparatorNil() {
 	o.DateSeparator.Set(nil)
@@ -292,7 +287,6 @@ func (o *DateTimeFormatDto) HasShortTimePattern() bool {
 func (o *DateTimeFormatDto) SetShortTimePattern(v string) {
 	o.ShortTimePattern.Set(&v)
 }
-
 // SetShortTimePatternNil sets the value for ShortTimePattern to be an explicit nil
 func (o *DateTimeFormatDto) SetShortTimePatternNil() {
 	o.ShortTimePattern.Set(nil)
@@ -335,7 +329,6 @@ func (o *DateTimeFormatDto) HasLongTimePattern() bool {
 func (o *DateTimeFormatDto) SetLongTimePattern(v string) {
 	o.LongTimePattern.Set(&v)
 }
-
 // SetLongTimePatternNil sets the value for LongTimePattern to be an explicit nil
 func (o *DateTimeFormatDto) SetLongTimePatternNil() {
 	o.LongTimePattern.Set(nil)
@@ -347,7 +340,7 @@ func (o *DateTimeFormatDto) UnsetLongTimePattern() {
 }
 
 func (o DateTimeFormatDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -415,3 +408,5 @@ func (v *NullableDateTimeFormatDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

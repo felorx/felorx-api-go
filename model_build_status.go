@@ -20,11 +20,11 @@ type BuildStatus string
 
 // List of BuildStatus
 const (
-	BUILDSTATUS_PENDING   BuildStatus = "Pending"
-	BUILDSTATUS_BUILDING  BuildStatus = "Building"
+	BUILDSTATUS_PENDING BuildStatus = "Pending"
+	BUILDSTATUS_BUILDING BuildStatus = "Building"
 	BUILDSTATUS_SUCCEEDED BuildStatus = "Succeeded"
-	BUILDSTATUS_FAILED    BuildStatus = "Failed"
-	BUILDSTATUS_CANCELED  BuildStatus = "Canceled"
+	BUILDSTATUS_FAILED BuildStatus = "Failed"
+	BUILDSTATUS_CANCELED BuildStatus = "Canceled"
 )
 
 // All allowed values of BuildStatus enum
@@ -114,3 +114,4 @@ func (v *NullableBuildStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

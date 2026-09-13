@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PromptTokens** | Pointer to **NullableInt32** |  | [optional]
-**CompletionTokens** | Pointer to **NullableInt32** |  | [optional]
-**TotalTokens** | Pointer to **NullableInt32** |  | [optional]
+**PromptTokens** | Pointer to **NullableInt32** |  | [optional] 
+**CompletionTokens** | Pointer to **NullableInt32** |  | [optional] 
+**TotalTokens** | Pointer to **NullableInt32** |  | [optional] 
 
 ## Methods
 

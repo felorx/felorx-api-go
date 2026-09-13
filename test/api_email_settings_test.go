@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_EmailSettingsAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_EmailSettingsAPIService(t *testing.T) {
 
 	t.Run("Test EmailSettingsAPIService GetEmailSettings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.EmailSettingsAPI.GetEmailSettings(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_EmailSettingsAPIService(t *testing.T) {
 
 	t.Run("Test EmailSettingsAPIService SendTestEmail", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.EmailSettingsAPI.SendTestEmail(context.Background()).Execute()
 
@@ -47,7 +47,7 @@ func Test_felorx_EmailSettingsAPIService(t *testing.T) {
 
 	t.Run("Test EmailSettingsAPIService UpdateEmailSettings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.EmailSettingsAPI.UpdateEmailSettings(context.Background()).Execute()
 

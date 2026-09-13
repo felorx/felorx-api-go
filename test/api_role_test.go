@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_RoleAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService CreateIdentityRole", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.RoleAPI.CreateIdentityRole(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService DeleteIdentityRoleById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService GetAllList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.RoleAPI.GetAllList(context.Background()).Execute()
 
@@ -61,7 +61,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService GetIdentityRoleById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -75,7 +75,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService GetIdentityRoleList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.RoleAPI.GetIdentityRoleList(context.Background()).Execute()
 
@@ -87,7 +87,7 @@ func Test_felorx_RoleAPIService(t *testing.T) {
 
 	t.Run("Test RoleAPIService UpdateIdentityRole", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Index** | Pointer to **int32** |  | [optional]
-**Message** | Pointer to [**AiChatMessageDto**](AiChatMessageDto.md) |  | [optional]
-**FinishReason** | Pointer to **NullableString** |  | [optional]
+**Index** | Pointer to **int32** |  | [optional] 
+**Message** | Pointer to [**AiChatMessageDto**](AiChatMessageDto.md) |  | [optional] 
+**FinishReason** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

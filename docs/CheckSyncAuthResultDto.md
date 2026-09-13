@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsAuthed** | Pointer to **bool** |  | [optional]
+**IsAuthed** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

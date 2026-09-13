@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | Pointer to **NullableString** | 键值, 例如: Seat, MaxListCount（见 AppPricingItemKeys） | [optional]
-**AppId** | Pointer to **NullableString** | 所属应用 | [optional]
-**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional]
-**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional]
-**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional]
-**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional]
-**SortIndex** | Pointer to **int32** | 排序 | [optional]
+**Key** | Pointer to **NullableString** | 键值, 例如: Seat, MaxListCount（见 AppPricingItemKeys） | [optional] 
+**AppId** | Pointer to **NullableString** | 所属应用 | [optional] 
+**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional] 
+**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional] 
+**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional] 
+**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional] 
+**SortIndex** | Pointer to **int32** | 排序 | [optional] 
 
 ## Methods
 

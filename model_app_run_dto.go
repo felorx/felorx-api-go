@@ -20,18 +20,18 @@ var _ MappedNullable = &AppRunDto{}
 
 // AppRunDto struct for AppRunDto
 type AppRunDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	AppId                NullableString `json:"appId,omitempty"`
-	AppName              NullableString `json:"appName,omitempty"`
-	Args                 interface{}    `json:"args,omitempty"`
-	Envs                 interface{}    `json:"envs,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId NullableString `json:"appId,omitempty"`
+	AppName NullableString `json:"appName,omitempty"`
+	Args interface{} `json:"args,omitempty"`
+	Envs interface{} `json:"envs,omitempty"`
 }
 
 // NewAppRunDto instantiates a new AppRunDto object
@@ -147,7 +147,6 @@ func (o *AppRunDto) HasCreatorId() bool {
 func (o *AppRunDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppRunDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -190,7 +189,6 @@ func (o *AppRunDto) HasLastModificationTime() bool {
 func (o *AppRunDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppRunDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -233,7 +231,6 @@ func (o *AppRunDto) HasLastModifierId() bool {
 func (o *AppRunDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppRunDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -308,7 +305,6 @@ func (o *AppRunDto) HasDeleterId() bool {
 func (o *AppRunDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppRunDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -351,7 +347,6 @@ func (o *AppRunDto) HasDeletionTime() bool {
 func (o *AppRunDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppRunDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -394,7 +389,6 @@ func (o *AppRunDto) HasAppId() bool {
 func (o *AppRunDto) SetAppId(v string) {
 	o.AppId.Set(&v)
 }
-
 // SetAppIdNil sets the value for AppId to be an explicit nil
 func (o *AppRunDto) SetAppIdNil() {
 	o.AppId.Set(nil)
@@ -437,7 +431,6 @@ func (o *AppRunDto) HasAppName() bool {
 func (o *AppRunDto) SetAppName(v string) {
 	o.AppName.Set(&v)
 }
-
 // SetAppNameNil sets the value for AppName to be an explicit nil
 func (o *AppRunDto) SetAppNameNil() {
 	o.AppName.Set(nil)
@@ -515,7 +508,7 @@ func (o *AppRunDto) SetEnvs(v interface{}) {
 }
 
 func (o AppRunDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -598,3 +591,5 @@ func (v *NullableAppRunDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

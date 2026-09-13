@@ -19,7 +19,7 @@ var _ MappedNullable = &CreateOrUpdateMessageTemplateDto{}
 
 // CreateOrUpdateMessageTemplateDto struct for CreateOrUpdateMessageTemplateDto
 type CreateOrUpdateMessageTemplateDto struct {
-	Name        NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	DisplayName NullableString `json:"displayName,omitempty"`
 	Description NullableString `json:"description,omitempty"`
 }
@@ -73,7 +73,6 @@ func (o *CreateOrUpdateMessageTemplateDto) HasName() bool {
 func (o *CreateOrUpdateMessageTemplateDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateMessageTemplateDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -116,7 +115,6 @@ func (o *CreateOrUpdateMessageTemplateDto) HasDisplayName() bool {
 func (o *CreateOrUpdateMessageTemplateDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOrUpdateMessageTemplateDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -159,7 +157,6 @@ func (o *CreateOrUpdateMessageTemplateDto) HasDescription() bool {
 func (o *CreateOrUpdateMessageTemplateDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateOrUpdateMessageTemplateDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -171,7 +168,7 @@ func (o *CreateOrUpdateMessageTemplateDto) UnsetDescription() {
 }
 
 func (o CreateOrUpdateMessageTemplateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -227,3 +224,5 @@ func (v *NullableCreateOrUpdateMessageTemplateDto) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

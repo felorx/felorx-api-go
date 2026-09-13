@@ -20,15 +20,25 @@ type AiCapability string
 
 // List of AiCapability
 const (
-	AICAPABILITY_CHAT                  AiCapability = "Chat"
-	AICAPABILITY_VISION                AiCapability = "Vision"
-	AICAPABILITY_OCR                   AiCapability = "Ocr"
-	AICAPABILITY_IMAGE_LABEL           AiCapability = "ImageLabel"
-	AICAPABILITY_PRODUCT_DETECT        AiCapability = "ProductDetect"
+	AICAPABILITY_CHAT AiCapability = "Chat"
+	AICAPABILITY_VISION AiCapability = "Vision"
+	AICAPABILITY_OCR AiCapability = "Ocr"
+	AICAPABILITY_IMAGE_LABEL AiCapability = "ImageLabel"
+	AICAPABILITY_PRODUCT_DETECT AiCapability = "ProductDetect"
 	AICAPABILITY_STRUCTURED_EXTRACTION AiCapability = "StructuredExtraction"
-	AICAPABILITY_CAPTION               AiCapability = "Caption"
-	AICAPABILITY_IMAGE_GENERATION      AiCapability = "ImageGeneration"
-	AICAPABILITY_VIDEO_GENERATION      AiCapability = "VideoGeneration"
+	AICAPABILITY_CAPTION AiCapability = "Caption"
+	AICAPABILITY_IMAGE_GENERATION AiCapability = "ImageGeneration"
+	AICAPABILITY_VIDEO_GENERATION AiCapability = "VideoGeneration"
+	AICAPABILITY_RESPONSES AiCapability = "Responses"
+	AICAPABILITY_RESPONSES_STREAMING AiCapability = "ResponsesStreaming"
+	AICAPABILITY_RESPONSES_STATEFUL AiCapability = "ResponsesStateful"
+	AICAPABILITY_RESPONSES_WEB_SOCKET AiCapability = "ResponsesWebSocket"
+	AICAPABILITY_FUNCTION_CALLING AiCapability = "FunctionCalling"
+	AICAPABILITY_RESPONSES_BACKGROUND AiCapability = "ResponsesBackground"
+	AICAPABILITY_RESPONSES_COMPACTION AiCapability = "ResponsesCompaction"
+	AICAPABILITY_RESPONSES_INPUT_TOKENS AiCapability = "ResponsesInputTokens"
+	AICAPABILITY_REASONING AiCapability = "Reasoning"
+	AICAPABILITY_HOSTED_TOOLS AiCapability = "HostedTools"
 )
 
 // All allowed values of AiCapability enum
@@ -42,6 +52,16 @@ var AllowedAiCapabilityEnumValues = []AiCapability{
 	"Caption",
 	"ImageGeneration",
 	"VideoGeneration",
+	"Responses",
+	"ResponsesStreaming",
+	"ResponsesStateful",
+	"ResponsesWebSocket",
+	"FunctionCalling",
+	"ResponsesBackground",
+	"ResponsesCompaction",
+	"ResponsesInputTokens",
+	"Reasoning",
+	"HostedTools",
 }
 
 func (v *AiCapability) UnmarshalJSON(src []byte) error {
@@ -122,3 +142,4 @@ func (v *NullableAiCapability) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

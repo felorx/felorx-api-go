@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AiProviderAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	t.Run("Test AiProviderAPIService CreateAiProvider", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AiProviderAPI.CreateAiProvider(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	t.Run("Test AiProviderAPIService DeleteAiProviderById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	t.Run("Test AiProviderAPIService GetAiProviderById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +63,7 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	t.Run("Test AiProviderAPIService GetAiProviderList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AiProviderAPI.GetAiProviderList(context.Background()).Execute()
 
@@ -73,25 +73,11 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AiProviderAPIService SetDefaultModel", func(t *testing.T) {
+	t.Run("Test AiProviderAPIService SetDefaultModelPostApiAppAiProviderSetDefaultModel", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AiProviderAPI.SetDefaultModel(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test AiProviderAPIService SetEnabled", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var id string
-
-		resp, httpRes, err := apiClient.AiProviderAPI.SetEnabled(context.Background(), id).Execute()
+		resp, httpRes, err := apiClient.AiProviderAPI.SetDefaultModelPostApiAppAiProviderSetDefaultModel(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -99,13 +85,27 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AiProviderAPIService Test", func(t *testing.T) {
+	t.Run("Test AiProviderAPIService SetEnabledPostApiAppAiProviderIdSetEnabled", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
-		resp, httpRes, err := apiClient.AiProviderAPI.Test(context.Background(), id).Execute()
+		resp, httpRes, err := apiClient.AiProviderAPI.SetEnabledPostApiAppAiProviderIdSetEnabled(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test AiProviderAPIService TestPostApiAppAiProviderIdTest", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.AiProviderAPI.TestPostApiAppAiProviderIdTest(context.Background(), id).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -115,7 +115,7 @@ func Test_felorx_AiProviderAPIService(t *testing.T) {
 
 	t.Run("Test AiProviderAPIService UpdateAiProvider", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AbpTenantAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AbpTenantAPIService(t *testing.T) {
 
 	t.Run("Test AbpTenantAPIService FindTenantById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -38,7 +38,7 @@ func Test_felorx_AbpTenantAPIService(t *testing.T) {
 
 	t.Run("Test AbpTenantAPIService FindTenantByName", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var name string
 

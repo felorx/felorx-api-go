@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RouteName** | Pointer to **NullableString** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional]
-**Enabled** | Pointer to **bool** |  | [optional]
-**IsDefault** | Pointer to **bool** |  | [optional]
-**DefaultParameters** | Pointer to **map[string]string** |  | [optional]
+**RouteName** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional] 
+**Enabled** | Pointer to **bool** |  | [optional] 
+**IsDefault** | Pointer to **bool** |  | [optional] 
+**DefaultParameters** | Pointer to **map[string]string** |  | [optional] 
 
 ## Methods
 

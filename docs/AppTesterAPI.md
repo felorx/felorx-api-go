@@ -58,8 +58,8 @@ Other parameters are passed through a pointer to a apiCheckIsAppTesterRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string** |  |
- **userId** | **string** |  |
+ **appId** | **string** |  | 
+ **userId** | **string** |  | 
 
 ### Return type
 
@@ -123,7 +123,7 @@ Other parameters are passed through a pointer to a apiCreateAppTesterRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createUpdateAppTesterDto** | [**CreateUpdateAppTesterDto**](CreateUpdateAppTesterDto.md) |  |
+ **createUpdateAppTesterDto** | [**CreateUpdateAppTesterDto**](CreateUpdateAppTesterDto.md) |  | 
 
 ### Return type
 
@@ -162,7 +162,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -180,7 +180,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -228,7 +228,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -248,7 +248,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -323,9 +323,9 @@ Other parameters are passed through a pointer to a apiGetAppTesterListRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -364,7 +364,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createUpdateAppTesterDto := *openapiclient.NewCreateUpdateAppTesterDto() // CreateUpdateAppTesterDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -385,7 +385,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -395,7 +395,7 @@ Other parameters are passed through a pointer to a apiUpdateAppTesterRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createUpdateAppTesterDto** | [**CreateUpdateAppTesterDto**](CreateUpdateAppTesterDto.md) |  |
+ **createUpdateAppTesterDto** | [**CreateUpdateAppTesterDto**](CreateUpdateAppTesterDto.md) |  | 
 
 ### Return type
 

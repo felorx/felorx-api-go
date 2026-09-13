@@ -19,17 +19,17 @@ var _ MappedNullable = &CreateOrUpdateAppLocaleDto{}
 
 // CreateOrUpdateAppLocaleDto struct for CreateOrUpdateAppLocaleDto
 type CreateOrUpdateAppLocaleDto struct {
-	AppId       *string        `json:"appId,omitempty"`
-	LangCode    NullableString `json:"langCode,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	LangCode NullableString `json:"langCode,omitempty"`
 	CountryCode NullableString `json:"countryCode,omitempty"`
-	Title       NullableString `json:"title,omitempty"`
-	Subtitle    NullableString `json:"subtitle,omitempty"`
-	ShortDesc   NullableString `json:"shortDesc,omitempty"`
-	FullDesc    NullableString `json:"fullDesc,omitempty"`
-	Keywords    NullableString `json:"keywords,omitempty"`
-	PromoText   NullableString `json:"promoText,omitempty"`
-	SupportUrl  NullableString `json:"supportUrl,omitempty"`
-	PrivacyUrl  NullableString `json:"privacyUrl,omitempty"`
+	Title NullableString `json:"title,omitempty"`
+	Subtitle NullableString `json:"subtitle,omitempty"`
+	ShortDesc NullableString `json:"shortDesc,omitempty"`
+	FullDesc NullableString `json:"fullDesc,omitempty"`
+	Keywords NullableString `json:"keywords,omitempty"`
+	PromoText NullableString `json:"promoText,omitempty"`
+	SupportUrl NullableString `json:"supportUrl,omitempty"`
+	PrivacyUrl NullableString `json:"privacyUrl,omitempty"`
 	ReleaseNote NullableString `json:"releaseNote,omitempty"`
 }
 
@@ -114,7 +114,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasLangCode() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetLangCode(v string) {
 	o.LangCode.Set(&v)
 }
-
 // SetLangCodeNil sets the value for LangCode to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetLangCodeNil() {
 	o.LangCode.Set(nil)
@@ -157,7 +156,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasCountryCode() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetCountryCode(v string) {
 	o.CountryCode.Set(&v)
 }
-
 // SetCountryCodeNil sets the value for CountryCode to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetCountryCodeNil() {
 	o.CountryCode.Set(nil)
@@ -200,7 +198,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasTitle() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -243,7 +240,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasSubtitle() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetSubtitle(v string) {
 	o.Subtitle.Set(&v)
 }
-
 // SetSubtitleNil sets the value for Subtitle to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetSubtitleNil() {
 	o.Subtitle.Set(nil)
@@ -286,7 +282,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasShortDesc() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetShortDesc(v string) {
 	o.ShortDesc.Set(&v)
 }
-
 // SetShortDescNil sets the value for ShortDesc to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetShortDescNil() {
 	o.ShortDesc.Set(nil)
@@ -329,7 +324,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasFullDesc() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetFullDesc(v string) {
 	o.FullDesc.Set(&v)
 }
-
 // SetFullDescNil sets the value for FullDesc to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetFullDescNil() {
 	o.FullDesc.Set(nil)
@@ -372,7 +366,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasKeywords() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetKeywords(v string) {
 	o.Keywords.Set(&v)
 }
-
 // SetKeywordsNil sets the value for Keywords to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetKeywordsNil() {
 	o.Keywords.Set(nil)
@@ -415,7 +408,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasPromoText() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetPromoText(v string) {
 	o.PromoText.Set(&v)
 }
-
 // SetPromoTextNil sets the value for PromoText to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetPromoTextNil() {
 	o.PromoText.Set(nil)
@@ -458,7 +450,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasSupportUrl() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetSupportUrl(v string) {
 	o.SupportUrl.Set(&v)
 }
-
 // SetSupportUrlNil sets the value for SupportUrl to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetSupportUrlNil() {
 	o.SupportUrl.Set(nil)
@@ -501,7 +492,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasPrivacyUrl() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetPrivacyUrl(v string) {
 	o.PrivacyUrl.Set(&v)
 }
-
 // SetPrivacyUrlNil sets the value for PrivacyUrl to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetPrivacyUrlNil() {
 	o.PrivacyUrl.Set(nil)
@@ -544,7 +534,6 @@ func (o *CreateOrUpdateAppLocaleDto) HasReleaseNote() bool {
 func (o *CreateOrUpdateAppLocaleDto) SetReleaseNote(v string) {
 	o.ReleaseNote.Set(&v)
 }
-
 // SetReleaseNoteNil sets the value for ReleaseNote to be an explicit nil
 func (o *CreateOrUpdateAppLocaleDto) SetReleaseNoteNil() {
 	o.ReleaseNote.Set(nil)
@@ -556,7 +545,7 @@ func (o *CreateOrUpdateAppLocaleDto) UnsetReleaseNote() {
 }
 
 func (o CreateOrUpdateAppLocaleDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -639,3 +628,5 @@ func (v *NullableCreateOrUpdateAppLocaleDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

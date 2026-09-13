@@ -19,9 +19,9 @@ var _ MappedNullable = &MessagePublishDto{}
 
 // MessagePublishDto struct for MessagePublishDto
 type MessagePublishDto struct {
-	Title       NullableString `json:"title,omitempty"`
+	Title NullableString `json:"title,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	AppId       *string        `json:"appId,omitempty"`
+	AppId *string `json:"appId,omitempty"`
 	// 模板名称, 包含版本号  felorx/wechat-app-msg?version=1 微信应用消息模板  felorx/wechat-official-msg?version=2 微信公众号消息模板
 	Template NullableString `json:"template,omitempty"`
 	// JSON格式数据
@@ -77,7 +77,6 @@ func (o *MessagePublishDto) HasTitle() bool {
 func (o *MessagePublishDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *MessagePublishDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -120,7 +119,6 @@ func (o *MessagePublishDto) HasDescription() bool {
 func (o *MessagePublishDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *MessagePublishDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -195,7 +193,6 @@ func (o *MessagePublishDto) HasTemplate() bool {
 func (o *MessagePublishDto) SetTemplate(v string) {
 	o.Template.Set(&v)
 }
-
 // SetTemplateNil sets the value for Template to be an explicit nil
 func (o *MessagePublishDto) SetTemplateNil() {
 	o.Template.Set(nil)
@@ -240,7 +237,7 @@ func (o *MessagePublishDto) SetData(v map[string]interface{}) {
 }
 
 func (o MessagePublishDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,3 +299,5 @@ func (v *NullableMessagePublishDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

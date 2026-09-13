@@ -23,19 +23,20 @@ type CreateOrUpdateAppReleaseDto struct {
 	// 版本名称
 	VersionName NullableString `json:"versionName,omitempty"`
 	// 构建编号
-	VersionCode   *int64          `json:"versionCode,omitempty"`
-	Notes         NullableString  `json:"notes,omitempty"`
-	Platform      *AppPlatform    `json:"platform,omitempty"`
-	Key           NullableString  `json:"key,omitempty"`
-	RapidCode     NullableString  `json:"rapidCode,omitempty"`
-	Size          NullableInt64   `json:"size,omitempty"`
-	Hash          NullableString  `json:"hash,omitempty"`
-	ArtifactType  *ArtifactType   `json:"artifactType,omitempty"`
-	Publisher     *AppPublisher   `json:"publisher,omitempty"`
-	IsForceUpdate *bool           `json:"isForceUpdate,omitempty"`
-	AppId         *string         `json:"appId,omitempty"`
-	IsEnabled     *bool           `json:"isEnabled,omitempty"`
-	Channel       *ReleaseChannel `json:"channel,omitempty"`
+	VersionCode *int64 `json:"versionCode,omitempty"`
+	Notes NullableString `json:"notes,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Key NullableString `json:"key,omitempty"`
+	RapidCode NullableString `json:"rapidCode,omitempty"`
+	Size NullableInt64 `json:"size,omitempty"`
+	Hash NullableString `json:"hash,omitempty"`
+	ArtifactType *ArtifactType `json:"artifactType,omitempty"`
+	Architecture NullableString `json:"architecture,omitempty"`
+	Publisher *AppPublisher `json:"publisher,omitempty"`
+	IsForceUpdate *bool `json:"isForceUpdate,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
+	Channel *ReleaseChannel `json:"channel,omitempty"`
 	// 构建记录ID（可选，如果提供则使用对应构建的BuildNumber作为VersionCode）
 	BuildRecordId NullableString `json:"buildRecordId,omitempty"`
 }
@@ -89,7 +90,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasVersion() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetVersion(v string) {
 	o.Version.Set(&v)
 }
-
 // SetVersionNil sets the value for Version to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetVersionNil() {
 	o.Version.Set(nil)
@@ -132,7 +132,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasVersionName() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetVersionName(v string) {
 	o.VersionName.Set(&v)
 }
-
 // SetVersionNameNil sets the value for VersionName to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetVersionNameNil() {
 	o.VersionName.Set(nil)
@@ -207,7 +206,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasNotes() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetNotes(v string) {
 	o.Notes.Set(&v)
 }
-
 // SetNotesNil sets the value for Notes to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetNotesNil() {
 	o.Notes.Set(nil)
@@ -282,7 +280,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasKey() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -325,7 +322,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasRapidCode() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetRapidCode(v string) {
 	o.RapidCode.Set(&v)
 }
-
 // SetRapidCodeNil sets the value for RapidCode to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetRapidCodeNil() {
 	o.RapidCode.Set(nil)
@@ -368,7 +364,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasSize() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetSize(v int64) {
 	o.Size.Set(&v)
 }
-
 // SetSizeNil sets the value for Size to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetSizeNil() {
 	o.Size.Set(nil)
@@ -411,7 +406,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasHash() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetHash(v string) {
 	o.Hash.Set(&v)
 }
-
 // SetHashNil sets the value for Hash to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetHashNil() {
 	o.Hash.Set(nil)
@@ -452,6 +446,48 @@ func (o *CreateOrUpdateAppReleaseDto) HasArtifactType() bool {
 // SetArtifactType gets a reference to the given ArtifactType and assigns it to the ArtifactType field.
 func (o *CreateOrUpdateAppReleaseDto) SetArtifactType(v ArtifactType) {
 	o.ArtifactType = &v
+}
+
+// GetArchitecture returns the Architecture field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *CreateOrUpdateAppReleaseDto) GetArchitecture() string {
+	if o == nil || IsNil(o.Architecture.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Architecture.Get()
+}
+
+// GetArchitectureOk returns a tuple with the Architecture field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *CreateOrUpdateAppReleaseDto) GetArchitectureOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Architecture.Get(), o.Architecture.IsSet()
+}
+
+// HasArchitecture returns a boolean if a field has been set.
+func (o *CreateOrUpdateAppReleaseDto) HasArchitecture() bool {
+	if o != nil && o.Architecture.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetArchitecture gets a reference to the given NullableString and assigns it to the Architecture field.
+func (o *CreateOrUpdateAppReleaseDto) SetArchitecture(v string) {
+	o.Architecture.Set(&v)
+}
+// SetArchitectureNil sets the value for Architecture to be an explicit nil
+func (o *CreateOrUpdateAppReleaseDto) SetArchitectureNil() {
+	o.Architecture.Set(nil)
+}
+
+// UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
+func (o *CreateOrUpdateAppReleaseDto) UnsetArchitecture() {
+	o.Architecture.Unset()
 }
 
 // GetPublisher returns the Publisher field value if set, zero value otherwise.
@@ -646,7 +682,6 @@ func (o *CreateOrUpdateAppReleaseDto) HasBuildRecordId() bool {
 func (o *CreateOrUpdateAppReleaseDto) SetBuildRecordId(v string) {
 	o.BuildRecordId.Set(&v)
 }
-
 // SetBuildRecordIdNil sets the value for BuildRecordId to be an explicit nil
 func (o *CreateOrUpdateAppReleaseDto) SetBuildRecordIdNil() {
 	o.BuildRecordId.Set(nil)
@@ -658,7 +693,7 @@ func (o *CreateOrUpdateAppReleaseDto) UnsetBuildRecordId() {
 }
 
 func (o CreateOrUpdateAppReleaseDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -696,6 +731,9 @@ func (o CreateOrUpdateAppReleaseDto) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ArtifactType) {
 		toSerialize["artifactType"] = o.ArtifactType
+	}
+	if o.Architecture.IsSet() {
+		toSerialize["architecture"] = o.Architecture.Get()
 	}
 	if !IsNil(o.Publisher) {
 		toSerialize["publisher"] = o.Publisher
@@ -753,3 +791,5 @@ func (v *NullableCreateOrUpdateAppReleaseDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**ClientId** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**ClientUri** | Pointer to **NullableString** |  | [optional]
-**LogoUri** | Pointer to **NullableString** |  | [optional]
-**Scopes** | Pointer to **NullableString** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**LastAuthorizationTime** | Pointer to **NullableTime** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**ClientId** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**ClientUri** | Pointer to **NullableString** |  | [optional] 
+**LogoUri** | Pointer to **NullableString** |  | [optional] 
+**Scopes** | Pointer to **NullableString** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**LastAuthorizationTime** | Pointer to **NullableTime** |  | [optional] 
 
 ## Methods
 

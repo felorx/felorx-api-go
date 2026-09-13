@@ -19,13 +19,14 @@ import (
 	"strings"
 )
 
+
 // AbpTenantAPIService AbpTenantAPI service
 type AbpTenantAPIService service
 
 type ApiFindTenantByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AbpTenantAPIService
-	id         string
+	id string
 }
 
 func (r ApiFindTenantByIdRequest) Execute() (*FindTenantResultDto, *http.Response, error) {
@@ -35,27 +36,26 @@ func (r ApiFindTenantByIdRequest) Execute() (*FindTenantResultDto, *http.Respons
 /*
 FindTenantById Method for FindTenantById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiFindTenantByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiFindTenantByIdRequest
 */
 func (a *AbpTenantAPIService) FindTenantById(ctx context.Context, id string) ApiFindTenantByIdRequest {
 	return ApiFindTenantByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return FindTenantResultDto
+//  @return FindTenantResultDto
 func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) (*FindTenantResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *FindTenantResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *FindTenantResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AbpTenantAPIService.FindTenantById")
@@ -116,8 +116,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -127,8 +127,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -138,8 +138,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -149,8 +149,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -160,8 +160,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -171,8 +171,8 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -190,9 +190,9 @@ func (a *AbpTenantAPIService) FindTenantByIdExecute(r ApiFindTenantByIdRequest) 
 }
 
 type ApiFindTenantByNameRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AbpTenantAPIService
-	name       string
+	name string
 }
 
 func (r ApiFindTenantByNameRequest) Execute() (*FindTenantResultDto, *http.Response, error) {
@@ -202,27 +202,26 @@ func (r ApiFindTenantByNameRequest) Execute() (*FindTenantResultDto, *http.Respo
 /*
 FindTenantByName Method for FindTenantByName
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name
-	@return ApiFindTenantByNameRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param name
+ @return ApiFindTenantByNameRequest
 */
 func (a *AbpTenantAPIService) FindTenantByName(ctx context.Context, name string) ApiFindTenantByNameRequest {
 	return ApiFindTenantByNameRequest{
 		ApiService: a,
-		ctx:        ctx,
-		name:       name,
+		ctx: ctx,
+		name: name,
 	}
 }
 
 // Execute executes the request
-//
-//	@return FindTenantResultDto
+//  @return FindTenantResultDto
 func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameRequest) (*FindTenantResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *FindTenantResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *FindTenantResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AbpTenantAPIService.FindTenantByName")
@@ -283,8 +282,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -294,8 +293,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -305,8 +304,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -316,8 +315,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -327,8 +326,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -338,8 +337,8 @@ func (a *AbpTenantAPIService) FindTenantByNameExecute(r ApiFindTenantByNameReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

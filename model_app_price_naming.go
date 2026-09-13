@@ -20,9 +20,9 @@ type AppPriceNaming string
 
 // List of AppPriceNaming
 const (
-	APPPRICENAMING_FREE       AppPriceNaming = "Free"
-	APPPRICENAMING_PREMIUM    AppPriceNaming = "Premium"
-	APPPRICENAMING_PRO        AppPriceNaming = "Pro"
+	APPPRICENAMING_FREE AppPriceNaming = "Free"
+	APPPRICENAMING_PREMIUM AppPriceNaming = "Premium"
+	APPPRICENAMING_PRO AppPriceNaming = "Pro"
 	APPPRICENAMING_ENTERPRISE AppPriceNaming = "Enterprise"
 )
 
@@ -112,3 +112,4 @@ func (v *NullableAppPriceNaming) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

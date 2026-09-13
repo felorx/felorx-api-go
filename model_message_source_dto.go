@@ -19,11 +19,13 @@ var _ MappedNullable = &MessageSourceDto{}
 
 // MessageSourceDto struct for MessageSourceDto
 type MessageSourceDto struct {
-	Name        NullableString             `json:"name,omitempty"`
-	Description NullableString             `json:"description,omitempty"`
-	IsPublished *bool                      `json:"isPublished,omitempty"`
-	IconUrl     NullableString             `json:"iconUrl,omitempty"`
-	Routes      []MessageSourceRouteSubDto `json:"routes,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CategoryId *string `json:"categoryId,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	IsPublished *bool `json:"isPublished,omitempty"`
+	IconUrl NullableString `json:"iconUrl,omitempty"`
+	Routes []MessageSourceRouteSubDto `json:"routes,omitempty"`
 }
 
 // NewMessageSourceDto instantiates a new MessageSourceDto object
@@ -41,6 +43,70 @@ func NewMessageSourceDto() *MessageSourceDto {
 func NewMessageSourceDtoWithDefaults() *MessageSourceDto {
 	this := MessageSourceDto{}
 	return &this
+}
+
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *MessageSourceDto) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *MessageSourceDto) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *MessageSourceDto) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *MessageSourceDto) SetId(v string) {
+	o.Id = &v
+}
+
+// GetCategoryId returns the CategoryId field value if set, zero value otherwise.
+func (o *MessageSourceDto) GetCategoryId() string {
+	if o == nil || IsNil(o.CategoryId) {
+		var ret string
+		return ret
+	}
+	return *o.CategoryId
+}
+
+// GetCategoryIdOk returns a tuple with the CategoryId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *MessageSourceDto) GetCategoryIdOk() (*string, bool) {
+	if o == nil || IsNil(o.CategoryId) {
+		return nil, false
+	}
+	return o.CategoryId, true
+}
+
+// HasCategoryId returns a boolean if a field has been set.
+func (o *MessageSourceDto) HasCategoryId() bool {
+	if o != nil && !IsNil(o.CategoryId) {
+		return true
+	}
+
+	return false
+}
+
+// SetCategoryId gets a reference to the given string and assigns it to the CategoryId field.
+func (o *MessageSourceDto) SetCategoryId(v string) {
+	o.CategoryId = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -75,7 +141,6 @@ func (o *MessageSourceDto) HasName() bool {
 func (o *MessageSourceDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *MessageSourceDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -118,7 +183,6 @@ func (o *MessageSourceDto) HasDescription() bool {
 func (o *MessageSourceDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *MessageSourceDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -193,7 +257,6 @@ func (o *MessageSourceDto) HasIconUrl() bool {
 func (o *MessageSourceDto) SetIconUrl(v string) {
 	o.IconUrl.Set(&v)
 }
-
 // SetIconUrlNil sets the value for IconUrl to be an explicit nil
 func (o *MessageSourceDto) SetIconUrlNil() {
 	o.IconUrl.Set(nil)
@@ -238,7 +301,7 @@ func (o *MessageSourceDto) SetRoutes(v []MessageSourceRouteSubDto) {
 }
 
 func (o MessageSourceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -247,6 +310,12 @@ func (o MessageSourceDto) MarshalJSON() ([]byte, error) {
 
 func (o MessageSourceDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
+	if !IsNil(o.CategoryId) {
+		toSerialize["categoryId"] = o.CategoryId
+	}
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
 	}
@@ -300,3 +369,5 @@ func (v *NullableMessageSourceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

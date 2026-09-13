@@ -19,11 +19,11 @@ var _ MappedNullable = &IdentityUserClaim{}
 
 // IdentityUserClaim struct for IdentityUserClaim
 type IdentityUserClaim struct {
-	Id         *string        `json:"id,omitempty"`
-	TenantId   NullableString `json:"tenantId,omitempty"`
-	ClaimType  NullableString `json:"claimType,omitempty"`
+	Id *string `json:"id,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	ClaimType NullableString `json:"claimType,omitempty"`
 	ClaimValue NullableString `json:"claimValue,omitempty"`
-	UserId     *string        `json:"userId,omitempty"`
+	UserId *string `json:"userId,omitempty"`
 }
 
 // NewIdentityUserClaim instantiates a new IdentityUserClaim object
@@ -107,7 +107,6 @@ func (o *IdentityUserClaim) HasTenantId() bool {
 func (o *IdentityUserClaim) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUserClaim) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -150,7 +149,6 @@ func (o *IdentityUserClaim) HasClaimType() bool {
 func (o *IdentityUserClaim) SetClaimType(v string) {
 	o.ClaimType.Set(&v)
 }
-
 // SetClaimTypeNil sets the value for ClaimType to be an explicit nil
 func (o *IdentityUserClaim) SetClaimTypeNil() {
 	o.ClaimType.Set(nil)
@@ -193,7 +191,6 @@ func (o *IdentityUserClaim) HasClaimValue() bool {
 func (o *IdentityUserClaim) SetClaimValue(v string) {
 	o.ClaimValue.Set(&v)
 }
-
 // SetClaimValueNil sets the value for ClaimValue to be an explicit nil
 func (o *IdentityUserClaim) SetClaimValueNil() {
 	o.ClaimValue.Set(nil)
@@ -237,7 +234,7 @@ func (o *IdentityUserClaim) SetUserId(v string) {
 }
 
 func (o IdentityUserClaim) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -299,3 +296,5 @@ func (v *NullableIdentityUserClaim) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

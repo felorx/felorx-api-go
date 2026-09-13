@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Groups** | Pointer to [**[]FeatureGroupDto**](FeatureGroupDto.md) |  | [optional]
+**Groups** | Pointer to [**[]FeatureGroupDto**](FeatureGroupDto.md) |  | [optional] 
 
 ## Methods
 

@@ -19,21 +19,22 @@ import (
 	"strings"
 )
 
+
 // NotificationAPIService NotificationAPI service
 type NotificationAPIService service
 
 type ApiBarkRequest struct {
-	ctx               context.Context
-	ApiService        *NotificationAPIService
-	apiKey            string
-	message           string
+	ctx context.Context
+	ApiService *NotificationAPIService
+	apiKey string
+	message string
 	automaticallyCopy *int32
-	copy              *string
-	url               *string
-	isArchive         *string
-	group             *string
-	icon              *string
-	level             *string
+	copy *string
+	url *string
+	isArchive *string
+	group *string
+	icon *string
+	level *string
 }
 
 // 携带参数 automaticallyCopy&#x3D;1， 收到推送时，推送内容会自动复制到粘贴板（如发现不能自动复制，可尝试重启一下手机）
@@ -85,26 +86,26 @@ func (r ApiBarkRequest) Execute() (*http.Response, error) {
 /*
 Bark Bark 推送，兼容 Bark 推送协议  TODO: 验证 API KEY 功能, 添加[个人访问令牌]功能
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param apiKey Bark apiKey, 需要申请，注意不要泄露，泄露后产生安全问题请及时移除或禁用 apiKey
-	@param message 消息内容
-	@return ApiBarkRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param apiKey Bark apiKey, 需要申请，注意不要泄露，泄露后产生安全问题请及时移除或禁用 apiKey
+ @param message 消息内容
+ @return ApiBarkRequest
 */
 func (a *NotificationAPIService) Bark(ctx context.Context, apiKey string, message string) ApiBarkRequest {
 	return ApiBarkRequest{
 		ApiService: a,
-		ctx:        ctx,
-		apiKey:     apiKey,
-		message:    message,
+		ctx: ctx,
+		apiKey: apiKey,
+		message: message,
 	}
 }
 
 // Execute executes the request
 func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodGet
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "NotificationAPIService.Bark")
@@ -123,9 +124,9 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 	if r.automaticallyCopy != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "automaticallyCopy", r.automaticallyCopy, "form", "")
 	} else {
-		var defaultValue int32 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "automaticallyCopy", defaultValue, "form", "")
-		r.automaticallyCopy = &defaultValue
+        var defaultValue int32 = 0
+        parameterAddToHeaderOrQuery(localVarQueryParams, "automaticallyCopy", defaultValue, "form", "")
+        r.automaticallyCopy = &defaultValue
 	}
 	if r.copy != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "copy", r.copy, "form", "")
@@ -191,8 +192,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -202,8 +203,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -213,8 +214,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -224,8 +225,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -235,8 +236,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -246,8 +247,8 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -256,10 +257,10 @@ func (a *NotificationAPIService) BarkExecute(r ApiBarkRequest) (*http.Response, 
 }
 
 type ApiGetNotificationListRequest struct {
-	ctx            context.Context
-	ApiService     *NotificationAPIService
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *NotificationAPIService
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -285,25 +286,24 @@ func (r ApiGetNotificationListRequest) Execute() (*NotificationInfoDtoPagedResul
 /*
 GetNotificationList Method for GetNotificationList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetNotificationListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetNotificationListRequest
 */
 func (a *NotificationAPIService) GetNotificationList(ctx context.Context) ApiGetNotificationListRequest {
 	return ApiGetNotificationListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return NotificationInfoDtoPagedResultDto
+//  @return NotificationInfoDtoPagedResultDto
 func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotificationListRequest) (*NotificationInfoDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *NotificationInfoDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *NotificationInfoDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "NotificationAPIService.GetNotificationList")
@@ -372,8 +372,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -383,8 +383,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -394,8 +394,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -405,8 +405,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -416,8 +416,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -427,8 +427,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -446,8 +446,8 @@ func (a *NotificationAPIService) GetNotificationListExecute(r ApiGetNotification
 }
 
 type ApiPushRequest struct {
-	ctx                       context.Context
-	ApiService                *NotificationAPIService
+	ctx context.Context
+	ApiService *NotificationAPIService
 	createPushNotificationDto *CreatePushNotificationDto
 }
 
@@ -463,22 +463,22 @@ func (r ApiPushRequest) Execute() (*http.Response, error) {
 /*
 Push Method for Push
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPushRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPushRequest
 */
 func (a *NotificationAPIService) Push(ctx context.Context) ApiPushRequest {
 	return ApiPushRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "NotificationAPIService.Push")
@@ -540,8 +540,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -551,8 +551,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -562,8 +562,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -573,8 +573,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -584,8 +584,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -595,8 +595,8 @@ func (a *NotificationAPIService) PushExecute(r ApiPushRequest) (*http.Response, 
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

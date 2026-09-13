@@ -20,20 +20,21 @@ var _ MappedNullable = &DeviceDto{}
 
 // DeviceDto struct for DeviceDto
 type DeviceDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Token                NullableString `json:"token,omitempty"`
-	IsPhysicalDevice     *bool          `json:"isPhysicalDevice,omitempty"`
-	Name                 NullableString `json:"name,omitempty"`
-	Platform             *AppPlatform   `json:"platform,omitempty"`
-	Brand                NullableString `json:"brand,omitempty"`
-	SystemVersion        NullableString `json:"systemVersion,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Token NullableString `json:"token,omitempty"`
+	IsPhysicalDevice *bool `json:"isPhysicalDevice,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Brand NullableString `json:"brand,omitempty"`
+	SystemVersion NullableString `json:"systemVersion,omitempty"`
+	AppName NullableString `json:"appName,omitempty"`
 }
 
 // NewDeviceDto instantiates a new DeviceDto object
@@ -149,7 +150,6 @@ func (o *DeviceDto) HasCreatorId() bool {
 func (o *DeviceDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *DeviceDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -192,7 +192,6 @@ func (o *DeviceDto) HasLastModificationTime() bool {
 func (o *DeviceDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *DeviceDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -235,7 +234,6 @@ func (o *DeviceDto) HasLastModifierId() bool {
 func (o *DeviceDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *DeviceDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -310,7 +308,6 @@ func (o *DeviceDto) HasDeleterId() bool {
 func (o *DeviceDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *DeviceDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -353,7 +350,6 @@ func (o *DeviceDto) HasDeletionTime() bool {
 func (o *DeviceDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *DeviceDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -396,7 +392,6 @@ func (o *DeviceDto) HasToken() bool {
 func (o *DeviceDto) SetToken(v string) {
 	o.Token.Set(&v)
 }
-
 // SetTokenNil sets the value for Token to be an explicit nil
 func (o *DeviceDto) SetTokenNil() {
 	o.Token.Set(nil)
@@ -471,7 +466,6 @@ func (o *DeviceDto) HasName() bool {
 func (o *DeviceDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *DeviceDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -546,7 +540,6 @@ func (o *DeviceDto) HasBrand() bool {
 func (o *DeviceDto) SetBrand(v string) {
 	o.Brand.Set(&v)
 }
-
 // SetBrandNil sets the value for Brand to be an explicit nil
 func (o *DeviceDto) SetBrandNil() {
 	o.Brand.Set(nil)
@@ -589,7 +582,6 @@ func (o *DeviceDto) HasSystemVersion() bool {
 func (o *DeviceDto) SetSystemVersion(v string) {
 	o.SystemVersion.Set(&v)
 }
-
 // SetSystemVersionNil sets the value for SystemVersion to be an explicit nil
 func (o *DeviceDto) SetSystemVersionNil() {
 	o.SystemVersion.Set(nil)
@@ -600,8 +592,50 @@ func (o *DeviceDto) UnsetSystemVersion() {
 	o.SystemVersion.Unset()
 }
 
+// GetAppName returns the AppName field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *DeviceDto) GetAppName() string {
+	if o == nil || IsNil(o.AppName.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.AppName.Get()
+}
+
+// GetAppNameOk returns a tuple with the AppName field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *DeviceDto) GetAppNameOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.AppName.Get(), o.AppName.IsSet()
+}
+
+// HasAppName returns a boolean if a field has been set.
+func (o *DeviceDto) HasAppName() bool {
+	if o != nil && o.AppName.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetAppName gets a reference to the given NullableString and assigns it to the AppName field.
+func (o *DeviceDto) SetAppName(v string) {
+	o.AppName.Set(&v)
+}
+// SetAppNameNil sets the value for AppName to be an explicit nil
+func (o *DeviceDto) SetAppNameNil() {
+	o.AppName.Set(nil)
+}
+
+// UnsetAppName ensures that no value is present for AppName, not even an explicit nil
+func (o *DeviceDto) UnsetAppName() {
+	o.AppName.Unset()
+}
+
 func (o DeviceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -652,6 +686,9 @@ func (o DeviceDto) ToMap() (map[string]interface{}, error) {
 	if o.SystemVersion.IsSet() {
 		toSerialize["systemVersion"] = o.SystemVersion.Get()
 	}
+	if o.AppName.IsSet() {
+		toSerialize["appName"] = o.AppName.Get()
+	}
 	return toSerialize, nil
 }
 
@@ -690,3 +727,5 @@ func (v *NullableDeviceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

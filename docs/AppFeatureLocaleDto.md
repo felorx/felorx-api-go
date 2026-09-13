@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**AppFeatureId** | Pointer to **string** |  | [optional]
-**AppLocaleId** | Pointer to **string** |  | [optional]
-**LangCode** | Pointer to **NullableString** | 冗余：方便客户端展示，取自关联的 AppLocale。 | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Details** | Pointer to **NullableString** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**AppFeatureId** | Pointer to **string** |  | [optional] 
+**AppLocaleId** | Pointer to **string** |  | [optional] 
+**LangCode** | Pointer to **NullableString** | 冗余：方便客户端展示，取自关联的 AppLocale。 | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Details** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

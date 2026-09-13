@@ -19,9 +19,9 @@ var _ MappedNullable = &PayPalWebhookProcessResultDto{}
 
 // PayPalWebhookProcessResultDto struct for PayPalWebhookProcessResultDto
 type PayPalWebhookProcessResultDto struct {
-	EventType  NullableString `json:"eventType,omitempty"`
+	EventType NullableString `json:"eventType,omitempty"`
 	ResourceId NullableString `json:"resourceId,omitempty"`
-	Processed  *bool          `json:"processed,omitempty"`
+	Processed *bool `json:"processed,omitempty"`
 }
 
 // NewPayPalWebhookProcessResultDto instantiates a new PayPalWebhookProcessResultDto object
@@ -73,7 +73,6 @@ func (o *PayPalWebhookProcessResultDto) HasEventType() bool {
 func (o *PayPalWebhookProcessResultDto) SetEventType(v string) {
 	o.EventType.Set(&v)
 }
-
 // SetEventTypeNil sets the value for EventType to be an explicit nil
 func (o *PayPalWebhookProcessResultDto) SetEventTypeNil() {
 	o.EventType.Set(nil)
@@ -116,7 +115,6 @@ func (o *PayPalWebhookProcessResultDto) HasResourceId() bool {
 func (o *PayPalWebhookProcessResultDto) SetResourceId(v string) {
 	o.ResourceId.Set(&v)
 }
-
 // SetResourceIdNil sets the value for ResourceId to be an explicit nil
 func (o *PayPalWebhookProcessResultDto) SetResourceIdNil() {
 	o.ResourceId.Set(nil)
@@ -160,7 +158,7 @@ func (o *PayPalWebhookProcessResultDto) SetProcessed(v bool) {
 }
 
 func (o PayPalWebhookProcessResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -216,3 +214,5 @@ func (v *NullablePayPalWebhookProcessResultDto) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

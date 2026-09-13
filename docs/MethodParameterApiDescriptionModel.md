@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**TypeAsString** | Pointer to **NullableString** |  | [optional]
-**Type** | Pointer to **NullableString** |  | [optional]
-**TypeSimple** | Pointer to **NullableString** |  | [optional]
-**IsOptional** | Pointer to **bool** |  | [optional]
-**DefaultValue** | Pointer to **interface{}** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**TypeAsString** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
+**IsOptional** | Pointer to **bool** |  | [optional] 
+**DefaultValue** | Pointer to **interface{}** |  | [optional] 
 
 ## Methods
 

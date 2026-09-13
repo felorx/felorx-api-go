@@ -20,8 +20,8 @@ type AiProviderType string
 
 // List of AiProviderType
 const (
-	AIPROVIDERTYPE_MOCK               AiProviderType = "Mock"
-	AIPROVIDERTYPE_TENCENT_CLOUD      AiProviderType = "TencentCloud"
+	AIPROVIDERTYPE_MOCK AiProviderType = "Mock"
+	AIPROVIDERTYPE_TENCENT_CLOUD AiProviderType = "TencentCloud"
 	AIPROVIDERTYPE_OPEN_AI_COMPATIBLE AiProviderType = "OpenAiCompatible"
 )
 
@@ -110,3 +110,4 @@ func (v *NullableAiProviderType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

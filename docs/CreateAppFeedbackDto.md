@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** | 应用ID |
-**Content** | **string** | 反馈内容 |
-**Type** | [**AppFeedbackType**](AppFeedbackType.md) |  |
-**Contact** | Pointer to **NullableString** | 联系方式（可选） | [optional]
-**DeviceInfo** | Pointer to **NullableString** | 设备信息（可选） | [optional]
-**AppVersion** | Pointer to **NullableString** | 应用版本（可选） | [optional]
-**AttachmentKeys** | Pointer to **[]string** | 截图/图片附件（对象存储 key，最多 5 个） | [optional]
+**AppId** | **string** | 应用ID | 
+**Content** | **string** | 反馈内容 | 
+**Type** | [**AppFeedbackType**](AppFeedbackType.md) |  | 
+**Contact** | Pointer to **NullableString** | 联系方式（可选） | [optional] 
+**DeviceInfo** | Pointer to **NullableString** | 设备信息（可选） | [optional] 
+**AppVersion** | Pointer to **NullableString** | 应用版本（可选） | [optional] 
+**AttachmentKeys** | Pointer to **[]string** | 截图/图片附件（对象存储 key，最多 5 个） | [optional] 
 
 ## Methods
 

@@ -18,49 +18,49 @@ import (
 	"net/url"
 )
 
+
 // OpenAiCompatibleChatAPIService OpenAiCompatibleChatAPI service
 type OpenAiCompatibleChatAPIService service
 
-type ApiOpenAiCompatibleChatCreateRequest struct {
-	ctx                            context.Context
-	ApiService                     *OpenAiCompatibleChatAPIService
+type ApiCreatePostApiAiV1ChatCompletionsRequest struct {
+	ctx context.Context
+	ApiService *OpenAiCompatibleChatAPIService
 	openAiChatCompletionRequestDto *OpenAiChatCompletionRequestDto
 }
 
-func (r ApiOpenAiCompatibleChatCreateRequest) OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto OpenAiChatCompletionRequestDto) ApiOpenAiCompatibleChatCreateRequest {
+func (r ApiCreatePostApiAiV1ChatCompletionsRequest) OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto OpenAiChatCompletionRequestDto) ApiCreatePostApiAiV1ChatCompletionsRequest {
 	r.openAiChatCompletionRequestDto = &openAiChatCompletionRequestDto
 	return r
 }
 
-func (r ApiOpenAiCompatibleChatCreateRequest) Execute() (*AiChatCompletionDto, *http.Response, error) {
-	return r.ApiService.OpenAiCompatibleChatCreateExecute(r)
+func (r ApiCreatePostApiAiV1ChatCompletionsRequest) Execute() (*AiChatCompletionDto, *http.Response, error) {
+	return r.ApiService.CreatePostApiAiV1ChatCompletionsExecute(r)
 }
 
 /*
-OpenAiCompatibleChatCreate Method for OpenAiCompatibleChatCreate
+CreatePostApiAiV1ChatCompletions Method for CreatePostApiAiV1ChatCompletions
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiOpenAiCompatibleChatCreateRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreatePostApiAiV1ChatCompletionsRequest
 */
-func (a *OpenAiCompatibleChatAPIService) OpenAiCompatibleChatCreate(ctx context.Context) ApiOpenAiCompatibleChatCreateRequest {
-	return ApiOpenAiCompatibleChatCreateRequest{
+func (a *OpenAiCompatibleChatAPIService) CreatePostApiAiV1ChatCompletions(ctx context.Context) ApiCreatePostApiAiV1ChatCompletionsRequest {
+	return ApiCreatePostApiAiV1ChatCompletionsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AiChatCompletionDto
-func (a *OpenAiCompatibleChatAPIService) OpenAiCompatibleChatCreateExecute(r ApiOpenAiCompatibleChatCreateRequest) (*AiChatCompletionDto, *http.Response, error) {
+//  @return AiChatCompletionDto
+func (a *OpenAiCompatibleChatAPIService) CreatePostApiAiV1ChatCompletionsExecute(r ApiCreatePostApiAiV1ChatCompletionsRequest) (*AiChatCompletionDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AiChatCompletionDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AiChatCompletionDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenAiCompatibleChatAPIService.OpenAiCompatibleChatCreate")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenAiCompatibleChatAPIService.CreatePostApiAiV1ChatCompletions")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}

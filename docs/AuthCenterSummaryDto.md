@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Account** | Pointer to [**UserAuthProfileDto**](UserAuthProfileDto.md) |  | [optional]
-**DeviceCount** | Pointer to **int32** |  | [optional]
-**AuthorizedAppCount** | Pointer to **int32** |  | [optional]
+**Account** | Pointer to [**UserAuthProfileDto**](UserAuthProfileDto.md) |  | [optional] 
+**DeviceCount** | Pointer to **int32** |  | [optional] 
+**AuthorizedAppCount** | Pointer to **int32** |  | [optional] 
 
 ## Methods
 

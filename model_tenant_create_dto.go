@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,10 +21,10 @@ var _ MappedNullable = &TenantCreateDto{}
 
 // TenantCreateDto struct for TenantCreateDto
 type TenantCreateDto struct {
-	ExtraProperties   map[string]interface{} `json:"extraProperties,omitempty"`
-	Name              string                 `json:"name"`
-	AdminEmailAddress string                 `json:"adminEmailAddress"`
-	AdminPassword     string                 `json:"adminPassword"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	Name string `json:"name"`
+	AdminEmailAddress string `json:"adminEmailAddress"`
+	AdminPassword string `json:"adminPassword"`
 }
 
 type _TenantCreateDto TenantCreateDto
@@ -155,7 +155,7 @@ func (o *TenantCreateDto) SetAdminPassword(v string) {
 }
 
 func (o TenantCreateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -188,10 +188,10 @@ func (o *TenantCreateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -247,3 +247,5 @@ func (v *NullableTenantCreateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

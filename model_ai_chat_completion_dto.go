@@ -19,12 +19,12 @@ var _ MappedNullable = &AiChatCompletionDto{}
 
 // AiChatCompletionDto struct for AiChatCompletionDto
 type AiChatCompletionDto struct {
-	Id      NullableString    `json:"id,omitempty"`
-	Object  NullableString    `json:"object,omitempty"`
-	Created *int64            `json:"created,omitempty"`
-	Model   NullableString    `json:"model,omitempty"`
+	Id NullableString `json:"id,omitempty"`
+	Object NullableString `json:"object,omitempty"`
+	Created *int64 `json:"created,omitempty"`
+	Model NullableString `json:"model,omitempty"`
 	Choices []AiChatChoiceDto `json:"choices,omitempty"`
-	Usage   *AiUsageDto       `json:"usage,omitempty"`
+	Usage *AiUsageDto `json:"usage,omitempty"`
 }
 
 // NewAiChatCompletionDto instantiates a new AiChatCompletionDto object
@@ -76,7 +76,6 @@ func (o *AiChatCompletionDto) HasId() bool {
 func (o *AiChatCompletionDto) SetId(v string) {
 	o.Id.Set(&v)
 }
-
 // SetIdNil sets the value for Id to be an explicit nil
 func (o *AiChatCompletionDto) SetIdNil() {
 	o.Id.Set(nil)
@@ -119,7 +118,6 @@ func (o *AiChatCompletionDto) HasObject() bool {
 func (o *AiChatCompletionDto) SetObject(v string) {
 	o.Object.Set(&v)
 }
-
 // SetObjectNil sets the value for Object to be an explicit nil
 func (o *AiChatCompletionDto) SetObjectNil() {
 	o.Object.Set(nil)
@@ -194,7 +192,6 @@ func (o *AiChatCompletionDto) HasModel() bool {
 func (o *AiChatCompletionDto) SetModel(v string) {
 	o.Model.Set(&v)
 }
-
 // SetModelNil sets the value for Model to be an explicit nil
 func (o *AiChatCompletionDto) SetModelNil() {
 	o.Model.Set(nil)
@@ -271,7 +268,7 @@ func (o *AiChatCompletionDto) SetUsage(v AiUsageDto) {
 }
 
 func (o AiChatCompletionDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -336,3 +333,5 @@ func (v *NullableAiChatCompletionDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

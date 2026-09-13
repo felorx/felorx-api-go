@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_TimeZoneSettingsAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_TimeZoneSettingsAPIService(t *testing.T) {
 
 	t.Run("Test TimeZoneSettingsAPIService GetTimeZoneSettings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.TimeZoneSettingsAPI.GetTimeZoneSettings(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_TimeZoneSettingsAPIService(t *testing.T) {
 
 	t.Run("Test TimeZoneSettingsAPIService GetTimezones", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.TimeZoneSettingsAPI.GetTimezones(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_felorx_TimeZoneSettingsAPIService(t *testing.T) {
 
 	t.Run("Test TimeZoneSettingsAPIService UpdateTimeZoneSettings", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.TimeZoneSettingsAPI.UpdateTimeZoneSettings(context.Background()).Execute()
 

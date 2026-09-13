@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Value** | Pointer to **NullableString** |  | [optional]
-**Provider** | Pointer to [**FeatureProviderDto**](FeatureProviderDto.md) |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**ValueType** | Pointer to [**IStringValueType**](IStringValueType.md) |  | [optional]
-**Depth** | Pointer to **int32** |  | [optional]
-**ParentName** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Value** | Pointer to **NullableString** |  | [optional] 
+**Provider** | Pointer to [**FeatureProviderDto**](FeatureProviderDto.md) |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**ValueType** | Pointer to [**IStringValueType**](IStringValueType.md) |  | [optional] 
+**Depth** | Pointer to **int32** |  | [optional] 
+**ParentName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

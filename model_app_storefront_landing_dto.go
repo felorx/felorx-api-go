@@ -19,7 +19,7 @@ var _ MappedNullable = &AppStorefrontLandingDto{}
 
 // AppStorefrontLandingDto 官网应用详情落地页数据（应用级截图 + 功能点名称/描述/截图）。
 type AppStorefrontLandingDto struct {
-	Hero     *AppStorefrontHeroDto          `json:"hero,omitempty"`
+	Hero *AppStorefrontHeroDto `json:"hero,omitempty"`
 	Features []AppStorefrontFeatureBlockDto `json:"features,omitempty"`
 }
 
@@ -106,7 +106,7 @@ func (o *AppStorefrontLandingDto) SetFeatures(v []AppStorefrontFeatureBlockDto) 
 }
 
 func (o AppStorefrontLandingDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableAppStorefrontLandingDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

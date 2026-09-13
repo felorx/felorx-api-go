@@ -20,23 +20,23 @@ var _ MappedNullable = &AppPricingItemValueDto{}
 
 // AppPricingItemValueDto struct for AppPricingItemValueDto
 type AppPricingItemValueDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 收费点键，与 AppPricingItem.Key 对应（如 MaxListCount）
 	Key NullableString `json:"key,omitempty"`
 	// 是否可用
 	IsAvailable *bool `json:"isAvailable,omitempty"`
 	// 是否有值
-	HasValue    *bool          `json:"hasValue,omitempty"`
-	IntValue    *int64         `json:"intValue,omitempty"`
+	HasValue *bool `json:"hasValue,omitempty"`
+	IntValue *int64 `json:"intValue,omitempty"`
 	StringValue NullableString `json:"stringValue,omitempty"`
-	BoolValue   *bool          `json:"boolValue,omitempty"`
+	BoolValue *bool `json:"boolValue,omitempty"`
 	// 数字值类型, FileSize: 文件大小, Count: 数目
 	IntValueType NullableString `json:"intValueType,omitempty"`
 }
@@ -154,7 +154,6 @@ func (o *AppPricingItemValueDto) HasCreatorId() bool {
 func (o *AppPricingItemValueDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppPricingItemValueDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -197,7 +196,6 @@ func (o *AppPricingItemValueDto) HasLastModificationTime() bool {
 func (o *AppPricingItemValueDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppPricingItemValueDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -240,7 +238,6 @@ func (o *AppPricingItemValueDto) HasLastModifierId() bool {
 func (o *AppPricingItemValueDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppPricingItemValueDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -315,7 +312,6 @@ func (o *AppPricingItemValueDto) HasDeleterId() bool {
 func (o *AppPricingItemValueDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppPricingItemValueDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -358,7 +354,6 @@ func (o *AppPricingItemValueDto) HasDeletionTime() bool {
 func (o *AppPricingItemValueDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppPricingItemValueDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -401,7 +396,6 @@ func (o *AppPricingItemValueDto) HasKey() bool {
 func (o *AppPricingItemValueDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *AppPricingItemValueDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -540,7 +534,6 @@ func (o *AppPricingItemValueDto) HasStringValue() bool {
 func (o *AppPricingItemValueDto) SetStringValue(v string) {
 	o.StringValue.Set(&v)
 }
-
 // SetStringValueNil sets the value for StringValue to be an explicit nil
 func (o *AppPricingItemValueDto) SetStringValueNil() {
 	o.StringValue.Set(nil)
@@ -615,7 +608,6 @@ func (o *AppPricingItemValueDto) HasIntValueType() bool {
 func (o *AppPricingItemValueDto) SetIntValueType(v string) {
 	o.IntValueType.Set(&v)
 }
-
 // SetIntValueTypeNil sets the value for IntValueType to be an explicit nil
 func (o *AppPricingItemValueDto) SetIntValueTypeNil() {
 	o.IntValueType.Set(nil)
@@ -627,7 +619,7 @@ func (o *AppPricingItemValueDto) UnsetIntValueType() {
 }
 
 func (o AppPricingItemValueDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -719,3 +711,5 @@ func (v *NullableAppPricingItemValueDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

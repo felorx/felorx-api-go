@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 

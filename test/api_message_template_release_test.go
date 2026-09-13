@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
 
 	t.Run("Test MessageTemplateReleaseAPIService CreateMessageTemplateRelease", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageTemplateReleaseAPI.CreateMessageTemplateRelease(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
 
 	t.Run("Test MessageTemplateReleaseAPIService GetByTemplateNameAndVersion", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageTemplateReleaseAPI.GetByTemplateNameAndVersion(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
 
 	t.Run("Test MessageTemplateReleaseAPIService GetMessageTemplateReleaseById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -62,7 +62,7 @@ func Test_felorx_MessageTemplateReleaseAPIService(t *testing.T) {
 
 	t.Run("Test MessageTemplateReleaseAPIService GetMessageTemplateReleaseList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageTemplateReleaseAPI.GetMessageTemplateReleaseList(context.Background()).Execute()
 

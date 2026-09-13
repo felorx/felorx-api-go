@@ -19,8 +19,8 @@ var _ MappedNullable = &DeviceDtoPagedResultDto{}
 
 // DeviceDtoPagedResultDto struct for DeviceDtoPagedResultDto
 type DeviceDtoPagedResultDto struct {
-	Items      []DeviceDto `json:"items,omitempty"`
-	TotalCount *int64      `json:"totalCount,omitempty"`
+	Items []DeviceDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewDeviceDtoPagedResultDto instantiates a new DeviceDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *DeviceDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o DeviceDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableDeviceDtoPagedResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

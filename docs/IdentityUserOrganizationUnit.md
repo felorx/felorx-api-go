@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreationTime** | Pointer to **time.Time** |  | [optional] [readonly]
-**CreatorId** | Pointer to **NullableString** |  | [optional] [readonly]
-**TenantId** | Pointer to **NullableString** |  | [optional]
-**UserId** | Pointer to **string** |  | [optional]
-**OrganizationUnitId** | Pointer to **string** |  | [optional]
+**CreationTime** | Pointer to **time.Time** |  | [optional] [readonly] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] [readonly] 
+**TenantId** | Pointer to **NullableString** |  | [optional] 
+**UserId** | Pointer to **string** |  | [optional] 
+**OrganizationUnitId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 

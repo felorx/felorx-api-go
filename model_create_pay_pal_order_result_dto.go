@@ -112,7 +112,6 @@ func (o *CreatePayPalOrderResultDto) HasPayPalOrderId() bool {
 func (o *CreatePayPalOrderResultDto) SetPayPalOrderId(v string) {
 	o.PayPalOrderId.Set(&v)
 }
-
 // SetPayPalOrderIdNil sets the value for PayPalOrderId to be an explicit nil
 func (o *CreatePayPalOrderResultDto) SetPayPalOrderIdNil() {
 	o.PayPalOrderId.Set(nil)
@@ -155,7 +154,6 @@ func (o *CreatePayPalOrderResultDto) HasPayPalSubscriptionId() bool {
 func (o *CreatePayPalOrderResultDto) SetPayPalSubscriptionId(v string) {
 	o.PayPalSubscriptionId.Set(&v)
 }
-
 // SetPayPalSubscriptionIdNil sets the value for PayPalSubscriptionId to be an explicit nil
 func (o *CreatePayPalOrderResultDto) SetPayPalSubscriptionIdNil() {
 	o.PayPalSubscriptionId.Set(nil)
@@ -198,7 +196,6 @@ func (o *CreatePayPalOrderResultDto) HasApprovalUrl() bool {
 func (o *CreatePayPalOrderResultDto) SetApprovalUrl(v string) {
 	o.ApprovalUrl.Set(&v)
 }
-
 // SetApprovalUrlNil sets the value for ApprovalUrl to be an explicit nil
 func (o *CreatePayPalOrderResultDto) SetApprovalUrlNil() {
 	o.ApprovalUrl.Set(nil)
@@ -241,7 +238,6 @@ func (o *CreatePayPalOrderResultDto) HasCheckoutKind() bool {
 func (o *CreatePayPalOrderResultDto) SetCheckoutKind(v string) {
 	o.CheckoutKind.Set(&v)
 }
-
 // SetCheckoutKindNil sets the value for CheckoutKind to be an explicit nil
 func (o *CreatePayPalOrderResultDto) SetCheckoutKindNil() {
 	o.CheckoutKind.Set(nil)
@@ -253,7 +249,7 @@ func (o *CreatePayPalOrderResultDto) UnsetCheckoutKind() {
 }
 
 func (o CreatePayPalOrderResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -315,3 +311,5 @@ func (v *NullableCreatePayPalOrderResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -19,14 +19,14 @@ var _ MappedNullable = &OpenAiChatCompletionRequestDto{}
 
 // OpenAiChatCompletionRequestDto struct for OpenAiChatCompletionRequestDto
 type OpenAiChatCompletionRequestDto struct {
-	Model                NullableString     `json:"model,omitempty"`
-	Provider             NullableString     `json:"provider,omitempty"`
-	Messages             []AiChatMessageDto `json:"messages,omitempty"`
-	Temperature          NullableFloat64    `json:"temperature,omitempty"`
-	TopP                 NullableFloat64    `json:"top_p,omitempty"`
-	MaxTokens            NullableInt32      `json:"max_tokens,omitempty"`
-	Stream               *bool              `json:"stream,omitempty"`
-	Metadata             map[string]string  `json:"metadata,omitempty"`
+	Model NullableString `json:"model,omitempty"`
+	Provider NullableString `json:"provider,omitempty"`
+	Messages []AiChatMessageDto `json:"messages,omitempty"`
+	Temperature NullableFloat64 `json:"temperature,omitempty"`
+	TopP NullableFloat64 `json:"top_p,omitempty"`
+	MaxTokens NullableInt32 `json:"max_tokens,omitempty"`
+	Stream *bool `json:"stream,omitempty"`
+	Metadata map[string]string `json:"metadata,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -81,7 +81,6 @@ func (o *OpenAiChatCompletionRequestDto) HasModel() bool {
 func (o *OpenAiChatCompletionRequestDto) SetModel(v string) {
 	o.Model.Set(&v)
 }
-
 // SetModelNil sets the value for Model to be an explicit nil
 func (o *OpenAiChatCompletionRequestDto) SetModelNil() {
 	o.Model.Set(nil)
@@ -124,7 +123,6 @@ func (o *OpenAiChatCompletionRequestDto) HasProvider() bool {
 func (o *OpenAiChatCompletionRequestDto) SetProvider(v string) {
 	o.Provider.Set(&v)
 }
-
 // SetProviderNil sets the value for Provider to be an explicit nil
 func (o *OpenAiChatCompletionRequestDto) SetProviderNil() {
 	o.Provider.Set(nil)
@@ -200,7 +198,6 @@ func (o *OpenAiChatCompletionRequestDto) HasTemperature() bool {
 func (o *OpenAiChatCompletionRequestDto) SetTemperature(v float64) {
 	o.Temperature.Set(&v)
 }
-
 // SetTemperatureNil sets the value for Temperature to be an explicit nil
 func (o *OpenAiChatCompletionRequestDto) SetTemperatureNil() {
 	o.Temperature.Set(nil)
@@ -243,7 +240,6 @@ func (o *OpenAiChatCompletionRequestDto) HasTopP() bool {
 func (o *OpenAiChatCompletionRequestDto) SetTopP(v float64) {
 	o.TopP.Set(&v)
 }
-
 // SetTopPNil sets the value for TopP to be an explicit nil
 func (o *OpenAiChatCompletionRequestDto) SetTopPNil() {
 	o.TopP.Set(nil)
@@ -286,7 +282,6 @@ func (o *OpenAiChatCompletionRequestDto) HasMaxTokens() bool {
 func (o *OpenAiChatCompletionRequestDto) SetMaxTokens(v int32) {
 	o.MaxTokens.Set(&v)
 }
-
 // SetMaxTokensNil sets the value for MaxTokens to be an explicit nil
 func (o *OpenAiChatCompletionRequestDto) SetMaxTokensNil() {
 	o.MaxTokens.Set(nil)
@@ -363,7 +358,7 @@ func (o *OpenAiChatCompletionRequestDto) SetMetadata(v map[string]string) {
 }
 
 func (o OpenAiChatCompletionRequestDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -467,3 +462,5 @@ func (v *NullableOpenAiChatCompletionRequestDto) UnmarshalJSON(src []byte) error
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

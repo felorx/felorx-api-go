@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // DeviceAPIService DeviceAPI service
 type DeviceAPIService service
 
 type ApiBindRequest struct {
-	ctx           context.Context
-	ApiService    *DeviceAPIService
+	ctx context.Context
+	ApiService *DeviceAPIService
 	bindDeviceDto *BindDeviceDto
 }
 
@@ -40,22 +41,22 @@ func (r ApiBindRequest) Execute() (*http.Response, error) {
 /*
 Bind Method for Bind
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiBindRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiBindRequest
 */
 func (a *DeviceAPIService) Bind(ctx context.Context) ApiBindRequest {
 	return ApiBindRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.Bind")
@@ -117,8 +118,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -128,8 +129,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -139,8 +140,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -150,8 +151,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -161,8 +162,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -172,8 +173,8 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -182,9 +183,9 @@ func (a *DeviceAPIService) BindExecute(r ApiBindRequest) (*http.Response, error)
 }
 
 type ApiGetByTokenRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *DeviceAPIService
-	token      *string
+	token *string
 }
 
 func (r ApiGetByTokenRequest) Token(token string) ApiGetByTokenRequest {
@@ -199,25 +200,24 @@ func (r ApiGetByTokenRequest) Execute() (*DeviceDto, *http.Response, error) {
 /*
 GetByToken Method for GetByToken
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetByTokenRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetByTokenRequest
 */
 func (a *DeviceAPIService) GetByToken(ctx context.Context) ApiGetByTokenRequest {
 	return ApiGetByTokenRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return DeviceDto
+//  @return DeviceDto
 func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *DeviceDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *DeviceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.GetByToken")
@@ -280,8 +280,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -291,8 +291,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -302,8 +302,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -313,8 +313,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -324,8 +324,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -335,8 +335,8 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -354,9 +354,9 @@ func (a *DeviceAPIService) GetByTokenExecute(r ApiGetByTokenRequest) (*DeviceDto
 }
 
 type ApiGetDeviceByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *DeviceAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetDeviceByIdRequest) Execute() (*DeviceDto, *http.Response, error) {
@@ -366,27 +366,26 @@ func (r ApiGetDeviceByIdRequest) Execute() (*DeviceDto, *http.Response, error) {
 /*
 GetDeviceById Method for GetDeviceById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetDeviceByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetDeviceByIdRequest
 */
 func (a *DeviceAPIService) GetDeviceById(ctx context.Context, id string) ApiGetDeviceByIdRequest {
 	return ApiGetDeviceByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return DeviceDto
+//  @return DeviceDto
 func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*DeviceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *DeviceDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *DeviceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.GetDeviceById")
@@ -447,8 +446,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -458,8 +457,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -469,8 +468,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -480,8 +479,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -491,8 +490,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -502,8 +501,8 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -521,10 +520,10 @@ func (a *DeviceAPIService) GetDeviceByIdExecute(r ApiGetDeviceByIdRequest) (*Dev
 }
 
 type ApiGetDeviceListRequest struct {
-	ctx            context.Context
-	ApiService     *DeviceAPIService
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *DeviceAPIService
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -550,25 +549,24 @@ func (r ApiGetDeviceListRequest) Execute() (*DeviceDtoPagedResultDto, *http.Resp
 /*
 GetDeviceList Method for GetDeviceList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDeviceListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetDeviceListRequest
 */
 func (a *DeviceAPIService) GetDeviceList(ctx context.Context) ApiGetDeviceListRequest {
 	return ApiGetDeviceListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return DeviceDtoPagedResultDto
+//  @return DeviceDtoPagedResultDto
 func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*DeviceDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *DeviceDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *DeviceDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.GetDeviceList")
@@ -637,8 +635,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -648,8 +646,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -659,8 +657,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -670,8 +668,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -681,8 +679,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -692,8 +690,8 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -711,9 +709,9 @@ func (a *DeviceAPIService) GetDeviceListExecute(r ApiGetDeviceListRequest) (*Dev
 }
 
 type ApiLogoutRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *DeviceAPIService
-	token      *string
+	token *string
 }
 
 func (r ApiLogoutRequest) Token(token string) ApiLogoutRequest {
@@ -728,22 +726,22 @@ func (r ApiLogoutRequest) Execute() (*http.Response, error) {
 /*
 Logout Method for Logout
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiLogoutRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiLogoutRequest
 */
 func (a *DeviceAPIService) Logout(ctx context.Context) ApiLogoutRequest {
 	return ApiLogoutRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.Logout")
@@ -806,8 +804,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -817,8 +815,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -828,8 +826,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -839,8 +837,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -850,8 +848,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -861,8 +859,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -871,8 +869,8 @@ func (a *DeviceAPIService) LogoutExecute(r ApiLogoutRequest) (*http.Response, er
 }
 
 type ApiRefreshDeviceRequest struct {
-	ctx                    context.Context
-	ApiService             *DeviceAPIService
+	ctx context.Context
+	ApiService *DeviceAPIService
 	refreshDeviceStatusDto *RefreshDeviceStatusDto
 }
 
@@ -888,22 +886,22 @@ func (r ApiRefreshDeviceRequest) Execute() (*http.Response, error) {
 /*
 RefreshDevice Method for RefreshDevice
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiRefreshDeviceRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiRefreshDeviceRequest
 */
 func (a *DeviceAPIService) RefreshDevice(ctx context.Context) ApiRefreshDeviceRequest {
 	return ApiRefreshDeviceRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.RefreshDevice")
@@ -965,8 +963,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -976,8 +974,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -987,8 +985,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -998,8 +996,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1009,8 +1007,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1020,8 +1018,8 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -1030,9 +1028,9 @@ func (a *DeviceAPIService) RefreshDeviceExecute(r ApiRefreshDeviceRequest) (*htt
 }
 
 type ApiRemoveRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *DeviceAPIService
-	token      *string
+	token *string
 }
 
 func (r ApiRemoveRequest) Token(token string) ApiRemoveRequest {
@@ -1047,22 +1045,22 @@ func (r ApiRemoveRequest) Execute() (*http.Response, error) {
 /*
 Remove Method for Remove
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiRemoveRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiRemoveRequest
 */
 func (a *DeviceAPIService) Remove(ctx context.Context) ApiRemoveRequest {
 	return ApiRemoveRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceAPIService.Remove")
@@ -1125,8 +1123,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1136,8 +1134,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1147,8 +1145,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1158,8 +1156,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1169,8 +1167,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1180,8 +1178,8 @@ func (a *DeviceAPIService) RemoveExecute(r ApiRemoveRequest) (*http.Response, er
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

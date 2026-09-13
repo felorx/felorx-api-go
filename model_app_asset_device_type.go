@@ -20,9 +20,9 @@ type AppAssetDeviceType string
 
 // List of AppAssetDeviceType
 const (
-	APPASSETDEVICETYPE_PHONE   AppAssetDeviceType = "Phone"
-	APPASSETDEVICETYPE_PAD     AppAssetDeviceType = "Pad"
-	APPASSETDEVICETYPE_TV      AppAssetDeviceType = "Tv"
+	APPASSETDEVICETYPE_PHONE AppAssetDeviceType = "Phone"
+	APPASSETDEVICETYPE_PAD AppAssetDeviceType = "Pad"
+	APPASSETDEVICETYPE_TV AppAssetDeviceType = "Tv"
 	APPASSETDEVICETYPE_DESKTOP AppAssetDeviceType = "Desktop"
 )
 
@@ -112,3 +112,4 @@ func (v *NullableAppAssetDeviceType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

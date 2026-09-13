@@ -19,17 +19,17 @@ var _ MappedNullable = &CreateOrUpdateAiProviderDto{}
 
 // CreateOrUpdateAiProviderDto struct for CreateOrUpdateAiProviderDto
 type CreateOrUpdateAiProviderDto struct {
-	Name         NullableString             `json:"name,omitempty"`
-	DisplayName  NullableString             `json:"display_name,omitempty"`
-	ProviderType *AiProviderType            `json:"provider_type,omitempty"`
-	BaseUrl      NullableString             `json:"base_url,omitempty"`
-	Region       NullableString             `json:"region,omitempty"`
-	Enabled      *bool                      `json:"enabled,omitempty"`
-	Capabilities []AiCapability             `json:"capabilities,omitempty"`
-	Secret       NullableString             `json:"secret,omitempty"`
-	ClearSecret  *bool                      `json:"clear_secret,omitempty"`
-	Metadata     map[string]string          `json:"metadata,omitempty"`
-	Models       []CreateOrUpdateAiModelDto `json:"models,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"display_name,omitempty"`
+	ProviderType *AiProviderType `json:"provider_type,omitempty"`
+	BaseUrl NullableString `json:"base_url,omitempty"`
+	Region NullableString `json:"region,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
+	Capabilities []AiCapability `json:"capabilities,omitempty"`
+	Secret NullableString `json:"secret,omitempty"`
+	ClearSecret *bool `json:"clear_secret,omitempty"`
+	Metadata map[string]string `json:"metadata,omitempty"`
+	Models []CreateOrUpdateAiModelDto `json:"models,omitempty"`
 }
 
 // NewCreateOrUpdateAiProviderDto instantiates a new CreateOrUpdateAiProviderDto object
@@ -81,7 +81,6 @@ func (o *CreateOrUpdateAiProviderDto) HasName() bool {
 func (o *CreateOrUpdateAiProviderDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAiProviderDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -124,7 +123,6 @@ func (o *CreateOrUpdateAiProviderDto) HasDisplayName() bool {
 func (o *CreateOrUpdateAiProviderDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOrUpdateAiProviderDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -199,7 +197,6 @@ func (o *CreateOrUpdateAiProviderDto) HasBaseUrl() bool {
 func (o *CreateOrUpdateAiProviderDto) SetBaseUrl(v string) {
 	o.BaseUrl.Set(&v)
 }
-
 // SetBaseUrlNil sets the value for BaseUrl to be an explicit nil
 func (o *CreateOrUpdateAiProviderDto) SetBaseUrlNil() {
 	o.BaseUrl.Set(nil)
@@ -242,7 +239,6 @@ func (o *CreateOrUpdateAiProviderDto) HasRegion() bool {
 func (o *CreateOrUpdateAiProviderDto) SetRegion(v string) {
 	o.Region.Set(&v)
 }
-
 // SetRegionNil sets the value for Region to be an explicit nil
 func (o *CreateOrUpdateAiProviderDto) SetRegionNil() {
 	o.Region.Set(nil)
@@ -350,7 +346,6 @@ func (o *CreateOrUpdateAiProviderDto) HasSecret() bool {
 func (o *CreateOrUpdateAiProviderDto) SetSecret(v string) {
 	o.Secret.Set(&v)
 }
-
 // SetSecretNil sets the value for Secret to be an explicit nil
 func (o *CreateOrUpdateAiProviderDto) SetSecretNil() {
 	o.Secret.Set(nil)
@@ -460,7 +455,7 @@ func (o *CreateOrUpdateAiProviderDto) SetModels(v []CreateOrUpdateAiModelDto) {
 }
 
 func (o CreateOrUpdateAiProviderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -540,3 +535,5 @@ func (v *NullableCreateOrUpdateAiProviderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

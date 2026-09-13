@@ -19,8 +19,8 @@ var _ MappedNullable = &ExtensionPropertyAttributeDto{}
 
 // ExtensionPropertyAttributeDto struct for ExtensionPropertyAttributeDto
 type ExtensionPropertyAttributeDto struct {
-	TypeSimple NullableString         `json:"typeSimple,omitempty"`
-	Config     map[string]interface{} `json:"config,omitempty"`
+	TypeSimple NullableString `json:"typeSimple,omitempty"`
+	Config map[string]interface{} `json:"config,omitempty"`
 }
 
 // NewExtensionPropertyAttributeDto instantiates a new ExtensionPropertyAttributeDto object
@@ -72,7 +72,6 @@ func (o *ExtensionPropertyAttributeDto) HasTypeSimple() bool {
 func (o *ExtensionPropertyAttributeDto) SetTypeSimple(v string) {
 	o.TypeSimple.Set(&v)
 }
-
 // SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
 func (o *ExtensionPropertyAttributeDto) SetTypeSimpleNil() {
 	o.TypeSimple.Set(nil)
@@ -117,7 +116,7 @@ func (o *ExtensionPropertyAttributeDto) SetConfig(v map[string]interface{}) {
 }
 
 func (o ExtensionPropertyAttributeDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -170,3 +169,5 @@ func (v *NullableExtensionPropertyAttributeDto) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteFeatures**](FeaturesAPI.md#DeleteFeatures) | **Delete** /api/feature-management/features |
-[**GetFeatures**](FeaturesAPI.md#GetFeatures) | **Get** /api/feature-management/features |
-[**UpdateFeatures**](FeaturesAPI.md#UpdateFeatures) | **Put** /api/feature-management/features |
+[**DeleteFeatures**](FeaturesAPI.md#DeleteFeatures) | **Delete** /api/feature-management/features | 
+[**GetFeatures**](FeaturesAPI.md#GetFeatures) | **Get** /api/feature-management/features | 
+[**UpdateFeatures**](FeaturesAPI.md#UpdateFeatures) | **Put** /api/feature-management/features | 
 
 
 
@@ -53,8 +53,8 @@ Other parameters are passed through a pointer to a apiDeleteFeaturesRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **string** |  |
- **providerKey** | **string** |  |
+ **providerName** | **string** |  | 
+ **providerKey** | **string** |  | 
 
 ### Return type
 
@@ -119,8 +119,8 @@ Other parameters are passed through a pointer to a apiGetFeaturesRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **string** |  |
- **providerKey** | **string** |  |
+ **providerName** | **string** |  | 
+ **providerKey** | **string** |  | 
 
 ### Return type
 
@@ -184,9 +184,9 @@ Other parameters are passed through a pointer to a apiUpdateFeaturesRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **string** |  |
- **providerKey** | **string** |  |
- **updateFeaturesDto** | [**UpdateFeaturesDto**](UpdateFeaturesDto.md) |  |
+ **providerName** | **string** |  | 
+ **providerKey** | **string** |  | 
+ **updateFeaturesDto** | [**UpdateFeaturesDto**](UpdateFeaturesDto.md) |  | 
 
 ### Return type
 

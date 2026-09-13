@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | [**DeployStatus**](DeployStatus.md) |  |
-**Logs** | Pointer to **NullableString** | 部署日志 | [optional]
-**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional]
-**DeployUrl** | Pointer to **NullableString** | 部署地址 | [optional]
+**Status** | [**DeployStatus**](DeployStatus.md) |  | 
+**Logs** | Pointer to **NullableString** | 部署日志 | [optional] 
+**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional] 
+**DeployUrl** | Pointer to **NullableString** | 部署地址 | [optional] 
 
 ## Methods
 

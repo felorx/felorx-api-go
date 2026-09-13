@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Path** | Pointer to **NullableString** |  | [optional]
-**SourceId** | Pointer to **string** |  | [optional]
-**Extra** | Pointer to **NullableString** |  | [optional]
-**Anticrawler** | Pointer to **bool** |  | [optional]
-**Radar** | Pointer to **bool** |  | [optional]
-**Rssbud** | Pointer to **bool** |  | [optional]
-**IsPublished** | Pointer to **bool** |  | [optional]
-**IconUrl** | Pointer to **NullableString** |  | [optional]
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Path** | Pointer to **NullableString** |  | [optional] 
+**SourceId** | Pointer to **string** |  | [optional] 
+**Extra** | Pointer to **NullableString** |  | [optional] 
+**Anticrawler** | Pointer to **bool** |  | [optional] 
+**Radar** | Pointer to **bool** |  | [optional] 
+**Rssbud** | Pointer to **bool** |  | [optional] 
+**IsPublished** | Pointer to **bool** |  | [optional] 
+**IconUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

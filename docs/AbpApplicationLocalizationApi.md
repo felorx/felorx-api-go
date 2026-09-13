@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAbpApplicationLocalization**](AbpApplicationLocalizationAPI.md#GetAbpApplicationLocalization) | **Get** /api/abp/application-localization |
+[**GetAbpApplicationLocalization**](AbpApplicationLocalizationAPI.md#GetAbpApplicationLocalization) | **Get** /api/abp/application-localization | 
 
 
 
@@ -27,7 +27,7 @@ import (
 )
 
 func main() {
-	cultureName := "cultureName_example" // string |
+	cultureName := "cultureName_example" // string | 
 	onlyDynamics := true // bool |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -53,8 +53,8 @@ Other parameters are passed through a pointer to a apiGetAbpApplicationLocalizat
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cultureName** | **string** |  |
- **onlyDynamics** | **bool** |  |
+ **cultureName** | **string** |  | 
+ **onlyDynamics** | **bool** |  | 
 
 ### Return type
 

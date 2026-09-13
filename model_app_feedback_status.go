@@ -20,10 +20,10 @@ type AppFeedbackStatus string
 
 // List of AppFeedbackStatus
 const (
-	APPFEEDBACKSTATUS_PENDING   AppFeedbackStatus = "Pending"
-	APPFEEDBACKSTATUS_REPLIED   AppFeedbackStatus = "Replied"
+	APPFEEDBACKSTATUS_PENDING AppFeedbackStatus = "Pending"
+	APPFEEDBACKSTATUS_REPLIED AppFeedbackStatus = "Replied"
 	APPFEEDBACKSTATUS_PROCESSED AppFeedbackStatus = "Processed"
-	APPFEEDBACKSTATUS_CLOSED    AppFeedbackStatus = "Closed"
+	APPFEEDBACKSTATUS_CLOSED AppFeedbackStatus = "Closed"
 )
 
 // All allowed values of AppFeedbackStatus enum
@@ -112,3 +112,4 @@ func (v *NullableAppFeedbackStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

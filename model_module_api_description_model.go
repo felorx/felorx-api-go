@@ -19,9 +19,9 @@ var _ MappedNullable = &ModuleApiDescriptionModel{}
 
 // ModuleApiDescriptionModel struct for ModuleApiDescriptionModel
 type ModuleApiDescriptionModel struct {
-	RootPath          NullableString                           `json:"rootPath,omitempty"`
-	RemoteServiceName NullableString                           `json:"remoteServiceName,omitempty"`
-	Controllers       map[string]ControllerApiDescriptionModel `json:"controllers,omitempty"`
+	RootPath NullableString `json:"rootPath,omitempty"`
+	RemoteServiceName NullableString `json:"remoteServiceName,omitempty"`
+	Controllers map[string]ControllerApiDescriptionModel `json:"controllers,omitempty"`
 }
 
 // NewModuleApiDescriptionModel instantiates a new ModuleApiDescriptionModel object
@@ -73,7 +73,6 @@ func (o *ModuleApiDescriptionModel) HasRootPath() bool {
 func (o *ModuleApiDescriptionModel) SetRootPath(v string) {
 	o.RootPath.Set(&v)
 }
-
 // SetRootPathNil sets the value for RootPath to be an explicit nil
 func (o *ModuleApiDescriptionModel) SetRootPathNil() {
 	o.RootPath.Set(nil)
@@ -116,7 +115,6 @@ func (o *ModuleApiDescriptionModel) HasRemoteServiceName() bool {
 func (o *ModuleApiDescriptionModel) SetRemoteServiceName(v string) {
 	o.RemoteServiceName.Set(&v)
 }
-
 // SetRemoteServiceNameNil sets the value for RemoteServiceName to be an explicit nil
 func (o *ModuleApiDescriptionModel) SetRemoteServiceNameNil() {
 	o.RemoteServiceName.Set(nil)
@@ -161,7 +159,7 @@ func (o *ModuleApiDescriptionModel) SetControllers(v map[string]ControllerApiDes
 }
 
 func (o ModuleApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,3 +215,5 @@ func (v *NullableModuleApiDescriptionModel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

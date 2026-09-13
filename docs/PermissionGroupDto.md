@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**DisplayNameKey** | Pointer to **NullableString** |  | [optional]
-**DisplayNameResource** | Pointer to **NullableString** |  | [optional]
-**Permissions** | Pointer to [**[]PermissionGrantInfoDto**](PermissionGrantInfoDto.md) |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**DisplayNameKey** | Pointer to **NullableString** |  | [optional] 
+**DisplayNameResource** | Pointer to **NullableString** |  | [optional] 
+**Permissions** | Pointer to [**[]PermissionGrantInfoDto**](PermissionGrantInfoDto.md) |  | [optional] 
 
 ## Methods
 

@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -22,9 +22,9 @@ var _ MappedNullable = &IdentityRoleCreateDto{}
 // IdentityRoleCreateDto struct for IdentityRoleCreateDto
 type IdentityRoleCreateDto struct {
 	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
-	Name            string                 `json:"name"`
-	IsDefault       *bool                  `json:"isDefault,omitempty"`
-	IsPublic        *bool                  `json:"isPublic,omitempty"`
+	Name string `json:"name"`
+	IsDefault *bool `json:"isDefault,omitempty"`
+	IsPublic *bool `json:"isPublic,omitempty"`
 }
 
 type _IdentityRoleCreateDto IdentityRoleCreateDto
@@ -169,7 +169,7 @@ func (o *IdentityRoleCreateDto) SetIsPublic(v bool) {
 }
 
 func (o IdentityRoleCreateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -204,10 +204,10 @@ func (o *IdentityRoleCreateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -263,3 +263,5 @@ func (v *NullableIdentityRoleCreateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

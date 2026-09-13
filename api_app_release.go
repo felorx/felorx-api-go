@@ -19,15 +19,17 @@ import (
 	"strings"
 )
 
+
 // AppReleaseAPIService AppReleaseAPI service
 type AppReleaseAPIService service
 
 type ApiCreateAppReleaseRequest struct {
-	ctx                         context.Context
-	ApiService                  *AppReleaseAPIService
+	ctx context.Context
+	ApiService *AppReleaseAPIService
 	createOrUpdateAppReleaseDto *CreateOrUpdateAppReleaseDto
 }
 
+// 
 func (r ApiCreateAppReleaseRequest) CreateOrUpdateAppReleaseDto(createOrUpdateAppReleaseDto CreateOrUpdateAppReleaseDto) ApiCreateAppReleaseRequest {
 	r.createOrUpdateAppReleaseDto = &createOrUpdateAppReleaseDto
 	return r
@@ -40,25 +42,24 @@ func (r ApiCreateAppReleaseRequest) Execute() (*AppReleaseDto, *http.Response, e
 /*
 CreateAppRelease 创建新版本
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppReleaseRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppReleaseRequest
 */
 func (a *AppReleaseAPIService) CreateAppRelease(ctx context.Context) ApiCreateAppReleaseRequest {
 	return ApiCreateAppReleaseRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDto
+//  @return AppReleaseDto
 func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequest) (*AppReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.CreateAppRelease")
@@ -120,8 +121,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +132,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +143,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +154,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +165,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +176,8 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +195,9 @@ func (a *AppReleaseAPIService) CreateAppReleaseExecute(r ApiCreateAppReleaseRequ
 }
 
 type ApiDeleteAppReleaseByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppReleaseAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppReleaseByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +207,24 @@ func (r ApiDeleteAppReleaseByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppReleaseById 删除版本
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppReleaseByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id 
+ @return ApiDeleteAppReleaseByIdRequest
 */
 func (a *AppReleaseAPIService) DeleteAppReleaseById(ctx context.Context, id string) ApiDeleteAppReleaseByIdRequest {
 	return ApiDeleteAppReleaseByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppReleaseByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.DeleteAppReleaseById")
@@ -284,8 +285,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +296,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +307,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +318,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +329,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +340,8 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,9 +350,9 @@ func (a *AppReleaseAPIService) DeleteAppReleaseByIdExecute(r ApiDeleteAppRelease
 }
 
 type ApiGetAppReleaseByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppReleaseAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetAppReleaseByIdRequest) Execute() (*AppReleaseDto, *http.Response, error) {
@@ -361,27 +362,26 @@ func (r ApiGetAppReleaseByIdRequest) Execute() (*AppReleaseDto, *http.Response, 
 /*
 GetAppReleaseById 获取版本
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetAppReleaseByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id 
+ @return ApiGetAppReleaseByIdRequest
 */
 func (a *AppReleaseAPIService) GetAppReleaseById(ctx context.Context, id string) ApiGetAppReleaseByIdRequest {
 	return ApiGetAppReleaseByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDto
+//  @return AppReleaseDto
 func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRequest) (*AppReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.GetAppReleaseById")
@@ -442,8 +442,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -453,8 +453,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -464,8 +464,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -475,8 +475,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -486,8 +486,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -497,8 +497,8 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -516,14 +516,15 @@ func (a *AppReleaseAPIService) GetAppReleaseByIdExecute(r ApiGetAppReleaseByIdRe
 }
 
 type ApiGetAppReleaseListRequest struct {
-	ctx            context.Context
-	ApiService     *AppReleaseAPIService
-	appId          *string
-	channel        *ReleaseChannel
-	platform       *string
-	publisher      *string
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AppReleaseAPIService
+	appId *string
+	channel *ReleaseChannel
+	platform *string
+	publisher *string
+	architecture *string
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -544,6 +545,11 @@ func (r ApiGetAppReleaseListRequest) Platform(platform string) ApiGetAppReleaseL
 
 func (r ApiGetAppReleaseListRequest) Publisher(publisher string) ApiGetAppReleaseListRequest {
 	r.publisher = &publisher
+	return r
+}
+
+func (r ApiGetAppReleaseListRequest) Architecture(architecture string) ApiGetAppReleaseListRequest {
+	r.architecture = &architecture
 	return r
 }
 
@@ -569,25 +575,24 @@ func (r ApiGetAppReleaseListRequest) Execute() (*AppReleaseDtoPagedResultDto, *h
 /*
 GetAppReleaseList 获取版本列表
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAppReleaseListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAppReleaseListRequest
 */
 func (a *AppReleaseAPIService) GetAppReleaseList(ctx context.Context) ApiGetAppReleaseListRequest {
 	return ApiGetAppReleaseListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDtoPagedResultDto
+//  @return AppReleaseDtoPagedResultDto
 func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRequest) (*AppReleaseDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.GetAppReleaseList")
@@ -613,6 +618,9 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 	if r.publisher != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Publisher", r.publisher, "form", "")
 	}
+	if r.architecture != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "Architecture", r.architecture, "form", "")
+	}
 	if r.sorting != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Sorting", r.sorting, "form", "")
 	}
@@ -668,8 +676,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -679,8 +687,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -690,8 +698,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -701,8 +709,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -712,8 +720,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -723,8 +731,8 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -741,64 +749,69 @@ func (a *AppReleaseAPIService) GetAppReleaseListExecute(r ApiGetAppReleaseListRe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiGetLatestRequest struct {
-	ctx          context.Context
-	ApiService   *AppReleaseAPIService
-	appName      *string
-	platform     *string
+type ApiGetLatestGetApiAppAppReleaseLatestRequest struct {
+	ctx context.Context
+	ApiService *AppReleaseAPIService
+	appName *string
+	platform *string
 	artifactType *string
-	publisher    *string
+	publisher *string
+	architecture *string
 }
 
-func (r ApiGetLatestRequest) AppName(appName string) ApiGetLatestRequest {
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) AppName(appName string) ApiGetLatestGetApiAppAppReleaseLatestRequest {
 	r.appName = &appName
 	return r
 }
 
-func (r ApiGetLatestRequest) Platform(platform string) ApiGetLatestRequest {
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) Platform(platform string) ApiGetLatestGetApiAppAppReleaseLatestRequest {
 	r.platform = &platform
 	return r
 }
 
-func (r ApiGetLatestRequest) ArtifactType(artifactType string) ApiGetLatestRequest {
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) ArtifactType(artifactType string) ApiGetLatestGetApiAppAppReleaseLatestRequest {
 	r.artifactType = &artifactType
 	return r
 }
 
-func (r ApiGetLatestRequest) Publisher(publisher string) ApiGetLatestRequest {
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) Publisher(publisher string) ApiGetLatestGetApiAppAppReleaseLatestRequest {
 	r.publisher = &publisher
 	return r
 }
 
-func (r ApiGetLatestRequest) Execute() (*AppReleaseDto, *http.Response, error) {
-	return r.ApiService.GetLatestExecute(r)
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) Architecture(architecture string) ApiGetLatestGetApiAppAppReleaseLatestRequest {
+	r.architecture = &architecture
+	return r
+}
+
+func (r ApiGetLatestGetApiAppAppReleaseLatestRequest) Execute() (*AppReleaseDto, *http.Response, error) {
+	return r.ApiService.GetLatestGetApiAppAppReleaseLatestExecute(r)
 }
 
 /*
-GetLatest 获取最新版本
+GetLatestGetApiAppAppReleaseLatest 获取最新版本
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLatestRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetLatestGetApiAppAppReleaseLatestRequest
 */
-func (a *AppReleaseAPIService) GetLatest(ctx context.Context) ApiGetLatestRequest {
-	return ApiGetLatestRequest{
+func (a *AppReleaseAPIService) GetLatestGetApiAppAppReleaseLatest(ctx context.Context) ApiGetLatestGetApiAppAppReleaseLatestRequest {
+	return ApiGetLatestGetApiAppAppReleaseLatestRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDto
-func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppReleaseDto, *http.Response, error) {
+//  @return AppReleaseDto
+func (a *AppReleaseAPIService) GetLatestGetApiAppAppReleaseLatestExecute(r ApiGetLatestGetApiAppAppReleaseLatestRequest) (*AppReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.GetLatest")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.GetLatestGetApiAppAppReleaseLatest")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -820,6 +833,9 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 	}
 	if r.publisher != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Publisher", r.publisher, "form", "")
+	}
+	if r.architecture != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "Architecture", r.architecture, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -867,8 +883,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -878,8 +894,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -889,8 +905,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -900,8 +916,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -911,8 +927,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -922,8 +938,8 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -941,14 +957,15 @@ func (a *AppReleaseAPIService) GetLatestExecute(r ApiGetLatestRequest) (*AppRele
 }
 
 type ApiGetListByDeveloperRequest struct {
-	ctx            context.Context
-	ApiService     *AppReleaseAPIService
-	appId          *string
-	channel        *ReleaseChannel
-	platform       *string
-	publisher      *string
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AppReleaseAPIService
+	appId *string
+	channel *ReleaseChannel
+	platform *string
+	publisher *string
+	architecture *string
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -969,6 +986,11 @@ func (r ApiGetListByDeveloperRequest) Platform(platform string) ApiGetListByDeve
 
 func (r ApiGetListByDeveloperRequest) Publisher(publisher string) ApiGetListByDeveloperRequest {
 	r.publisher = &publisher
+	return r
+}
+
+func (r ApiGetListByDeveloperRequest) Architecture(architecture string) ApiGetListByDeveloperRequest {
+	r.architecture = &architecture
 	return r
 }
 
@@ -994,25 +1016,24 @@ func (r ApiGetListByDeveloperRequest) Execute() (*AppReleaseDtoPagedResultDto, *
 /*
 GetListByDeveloper 开发者获取版本列表（版本的创建者为当前用户）
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetListByDeveloperRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetListByDeveloperRequest
 */
 func (a *AppReleaseAPIService) GetListByDeveloper(ctx context.Context) ApiGetListByDeveloperRequest {
 	return ApiGetListByDeveloperRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDtoPagedResultDto
+//  @return AppReleaseDtoPagedResultDto
 func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloperRequest) (*AppReleaseDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.GetListByDeveloper")
@@ -1037,6 +1058,9 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 	}
 	if r.publisher != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Publisher", r.publisher, "form", "")
+	}
+	if r.architecture != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "Architecture", r.architecture, "form", "")
 	}
 	if r.sorting != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Sorting", r.sorting, "form", "")
@@ -1093,8 +1117,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1104,8 +1128,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1115,8 +1139,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1126,8 +1150,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1137,8 +1161,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1148,8 +1172,8 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1167,12 +1191,13 @@ func (a *AppReleaseAPIService) GetListByDeveloperExecute(r ApiGetListByDeveloper
 }
 
 type ApiUpdateAppReleaseRequest struct {
-	ctx                         context.Context
-	ApiService                  *AppReleaseAPIService
-	id                          string
+	ctx context.Context
+	ApiService *AppReleaseAPIService
+	id string
 	createOrUpdateAppReleaseDto *CreateOrUpdateAppReleaseDto
 }
 
+// 
 func (r ApiUpdateAppReleaseRequest) CreateOrUpdateAppReleaseDto(createOrUpdateAppReleaseDto CreateOrUpdateAppReleaseDto) ApiUpdateAppReleaseRequest {
 	r.createOrUpdateAppReleaseDto = &createOrUpdateAppReleaseDto
 	return r
@@ -1185,27 +1210,26 @@ func (r ApiUpdateAppReleaseRequest) Execute() (*AppReleaseDto, *http.Response, e
 /*
 UpdateAppRelease 更新版本
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAppReleaseRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id 
+ @return ApiUpdateAppReleaseRequest
 */
 func (a *AppReleaseAPIService) UpdateAppRelease(ctx context.Context, id string) ApiUpdateAppReleaseRequest {
 	return ApiUpdateAppReleaseRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppReleaseDto
+//  @return AppReleaseDto
 func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequest) (*AppReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppReleaseDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppReleaseAPIService.UpdateAppRelease")
@@ -1268,8 +1292,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1279,8 +1303,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1290,8 +1314,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1301,8 +1325,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1312,8 +1336,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1323,8 +1347,8 @@ func (a *AppReleaseAPIService) UpdateAppReleaseExecute(r ApiUpdateAppReleaseRequ
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]AppPricingDto**](AppPricingDto.md) |  | [optional]
-**TotalCount** | Pointer to **int64** |  | [optional]
+**Items** | Pointer to [**[]AppPricingDto**](AppPricingDto.md) |  | [optional] 
+**TotalCount** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 

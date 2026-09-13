@@ -18,11 +18,12 @@ import (
 	"net/url"
 )
 
+
 // StorageObjectAPIService StorageObjectAPI service
 type StorageObjectAPIService service
 
 type ApiGetCdnDomainsRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *StorageObjectAPIService
 }
 
@@ -33,25 +34,24 @@ func (r ApiGetCdnDomainsRequest) Execute() ([]CdnDomainDto, *http.Response, erro
 /*
 GetCdnDomains 获取所有 CDN Domain 配置
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetCdnDomainsRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetCdnDomainsRequest
 */
 func (a *StorageObjectAPIService) GetCdnDomains(ctx context.Context) ApiGetCdnDomainsRequest {
 	return ApiGetCdnDomainsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []CdnDomainDto
+//  @return []CdnDomainDto
 func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest) ([]CdnDomainDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []CdnDomainDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CdnDomainDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "StorageObjectAPIService.GetCdnDomains")
@@ -111,8 +111,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -122,8 +122,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -133,8 +133,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -144,8 +144,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -155,8 +155,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -166,8 +166,8 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -185,12 +185,12 @@ func (a *StorageObjectAPIService) GetCdnDomainsExecute(r ApiGetCdnDomainsRequest
 }
 
 type ApiGetFileCredentialRequest struct {
-	ctx           context.Context
-	ApiService    *StorageObjectAPIService
+	ctx context.Context
+	ApiService *StorageObjectAPIService
 	userTotalSize *int64
-	rapidCode     *string
-	usage         *string
-	key           *string
+	rapidCode *string
+	usage *string
+	key *string
 }
 
 func (r ApiGetFileCredentialRequest) UserTotalSize(userTotalSize int64) ApiGetFileCredentialRequest {
@@ -220,25 +220,24 @@ func (r ApiGetFileCredentialRequest) Execute() (*StorageObjectCredentials, *http
 /*
 GetFileCredential Method for GetFileCredential
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetFileCredentialRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetFileCredentialRequest
 */
 func (a *StorageObjectAPIService) GetFileCredential(ctx context.Context) ApiGetFileCredentialRequest {
 	return ApiGetFileCredentialRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return StorageObjectCredentials
+//  @return StorageObjectCredentials
 func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentialRequest) (*StorageObjectCredentials, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *StorageObjectCredentials
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *StorageObjectCredentials
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "StorageObjectAPIService.GetFileCredential")
@@ -310,8 +309,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -321,8 +320,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -332,8 +331,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -343,8 +342,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -354,8 +353,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -365,8 +364,8 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -384,7 +383,7 @@ func (a *StorageObjectAPIService) GetFileCredentialExecute(r ApiGetFileCredentia
 }
 
 type ApiGetUserStoragesRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *StorageObjectAPIService
 }
 
@@ -395,25 +394,24 @@ func (r ApiGetUserStoragesRequest) Execute() ([]UserStorageDto, *http.Response, 
 /*
 GetUserStorages Method for GetUserStorages
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserStoragesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetUserStoragesRequest
 */
 func (a *StorageObjectAPIService) GetUserStorages(ctx context.Context) ApiGetUserStoragesRequest {
 	return ApiGetUserStoragesRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []UserStorageDto
+//  @return []UserStorageDto
 func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesRequest) ([]UserStorageDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []UserStorageDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UserStorageDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "StorageObjectAPIService.GetUserStorages")
@@ -473,8 +471,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -484,8 +482,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -495,8 +493,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -506,8 +504,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -517,8 +515,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -528,8 +526,8 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -547,10 +545,10 @@ func (a *StorageObjectAPIService) GetUserStoragesExecute(r ApiGetUserStoragesReq
 }
 
 type ApiPreSignUrlRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *StorageObjectAPIService
-	bucket     *string
-	key        *string
+	bucket *string
+	key *string
 }
 
 func (r ApiPreSignUrlRequest) Bucket(bucket string) ApiPreSignUrlRequest {
@@ -570,25 +568,24 @@ func (r ApiPreSignUrlRequest) Execute() (string, *http.Response, error) {
 /*
 PreSignUrl Method for PreSignUrl
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPreSignUrlRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPreSignUrlRequest
 */
 func (a *StorageObjectAPIService) PreSignUrl(ctx context.Context) ApiPreSignUrlRequest {
 	return ApiPreSignUrlRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return string
+//  @return string
 func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue string
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "StorageObjectAPIService.PreSignUrl")
@@ -654,8 +651,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -665,8 +662,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -676,8 +673,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -687,8 +684,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -698,8 +695,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -709,8 +706,8 @@ func (a *StorageObjectAPIService) PreSignUrlExecute(r ApiPreSignUrlRequest) (str
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

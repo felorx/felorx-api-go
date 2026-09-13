@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**UserName** | Pointer to **NullableString** |  | [optional]
-**AvatarUrl** | Pointer to **NullableString** |  | [optional]
-**Email** | Pointer to **NullableString** |  | [optional]
-**PhoneNumber** | Pointer to **NullableString** |  | [optional]
-**HasPassword** | Pointer to **bool** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**UserName** | Pointer to **NullableString** |  | [optional] 
+**AvatarUrl** | Pointer to **NullableString** |  | [optional] 
+**Email** | Pointer to **NullableString** |  | [optional] 
+**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
+**HasPassword** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // AppFeedbackAPIService AppFeedbackAPI service
 type AppFeedbackAPIService service
 
 type ApiCreateAppFeedbackRequest struct {
-	ctx                  context.Context
-	ApiService           *AppFeedbackAPIService
+	ctx context.Context
+	ApiService *AppFeedbackAPIService
 	createAppFeedbackDto *CreateAppFeedbackDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateAppFeedbackRequest) Execute() (*AppFeedbackDto, *http.Response,
 /*
 CreateAppFeedback 创建反馈（允许匿名用户提交）
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppFeedbackRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppFeedbackRequest
 */
 func (a *AppFeedbackAPIService) CreateAppFeedback(ctx context.Context) ApiCreateAppFeedbackRequest {
 	return ApiCreateAppFeedbackRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppFeedbackDto
+//  @return AppFeedbackDto
 func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackRequest) (*AppFeedbackDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppFeedbackDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppFeedbackDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.CreateAppFeedback")
@@ -120,8 +120,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *AppFeedbackAPIService) CreateAppFeedbackExecute(r ApiCreateAppFeedbackR
 }
 
 type ApiDeleteAppFeedbackByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppFeedbackAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppFeedbackByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeleteAppFeedbackByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppFeedbackById Method for DeleteAppFeedbackById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppFeedbackByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAppFeedbackByIdRequest
 */
 func (a *AppFeedbackAPIService) DeleteAppFeedbackById(ctx context.Context, id string) ApiDeleteAppFeedbackByIdRequest {
 	return ApiDeleteAppFeedbackByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedbackByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.DeleteAppFeedbackById")
@@ -284,8 +284,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,9 +349,9 @@ func (a *AppFeedbackAPIService) DeleteAppFeedbackByIdExecute(r ApiDeleteAppFeedb
 }
 
 type ApiGetAppFeedbackByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppFeedbackAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetAppFeedbackByIdRequest) Execute() (*AppFeedbackDto, *http.Response, error) {
@@ -361,27 +361,26 @@ func (r ApiGetAppFeedbackByIdRequest) Execute() (*AppFeedbackDto, *http.Response
 /*
 GetAppFeedbackById Method for GetAppFeedbackById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetAppFeedbackByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetAppFeedbackByIdRequest
 */
 func (a *AppFeedbackAPIService) GetAppFeedbackById(ctx context.Context, id string) ApiGetAppFeedbackByIdRequest {
 	return ApiGetAppFeedbackByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppFeedbackDto
+//  @return AppFeedbackDto
 func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByIdRequest) (*AppFeedbackDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppFeedbackDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppFeedbackDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.GetAppFeedbackById")
@@ -442,8 +441,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -453,8 +452,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -464,8 +463,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -475,8 +474,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -486,8 +485,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -497,8 +496,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -516,13 +515,13 @@ func (a *AppFeedbackAPIService) GetAppFeedbackByIdExecute(r ApiGetAppFeedbackByI
 }
 
 type ApiGetAppFeedbackListRequest struct {
-	ctx            context.Context
-	ApiService     *AppFeedbackAPIService
-	appId          *string
-	type_          *AppFeedbackType
-	status         *AppFeedbackStatus
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AppFeedbackAPIService
+	appId *string
+	type_ *AppFeedbackType
+	status *AppFeedbackStatus
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -566,25 +565,24 @@ func (r ApiGetAppFeedbackListRequest) Execute() (*AppFeedbackDtoPagedResultDto, 
 /*
 GetAppFeedbackList Method for GetAppFeedbackList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAppFeedbackListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAppFeedbackListRequest
 */
 func (a *AppFeedbackAPIService) GetAppFeedbackList(ctx context.Context) ApiGetAppFeedbackListRequest {
 	return ApiGetAppFeedbackListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppFeedbackDtoPagedResultDto
+//  @return AppFeedbackDtoPagedResultDto
 func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackListRequest) (*AppFeedbackDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppFeedbackDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppFeedbackDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.GetAppFeedbackList")
@@ -662,8 +660,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -673,8 +671,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -684,8 +682,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -695,8 +693,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -706,8 +704,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -717,8 +715,8 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -736,9 +734,9 @@ func (a *AppFeedbackAPIService) GetAppFeedbackListExecute(r ApiGetAppFeedbackLis
 }
 
 type ApiMarkAsProcessedRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppFeedbackAPIService
-	id         string
+	id string
 }
 
 func (r ApiMarkAsProcessedRequest) Execute() (*AppFeedbackDto, *http.Response, error) {
@@ -748,27 +746,26 @@ func (r ApiMarkAsProcessedRequest) Execute() (*AppFeedbackDto, *http.Response, e
 /*
 MarkAsProcessed Method for MarkAsProcessed
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiMarkAsProcessedRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiMarkAsProcessedRequest
 */
 func (a *AppFeedbackAPIService) MarkAsProcessed(ctx context.Context, id string) ApiMarkAsProcessedRequest {
 	return ApiMarkAsProcessedRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppFeedbackDto
+//  @return AppFeedbackDto
 func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedRequest) (*AppFeedbackDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppFeedbackDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppFeedbackDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.MarkAsProcessed")
@@ -829,8 +826,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -840,8 +837,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -851,8 +848,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -862,8 +859,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -873,8 +870,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -884,8 +881,8 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -903,9 +900,9 @@ func (a *AppFeedbackAPIService) MarkAsProcessedExecute(r ApiMarkAsProcessedReque
 }
 
 type ApiReplyRequest struct {
-	ctx                 context.Context
-	ApiService          *AppFeedbackAPIService
-	id                  string
+	ctx context.Context
+	ApiService *AppFeedbackAPIService
+	id string
 	replyAppFeedbackDto *ReplyAppFeedbackDto
 }
 
@@ -921,27 +918,26 @@ func (r ApiReplyRequest) Execute() (*AppFeedbackDto, *http.Response, error) {
 /*
 Reply Method for Reply
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiReplyRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiReplyRequest
 */
 func (a *AppFeedbackAPIService) Reply(ctx context.Context, id string) ApiReplyRequest {
 	return ApiReplyRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppFeedbackDto
+//  @return AppFeedbackDto
 func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppFeedbackDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppFeedbackDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppFeedbackAPIService.Reply")
@@ -1004,8 +1000,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1015,8 +1011,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1026,8 +1022,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1037,8 +1033,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1048,8 +1044,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1059,8 +1055,8 @@ func (a *AppFeedbackAPIService) ReplyExecute(r ApiReplyRequest) (*AppFeedbackDto
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

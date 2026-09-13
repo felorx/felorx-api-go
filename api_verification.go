@@ -18,12 +18,13 @@ import (
 	"net/url"
 )
 
+
 // VerificationAPIService VerificationAPI service
 type VerificationAPIService service
 
 type ApiSendCodeRequest struct {
-	ctx                     context.Context
-	ApiService              *VerificationAPIService
+	ctx context.Context
+	ApiService *VerificationAPIService
 	sendVerificationCodeDto *SendVerificationCodeDto
 }
 
@@ -39,22 +40,22 @@ func (r ApiSendCodeRequest) Execute() (*http.Response, error) {
 /*
 SendCode Method for SendCode
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiSendCodeRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSendCodeRequest
 */
 func (a *VerificationAPIService) SendCode(ctx context.Context) ApiSendCodeRequest {
 	return ApiSendCodeRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VerificationAPIService.SendCode")
@@ -116,8 +117,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -127,8 +128,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -138,8 +139,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -149,8 +150,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -160,8 +161,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -171,8 +172,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -181,8 +182,8 @@ func (a *VerificationAPIService) SendCodeExecute(r ApiSendCodeRequest) (*http.Re
 }
 
 type ApiSendCodeAnonymousRequest struct {
-	ctx                     context.Context
-	ApiService              *VerificationAPIService
+	ctx context.Context
+	ApiService *VerificationAPIService
 	sendVerificationCodeDto *SendVerificationCodeDto
 }
 
@@ -198,22 +199,22 @@ func (r ApiSendCodeAnonymousRequest) Execute() (*http.Response, error) {
 /*
 SendCodeAnonymous Method for SendCodeAnonymous
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiSendCodeAnonymousRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSendCodeAnonymousRequest
 */
 func (a *VerificationAPIService) SendCodeAnonymous(ctx context.Context) ApiSendCodeAnonymousRequest {
 	return ApiSendCodeAnonymousRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymousRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VerificationAPIService.SendCodeAnonymous")
@@ -275,8 +276,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -286,8 +287,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -297,8 +298,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -308,8 +309,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -319,8 +320,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -330,8 +331,8 @@ func (a *VerificationAPIService) SendCodeAnonymousExecute(r ApiSendCodeAnonymous
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

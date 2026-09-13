@@ -84,7 +84,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasKey() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -127,7 +126,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasAppId() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetAppId(v string) {
 	o.AppId.Set(&v)
 }
-
 // SetAppIdNil sets the value for AppId to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetAppIdNil() {
 	o.AppId.Set(nil)
@@ -170,7 +168,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasName() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -213,7 +210,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasDescription() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -256,7 +252,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasLinkUrl() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetLinkUrl(v string) {
 	o.LinkUrl.Set(&v)
 }
-
 // SetLinkUrlNil sets the value for LinkUrl to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetLinkUrlNil() {
 	o.LinkUrl.Set(nil)
@@ -299,7 +294,6 @@ func (o *CreateOrUpdateAppPricingItemDto) HasDisplay() bool {
 func (o *CreateOrUpdateAppPricingItemDto) SetDisplay(v string) {
 	o.Display.Set(&v)
 }
-
 // SetDisplayNil sets the value for Display to be an explicit nil
 func (o *CreateOrUpdateAppPricingItemDto) SetDisplayNil() {
 	o.Display.Set(nil)
@@ -343,7 +337,7 @@ func (o *CreateOrUpdateAppPricingItemDto) SetSortIndex(v int32) {
 }
 
 func (o CreateOrUpdateAppPricingItemDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -411,3 +405,5 @@ func (v *NullableCreateOrUpdateAppPricingItemDto) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | Pointer to **NullableString** |  | [optional]
+**Key** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

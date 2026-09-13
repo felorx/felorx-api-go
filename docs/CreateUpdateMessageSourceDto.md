@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**IsPublished** | Pointer to **bool** |  | [optional]
-**IconUrl** | Pointer to **NullableString** |  | [optional]
-**Routes** | Pointer to [**[]CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | [optional]
+**CategoryId** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**IsPublished** | Pointer to **bool** |  | [optional] 
+**IconUrl** | Pointer to **NullableString** |  | [optional] 
+**Routes** | Pointer to [**[]CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md) |  | [optional] 
 
 ## Methods
 
@@ -28,6 +29,31 @@ will change when the set of required properties is changed
 NewCreateUpdateMessageSourceDtoWithDefaults instantiates a new CreateUpdateMessageSourceDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCategoryId
+
+`func (o *CreateUpdateMessageSourceDto) GetCategoryId() string`
+
+GetCategoryId returns the CategoryId field if non-nil, zero value otherwise.
+
+### GetCategoryIdOk
+
+`func (o *CreateUpdateMessageSourceDto) GetCategoryIdOk() (*string, bool)`
+
+GetCategoryIdOk returns a tuple with the CategoryId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategoryId
+
+`func (o *CreateUpdateMessageSourceDto) SetCategoryId(v string)`
+
+SetCategoryId sets CategoryId field to given value.
+
+### HasCategoryId
+
+`func (o *CreateUpdateMessageSourceDto) HasCategoryId() bool`
+
+HasCategoryId returns a boolean if a field has been set.
 
 ### GetName
 

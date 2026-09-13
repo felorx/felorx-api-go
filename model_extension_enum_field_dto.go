@@ -19,8 +19,8 @@ var _ MappedNullable = &ExtensionEnumFieldDto{}
 
 // ExtensionEnumFieldDto struct for ExtensionEnumFieldDto
 type ExtensionEnumFieldDto struct {
-	Name  NullableString `json:"name,omitempty"`
-	Value interface{}    `json:"value,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }
 
 // NewExtensionEnumFieldDto instantiates a new ExtensionEnumFieldDto object
@@ -72,7 +72,6 @@ func (o *ExtensionEnumFieldDto) HasName() bool {
 func (o *ExtensionEnumFieldDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *ExtensionEnumFieldDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -117,7 +116,7 @@ func (o *ExtensionEnumFieldDto) SetValue(v interface{}) {
 }
 
 func (o ExtensionEnumFieldDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -170,3 +169,5 @@ func (v *NullableExtensionEnumFieldDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

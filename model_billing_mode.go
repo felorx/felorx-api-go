@@ -20,10 +20,10 @@ type BillingMode string
 
 // List of BillingMode
 const (
-	BILLINGMODE_UNKNOWN        BillingMode = "Unknown"
+	BILLINGMODE_UNKNOWN BillingMode = "Unknown"
 	BILLINGMODE_AUTO_RENEWABLE BillingMode = "AutoRenewable"
-	BILLINGMODE_FIXED_TERM     BillingMode = "FixedTerm"
-	BILLINGMODE_LIFETIME       BillingMode = "Lifetime"
+	BILLINGMODE_FIXED_TERM BillingMode = "FixedTerm"
+	BILLINGMODE_LIFETIME BillingMode = "Lifetime"
 )
 
 // All allowed values of BillingMode enum
@@ -112,3 +112,4 @@ func (v *NullableBillingMode) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

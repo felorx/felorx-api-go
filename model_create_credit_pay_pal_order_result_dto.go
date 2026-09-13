@@ -19,9 +19,9 @@ var _ MappedNullable = &CreateCreditPayPalOrderResultDto{}
 
 // CreateCreditPayPalOrderResultDto struct for CreateCreditPayPalOrderResultDto
 type CreateCreditPayPalOrderResultDto struct {
-	OrderId       *string        `json:"orderId,omitempty"`
+	OrderId *string `json:"orderId,omitempty"`
 	PayPalOrderId NullableString `json:"payPalOrderId,omitempty"`
-	ApprovalUrl   NullableString `json:"approvalUrl,omitempty"`
+	ApprovalUrl NullableString `json:"approvalUrl,omitempty"`
 }
 
 // NewCreateCreditPayPalOrderResultDto instantiates a new CreateCreditPayPalOrderResultDto object
@@ -105,7 +105,6 @@ func (o *CreateCreditPayPalOrderResultDto) HasPayPalOrderId() bool {
 func (o *CreateCreditPayPalOrderResultDto) SetPayPalOrderId(v string) {
 	o.PayPalOrderId.Set(&v)
 }
-
 // SetPayPalOrderIdNil sets the value for PayPalOrderId to be an explicit nil
 func (o *CreateCreditPayPalOrderResultDto) SetPayPalOrderIdNil() {
 	o.PayPalOrderId.Set(nil)
@@ -148,7 +147,6 @@ func (o *CreateCreditPayPalOrderResultDto) HasApprovalUrl() bool {
 func (o *CreateCreditPayPalOrderResultDto) SetApprovalUrl(v string) {
 	o.ApprovalUrl.Set(&v)
 }
-
 // SetApprovalUrlNil sets the value for ApprovalUrl to be an explicit nil
 func (o *CreateCreditPayPalOrderResultDto) SetApprovalUrlNil() {
 	o.ApprovalUrl.Set(nil)
@@ -160,7 +158,7 @@ func (o *CreateCreditPayPalOrderResultDto) UnsetApprovalUrl() {
 }
 
 func (o CreateCreditPayPalOrderResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -216,3 +214,5 @@ func (v *NullableCreateCreditPayPalOrderResultDto) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

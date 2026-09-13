@@ -20,21 +20,21 @@ var _ MappedNullable = &AppAssetDto{}
 
 // AppAssetDto struct for AppAssetDto
 type AppAssetDto struct {
-	Id                   *string             `json:"id,omitempty"`
-	CreationTime         *time.Time          `json:"creationTime,omitempty"`
-	CreatorId            NullableString      `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime        `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString      `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool               `json:"isDeleted,omitempty"`
-	DeleterId            NullableString      `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime        `json:"deletionTime,omitempty"`
-	AppId                *string             `json:"appId,omitempty"`
-	AppLocaleId          *string             `json:"appLocaleId,omitempty"`
-	AppFeatureId         NullableString      `json:"appFeatureId,omitempty"`
-	AssetType            *AppAssetType       `json:"assetType,omitempty"`
-	DeviceType           *AppAssetDeviceType `json:"deviceType,omitempty"`
-	Url                  NullableString      `json:"url,omitempty"`
-	Sort                 *int32              `json:"sort,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	AppLocaleId *string `json:"appLocaleId,omitempty"`
+	AppFeatureId NullableString `json:"appFeatureId,omitempty"`
+	AssetType *AppAssetType `json:"assetType,omitempty"`
+	DeviceType *AppAssetDeviceType `json:"deviceType,omitempty"`
+	Url NullableString `json:"url,omitempty"`
+	Sort *int32 `json:"sort,omitempty"`
 }
 
 // NewAppAssetDto instantiates a new AppAssetDto object
@@ -150,7 +150,6 @@ func (o *AppAssetDto) HasCreatorId() bool {
 func (o *AppAssetDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppAssetDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -193,7 +192,6 @@ func (o *AppAssetDto) HasLastModificationTime() bool {
 func (o *AppAssetDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppAssetDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -236,7 +234,6 @@ func (o *AppAssetDto) HasLastModifierId() bool {
 func (o *AppAssetDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppAssetDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -311,7 +308,6 @@ func (o *AppAssetDto) HasDeleterId() bool {
 func (o *AppAssetDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppAssetDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -354,7 +350,6 @@ func (o *AppAssetDto) HasDeletionTime() bool {
 func (o *AppAssetDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppAssetDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -461,7 +456,6 @@ func (o *AppAssetDto) HasAppFeatureId() bool {
 func (o *AppAssetDto) SetAppFeatureId(v string) {
 	o.AppFeatureId.Set(&v)
 }
-
 // SetAppFeatureIdNil sets the value for AppFeatureId to be an explicit nil
 func (o *AppAssetDto) SetAppFeatureIdNil() {
 	o.AppFeatureId.Set(nil)
@@ -568,7 +562,6 @@ func (o *AppAssetDto) HasUrl() bool {
 func (o *AppAssetDto) SetUrl(v string) {
 	o.Url.Set(&v)
 }
-
 // SetUrlNil sets the value for Url to be an explicit nil
 func (o *AppAssetDto) SetUrlNil() {
 	o.Url.Set(nil)
@@ -612,7 +605,7 @@ func (o *AppAssetDto) SetSort(v int32) {
 }
 
 func (o AppAssetDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -704,3 +697,5 @@ func (v *NullableAppAssetDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

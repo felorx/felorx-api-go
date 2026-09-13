@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreatePlanPrice**](SubscriptionBillingAdminAPI.md#CreatePlanPrice) | **Post** /api/app/subscription-billing-admin/plan-prices |
-[**DeletePlanPrice**](SubscriptionBillingAdminAPI.md#DeletePlanPrice) | **Delete** /api/app/subscription-billing-admin/plan-prices/{id} |
-[**DeleteStoreMapping**](SubscriptionBillingAdminAPI.md#DeleteStoreMapping) | **Delete** /api/app/subscription-billing-admin/store-mappings/{id} |
-[**GetPlanPrice**](SubscriptionBillingAdminAPI.md#GetPlanPrice) | **Get** /api/app/subscription-billing-admin/plan-prices/{id} |
-[**GetPlanPricesByAppId**](SubscriptionBillingAdminAPI.md#GetPlanPricesByAppId) | **Get** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} |
-[**GetPlanPricesByPricingId**](SubscriptionBillingAdminAPI.md#GetPlanPricesByPricingId) | **Get** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} |
-[**GetStoreMappingsByAppId**](SubscriptionBillingAdminAPI.md#GetStoreMappingsByAppId) | **Get** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} |
-[**GetStoreMappingsByPlanPriceId**](SubscriptionBillingAdminAPI.md#GetStoreMappingsByPlanPriceId) | **Get** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} |
-[**UpdatePlanPrice**](SubscriptionBillingAdminAPI.md#UpdatePlanPrice) | **Put** /api/app/subscription-billing-admin/plan-prices/{id} |
-[**UpsertStoreMapping**](SubscriptionBillingAdminAPI.md#UpsertStoreMapping) | **Post** /api/app/subscription-billing-admin/store-mappings/upsert |
+[**CreatePlanPrice**](SubscriptionBillingAdminAPI.md#CreatePlanPrice) | **Post** /api/app/subscription-billing-admin/plan-prices | 
+[**DeletePlanPrice**](SubscriptionBillingAdminAPI.md#DeletePlanPrice) | **Delete** /api/app/subscription-billing-admin/plan-prices/{id} | 
+[**DeleteStoreMapping**](SubscriptionBillingAdminAPI.md#DeleteStoreMapping) | **Delete** /api/app/subscription-billing-admin/store-mappings/{id} | 
+[**GetPlanPrice**](SubscriptionBillingAdminAPI.md#GetPlanPrice) | **Get** /api/app/subscription-billing-admin/plan-prices/{id} | 
+[**GetPlanPricesByAppId**](SubscriptionBillingAdminAPI.md#GetPlanPricesByAppId) | **Get** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} | 
+[**GetPlanPricesByPricingId**](SubscriptionBillingAdminAPI.md#GetPlanPricesByPricingId) | **Get** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} | 
+[**GetStoreMappingsByAppId**](SubscriptionBillingAdminAPI.md#GetStoreMappingsByAppId) | **Get** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} | 
+[**GetStoreMappingsByPlanPriceId**](SubscriptionBillingAdminAPI.md#GetStoreMappingsByPlanPriceId) | **Get** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} | 
+[**UpdatePlanPrice**](SubscriptionBillingAdminAPI.md#UpdatePlanPrice) | **Put** /api/app/subscription-billing-admin/plan-prices/{id} | 
+[**UpsertStoreMapping**](SubscriptionBillingAdminAPI.md#UpsertStoreMapping) | **Post** /api/app/subscription-billing-admin/store-mappings/upsert | 
 
 
 
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreatePlanPriceRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md) |  |
+ **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md) |  | 
 
 ### Return type
 
@@ -100,7 +100,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -166,7 +166,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -184,7 +184,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -232,7 +232,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -252,7 +252,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -300,7 +300,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -320,7 +320,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -368,7 +368,7 @@ import (
 )
 
 func main() {
-	pricingId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	pricingId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -388,7 +388,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**pricingId** | **string** |  |
+**pricingId** | **string** |  | 
 
 ### Other Parameters
 
@@ -436,7 +436,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -456,7 +456,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -504,7 +504,7 @@ import (
 )
 
 func main() {
-	planPriceId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	planPriceId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -524,7 +524,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**planPriceId** | **string** |  |
+**planPriceId** | **string** |  | 
 
 ### Other Parameters
 
@@ -572,7 +572,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAppPlanPriceDto := *openapiclient.NewCreateOrUpdateAppPlanPriceDto() // CreateOrUpdateAppPlanPriceDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -593,7 +593,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -603,7 +603,7 @@ Other parameters are passed through a pointer to a apiUpdatePlanPriceRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md) |  |
+ **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md) |  | 
 
 ### Return type
 
@@ -667,7 +667,7 @@ Other parameters are passed through a pointer to a apiUpsertStoreMappingRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateStoreProductMappingDto** | [**CreateOrUpdateStoreProductMappingDto**](CreateOrUpdateStoreProductMappingDto.md) |  |
+ **createOrUpdateStoreProductMappingDto** | [**CreateOrUpdateStoreProductMappingDto**](CreateOrUpdateStoreProductMappingDto.md) |  | 
 
 ### Return type
 

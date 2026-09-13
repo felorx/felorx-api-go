@@ -19,9 +19,9 @@ var _ MappedNullable = &AiChatChoiceDto{}
 
 // AiChatChoiceDto struct for AiChatChoiceDto
 type AiChatChoiceDto struct {
-	Index        *int32            `json:"index,omitempty"`
-	Message      *AiChatMessageDto `json:"message,omitempty"`
-	FinishReason NullableString    `json:"finish_reason,omitempty"`
+	Index *int32 `json:"index,omitempty"`
+	Message *AiChatMessageDto `json:"message,omitempty"`
+	FinishReason NullableString `json:"finish_reason,omitempty"`
 }
 
 // NewAiChatChoiceDto instantiates a new AiChatChoiceDto object
@@ -137,7 +137,6 @@ func (o *AiChatChoiceDto) HasFinishReason() bool {
 func (o *AiChatChoiceDto) SetFinishReason(v string) {
 	o.FinishReason.Set(&v)
 }
-
 // SetFinishReasonNil sets the value for FinishReason to be an explicit nil
 func (o *AiChatChoiceDto) SetFinishReasonNil() {
 	o.FinishReason.Set(nil)
@@ -149,7 +148,7 @@ func (o *AiChatChoiceDto) UnsetFinishReason() {
 }
 
 func (o AiChatChoiceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -205,3 +204,5 @@ func (v *NullableAiChatChoiceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

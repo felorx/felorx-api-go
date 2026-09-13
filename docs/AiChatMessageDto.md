@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **NullableString** |  | [optional]
-**Content** | Pointer to **interface{}** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
+**Role** | Pointer to **NullableString** |  | [optional] 
+**Content** | Pointer to **interface{}** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

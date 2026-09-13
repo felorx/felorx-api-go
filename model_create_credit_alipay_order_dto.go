@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,11 +21,11 @@ var _ MappedNullable = &CreateCreditAlipayOrderDto{}
 
 // CreateCreditAlipayOrderDto struct for CreateCreditAlipayOrderDto
 type CreateCreditAlipayOrderDto struct {
-	AppId        string         `json:"appId"`
-	PackageId    string         `json:"packageId"`
+	AppId string `json:"appId"`
+	PackageId string `json:"packageId"`
 	CheckoutMode NullableString `json:"checkoutMode,omitempty"`
-	ReturnUrl    NullableString `json:"returnUrl,omitempty"`
-	QuitUrl      NullableString `json:"quitUrl,omitempty"`
+	ReturnUrl NullableString `json:"returnUrl,omitempty"`
+	QuitUrl NullableString `json:"quitUrl,omitempty"`
 }
 
 type _CreateCreditAlipayOrderDto CreateCreditAlipayOrderDto
@@ -129,7 +129,6 @@ func (o *CreateCreditAlipayOrderDto) HasCheckoutMode() bool {
 func (o *CreateCreditAlipayOrderDto) SetCheckoutMode(v string) {
 	o.CheckoutMode.Set(&v)
 }
-
 // SetCheckoutModeNil sets the value for CheckoutMode to be an explicit nil
 func (o *CreateCreditAlipayOrderDto) SetCheckoutModeNil() {
 	o.CheckoutMode.Set(nil)
@@ -172,7 +171,6 @@ func (o *CreateCreditAlipayOrderDto) HasReturnUrl() bool {
 func (o *CreateCreditAlipayOrderDto) SetReturnUrl(v string) {
 	o.ReturnUrl.Set(&v)
 }
-
 // SetReturnUrlNil sets the value for ReturnUrl to be an explicit nil
 func (o *CreateCreditAlipayOrderDto) SetReturnUrlNil() {
 	o.ReturnUrl.Set(nil)
@@ -215,7 +213,6 @@ func (o *CreateCreditAlipayOrderDto) HasQuitUrl() bool {
 func (o *CreateCreditAlipayOrderDto) SetQuitUrl(v string) {
 	o.QuitUrl.Set(&v)
 }
-
 // SetQuitUrlNil sets the value for QuitUrl to be an explicit nil
 func (o *CreateCreditAlipayOrderDto) SetQuitUrlNil() {
 	o.QuitUrl.Set(nil)
@@ -227,7 +224,7 @@ func (o *CreateCreditAlipayOrderDto) UnsetQuitUrl() {
 }
 
 func (o CreateCreditAlipayOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -264,10 +261,10 @@ func (o *CreateCreditAlipayOrderDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -323,3 +320,5 @@ func (v *NullableCreateCreditAlipayOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

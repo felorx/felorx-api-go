@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AppReleaseAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService CreateAppRelease", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppReleaseAPI.CreateAppRelease(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService DeleteAppReleaseById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService GetAppReleaseById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +63,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService GetAppReleaseList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppReleaseAPI.GetAppReleaseList(context.Background()).Execute()
 
@@ -73,11 +73,11 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AppReleaseAPIService GetLatest", func(t *testing.T) {
+	t.Run("Test AppReleaseAPIService GetLatestGetApiAppAppReleaseLatest", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AppReleaseAPI.GetLatest(context.Background()).Execute()
+		resp, httpRes, err := apiClient.AppReleaseAPI.GetLatestGetApiAppAppReleaseLatest(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -87,7 +87,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService GetListByDeveloper", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppReleaseAPI.GetListByDeveloper(context.Background()).Execute()
 
@@ -99,7 +99,7 @@ func Test_felorx_AppReleaseAPIService(t *testing.T) {
 
 	t.Run("Test AppReleaseAPIService UpdateAppRelease", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

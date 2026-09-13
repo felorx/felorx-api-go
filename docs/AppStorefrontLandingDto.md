@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hero** | Pointer to [**AppStorefrontHeroDto**](AppStorefrontHeroDto.md) |  | [optional]
-**Features** | Pointer to [**[]AppStorefrontFeatureBlockDto**](AppStorefrontFeatureBlockDto.md) |  | [optional]
+**Hero** | Pointer to [**AppStorefrontHeroDto**](AppStorefrontHeroDto.md) |  | [optional] 
+**Features** | Pointer to [**[]AppStorefrontFeatureBlockDto**](AppStorefrontFeatureBlockDto.md) |  | [optional] 
 
 ## Methods
 

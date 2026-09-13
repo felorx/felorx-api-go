@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Path** | Pointer to **NullableString** |  | [optional]
-**SourceId** | Pointer to **string** |  | [optional]
-**Extra** | Pointer to **NullableString** |  | [optional]
-**Anticrawler** | Pointer to **bool** |  | [optional]
-**Radar** | Pointer to **bool** |  | [optional]
-**Rssbud** | Pointer to **bool** |  | [optional]
-**IsPublished** | Pointer to **bool** |  | [optional]
-**IconUrl** | Pointer to **NullableString** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Path** | Pointer to **NullableString** |  | [optional] 
+**SourceId** | Pointer to **string** |  | [optional] 
+**Extra** | Pointer to **NullableString** |  | [optional] 
+**Anticrawler** | Pointer to **bool** |  | [optional] 
+**Radar** | Pointer to **bool** |  | [optional] 
+**Rssbud** | Pointer to **bool** |  | [optional] 
+**IsPublished** | Pointer to **bool** |  | [optional] 
+**IconUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -33,6 +34,31 @@ will change when the set of required properties is changed
 NewMessageSourceRouteDtoWithDefaults instantiates a new MessageSourceRouteDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *MessageSourceRouteDto) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *MessageSourceRouteDto) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *MessageSourceRouteDto) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *MessageSourceRouteDto) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetTitle
 

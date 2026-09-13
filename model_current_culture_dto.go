@@ -19,15 +19,15 @@ var _ MappedNullable = &CurrentCultureDto{}
 
 // CurrentCultureDto struct for CurrentCultureDto
 type CurrentCultureDto struct {
-	DisplayName                NullableString     `json:"displayName,omitempty"`
-	EnglishName                NullableString     `json:"englishName,omitempty"`
-	ThreeLetterIsoLanguageName NullableString     `json:"threeLetterIsoLanguageName,omitempty"`
-	TwoLetterIsoLanguageName   NullableString     `json:"twoLetterIsoLanguageName,omitempty"`
-	IsRightToLeft              *bool              `json:"isRightToLeft,omitempty"`
-	CultureName                NullableString     `json:"cultureName,omitempty"`
-	Name                       NullableString     `json:"name,omitempty"`
-	NativeName                 NullableString     `json:"nativeName,omitempty"`
-	DateTimeFormat             *DateTimeFormatDto `json:"dateTimeFormat,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	EnglishName NullableString `json:"englishName,omitempty"`
+	ThreeLetterIsoLanguageName NullableString `json:"threeLetterIsoLanguageName,omitempty"`
+	TwoLetterIsoLanguageName NullableString `json:"twoLetterIsoLanguageName,omitempty"`
+	IsRightToLeft *bool `json:"isRightToLeft,omitempty"`
+	CultureName NullableString `json:"cultureName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	NativeName NullableString `json:"nativeName,omitempty"`
+	DateTimeFormat *DateTimeFormatDto `json:"dateTimeFormat,omitempty"`
 }
 
 // NewCurrentCultureDto instantiates a new CurrentCultureDto object
@@ -79,7 +79,6 @@ func (o *CurrentCultureDto) HasDisplayName() bool {
 func (o *CurrentCultureDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CurrentCultureDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -122,7 +121,6 @@ func (o *CurrentCultureDto) HasEnglishName() bool {
 func (o *CurrentCultureDto) SetEnglishName(v string) {
 	o.EnglishName.Set(&v)
 }
-
 // SetEnglishNameNil sets the value for EnglishName to be an explicit nil
 func (o *CurrentCultureDto) SetEnglishNameNil() {
 	o.EnglishName.Set(nil)
@@ -165,7 +163,6 @@ func (o *CurrentCultureDto) HasThreeLetterIsoLanguageName() bool {
 func (o *CurrentCultureDto) SetThreeLetterIsoLanguageName(v string) {
 	o.ThreeLetterIsoLanguageName.Set(&v)
 }
-
 // SetThreeLetterIsoLanguageNameNil sets the value for ThreeLetterIsoLanguageName to be an explicit nil
 func (o *CurrentCultureDto) SetThreeLetterIsoLanguageNameNil() {
 	o.ThreeLetterIsoLanguageName.Set(nil)
@@ -208,7 +205,6 @@ func (o *CurrentCultureDto) HasTwoLetterIsoLanguageName() bool {
 func (o *CurrentCultureDto) SetTwoLetterIsoLanguageName(v string) {
 	o.TwoLetterIsoLanguageName.Set(&v)
 }
-
 // SetTwoLetterIsoLanguageNameNil sets the value for TwoLetterIsoLanguageName to be an explicit nil
 func (o *CurrentCultureDto) SetTwoLetterIsoLanguageNameNil() {
 	o.TwoLetterIsoLanguageName.Set(nil)
@@ -283,7 +279,6 @@ func (o *CurrentCultureDto) HasCultureName() bool {
 func (o *CurrentCultureDto) SetCultureName(v string) {
 	o.CultureName.Set(&v)
 }
-
 // SetCultureNameNil sets the value for CultureName to be an explicit nil
 func (o *CurrentCultureDto) SetCultureNameNil() {
 	o.CultureName.Set(nil)
@@ -326,7 +321,6 @@ func (o *CurrentCultureDto) HasName() bool {
 func (o *CurrentCultureDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CurrentCultureDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -369,7 +363,6 @@ func (o *CurrentCultureDto) HasNativeName() bool {
 func (o *CurrentCultureDto) SetNativeName(v string) {
 	o.NativeName.Set(&v)
 }
-
 // SetNativeNameNil sets the value for NativeName to be an explicit nil
 func (o *CurrentCultureDto) SetNativeNameNil() {
 	o.NativeName.Set(nil)
@@ -413,7 +406,7 @@ func (o *CurrentCultureDto) SetDateTimeFormat(v DateTimeFormatDto) {
 }
 
 func (o CurrentCultureDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -487,3 +480,5 @@ func (v *NullableCurrentCultureDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**AppId** | Pointer to **string** | 所属应用ID | [optional]
-**Name** | Pointer to **NullableString** | 功能名称（唯一标识，同一应用内唯一） | [optional]
-**Sort** | Pointer to **int32** |  | [optional]
-**FeatureLocales** | Pointer to [**[]AppFeatureLocaleDto**](AppFeatureLocaleDto.md) |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**AppId** | Pointer to **string** | 所属应用ID | [optional] 
+**Name** | Pointer to **NullableString** | 功能名称（唯一标识，同一应用内唯一） | [optional] 
+**Sort** | Pointer to **int32** |  | [optional] 
+**FeatureLocales** | Pointer to [**[]AppFeatureLocaleDto**](AppFeatureLocaleDto.md) |  | [optional] 
 
 ## Methods
 

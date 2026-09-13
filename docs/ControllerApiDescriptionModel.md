@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ControllerName** | Pointer to **NullableString** |  | [optional]
-**ControllerGroupName** | Pointer to **NullableString** |  | [optional]
-**IsRemoteService** | Pointer to **bool** |  | [optional]
-**IsIntegrationService** | Pointer to **bool** |  | [optional]
-**ApiVersion** | Pointer to **NullableString** |  | [optional]
-**Type** | Pointer to **NullableString** |  | [optional]
-**Interfaces** | Pointer to [**[]ControllerInterfaceApiDescriptionModel**](ControllerInterfaceApiDescriptionModel.md) |  | [optional]
-**Actions** | Pointer to [**map[string]ActionApiDescriptionModel**](ActionApiDescriptionModel.md) |  | [optional]
+**ControllerName** | Pointer to **NullableString** |  | [optional] 
+**ControllerGroupName** | Pointer to **NullableString** |  | [optional] 
+**IsRemoteService** | Pointer to **bool** |  | [optional] 
+**IsIntegrationService** | Pointer to **bool** |  | [optional] 
+**ApiVersion** | Pointer to **NullableString** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**Interfaces** | Pointer to [**[]ControllerInterfaceApiDescriptionModel**](ControllerInterfaceApiDescriptionModel.md) |  | [optional] 
+**Actions** | Pointer to [**map[string]ActionApiDescriptionModel**](ActionApiDescriptionModel.md) |  | [optional] 
 
 ## Methods
 

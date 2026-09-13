@@ -4,30 +4,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Version** | Pointer to **NullableString** |  | [optional]
-**VersionName** | Pointer to **NullableString** | 版本名称 | [optional]
-**VersionCode** | Pointer to **int64** | 构建编号 | [optional]
-**Notes** | Pointer to **NullableString** |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**Key** | Pointer to **NullableString** |  | [optional]
-**RapidCode** | Pointer to **NullableString** |  | [optional]
-**Size** | Pointer to **NullableInt64** |  | [optional]
-**Hash** | Pointer to **NullableString** |  | [optional]
-**DownloadUrl** | Pointer to **NullableString** |  | [optional]
-**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional]
-**Publisher** | Pointer to [**AppPublisher**](AppPublisher.md) |  | [optional]
-**IsForceUpdate** | Pointer to **bool** |  | [optional]
-**AppId** | Pointer to **string** |  | [optional]
-**IsEnabled** | Pointer to **bool** |  | [optional]
-**Channel** | Pointer to [**ReleaseChannel**](ReleaseChannel.md) |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Version** | Pointer to **NullableString** |  | [optional] 
+**VersionName** | Pointer to **NullableString** | 版本名称 | [optional] 
+**VersionCode** | Pointer to **int64** | 构建编号 | [optional] 
+**Notes** | Pointer to **NullableString** |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**Key** | Pointer to **NullableString** |  | [optional] 
+**RapidCode** | Pointer to **NullableString** |  | [optional] 
+**Size** | Pointer to **NullableInt64** |  | [optional] 
+**Hash** | Pointer to **NullableString** |  | [optional] 
+**DownloadUrl** | Pointer to **NullableString** |  | [optional] 
+**ArtifactType** | Pointer to [**ArtifactType**](ArtifactType.md) |  | [optional] 
+**Architecture** | Pointer to **NullableString** |  | [optional] 
+**Publisher** | Pointer to [**AppPublisher**](AppPublisher.md) |  | [optional] 
+**IsForceUpdate** | Pointer to **bool** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional] 
+**IsEnabled** | Pointer to **bool** |  | [optional] 
+**Channel** | Pointer to [**ReleaseChannel**](ReleaseChannel.md) |  | [optional] 
 
 ## Methods
 
@@ -653,6 +654,41 @@ SetArtifactType sets ArtifactType field to given value.
 
 HasArtifactType returns a boolean if a field has been set.
 
+### GetArchitecture
+
+`func (o *AppReleaseDto) GetArchitecture() string`
+
+GetArchitecture returns the Architecture field if non-nil, zero value otherwise.
+
+### GetArchitectureOk
+
+`func (o *AppReleaseDto) GetArchitectureOk() (*string, bool)`
+
+GetArchitectureOk returns a tuple with the Architecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArchitecture
+
+`func (o *AppReleaseDto) SetArchitecture(v string)`
+
+SetArchitecture sets Architecture field to given value.
+
+### HasArchitecture
+
+`func (o *AppReleaseDto) HasArchitecture() bool`
+
+HasArchitecture returns a boolean if a field has been set.
+
+### SetArchitectureNil
+
+`func (o *AppReleaseDto) SetArchitectureNil(b bool)`
+
+ SetArchitectureNil sets the value for Architecture to be an explicit nil
+
+### UnsetArchitecture
+`func (o *AppReleaseDto) UnsetArchitecture()`
+
+UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
 ### GetPublisher
 
 `func (o *AppReleaseDto) GetPublisher() AppPublisher`

@@ -4,20 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Token** | Pointer to **NullableString** |  | [optional]
-**IsPhysicalDevice** | Pointer to **bool** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**Brand** | Pointer to **NullableString** |  | [optional]
-**SystemVersion** | Pointer to **NullableString** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Token** | Pointer to **NullableString** |  | [optional] 
+**IsPhysicalDevice** | Pointer to **bool** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**Brand** | Pointer to **NullableString** |  | [optional] 
+**SystemVersion** | Pointer to **NullableString** |  | [optional] 
+**AppName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -478,6 +479,41 @@ HasSystemVersion returns a boolean if a field has been set.
 `func (o *DeviceDto) UnsetSystemVersion()`
 
 UnsetSystemVersion ensures that no value is present for SystemVersion, not even an explicit nil
+### GetAppName
+
+`func (o *DeviceDto) GetAppName() string`
+
+GetAppName returns the AppName field if non-nil, zero value otherwise.
+
+### GetAppNameOk
+
+`func (o *DeviceDto) GetAppNameOk() (*string, bool)`
+
+GetAppNameOk returns a tuple with the AppName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppName
+
+`func (o *DeviceDto) SetAppName(v string)`
+
+SetAppName sets AppName field to given value.
+
+### HasAppName
+
+`func (o *DeviceDto) HasAppName() bool`
+
+HasAppName returns a boolean if a field has been set.
+
+### SetAppNameNil
+
+`func (o *DeviceDto) SetAppNameNil(b bool)`
+
+ SetAppNameNil sets the value for AppName to be an explicit nil
+
+### UnsetAppName
+`func (o *DeviceDto) UnsetAppName()`
+
+UnsetAppName ensures that no value is present for AppName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

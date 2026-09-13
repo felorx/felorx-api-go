@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_CreditAPIService(t *testing.T) {
@@ -22,23 +22,11 @@ func Test_felorx_CreditAPIService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test CreditAPIService CreateAlipayOrder", func(t *testing.T) {
+	t.Run("Test CreditAPIService CreateAlipayOrderPostApiAppCreditAlipayOrder", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.CreditAPI.CreateAlipayOrder(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test CreditAPIService CreatePayPalOrder", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		resp, httpRes, err := apiClient.CreditAPI.CreatePayPalOrder(context.Background()).Execute()
+		resp, httpRes, err := apiClient.CreditAPI.CreateAlipayOrderPostApiAppCreditAlipayOrder(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -46,13 +34,25 @@ func Test_felorx_CreditAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test CreditAPIService CreditGetAccount", func(t *testing.T) {
+	t.Run("Test CreditAPIService CreatePayPalOrderPostApiAppCreditPayPalOrder", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.CreditAPI.CreatePayPalOrderPostApiAppCreditPayPalOrder(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test CreditAPIService GetAccountGetApiAppCreditAccountAppId", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
-		resp, httpRes, err := apiClient.CreditAPI.CreditGetAccount(context.Background(), appId).Execute()
+		resp, httpRes, err := apiClient.CreditAPI.GetAccountGetApiAppCreditAccountAppId(context.Background(), appId).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -62,7 +62,7 @@ func Test_felorx_CreditAPIService(t *testing.T) {
 
 	t.Run("Test CreditAPIService GetPackages", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -76,7 +76,7 @@ func Test_felorx_CreditAPIService(t *testing.T) {
 
 	t.Run("Test CreditAPIService Refund", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.CreditAPI.Refund(context.Background()).Execute()
 
@@ -88,7 +88,7 @@ func Test_felorx_CreditAPIService(t *testing.T) {
 
 	t.Run("Test CreditAPIService Spend", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.CreditAPI.Spend(context.Background()).Execute()
 

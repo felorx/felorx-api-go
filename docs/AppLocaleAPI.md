@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppLocale**](AppLocaleAPI.md#CreateAppLocale) | **Post** /api/app/app-locale |
-[**DeleteAppLocaleById**](AppLocaleAPI.md#DeleteAppLocaleById) | **Delete** /api/app/app-locale/{id} |
-[**GetListByAppId**](AppLocaleAPI.md#GetListByAppId) | **Get** /api/app/app-locale/by-app-id/{appId} |
-[**UpdateAppLocale**](AppLocaleAPI.md#UpdateAppLocale) | **Put** /api/app/app-locale/{id} |
+[**CreateAppLocale**](AppLocaleAPI.md#CreateAppLocale) | **Post** /api/app/app-locale | 
+[**DeleteAppLocaleById**](AppLocaleAPI.md#DeleteAppLocaleById) | **Delete** /api/app/app-locale/{id} | 
+[**GetListByAppIdGetApiAppAppLocaleByAppIdAppId**](AppLocaleAPI.md#GetListByAppIdGetApiAppAppLocaleByAppIdAppId) | **Get** /api/app/app-locale/by-app-id/{appId} | 
+[**UpdateAppLocale**](AppLocaleAPI.md#UpdateAppLocale) | **Put** /api/app/app-locale/{id} | 
 
 
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateAppLocaleRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md) |  |
+ **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md) |  | 
 
 ### Return type
 
@@ -94,7 +94,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -112,7 +112,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -141,9 +141,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetListByAppId
+## GetListByAppIdGetApiAppAppLocaleByAppIdAppId
 
-> []AppLocaleDto GetListByAppId(ctx, appId).Execute()
+> []AppLocaleDto GetListByAppIdGetApiAppAppLocaleByAppIdAppId(ctx, appId).Execute()
 
 
 
@@ -160,17 +160,17 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AppLocaleAPI.GetListByAppId(context.Background(), appId).Execute()
+	resp, r, err := apiClient.AppLocaleAPI.GetListByAppIdGetApiAppAppLocaleByAppIdAppId(context.Background(), appId).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AppLocaleAPI.GetListByAppId``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AppLocaleAPI.GetListByAppIdGetApiAppAppLocaleByAppIdAppId``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetListByAppId`: []AppLocaleDto
-	fmt.Fprintf(os.Stdout, "Response from `AppLocaleAPI.GetListByAppId`: %v\n", resp)
+	// response from `GetListByAppIdGetApiAppAppLocaleByAppIdAppId`: []AppLocaleDto
+	fmt.Fprintf(os.Stdout, "Response from `AppLocaleAPI.GetListByAppIdGetApiAppAppLocaleByAppIdAppId`: %v\n", resp)
 }
 ```
 
@@ -180,11 +180,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetListByAppIdRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -228,7 +228,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAppLocaleDto := *openapiclient.NewCreateOrUpdateAppLocaleDto() // CreateOrUpdateAppLocaleDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -249,7 +249,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -259,7 +259,7 @@ Other parameters are passed through a pointer to a apiUpdateAppLocaleRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md) |  |
+ **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md) |  | 
 
 ### Return type
 

@@ -20,11 +20,11 @@ var _ MappedNullable = &IdentityUserOrganizationUnit{}
 
 // IdentityUserOrganizationUnit struct for IdentityUserOrganizationUnit
 type IdentityUserOrganizationUnit struct {
-	CreationTime       *time.Time     `json:"creationTime,omitempty"`
-	CreatorId          NullableString `json:"creatorId,omitempty"`
-	TenantId           NullableString `json:"tenantId,omitempty"`
-	UserId             *string        `json:"userId,omitempty"`
-	OrganizationUnitId *string        `json:"organizationUnitId,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	UserId *string `json:"userId,omitempty"`
+	OrganizationUnitId *string `json:"organizationUnitId,omitempty"`
 }
 
 // NewIdentityUserOrganizationUnit instantiates a new IdentityUserOrganizationUnit object
@@ -108,7 +108,6 @@ func (o *IdentityUserOrganizationUnit) HasCreatorId() bool {
 func (o *IdentityUserOrganizationUnit) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *IdentityUserOrganizationUnit) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -151,7 +150,6 @@ func (o *IdentityUserOrganizationUnit) HasTenantId() bool {
 func (o *IdentityUserOrganizationUnit) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUserOrganizationUnit) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -227,7 +225,7 @@ func (o *IdentityUserOrganizationUnit) SetOrganizationUnitId(v string) {
 }
 
 func (o IdentityUserOrganizationUnit) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -289,3 +287,5 @@ func (v *NullableIdentityUserOrganizationUnit) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Privacy** | Pointer to **NullableString** |  | [optional]
-**PrivacyUrl** | Pointer to **NullableString** |  | [optional]
-**HomePage** | Pointer to **NullableString** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Privacy** | Pointer to **NullableString** |  | [optional] 
+**PrivacyUrl** | Pointer to **NullableString** |  | [optional] 
+**HomePage** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

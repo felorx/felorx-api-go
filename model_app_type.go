@@ -20,14 +20,14 @@ type AppType string
 
 // List of AppType
 const (
-	APPTYPE_CLIENT              AppType = "Client"
-	APPTYPE_SERVICE             AppType = "Service"
-	APPTYPE_WEB                 AppType = "Web"
-	APPTYPE_MESSAGE_ACCOUNT     AppType = "MessageAccount"
+	APPTYPE_CLIENT AppType = "Client"
+	APPTYPE_SERVICE AppType = "Service"
+	APPTYPE_WEB AppType = "Web"
+	APPTYPE_MESSAGE_ACCOUNT AppType = "MessageAccount"
 	APPTYPE_WECHAT_MINI_PROGRAM AppType = "WechatMiniProgram"
-	APPTYPE_EXTENSION           AppType = "Extension"
-	APPTYPE_RUNABLE             AppType = "Runable"
-	APPTYPE_WORKER              AppType = "Worker"
+	APPTYPE_EXTENSION AppType = "Extension"
+	APPTYPE_RUNABLE AppType = "Runable"
+	APPTYPE_WORKER AppType = "Worker"
 )
 
 // All allowed values of AppType enum
@@ -120,3 +120,4 @@ func (v *NullableAppType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

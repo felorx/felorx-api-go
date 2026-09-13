@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | [**BuildStatus**](BuildStatus.md) |  |
-**Logs** | Pointer to **NullableString** | 构建日志 | [optional]
-**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional]
-**ArtifactUrl** | Pointer to **NullableString** | 构建产物下载地址 | [optional]
-**ArtifactSize** | Pointer to **NullableInt64** | 构建产物大小 (字节) | [optional]
+**Status** | [**BuildStatus**](BuildStatus.md) |  | 
+**Logs** | Pointer to **NullableString** | 构建日志 | [optional] 
+**ErrorMessage** | Pointer to **NullableString** | 错误信息 | [optional] 
+**ArtifactUrl** | Pointer to **NullableString** | 构建产物下载地址 | [optional] 
+**ArtifactSize** | Pointer to **NullableInt64** | 构建产物大小 (字节) | [optional] 
 
 ## Methods
 

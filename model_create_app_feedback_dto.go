@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -24,8 +24,8 @@ type CreateAppFeedbackDto struct {
 	// 应用ID
 	AppId string `json:"appId"`
 	// 反馈内容
-	Content string          `json:"content"`
-	Type    AppFeedbackType `json:"type"`
+	Content string `json:"content"`
+	Type AppFeedbackType `json:"type"`
 	// 联系方式（可选）
 	Contact NullableString `json:"contact,omitempty"`
 	// 设备信息（可选）
@@ -162,7 +162,6 @@ func (o *CreateAppFeedbackDto) HasContact() bool {
 func (o *CreateAppFeedbackDto) SetContact(v string) {
 	o.Contact.Set(&v)
 }
-
 // SetContactNil sets the value for Contact to be an explicit nil
 func (o *CreateAppFeedbackDto) SetContactNil() {
 	o.Contact.Set(nil)
@@ -205,7 +204,6 @@ func (o *CreateAppFeedbackDto) HasDeviceInfo() bool {
 func (o *CreateAppFeedbackDto) SetDeviceInfo(v string) {
 	o.DeviceInfo.Set(&v)
 }
-
 // SetDeviceInfoNil sets the value for DeviceInfo to be an explicit nil
 func (o *CreateAppFeedbackDto) SetDeviceInfoNil() {
 	o.DeviceInfo.Set(nil)
@@ -248,7 +246,6 @@ func (o *CreateAppFeedbackDto) HasAppVersion() bool {
 func (o *CreateAppFeedbackDto) SetAppVersion(v string) {
 	o.AppVersion.Set(&v)
 }
-
 // SetAppVersionNil sets the value for AppVersion to be an explicit nil
 func (o *CreateAppFeedbackDto) SetAppVersionNil() {
 	o.AppVersion.Set(nil)
@@ -293,7 +290,7 @@ func (o *CreateAppFeedbackDto) SetAttachmentKeys(v []string) {
 }
 
 func (o CreateAppFeedbackDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -335,10 +332,10 @@ func (o *CreateAppFeedbackDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -394,3 +391,5 @@ func (v *NullableCreateAppFeedbackDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

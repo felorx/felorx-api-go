@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceRouteSubAPIService CreateMessageSourceRouteSub", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.MessageSourceRouteSubAPI.CreateMessageSourceRouteSub(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceRouteSubAPIService DeleteMessageSourceRouteSubById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -48,7 +48,7 @@ func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceRouteSubAPIService GetMessageSourceRouteSubById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -62,7 +62,7 @@ func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceRouteSubAPIService GetMessageSourceRouteSubList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.MessageSourceRouteSubAPI.GetMessageSourceRouteSubList(context.Background()).Execute()
 
@@ -74,7 +74,7 @@ func Test_felorx_MessageSourceRouteSubAPIService(t *testing.T) {
 
 	t.Run("Test MessageSourceRouteSubAPIService UpdateMessageSourceRouteSub", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

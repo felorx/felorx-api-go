@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**ProviderType** | Pointer to [**AiProviderType**](AiProviderType.md) |  | [optional]
-**BaseUrl** | Pointer to **NullableString** |  | [optional]
-**Region** | Pointer to **NullableString** |  | [optional]
-**Enabled** | Pointer to **bool** |  | [optional]
-**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional]
-**Secret** | Pointer to **NullableString** |  | [optional]
-**ClearSecret** | Pointer to **bool** |  | [optional]
-**Metadata** | Pointer to **map[string]string** |  | [optional]
-**Models** | Pointer to [**[]CreateOrUpdateAiModelDto**](CreateOrUpdateAiModelDto.md) |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**ProviderType** | Pointer to [**AiProviderType**](AiProviderType.md) |  | [optional] 
+**BaseUrl** | Pointer to **NullableString** |  | [optional] 
+**Region** | Pointer to **NullableString** |  | [optional] 
+**Enabled** | Pointer to **bool** |  | [optional] 
+**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional] 
+**Secret** | Pointer to **NullableString** |  | [optional] 
+**ClearSecret** | Pointer to **bool** |  | [optional] 
+**Metadata** | Pointer to **map[string]string** |  | [optional] 
+**Models** | Pointer to [**[]CreateOrUpdateAiModelDto**](CreateOrUpdateAiModelDto.md) |  | [optional] 
 
 ## Methods
 

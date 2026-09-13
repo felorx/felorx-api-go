@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** | 应用ID | [optional]
-**UserId** | Pointer to **string** | 用户ID | [optional]
-**IsEnabled** | Pointer to **bool** | 是否启用 | [optional]
+**AppId** | Pointer to **string** | 应用ID | [optional] 
+**UserId** | Pointer to **string** | 用户ID | [optional] 
+**IsEnabled** | Pointer to **bool** | 是否启用 | [optional] 
 
 ## Methods
 

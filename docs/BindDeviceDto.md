@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Token** | Pointer to **NullableString** |  | [optional]
-**IsPhysicalDevice** | Pointer to **bool** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**Brand** | Pointer to **NullableString** |  | [optional]
-**SystemVersion** | Pointer to **NullableString** |  | [optional]
+**Token** | Pointer to **NullableString** |  | [optional] 
+**IsPhysicalDevice** | Pointer to **bool** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**Brand** | Pointer to **NullableString** |  | [optional] 
+**SystemVersion** | Pointer to **NullableString** |  | [optional] 
+**AppName** | Pointer to **NullableString** | 发起绑定的应用名。服务端优先使用访问令牌中的可信 app_name 声明。 | [optional] 
 
 ## Methods
 
@@ -220,6 +221,41 @@ HasSystemVersion returns a boolean if a field has been set.
 `func (o *BindDeviceDto) UnsetSystemVersion()`
 
 UnsetSystemVersion ensures that no value is present for SystemVersion, not even an explicit nil
+### GetAppName
+
+`func (o *BindDeviceDto) GetAppName() string`
+
+GetAppName returns the AppName field if non-nil, zero value otherwise.
+
+### GetAppNameOk
+
+`func (o *BindDeviceDto) GetAppNameOk() (*string, bool)`
+
+GetAppNameOk returns a tuple with the AppName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppName
+
+`func (o *BindDeviceDto) SetAppName(v string)`
+
+SetAppName sets AppName field to given value.
+
+### HasAppName
+
+`func (o *BindDeviceDto) HasAppName() bool`
+
+HasAppName returns a boolean if a field has been set.
+
+### SetAppNameNil
+
+`func (o *BindDeviceDto) SetAppNameNil(b bool)`
+
+ SetAppNameNil sets the value for AppName to be an explicit nil
+
+### UnsetAppName
+`func (o *BindDeviceDto) UnsetAppName()`
+
+UnsetAppName ensures that no value is present for AppName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

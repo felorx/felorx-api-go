@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Permissions** | Pointer to [**[]UpdatePermissionDto**](UpdatePermissionDto.md) |  | [optional]
+**Permissions** | Pointer to [**[]UpdatePermissionDto**](UpdatePermissionDto.md) |  | [optional] 
 
 ## Methods
 

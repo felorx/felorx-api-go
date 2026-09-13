@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Balance** | Pointer to **int32** |  | [optional]
-**LedgerEntry** | Pointer to [**CreditLedgerEntryDto**](CreditLedgerEntryDto.md) |  | [optional]
+**Balance** | Pointer to **int32** |  | [optional] 
+**LedgerEntry** | Pointer to [**CreditLedgerEntryDto**](CreditLedgerEntryDto.md) |  | [optional] 
 
 ## Methods
 

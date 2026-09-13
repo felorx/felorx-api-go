@@ -19,16 +19,16 @@ var _ MappedNullable = &ActionApiDescriptionModel{}
 
 // ActionApiDescriptionModel struct for ActionApiDescriptionModel
 type ActionApiDescriptionModel struct {
-	UniqueName         NullableString                       `json:"uniqueName,omitempty"`
-	Name               NullableString                       `json:"name,omitempty"`
-	HttpMethod         NullableString                       `json:"httpMethod,omitempty"`
-	Url                NullableString                       `json:"url,omitempty"`
-	SupportedVersions  []string                             `json:"supportedVersions,omitempty"`
+	UniqueName NullableString `json:"uniqueName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	HttpMethod NullableString `json:"httpMethod,omitempty"`
+	Url NullableString `json:"url,omitempty"`
+	SupportedVersions []string `json:"supportedVersions,omitempty"`
 	ParametersOnMethod []MethodParameterApiDescriptionModel `json:"parametersOnMethod,omitempty"`
-	Parameters         []ParameterApiDescriptionModel       `json:"parameters,omitempty"`
-	ReturnValue        *ReturnValueApiDescriptionModel      `json:"returnValue,omitempty"`
-	AllowAnonymous     NullableBool                         `json:"allowAnonymous,omitempty"`
-	ImplementFrom      NullableString                       `json:"implementFrom,omitempty"`
+	Parameters []ParameterApiDescriptionModel `json:"parameters,omitempty"`
+	ReturnValue *ReturnValueApiDescriptionModel `json:"returnValue,omitempty"`
+	AllowAnonymous NullableBool `json:"allowAnonymous,omitempty"`
+	ImplementFrom NullableString `json:"implementFrom,omitempty"`
 }
 
 // NewActionApiDescriptionModel instantiates a new ActionApiDescriptionModel object
@@ -80,7 +80,6 @@ func (o *ActionApiDescriptionModel) HasUniqueName() bool {
 func (o *ActionApiDescriptionModel) SetUniqueName(v string) {
 	o.UniqueName.Set(&v)
 }
-
 // SetUniqueNameNil sets the value for UniqueName to be an explicit nil
 func (o *ActionApiDescriptionModel) SetUniqueNameNil() {
 	o.UniqueName.Set(nil)
@@ -123,7 +122,6 @@ func (o *ActionApiDescriptionModel) HasName() bool {
 func (o *ActionApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *ActionApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -166,7 +164,6 @@ func (o *ActionApiDescriptionModel) HasHttpMethod() bool {
 func (o *ActionApiDescriptionModel) SetHttpMethod(v string) {
 	o.HttpMethod.Set(&v)
 }
-
 // SetHttpMethodNil sets the value for HttpMethod to be an explicit nil
 func (o *ActionApiDescriptionModel) SetHttpMethodNil() {
 	o.HttpMethod.Set(nil)
@@ -209,7 +206,6 @@ func (o *ActionApiDescriptionModel) HasUrl() bool {
 func (o *ActionApiDescriptionModel) SetUrl(v string) {
 	o.Url.Set(&v)
 }
-
 // SetUrlNil sets the value for Url to be an explicit nil
 func (o *ActionApiDescriptionModel) SetUrlNil() {
 	o.Url.Set(nil)
@@ -383,7 +379,6 @@ func (o *ActionApiDescriptionModel) HasAllowAnonymous() bool {
 func (o *ActionApiDescriptionModel) SetAllowAnonymous(v bool) {
 	o.AllowAnonymous.Set(&v)
 }
-
 // SetAllowAnonymousNil sets the value for AllowAnonymous to be an explicit nil
 func (o *ActionApiDescriptionModel) SetAllowAnonymousNil() {
 	o.AllowAnonymous.Set(nil)
@@ -426,7 +421,6 @@ func (o *ActionApiDescriptionModel) HasImplementFrom() bool {
 func (o *ActionApiDescriptionModel) SetImplementFrom(v string) {
 	o.ImplementFrom.Set(&v)
 }
-
 // SetImplementFromNil sets the value for ImplementFrom to be an explicit nil
 func (o *ActionApiDescriptionModel) SetImplementFromNil() {
 	o.ImplementFrom.Set(nil)
@@ -438,7 +432,7 @@ func (o *ActionApiDescriptionModel) UnsetImplementFrom() {
 }
 
 func (o ActionApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -515,3 +509,5 @@ func (v *NullableActionApiDescriptionModel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

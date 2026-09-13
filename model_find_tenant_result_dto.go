@@ -19,11 +19,11 @@ var _ MappedNullable = &FindTenantResultDto{}
 
 // FindTenantResultDto struct for FindTenantResultDto
 type FindTenantResultDto struct {
-	Success        *bool          `json:"success,omitempty"`
-	TenantId       NullableString `json:"tenantId,omitempty"`
-	Name           NullableString `json:"name,omitempty"`
+	Success *bool `json:"success,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	NormalizedName NullableString `json:"normalizedName,omitempty"`
-	IsActive       *bool          `json:"isActive,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
 }
 
 // NewFindTenantResultDto instantiates a new FindTenantResultDto object
@@ -107,7 +107,6 @@ func (o *FindTenantResultDto) HasTenantId() bool {
 func (o *FindTenantResultDto) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *FindTenantResultDto) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -150,7 +149,6 @@ func (o *FindTenantResultDto) HasName() bool {
 func (o *FindTenantResultDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *FindTenantResultDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -193,7 +191,6 @@ func (o *FindTenantResultDto) HasNormalizedName() bool {
 func (o *FindTenantResultDto) SetNormalizedName(v string) {
 	o.NormalizedName.Set(&v)
 }
-
 // SetNormalizedNameNil sets the value for NormalizedName to be an explicit nil
 func (o *FindTenantResultDto) SetNormalizedNameNil() {
 	o.NormalizedName.Set(nil)
@@ -237,7 +234,7 @@ func (o *FindTenantResultDto) SetIsActive(v bool) {
 }
 
 func (o FindTenantResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -299,3 +296,5 @@ func (v *NullableFindTenantResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,22 +20,22 @@ var _ MappedNullable = &AppFeedbackDto{}
 
 // AppFeedbackDto 应用反馈DTO
 type AppFeedbackDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 应用ID
 	AppId *string `json:"appId,omitempty"`
 	// 应用名称
 	AppName NullableString `json:"appName,omitempty"`
 	// 反馈内容
-	Content NullableString     `json:"content,omitempty"`
-	Type    *AppFeedbackType   `json:"type,omitempty"`
-	Status  *AppFeedbackStatus `json:"status,omitempty"`
+	Content NullableString `json:"content,omitempty"`
+	Type *AppFeedbackType `json:"type,omitempty"`
+	Status *AppFeedbackStatus `json:"status,omitempty"`
 	// 联系方式
 	Contact NullableString `json:"contact,omitempty"`
 	// 设备信息
@@ -163,7 +163,6 @@ func (o *AppFeedbackDto) HasCreatorId() bool {
 func (o *AppFeedbackDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppFeedbackDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -206,7 +205,6 @@ func (o *AppFeedbackDto) HasLastModificationTime() bool {
 func (o *AppFeedbackDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppFeedbackDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -249,7 +247,6 @@ func (o *AppFeedbackDto) HasLastModifierId() bool {
 func (o *AppFeedbackDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppFeedbackDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -324,7 +321,6 @@ func (o *AppFeedbackDto) HasDeleterId() bool {
 func (o *AppFeedbackDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppFeedbackDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -367,7 +363,6 @@ func (o *AppFeedbackDto) HasDeletionTime() bool {
 func (o *AppFeedbackDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppFeedbackDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -442,7 +437,6 @@ func (o *AppFeedbackDto) HasAppName() bool {
 func (o *AppFeedbackDto) SetAppName(v string) {
 	o.AppName.Set(&v)
 }
-
 // SetAppNameNil sets the value for AppName to be an explicit nil
 func (o *AppFeedbackDto) SetAppNameNil() {
 	o.AppName.Set(nil)
@@ -485,7 +479,6 @@ func (o *AppFeedbackDto) HasContent() bool {
 func (o *AppFeedbackDto) SetContent(v string) {
 	o.Content.Set(&v)
 }
-
 // SetContentNil sets the value for Content to be an explicit nil
 func (o *AppFeedbackDto) SetContentNil() {
 	o.Content.Set(nil)
@@ -592,7 +585,6 @@ func (o *AppFeedbackDto) HasContact() bool {
 func (o *AppFeedbackDto) SetContact(v string) {
 	o.Contact.Set(&v)
 }
-
 // SetContactNil sets the value for Contact to be an explicit nil
 func (o *AppFeedbackDto) SetContactNil() {
 	o.Contact.Set(nil)
@@ -635,7 +627,6 @@ func (o *AppFeedbackDto) HasDeviceInfo() bool {
 func (o *AppFeedbackDto) SetDeviceInfo(v string) {
 	o.DeviceInfo.Set(&v)
 }
-
 // SetDeviceInfoNil sets the value for DeviceInfo to be an explicit nil
 func (o *AppFeedbackDto) SetDeviceInfoNil() {
 	o.DeviceInfo.Set(nil)
@@ -678,7 +669,6 @@ func (o *AppFeedbackDto) HasAppVersion() bool {
 func (o *AppFeedbackDto) SetAppVersion(v string) {
 	o.AppVersion.Set(&v)
 }
-
 // SetAppVersionNil sets the value for AppVersion to be an explicit nil
 func (o *AppFeedbackDto) SetAppVersionNil() {
 	o.AppVersion.Set(nil)
@@ -721,7 +711,6 @@ func (o *AppFeedbackDto) HasReply() bool {
 func (o *AppFeedbackDto) SetReply(v string) {
 	o.Reply.Set(&v)
 }
-
 // SetReplyNil sets the value for Reply to be an explicit nil
 func (o *AppFeedbackDto) SetReplyNil() {
 	o.Reply.Set(nil)
@@ -764,7 +753,6 @@ func (o *AppFeedbackDto) HasRepliedAt() bool {
 func (o *AppFeedbackDto) SetRepliedAt(v time.Time) {
 	o.RepliedAt.Set(&v)
 }
-
 // SetRepliedAtNil sets the value for RepliedAt to be an explicit nil
 func (o *AppFeedbackDto) SetRepliedAtNil() {
 	o.RepliedAt.Set(nil)
@@ -809,7 +797,7 @@ func (o *AppFeedbackDto) SetAttachmentKeys(v []string) {
 }
 
 func (o AppFeedbackDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -913,3 +901,5 @@ func (v *NullableAppFeedbackDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RouteId** | Pointer to **string** |  | [optional]
-**Path** | Pointer to **NullableString** |  | [optional]
-**Values** | Pointer to **interface{}** |  | [optional]
+**RouteId** | Pointer to **string** |  | [optional] 
+**Path** | Pointer to **NullableString** |  | [optional] 
+**Values** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -89,20 +89,20 @@ HasPath returns a boolean if a field has been set.
 UnsetPath ensures that no value is present for Path, not even an explicit nil
 ### GetValues
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) GetValues() interface{}`
+`func (o *CreateUpdateMessageSourceRouteSubDto) GetValues() map[string]interface{}`
 
 GetValues returns the Values field if non-nil, zero value otherwise.
 
 ### GetValuesOk
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) GetValuesOk() (*interface{}, bool)`
+`func (o *CreateUpdateMessageSourceRouteSubDto) GetValuesOk() (*map[string]interface{}, bool)`
 
 GetValuesOk returns a tuple with the Values field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValues
 
-`func (o *CreateUpdateMessageSourceRouteSubDto) SetValues(v interface{})`
+`func (o *CreateUpdateMessageSourceRouteSubDto) SetValues(v map[string]interface{})`
 
 SetValues sets Values field to given value.
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
-**Balance** | Pointer to **int32** |  | [optional]
-**RecentLedger** | Pointer to [**[]CreditLedgerEntryDto**](CreditLedgerEntryDto.md) |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
+**Balance** | Pointer to **int32** |  | [optional] 
+**RecentLedger** | Pointer to [**[]CreditLedgerEntryDto**](CreditLedgerEntryDto.md) |  | [optional] 
 
 ## Methods
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** | 应用 ID | [optional]
-**PricingId** | Pointer to **string** | 定价方案 ID | [optional]
-**PlanType** | Pointer to **NullableString** | 计划类型：month&#x3D;月度, year&#x3D;年度, three_year&#x3D;三年, lifetime&#x3D;终身 | [optional]
-**ReturnUrl** | Pointer to **NullableString** | 支付完成后返回地址，桌面端可传深链。 | [optional]
-**CancelUrl** | Pointer to **NullableString** | 支付取消后返回地址，桌面端可传深链。 | [optional]
+**AppId** | Pointer to **string** | 应用 ID | [optional] 
+**PricingId** | Pointer to **string** | 定价方案 ID | [optional] 
+**PlanType** | Pointer to **NullableString** | 计划类型：month&#x3D;月度, year&#x3D;年度, three_year&#x3D;三年, lifetime&#x3D;终身 | [optional] 
+**ReturnUrl** | Pointer to **NullableString** | 支付完成后返回地址，桌面端可传深链。 | [optional] 
+**CancelUrl** | Pointer to **NullableString** | 支付取消后返回地址，桌面端可传深链。 | [optional] 
 
 ## Methods
 

@@ -18,13 +18,14 @@ import (
 	"net/url"
 )
 
+
 // AbpApplicationLocalizationAPIService AbpApplicationLocalizationAPI service
 type AbpApplicationLocalizationAPIService service
 
 type ApiGetAbpApplicationLocalizationRequest struct {
-	ctx          context.Context
-	ApiService   *AbpApplicationLocalizationAPIService
-	cultureName  *string
+	ctx context.Context
+	ApiService *AbpApplicationLocalizationAPIService
+	cultureName *string
 	onlyDynamics *bool
 }
 
@@ -45,25 +46,24 @@ func (r ApiGetAbpApplicationLocalizationRequest) Execute() (*ApplicationLocaliza
 /*
 GetAbpApplicationLocalization Method for GetAbpApplicationLocalization
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAbpApplicationLocalizationRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAbpApplicationLocalizationRequest
 */
 func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalization(ctx context.Context) ApiGetAbpApplicationLocalizationRequest {
 	return ApiGetAbpApplicationLocalizationRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return ApplicationLocalizationDto
+//  @return ApplicationLocalizationDto
 func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExecute(r ApiGetAbpApplicationLocalizationRequest) (*ApplicationLocalizationDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *ApplicationLocalizationDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ApplicationLocalizationDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AbpApplicationLocalizationAPIService.GetAbpApplicationLocalization")
@@ -130,8 +130,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -141,8 +141,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -152,8 +152,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -163,8 +163,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -174,8 +174,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -185,8 +185,8 @@ func (a *AbpApplicationLocalizationAPIService) GetAbpApplicationLocalizationExec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

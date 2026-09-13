@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AuthCenterAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AuthCenterAPIService(t *testing.T) {
 
 	t.Run("Test AuthCenterAPIService GetAuthorizedApps", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AuthCenterAPI.GetAuthorizedApps(context.Background()).Execute()
 
@@ -34,11 +34,11 @@ func Test_felorx_AuthCenterAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AuthCenterAPIService GetSummary", func(t *testing.T) {
+	t.Run("Test AuthCenterAPIService GetSummaryGetApiAppAuthCenterSummary", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AuthCenterAPI.GetSummary(context.Background()).Execute()
+		resp, httpRes, err := apiClient.AuthCenterAPI.GetSummaryGetApiAppAuthCenterSummary(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -48,7 +48,7 @@ func Test_felorx_AuthCenterAPIService(t *testing.T) {
 
 	t.Run("Test AuthCenterAPIService RevokeAuthorizedApp", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var clientId string
 

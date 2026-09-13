@@ -20,12 +20,12 @@ type BuildTrigger string
 
 // List of BuildTrigger
 const (
-	BUILDTRIGGER_MANUAL    BuildTrigger = "Manual"
-	BUILDTRIGGER_GIT_PUSH  BuildTrigger = "GitPush"
-	BUILDTRIGGER_GIT_TAG   BuildTrigger = "GitTag"
+	BUILDTRIGGER_MANUAL BuildTrigger = "Manual"
+	BUILDTRIGGER_GIT_PUSH BuildTrigger = "GitPush"
+	BUILDTRIGGER_GIT_TAG BuildTrigger = "GitTag"
 	BUILDTRIGGER_SCHEDULED BuildTrigger = "Scheduled"
-	BUILDTRIGGER_WEBHOOK   BuildTrigger = "Webhook"
-	BUILDTRIGGER_API       BuildTrigger = "Api"
+	BUILDTRIGGER_WEBHOOK BuildTrigger = "Webhook"
+	BUILDTRIGGER_API BuildTrigger = "Api"
 )
 
 // All allowed values of BuildTrigger enum
@@ -116,3 +116,4 @@ func (v *NullableBuildTrigger) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

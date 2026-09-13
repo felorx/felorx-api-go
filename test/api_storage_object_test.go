@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_StorageObjectAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_StorageObjectAPIService(t *testing.T) {
 
 	t.Run("Test StorageObjectAPIService GetCdnDomains", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.StorageObjectAPI.GetCdnDomains(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_StorageObjectAPIService(t *testing.T) {
 
 	t.Run("Test StorageObjectAPIService GetFileCredential", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.StorageObjectAPI.GetFileCredential(context.Background()).Execute()
 
@@ -48,7 +48,7 @@ func Test_felorx_StorageObjectAPIService(t *testing.T) {
 
 	t.Run("Test StorageObjectAPIService GetUserStorages", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.StorageObjectAPI.GetUserStorages(context.Background()).Execute()
 
@@ -60,7 +60,7 @@ func Test_felorx_StorageObjectAPIService(t *testing.T) {
 
 	t.Run("Test StorageObjectAPIService PreSignUrl", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.StorageObjectAPI.PreSignUrl(context.Background()).Execute()
 

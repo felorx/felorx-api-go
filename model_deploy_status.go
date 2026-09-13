@@ -20,11 +20,11 @@ type DeployStatus string
 
 // List of DeployStatus
 const (
-	DEPLOYSTATUS_PENDING   DeployStatus = "Pending"
+	DEPLOYSTATUS_PENDING DeployStatus = "Pending"
 	DEPLOYSTATUS_DEPLOYING DeployStatus = "Deploying"
 	DEPLOYSTATUS_SUCCEEDED DeployStatus = "Succeeded"
-	DEPLOYSTATUS_FAILED    DeployStatus = "Failed"
-	DEPLOYSTATUS_CANCELED  DeployStatus = "Canceled"
+	DEPLOYSTATUS_FAILED DeployStatus = "Failed"
+	DEPLOYSTATUS_CANCELED DeployStatus = "Canceled"
 )
 
 // All allowed values of DeployStatus enum
@@ -114,3 +114,4 @@ func (v *NullableDeployStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

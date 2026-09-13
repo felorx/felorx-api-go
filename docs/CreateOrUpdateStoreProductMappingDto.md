@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableString** |  | [optional]
-**AppId** | Pointer to **string** |  | [optional]
-**PricingId** | Pointer to **string** |  | [optional]
-**PlanPriceId** | Pointer to **NullableString** |  | [optional]
-**Provider** | Pointer to [**BillingProvider**](BillingProvider.md) |  | [optional]
-**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional]
-**Period** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
-**StoreProductId** | Pointer to **NullableString** |  | [optional]
-**ExternalProductId** | Pointer to **NullableString** |  | [optional]
-**Environment** | Pointer to **NullableString** |  | [optional]
-**IsEnabled** | Pointer to **bool** |  | [optional]
+**Id** | Pointer to **NullableString** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional] 
+**PricingId** | Pointer to **string** |  | [optional] 
+**PlanPriceId** | Pointer to **NullableString** |  | [optional] 
+**Provider** | Pointer to [**BillingProvider**](BillingProvider.md) |  | [optional] 
+**Platform** | Pointer to [**AppPlatform**](AppPlatform.md) |  | [optional] 
+**Period** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional] 
+**StoreProductId** | Pointer to **NullableString** |  | [optional] 
+**ExternalProductId** | Pointer to **NullableString** |  | [optional] 
+**Environment** | Pointer to **NullableString** |  | [optional] 
+**IsEnabled** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

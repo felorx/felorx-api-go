@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppSdk**](AppSdkAPI.md#CreateAppSdk) | **Post** /api/app/app-sdk |
-[**DeleteAppSdkById**](AppSdkAPI.md#DeleteAppSdkById) | **Delete** /api/app/app-sdk/{id} |
-[**GetAppSdkList**](AppSdkAPI.md#GetAppSdkList) | **Get** /api/app/app-sdk |
-[**UpdateAppSdk**](AppSdkAPI.md#UpdateAppSdk) | **Put** /api/app/app-sdk/{id} |
+[**CreateAppSdk**](AppSdkAPI.md#CreateAppSdk) | **Post** /api/app/app-sdk | 
+[**DeleteAppSdkById**](AppSdkAPI.md#DeleteAppSdkById) | **Delete** /api/app/app-sdk/{id} | 
+[**GetAppSdkList**](AppSdkAPI.md#GetAppSdkList) | **Get** /api/app/app-sdk | 
+[**UpdateAppSdk**](AppSdkAPI.md#UpdateAppSdk) | **Put** /api/app/app-sdk/{id} | 
 
 
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateAppSdkRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  |
+ **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
 
 ### Return type
 
@@ -94,7 +94,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -112,7 +112,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -188,10 +188,10 @@ Other parameters are passed through a pointer to a apiGetAppSdkListRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** | 关键词：匹配名称、描述、隐私说明、主页等字段（包含匹配）。 |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **filter** | **string** | 关键词：匹配名称、描述、隐私说明、主页等字段（包含匹配）。 | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -230,7 +230,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAppSdkDto := *openapiclient.NewCreateOrUpdateAppSdkDto() // CreateOrUpdateAppSdkDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -251,7 +251,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -261,7 +261,7 @@ Other parameters are passed through a pointer to a apiUpdateAppSdkRequest struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  |
+ **createOrUpdateAppSdkDto** | [**CreateOrUpdateAppSdkDto**](CreateOrUpdateAppSdkDto.md) |  | 
 
 ### Return type
 

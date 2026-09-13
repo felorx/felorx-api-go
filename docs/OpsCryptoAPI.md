@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetVault**](OpsCryptoAPI.md#GetVault) | **Get** /api/app/ops-crypto/vault |
-[**PutVault**](OpsCryptoAPI.md#PutVault) | **Put** /api/app/ops-crypto/vault |
+[**GetVault**](OpsCryptoAPI.md#GetVault) | **Get** /api/app/ops-crypto/vault | 
+[**PutVault**](OpsCryptoAPI.md#PutVault) | **Put** /api/app/ops-crypto/vault | 
 
 
 
@@ -110,7 +110,7 @@ Other parameters are passed through a pointer to a apiPutVaultRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opsCryptoVaultDto** | [**OpsCryptoVaultDto**](OpsCryptoVaultDto.md) |  |
+ **opsCryptoVaultDto** | [**OpsCryptoVaultDto**](OpsCryptoVaultDto.md) |  | 
 
 ### Return type
 

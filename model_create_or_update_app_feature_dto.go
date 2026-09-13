@@ -19,9 +19,9 @@ var _ MappedNullable = &CreateOrUpdateAppFeatureDto{}
 
 // CreateOrUpdateAppFeatureDto struct for CreateOrUpdateAppFeatureDto
 type CreateOrUpdateAppFeatureDto struct {
-	AppId          *string                             `json:"appId,omitempty"`
-	Name           NullableString                      `json:"name,omitempty"`
-	Sort           *int32                              `json:"sort,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Sort *int32 `json:"sort,omitempty"`
 	FeatureLocales []CreateOrUpdateAppFeatureLocaleDto `json:"featureLocales,omitempty"`
 }
 
@@ -106,7 +106,6 @@ func (o *CreateOrUpdateAppFeatureDto) HasName() bool {
 func (o *CreateOrUpdateAppFeatureDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAppFeatureDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -183,7 +182,7 @@ func (o *CreateOrUpdateAppFeatureDto) SetFeatureLocales(v []CreateOrUpdateAppFea
 }
 
 func (o CreateOrUpdateAppFeatureDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -242,3 +241,5 @@ func (v *NullableCreateOrUpdateAppFeatureDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderId** | Pointer to **string** | 本系统订单 ID | [optional]
-**PayPalOrderId** | Pointer to **NullableString** | PayPal 订单 ID（供前端按钮使用） | [optional]
-**PayPalSubscriptionId** | Pointer to **NullableString** | PayPal 订阅 ID（自动续费场景） | [optional]
-**ApprovalUrl** | Pointer to **NullableString** | PayPal approve 链接，可用于不使用 JS SDK 的桌面端跳转。 | [optional]
-**CheckoutKind** | Pointer to **NullableString** | order&#x3D;一次性订单，subscription&#x3D;自动续费订阅。 | [optional]
+**OrderId** | Pointer to **string** | 本系统订单 ID | [optional] 
+**PayPalOrderId** | Pointer to **NullableString** | PayPal 订单 ID（供前端按钮使用） | [optional] 
+**PayPalSubscriptionId** | Pointer to **NullableString** | PayPal 订阅 ID（自动续费场景） | [optional] 
+**ApprovalUrl** | Pointer to **NullableString** | PayPal approve 链接，可用于不使用 JS SDK 的桌面端跳转。 | [optional] 
+**CheckoutKind** | Pointer to **NullableString** | order&#x3D;一次性订单，subscription&#x3D;自动续费订阅。 | [optional] 
 
 ## Methods
 

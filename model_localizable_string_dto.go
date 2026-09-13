@@ -19,7 +19,7 @@ var _ MappedNullable = &LocalizableStringDto{}
 
 // LocalizableStringDto struct for LocalizableStringDto
 type LocalizableStringDto struct {
-	Name     NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Resource NullableString `json:"resource,omitempty"`
 }
 
@@ -72,7 +72,6 @@ func (o *LocalizableStringDto) HasName() bool {
 func (o *LocalizableStringDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *LocalizableStringDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -115,7 +114,6 @@ func (o *LocalizableStringDto) HasResource() bool {
 func (o *LocalizableStringDto) SetResource(v string) {
 	o.Resource.Set(&v)
 }
-
 // SetResourceNil sets the value for Resource to be an explicit nil
 func (o *LocalizableStringDto) SetResourceNil() {
 	o.Resource.Set(nil)
@@ -127,7 +125,7 @@ func (o *LocalizableStringDto) UnsetResource() {
 }
 
 func (o LocalizableStringDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableLocalizableStringDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

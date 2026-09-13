@@ -18,11 +18,12 @@ import (
 	"net/url"
 )
 
+
 // TimeZoneSettingsAPIService TimeZoneSettingsAPI service
 type TimeZoneSettingsAPIService service
 
 type ApiGetTimeZoneSettingsRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *TimeZoneSettingsAPIService
 }
 
@@ -33,25 +34,24 @@ func (r ApiGetTimeZoneSettingsRequest) Execute() (string, *http.Response, error)
 /*
 GetTimeZoneSettings Method for GetTimeZoneSettings
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetTimeZoneSettingsRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetTimeZoneSettingsRequest
 */
 func (a *TimeZoneSettingsAPIService) GetTimeZoneSettings(ctx context.Context) ApiGetTimeZoneSettingsRequest {
 	return ApiGetTimeZoneSettingsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return string
+//  @return string
 func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZoneSettingsRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue string
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TimeZoneSettingsAPIService.GetTimeZoneSettings")
@@ -111,8 +111,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -122,8 +122,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -133,8 +133,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -144,8 +144,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -155,8 +155,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -166,8 +166,8 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -185,7 +185,7 @@ func (a *TimeZoneSettingsAPIService) GetTimeZoneSettingsExecute(r ApiGetTimeZone
 }
 
 type ApiGetTimezonesRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *TimeZoneSettingsAPIService
 }
 
@@ -196,25 +196,24 @@ func (r ApiGetTimezonesRequest) Execute() ([]NameValue, *http.Response, error) {
 /*
 GetTimezones Method for GetTimezones
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetTimezonesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetTimezonesRequest
 */
 func (a *TimeZoneSettingsAPIService) GetTimezones(ctx context.Context) ApiGetTimezonesRequest {
 	return ApiGetTimezonesRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []NameValue
+//  @return []NameValue
 func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesRequest) ([]NameValue, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []NameValue
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []NameValue
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TimeZoneSettingsAPIService.GetTimezones")
@@ -274,8 +273,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -285,8 +284,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -296,8 +295,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -307,8 +306,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -318,8 +317,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -329,8 +328,8 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -348,9 +347,9 @@ func (a *TimeZoneSettingsAPIService) GetTimezonesExecute(r ApiGetTimezonesReques
 }
 
 type ApiUpdateTimeZoneSettingsRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *TimeZoneSettingsAPIService
-	timezone   *string
+	timezone *string
 }
 
 func (r ApiUpdateTimeZoneSettingsRequest) Timezone(timezone string) ApiUpdateTimeZoneSettingsRequest {
@@ -365,22 +364,22 @@ func (r ApiUpdateTimeZoneSettingsRequest) Execute() (*http.Response, error) {
 /*
 UpdateTimeZoneSettings Method for UpdateTimeZoneSettings
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiUpdateTimeZoneSettingsRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpdateTimeZoneSettingsRequest
 */
 func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettings(ctx context.Context) ApiUpdateTimeZoneSettingsRequest {
 	return ApiUpdateTimeZoneSettingsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTimeZoneSettingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TimeZoneSettingsAPIService.UpdateTimeZoneSettings")
@@ -443,8 +442,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -454,8 +453,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -465,8 +464,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -476,8 +475,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -487,8 +486,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -498,8 +497,8 @@ func (a *TimeZoneSettingsAPIService) UpdateTimeZoneSettingsExecute(r ApiUpdateTi
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

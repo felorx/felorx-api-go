@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAppFeature**](AppFeatureAPI.md#CreateAppFeature) | **Post** /api/app/app-feature |
-[**DeleteAppFeatureById**](AppFeatureAPI.md#DeleteAppFeatureById) | **Delete** /api/app/app-feature/{id} |
-[**GetAppFeatureList**](AppFeatureAPI.md#GetAppFeatureList) | **Get** /api/app/app-feature |
-[**UpdateAppFeature**](AppFeatureAPI.md#UpdateAppFeature) | **Put** /api/app/app-feature/{id} |
+[**CreateAppFeature**](AppFeatureAPI.md#CreateAppFeature) | **Post** /api/app/app-feature | 
+[**DeleteAppFeatureById**](AppFeatureAPI.md#DeleteAppFeatureById) | **Delete** /api/app/app-feature/{id} | 
+[**GetAppFeatureList**](AppFeatureAPI.md#GetAppFeatureList) | **Get** /api/app/app-feature | 
+[**UpdateAppFeature**](AppFeatureAPI.md#UpdateAppFeature) | **Put** /api/app/app-feature/{id} | 
 
 
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateAppFeatureRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  |
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
 
 ### Return type
 
@@ -94,7 +94,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -112,7 +112,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -188,10 +188,10 @@ Other parameters are passed through a pointer to a apiGetAppFeatureListRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string** |  |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **appId** | **string** |  | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -230,7 +230,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAppFeatureDto := *openapiclient.NewCreateOrUpdateAppFeatureDto() // CreateOrUpdateAppFeatureDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -251,7 +251,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -261,7 +261,7 @@ Other parameters are passed through a pointer to a apiUpdateAppFeatureRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  |
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md) |  | 
 
 ### Return type
 

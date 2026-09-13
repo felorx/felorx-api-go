@@ -11,10 +11,10 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 	"time"
+	"bytes"
+	"fmt"
 )
 
 // checks if the AppRunRecordUpdateDto type satisfies the MappedNullable interface at compile time
@@ -22,21 +22,21 @@ var _ MappedNullable = &AppRunRecordUpdateDto{}
 
 // AppRunRecordUpdateDto struct for AppRunRecordUpdateDto
 type AppRunRecordUpdateDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Status               AppRunStatus   `json:"status"`
-	Result               NullableString `json:"result,omitempty"`
-	Error                NullableString `json:"error,omitempty"`
-	FinishAt             NullableTime   `json:"finishAt,omitempty"`
-	Output               NullableString `json:"output,omitempty"`
-	WorkerId             string         `json:"workerId"`
-	WorkerName           string         `json:"workerName"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Status AppRunStatus `json:"status"`
+	Result NullableString `json:"result,omitempty"`
+	Error NullableString `json:"error,omitempty"`
+	FinishAt NullableTime `json:"finishAt,omitempty"`
+	Output NullableString `json:"output,omitempty"`
+	WorkerId string `json:"workerId"`
+	WorkerName string `json:"workerName"`
 }
 
 type _AppRunRecordUpdateDto AppRunRecordUpdateDto
@@ -157,7 +157,6 @@ func (o *AppRunRecordUpdateDto) HasCreatorId() bool {
 func (o *AppRunRecordUpdateDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -200,7 +199,6 @@ func (o *AppRunRecordUpdateDto) HasLastModificationTime() bool {
 func (o *AppRunRecordUpdateDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -243,7 +241,6 @@ func (o *AppRunRecordUpdateDto) HasLastModifierId() bool {
 func (o *AppRunRecordUpdateDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -318,7 +315,6 @@ func (o *AppRunRecordUpdateDto) HasDeleterId() bool {
 func (o *AppRunRecordUpdateDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -361,7 +357,6 @@ func (o *AppRunRecordUpdateDto) HasDeletionTime() bool {
 func (o *AppRunRecordUpdateDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -428,7 +423,6 @@ func (o *AppRunRecordUpdateDto) HasResult() bool {
 func (o *AppRunRecordUpdateDto) SetResult(v string) {
 	o.Result.Set(&v)
 }
-
 // SetResultNil sets the value for Result to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetResultNil() {
 	o.Result.Set(nil)
@@ -471,7 +465,6 @@ func (o *AppRunRecordUpdateDto) HasError() bool {
 func (o *AppRunRecordUpdateDto) SetError(v string) {
 	o.Error.Set(&v)
 }
-
 // SetErrorNil sets the value for Error to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetErrorNil() {
 	o.Error.Set(nil)
@@ -514,7 +507,6 @@ func (o *AppRunRecordUpdateDto) HasFinishAt() bool {
 func (o *AppRunRecordUpdateDto) SetFinishAt(v time.Time) {
 	o.FinishAt.Set(&v)
 }
-
 // SetFinishAtNil sets the value for FinishAt to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetFinishAtNil() {
 	o.FinishAt.Set(nil)
@@ -557,7 +549,6 @@ func (o *AppRunRecordUpdateDto) HasOutput() bool {
 func (o *AppRunRecordUpdateDto) SetOutput(v string) {
 	o.Output.Set(&v)
 }
-
 // SetOutputNil sets the value for Output to be an explicit nil
 func (o *AppRunRecordUpdateDto) SetOutputNil() {
 	o.Output.Set(nil)
@@ -617,7 +608,7 @@ func (o *AppRunRecordUpdateDto) SetWorkerName(v string) {
 }
 
 func (o AppRunRecordUpdateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -683,10 +674,10 @@ func (o *AppRunRecordUpdateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -742,3 +733,5 @@ func (v *NullableAppRunRecordUpdateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

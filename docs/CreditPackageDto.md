@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**AppId** | Pointer to **string** |  | [optional]
-**Code** | Pointer to **NullableString** |  | [optional]
-**Title** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Credits** | Pointer to **int32** |  | [optional]
-**Amount** | Pointer to **float64** |  | [optional]
-**Currency** | Pointer to **NullableString** |  | [optional]
-**IsPopular** | Pointer to **bool** |  | [optional]
-**StoreProductId** | Pointer to **NullableString** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional] 
+**Code** | Pointer to **NullableString** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Credits** | Pointer to **int32** |  | [optional] 
+**Amount** | Pointer to **float64** |  | [optional] 
+**Currency** | Pointer to **NullableString** |  | [optional] 
+**IsPopular** | Pointer to **bool** |  | [optional] 
+**StoreProductId** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

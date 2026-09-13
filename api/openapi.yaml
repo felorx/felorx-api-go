@@ -903,6 +903,117 @@ paths:
               $ref: "#/components/schemas/AccountDeletionDto"
       responses:
         "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
+          description: Success
+        "403":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Forbidden
+        "401":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Unauthorized
+        "400":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Bad Request
+        "404":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Not Found
+        "501":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+        "500":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+      tags:
+      - Account
+  /api/app/account/deletion-status:
+    post:
+      operationId: DeletionStatus
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccountDeletionStatusQueryDto"
+          text/json:
+            schema:
+              $ref: "#/components/schemas/AccountDeletionStatusQueryDto"
+          application/*+json:
+            schema:
+              $ref: "#/components/schemas/AccountDeletionStatusQueryDto"
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/AccountDeletionStatusDto"
           description: Success
         "403":
           content:
@@ -980,7 +1091,7 @@ paths:
       - Account
   /api/app/account:
     get:
-      operationId: GetAccount
+      operationId: GetAccount_Get_api_app_account
       responses:
         "200":
           content:
@@ -1794,7 +1905,7 @@ paths:
       - AiProvider
   /api/app/ai-provider/set-default-model:
     post:
-      operationId: SetDefaultModel
+      operationId: SetDefaultModel_Post_api_app_ai_provider_set_default_model
       requestBody:
         content:
           application/json:
@@ -1895,7 +2006,7 @@ paths:
       - AiProvider
   /api/app/ai-provider/{id}/set-enabled:
     post:
-      operationId: SetEnabled
+      operationId: SetEnabled_Post_api_app_ai_provider_id_set_enabled
       parameters:
       - explode: false
         in: path
@@ -2005,7 +2116,7 @@ paths:
       - AiProvider
   /api/app/ai-provider/{id}/test:
     post:
-      operationId: Test
+      operationId: Test_Post_api_app_ai_provider_id_test
       parameters:
       - explode: false
         in: path
@@ -2193,7 +2304,7 @@ paths:
       tags:
       - AiProviders
     post:
-      operationId: Create
+      operationId: Create_Post_api_ai_providers
       requestBody:
         content:
           application/json:
@@ -2302,7 +2413,7 @@ paths:
       - AiProviders
   /api/ai/providers/{id}/enabled:
     post:
-      operationId: AiProvidersSetEnabled
+      operationId: SetEnabled_Post_api_ai_providers_id_enabled
       parameters:
       - explode: false
         in: path
@@ -2340,7 +2451,7 @@ paths:
       - AiProviders
   /api/ai/providers/default-model:
     post:
-      operationId: AiProvidersSetDefaultModel
+      operationId: SetDefaultModel_Post_api_ai_providers_default_model
       requestBody:
         content:
           application/json:
@@ -2369,7 +2480,7 @@ paths:
       - AiProviders
   /api/ai/providers/{id}/test:
     post:
-      operationId: AiProvidersTest
+      operationId: Test_Post_api_ai_providers_id_test
       parameters:
       - explode: false
         in: path
@@ -2405,6 +2516,1509 @@ paths:
           description: Success
       tags:
       - AiProviders
+  /api/ai/v1/responses:
+    post:
+      description: Shared native Responses gateway operation.
+      operationId: createResponse
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCreateRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+            text/event-stream:
+              schema:
+                description: "When stream=true, SSE event/data frames. A terminal\
+                  \ response event ends the stream; failures after headers are sent\
+                  \ use an error event."
+                type: string
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+      x-felorx-responses-stream: true
+      x-felorx-responses-stream-types: true
+  /api/ai/openai/responses:
+    post:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: createResponseLegacy
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCreateRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+            text/event-stream:
+              schema:
+                description: "When stream=true, SSE event/data frames. A terminal\
+                  \ response event ends the stream; failures after headers are sent\
+                  \ use an error event."
+                type: string
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+      x-felorx-responses-stream: true
+  /api/ai/v1/responses/{id}:
+    delete:
+      description: Shared native Responses gateway operation.
+      operationId: deleteResponse
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxDeletedResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+    get:
+      description: Shared native Responses gateway operation.
+      operationId: retrieveResponse
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/openai/responses/{id}:
+    delete:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: deleteResponseLegacy
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxDeletedResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+    get:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: retrieveResponseLegacy
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/v1/responses/{id}/cancel:
+    post:
+      description: Shared native Responses gateway operation.
+      operationId: cancelResponse
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/openai/responses/{id}/cancel:
+    post:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: cancelResponseLegacy
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/v1/responses/{id}/input_items:
+    get:
+      description: Shared native Responses gateway operation.
+      operationId: listResponseInputItems
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: after
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponseInputItems"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/openai/responses/{id}/input_items:
+    get:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: listResponseInputItemsLegacy
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: after
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: order
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponseInputItems"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/v1/responses/compact:
+    post:
+      description: Shared native Responses gateway operation.
+      operationId: compactResponse
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCompactRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxCompactedResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/openai/responses/compact:
+    post:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: compactResponseLegacy
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCompactRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxCompactedResponse"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/v1/responses/input_tokens:
+    post:
+      description: Shared native Responses gateway operation.
+      operationId: countResponseInputTokens
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCountRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponseInputTokens"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/openai/responses/input_tokens:
+    post:
+      description: Compatibility alias of the /api/ai/v1/responses operation.
+      operationId: countResponseInputTokensLegacy
+      parameters:
+      - description: Optional server-configured provider ID or name. Stored responses
+          remain bound to their original provider.
+        explode: false
+        in: header
+        name: X-Felorx-Ai-Provider
+        required: false
+        schema:
+          maxLength: 256
+          minLength: 1
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FelorxResponsesCountRequest"
+        description: "JSON object, at most 8 MiB. Duplicate property names are rejected."
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponseInputTokens"
+          description: Successful response
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "413":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "502":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "504":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FelorxResponsesError"
+          description: Request or service failure. Validation middleware may use the
+            host validation error format.
+        "401":
+          description: Authentication required; response follows the configured authentication
+            handler.
+        "403":
+          description: Access denied.
+        "415":
+          description: Content-Type must be application/json.
+      security:
+      - FelorxBearer: []
+      tags:
+      - Responses
+  /api/ai/usage/summary:
+    get:
+      operationId: GetSummary_Get_api_ai_usage_summary
+      parameters:
+      - explode: true
+        in: query
+        name: from
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: to
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/AiUsageSummaryDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AiUsageSummaryDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/AiUsageSummaryDto"
+          description: Success
+      tags:
+      - AiUsage
+  /api/ai/usage/records:
+    get:
+      operationId: GetRecords
+      parameters:
+      - explode: true
+        in: query
+        name: from
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: to
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: skipCount
+        required: false
+        schema:
+          default: 0
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: maxResultCount
+        required: false
+        schema:
+          default: 20
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/AiUsageRecordDtoPagedResultDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AiUsageRecordDtoPagedResultDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/AiUsageRecordDtoPagedResultDto"
+          description: Success
+      tags:
+      - AiUsage
   /api/api-keys/{id}:
     delete:
       operationId: DeleteApiKeysById
@@ -6182,7 +7796,7 @@ paths:
       - AppFeedback
   /api/app/app-locale/by-app-id/{appId}:
     get:
-      operationId: GetListByAppId
+      operationId: GetListByAppId_Get_api_app_app_locale_by_app_id_appId
       parameters:
       - explode: false
         in: path
@@ -7102,7 +8716,7 @@ paths:
       - AppPricing
   /api/app/app-pricing/by-app-id/{appId}:
     get:
-      operationId: AppPricingGetListByAppId
+      operationId: GetListByAppId_Get_api_app_app_pricing_by_app_id_appId
       parameters:
       - explode: false
         in: path
@@ -7839,6 +9453,13 @@ paths:
         style: form
       - explode: true
         in: query
+        name: Architecture
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
         name: Sorting
         required: false
         schema:
@@ -8392,6 +10013,13 @@ paths:
         style: form
       - explode: true
         in: query
+        name: Architecture
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
         name: Sorting
         required: false
         schema:
@@ -8507,7 +10135,7 @@ paths:
       - AppRelease
   /api/app/app-release/latest:
     get:
-      operationId: GetLatest
+      operationId: GetLatest_Get_api_app_app_release_latest
       parameters:
       - explode: true
         in: query
@@ -8533,6 +10161,13 @@ paths:
       - explode: true
         in: query
         name: Publisher
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: Architecture
         required: false
         schema:
           type: string
@@ -9779,7 +11414,7 @@ paths:
       - AppUserScore
   /api/app/auth-center/summary:
     get:
-      operationId: GetSummary
+      operationId: GetSummary_Get_api_app_auth_center_summary
       responses:
         "200":
           content:
@@ -10278,6 +11913,14 @@ paths:
         required: false
         schema:
           $ref: "#/components/schemas/AppPlatform"
+        style: form
+      - description: 目标架构。
+        explode: true
+        in: query
+        name: Architecture
+        required: false
+        schema:
+          type: string
         style: form
       - description: 环境
         explode: true
@@ -10914,7 +12557,7 @@ paths:
       - BuildRecord
   /api/app/build-record/{id}/mark-as-succeeded:
     post:
-      operationId: MarkAsSucceeded
+      operationId: MarkAsSucceeded_Post_api_app_build_record_id_mark_as_succeeded
       parameters:
       - explode: false
         in: path
@@ -11028,7 +12671,7 @@ paths:
       - BuildRecord
   /api/app/build-record/{id}/mark-as-failed:
     post:
-      operationId: MarkAsFailed
+      operationId: MarkAsFailed_Post_api_app_build_record_id_mark_as_failed
       parameters:
       - explode: false
         in: path
@@ -11134,7 +12777,7 @@ paths:
       - BuildRecord
   /api/app/build-record/{id}/mark-as-canceled:
     post:
-      operationId: MarkAsCanceled
+      operationId: MarkAsCanceled_Post_api_app_build_record_id_mark_as_canceled
       parameters:
       - explode: false
         in: path
@@ -11331,7 +12974,7 @@ paths:
       - BuildRecord
   /api/app/build-record/latest/{appId}:
     get:
-      operationId: BuildRecordGetLatest
+      operationId: GetLatest_Get_api_app_build_record_latest_appId
       parameters:
       - explode: false
         in: path
@@ -11351,6 +12994,13 @@ paths:
       - explode: true
         in: query
         name: environment
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: architecture
         required: false
         schema:
           type: string
@@ -11444,7 +13094,7 @@ paths:
       - BuildRecord
   /api/app/credit/account/{appId}:
     get:
-      operationId: CreditGetAccount
+      operationId: GetAccount_Get_api_app_credit_account_appId
       parameters:
       - explode: false
         in: path
@@ -11850,7 +13500,7 @@ paths:
       - Credit
   /api/app/credit/alipay-order:
     post:
-      operationId: CreateAlipayOrder
+      operationId: CreateAlipayOrder_Post_api_app_credit_alipay_order
       requestBody:
         content:
           application/json:
@@ -11951,7 +13601,7 @@ paths:
       - Credit
   /api/app/credit/pay-pal-order:
     post:
-      operationId: CreatePayPalOrder
+      operationId: CreatePayPalOrder_Post_api_app_credit_pay_pal_order
       requestBody:
         content:
           application/json:
@@ -12715,7 +14365,7 @@ paths:
       - DeployRecord
   /api/app/deploy-record/{id}/mark-as-succeeded:
     post:
-      operationId: DeployRecordMarkAsSucceeded
+      operationId: MarkAsSucceeded_Post_api_app_deploy_record_id_mark_as_succeeded
       parameters:
       - explode: false
         in: path
@@ -12821,7 +14471,7 @@ paths:
       - DeployRecord
   /api/app/deploy-record/{id}/mark-as-failed:
     post:
-      operationId: DeployRecordMarkAsFailed
+      operationId: MarkAsFailed_Post_api_app_deploy_record_id_mark_as_failed
       parameters:
       - explode: false
         in: path
@@ -12927,7 +14577,7 @@ paths:
       - DeployRecord
   /api/app/deploy-record/{id}/mark-as-canceled:
     post:
-      operationId: DeployRecordMarkAsCanceled
+      operationId: MarkAsCanceled_Post_api_app_deploy_record_id_mark_as_canceled
       parameters:
       - explode: false
         in: path
@@ -13229,7 +14879,7 @@ paths:
       - DeployRecord
   /api/app/deploy-record/latest/{appId}:
     get:
-      operationId: DeployRecordGetLatest
+      operationId: GetLatest_Get_api_app_deploy_record_latest_appId
       parameters:
       - explode: false
         in: path
@@ -17850,7 +19500,7 @@ paths:
       - Notification
   /api/ai/v1/chat/completions:
     post:
-      operationId: OpenAiCompatibleChatCreate
+      operationId: Create_Post_api_ai_v1_chat_completions
       requestBody:
         content:
           application/json:
@@ -18548,6 +20198,208 @@ paths:
           description: Server Error
       tags:
       - Profile
+  /api/app/remote-pairing/issue-assertion:
+    post:
+      operationId: IssueAssertion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RemotePairingBindingDto"
+          text/json:
+            schema:
+              $ref: "#/components/schemas/RemotePairingBindingDto"
+          application/*+json:
+            schema:
+              $ref: "#/components/schemas/RemotePairingBindingDto"
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemotePairingAssertionDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemotePairingAssertionDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemotePairingAssertionDto"
+          description: Success
+        "403":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Forbidden
+        "401":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Unauthorized
+        "400":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Bad Request
+        "404":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Not Found
+        "501":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+        "500":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+      tags:
+      - RemotePairing
+  /api/app/remote-pairing/verify-assertion:
+    post:
+      operationId: VerifyAssertion
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/VerifyRemotePairingAssertionDto"
+          text/json:
+            schema:
+              $ref: "#/components/schemas/VerifyRemotePairingAssertionDto"
+          application/*+json:
+            schema:
+              $ref: "#/components/schemas/VerifyRemotePairingAssertionDto"
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemotePairingVerificationDto"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemotePairingVerificationDto"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemotePairingVerificationDto"
+          description: Success
+        "403":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Forbidden
+        "401":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Unauthorized
+        "400":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Bad Request
+        "404":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Not Found
+        "501":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+        "500":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+      tags:
+      - RemotePairing
   /api/identity/roles/all:
     get:
       operationId: GetAllList
@@ -20358,9 +22210,137 @@ paths:
       summary: 获取应用对客户端开放的订阅售卖价格。
       tags:
       - Subscription
+  /api/app/subscription/store-products/by-app-id/{appId}:
+    get:
+      operationId: GetStoreProducts
+      parameters:
+      - explode: false
+        in: path
+        name: appId
+        required: true
+        schema:
+          format: uuid
+          type: string
+        style: simple
+      - explode: true
+        in: query
+        name: provider
+        required: false
+        schema:
+          $ref: "#/components/schemas/BillingProvider"
+        style: form
+      - explode: true
+        in: query
+        name: platform
+        required: false
+        schema:
+          $ref: "#/components/schemas/AppPlatform"
+        style: form
+      - explode: true
+        in: query
+        name: environment
+        required: false
+        schema:
+          default: production
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: "#/components/schemas/StoreProductMappingDto"
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/StoreProductMappingDto"
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/StoreProductMappingDto"
+                type: array
+          description: Success
+        "403":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Forbidden
+        "401":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Unauthorized
+        "400":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Bad Request
+        "404":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Not Found
+        "501":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+        "500":
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+            text/json:
+              schema:
+                $ref: "#/components/schemas/RemoteServiceErrorResponse"
+          description: Server Error
+      summary: 获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
+      tags:
+      - Subscription
   /api/app/subscription/alipay-order:
     post:
-      operationId: SubscriptionCreateAlipayOrder
+      operationId: CreateAlipayOrder_Post_api_app_subscription_alipay_order
       requestBody:
         content:
           application/json:
@@ -20553,7 +22533,7 @@ paths:
       - Subscription
   /api/app/subscription/pay-pal-order:
     post:
-      operationId: SubscriptionCreatePayPalOrder
+      operationId: CreatePayPalOrder_Post_api_app_subscription_pay_pal_order
       requestBody:
         content:
           application/json:
@@ -23649,7 +25629,7 @@ paths:
       - User
   /api/identity/users/by-username/{userName}:
     get:
-      operationId: FindByUsername
+      operationId: FindByUsername_Get_api_identity_users_by_username_userName
       parameters:
       - explode: false
         in: path
@@ -23944,7 +25924,7 @@ paths:
       - UserLookup
   /api/identity/users/lookup/by-username/{userName}:
     get:
-      operationId: FindByUserName
+      operationId: FindByUserName_Get_api_identity_users_lookup_by_username_userName
       parameters:
       - explode: false
         in: path
@@ -24454,10 +26434,80 @@ components:
       additionalProperties: false
       example:
         code: code
+        statusToken: statusToken
+        clientRequestId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
         code:
           nullable: true
           type: string
+        clientRequestId:
+          format: uuid
+          nullable: true
+          type: string
+        statusToken:
+          nullable: true
+          pattern: "^[A-Za-z0-9_-]{43}$"
+          type: string
+      type: object
+    AccountDeletionStatusDto:
+      additionalProperties: false
+      example:
+        completedAt: 2000-01-23T04:56:07.000+00:00
+        retainUntil: 2000-01-23T04:56:07.000+00:00
+        failureCode: failureCode
+        requestId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        startedAt: 2000-01-23T04:56:07.000+00:00
+        lastAttemptAt: 2000-01-23T04:56:07.000+00:00
+        attemptCount: 6
+        status: 0
+        acceptedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        requestId:
+          format: uuid
+          type: string
+        status:
+          format: int32
+          type: integer
+        acceptedAt:
+          format: date-time
+          type: string
+        retainUntil:
+          format: date-time
+          type: string
+        startedAt:
+          format: date-time
+          nullable: true
+          type: string
+        completedAt:
+          format: date-time
+          nullable: true
+          type: string
+        lastAttemptAt:
+          format: date-time
+          nullable: true
+          type: string
+        attemptCount:
+          format: int32
+          type: integer
+        failureCode:
+          nullable: true
+          type: string
+      type: object
+    AccountDeletionStatusQueryDto:
+      additionalProperties: false
+      example:
+        statusToken: statusToken
+        requestId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        requestId:
+          format: uuid
+          type: string
+        statusToken:
+          minLength: 1
+          pattern: "^[A-Za-z0-9_-]{43}$"
+          type: string
+      required:
+      - statusToken
       type: object
     ActionApiDescriptionModel:
       additionalProperties: false
@@ -24608,6 +26658,16 @@ components:
       - Caption
       - ImageGeneration
       - VideoGeneration
+      - Responses
+      - ResponsesStreaming
+      - ResponsesStateful
+      - ResponsesWebSocket
+      - FunctionCalling
+      - ResponsesBackground
+      - ResponsesCompaction
+      - ResponsesInputTokens
+      - Reasoning
+      - HostedTools
       type: string
     AiChatChoiceDto:
       additionalProperties: false
@@ -24703,14 +26763,19 @@ components:
         display_name: display_name
         is_default: true
         enabled: true
+        capability_certificate_version: capability_certificate_version
         default_parameters:
           key: default_parameters
         isDeleted: true
+        verified_capabilities:
+        - null
+        - null
         name: name
         lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        capability_tested_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           format: uuid
@@ -24737,6 +26802,18 @@ components:
           nullable: true
           type: string
         deletionTime:
+          format: date-time
+          nullable: true
+          type: string
+        verified_capabilities:
+          items:
+            $ref: "#/components/schemas/AiCapability"
+          nullable: true
+          type: array
+        capability_certificate_version:
+          nullable: true
+          type: string
+        capability_tested_at:
           format: date-time
           nullable: true
           type: string
@@ -24767,6 +26844,56 @@ components:
           nullable: true
           type: object
       type: object
+    AiModelUsageDto:
+      additionalProperties: false
+      example:
+        estimated_cost_microusd: 3
+        total_tokens: 2
+        output_tokens: 5
+        charge_kind: charge_kind
+        reasoning_tokens: 5
+        input_tokens: 6
+        request_count: 0
+        cached_input_tokens: 1
+        priced_request_count: 7
+        unpriced_request_count: 9
+      properties:
+        charge_kind:
+          nullable: true
+          type: string
+        request_count:
+          format: int64
+          type: integer
+        input_tokens:
+          format: int64
+          type: integer
+        cached_input_tokens:
+          format: int64
+          type: integer
+        output_tokens:
+          format: int64
+          type: integer
+        reasoning_tokens:
+          format: int64
+          type: integer
+        total_tokens:
+          format: int64
+          type: integer
+        priced_request_count:
+          format: int64
+          type: integer
+        unpriced_request_count:
+          format: int64
+          type: integer
+        estimated_cost_microusd:
+          format: int64
+          type: integer
+      type: object
+    AiProtocol:
+      enum:
+      - ChatCompletions
+      - Responses
+      type: string
     AiProviderDto:
       additionalProperties: false
       example:
@@ -24783,14 +26910,19 @@ components:
           display_name: display_name
           is_default: true
           enabled: true
+          capability_certificate_version: capability_certificate_version
           default_parameters:
             key: default_parameters
           isDeleted: true
+          verified_capabilities:
+          - null
+          - null
           name: name
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          capability_tested_at: 2000-01-23T04:56:07.000+00:00
         - capabilities:
           - null
           - null
@@ -24802,19 +26934,24 @@ components:
           display_name: display_name
           is_default: true
           enabled: true
+          capability_certificate_version: capability_certificate_version
           default_parameters:
             key: default_parameters
           isDeleted: true
+          verified_capabilities:
+          - null
+          - null
           name: name
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          capability_tested_at: 2000-01-23T04:56:07.000+00:00
         metadata:
           key: metadata
         capabilities:
-        - Chat
-        - Chat
+        - null
+        - null
         creationTime: 2000-01-23T04:56:07.000+00:00
         lastModificationTime: 2000-01-23T04:56:07.000+00:00
         creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -24823,12 +26960,17 @@ components:
         secret_configured: true
         display_name: display_name
         enabled: true
+        capability_certificate_version: capability_certificate_version
         isDeleted: true
+        verified_capabilities:
+        - Chat
+        - Chat
         name: name
         lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         region: region
+        capability_tested_at: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
           format: uuid
@@ -24855,6 +26997,18 @@ components:
           nullable: true
           type: string
         deletionTime:
+          format: date-time
+          nullable: true
+          type: string
+        verified_capabilities:
+          items:
+            $ref: "#/components/schemas/AiCapability"
+          nullable: true
+          type: array
+        capability_certificate_version:
+          nullable: true
+          type: string
+        capability_tested_at:
           format: date-time
           nullable: true
           type: string
@@ -24910,14 +27064,19 @@ components:
             display_name: display_name
             is_default: true
             enabled: true
+            capability_certificate_version: capability_certificate_version
             default_parameters:
               key: default_parameters
             isDeleted: true
+            verified_capabilities:
+            - null
+            - null
             name: name
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            capability_tested_at: 2000-01-23T04:56:07.000+00:00
           - capabilities:
             - null
             - null
@@ -24929,19 +27088,24 @@ components:
             display_name: display_name
             is_default: true
             enabled: true
+            capability_certificate_version: capability_certificate_version
             default_parameters:
               key: default_parameters
             isDeleted: true
+            verified_capabilities:
+            - null
+            - null
             name: name
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            capability_tested_at: 2000-01-23T04:56:07.000+00:00
           metadata:
             key: metadata
           capabilities:
-          - Chat
-          - Chat
+          - null
+          - null
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -24950,12 +27114,17 @@ components:
           secret_configured: true
           display_name: display_name
           enabled: true
+          capability_certificate_version: capability_certificate_version
           isDeleted: true
+          verified_capabilities:
+          - Chat
+          - Chat
           name: name
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           region: region
+          capability_tested_at: 2000-01-23T04:56:07.000+00:00
         - provider_type: Mock
           models:
           - capabilities:
@@ -24969,14 +27138,19 @@ components:
             display_name: display_name
             is_default: true
             enabled: true
+            capability_certificate_version: capability_certificate_version
             default_parameters:
               key: default_parameters
             isDeleted: true
+            verified_capabilities:
+            - null
+            - null
             name: name
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            capability_tested_at: 2000-01-23T04:56:07.000+00:00
           - capabilities:
             - null
             - null
@@ -24988,19 +27162,24 @@ components:
             display_name: display_name
             is_default: true
             enabled: true
+            capability_certificate_version: capability_certificate_version
             default_parameters:
               key: default_parameters
             isDeleted: true
+            verified_capabilities:
+            - null
+            - null
             name: name
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             provider_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+            capability_tested_at: 2000-01-23T04:56:07.000+00:00
           metadata:
             key: metadata
           capabilities:
-          - Chat
-          - Chat
+          - null
+          - null
           creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
@@ -25009,12 +27188,17 @@ components:
           secret_configured: true
           display_name: display_name
           enabled: true
+          capability_certificate_version: capability_certificate_version
           isDeleted: true
+          verified_capabilities:
+          - Chat
+          - Chat
           name: name
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           region: region
+          capability_tested_at: 2000-01-23T04:56:07.000+00:00
       properties:
         items:
           items:
@@ -25050,6 +27234,160 @@ components:
           format: int32
           nullable: true
           type: integer
+      type: object
+    AiUsageRecordDto:
+      additionalProperties: false
+      example:
+        pricing_effective_at: 2000-01-23T04:56:07.000+00:00
+        runtime_charge_kind: runtime_charge_kind
+        pricing_source_url: pricing_source_url
+        input_tokens: 0
+        observed_at: 2000-01-23T04:56:07.000+00:00
+        runtime_milliseconds: 5
+        model_charge_kind: model_charge_kind
+        logical_model: logical_model
+        total_tokens: 1
+        estimated_model_cost_microusd: 5
+        pricing_captured_at: 2000-01-23T04:56:07.000+00:00
+        estimated_runtime_cost_microusd: 2
+        output_tokens: 6
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        id:
+          format: uuid
+          type: string
+        logical_model:
+          nullable: true
+          type: string
+        model_charge_kind:
+          nullable: true
+          type: string
+        runtime_charge_kind:
+          nullable: true
+          type: string
+        input_tokens:
+          format: int64
+          type: integer
+        output_tokens:
+          format: int64
+          type: integer
+        total_tokens:
+          format: int64
+          type: integer
+        runtime_milliseconds:
+          format: int64
+          type: integer
+        observed_at:
+          format: date-time
+          type: string
+        estimated_model_cost_microusd:
+          format: int64
+          nullable: true
+          type: integer
+        estimated_runtime_cost_microusd:
+          format: int64
+          nullable: true
+          type: integer
+        pricing_effective_at:
+          format: date-time
+          nullable: true
+          type: string
+        pricing_captured_at:
+          format: date-time
+          nullable: true
+          type: string
+        pricing_source_url:
+          nullable: true
+          type: string
+      type: object
+    AiUsageRecordDtoPagedResultDto:
+      additionalProperties: false
+      example:
+        totalCount: 7
+        items:
+        - pricing_effective_at: 2000-01-23T04:56:07.000+00:00
+          runtime_charge_kind: runtime_charge_kind
+          pricing_source_url: pricing_source_url
+          input_tokens: 0
+          observed_at: 2000-01-23T04:56:07.000+00:00
+          runtime_milliseconds: 5
+          model_charge_kind: model_charge_kind
+          logical_model: logical_model
+          total_tokens: 1
+          estimated_model_cost_microusd: 5
+          pricing_captured_at: 2000-01-23T04:56:07.000+00:00
+          estimated_runtime_cost_microusd: 2
+          output_tokens: 6
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        - pricing_effective_at: 2000-01-23T04:56:07.000+00:00
+          runtime_charge_kind: runtime_charge_kind
+          pricing_source_url: pricing_source_url
+          input_tokens: 0
+          observed_at: 2000-01-23T04:56:07.000+00:00
+          runtime_milliseconds: 5
+          model_charge_kind: model_charge_kind
+          logical_model: logical_model
+          total_tokens: 1
+          estimated_model_cost_microusd: 5
+          pricing_captured_at: 2000-01-23T04:56:07.000+00:00
+          estimated_runtime_cost_microusd: 2
+          output_tokens: 6
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+      properties:
+        items:
+          items:
+            $ref: "#/components/schemas/AiUsageRecordDto"
+          nullable: true
+          type: array
+        totalCount:
+          format: int64
+          type: integer
+      type: object
+    AiUsageSummaryDto:
+      additionalProperties: false
+      example:
+        runtime_usages:
+        - ""
+        - ""
+        from: 2000-01-23T04:56:07.000+00:00
+        to: 2000-01-23T04:56:07.000+00:00
+        model_usages:
+        - estimated_cost_microusd: 3
+          total_tokens: 2
+          output_tokens: 5
+          charge_kind: charge_kind
+          reasoning_tokens: 5
+          input_tokens: 6
+          request_count: 0
+          cached_input_tokens: 1
+          priced_request_count: 7
+          unpriced_request_count: 9
+        - estimated_cost_microusd: 3
+          total_tokens: 2
+          output_tokens: 5
+          charge_kind: charge_kind
+          reasoning_tokens: 5
+          input_tokens: 6
+          request_count: 0
+          cached_input_tokens: 1
+          priced_request_count: 7
+          unpriced_request_count: 9
+      properties:
+        from:
+          format: date-time
+          type: string
+        to:
+          format: date-time
+          type: string
+        model_usages:
+          items:
+            $ref: "#/components/schemas/AiModelUsageDto"
+          nullable: true
+          type: array
+        runtime_usages:
+          items: {}
+          nullable: true
+          type: array
       type: object
     ApiKeyCreateDto:
       additionalProperties: false
@@ -25254,19 +27592,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
         - artifactType: Aab
@@ -25278,19 +27617,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
         defaultStorageSize: 6
@@ -25468,19 +27808,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           - artifactType: Aab
@@ -25492,19 +27833,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           defaultStorageSize: 6
@@ -25571,19 +27913,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           - artifactType: Aab
@@ -25595,19 +27938,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           defaultStorageSize: 6
@@ -26673,19 +29017,20 @@ components:
         channel: Internal
         deletionTime: 2000-01-23T04:56:07.000+00:00
         versionName: versionName
-        version: version
-        versionCode: 5
         platform: None
         isDeleted: true
-        size: 5
         appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        isEnabled: true
         lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        publisher: Web
         rapidCode: rapidCode
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         key: key
+        architecture: architecture
+        version: version
+        versionCode: 5
+        size: 5
+        isEnabled: true
+        publisher: Web
+        deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         hash: hash
         isForceUpdate: true
       properties:
@@ -26751,6 +29096,9 @@ components:
           type: string
         artifactType:
           $ref: "#/components/schemas/ArtifactType"
+        architecture:
+          nullable: true
+          type: string
         publisher:
           $ref: "#/components/schemas/AppPublisher"
         isForceUpdate:
@@ -26777,19 +29125,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
         - artifactType: Aab
@@ -26801,19 +29150,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
       properties:
@@ -27409,19 +29759,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
         - artifactType: Aab
@@ -27433,19 +29784,20 @@ components:
           channel: Internal
           deletionTime: 2000-01-23T04:56:07.000+00:00
           versionName: versionName
-          version: version
-          versionCode: 5
           platform: None
           isDeleted: true
-          size: 5
           appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          isEnabled: true
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          publisher: Web
           rapidCode: rapidCode
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           key: key
+          architecture: architecture
+          version: version
+          versionCode: 5
+          size: 5
+          isEnabled: true
+          publisher: Web
+          deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           hash: hash
           isForceUpdate: true
         defaultStorageSize: 6
@@ -27627,19 +29979,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           - artifactType: Aab
@@ -27651,19 +30004,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           defaultStorageSize: 6
@@ -27731,19 +30085,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           - artifactType: Aab
@@ -27755,19 +30110,20 @@ components:
             channel: Internal
             deletionTime: 2000-01-23T04:56:07.000+00:00
             versionName: versionName
-            version: version
-            versionCode: 5
             platform: None
             isDeleted: true
-            size: 5
             appId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            isEnabled: true
             lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            publisher: Web
             rapidCode: rapidCode
             id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             key: key
+            architecture: architecture
+            version: version
+            versionCode: 5
+            size: 5
+            isEnabled: true
+            publisher: Web
+            deleterId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
             hash: hash
             isForceUpdate: true
           defaultStorageSize: 6
@@ -28574,6 +30930,7 @@ components:
       - Zip
       - Bin
       - Other
+      - Fdu
       type: string
     AuthCenterSummaryDto:
       additionalProperties: false
@@ -28668,6 +31025,7 @@ components:
     BindDeviceDto:
       additionalProperties: false
       example:
+        appName: appName
         name: name
         isPhysicalDevice: true
         brand: brand
@@ -28691,6 +31049,12 @@ components:
         systemVersion:
           nullable: true
           type: string
+        appName:
+          description: 发起绑定的应用名。服务端优先使用访问令牌中的可信 app_name 声明。
+          maxLength: 64
+          minLength: 0
+          nullable: true
+          type: string
       type: object
     BuildRecordDto:
       additionalProperties: false
@@ -28712,7 +31076,9 @@ components:
         lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         artifactUrl: artifactUrl
         id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+        logs: logs
         artifactSize: 6
+        architecture: architecture
         completedAt: 2000-01-23T04:56:07.000+00:00
         appName: appName
         errorMessage: errorMessage
@@ -28779,6 +31145,10 @@ components:
           $ref: "#/components/schemas/AppPlatform"
         artifactType:
           $ref: "#/components/schemas/ArtifactType"
+        architecture:
+          description: 目标架构；空值或空字符串表示通用制品。
+          nullable: true
+          type: string
         environment:
           description: 环境
           nullable: true
@@ -28797,6 +31167,10 @@ components:
         completedAt:
           description: 结束时间
           format: date-time
+          nullable: true
+          type: string
+        logs:
+          description: 构建日志
           nullable: true
           type: string
         errorMessage:
@@ -28851,7 +31225,9 @@ components:
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           artifactUrl: artifactUrl
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          logs: logs
           artifactSize: 6
+          architecture: architecture
           completedAt: 2000-01-23T04:56:07.000+00:00
           appName: appName
           errorMessage: errorMessage
@@ -28879,7 +31255,9 @@ components:
           lastModifierId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           artifactUrl: artifactUrl
           id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
+          logs: logs
           artifactSize: 6
+          architecture: architecture
           completedAt: 2000-01-23T04:56:07.000+00:00
           appName: appName
           errorMessage: errorMessage
@@ -29371,6 +31749,7 @@ components:
         ciBuildId: ciBuildId
         commitHash: commitHash
         platform: None
+        architecture: architecture
       properties:
         appId:
           description: 应用ID
@@ -29394,6 +31773,12 @@ components:
           $ref: "#/components/schemas/AppPlatform"
         artifactType:
           $ref: "#/components/schemas/ArtifactType"
+        architecture:
+          description: 目标架构（x64、arm64、arm、riscv64、universal 或 multiarch）。
+          maxLength: 32
+          minLength: 0
+          nullable: true
+          type: string
         environment:
           description: 环境
           nullable: true
@@ -30261,6 +32646,7 @@ components:
         key: key
         hash: hash
         isForceUpdate: true
+        architecture: architecture
       properties:
         version:
           nullable: true
@@ -30293,6 +32679,11 @@ components:
           type: string
         artifactType:
           $ref: "#/components/schemas/ArtifactType"
+        architecture:
+          maxLength: 32
+          minLength: 0
+          nullable: true
+          type: string
         publisher:
           $ref: "#/components/schemas/AppPublisher"
         isForceUpdate:
@@ -30538,15 +32929,21 @@ components:
         routes:
         - path: path
           routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          values: ""
+          values:
+            key: ""
         - path: path
           routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          values: ""
+          values:
+            key: ""
         isPublished: true
         name: name
         description: description
         iconUrl: iconUrl
+        categoryId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
+        categoryId:
+          format: uuid
+          type: string
         name:
           nullable: true
           type: string
@@ -30610,7 +33007,8 @@ components:
       example:
         path: path
         routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        values: ""
+        values:
+          key: ""
       properties:
         routeId:
           format: uuid
@@ -30619,7 +33017,9 @@ components:
           nullable: true
           type: string
         values:
+          additionalProperties: {}
           nullable: true
+          type: object
       type: object
     CreditAccountDto:
       additionalProperties: false
@@ -31108,6 +33508,7 @@ components:
       example:
         creationTime: 2000-01-23T04:56:07.000+00:00
         lastModificationTime: 2000-01-23T04:56:07.000+00:00
+        appName: appName
         creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         deletionTime: 2000-01-23T04:56:07.000+00:00
         isPhysicalDevice: true
@@ -31165,6 +33566,9 @@ components:
         systemVersion:
           nullable: true
           type: string
+        appName:
+          nullable: true
+          type: string
       type: object
     DeviceDtoPagedResultDto:
       additionalProperties: false
@@ -31173,6 +33577,7 @@ components:
         items:
         - creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
+          appName: appName
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           isPhysicalDevice: true
@@ -31187,6 +33592,7 @@ components:
           brand: brand
         - creationTime: 2000-01-23T04:56:07.000+00:00
           lastModificationTime: 2000-01-23T04:56:07.000+00:00
+          appName: appName
           creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
           deletionTime: 2000-01-23T04:56:07.000+00:00
           isPhysicalDevice: true
@@ -31633,6 +34039,405 @@ components:
         key:
           nullable: true
           type: string
+      type: object
+    FelorxCompactedResponse:
+      additionalProperties: false
+      example:
+        output:
+        - "{}"
+        - "{}"
+        usage:
+          input_tokens_details:
+            cached_tokens: 0
+          total_tokens: 0
+          output_tokens: 0
+          input_tokens: 0
+          output_tokens_details:
+            reasoning_tokens: 0
+        created_at: 0
+        id: id
+        object: response.compaction
+      properties:
+        id:
+          type: string
+        object:
+          enum:
+          - response.compaction
+          type: string
+        created_at:
+          format: int64
+          minimum: 0
+          type: integer
+        output:
+          items:
+            type: object
+          type: array
+        usage:
+          $ref: "#/components/schemas/FelorxResponseUsage"
+      required:
+      - created_at
+      - id
+      - object
+      - output
+      - usage
+      type: object
+    FelorxDeletedResponse:
+      additionalProperties: false
+      example:
+        deleted: true
+        id: id
+        object: response.deleted
+      properties:
+        id:
+          type: string
+        object:
+          enum:
+          - response.deleted
+          type: string
+        deleted:
+          type: boolean
+      required:
+      - deleted
+      - id
+      - object
+      type: object
+    FelorxResponse:
+      example:
+        output:
+        - "{}"
+        - "{}"
+        previous_response_id: previous_response_id
+        usage:
+          input_tokens_details:
+            cached_tokens: 0
+          total_tokens: 0
+          output_tokens: 0
+          input_tokens: 0
+          output_tokens_details:
+            reasoning_tokens: 0
+        created_at: 0
+        model: model
+        id: id
+        error: "{}"
+        incomplete_details: "{}"
+        object: response
+        status: queued
+      properties:
+        id:
+          type: string
+        object:
+          enum:
+          - response
+          type: string
+        model:
+          type: string
+        status:
+          enum:
+          - queued
+          - in_progress
+          - completed
+          - failed
+          - cancelled
+          - incomplete
+          type: string
+        output:
+          items:
+            type: object
+          type: array
+        created_at:
+          format: int64
+          minimum: 0
+          type: integer
+        previous_response_id:
+          nullable: true
+          type: string
+        usage:
+          $ref: "#/components/schemas/FelorxResponseUsage"
+        error:
+          type: object
+        incomplete_details:
+          type: object
+      required:
+      - id
+      - object
+      - output
+      - status
+      type: object
+    FelorxResponseInput:
+      oneOf:
+      - type: string
+      - items:
+          type: object
+        type: array
+    FelorxResponseInputItems:
+      additionalProperties: false
+      example:
+        first_id: first_id
+        data:
+        - "{}"
+        - "{}"
+        last_id: last_id
+        has_more: true
+        object: list
+      properties:
+        object:
+          enum:
+          - list
+          type: string
+        data:
+          items:
+            type: object
+          type: array
+        has_more:
+          type: boolean
+        first_id:
+          type: string
+        last_id:
+          type: string
+      required:
+      - data
+      - has_more
+      - object
+      type: object
+    FelorxResponseInputTokens:
+      additionalProperties: false
+      example:
+        input_tokens: 0
+        object: response.input_tokens
+      properties:
+        object:
+          enum:
+          - response.input_tokens
+          type: string
+        input_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+      required:
+      - input_tokens
+      - object
+      type: object
+    FelorxResponseToolChoice:
+      oneOf:
+      - enum:
+        - auto
+        - none
+        - required
+        type: string
+      - $ref: "#/components/schemas/FelorxResponseToolChoice_oneOf"
+    FelorxResponseUsage:
+      additionalProperties: false
+      example:
+        input_tokens_details:
+          cached_tokens: 0
+        total_tokens: 0
+        output_tokens: 0
+        input_tokens: 0
+        output_tokens_details:
+          reasoning_tokens: 0
+      properties:
+        input_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+        output_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+        total_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+        input_tokens_details:
+          $ref: "#/components/schemas/FelorxResponseUsage_input_tokens_details"
+        output_tokens_details:
+          $ref: "#/components/schemas/FelorxResponseUsage_output_tokens_details"
+      required:
+      - input_tokens
+      - output_tokens
+      - total_tokens
+      type: object
+    FelorxResponsesCompactRequest:
+      additionalProperties: false
+      example:
+        input: FelorxResponseInput
+        instructions: instructions
+        previous_response_id: previous_response_id
+        prompt_cache_options: "{}"
+        model: model
+        service_tier: service_tier
+        prompt_cache_key: prompt_cache_key
+        prompt_cache_retention: prompt_cache_retention
+      properties:
+        model:
+          type: string
+        input:
+          $ref: "#/components/schemas/FelorxResponseInput"
+        instructions:
+          type: string
+        previous_response_id:
+          type: string
+        prompt_cache_key:
+          type: string
+        prompt_cache_options:
+          type: object
+        prompt_cache_retention:
+          type: string
+        service_tier:
+          type: string
+      type: object
+    FelorxResponsesCountRequest:
+      additionalProperties: false
+      example:
+        input: FelorxResponseInput
+        instructions: instructions
+        previous_response_id: previous_response_id
+        parallel_tool_calls: true
+        personality: personality
+        reasoning: "{}"
+        tool_choice: auto
+        model: model
+        text: "{}"
+        tools:
+        - name: name
+          format: "{}"
+          description: description
+          type: function
+          strict: true
+          parameters: "{}"
+        - name: name
+          format: "{}"
+          description: description
+          type: function
+          strict: true
+          parameters: "{}"
+        truncation: truncation
+      properties:
+        model:
+          maxLength: 256
+          minLength: 1
+          type: string
+        input:
+          $ref: "#/components/schemas/FelorxResponseInput"
+        instructions:
+          type: string
+        previous_response_id:
+          type: string
+        tools:
+          items:
+            $ref: "#/components/schemas/FelorxResponsesCountRequest_tools_inner"
+          type: array
+        tool_choice:
+          $ref: "#/components/schemas/FelorxResponseToolChoice"
+        parallel_tool_calls:
+          type: boolean
+        reasoning:
+          type: object
+        text:
+          type: object
+        truncation:
+          type: string
+        personality:
+          type: string
+      type: object
+    FelorxResponsesCreateRequest:
+      description: "Only function/custom tool declarations are supported. Provider-managed\
+        \ conversation, prompt, item and file references are rejected. Inline input\
+        \ content is supported. Background requests require storage."
+      example:
+        instructions: instructions
+        metadata: "{}"
+        reasoning: "{}"
+        store: true
+        tools:
+        - name: name
+          format: "{}"
+          description: description
+          type: function
+          strict: true
+          parameters: "{}"
+        - name: name
+          format: "{}"
+          description: description
+          type: function
+          strict: true
+          parameters: "{}"
+        top_p: 1.4658129805029452
+        input: FelorxResponseInput
+        previous_response_id: previous_response_id
+        parallel_tool_calls: true
+        stream: true
+        background: true
+        temperature: 6.027456183070403
+        tool_choice: auto
+        model: model
+        service_tier: service_tier
+        text: "{}"
+        truncation: truncation
+        prompt_cache_key: prompt_cache_key
+        max_output_tokens: 1
+        prompt_cache_retention: prompt_cache_retention
+      properties:
+        model:
+          maxLength: 256
+          minLength: 1
+          type: string
+        input:
+          $ref: "#/components/schemas/FelorxResponseInput"
+        instructions:
+          type: string
+        previous_response_id:
+          type: string
+        tools:
+          items:
+            $ref: "#/components/schemas/FelorxResponsesCountRequest_tools_inner"
+          type: array
+        tool_choice:
+          $ref: "#/components/schemas/FelorxResponseToolChoice"
+        parallel_tool_calls:
+          type: boolean
+        reasoning:
+          type: object
+        text:
+          type: object
+        truncation:
+          type: string
+        stream:
+          type: boolean
+        store:
+          type: boolean
+        background:
+          type: boolean
+        max_output_tokens:
+          format: int32
+          minimum: 1
+          type: integer
+        temperature:
+          type: number
+        top_p:
+          type: number
+        metadata:
+          type: object
+        service_tier:
+          type: string
+        prompt_cache_key:
+          type: string
+        prompt_cache_retention:
+          type: string
+      type: object
+    FelorxResponsesError:
+      additionalProperties: false
+      example:
+        error:
+          code: code
+          param: param
+          type: type
+          message: message
+      properties:
+        error:
+          $ref: "#/components/schemas/FelorxResponsesError_error"
+      required:
+      - error
       type: object
     FindTenantResultDto:
       additionalProperties: false
@@ -32973,15 +35778,27 @@ components:
         routes:
         - path: path
           routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          values: ""
+          values:
+            key: ""
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         - path: path
           routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-          values: ""
+          values:
+            key: ""
+          id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         isPublished: true
         name: name
         description: description
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         iconUrl: iconUrl
+        categoryId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
+        id:
+          format: uuid
+          type: string
+        categoryId:
+          format: uuid
+          type: string
         name:
           nullable: true
           type: string
@@ -33009,10 +35826,14 @@ components:
         isPublished: true
         extra: extra
         description: description
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         iconUrl: iconUrl
         title: title
         rssbud: true
       properties:
+        id:
+          format: uuid
+          type: string
         title:
           nullable: true
           type: string
@@ -33045,8 +35866,13 @@ components:
       example:
         path: path
         routeId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        values: ""
+        values:
+          key: ""
+        id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
       properties:
+        id:
+          format: uuid
+          type: string
         routeId:
           format: uuid
           type: string
@@ -33054,7 +35880,9 @@ components:
           nullable: true
           type: string
         values:
+          additionalProperties: {}
           nullable: true
+          type: object
       type: object
     MessageSubscribeDto:
       additionalProperties: false
@@ -34141,6 +36969,63 @@ components:
       - Beta
       - Production
       type: string
+    RemotePairingAssertionDto:
+      additionalProperties: false
+      example:
+        assertion: assertion
+        expiresAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        assertion:
+          nullable: true
+          type: string
+        expiresAt:
+          format: date-time
+          type: string
+      type: object
+    RemotePairingBindingDto:
+      additionalProperties: false
+      example:
+        accountHash: accountHash
+        challengeId: challengeId
+        controllerId: controllerId
+        hostId: hostId
+        workspaceId: workspaceId
+      properties:
+        hostId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        challengeId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        controllerId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        workspaceId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        accountHash:
+          minLength: 1
+          pattern: "^[a-f0-9]{64}$"
+          type: string
+      required:
+      - accountHash
+      - challengeId
+      - controllerId
+      - hostId
+      - workspaceId
+      type: object
+    RemotePairingVerificationDto:
+      additionalProperties: false
+      example:
+        valid: true
+      properties:
+        valid:
+          type: boolean
+      type: object
     RemoteServiceErrorInfo:
       additionalProperties: false
       example:
@@ -34815,10 +37700,18 @@ components:
     TestAiProviderDto:
       additionalProperties: false
       example:
+        protocol: ChatCompletions
         capability: Chat
         image_url: image_url
+        model_id: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
         prompt: prompt
       properties:
+        model_id:
+          format: uuid
+          nullable: true
+          type: string
+        protocol:
+          $ref: "#/components/schemas/AiProtocol"
         capability:
           $ref: "#/components/schemas/AiCapability"
         prompt:
@@ -35876,6 +38769,48 @@ components:
         appleVerifyReceiptResult:
           $ref: "#/components/schemas/AppleVerifyReceiptResult"
       type: object
+    VerifyRemotePairingAssertionDto:
+      additionalProperties: false
+      example:
+        accountHash: accountHash
+        challengeId: challengeId
+        controllerId: controllerId
+        hostId: hostId
+        assertion: assertion
+        workspaceId: workspaceId
+      properties:
+        hostId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        challengeId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        controllerId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        workspaceId:
+          minLength: 1
+          pattern: "^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$"
+          type: string
+        accountHash:
+          minLength: 1
+          pattern: "^[a-f0-9]{64}$"
+          type: string
+        assertion:
+          minLength: 1
+          pattern: "^[A-Za-z0-9_-]{43}$"
+          type: string
+      required:
+      - accountHash
+      - assertion
+      - challengeId
+      - controllerId
+      - hostId
+      - workspaceId
+      type: object
     WindowsTimeZone:
       additionalProperties: false
       example:
@@ -35885,3 +38820,94 @@ components:
           nullable: true
           type: string
       type: object
+    FelorxResponseToolChoice_oneOf:
+      additionalProperties: false
+      properties:
+        type:
+          enum:
+          - function
+          - custom
+          type: string
+        name:
+          type: string
+      required:
+      - type
+      type: object
+    FelorxResponseUsage_input_tokens_details:
+      additionalProperties: false
+      example:
+        cached_tokens: 0
+      properties:
+        cached_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+      type: object
+    FelorxResponseUsage_output_tokens_details:
+      additionalProperties: false
+      example:
+        reasoning_tokens: 0
+      properties:
+        reasoning_tokens:
+          format: int64
+          minimum: 0
+          type: integer
+      type: object
+    FelorxResponsesCountRequest_tools_inner:
+      example:
+        name: name
+        format: "{}"
+        description: description
+        type: function
+        strict: true
+        parameters: "{}"
+      properties:
+        type:
+          enum:
+          - function
+          - custom
+          type: string
+        name:
+          maxLength: 64
+          minLength: 1
+          type: string
+        description:
+          type: string
+        parameters:
+          type: object
+        strict:
+          type: boolean
+        format:
+          type: object
+      required:
+      - name
+      - type
+      type: object
+    FelorxResponsesError_error:
+      additionalProperties: false
+      example:
+        code: code
+        param: param
+        type: type
+        message: message
+      properties:
+        type:
+          type: string
+        code:
+          type: string
+        message:
+          type: string
+        param:
+          nullable: true
+          type: string
+      required:
+      - code
+      - message
+      - type
+      type: object
+  securitySchemes:
+    FelorxBearer:
+      bearerFormat: JWT
+      description: Felorx access token for authenticated Responses operations.
+      scheme: bearer
+      type: http

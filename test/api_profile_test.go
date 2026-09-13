@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_ProfileAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_ProfileAPIService(t *testing.T) {
 
 	t.Run("Test ProfileAPIService ChangePassword", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.ProfileAPI.ChangePassword(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_ProfileAPIService(t *testing.T) {
 
 	t.Run("Test ProfileAPIService GetProfile", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.ProfileAPI.GetProfile(context.Background()).Execute()
 
@@ -47,7 +47,7 @@ func Test_felorx_ProfileAPIService(t *testing.T) {
 
 	t.Run("Test ProfileAPIService UpdateProfile", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.ProfileAPI.UpdateProfile(context.Background()).Execute()
 

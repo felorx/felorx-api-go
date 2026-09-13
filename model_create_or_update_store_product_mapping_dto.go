@@ -19,17 +19,17 @@ var _ MappedNullable = &CreateOrUpdateStoreProductMappingDto{}
 
 // CreateOrUpdateStoreProductMappingDto struct for CreateOrUpdateStoreProductMappingDto
 type CreateOrUpdateStoreProductMappingDto struct {
-	Id                NullableString    `json:"id,omitempty"`
-	AppId             *string           `json:"appId,omitempty"`
-	PricingId         *string           `json:"pricingId,omitempty"`
-	PlanPriceId       NullableString    `json:"planPriceId,omitempty"`
-	Provider          *BillingProvider  `json:"provider,omitempty"`
-	Platform          *AppPlatform      `json:"platform,omitempty"`
-	Period            *SubBillingPeriod `json:"period,omitempty"`
-	StoreProductId    NullableString    `json:"storeProductId,omitempty"`
-	ExternalProductId NullableString    `json:"externalProductId,omitempty"`
-	Environment       NullableString    `json:"environment,omitempty"`
-	IsEnabled         *bool             `json:"isEnabled,omitempty"`
+	Id NullableString `json:"id,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	PlanPriceId NullableString `json:"planPriceId,omitempty"`
+	Provider *BillingProvider `json:"provider,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Period *SubBillingPeriod `json:"period,omitempty"`
+	StoreProductId NullableString `json:"storeProductId,omitempty"`
+	ExternalProductId NullableString `json:"externalProductId,omitempty"`
+	Environment NullableString `json:"environment,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
 }
 
 // NewCreateOrUpdateStoreProductMappingDto instantiates a new CreateOrUpdateStoreProductMappingDto object
@@ -81,7 +81,6 @@ func (o *CreateOrUpdateStoreProductMappingDto) HasId() bool {
 func (o *CreateOrUpdateStoreProductMappingDto) SetId(v string) {
 	o.Id.Set(&v)
 }
-
 // SetIdNil sets the value for Id to be an explicit nil
 func (o *CreateOrUpdateStoreProductMappingDto) SetIdNil() {
 	o.Id.Set(nil)
@@ -188,7 +187,6 @@ func (o *CreateOrUpdateStoreProductMappingDto) HasPlanPriceId() bool {
 func (o *CreateOrUpdateStoreProductMappingDto) SetPlanPriceId(v string) {
 	o.PlanPriceId.Set(&v)
 }
-
 // SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
 func (o *CreateOrUpdateStoreProductMappingDto) SetPlanPriceIdNil() {
 	o.PlanPriceId.Set(nil)
@@ -327,7 +325,6 @@ func (o *CreateOrUpdateStoreProductMappingDto) HasStoreProductId() bool {
 func (o *CreateOrUpdateStoreProductMappingDto) SetStoreProductId(v string) {
 	o.StoreProductId.Set(&v)
 }
-
 // SetStoreProductIdNil sets the value for StoreProductId to be an explicit nil
 func (o *CreateOrUpdateStoreProductMappingDto) SetStoreProductIdNil() {
 	o.StoreProductId.Set(nil)
@@ -370,7 +367,6 @@ func (o *CreateOrUpdateStoreProductMappingDto) HasExternalProductId() bool {
 func (o *CreateOrUpdateStoreProductMappingDto) SetExternalProductId(v string) {
 	o.ExternalProductId.Set(&v)
 }
-
 // SetExternalProductIdNil sets the value for ExternalProductId to be an explicit nil
 func (o *CreateOrUpdateStoreProductMappingDto) SetExternalProductIdNil() {
 	o.ExternalProductId.Set(nil)
@@ -413,7 +409,6 @@ func (o *CreateOrUpdateStoreProductMappingDto) HasEnvironment() bool {
 func (o *CreateOrUpdateStoreProductMappingDto) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *CreateOrUpdateStoreProductMappingDto) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -457,7 +452,7 @@ func (o *CreateOrUpdateStoreProductMappingDto) SetIsEnabled(v bool) {
 }
 
 func (o CreateOrUpdateStoreProductMappingDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -537,3 +532,5 @@ func (v *NullableCreateOrUpdateStoreProductMappingDto) UnmarshalJSON(src []byte)
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

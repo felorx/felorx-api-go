@@ -19,17 +19,17 @@ var _ MappedNullable = &UserData{}
 
 // UserData struct for UserData
 type UserData struct {
-	Id                   *string                `json:"id,omitempty"`
-	TenantId             NullableString         `json:"tenantId,omitempty"`
-	UserName             NullableString         `json:"userName,omitempty"`
-	Name                 NullableString         `json:"name,omitempty"`
-	Surname              NullableString         `json:"surname,omitempty"`
-	IsActive             *bool                  `json:"isActive,omitempty"`
-	Email                NullableString         `json:"email,omitempty"`
-	EmailConfirmed       *bool                  `json:"emailConfirmed,omitempty"`
-	PhoneNumber          NullableString         `json:"phoneNumber,omitempty"`
-	PhoneNumberConfirmed *bool                  `json:"phoneNumberConfirmed,omitempty"`
-	ExtraProperties      map[string]interface{} `json:"extraProperties,omitempty"`
+	Id *string `json:"id,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	UserName NullableString `json:"userName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
+	Email NullableString `json:"email,omitempty"`
+	EmailConfirmed *bool `json:"emailConfirmed,omitempty"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	PhoneNumberConfirmed *bool `json:"phoneNumberConfirmed,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
 }
 
 // NewUserData instantiates a new UserData object
@@ -113,7 +113,6 @@ func (o *UserData) HasTenantId() bool {
 func (o *UserData) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *UserData) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -156,7 +155,6 @@ func (o *UserData) HasUserName() bool {
 func (o *UserData) SetUserName(v string) {
 	o.UserName.Set(&v)
 }
-
 // SetUserNameNil sets the value for UserName to be an explicit nil
 func (o *UserData) SetUserNameNil() {
 	o.UserName.Set(nil)
@@ -199,7 +197,6 @@ func (o *UserData) HasName() bool {
 func (o *UserData) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *UserData) SetNameNil() {
 	o.Name.Set(nil)
@@ -242,7 +239,6 @@ func (o *UserData) HasSurname() bool {
 func (o *UserData) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *UserData) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -317,7 +313,6 @@ func (o *UserData) HasEmail() bool {
 func (o *UserData) SetEmail(v string) {
 	o.Email.Set(&v)
 }
-
 // SetEmailNil sets the value for Email to be an explicit nil
 func (o *UserData) SetEmailNil() {
 	o.Email.Set(nil)
@@ -392,7 +387,6 @@ func (o *UserData) HasPhoneNumber() bool {
 func (o *UserData) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *UserData) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -469,7 +463,7 @@ func (o *UserData) SetExtraProperties(v map[string]interface{}) {
 }
 
 func (o UserData) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -549,3 +543,5 @@ func (v *NullableUserData) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

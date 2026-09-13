@@ -19,7 +19,7 @@ var _ MappedNullable = &IValueValidator{}
 
 // IValueValidator struct for IValueValidator
 type IValueValidator struct {
-	Name       NullableString         `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Properties map[string]interface{} `json:"properties,omitempty"`
 }
 
@@ -72,7 +72,6 @@ func (o *IValueValidator) HasName() bool {
 func (o *IValueValidator) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IValueValidator) SetNameNil() {
 	o.Name.Set(nil)
@@ -117,7 +116,7 @@ func (o *IValueValidator) SetProperties(v map[string]interface{}) {
 }
 
 func (o IValueValidator) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -170,3 +169,5 @@ func (v *NullableIValueValidator) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

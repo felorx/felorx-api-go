@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageSourceRoute**](MessageSourceRouteAPI.md#CreateMessageSourceRoute) | **Post** /api/app/message-source-route |
-[**DeleteMessageSourceRouteById**](MessageSourceRouteAPI.md#DeleteMessageSourceRouteById) | **Delete** /api/app/message-source-route/{id} |
-[**GetMessageSourceRouteById**](MessageSourceRouteAPI.md#GetMessageSourceRouteById) | **Get** /api/app/message-source-route/{id} |
-[**GetMessageSourceRouteList**](MessageSourceRouteAPI.md#GetMessageSourceRouteList) | **Get** /api/app/message-source-route |
-[**UpdateMessageSourceRoute**](MessageSourceRouteAPI.md#UpdateMessageSourceRoute) | **Put** /api/app/message-source-route/{id} |
+[**CreateMessageSourceRoute**](MessageSourceRouteAPI.md#CreateMessageSourceRoute) | **Post** /api/app/message-source-route | 
+[**DeleteMessageSourceRouteById**](MessageSourceRouteAPI.md#DeleteMessageSourceRouteById) | **Delete** /api/app/message-source-route/{id} | 
+[**GetMessageSourceRouteById**](MessageSourceRouteAPI.md#GetMessageSourceRouteById) | **Get** /api/app/message-source-route/{id} | 
+[**GetMessageSourceRouteList**](MessageSourceRouteAPI.md#GetMessageSourceRouteList) | **Get** /api/app/message-source-route | 
+[**UpdateMessageSourceRoute**](MessageSourceRouteAPI.md#UpdateMessageSourceRoute) | **Put** /api/app/message-source-route/{id} | 
 
 
 
@@ -54,7 +54,7 @@ Other parameters are passed through a pointer to a apiCreateMessageSourceRouteRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createUpdateMessageSourceRouteDto** | [**CreateUpdateMessageSourceRouteDto**](CreateUpdateMessageSourceRouteDto.md) |  |
+ **createUpdateMessageSourceRouteDto** | [**CreateUpdateMessageSourceRouteDto**](CreateUpdateMessageSourceRouteDto.md) |  | 
 
 ### Return type
 
@@ -93,7 +93,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -111,7 +111,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -159,7 +159,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -179,7 +179,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -252,7 +252,7 @@ Other parameters are passed through a pointer to a apiGetMessageSourceRouteListR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sourceId** | **string** |  |
+ **sourceId** | **string** |  | 
 
 ### Return type
 
@@ -291,7 +291,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createUpdateMessageSourceRouteDto := *openapiclient.NewCreateUpdateMessageSourceRouteDto() // CreateUpdateMessageSourceRouteDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -310,7 +310,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -320,7 +320,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageSourceRouteRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createUpdateMessageSourceRouteDto** | [**CreateUpdateMessageSourceRouteDto**](CreateUpdateMessageSourceRouteDto.md) |  |
+ **createUpdateMessageSourceRouteDto** | [**CreateUpdateMessageSourceRouteDto**](CreateUpdateMessageSourceRouteDto.md) |  | 
 
 ### Return type
 

@@ -20,14 +20,14 @@ var _ MappedNullable = &BuildRecordDto{}
 
 // BuildRecordDto 构建记录DTO
 type BuildRecordDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 应用ID
 	AppId *string `json:"appId,omitempty"`
 	// 应用名称
@@ -37,19 +37,23 @@ type BuildRecordDto struct {
 	// 分支名称
 	Branch NullableString `json:"branch,omitempty"`
 	// 提交哈希
-	CommitHash   NullableString `json:"commitHash,omitempty"`
-	Trigger      *BuildTrigger  `json:"trigger,omitempty"`
-	Platform     *AppPlatform   `json:"platform,omitempty"`
-	ArtifactType *ArtifactType  `json:"artifactType,omitempty"`
+	CommitHash NullableString `json:"commitHash,omitempty"`
+	Trigger *BuildTrigger `json:"trigger,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	ArtifactType *ArtifactType `json:"artifactType,omitempty"`
+	// 目标架构；空值或空字符串表示通用制品。
+	Architecture NullableString `json:"architecture,omitempty"`
 	// 环境
 	Environment NullableString `json:"environment,omitempty"`
 	// 构建号
 	BuildNumber NullableInt64 `json:"buildNumber,omitempty"`
-	Status      *BuildStatus  `json:"status,omitempty"`
+	Status *BuildStatus `json:"status,omitempty"`
 	// 开始时间
 	StartedAt *time.Time `json:"startedAt,omitempty"`
 	// 结束时间
 	CompletedAt NullableTime `json:"completedAt,omitempty"`
+	// 构建日志
+	Logs NullableString `json:"logs,omitempty"`
 	// 错误信息
 	ErrorMessage NullableString `json:"errorMessage,omitempty"`
 	// 构建产物下载地址
@@ -179,7 +183,6 @@ func (o *BuildRecordDto) HasCreatorId() bool {
 func (o *BuildRecordDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *BuildRecordDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -222,7 +225,6 @@ func (o *BuildRecordDto) HasLastModificationTime() bool {
 func (o *BuildRecordDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *BuildRecordDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -265,7 +267,6 @@ func (o *BuildRecordDto) HasLastModifierId() bool {
 func (o *BuildRecordDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *BuildRecordDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -340,7 +341,6 @@ func (o *BuildRecordDto) HasDeleterId() bool {
 func (o *BuildRecordDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *BuildRecordDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -383,7 +383,6 @@ func (o *BuildRecordDto) HasDeletionTime() bool {
 func (o *BuildRecordDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *BuildRecordDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -458,7 +457,6 @@ func (o *BuildRecordDto) HasAppName() bool {
 func (o *BuildRecordDto) SetAppName(v string) {
 	o.AppName.Set(&v)
 }
-
 // SetAppNameNil sets the value for AppName to be an explicit nil
 func (o *BuildRecordDto) SetAppNameNil() {
 	o.AppName.Set(nil)
@@ -501,7 +499,6 @@ func (o *BuildRecordDto) HasVersion() bool {
 func (o *BuildRecordDto) SetVersion(v string) {
 	o.Version.Set(&v)
 }
-
 // SetVersionNil sets the value for Version to be an explicit nil
 func (o *BuildRecordDto) SetVersionNil() {
 	o.Version.Set(nil)
@@ -544,7 +541,6 @@ func (o *BuildRecordDto) HasBranch() bool {
 func (o *BuildRecordDto) SetBranch(v string) {
 	o.Branch.Set(&v)
 }
-
 // SetBranchNil sets the value for Branch to be an explicit nil
 func (o *BuildRecordDto) SetBranchNil() {
 	o.Branch.Set(nil)
@@ -587,7 +583,6 @@ func (o *BuildRecordDto) HasCommitHash() bool {
 func (o *BuildRecordDto) SetCommitHash(v string) {
 	o.CommitHash.Set(&v)
 }
-
 // SetCommitHashNil sets the value for CommitHash to be an explicit nil
 func (o *BuildRecordDto) SetCommitHashNil() {
 	o.CommitHash.Set(nil)
@@ -694,6 +689,48 @@ func (o *BuildRecordDto) SetArtifactType(v ArtifactType) {
 	o.ArtifactType = &v
 }
 
+// GetArchitecture returns the Architecture field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *BuildRecordDto) GetArchitecture() string {
+	if o == nil || IsNil(o.Architecture.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Architecture.Get()
+}
+
+// GetArchitectureOk returns a tuple with the Architecture field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *BuildRecordDto) GetArchitectureOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Architecture.Get(), o.Architecture.IsSet()
+}
+
+// HasArchitecture returns a boolean if a field has been set.
+func (o *BuildRecordDto) HasArchitecture() bool {
+	if o != nil && o.Architecture.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetArchitecture gets a reference to the given NullableString and assigns it to the Architecture field.
+func (o *BuildRecordDto) SetArchitecture(v string) {
+	o.Architecture.Set(&v)
+}
+// SetArchitectureNil sets the value for Architecture to be an explicit nil
+func (o *BuildRecordDto) SetArchitectureNil() {
+	o.Architecture.Set(nil)
+}
+
+// UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
+func (o *BuildRecordDto) UnsetArchitecture() {
+	o.Architecture.Unset()
+}
+
 // GetEnvironment returns the Environment field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *BuildRecordDto) GetEnvironment() string {
 	if o == nil || IsNil(o.Environment.Get()) {
@@ -726,7 +763,6 @@ func (o *BuildRecordDto) HasEnvironment() bool {
 func (o *BuildRecordDto) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *BuildRecordDto) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -769,7 +805,6 @@ func (o *BuildRecordDto) HasBuildNumber() bool {
 func (o *BuildRecordDto) SetBuildNumber(v int64) {
 	o.BuildNumber.Set(&v)
 }
-
 // SetBuildNumberNil sets the value for BuildNumber to be an explicit nil
 func (o *BuildRecordDto) SetBuildNumberNil() {
 	o.BuildNumber.Set(nil)
@@ -876,7 +911,6 @@ func (o *BuildRecordDto) HasCompletedAt() bool {
 func (o *BuildRecordDto) SetCompletedAt(v time.Time) {
 	o.CompletedAt.Set(&v)
 }
-
 // SetCompletedAtNil sets the value for CompletedAt to be an explicit nil
 func (o *BuildRecordDto) SetCompletedAtNil() {
 	o.CompletedAt.Set(nil)
@@ -885,6 +919,48 @@ func (o *BuildRecordDto) SetCompletedAtNil() {
 // UnsetCompletedAt ensures that no value is present for CompletedAt, not even an explicit nil
 func (o *BuildRecordDto) UnsetCompletedAt() {
 	o.CompletedAt.Unset()
+}
+
+// GetLogs returns the Logs field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *BuildRecordDto) GetLogs() string {
+	if o == nil || IsNil(o.Logs.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Logs.Get()
+}
+
+// GetLogsOk returns a tuple with the Logs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *BuildRecordDto) GetLogsOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Logs.Get(), o.Logs.IsSet()
+}
+
+// HasLogs returns a boolean if a field has been set.
+func (o *BuildRecordDto) HasLogs() bool {
+	if o != nil && o.Logs.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetLogs gets a reference to the given NullableString and assigns it to the Logs field.
+func (o *BuildRecordDto) SetLogs(v string) {
+	o.Logs.Set(&v)
+}
+// SetLogsNil sets the value for Logs to be an explicit nil
+func (o *BuildRecordDto) SetLogsNil() {
+	o.Logs.Set(nil)
+}
+
+// UnsetLogs ensures that no value is present for Logs, not even an explicit nil
+func (o *BuildRecordDto) UnsetLogs() {
+	o.Logs.Unset()
 }
 
 // GetErrorMessage returns the ErrorMessage field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -919,7 +995,6 @@ func (o *BuildRecordDto) HasErrorMessage() bool {
 func (o *BuildRecordDto) SetErrorMessage(v string) {
 	o.ErrorMessage.Set(&v)
 }
-
 // SetErrorMessageNil sets the value for ErrorMessage to be an explicit nil
 func (o *BuildRecordDto) SetErrorMessageNil() {
 	o.ErrorMessage.Set(nil)
@@ -962,7 +1037,6 @@ func (o *BuildRecordDto) HasArtifactUrl() bool {
 func (o *BuildRecordDto) SetArtifactUrl(v string) {
 	o.ArtifactUrl.Set(&v)
 }
-
 // SetArtifactUrlNil sets the value for ArtifactUrl to be an explicit nil
 func (o *BuildRecordDto) SetArtifactUrlNil() {
 	o.ArtifactUrl.Set(nil)
@@ -1005,7 +1079,6 @@ func (o *BuildRecordDto) HasArtifactSize() bool {
 func (o *BuildRecordDto) SetArtifactSize(v int64) {
 	o.ArtifactSize.Set(&v)
 }
-
 // SetArtifactSizeNil sets the value for ArtifactSize to be an explicit nil
 func (o *BuildRecordDto) SetArtifactSizeNil() {
 	o.ArtifactSize.Set(nil)
@@ -1048,7 +1121,6 @@ func (o *BuildRecordDto) HasCiSystem() bool {
 func (o *BuildRecordDto) SetCiSystem(v string) {
 	o.CiSystem.Set(&v)
 }
-
 // SetCiSystemNil sets the value for CiSystem to be an explicit nil
 func (o *BuildRecordDto) SetCiSystemNil() {
 	o.CiSystem.Set(nil)
@@ -1091,7 +1163,6 @@ func (o *BuildRecordDto) HasCiBuildId() bool {
 func (o *BuildRecordDto) SetCiBuildId(v string) {
 	o.CiBuildId.Set(&v)
 }
-
 // SetCiBuildIdNil sets the value for CiBuildId to be an explicit nil
 func (o *BuildRecordDto) SetCiBuildIdNil() {
 	o.CiBuildId.Set(nil)
@@ -1134,7 +1205,6 @@ func (o *BuildRecordDto) HasCiBuildUrl() bool {
 func (o *BuildRecordDto) SetCiBuildUrl(v string) {
 	o.CiBuildUrl.Set(&v)
 }
-
 // SetCiBuildUrlNil sets the value for CiBuildUrl to be an explicit nil
 func (o *BuildRecordDto) SetCiBuildUrlNil() {
 	o.CiBuildUrl.Set(nil)
@@ -1177,7 +1247,6 @@ func (o *BuildRecordDto) HasDuration() bool {
 func (o *BuildRecordDto) SetDuration(v int32) {
 	o.Duration.Set(&v)
 }
-
 // SetDurationNil sets the value for Duration to be an explicit nil
 func (o *BuildRecordDto) SetDurationNil() {
 	o.Duration.Set(nil)
@@ -1189,7 +1258,7 @@ func (o *BuildRecordDto) UnsetDuration() {
 }
 
 func (o BuildRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1246,6 +1315,9 @@ func (o BuildRecordDto) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ArtifactType) {
 		toSerialize["artifactType"] = o.ArtifactType
 	}
+	if o.Architecture.IsSet() {
+		toSerialize["architecture"] = o.Architecture.Get()
+	}
 	if o.Environment.IsSet() {
 		toSerialize["environment"] = o.Environment.Get()
 	}
@@ -1260,6 +1332,9 @@ func (o BuildRecordDto) ToMap() (map[string]interface{}, error) {
 	}
 	if o.CompletedAt.IsSet() {
 		toSerialize["completedAt"] = o.CompletedAt.Get()
+	}
+	if o.Logs.IsSet() {
+		toSerialize["logs"] = o.Logs.Get()
 	}
 	if o.ErrorMessage.IsSet() {
 		toSerialize["errorMessage"] = o.ErrorMessage.Get()
@@ -1320,3 +1395,5 @@ func (v *NullableBuildRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

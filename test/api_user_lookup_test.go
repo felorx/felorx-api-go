@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_UserLookupAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_UserLookupAPIService(t *testing.T) {
 
 	t.Run("Test UserLookupAPIService FindById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -36,13 +36,13 @@ func Test_felorx_UserLookupAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test UserLookupAPIService FindByUserName", func(t *testing.T) {
+	t.Run("Test UserLookupAPIService FindByUserNameGetApiIdentityUsersLookupByUsernameUserName", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var userName string
 
-		resp, httpRes, err := apiClient.UserLookupAPI.FindByUserName(context.Background(), userName).Execute()
+		resp, httpRes, err := apiClient.UserLookupAPI.FindByUserNameGetApiIdentityUsersLookupByUsernameUserName(context.Background(), userName).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -52,7 +52,7 @@ func Test_felorx_UserLookupAPIService(t *testing.T) {
 
 	t.Run("Test UserLookupAPIService GetCount", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UserLookupAPI.GetCount(context.Background()).Execute()
 
@@ -64,7 +64,7 @@ func Test_felorx_UserLookupAPIService(t *testing.T) {
 
 	t.Run("Test UserLookupAPIService Search", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UserLookupAPI.Search(context.Background()).Execute()
 

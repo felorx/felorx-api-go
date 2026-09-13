@@ -20,14 +20,14 @@ var _ MappedNullable = &AppPricingItemDto{}
 
 // AppPricingItemDto struct for AppPricingItemDto
 type AppPricingItemDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxFelorxCount, 见 AppPricingItemKeys.cs
 	Key NullableString `json:"key,omitempty"`
 	// 名称: 坐席
@@ -157,7 +157,6 @@ func (o *AppPricingItemDto) HasCreatorId() bool {
 func (o *AppPricingItemDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppPricingItemDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -200,7 +199,6 @@ func (o *AppPricingItemDto) HasLastModificationTime() bool {
 func (o *AppPricingItemDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppPricingItemDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -243,7 +241,6 @@ func (o *AppPricingItemDto) HasLastModifierId() bool {
 func (o *AppPricingItemDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppPricingItemDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -318,7 +315,6 @@ func (o *AppPricingItemDto) HasDeleterId() bool {
 func (o *AppPricingItemDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppPricingItemDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -361,7 +357,6 @@ func (o *AppPricingItemDto) HasDeletionTime() bool {
 func (o *AppPricingItemDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppPricingItemDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -404,7 +399,6 @@ func (o *AppPricingItemDto) HasKey() bool {
 func (o *AppPricingItemDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *AppPricingItemDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -447,7 +441,6 @@ func (o *AppPricingItemDto) HasName() bool {
 func (o *AppPricingItemDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AppPricingItemDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -490,7 +483,6 @@ func (o *AppPricingItemDto) HasDescription() bool {
 func (o *AppPricingItemDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppPricingItemDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -533,7 +525,6 @@ func (o *AppPricingItemDto) HasLinkUrl() bool {
 func (o *AppPricingItemDto) SetLinkUrl(v string) {
 	o.LinkUrl.Set(&v)
 }
-
 // SetLinkUrlNil sets the value for LinkUrl to be an explicit nil
 func (o *AppPricingItemDto) SetLinkUrlNil() {
 	o.LinkUrl.Set(nil)
@@ -576,7 +567,6 @@ func (o *AppPricingItemDto) HasDisplay() bool {
 func (o *AppPricingItemDto) SetDisplay(v string) {
 	o.Display.Set(&v)
 }
-
 // SetDisplayNil sets the value for Display to be an explicit nil
 func (o *AppPricingItemDto) SetDisplayNil() {
 	o.Display.Set(nil)
@@ -652,7 +642,7 @@ func (o *AppPricingItemDto) SetSortIndex(v int32) {
 }
 
 func (o AppPricingItemDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -744,3 +734,5 @@ func (v *NullableAppPricingItemDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

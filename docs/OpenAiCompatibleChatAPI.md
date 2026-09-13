@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OpenAiCompatibleChatCreate**](OpenAiCompatibleChatAPI.md#OpenAiCompatibleChatCreate) | **Post** /api/ai/v1/chat/completions |
+[**CreatePostApiAiV1ChatCompletions**](OpenAiCompatibleChatAPI.md#CreatePostApiAiV1ChatCompletions) | **Post** /api/ai/v1/chat/completions | 
 
 
 
-## OpenAiCompatibleChatCreate
+## CreatePostApiAiV1ChatCompletions
 
-> AiChatCompletionDto OpenAiCompatibleChatCreate(ctx).OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto).Execute()
+> AiChatCompletionDto CreatePostApiAiV1ChatCompletions(ctx).OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto).Execute()
 
 
 
@@ -31,13 +31,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.OpenAiCompatibleChatAPI.OpenAiCompatibleChatCreate(context.Background()).OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto).Execute()
+	resp, r, err := apiClient.OpenAiCompatibleChatAPI.CreatePostApiAiV1ChatCompletions(context.Background()).OpenAiChatCompletionRequestDto(openAiChatCompletionRequestDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `OpenAiCompatibleChatAPI.OpenAiCompatibleChatCreate``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `OpenAiCompatibleChatAPI.CreatePostApiAiV1ChatCompletions``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `OpenAiCompatibleChatCreate`: AiChatCompletionDto
-	fmt.Fprintf(os.Stdout, "Response from `OpenAiCompatibleChatAPI.OpenAiCompatibleChatCreate`: %v\n", resp)
+	// response from `CreatePostApiAiV1ChatCompletions`: AiChatCompletionDto
+	fmt.Fprintf(os.Stdout, "Response from `OpenAiCompatibleChatAPI.CreatePostApiAiV1ChatCompletions`: %v\n", resp)
 }
 ```
 
@@ -47,12 +47,12 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiOpenAiCompatibleChatCreateRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCreatePostApiAiV1ChatCompletionsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **openAiChatCompletionRequestDto** | [**OpenAiChatCompletionRequestDto**](OpenAiChatCompletionRequestDto.md) |  |
+ **openAiChatCompletionRequestDto** | [**OpenAiChatCompletionRequestDto**](OpenAiChatCompletionRequestDto.md) |  | 
 
 ### Return type
 

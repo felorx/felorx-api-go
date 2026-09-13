@@ -19,18 +19,18 @@ var _ MappedNullable = &CreateOpenIddictApplicationDto{}
 
 // CreateOpenIddictApplicationDto struct for CreateOpenIddictApplicationDto
 type CreateOpenIddictApplicationDto struct {
-	Type                   NullableString `json:"type,omitempty"`
-	DisplayName            NullableString `json:"displayName,omitempty"`
-	DisplayNames           NullableString `json:"displayNames,omitempty"`
-	Permissions            []string       `json:"permissions,omitempty"`
+	Type NullableString `json:"type,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	DisplayNames NullableString `json:"displayNames,omitempty"`
+	Permissions []string `json:"permissions,omitempty"`
 	PostLogoutRedirectUris NullableString `json:"postLogoutRedirectUris,omitempty"`
-	Properties             NullableString `json:"properties,omitempty"`
-	RedirectUris           NullableString `json:"redirectUris,omitempty"`
-	Requirements           NullableString `json:"requirements,omitempty"`
-	ClientUri              NullableString `json:"clientUri,omitempty"`
-	LogoUri                NullableString `json:"logoUri,omitempty"`
-	GrantTypes             []string       `json:"grantTypes,omitempty"`
-	Scopes                 []string       `json:"scopes,omitempty"`
+	Properties NullableString `json:"properties,omitempty"`
+	RedirectUris NullableString `json:"redirectUris,omitempty"`
+	Requirements NullableString `json:"requirements,omitempty"`
+	ClientUri NullableString `json:"clientUri,omitempty"`
+	LogoUri NullableString `json:"logoUri,omitempty"`
+	GrantTypes []string `json:"grantTypes,omitempty"`
+	Scopes []string `json:"scopes,omitempty"`
 }
 
 // NewCreateOpenIddictApplicationDto instantiates a new CreateOpenIddictApplicationDto object
@@ -82,7 +82,6 @@ func (o *CreateOpenIddictApplicationDto) HasType() bool {
 func (o *CreateOpenIddictApplicationDto) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetTypeNil() {
 	o.Type.Set(nil)
@@ -125,7 +124,6 @@ func (o *CreateOpenIddictApplicationDto) HasDisplayName() bool {
 func (o *CreateOpenIddictApplicationDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -168,7 +166,6 @@ func (o *CreateOpenIddictApplicationDto) HasDisplayNames() bool {
 func (o *CreateOpenIddictApplicationDto) SetDisplayNames(v string) {
 	o.DisplayNames.Set(&v)
 }
-
 // SetDisplayNamesNil sets the value for DisplayNames to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetDisplayNamesNil() {
 	o.DisplayNames.Set(nil)
@@ -244,7 +241,6 @@ func (o *CreateOpenIddictApplicationDto) HasPostLogoutRedirectUris() bool {
 func (o *CreateOpenIddictApplicationDto) SetPostLogoutRedirectUris(v string) {
 	o.PostLogoutRedirectUris.Set(&v)
 }
-
 // SetPostLogoutRedirectUrisNil sets the value for PostLogoutRedirectUris to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetPostLogoutRedirectUrisNil() {
 	o.PostLogoutRedirectUris.Set(nil)
@@ -287,7 +283,6 @@ func (o *CreateOpenIddictApplicationDto) HasProperties() bool {
 func (o *CreateOpenIddictApplicationDto) SetProperties(v string) {
 	o.Properties.Set(&v)
 }
-
 // SetPropertiesNil sets the value for Properties to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetPropertiesNil() {
 	o.Properties.Set(nil)
@@ -330,7 +325,6 @@ func (o *CreateOpenIddictApplicationDto) HasRedirectUris() bool {
 func (o *CreateOpenIddictApplicationDto) SetRedirectUris(v string) {
 	o.RedirectUris.Set(&v)
 }
-
 // SetRedirectUrisNil sets the value for RedirectUris to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetRedirectUrisNil() {
 	o.RedirectUris.Set(nil)
@@ -373,7 +367,6 @@ func (o *CreateOpenIddictApplicationDto) HasRequirements() bool {
 func (o *CreateOpenIddictApplicationDto) SetRequirements(v string) {
 	o.Requirements.Set(&v)
 }
-
 // SetRequirementsNil sets the value for Requirements to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetRequirementsNil() {
 	o.Requirements.Set(nil)
@@ -416,7 +409,6 @@ func (o *CreateOpenIddictApplicationDto) HasClientUri() bool {
 func (o *CreateOpenIddictApplicationDto) SetClientUri(v string) {
 	o.ClientUri.Set(&v)
 }
-
 // SetClientUriNil sets the value for ClientUri to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetClientUriNil() {
 	o.ClientUri.Set(nil)
@@ -459,7 +451,6 @@ func (o *CreateOpenIddictApplicationDto) HasLogoUri() bool {
 func (o *CreateOpenIddictApplicationDto) SetLogoUri(v string) {
 	o.LogoUri.Set(&v)
 }
-
 // SetLogoUriNil sets the value for LogoUri to be an explicit nil
 func (o *CreateOpenIddictApplicationDto) SetLogoUriNil() {
 	o.LogoUri.Set(nil)
@@ -537,7 +528,7 @@ func (o *CreateOpenIddictApplicationDto) SetScopes(v []string) {
 }
 
 func (o CreateOpenIddictApplicationDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -620,3 +611,5 @@ func (v *NullableCreateOpenIddictApplicationDto) UnmarshalJSON(src []byte) error
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
-**AppLocaleId** | Pointer to **string** |  | [optional]
-**AppFeatureId** | Pointer to **NullableString** |  | [optional]
-**AssetType** | Pointer to [**AppAssetType**](AppAssetType.md) |  | [optional]
-**DeviceType** | Pointer to [**AppAssetDeviceType**](AppAssetDeviceType.md) |  | [optional]
-**Url** | Pointer to **NullableString** |  | [optional]
-**Sort** | Pointer to **int32** |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
+**AppLocaleId** | Pointer to **string** |  | [optional] 
+**AppFeatureId** | Pointer to **NullableString** |  | [optional] 
+**AssetType** | Pointer to [**AppAssetType**](AppAssetType.md) |  | [optional] 
+**DeviceType** | Pointer to [**AppAssetDeviceType**](AppAssetDeviceType.md) |  | [optional] 
+**Url** | Pointer to **NullableString** |  | [optional] 
+**Sort** | Pointer to **int32** |  | [optional] 
 
 ## Methods
 

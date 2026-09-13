@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **NullableString** |  | [optional]
-**Members** | Pointer to **[]string** |  | [optional]
+**Message** | Pointer to **NullableString** |  | [optional] 
+**Members** | Pointer to **[]string** |  | [optional] 
 
 ## Methods
 

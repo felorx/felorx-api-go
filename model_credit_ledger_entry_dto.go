@@ -20,13 +20,13 @@ var _ MappedNullable = &CreditLedgerEntryDto{}
 
 // CreditLedgerEntryDto struct for CreditLedgerEntryDto
 type CreditLedgerEntryDto struct {
-	Id           *string        `json:"id,omitempty"`
-	Amount       *int32         `json:"amount,omitempty"`
-	BalanceAfter *int32         `json:"balanceAfter,omitempty"`
-	Type         NullableString `json:"type,omitempty"`
-	ReferenceId  NullableString `json:"referenceId,omitempty"`
-	Description  NullableString `json:"description,omitempty"`
-	CreationTime *time.Time     `json:"creationTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	Amount *int32 `json:"amount,omitempty"`
+	BalanceAfter *int32 `json:"balanceAfter,omitempty"`
+	Type NullableString `json:"type,omitempty"`
+	ReferenceId NullableString `json:"referenceId,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
 }
 
 // NewCreditLedgerEntryDto instantiates a new CreditLedgerEntryDto object
@@ -174,7 +174,6 @@ func (o *CreditLedgerEntryDto) HasType() bool {
 func (o *CreditLedgerEntryDto) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *CreditLedgerEntryDto) SetTypeNil() {
 	o.Type.Set(nil)
@@ -217,7 +216,6 @@ func (o *CreditLedgerEntryDto) HasReferenceId() bool {
 func (o *CreditLedgerEntryDto) SetReferenceId(v string) {
 	o.ReferenceId.Set(&v)
 }
-
 // SetReferenceIdNil sets the value for ReferenceId to be an explicit nil
 func (o *CreditLedgerEntryDto) SetReferenceIdNil() {
 	o.ReferenceId.Set(nil)
@@ -260,7 +258,6 @@ func (o *CreditLedgerEntryDto) HasDescription() bool {
 func (o *CreditLedgerEntryDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreditLedgerEntryDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -304,7 +301,7 @@ func (o *CreditLedgerEntryDto) SetCreationTime(v time.Time) {
 }
 
 func (o CreditLedgerEntryDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -372,3 +369,5 @@ func (v *NullableCreditLedgerEntryDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

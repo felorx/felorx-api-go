@@ -19,8 +19,8 @@ var _ MappedNullable = &NotificationInfoDtoPagedResultDto{}
 
 // NotificationInfoDtoPagedResultDto struct for NotificationInfoDtoPagedResultDto
 type NotificationInfoDtoPagedResultDto struct {
-	Items      []NotificationInfoDto `json:"items,omitempty"`
-	TotalCount *int64                `json:"totalCount,omitempty"`
+	Items []NotificationInfoDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewNotificationInfoDtoPagedResultDto instantiates a new NotificationInfoDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *NotificationInfoDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o NotificationInfoDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableNotificationInfoDtoPagedResultDto) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

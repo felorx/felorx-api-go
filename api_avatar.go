@@ -18,12 +18,13 @@ import (
 	"net/url"
 )
 
+
 // AvatarAPIService AvatarAPI service
 type AvatarAPIService service
 
 type ApiCreateAvatarRequest struct {
-	ctx             context.Context
-	ApiService      *AvatarAPIService
+	ctx context.Context
+	ApiService *AvatarAPIService
 	createAvatarDto *CreateAvatarDto
 }
 
@@ -39,25 +40,24 @@ func (r ApiCreateAvatarRequest) Execute() (*AvatarDto, *http.Response, error) {
 /*
 CreateAvatar Method for CreateAvatar
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAvatarRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAvatarRequest
 */
 func (a *AvatarAPIService) CreateAvatar(ctx context.Context) ApiCreateAvatarRequest {
 	return ApiCreateAvatarRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AvatarDto
+//  @return AvatarDto
 func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*AvatarDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AvatarDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AvatarDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AvatarAPIService.CreateAvatar")
@@ -119,8 +119,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -130,8 +130,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -141,8 +141,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -152,8 +152,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -163,8 +163,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -174,8 +174,8 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -193,9 +193,9 @@ func (a *AvatarAPIService) CreateAvatarExecute(r ApiCreateAvatarRequest) (*Avata
 }
 
 type ApiGetCredentialsRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AvatarAPIService
-	key        *string
+	key *string
 }
 
 func (r ApiGetCredentialsRequest) Key(key string) ApiGetCredentialsRequest {
@@ -210,25 +210,24 @@ func (r ApiGetCredentialsRequest) Execute() (*StorageObjectCredentials, *http.Re
 /*
 GetCredentials Method for GetCredentials
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetCredentialsRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetCredentialsRequest
 */
 func (a *AvatarAPIService) GetCredentials(ctx context.Context) ApiGetCredentialsRequest {
 	return ApiGetCredentialsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return StorageObjectCredentials
+//  @return StorageObjectCredentials
 func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*StorageObjectCredentials, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *StorageObjectCredentials
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *StorageObjectCredentials
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AvatarAPIService.GetCredentials")
@@ -291,8 +290,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -302,8 +301,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -313,8 +312,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -324,8 +323,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -335,8 +334,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -346,8 +345,8 @@ func (a *AvatarAPIService) GetCredentialsExecute(r ApiGetCredentialsRequest) (*S
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

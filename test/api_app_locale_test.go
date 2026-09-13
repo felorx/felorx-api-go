@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AppLocaleAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AppLocaleAPIService(t *testing.T) {
 
 	t.Run("Test AppLocaleAPIService CreateAppLocale", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppLocaleAPI.CreateAppLocale(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_AppLocaleAPIService(t *testing.T) {
 
 	t.Run("Test AppLocaleAPIService DeleteAppLocaleById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -47,13 +47,13 @@ func Test_felorx_AppLocaleAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AppLocaleAPIService GetListByAppId", func(t *testing.T) {
+	t.Run("Test AppLocaleAPIService GetListByAppIdGetApiAppAppLocaleByAppIdAppId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
-		resp, httpRes, err := apiClient.AppLocaleAPI.GetListByAppId(context.Background(), appId).Execute()
+		resp, httpRes, err := apiClient.AppLocaleAPI.GetListByAppIdGetApiAppAppLocaleByAppIdAppId(context.Background(), appId).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -63,7 +63,7 @@ func Test_felorx_AppLocaleAPIService(t *testing.T) {
 
 	t.Run("Test AppLocaleAPIService UpdateAppLocale", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

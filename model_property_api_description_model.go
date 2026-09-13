@@ -19,16 +19,16 @@ var _ MappedNullable = &PropertyApiDescriptionModel{}
 
 // PropertyApiDescriptionModel struct for PropertyApiDescriptionModel
 type PropertyApiDescriptionModel struct {
-	Name       NullableString `json:"name,omitempty"`
-	JsonName   NullableString `json:"jsonName,omitempty"`
-	Type       NullableString `json:"type,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	JsonName NullableString `json:"jsonName,omitempty"`
+	Type NullableString `json:"type,omitempty"`
 	TypeSimple NullableString `json:"typeSimple,omitempty"`
-	IsRequired *bool          `json:"isRequired,omitempty"`
-	MinLength  NullableInt32  `json:"minLength,omitempty"`
-	MaxLength  NullableInt32  `json:"maxLength,omitempty"`
-	Minimum    NullableString `json:"minimum,omitempty"`
-	Maximum    NullableString `json:"maximum,omitempty"`
-	Regex      NullableString `json:"regex,omitempty"`
+	IsRequired *bool `json:"isRequired,omitempty"`
+	MinLength NullableInt32 `json:"minLength,omitempty"`
+	MaxLength NullableInt32 `json:"maxLength,omitempty"`
+	Minimum NullableString `json:"minimum,omitempty"`
+	Maximum NullableString `json:"maximum,omitempty"`
+	Regex NullableString `json:"regex,omitempty"`
 }
 
 // NewPropertyApiDescriptionModel instantiates a new PropertyApiDescriptionModel object
@@ -80,7 +80,6 @@ func (o *PropertyApiDescriptionModel) HasName() bool {
 func (o *PropertyApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -123,7 +122,6 @@ func (o *PropertyApiDescriptionModel) HasJsonName() bool {
 func (o *PropertyApiDescriptionModel) SetJsonName(v string) {
 	o.JsonName.Set(&v)
 }
-
 // SetJsonNameNil sets the value for JsonName to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetJsonNameNil() {
 	o.JsonName.Set(nil)
@@ -166,7 +164,6 @@ func (o *PropertyApiDescriptionModel) HasType() bool {
 func (o *PropertyApiDescriptionModel) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetTypeNil() {
 	o.Type.Set(nil)
@@ -209,7 +206,6 @@ func (o *PropertyApiDescriptionModel) HasTypeSimple() bool {
 func (o *PropertyApiDescriptionModel) SetTypeSimple(v string) {
 	o.TypeSimple.Set(&v)
 }
-
 // SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetTypeSimpleNil() {
 	o.TypeSimple.Set(nil)
@@ -284,7 +280,6 @@ func (o *PropertyApiDescriptionModel) HasMinLength() bool {
 func (o *PropertyApiDescriptionModel) SetMinLength(v int32) {
 	o.MinLength.Set(&v)
 }
-
 // SetMinLengthNil sets the value for MinLength to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetMinLengthNil() {
 	o.MinLength.Set(nil)
@@ -327,7 +322,6 @@ func (o *PropertyApiDescriptionModel) HasMaxLength() bool {
 func (o *PropertyApiDescriptionModel) SetMaxLength(v int32) {
 	o.MaxLength.Set(&v)
 }
-
 // SetMaxLengthNil sets the value for MaxLength to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetMaxLengthNil() {
 	o.MaxLength.Set(nil)
@@ -370,7 +364,6 @@ func (o *PropertyApiDescriptionModel) HasMinimum() bool {
 func (o *PropertyApiDescriptionModel) SetMinimum(v string) {
 	o.Minimum.Set(&v)
 }
-
 // SetMinimumNil sets the value for Minimum to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetMinimumNil() {
 	o.Minimum.Set(nil)
@@ -413,7 +406,6 @@ func (o *PropertyApiDescriptionModel) HasMaximum() bool {
 func (o *PropertyApiDescriptionModel) SetMaximum(v string) {
 	o.Maximum.Set(&v)
 }
-
 // SetMaximumNil sets the value for Maximum to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetMaximumNil() {
 	o.Maximum.Set(nil)
@@ -456,7 +448,6 @@ func (o *PropertyApiDescriptionModel) HasRegex() bool {
 func (o *PropertyApiDescriptionModel) SetRegex(v string) {
 	o.Regex.Set(&v)
 }
-
 // SetRegexNil sets the value for Regex to be an explicit nil
 func (o *PropertyApiDescriptionModel) SetRegexNil() {
 	o.Regex.Set(nil)
@@ -468,7 +459,7 @@ func (o *PropertyApiDescriptionModel) UnsetRegex() {
 }
 
 func (o PropertyApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -545,3 +536,5 @@ func (v *NullablePropertyApiDescriptionModel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

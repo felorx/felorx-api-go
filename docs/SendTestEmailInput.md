@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SenderEmailAddress** | **string** |  |
-**TargetEmailAddress** | **string** |  |
-**Subject** | **string** |  |
-**Body** | Pointer to **NullableString** |  | [optional]
+**SenderEmailAddress** | **string** |  | 
+**TargetEmailAddress** | **string** |  | 
+**Subject** | **string** |  | 
+**Body** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

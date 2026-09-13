@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -106,7 +106,6 @@ func (o *UpdateDeployRecordDto) HasLogs() bool {
 func (o *UpdateDeployRecordDto) SetLogs(v string) {
 	o.Logs.Set(&v)
 }
-
 // SetLogsNil sets the value for Logs to be an explicit nil
 func (o *UpdateDeployRecordDto) SetLogsNil() {
 	o.Logs.Set(nil)
@@ -149,7 +148,6 @@ func (o *UpdateDeployRecordDto) HasErrorMessage() bool {
 func (o *UpdateDeployRecordDto) SetErrorMessage(v string) {
 	o.ErrorMessage.Set(&v)
 }
-
 // SetErrorMessageNil sets the value for ErrorMessage to be an explicit nil
 func (o *UpdateDeployRecordDto) SetErrorMessageNil() {
 	o.ErrorMessage.Set(nil)
@@ -192,7 +190,6 @@ func (o *UpdateDeployRecordDto) HasDeployUrl() bool {
 func (o *UpdateDeployRecordDto) SetDeployUrl(v string) {
 	o.DeployUrl.Set(&v)
 }
-
 // SetDeployUrlNil sets the value for DeployUrl to be an explicit nil
 func (o *UpdateDeployRecordDto) SetDeployUrlNil() {
 	o.DeployUrl.Set(nil)
@@ -204,7 +201,7 @@ func (o *UpdateDeployRecordDto) UnsetDeployUrl() {
 }
 
 func (o UpdateDeployRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -239,10 +236,10 @@ func (o *UpdateDeployRecordDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -298,3 +295,5 @@ func (v *NullableUpdateDeployRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

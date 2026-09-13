@@ -18,12 +18,13 @@ import (
 	"net/url"
 )
 
+
 // AppUserScoreAPIService AppUserScoreAPI service
 type AppUserScoreAPIService service
 
 type ApiCreateAppUserScoreRequest struct {
-	ctx                           context.Context
-	ApiService                    *AppUserScoreAPIService
+	ctx context.Context
+	ApiService *AppUserScoreAPIService
 	createOrUpdateAppUserScoreDto *CreateOrUpdateAppUserScoreDto
 }
 
@@ -39,25 +40,24 @@ func (r ApiCreateAppUserScoreRequest) Execute() (*AppUserScoreDto, *http.Respons
 /*
 CreateAppUserScore Method for CreateAppUserScore
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppUserScoreRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppUserScoreRequest
 */
 func (a *AppUserScoreAPIService) CreateAppUserScore(ctx context.Context) ApiCreateAppUserScoreRequest {
 	return ApiCreateAppUserScoreRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppUserScoreDto
+//  @return AppUserScoreDto
 func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserScoreRequest) (*AppUserScoreDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppUserScoreDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppUserScoreDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppUserScoreAPIService.CreateAppUserScore")
@@ -119,8 +119,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -130,8 +130,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -141,8 +141,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -152,8 +152,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -163,8 +163,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -174,8 +174,8 @@ func (a *AppUserScoreAPIService) CreateAppUserScoreExecute(r ApiCreateAppUserSco
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

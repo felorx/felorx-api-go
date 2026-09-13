@@ -146,7 +146,6 @@ func (o *CreateAlipayOrderDto) HasPlanType() bool {
 func (o *CreateAlipayOrderDto) SetPlanType(v string) {
 	o.PlanType.Set(&v)
 }
-
 // SetPlanTypeNil sets the value for PlanType to be an explicit nil
 func (o *CreateAlipayOrderDto) SetPlanTypeNil() {
 	o.PlanType.Set(nil)
@@ -189,7 +188,6 @@ func (o *CreateAlipayOrderDto) HasCheckoutMode() bool {
 func (o *CreateAlipayOrderDto) SetCheckoutMode(v string) {
 	o.CheckoutMode.Set(&v)
 }
-
 // SetCheckoutModeNil sets the value for CheckoutMode to be an explicit nil
 func (o *CreateAlipayOrderDto) SetCheckoutModeNil() {
 	o.CheckoutMode.Set(nil)
@@ -232,7 +230,6 @@ func (o *CreateAlipayOrderDto) HasReturnUrl() bool {
 func (o *CreateAlipayOrderDto) SetReturnUrl(v string) {
 	o.ReturnUrl.Set(&v)
 }
-
 // SetReturnUrlNil sets the value for ReturnUrl to be an explicit nil
 func (o *CreateAlipayOrderDto) SetReturnUrlNil() {
 	o.ReturnUrl.Set(nil)
@@ -275,7 +272,6 @@ func (o *CreateAlipayOrderDto) HasQuitUrl() bool {
 func (o *CreateAlipayOrderDto) SetQuitUrl(v string) {
 	o.QuitUrl.Set(&v)
 }
-
 // SetQuitUrlNil sets the value for QuitUrl to be an explicit nil
 func (o *CreateAlipayOrderDto) SetQuitUrlNil() {
 	o.QuitUrl.Set(nil)
@@ -287,7 +283,7 @@ func (o *CreateAlipayOrderDto) UnsetQuitUrl() {
 }
 
 func (o CreateAlipayOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -352,3 +348,5 @@ func (v *NullableCreateAlipayOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -19,13 +19,13 @@ var _ MappedNullable = &UpdateProfileDto{}
 
 // UpdateProfileDto struct for UpdateProfileDto
 type UpdateProfileDto struct {
-	ExtraProperties  map[string]interface{} `json:"extraProperties,omitempty"`
-	UserName         NullableString         `json:"userName,omitempty"`
-	Email            NullableString         `json:"email,omitempty"`
-	Name             NullableString         `json:"name,omitempty"`
-	Surname          NullableString         `json:"surname,omitempty"`
-	PhoneNumber      NullableString         `json:"phoneNumber,omitempty"`
-	ConcurrencyStamp NullableString         `json:"concurrencyStamp,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	UserName NullableString `json:"userName,omitempty"`
+	Email NullableString `json:"email,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
 }
 
 // NewUpdateProfileDto instantiates a new UpdateProfileDto object
@@ -110,7 +110,6 @@ func (o *UpdateProfileDto) HasUserName() bool {
 func (o *UpdateProfileDto) SetUserName(v string) {
 	o.UserName.Set(&v)
 }
-
 // SetUserNameNil sets the value for UserName to be an explicit nil
 func (o *UpdateProfileDto) SetUserNameNil() {
 	o.UserName.Set(nil)
@@ -153,7 +152,6 @@ func (o *UpdateProfileDto) HasEmail() bool {
 func (o *UpdateProfileDto) SetEmail(v string) {
 	o.Email.Set(&v)
 }
-
 // SetEmailNil sets the value for Email to be an explicit nil
 func (o *UpdateProfileDto) SetEmailNil() {
 	o.Email.Set(nil)
@@ -196,7 +194,6 @@ func (o *UpdateProfileDto) HasName() bool {
 func (o *UpdateProfileDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *UpdateProfileDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -239,7 +236,6 @@ func (o *UpdateProfileDto) HasSurname() bool {
 func (o *UpdateProfileDto) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *UpdateProfileDto) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -282,7 +278,6 @@ func (o *UpdateProfileDto) HasPhoneNumber() bool {
 func (o *UpdateProfileDto) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *UpdateProfileDto) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -325,7 +320,6 @@ func (o *UpdateProfileDto) HasConcurrencyStamp() bool {
 func (o *UpdateProfileDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *UpdateProfileDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -337,7 +331,7 @@ func (o *UpdateProfileDto) UnsetConcurrencyStamp() {
 }
 
 func (o UpdateProfileDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -405,3 +399,5 @@ func (v *NullableUpdateProfileDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

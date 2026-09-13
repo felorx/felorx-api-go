@@ -20,42 +20,42 @@ var _ MappedNullable = &IdentityUser{}
 
 // IdentityUser struct for IdentityUser
 type IdentityUser struct {
-	Id                              *string                        `json:"id,omitempty"`
-	ExtraProperties                 map[string]interface{}         `json:"extraProperties,omitempty"`
-	ConcurrencyStamp                NullableString                 `json:"concurrencyStamp,omitempty"`
-	CreationTime                    *time.Time                     `json:"creationTime,omitempty"`
-	CreatorId                       NullableString                 `json:"creatorId,omitempty"`
-	LastModificationTime            NullableTime                   `json:"lastModificationTime,omitempty"`
-	LastModifierId                  NullableString                 `json:"lastModifierId,omitempty"`
-	IsDeleted                       *bool                          `json:"isDeleted,omitempty"`
-	DeleterId                       NullableString                 `json:"deleterId,omitempty"`
-	DeletionTime                    NullableTime                   `json:"deletionTime,omitempty"`
-	TenantId                        NullableString                 `json:"tenantId,omitempty"`
-	UserName                        NullableString                 `json:"userName,omitempty"`
-	NormalizedUserName              NullableString                 `json:"normalizedUserName,omitempty"`
-	Name                            NullableString                 `json:"name,omitempty"`
-	Surname                         NullableString                 `json:"surname,omitempty"`
-	Email                           NullableString                 `json:"email,omitempty"`
-	NormalizedEmail                 NullableString                 `json:"normalizedEmail,omitempty"`
-	EmailConfirmed                  *bool                          `json:"emailConfirmed,omitempty"`
-	PasswordHash                    NullableString                 `json:"passwordHash,omitempty"`
-	SecurityStamp                   NullableString                 `json:"securityStamp,omitempty"`
-	IsExternal                      *bool                          `json:"isExternal,omitempty"`
-	PhoneNumber                     NullableString                 `json:"phoneNumber,omitempty"`
-	PhoneNumberConfirmed            *bool                          `json:"phoneNumberConfirmed,omitempty"`
-	IsActive                        *bool                          `json:"isActive,omitempty"`
-	TwoFactorEnabled                *bool                          `json:"twoFactorEnabled,omitempty"`
-	LockoutEnd                      NullableTime                   `json:"lockoutEnd,omitempty"`
-	LockoutEnabled                  *bool                          `json:"lockoutEnabled,omitempty"`
-	AccessFailedCount               *int32                         `json:"accessFailedCount,omitempty"`
-	ShouldChangePasswordOnNextLogin *bool                          `json:"shouldChangePasswordOnNextLogin,omitempty"`
-	EntityVersion                   *int32                         `json:"entityVersion,omitempty"`
-	LastPasswordChangeTime          NullableTime                   `json:"lastPasswordChangeTime,omitempty"`
-	Roles                           []IdentityUserRole             `json:"roles,omitempty"`
-	Claims                          []IdentityUserClaim            `json:"claims,omitempty"`
-	Logins                          []IdentityUserLogin            `json:"logins,omitempty"`
-	Tokens                          []IdentityUserToken            `json:"tokens,omitempty"`
-	OrganizationUnits               []IdentityUserOrganizationUnit `json:"organizationUnits,omitempty"`
+	Id *string `json:"id,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	UserName NullableString `json:"userName,omitempty"`
+	NormalizedUserName NullableString `json:"normalizedUserName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	Email NullableString `json:"email,omitempty"`
+	NormalizedEmail NullableString `json:"normalizedEmail,omitempty"`
+	EmailConfirmed *bool `json:"emailConfirmed,omitempty"`
+	PasswordHash NullableString `json:"passwordHash,omitempty"`
+	SecurityStamp NullableString `json:"securityStamp,omitempty"`
+	IsExternal *bool `json:"isExternal,omitempty"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	PhoneNumberConfirmed *bool `json:"phoneNumberConfirmed,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
+	TwoFactorEnabled *bool `json:"twoFactorEnabled,omitempty"`
+	LockoutEnd NullableTime `json:"lockoutEnd,omitempty"`
+	LockoutEnabled *bool `json:"lockoutEnabled,omitempty"`
+	AccessFailedCount *int32 `json:"accessFailedCount,omitempty"`
+	ShouldChangePasswordOnNextLogin *bool `json:"shouldChangePasswordOnNextLogin,omitempty"`
+	EntityVersion *int32 `json:"entityVersion,omitempty"`
+	LastPasswordChangeTime NullableTime `json:"lastPasswordChangeTime,omitempty"`
+	Roles []IdentityUserRole `json:"roles,omitempty"`
+	Claims []IdentityUserClaim `json:"claims,omitempty"`
+	Logins []IdentityUserLogin `json:"logins,omitempty"`
+	Tokens []IdentityUserToken `json:"tokens,omitempty"`
+	OrganizationUnits []IdentityUserOrganizationUnit `json:"organizationUnits,omitempty"`
 }
 
 // NewIdentityUser instantiates a new IdentityUser object
@@ -172,7 +172,6 @@ func (o *IdentityUser) HasConcurrencyStamp() bool {
 func (o *IdentityUser) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *IdentityUser) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -247,7 +246,6 @@ func (o *IdentityUser) HasCreatorId() bool {
 func (o *IdentityUser) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *IdentityUser) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -290,7 +288,6 @@ func (o *IdentityUser) HasLastModificationTime() bool {
 func (o *IdentityUser) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *IdentityUser) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -333,7 +330,6 @@ func (o *IdentityUser) HasLastModifierId() bool {
 func (o *IdentityUser) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *IdentityUser) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -408,7 +404,6 @@ func (o *IdentityUser) HasDeleterId() bool {
 func (o *IdentityUser) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *IdentityUser) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -451,7 +446,6 @@ func (o *IdentityUser) HasDeletionTime() bool {
 func (o *IdentityUser) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *IdentityUser) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -494,7 +488,6 @@ func (o *IdentityUser) HasTenantId() bool {
 func (o *IdentityUser) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUser) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -537,7 +530,6 @@ func (o *IdentityUser) HasUserName() bool {
 func (o *IdentityUser) SetUserName(v string) {
 	o.UserName.Set(&v)
 }
-
 // SetUserNameNil sets the value for UserName to be an explicit nil
 func (o *IdentityUser) SetUserNameNil() {
 	o.UserName.Set(nil)
@@ -580,7 +572,6 @@ func (o *IdentityUser) HasNormalizedUserName() bool {
 func (o *IdentityUser) SetNormalizedUserName(v string) {
 	o.NormalizedUserName.Set(&v)
 }
-
 // SetNormalizedUserNameNil sets the value for NormalizedUserName to be an explicit nil
 func (o *IdentityUser) SetNormalizedUserNameNil() {
 	o.NormalizedUserName.Set(nil)
@@ -623,7 +614,6 @@ func (o *IdentityUser) HasName() bool {
 func (o *IdentityUser) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IdentityUser) SetNameNil() {
 	o.Name.Set(nil)
@@ -666,7 +656,6 @@ func (o *IdentityUser) HasSurname() bool {
 func (o *IdentityUser) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *IdentityUser) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -709,7 +698,6 @@ func (o *IdentityUser) HasEmail() bool {
 func (o *IdentityUser) SetEmail(v string) {
 	o.Email.Set(&v)
 }
-
 // SetEmailNil sets the value for Email to be an explicit nil
 func (o *IdentityUser) SetEmailNil() {
 	o.Email.Set(nil)
@@ -752,7 +740,6 @@ func (o *IdentityUser) HasNormalizedEmail() bool {
 func (o *IdentityUser) SetNormalizedEmail(v string) {
 	o.NormalizedEmail.Set(&v)
 }
-
 // SetNormalizedEmailNil sets the value for NormalizedEmail to be an explicit nil
 func (o *IdentityUser) SetNormalizedEmailNil() {
 	o.NormalizedEmail.Set(nil)
@@ -827,7 +814,6 @@ func (o *IdentityUser) HasPasswordHash() bool {
 func (o *IdentityUser) SetPasswordHash(v string) {
 	o.PasswordHash.Set(&v)
 }
-
 // SetPasswordHashNil sets the value for PasswordHash to be an explicit nil
 func (o *IdentityUser) SetPasswordHashNil() {
 	o.PasswordHash.Set(nil)
@@ -870,7 +856,6 @@ func (o *IdentityUser) HasSecurityStamp() bool {
 func (o *IdentityUser) SetSecurityStamp(v string) {
 	o.SecurityStamp.Set(&v)
 }
-
 // SetSecurityStampNil sets the value for SecurityStamp to be an explicit nil
 func (o *IdentityUser) SetSecurityStampNil() {
 	o.SecurityStamp.Set(nil)
@@ -945,7 +930,6 @@ func (o *IdentityUser) HasPhoneNumber() bool {
 func (o *IdentityUser) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *IdentityUser) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -1084,7 +1068,6 @@ func (o *IdentityUser) HasLockoutEnd() bool {
 func (o *IdentityUser) SetLockoutEnd(v time.Time) {
 	o.LockoutEnd.Set(&v)
 }
-
 // SetLockoutEndNil sets the value for LockoutEnd to be an explicit nil
 func (o *IdentityUser) SetLockoutEndNil() {
 	o.LockoutEnd.Set(nil)
@@ -1255,7 +1238,6 @@ func (o *IdentityUser) HasLastPasswordChangeTime() bool {
 func (o *IdentityUser) SetLastPasswordChangeTime(v time.Time) {
 	o.LastPasswordChangeTime.Set(&v)
 }
-
 // SetLastPasswordChangeTimeNil sets the value for LastPasswordChangeTime to be an explicit nil
 func (o *IdentityUser) SetLastPasswordChangeTimeNil() {
 	o.LastPasswordChangeTime.Set(nil)
@@ -1432,7 +1414,7 @@ func (o *IdentityUser) SetOrganizationUnits(v []IdentityUserOrganizationUnit) {
 }
 
 func (o IdentityUser) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1587,3 +1569,5 @@ func (v *NullableIdentityUser) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EventType** | Pointer to **NullableString** |  | [optional]
-**ResourceId** | Pointer to **NullableString** |  | [optional]
-**Processed** | Pointer to **bool** |  | [optional]
+**EventType** | Pointer to **NullableString** |  | [optional] 
+**ResourceId** | Pointer to **NullableString** |  | [optional] 
+**Processed** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

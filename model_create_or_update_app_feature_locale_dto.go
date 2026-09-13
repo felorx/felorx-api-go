@@ -19,11 +19,11 @@ var _ MappedNullable = &CreateOrUpdateAppFeatureLocaleDto{}
 
 // CreateOrUpdateAppFeatureLocaleDto struct for CreateOrUpdateAppFeatureLocaleDto
 type CreateOrUpdateAppFeatureLocaleDto struct {
-	Id          NullableString `json:"id,omitempty"`
-	AppLocaleId *string        `json:"appLocaleId,omitempty"`
+	Id NullableString `json:"id,omitempty"`
+	AppLocaleId *string `json:"appLocaleId,omitempty"`
 	DisplayName NullableString `json:"displayName,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Details     NullableString `json:"details,omitempty"`
+	Details NullableString `json:"details,omitempty"`
 }
 
 // NewCreateOrUpdateAppFeatureLocaleDto instantiates a new CreateOrUpdateAppFeatureLocaleDto object
@@ -75,7 +75,6 @@ func (o *CreateOrUpdateAppFeatureLocaleDto) HasId() bool {
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetId(v string) {
 	o.Id.Set(&v)
 }
-
 // SetIdNil sets the value for Id to be an explicit nil
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetIdNil() {
 	o.Id.Set(nil)
@@ -150,7 +149,6 @@ func (o *CreateOrUpdateAppFeatureLocaleDto) HasDisplayName() bool {
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -193,7 +191,6 @@ func (o *CreateOrUpdateAppFeatureLocaleDto) HasDescription() bool {
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -236,7 +233,6 @@ func (o *CreateOrUpdateAppFeatureLocaleDto) HasDetails() bool {
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDetails(v string) {
 	o.Details.Set(&v)
 }
-
 // SetDetailsNil sets the value for Details to be an explicit nil
 func (o *CreateOrUpdateAppFeatureLocaleDto) SetDetailsNil() {
 	o.Details.Set(nil)
@@ -248,7 +244,7 @@ func (o *CreateOrUpdateAppFeatureLocaleDto) UnsetDetails() {
 }
 
 func (o CreateOrUpdateAppFeatureLocaleDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -310,3 +306,5 @@ func (v *NullableCreateOrUpdateAppFeatureLocaleDto) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

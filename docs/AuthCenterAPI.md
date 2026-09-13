@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAuthorizedApps**](AuthCenterAPI.md#GetAuthorizedApps) | **Get** /api/app/auth-center/authorized-apps |
-[**GetSummary**](AuthCenterAPI.md#GetSummary) | **Get** /api/app/auth-center/summary |
-[**RevokeAuthorizedApp**](AuthCenterAPI.md#RevokeAuthorizedApp) | **Post** /api/app/auth-center/revoke-authorized-app/{clientId} |
+[**GetAuthorizedApps**](AuthCenterAPI.md#GetAuthorizedApps) | **Get** /api/app/auth-center/authorized-apps | 
+[**GetSummaryGetApiAppAuthCenterSummary**](AuthCenterAPI.md#GetSummaryGetApiAppAuthCenterSummary) | **Get** /api/app/auth-center/summary | 
+[**RevokeAuthorizedApp**](AuthCenterAPI.md#RevokeAuthorizedApp) | **Post** /api/app/auth-center/revoke-authorized-app/{clientId} | 
 
 
 
@@ -69,9 +69,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetSummary
+## GetSummaryGetApiAppAuthCenterSummary
 
-> AuthCenterSummaryDto GetSummary(ctx).Execute()
+> AuthCenterSummaryDto GetSummaryGetApiAppAuthCenterSummary(ctx).Execute()
 
 
 
@@ -91,13 +91,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AuthCenterAPI.GetSummary(context.Background()).Execute()
+	resp, r, err := apiClient.AuthCenterAPI.GetSummaryGetApiAppAuthCenterSummary(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AuthCenterAPI.GetSummary``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AuthCenterAPI.GetSummaryGetApiAppAuthCenterSummary``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetSummary`: AuthCenterSummaryDto
-	fmt.Fprintf(os.Stdout, "Response from `AuthCenterAPI.GetSummary`: %v\n", resp)
+	// response from `GetSummaryGetApiAppAuthCenterSummary`: AuthCenterSummaryDto
+	fmt.Fprintf(os.Stdout, "Response from `AuthCenterAPI.GetSummaryGetApiAppAuthCenterSummary`: %v\n", resp)
 }
 ```
 
@@ -107,7 +107,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetSummaryRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetSummaryGetApiAppAuthCenterSummaryRequest struct via the builder pattern
 
 
 ### Return type
@@ -147,7 +147,7 @@ import (
 )
 
 func main() {
-	clientId := "clientId_example" // string |
+	clientId := "clientId_example" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -165,7 +165,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**clientId** | **string** |  |
+**clientId** | **string** |  | 
 
 ### Other Parameters
 

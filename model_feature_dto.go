@@ -19,14 +19,14 @@ var _ MappedNullable = &FeatureDto{}
 
 // FeatureDto struct for FeatureDto
 type FeatureDto struct {
-	Name        NullableString      `json:"name,omitempty"`
-	DisplayName NullableString      `json:"displayName,omitempty"`
-	Value       NullableString      `json:"value,omitempty"`
-	Provider    *FeatureProviderDto `json:"provider,omitempty"`
-	Description NullableString      `json:"description,omitempty"`
-	ValueType   *IStringValueType   `json:"valueType,omitempty"`
-	Depth       *int32              `json:"depth,omitempty"`
-	ParentName  NullableString      `json:"parentName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	Value NullableString `json:"value,omitempty"`
+	Provider *FeatureProviderDto `json:"provider,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	ValueType *IStringValueType `json:"valueType,omitempty"`
+	Depth *int32 `json:"depth,omitempty"`
+	ParentName NullableString `json:"parentName,omitempty"`
 }
 
 // NewFeatureDto instantiates a new FeatureDto object
@@ -78,7 +78,6 @@ func (o *FeatureDto) HasName() bool {
 func (o *FeatureDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *FeatureDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -121,7 +120,6 @@ func (o *FeatureDto) HasDisplayName() bool {
 func (o *FeatureDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *FeatureDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -164,7 +162,6 @@ func (o *FeatureDto) HasValue() bool {
 func (o *FeatureDto) SetValue(v string) {
 	o.Value.Set(&v)
 }
-
 // SetValueNil sets the value for Value to be an explicit nil
 func (o *FeatureDto) SetValueNil() {
 	o.Value.Set(nil)
@@ -239,7 +236,6 @@ func (o *FeatureDto) HasDescription() bool {
 func (o *FeatureDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *FeatureDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -346,7 +342,6 @@ func (o *FeatureDto) HasParentName() bool {
 func (o *FeatureDto) SetParentName(v string) {
 	o.ParentName.Set(&v)
 }
-
 // SetParentNameNil sets the value for ParentName to be an explicit nil
 func (o *FeatureDto) SetParentNameNil() {
 	o.ParentName.Set(nil)
@@ -358,7 +353,7 @@ func (o *FeatureDto) UnsetParentName() {
 }
 
 func (o FeatureDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -429,3 +424,5 @@ func (v *NullableFeatureDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableString** |  | [optional]
-**AppLocaleId** | Pointer to **string** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Details** | Pointer to **NullableString** |  | [optional]
+**Id** | Pointer to **NullableString** |  | [optional] 
+**AppLocaleId** | Pointer to **string** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Details** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

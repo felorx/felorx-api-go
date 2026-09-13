@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateAppFeedback**](AppFeedbackAPI.md#CreateAppFeedback) | **Post** /api/app/app-feedback | 创建反馈（允许匿名用户提交）
-[**DeleteAppFeedbackById**](AppFeedbackAPI.md#DeleteAppFeedbackById) | **Delete** /api/app/app-feedback/{id} |
-[**GetAppFeedbackById**](AppFeedbackAPI.md#GetAppFeedbackById) | **Get** /api/app/app-feedback/{id} |
-[**GetAppFeedbackList**](AppFeedbackAPI.md#GetAppFeedbackList) | **Get** /api/app/app-feedback |
-[**MarkAsProcessed**](AppFeedbackAPI.md#MarkAsProcessed) | **Post** /api/app/app-feedback/{id}/mark-as-processed |
-[**Reply**](AppFeedbackAPI.md#Reply) | **Post** /api/app/app-feedback/{id}/reply |
+[**DeleteAppFeedbackById**](AppFeedbackAPI.md#DeleteAppFeedbackById) | **Delete** /api/app/app-feedback/{id} | 
+[**GetAppFeedbackById**](AppFeedbackAPI.md#GetAppFeedbackById) | **Get** /api/app/app-feedback/{id} | 
+[**GetAppFeedbackList**](AppFeedbackAPI.md#GetAppFeedbackList) | **Get** /api/app/app-feedback | 
+[**MarkAsProcessed**](AppFeedbackAPI.md#MarkAsProcessed) | **Post** /api/app/app-feedback/{id}/mark-as-processed | 
+[**Reply**](AppFeedbackAPI.md#Reply) | **Post** /api/app/app-feedback/{id}/reply | 
 
 
 
@@ -57,7 +57,7 @@ Other parameters are passed through a pointer to a apiCreateAppFeedbackRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createAppFeedbackDto** | [**CreateAppFeedbackDto**](CreateAppFeedbackDto.md) |  |
+ **createAppFeedbackDto** | [**CreateAppFeedbackDto**](CreateAppFeedbackDto.md) |  | 
 
 ### Return type
 
@@ -96,7 +96,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -162,7 +162,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -182,7 +182,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -260,12 +260,12 @@ Other parameters are passed through a pointer to a apiGetAppFeedbackListRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string** | 应用ID（必填，只有应用创建者可以查看） |
- **type_** | [**AppFeedbackType**](AppFeedbackType.md) | 反馈类型 |
- **status** | [**AppFeedbackStatus**](AppFeedbackStatus.md) | 反馈状态 |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **appId** | **string** | 应用ID（必填，只有应用创建者可以查看） | 
+ **type_** | [**AppFeedbackType**](AppFeedbackType.md) | 反馈类型 | 
+ **status** | [**AppFeedbackStatus**](AppFeedbackStatus.md) | 反馈状态 | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -304,7 +304,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -324,7 +324,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -372,7 +372,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	replyAppFeedbackDto := *openapiclient.NewReplyAppFeedbackDto("Reply_example") // ReplyAppFeedbackDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -393,7 +393,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -403,7 +403,7 @@ Other parameters are passed through a pointer to a apiReplyRequest struct via th
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **replyAppFeedbackDto** | [**ReplyAppFeedbackDto**](ReplyAppFeedbackDto.md) |  |
+ **replyAppFeedbackDto** | [**ReplyAppFeedbackDto**](ReplyAppFeedbackDto.md) |  | 
 
 ### Return type
 

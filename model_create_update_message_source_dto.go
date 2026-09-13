@@ -19,11 +19,12 @@ var _ MappedNullable = &CreateUpdateMessageSourceDto{}
 
 // CreateUpdateMessageSourceDto struct for CreateUpdateMessageSourceDto
 type CreateUpdateMessageSourceDto struct {
-	Name        NullableString                         `json:"name,omitempty"`
-	Description NullableString                         `json:"description,omitempty"`
-	IsPublished *bool                                  `json:"isPublished,omitempty"`
-	IconUrl     NullableString                         `json:"iconUrl,omitempty"`
-	Routes      []CreateUpdateMessageSourceRouteSubDto `json:"routes,omitempty"`
+	CategoryId *string `json:"categoryId,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	IsPublished *bool `json:"isPublished,omitempty"`
+	IconUrl NullableString `json:"iconUrl,omitempty"`
+	Routes []CreateUpdateMessageSourceRouteSubDto `json:"routes,omitempty"`
 }
 
 // NewCreateUpdateMessageSourceDto instantiates a new CreateUpdateMessageSourceDto object
@@ -41,6 +42,38 @@ func NewCreateUpdateMessageSourceDto() *CreateUpdateMessageSourceDto {
 func NewCreateUpdateMessageSourceDtoWithDefaults() *CreateUpdateMessageSourceDto {
 	this := CreateUpdateMessageSourceDto{}
 	return &this
+}
+
+// GetCategoryId returns the CategoryId field value if set, zero value otherwise.
+func (o *CreateUpdateMessageSourceDto) GetCategoryId() string {
+	if o == nil || IsNil(o.CategoryId) {
+		var ret string
+		return ret
+	}
+	return *o.CategoryId
+}
+
+// GetCategoryIdOk returns a tuple with the CategoryId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateUpdateMessageSourceDto) GetCategoryIdOk() (*string, bool) {
+	if o == nil || IsNil(o.CategoryId) {
+		return nil, false
+	}
+	return o.CategoryId, true
+}
+
+// HasCategoryId returns a boolean if a field has been set.
+func (o *CreateUpdateMessageSourceDto) HasCategoryId() bool {
+	if o != nil && !IsNil(o.CategoryId) {
+		return true
+	}
+
+	return false
+}
+
+// SetCategoryId gets a reference to the given string and assigns it to the CategoryId field.
+func (o *CreateUpdateMessageSourceDto) SetCategoryId(v string) {
+	o.CategoryId = &v
 }
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -75,7 +108,6 @@ func (o *CreateUpdateMessageSourceDto) HasName() bool {
 func (o *CreateUpdateMessageSourceDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateUpdateMessageSourceDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -118,7 +150,6 @@ func (o *CreateUpdateMessageSourceDto) HasDescription() bool {
 func (o *CreateUpdateMessageSourceDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateUpdateMessageSourceDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -193,7 +224,6 @@ func (o *CreateUpdateMessageSourceDto) HasIconUrl() bool {
 func (o *CreateUpdateMessageSourceDto) SetIconUrl(v string) {
 	o.IconUrl.Set(&v)
 }
-
 // SetIconUrlNil sets the value for IconUrl to be an explicit nil
 func (o *CreateUpdateMessageSourceDto) SetIconUrlNil() {
 	o.IconUrl.Set(nil)
@@ -238,7 +268,7 @@ func (o *CreateUpdateMessageSourceDto) SetRoutes(v []CreateUpdateMessageSourceRo
 }
 
 func (o CreateUpdateMessageSourceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -247,6 +277,9 @@ func (o CreateUpdateMessageSourceDto) MarshalJSON() ([]byte, error) {
 
 func (o CreateUpdateMessageSourceDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.CategoryId) {
+		toSerialize["categoryId"] = o.CategoryId
+	}
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
 	}
@@ -300,3 +333,5 @@ func (v *NullableCreateUpdateMessageSourceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

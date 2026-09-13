@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Properties** | Pointer to [**map[string]ExtensionPropertyDto**](ExtensionPropertyDto.md) |  | [optional]
-**Configuration** | Pointer to **map[string]interface{}** |  | [optional]
+**Properties** | Pointer to [**map[string]ExtensionPropertyDto**](ExtensionPropertyDto.md) |  | [optional] 
+**Configuration** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 

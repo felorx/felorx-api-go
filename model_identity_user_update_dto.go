@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,17 +21,17 @@ var _ MappedNullable = &IdentityUserUpdateDto{}
 
 // IdentityUserUpdateDto struct for IdentityUserUpdateDto
 type IdentityUserUpdateDto struct {
-	ExtraProperties  map[string]interface{} `json:"extraProperties,omitempty"`
-	UserName         string                 `json:"userName"`
-	Name             NullableString         `json:"name,omitempty"`
-	Surname          NullableString         `json:"surname,omitempty"`
-	Email            string                 `json:"email"`
-	PhoneNumber      NullableString         `json:"phoneNumber,omitempty"`
-	IsActive         *bool                  `json:"isActive,omitempty"`
-	LockoutEnabled   *bool                  `json:"lockoutEnabled,omitempty"`
-	RoleNames        []string               `json:"roleNames,omitempty"`
-	Password         NullableString         `json:"password,omitempty"`
-	ConcurrencyStamp NullableString         `json:"concurrencyStamp,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	UserName string `json:"userName"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	Email string `json:"email"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
+	LockoutEnabled *bool `json:"lockoutEnabled,omitempty"`
+	RoleNames []string `json:"roleNames,omitempty"`
+	Password NullableString `json:"password,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
 }
 
 type _IdentityUserUpdateDto IdentityUserUpdateDto
@@ -144,7 +144,6 @@ func (o *IdentityUserUpdateDto) HasName() bool {
 func (o *IdentityUserUpdateDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IdentityUserUpdateDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -187,7 +186,6 @@ func (o *IdentityUserUpdateDto) HasSurname() bool {
 func (o *IdentityUserUpdateDto) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *IdentityUserUpdateDto) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -254,7 +252,6 @@ func (o *IdentityUserUpdateDto) HasPhoneNumber() bool {
 func (o *IdentityUserUpdateDto) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *IdentityUserUpdateDto) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -394,7 +391,6 @@ func (o *IdentityUserUpdateDto) HasPassword() bool {
 func (o *IdentityUserUpdateDto) SetPassword(v string) {
 	o.Password.Set(&v)
 }
-
 // SetPasswordNil sets the value for Password to be an explicit nil
 func (o *IdentityUserUpdateDto) SetPasswordNil() {
 	o.Password.Set(nil)
@@ -437,7 +433,6 @@ func (o *IdentityUserUpdateDto) HasConcurrencyStamp() bool {
 func (o *IdentityUserUpdateDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *IdentityUserUpdateDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -449,7 +444,7 @@ func (o *IdentityUserUpdateDto) UnsetConcurrencyStamp() {
 }
 
 func (o IdentityUserUpdateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -504,10 +499,10 @@ func (o *IdentityUserUpdateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -563,3 +558,5 @@ func (v *NullableIdentityUserUpdateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

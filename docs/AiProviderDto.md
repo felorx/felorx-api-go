@@ -4,24 +4,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**ProviderType** | Pointer to [**AiProviderType**](AiProviderType.md) |  | [optional]
-**BaseUrl** | Pointer to **NullableString** |  | [optional]
-**Region** | Pointer to **NullableString** |  | [optional]
-**Enabled** | Pointer to **bool** |  | [optional]
-**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional]
-**SecretConfigured** | Pointer to **bool** |  | [optional]
-**Metadata** | Pointer to **map[string]string** |  | [optional]
-**Models** | Pointer to [**[]AiModelDto**](AiModelDto.md) |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**VerifiedCapabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional] 
+**CapabilityCertificateVersion** | Pointer to **NullableString** |  | [optional] 
+**CapabilityTestedAt** | Pointer to **NullableTime** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**ProviderType** | Pointer to [**AiProviderType**](AiProviderType.md) |  | [optional] 
+**BaseUrl** | Pointer to **NullableString** |  | [optional] 
+**Region** | Pointer to **NullableString** |  | [optional] 
+**Enabled** | Pointer to **bool** |  | [optional] 
+**Capabilities** | Pointer to [**[]AiCapability**](AiCapability.md) |  | [optional] 
+**SecretConfigured** | Pointer to **bool** |  | [optional] 
+**Metadata** | Pointer to **map[string]string** |  | [optional] 
+**Models** | Pointer to [**[]AiModelDto**](AiModelDto.md) |  | [optional] 
 
 ## Methods
 
@@ -292,6 +295,111 @@ HasDeletionTime returns a boolean if a field has been set.
 `func (o *AiProviderDto) UnsetDeletionTime()`
 
 UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
+### GetVerifiedCapabilities
+
+`func (o *AiProviderDto) GetVerifiedCapabilities() []AiCapability`
+
+GetVerifiedCapabilities returns the VerifiedCapabilities field if non-nil, zero value otherwise.
+
+### GetVerifiedCapabilitiesOk
+
+`func (o *AiProviderDto) GetVerifiedCapabilitiesOk() (*[]AiCapability, bool)`
+
+GetVerifiedCapabilitiesOk returns a tuple with the VerifiedCapabilities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVerifiedCapabilities
+
+`func (o *AiProviderDto) SetVerifiedCapabilities(v []AiCapability)`
+
+SetVerifiedCapabilities sets VerifiedCapabilities field to given value.
+
+### HasVerifiedCapabilities
+
+`func (o *AiProviderDto) HasVerifiedCapabilities() bool`
+
+HasVerifiedCapabilities returns a boolean if a field has been set.
+
+### SetVerifiedCapabilitiesNil
+
+`func (o *AiProviderDto) SetVerifiedCapabilitiesNil(b bool)`
+
+ SetVerifiedCapabilitiesNil sets the value for VerifiedCapabilities to be an explicit nil
+
+### UnsetVerifiedCapabilities
+`func (o *AiProviderDto) UnsetVerifiedCapabilities()`
+
+UnsetVerifiedCapabilities ensures that no value is present for VerifiedCapabilities, not even an explicit nil
+### GetCapabilityCertificateVersion
+
+`func (o *AiProviderDto) GetCapabilityCertificateVersion() string`
+
+GetCapabilityCertificateVersion returns the CapabilityCertificateVersion field if non-nil, zero value otherwise.
+
+### GetCapabilityCertificateVersionOk
+
+`func (o *AiProviderDto) GetCapabilityCertificateVersionOk() (*string, bool)`
+
+GetCapabilityCertificateVersionOk returns a tuple with the CapabilityCertificateVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCapabilityCertificateVersion
+
+`func (o *AiProviderDto) SetCapabilityCertificateVersion(v string)`
+
+SetCapabilityCertificateVersion sets CapabilityCertificateVersion field to given value.
+
+### HasCapabilityCertificateVersion
+
+`func (o *AiProviderDto) HasCapabilityCertificateVersion() bool`
+
+HasCapabilityCertificateVersion returns a boolean if a field has been set.
+
+### SetCapabilityCertificateVersionNil
+
+`func (o *AiProviderDto) SetCapabilityCertificateVersionNil(b bool)`
+
+ SetCapabilityCertificateVersionNil sets the value for CapabilityCertificateVersion to be an explicit nil
+
+### UnsetCapabilityCertificateVersion
+`func (o *AiProviderDto) UnsetCapabilityCertificateVersion()`
+
+UnsetCapabilityCertificateVersion ensures that no value is present for CapabilityCertificateVersion, not even an explicit nil
+### GetCapabilityTestedAt
+
+`func (o *AiProviderDto) GetCapabilityTestedAt() time.Time`
+
+GetCapabilityTestedAt returns the CapabilityTestedAt field if non-nil, zero value otherwise.
+
+### GetCapabilityTestedAtOk
+
+`func (o *AiProviderDto) GetCapabilityTestedAtOk() (*time.Time, bool)`
+
+GetCapabilityTestedAtOk returns a tuple with the CapabilityTestedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCapabilityTestedAt
+
+`func (o *AiProviderDto) SetCapabilityTestedAt(v time.Time)`
+
+SetCapabilityTestedAt sets CapabilityTestedAt field to given value.
+
+### HasCapabilityTestedAt
+
+`func (o *AiProviderDto) HasCapabilityTestedAt() bool`
+
+HasCapabilityTestedAt returns a boolean if a field has been set.
+
+### SetCapabilityTestedAtNil
+
+`func (o *AiProviderDto) SetCapabilityTestedAtNil(b bool)`
+
+ SetCapabilityTestedAtNil sets the value for CapabilityTestedAt to be an explicit nil
+
+### UnsetCapabilityTestedAt
+`func (o *AiProviderDto) UnsetCapabilityTestedAt()`
+
+UnsetCapabilityTestedAt ensures that no value is present for CapabilityTestedAt, not even an explicit nil
 ### GetName
 
 `func (o *AiProviderDto) GetName() string`

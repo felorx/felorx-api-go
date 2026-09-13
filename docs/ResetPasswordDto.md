@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserId** | Pointer to **string** |  | [optional]
-**ResetToken** | **string** |  |
-**Password** | **string** |  |
+**UserId** | Pointer to **string** |  | [optional] 
+**ResetToken** | **string** |  | 
+**Password** | **string** |  | 
 
 ## Methods
 

@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StorageClass** | Pointer to **NullableString** |  | [optional]
-**EndPoint** | Pointer to **NullableString** |  | [optional]
-**Protocal** | Pointer to **NullableString** |  | [optional]
-**BucketName** | Pointer to **NullableString** |  | [optional]
-**RegionId** | Pointer to **NullableString** |  | [optional]
-**SecurityToken** | Pointer to **NullableString** |  | [optional]
-**AccessKeyId** | Pointer to **NullableString** |  | [optional]
-**AccessKeySecret** | Pointer to **NullableString** |  | [optional]
-**Expiration** | Pointer to **NullableString** |  | [optional]
-**ExpiredTime** | Pointer to **int64** |  | [optional]
-**AppId** | Pointer to **NullableString** |  | [optional]
-**CdnDomain** | Pointer to **NullableString** |  | [optional]
+**StorageClass** | Pointer to **NullableString** |  | [optional] 
+**EndPoint** | Pointer to **NullableString** |  | [optional] 
+**Protocal** | Pointer to **NullableString** |  | [optional] 
+**BucketName** | Pointer to **NullableString** |  | [optional] 
+**RegionId** | Pointer to **NullableString** |  | [optional] 
+**SecurityToken** | Pointer to **NullableString** |  | [optional] 
+**AccessKeyId** | Pointer to **NullableString** |  | [optional] 
+**AccessKeySecret** | Pointer to **NullableString** |  | [optional] 
+**Expiration** | Pointer to **NullableString** |  | [optional] 
+**ExpiredTime** | Pointer to **int64** |  | [optional] 
+**AppId** | Pointer to **NullableString** |  | [optional] 
+**CdnDomain** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

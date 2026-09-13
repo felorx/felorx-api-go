@@ -19,11 +19,11 @@ var _ MappedNullable = &PermissionGrantInfoDto{}
 
 // PermissionGrantInfoDto struct for PermissionGrantInfoDto
 type PermissionGrantInfoDto struct {
-	Name             NullableString    `json:"name,omitempty"`
-	DisplayName      NullableString    `json:"displayName,omitempty"`
-	ParentName       NullableString    `json:"parentName,omitempty"`
-	IsGranted        *bool             `json:"isGranted,omitempty"`
-	AllowedProviders []string          `json:"allowedProviders,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	ParentName NullableString `json:"parentName,omitempty"`
+	IsGranted *bool `json:"isGranted,omitempty"`
+	AllowedProviders []string `json:"allowedProviders,omitempty"`
 	GrantedProviders []ProviderInfoDto `json:"grantedProviders,omitempty"`
 }
 
@@ -76,7 +76,6 @@ func (o *PermissionGrantInfoDto) HasName() bool {
 func (o *PermissionGrantInfoDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *PermissionGrantInfoDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -119,7 +118,6 @@ func (o *PermissionGrantInfoDto) HasDisplayName() bool {
 func (o *PermissionGrantInfoDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *PermissionGrantInfoDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -162,7 +160,6 @@ func (o *PermissionGrantInfoDto) HasParentName() bool {
 func (o *PermissionGrantInfoDto) SetParentName(v string) {
 	o.ParentName.Set(&v)
 }
-
 // SetParentNameNil sets the value for ParentName to be an explicit nil
 func (o *PermissionGrantInfoDto) SetParentNameNil() {
 	o.ParentName.Set(nil)
@@ -272,7 +269,7 @@ func (o *PermissionGrantInfoDto) SetGrantedProviders(v []ProviderInfoDto) {
 }
 
 func (o PermissionGrantInfoDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -337,3 +334,5 @@ func (v *NullablePermissionGrantInfoDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

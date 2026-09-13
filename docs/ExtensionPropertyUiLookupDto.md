@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **NullableString** |  | [optional]
-**ResultListPropertyName** | Pointer to **NullableString** |  | [optional]
-**DisplayPropertyName** | Pointer to **NullableString** |  | [optional]
-**ValuePropertyName** | Pointer to **NullableString** |  | [optional]
-**FilterParamName** | Pointer to **NullableString** |  | [optional]
+**Url** | Pointer to **NullableString** |  | [optional] 
+**ResultListPropertyName** | Pointer to **NullableString** |  | [optional] 
+**DisplayPropertyName** | Pointer to **NullableString** |  | [optional] 
+**ValuePropertyName** | Pointer to **NullableString** |  | [optional] 
+**FilterParamName** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

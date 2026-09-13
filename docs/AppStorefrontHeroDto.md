@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PhoneUrl** | Pointer to **NullableString** |  | [optional]
-**TabletUrl** | Pointer to **NullableString** |  | [optional]
+**PhoneUrl** | Pointer to **NullableString** |  | [optional] 
+**TabletUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

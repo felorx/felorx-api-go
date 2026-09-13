@@ -19,9 +19,9 @@ var _ MappedNullable = &OpsCryptoVaultDto{}
 
 // OpsCryptoVaultDto struct for OpsCryptoVaultDto
 type OpsCryptoVaultDto struct {
-	SaltBase64            NullableString `json:"saltBase64,omitempty"`
-	WrappedUserKeyJson    NullableString `json:"wrappedUserKeyJson,omitempty"`
-	PublicKeyJwkJson      NullableString `json:"publicKeyJwkJson,omitempty"`
+	SaltBase64 NullableString `json:"saltBase64,omitempty"`
+	WrappedUserKeyJson NullableString `json:"wrappedUserKeyJson,omitempty"`
+	PublicKeyJwkJson NullableString `json:"publicKeyJwkJson,omitempty"`
 	WrappedRsaPrivateJson NullableString `json:"wrappedRsaPrivateJson,omitempty"`
 }
 
@@ -74,7 +74,6 @@ func (o *OpsCryptoVaultDto) HasSaltBase64() bool {
 func (o *OpsCryptoVaultDto) SetSaltBase64(v string) {
 	o.SaltBase64.Set(&v)
 }
-
 // SetSaltBase64Nil sets the value for SaltBase64 to be an explicit nil
 func (o *OpsCryptoVaultDto) SetSaltBase64Nil() {
 	o.SaltBase64.Set(nil)
@@ -117,7 +116,6 @@ func (o *OpsCryptoVaultDto) HasWrappedUserKeyJson() bool {
 func (o *OpsCryptoVaultDto) SetWrappedUserKeyJson(v string) {
 	o.WrappedUserKeyJson.Set(&v)
 }
-
 // SetWrappedUserKeyJsonNil sets the value for WrappedUserKeyJson to be an explicit nil
 func (o *OpsCryptoVaultDto) SetWrappedUserKeyJsonNil() {
 	o.WrappedUserKeyJson.Set(nil)
@@ -160,7 +158,6 @@ func (o *OpsCryptoVaultDto) HasPublicKeyJwkJson() bool {
 func (o *OpsCryptoVaultDto) SetPublicKeyJwkJson(v string) {
 	o.PublicKeyJwkJson.Set(&v)
 }
-
 // SetPublicKeyJwkJsonNil sets the value for PublicKeyJwkJson to be an explicit nil
 func (o *OpsCryptoVaultDto) SetPublicKeyJwkJsonNil() {
 	o.PublicKeyJwkJson.Set(nil)
@@ -203,7 +200,6 @@ func (o *OpsCryptoVaultDto) HasWrappedRsaPrivateJson() bool {
 func (o *OpsCryptoVaultDto) SetWrappedRsaPrivateJson(v string) {
 	o.WrappedRsaPrivateJson.Set(&v)
 }
-
 // SetWrappedRsaPrivateJsonNil sets the value for WrappedRsaPrivateJson to be an explicit nil
 func (o *OpsCryptoVaultDto) SetWrappedRsaPrivateJsonNil() {
 	o.WrappedRsaPrivateJson.Set(nil)
@@ -215,7 +211,7 @@ func (o *OpsCryptoVaultDto) UnsetWrappedRsaPrivateJson() {
 }
 
 func (o OpsCryptoVaultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -274,3 +270,5 @@ func (v *NullableOpsCryptoVaultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

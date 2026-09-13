@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
-**Id** | Pointer to **string** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**IsDefault** | Pointer to **bool** |  | [optional]
-**IsStatic** | Pointer to **bool** |  | [optional]
-**IsPublic** | Pointer to **bool** |  | [optional]
-**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional]
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**Id** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**IsDefault** | Pointer to **bool** |  | [optional] 
+**IsStatic** | Pointer to **bool** |  | [optional] 
+**IsPublic** | Pointer to **bool** |  | [optional] 
+**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

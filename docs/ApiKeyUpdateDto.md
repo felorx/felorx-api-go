@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  |
-**Active** | Pointer to **bool** |  | [optional]
-**ExpireAt** | Pointer to **NullableTime** |  | [optional]
+**Name** | **string** |  | 
+**Active** | Pointer to **bool** |  | [optional] 
+**ExpireAt** | Pointer to **NullableTime** |  | [optional] 
 
 ## Methods
 

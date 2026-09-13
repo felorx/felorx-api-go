@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CurrentPassword** | Pointer to **NullableString** |  | [optional]
-**NewPassword** | **string** |  |
+**CurrentPassword** | Pointer to **NullableString** |  | [optional] 
+**NewPassword** | **string** |  | 
 
 ## Methods
 

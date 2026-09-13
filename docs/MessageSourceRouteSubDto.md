@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RouteId** | Pointer to **string** |  | [optional]
-**Path** | Pointer to **NullableString** |  | [optional]
-**Values** | Pointer to **interface{}** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**RouteId** | Pointer to **string** |  | [optional] 
+**Path** | Pointer to **NullableString** |  | [optional] 
+**Values** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewMessageSourceRouteSubDtoWithDefaults instantiates a new MessageSourceRouteSubDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *MessageSourceRouteSubDto) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *MessageSourceRouteSubDto) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *MessageSourceRouteSubDto) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *MessageSourceRouteSubDto) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetRouteId
 
@@ -89,20 +115,20 @@ HasPath returns a boolean if a field has been set.
 UnsetPath ensures that no value is present for Path, not even an explicit nil
 ### GetValues
 
-`func (o *MessageSourceRouteSubDto) GetValues() interface{}`
+`func (o *MessageSourceRouteSubDto) GetValues() map[string]interface{}`
 
 GetValues returns the Values field if non-nil, zero value otherwise.
 
 ### GetValuesOk
 
-`func (o *MessageSourceRouteSubDto) GetValuesOk() (*interface{}, bool)`
+`func (o *MessageSourceRouteSubDto) GetValuesOk() (*map[string]interface{}, bool)`
 
 GetValuesOk returns a tuple with the Values field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValues
 
-`func (o *MessageSourceRouteSubDto) SetValues(v interface{})`
+`func (o *MessageSourceRouteSubDto) SetValues(v map[string]interface{})`
 
 SetValues sets Values field to given value.
 

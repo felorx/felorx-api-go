@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetTimeZoneSettings**](TimeZoneSettingsAPI.md#GetTimeZoneSettings) | **Get** /api/setting-management/timezone |
-[**GetTimezones**](TimeZoneSettingsAPI.md#GetTimezones) | **Get** /api/setting-management/timezone/timezones |
-[**UpdateTimeZoneSettings**](TimeZoneSettingsAPI.md#UpdateTimeZoneSettings) | **Post** /api/setting-management/timezone |
+[**GetTimeZoneSettings**](TimeZoneSettingsAPI.md#GetTimeZoneSettings) | **Get** /api/setting-management/timezone | 
+[**GetTimezones**](TimeZoneSettingsAPI.md#GetTimezones) | **Get** /api/setting-management/timezone/timezones | 
+[**UpdateTimeZoneSettings**](TimeZoneSettingsAPI.md#UpdateTimeZoneSettings) | **Post** /api/setting-management/timezone | 
 
 
 
@@ -170,7 +170,7 @@ Other parameters are passed through a pointer to a apiUpdateTimeZoneSettingsRequ
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timezone** | **string** |  |
+ **timezone** | **string** |  | 
 
 ### Return type
 

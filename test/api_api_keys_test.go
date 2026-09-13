@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_ApiKeysAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_ApiKeysAPIService(t *testing.T) {
 
 	t.Run("Test ApiKeysAPIService CreateApiKeys", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.ApiKeysAPI.CreateApiKeys(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_ApiKeysAPIService(t *testing.T) {
 
 	t.Run("Test ApiKeysAPIService DeleteApiKeysById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_ApiKeysAPIService(t *testing.T) {
 
 	t.Run("Test ApiKeysAPIService GetApiKeysById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +63,7 @@ func Test_felorx_ApiKeysAPIService(t *testing.T) {
 
 	t.Run("Test ApiKeysAPIService GetApiKeysList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.ApiKeysAPI.GetApiKeysList(context.Background()).Execute()
 
@@ -75,7 +75,7 @@ func Test_felorx_ApiKeysAPIService(t *testing.T) {
 
 	t.Run("Test ApiKeysAPIService UpdateApiKeys", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

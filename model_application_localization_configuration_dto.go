@@ -19,13 +19,13 @@ var _ MappedNullable = &ApplicationLocalizationConfigurationDto{}
 
 // ApplicationLocalizationConfigurationDto struct for ApplicationLocalizationConfigurationDto
 type ApplicationLocalizationConfigurationDto struct {
-	Values              map[string]map[string]string                  `json:"values,omitempty"`
-	Resources           map[string]ApplicationLocalizationResourceDto `json:"resources,omitempty"`
-	Languages           []LanguageInfo                                `json:"languages,omitempty"`
-	CurrentCulture      *CurrentCultureDto                            `json:"currentCulture,omitempty"`
-	DefaultResourceName NullableString                                `json:"defaultResourceName,omitempty"`
-	LanguagesMap        map[string][]NameValue                        `json:"languagesMap,omitempty"`
-	LanguageFilesMap    map[string][]NameValue                        `json:"languageFilesMap,omitempty"`
+	Values map[string]map[string]string `json:"values,omitempty"`
+	Resources map[string]ApplicationLocalizationResourceDto `json:"resources,omitempty"`
+	Languages []LanguageInfo `json:"languages,omitempty"`
+	CurrentCulture *CurrentCultureDto `json:"currentCulture,omitempty"`
+	DefaultResourceName NullableString `json:"defaultResourceName,omitempty"`
+	LanguagesMap map[string][]NameValue `json:"languagesMap,omitempty"`
+	LanguageFilesMap map[string][]NameValue `json:"languageFilesMap,omitempty"`
 }
 
 // NewApplicationLocalizationConfigurationDto instantiates a new ApplicationLocalizationConfigurationDto object
@@ -208,7 +208,6 @@ func (o *ApplicationLocalizationConfigurationDto) HasDefaultResourceName() bool 
 func (o *ApplicationLocalizationConfigurationDto) SetDefaultResourceName(v string) {
 	o.DefaultResourceName.Set(&v)
 }
-
 // SetDefaultResourceNameNil sets the value for DefaultResourceName to be an explicit nil
 func (o *ApplicationLocalizationConfigurationDto) SetDefaultResourceNameNil() {
 	o.DefaultResourceName.Set(nil)
@@ -286,7 +285,7 @@ func (o *ApplicationLocalizationConfigurationDto) SetLanguageFilesMap(v map[stri
 }
 
 func (o ApplicationLocalizationConfigurationDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -354,3 +353,5 @@ func (v *NullableApplicationLocalizationConfigurationDto) UnmarshalJSON(src []by
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

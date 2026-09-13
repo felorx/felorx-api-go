@@ -20,18 +20,18 @@ var _ MappedNullable = &CreateOrGetSubscriptionOrderDto{}
 
 // CreateOrGetSubscriptionOrderDto struct for CreateOrGetSubscriptionOrderDto
 type CreateOrGetSubscriptionOrderDto struct {
-	Id                   *string                `json:"id,omitempty"`
-	CreationTime         *time.Time             `json:"creationTime,omitempty"`
-	CreatorId            NullableString         `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime           `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString         `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool                  `json:"isDeleted,omitempty"`
-	DeleterId            NullableString         `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime           `json:"deletionTime,omitempty"`
-	AppId                *string                `json:"appId,omitempty"`
-	PricingId            *string                `json:"pricingId,omitempty"`
-	Type                 *SubscriptionOrderType `json:"type,omitempty"`
-	ProductId            NullableString         `json:"productId,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	Type *SubscriptionOrderType `json:"type,omitempty"`
+	ProductId NullableString `json:"productId,omitempty"`
 }
 
 // NewCreateOrGetSubscriptionOrderDto instantiates a new CreateOrGetSubscriptionOrderDto object
@@ -147,7 +147,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasCreatorId() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -190,7 +189,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasLastModificationTime() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -233,7 +231,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasLastModifierId() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -308,7 +305,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasDeleterId() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -351,7 +347,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasDeletionTime() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -490,7 +485,6 @@ func (o *CreateOrGetSubscriptionOrderDto) HasProductId() bool {
 func (o *CreateOrGetSubscriptionOrderDto) SetProductId(v string) {
 	o.ProductId.Set(&v)
 }
-
 // SetProductIdNil sets the value for ProductId to be an explicit nil
 func (o *CreateOrGetSubscriptionOrderDto) SetProductIdNil() {
 	o.ProductId.Set(nil)
@@ -502,7 +496,7 @@ func (o *CreateOrGetSubscriptionOrderDto) UnsetProductId() {
 }
 
 func (o CreateOrGetSubscriptionOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -585,3 +579,5 @@ func (v *NullableCreateOrGetSubscriptionOrderDto) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

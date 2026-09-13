@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService CreatePlanPrice", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionBillingAdminAPI.CreatePlanPrice(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService DeletePlanPrice", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService DeleteStoreMapping", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -62,7 +62,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService GetPlanPrice", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -76,7 +76,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService GetPlanPricesByAppId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -90,7 +90,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService GetPlanPricesByPricingId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var pricingId string
 
@@ -104,7 +104,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService GetStoreMappingsByAppId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -118,7 +118,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService GetStoreMappingsByPlanPriceId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var planPriceId string
 
@@ -132,7 +132,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService UpdatePlanPrice", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -146,7 +146,7 @@ func Test_felorx_SubscriptionBillingAdminAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionBillingAdminAPIService UpsertStoreMapping", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionBillingAdminAPI.UpsertStoreMapping(context.Background()).Execute()
 

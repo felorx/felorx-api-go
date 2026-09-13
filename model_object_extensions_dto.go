@@ -20,7 +20,7 @@ var _ MappedNullable = &ObjectExtensionsDto{}
 // ObjectExtensionsDto struct for ObjectExtensionsDto
 type ObjectExtensionsDto struct {
 	Modules map[string]ModuleExtensionDto `json:"modules,omitempty"`
-	Enums   map[string]ExtensionEnumDto   `json:"enums,omitempty"`
+	Enums map[string]ExtensionEnumDto `json:"enums,omitempty"`
 }
 
 // NewObjectExtensionsDto instantiates a new ObjectExtensionsDto object
@@ -107,7 +107,7 @@ func (o *ObjectExtensionsDto) SetEnums(v map[string]ExtensionEnumDto) {
 }
 
 func (o ObjectExtensionsDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -160,3 +160,5 @@ func (v *NullableObjectExtensionsDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

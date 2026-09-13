@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OnGet** | Pointer to [**ExtensionPropertyApiGetDto**](ExtensionPropertyApiGetDto.md) |  | [optional]
-**OnCreate** | Pointer to [**ExtensionPropertyApiCreateDto**](ExtensionPropertyApiCreateDto.md) |  | [optional]
-**OnUpdate** | Pointer to [**ExtensionPropertyApiUpdateDto**](ExtensionPropertyApiUpdateDto.md) |  | [optional]
+**OnGet** | Pointer to [**ExtensionPropertyApiGetDto**](ExtensionPropertyApiGetDto.md) |  | [optional] 
+**OnCreate** | Pointer to [**ExtensionPropertyApiCreateDto**](ExtensionPropertyApiCreateDto.md) |  | [optional] 
+**OnUpdate** | Pointer to [**ExtensionPropertyApiUpdateDto**](ExtensionPropertyApiUpdateDto.md) |  | [optional] 
 
 ## Methods
 

@@ -20,9 +20,9 @@ type ReleaseChannel string
 
 // List of ReleaseChannel
 const (
-	RELEASECHANNEL_INTERNAL   ReleaseChannel = "Internal"
-	RELEASECHANNEL_ALPHA      ReleaseChannel = "Alpha"
-	RELEASECHANNEL_BETA       ReleaseChannel = "Beta"
+	RELEASECHANNEL_INTERNAL ReleaseChannel = "Internal"
+	RELEASECHANNEL_ALPHA ReleaseChannel = "Alpha"
+	RELEASECHANNEL_BETA ReleaseChannel = "Beta"
 	RELEASECHANNEL_PRODUCTION ReleaseChannel = "Production"
 )
 
@@ -112,3 +112,4 @@ func (v *NullableReleaseChannel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

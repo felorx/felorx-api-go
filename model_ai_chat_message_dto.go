@@ -19,9 +19,9 @@ var _ MappedNullable = &AiChatMessageDto{}
 
 // AiChatMessageDto struct for AiChatMessageDto
 type AiChatMessageDto struct {
-	Role    NullableString `json:"role,omitempty"`
-	Content interface{}    `json:"content,omitempty"`
-	Name    NullableString `json:"name,omitempty"`
+	Role NullableString `json:"role,omitempty"`
+	Content interface{} `json:"content,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 }
 
 // NewAiChatMessageDto instantiates a new AiChatMessageDto object
@@ -73,7 +73,6 @@ func (o *AiChatMessageDto) HasRole() bool {
 func (o *AiChatMessageDto) SetRole(v string) {
 	o.Role.Set(&v)
 }
-
 // SetRoleNil sets the value for Role to be an explicit nil
 func (o *AiChatMessageDto) SetRoleNil() {
 	o.Role.Set(nil)
@@ -149,7 +148,6 @@ func (o *AiChatMessageDto) HasName() bool {
 func (o *AiChatMessageDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AiChatMessageDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -161,7 +159,7 @@ func (o *AiChatMessageDto) UnsetName() {
 }
 
 func (o AiChatMessageDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,3 +215,5 @@ func (v *NullableAiChatMessageDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

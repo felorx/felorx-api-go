@@ -20,14 +20,14 @@ var _ MappedNullable = &AuthorizedAppDto{}
 
 // AuthorizedAppDto struct for AuthorizedAppDto
 type AuthorizedAppDto struct {
-	Id                    *string        `json:"id,omitempty"`
-	ClientId              NullableString `json:"clientId,omitempty"`
-	DisplayName           NullableString `json:"displayName,omitempty"`
-	ClientUri             NullableString `json:"clientUri,omitempty"`
-	LogoUri               NullableString `json:"logoUri,omitempty"`
-	Scopes                NullableString `json:"scopes,omitempty"`
-	CreationTime          *time.Time     `json:"creationTime,omitempty"`
-	LastAuthorizationTime NullableTime   `json:"lastAuthorizationTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	ClientId NullableString `json:"clientId,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	ClientUri NullableString `json:"clientUri,omitempty"`
+	LogoUri NullableString `json:"logoUri,omitempty"`
+	Scopes NullableString `json:"scopes,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	LastAuthorizationTime NullableTime `json:"lastAuthorizationTime,omitempty"`
 }
 
 // NewAuthorizedAppDto instantiates a new AuthorizedAppDto object
@@ -111,7 +111,6 @@ func (o *AuthorizedAppDto) HasClientId() bool {
 func (o *AuthorizedAppDto) SetClientId(v string) {
 	o.ClientId.Set(&v)
 }
-
 // SetClientIdNil sets the value for ClientId to be an explicit nil
 func (o *AuthorizedAppDto) SetClientIdNil() {
 	o.ClientId.Set(nil)
@@ -154,7 +153,6 @@ func (o *AuthorizedAppDto) HasDisplayName() bool {
 func (o *AuthorizedAppDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AuthorizedAppDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -197,7 +195,6 @@ func (o *AuthorizedAppDto) HasClientUri() bool {
 func (o *AuthorizedAppDto) SetClientUri(v string) {
 	o.ClientUri.Set(&v)
 }
-
 // SetClientUriNil sets the value for ClientUri to be an explicit nil
 func (o *AuthorizedAppDto) SetClientUriNil() {
 	o.ClientUri.Set(nil)
@@ -240,7 +237,6 @@ func (o *AuthorizedAppDto) HasLogoUri() bool {
 func (o *AuthorizedAppDto) SetLogoUri(v string) {
 	o.LogoUri.Set(&v)
 }
-
 // SetLogoUriNil sets the value for LogoUri to be an explicit nil
 func (o *AuthorizedAppDto) SetLogoUriNil() {
 	o.LogoUri.Set(nil)
@@ -283,7 +279,6 @@ func (o *AuthorizedAppDto) HasScopes() bool {
 func (o *AuthorizedAppDto) SetScopes(v string) {
 	o.Scopes.Set(&v)
 }
-
 // SetScopesNil sets the value for Scopes to be an explicit nil
 func (o *AuthorizedAppDto) SetScopesNil() {
 	o.Scopes.Set(nil)
@@ -358,7 +353,6 @@ func (o *AuthorizedAppDto) HasLastAuthorizationTime() bool {
 func (o *AuthorizedAppDto) SetLastAuthorizationTime(v time.Time) {
 	o.LastAuthorizationTime.Set(&v)
 }
-
 // SetLastAuthorizationTimeNil sets the value for LastAuthorizationTime to be an explicit nil
 func (o *AuthorizedAppDto) SetLastAuthorizationTimeNil() {
 	o.LastAuthorizationTime.Set(nil)
@@ -370,7 +364,7 @@ func (o *AuthorizedAppDto) UnsetLastAuthorizationTime() {
 }
 
 func (o AuthorizedAppDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -441,3 +435,5 @@ func (v *NullableAuthorizedAppDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

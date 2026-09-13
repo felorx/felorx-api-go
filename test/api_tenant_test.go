@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_TenantAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService CreateTenant", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.TenantAPI.CreateTenant(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService DeleteDefaultConnectionString", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService DeleteTenantById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -62,7 +62,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService GetDefaultConnectionString", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -76,7 +76,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService GetTenantById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -90,7 +90,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService GetTenantList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.TenantAPI.GetTenantList(context.Background()).Execute()
 
@@ -102,7 +102,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService UpdateDefaultConnectionString", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -115,7 +115,7 @@ func Test_felorx_TenantAPIService(t *testing.T) {
 
 	t.Run("Test TenantAPIService UpdateTenant", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // AppLocaleAPIService AppLocaleAPI service
 type AppLocaleAPIService service
 
 type ApiCreateAppLocaleRequest struct {
-	ctx                        context.Context
-	ApiService                 *AppLocaleAPIService
+	ctx context.Context
+	ApiService *AppLocaleAPIService
 	createOrUpdateAppLocaleDto *CreateOrUpdateAppLocaleDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateAppLocaleRequest) Execute() (*AppLocaleDto, *http.Response, err
 /*
 CreateAppLocale Method for CreateAppLocale
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppLocaleRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppLocaleRequest
 */
 func (a *AppLocaleAPIService) CreateAppLocale(ctx context.Context) ApiCreateAppLocaleRequest {
 	return ApiCreateAppLocaleRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppLocaleDto
+//  @return AppLocaleDto
 func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest) (*AppLocaleDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppLocaleDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppLocaleDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppLocaleAPIService.CreateAppLocale")
@@ -120,8 +120,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *AppLocaleAPIService) CreateAppLocaleExecute(r ApiCreateAppLocaleRequest
 }
 
 type ApiDeleteAppLocaleByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppLocaleAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppLocaleByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeleteAppLocaleByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppLocaleById Method for DeleteAppLocaleById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppLocaleByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAppLocaleByIdRequest
 */
 func (a *AppLocaleAPIService) DeleteAppLocaleById(ctx context.Context, id string) ApiDeleteAppLocaleByIdRequest {
 	return ApiDeleteAppLocaleByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppLocaleAPIService.DeleteAppLocaleById")
@@ -284,8 +284,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -348,43 +348,42 @@ func (a *AppLocaleAPIService) DeleteAppLocaleByIdExecute(r ApiDeleteAppLocaleByI
 	return localVarHTTPResponse, nil
 }
 
-type ApiGetListByAppIdRequest struct {
-	ctx        context.Context
+type ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest struct {
+	ctx context.Context
 	ApiService *AppLocaleAPIService
-	appId      string
+	appId string
 }
 
-func (r ApiGetListByAppIdRequest) Execute() ([]AppLocaleDto, *http.Response, error) {
-	return r.ApiService.GetListByAppIdExecute(r)
+func (r ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest) Execute() ([]AppLocaleDto, *http.Response, error) {
+	return r.ApiService.GetListByAppIdGetApiAppAppLocaleByAppIdAppIdExecute(r)
 }
 
 /*
-GetListByAppId Method for GetListByAppId
+GetListByAppIdGetApiAppAppLocaleByAppIdAppId Method for GetListByAppIdGetApiAppAppLocaleByAppIdAppId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiGetListByAppIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest
 */
-func (a *AppLocaleAPIService) GetListByAppId(ctx context.Context, appId string) ApiGetListByAppIdRequest {
-	return ApiGetListByAppIdRequest{
+func (a *AppLocaleAPIService) GetListByAppIdGetApiAppAppLocaleByAppIdAppId(ctx context.Context, appId string) ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest {
+	return ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
+		ctx: ctx,
+		appId: appId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []AppLocaleDto
-func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) ([]AppLocaleDto, *http.Response, error) {
+//  @return []AppLocaleDto
+func (a *AppLocaleAPIService) GetListByAppIdGetApiAppAppLocaleByAppIdAppIdExecute(r ApiGetListByAppIdGetApiAppAppLocaleByAppIdAppIdRequest) ([]AppLocaleDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []AppLocaleDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []AppLocaleDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppLocaleAPIService.GetListByAppId")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppLocaleAPIService.GetListByAppIdGetApiAppAppLocaleByAppIdAppId")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -442,8 +441,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -453,8 +452,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -464,8 +463,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -475,8 +474,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -486,8 +485,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -497,8 +496,8 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -516,9 +515,9 @@ func (a *AppLocaleAPIService) GetListByAppIdExecute(r ApiGetListByAppIdRequest) 
 }
 
 type ApiUpdateAppLocaleRequest struct {
-	ctx                        context.Context
-	ApiService                 *AppLocaleAPIService
-	id                         string
+	ctx context.Context
+	ApiService *AppLocaleAPIService
+	id string
 	createOrUpdateAppLocaleDto *CreateOrUpdateAppLocaleDto
 }
 
@@ -534,27 +533,26 @@ func (r ApiUpdateAppLocaleRequest) Execute() (*AppLocaleDto, *http.Response, err
 /*
 UpdateAppLocale Method for UpdateAppLocale
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAppLocaleRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateAppLocaleRequest
 */
 func (a *AppLocaleAPIService) UpdateAppLocale(ctx context.Context, id string) ApiUpdateAppLocaleRequest {
 	return ApiUpdateAppLocaleRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppLocaleDto
+//  @return AppLocaleDto
 func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest) (*AppLocaleDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppLocaleDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppLocaleDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppLocaleAPIService.UpdateAppLocale")
@@ -617,8 +615,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -628,8 +626,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -639,8 +637,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -650,8 +648,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -661,8 +659,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -672,8 +670,8 @@ func (a *AppLocaleAPIService) UpdateAppLocaleExecute(r ApiUpdateAppLocaleRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

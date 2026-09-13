@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_NotificationAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_NotificationAPIService(t *testing.T) {
 
 	t.Run("Test NotificationAPIService Bark", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var apiKey string
 		var message string
@@ -38,7 +38,7 @@ func Test_felorx_NotificationAPIService(t *testing.T) {
 
 	t.Run("Test NotificationAPIService GetNotificationList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.NotificationAPI.GetNotificationList(context.Background()).Execute()
 
@@ -50,7 +50,7 @@ func Test_felorx_NotificationAPIService(t *testing.T) {
 
 	t.Run("Test NotificationAPIService Push", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.NotificationAPI.Push(context.Background()).Execute()
 

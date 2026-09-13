@@ -18,14 +18,15 @@ import (
 	"net/url"
 )
 
+
 // FeaturesAPIService FeaturesAPI service
 type FeaturesAPIService service
 
 type ApiDeleteFeaturesRequest struct {
-	ctx          context.Context
-	ApiService   *FeaturesAPIService
+	ctx context.Context
+	ApiService *FeaturesAPIService
 	providerName *string
-	providerKey  *string
+	providerKey *string
 }
 
 func (r ApiDeleteFeaturesRequest) ProviderName(providerName string) ApiDeleteFeaturesRequest {
@@ -45,22 +46,22 @@ func (r ApiDeleteFeaturesRequest) Execute() (*http.Response, error) {
 /*
 DeleteFeatures Method for DeleteFeatures
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteFeaturesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiDeleteFeaturesRequest
 */
 func (a *FeaturesAPIService) DeleteFeatures(ctx context.Context) ApiDeleteFeaturesRequest {
 	return ApiDeleteFeaturesRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FeaturesAPIService.DeleteFeatures")
@@ -126,8 +127,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -137,8 +138,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -148,8 +149,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -159,8 +160,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -170,8 +171,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -181,8 +182,8 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -191,10 +192,10 @@ func (a *FeaturesAPIService) DeleteFeaturesExecute(r ApiDeleteFeaturesRequest) (
 }
 
 type ApiGetFeaturesRequest struct {
-	ctx          context.Context
-	ApiService   *FeaturesAPIService
+	ctx context.Context
+	ApiService *FeaturesAPIService
 	providerName *string
-	providerKey  *string
+	providerKey *string
 }
 
 func (r ApiGetFeaturesRequest) ProviderName(providerName string) ApiGetFeaturesRequest {
@@ -214,25 +215,24 @@ func (r ApiGetFeaturesRequest) Execute() (*GetFeatureListResultDto, *http.Respon
 /*
 GetFeatures Method for GetFeatures
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetFeaturesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetFeaturesRequest
 */
 func (a *FeaturesAPIService) GetFeatures(ctx context.Context) ApiGetFeaturesRequest {
 	return ApiGetFeaturesRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return GetFeatureListResultDto
+//  @return GetFeatureListResultDto
 func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFeatureListResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *GetFeatureListResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *GetFeatureListResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FeaturesAPIService.GetFeatures")
@@ -298,8 +298,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -309,8 +309,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -320,8 +320,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -331,8 +331,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -342,8 +342,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -353,8 +353,8 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -372,10 +372,10 @@ func (a *FeaturesAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) (*GetFe
 }
 
 type ApiUpdateFeaturesRequest struct {
-	ctx               context.Context
-	ApiService        *FeaturesAPIService
-	providerName      *string
-	providerKey       *string
+	ctx context.Context
+	ApiService *FeaturesAPIService
+	providerName *string
+	providerKey *string
 	updateFeaturesDto *UpdateFeaturesDto
 }
 
@@ -401,22 +401,22 @@ func (r ApiUpdateFeaturesRequest) Execute() (*http.Response, error) {
 /*
 UpdateFeatures Method for UpdateFeatures
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiUpdateFeaturesRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpdateFeaturesRequest
 */
 func (a *FeaturesAPIService) UpdateFeatures(ctx context.Context) ApiUpdateFeaturesRequest {
 	return ApiUpdateFeaturesRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPut
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FeaturesAPIService.UpdateFeatures")
@@ -484,8 +484,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -495,8 +495,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -506,8 +506,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -517,8 +517,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -528,8 +528,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -539,8 +539,8 @@ func (a *FeaturesAPIService) UpdateFeaturesExecute(r ApiUpdateFeaturesRequest) (
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

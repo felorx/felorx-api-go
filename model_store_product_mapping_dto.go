@@ -20,24 +20,24 @@ var _ MappedNullable = &StoreProductMappingDto{}
 
 // StoreProductMappingDto struct for StoreProductMappingDto
 type StoreProductMappingDto struct {
-	Id                   *string           `json:"id,omitempty"`
-	CreationTime         *time.Time        `json:"creationTime,omitempty"`
-	CreatorId            NullableString    `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime      `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString    `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool             `json:"isDeleted,omitempty"`
-	DeleterId            NullableString    `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime      `json:"deletionTime,omitempty"`
-	AppId                *string           `json:"appId,omitempty"`
-	PricingId            *string           `json:"pricingId,omitempty"`
-	PlanPriceId          NullableString    `json:"planPriceId,omitempty"`
-	Provider             *BillingProvider  `json:"provider,omitempty"`
-	Platform             *AppPlatform      `json:"platform,omitempty"`
-	Period               *SubBillingPeriod `json:"period,omitempty"`
-	StoreProductId       NullableString    `json:"storeProductId,omitempty"`
-	ExternalProductId    NullableString    `json:"externalProductId,omitempty"`
-	Environment          NullableString    `json:"environment,omitempty"`
-	IsEnabled            *bool             `json:"isEnabled,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	PlanPriceId NullableString `json:"planPriceId,omitempty"`
+	Provider *BillingProvider `json:"provider,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Period *SubBillingPeriod `json:"period,omitempty"`
+	StoreProductId NullableString `json:"storeProductId,omitempty"`
+	ExternalProductId NullableString `json:"externalProductId,omitempty"`
+	Environment NullableString `json:"environment,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
 }
 
 // NewStoreProductMappingDto instantiates a new StoreProductMappingDto object
@@ -153,7 +153,6 @@ func (o *StoreProductMappingDto) HasCreatorId() bool {
 func (o *StoreProductMappingDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *StoreProductMappingDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -196,7 +195,6 @@ func (o *StoreProductMappingDto) HasLastModificationTime() bool {
 func (o *StoreProductMappingDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *StoreProductMappingDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -239,7 +237,6 @@ func (o *StoreProductMappingDto) HasLastModifierId() bool {
 func (o *StoreProductMappingDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *StoreProductMappingDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -314,7 +311,6 @@ func (o *StoreProductMappingDto) HasDeleterId() bool {
 func (o *StoreProductMappingDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *StoreProductMappingDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -357,7 +353,6 @@ func (o *StoreProductMappingDto) HasDeletionTime() bool {
 func (o *StoreProductMappingDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *StoreProductMappingDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -464,7 +459,6 @@ func (o *StoreProductMappingDto) HasPlanPriceId() bool {
 func (o *StoreProductMappingDto) SetPlanPriceId(v string) {
 	o.PlanPriceId.Set(&v)
 }
-
 // SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
 func (o *StoreProductMappingDto) SetPlanPriceIdNil() {
 	o.PlanPriceId.Set(nil)
@@ -603,7 +597,6 @@ func (o *StoreProductMappingDto) HasStoreProductId() bool {
 func (o *StoreProductMappingDto) SetStoreProductId(v string) {
 	o.StoreProductId.Set(&v)
 }
-
 // SetStoreProductIdNil sets the value for StoreProductId to be an explicit nil
 func (o *StoreProductMappingDto) SetStoreProductIdNil() {
 	o.StoreProductId.Set(nil)
@@ -646,7 +639,6 @@ func (o *StoreProductMappingDto) HasExternalProductId() bool {
 func (o *StoreProductMappingDto) SetExternalProductId(v string) {
 	o.ExternalProductId.Set(&v)
 }
-
 // SetExternalProductIdNil sets the value for ExternalProductId to be an explicit nil
 func (o *StoreProductMappingDto) SetExternalProductIdNil() {
 	o.ExternalProductId.Set(nil)
@@ -689,7 +681,6 @@ func (o *StoreProductMappingDto) HasEnvironment() bool {
 func (o *StoreProductMappingDto) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *StoreProductMappingDto) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -733,7 +724,7 @@ func (o *StoreProductMappingDto) SetIsEnabled(v bool) {
 }
 
 func (o StoreProductMappingDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -834,3 +825,5 @@ func (v *NullableStoreProductMappingDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

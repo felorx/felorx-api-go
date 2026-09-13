@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CalendarAlgorithmType** | Pointer to **NullableString** |  | [optional]
-**DateTimeFormatLong** | Pointer to **NullableString** |  | [optional]
-**ShortDatePattern** | Pointer to **NullableString** |  | [optional]
-**FullDateTimePattern** | Pointer to **NullableString** |  | [optional]
-**DateSeparator** | Pointer to **NullableString** |  | [optional]
-**ShortTimePattern** | Pointer to **NullableString** |  | [optional]
-**LongTimePattern** | Pointer to **NullableString** |  | [optional]
+**CalendarAlgorithmType** | Pointer to **NullableString** |  | [optional] 
+**DateTimeFormatLong** | Pointer to **NullableString** |  | [optional] 
+**ShortDatePattern** | Pointer to **NullableString** |  | [optional] 
+**FullDateTimePattern** | Pointer to **NullableString** |  | [optional] 
+**DateSeparator** | Pointer to **NullableString** |  | [optional] 
+**ShortTimePattern** | Pointer to **NullableString** |  | [optional] 
+**LongTimePattern** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

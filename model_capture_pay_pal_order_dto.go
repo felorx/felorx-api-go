@@ -74,7 +74,6 @@ func (o *CapturePayPalOrderDto) HasPayPalOrderId() bool {
 func (o *CapturePayPalOrderDto) SetPayPalOrderId(v string) {
 	o.PayPalOrderId.Set(&v)
 }
-
 // SetPayPalOrderIdNil sets the value for PayPalOrderId to be an explicit nil
 func (o *CapturePayPalOrderDto) SetPayPalOrderIdNil() {
 	o.PayPalOrderId.Set(nil)
@@ -117,7 +116,6 @@ func (o *CapturePayPalOrderDto) HasPayPalSubscriptionId() bool {
 func (o *CapturePayPalOrderDto) SetPayPalSubscriptionId(v string) {
 	o.PayPalSubscriptionId.Set(&v)
 }
-
 // SetPayPalSubscriptionIdNil sets the value for PayPalSubscriptionId to be an explicit nil
 func (o *CapturePayPalOrderDto) SetPayPalSubscriptionIdNil() {
 	o.PayPalSubscriptionId.Set(nil)
@@ -129,7 +127,7 @@ func (o *CapturePayPalOrderDto) UnsetPayPalSubscriptionId() {
 }
 
 func (o CapturePayPalOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -182,3 +180,5 @@ func (v *NullableCapturePayPalOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

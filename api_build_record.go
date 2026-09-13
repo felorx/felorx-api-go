@@ -19,197 +19,13 @@ import (
 	"strings"
 )
 
+
 // BuildRecordAPIService BuildRecordAPI service
 type BuildRecordAPIService service
 
-type ApiBuildRecordGetLatestRequest struct {
-	ctx         context.Context
-	ApiService  *BuildRecordAPIService
-	appId       string
-	platform    *AppPlatform
-	environment *string
-}
-
-func (r ApiBuildRecordGetLatestRequest) Platform(platform AppPlatform) ApiBuildRecordGetLatestRequest {
-	r.platform = &platform
-	return r
-}
-
-func (r ApiBuildRecordGetLatestRequest) Environment(environment string) ApiBuildRecordGetLatestRequest {
-	r.environment = &environment
-	return r
-}
-
-func (r ApiBuildRecordGetLatestRequest) Execute() (*BuildRecordDto, *http.Response, error) {
-	return r.ApiService.BuildRecordGetLatestExecute(r)
-}
-
-/*
-BuildRecordGetLatest Method for BuildRecordGetLatest
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiBuildRecordGetLatestRequest
-*/
-func (a *BuildRecordAPIService) BuildRecordGetLatest(ctx context.Context, appId string) ApiBuildRecordGetLatestRequest {
-	return ApiBuildRecordGetLatestRequest{
-		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
-	}
-}
-
-// Execute executes the request
-//
-//	@return BuildRecordDto
-func (a *BuildRecordAPIService) BuildRecordGetLatestExecute(r ApiBuildRecordGetLatestRequest) (*BuildRecordDto, *http.Response, error) {
-	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
-	)
-
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.BuildRecordGetLatest")
-	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
-	}
-
-	localVarPath := localBasePath + "/api/app/build-record/latest/{appId}"
-	localVarPath = strings.Replace(localVarPath, "{"+"appId"+"}", url.PathEscape(parameterValueToString(r.appId, "appId")), -1)
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if r.platform != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "platform", r.platform, "form", "")
-	}
-	if r.environment != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "environment", r.environment, "form", "")
-	}
-	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
-
-	// set Content-Type header
-	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
-	if localVarHTTPContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
-	}
-
-	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
-
-	// set Accept header
-	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
-	if localVarHTTPHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
-	}
-	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHTTPResponse, err := a.client.callAPI(req)
-	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
-	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
-	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
-	}
-
-	if localVarHTTPResponse.StatusCode >= 300 {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: localVarHTTPResponse.Status,
-		}
-		if localVarHTTPResponse.StatusCode == 403 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 401 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 400 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 404 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 501 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
-		}
-		if localVarHTTPResponse.StatusCode == 500 {
-			var v RemoteServiceErrorResponse
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
-}
-
 type ApiCreateBuildRecordRequest struct {
-	ctx                  context.Context
-	ApiService           *BuildRecordAPIService
+	ctx context.Context
+	ApiService *BuildRecordAPIService
 	createBuildRecordDto *CreateBuildRecordDto
 }
 
@@ -225,25 +41,24 @@ func (r ApiCreateBuildRecordRequest) Execute() (*BuildRecordDto, *http.Response,
 /*
 CreateBuildRecord Method for CreateBuildRecord
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateBuildRecordRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateBuildRecordRequest
 */
 func (a *BuildRecordAPIService) CreateBuildRecord(ctx context.Context) ApiCreateBuildRecordRequest {
 	return ApiCreateBuildRecordRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
+//  @return BuildRecordDto
 func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.CreateBuildRecord")
@@ -305,8 +120,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -316,8 +131,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -327,8 +142,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -338,8 +153,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -349,8 +164,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -360,8 +175,8 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -379,9 +194,9 @@ func (a *BuildRecordAPIService) CreateBuildRecordExecute(r ApiCreateBuildRecordR
 }
 
 type ApiDeleteBuildRecordByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *BuildRecordAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteBuildRecordByIdRequest) Execute() (*http.Response, error) {
@@ -391,24 +206,24 @@ func (r ApiDeleteBuildRecordByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteBuildRecordById Method for DeleteBuildRecordById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteBuildRecordByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteBuildRecordByIdRequest
 */
 func (a *BuildRecordAPIService) DeleteBuildRecordById(ctx context.Context, id string) ApiDeleteBuildRecordByIdRequest {
 	return ApiDeleteBuildRecordByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRecordByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.DeleteBuildRecordById")
@@ -469,8 +284,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -480,8 +295,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -491,8 +306,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -502,8 +317,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -513,8 +328,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -524,8 +339,8 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -534,9 +349,9 @@ func (a *BuildRecordAPIService) DeleteBuildRecordByIdExecute(r ApiDeleteBuildRec
 }
 
 type ApiGetBuildRecordByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *BuildRecordAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetBuildRecordByIdRequest) Execute() (*BuildRecordDto, *http.Response, error) {
@@ -546,27 +361,26 @@ func (r ApiGetBuildRecordByIdRequest) Execute() (*BuildRecordDto, *http.Response
 /*
 GetBuildRecordById Method for GetBuildRecordById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetBuildRecordByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetBuildRecordByIdRequest
 */
 func (a *BuildRecordAPIService) GetBuildRecordById(ctx context.Context, id string) ApiGetBuildRecordByIdRequest {
 	return ApiGetBuildRecordByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
+//  @return BuildRecordDto
 func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByIdRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.GetBuildRecordById")
@@ -627,8 +441,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -638,8 +452,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -649,8 +463,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -660,8 +474,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -671,8 +485,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -682,8 +496,8 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -701,16 +515,17 @@ func (a *BuildRecordAPIService) GetBuildRecordByIdExecute(r ApiGetBuildRecordByI
 }
 
 type ApiGetBuildRecordListRequest struct {
-	ctx            context.Context
-	ApiService     *BuildRecordAPIService
-	appId          *string
-	status         *BuildStatus
-	platform       *AppPlatform
-	environment    *string
-	version        *string
-	branch         *string
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *BuildRecordAPIService
+	appId *string
+	status *BuildStatus
+	platform *AppPlatform
+	architecture *string
+	environment *string
+	version *string
+	branch *string
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -729,6 +544,12 @@ func (r ApiGetBuildRecordListRequest) Status(status BuildStatus) ApiGetBuildReco
 // 目标平台
 func (r ApiGetBuildRecordListRequest) Platform(platform AppPlatform) ApiGetBuildRecordListRequest {
 	r.platform = &platform
+	return r
+}
+
+// 目标架构。
+func (r ApiGetBuildRecordListRequest) Architecture(architecture string) ApiGetBuildRecordListRequest {
+	r.architecture = &architecture
 	return r
 }
 
@@ -772,25 +593,24 @@ func (r ApiGetBuildRecordListRequest) Execute() (*BuildRecordDtoPagedResultDto, 
 /*
 GetBuildRecordList Method for GetBuildRecordList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetBuildRecordListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetBuildRecordListRequest
 */
 func (a *BuildRecordAPIService) GetBuildRecordList(ctx context.Context) ApiGetBuildRecordListRequest {
 	return ApiGetBuildRecordListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDtoPagedResultDto
+//  @return BuildRecordDtoPagedResultDto
 func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordListRequest) (*BuildRecordDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.GetBuildRecordList")
@@ -812,6 +632,9 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 	}
 	if r.platform != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Platform", r.platform, "form", "")
+	}
+	if r.architecture != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "Architecture", r.architecture, "form", "")
 	}
 	if r.environment != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "Environment", r.environment, "form", "")
@@ -877,8 +700,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -888,8 +711,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -899,8 +722,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -910,8 +733,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -921,8 +744,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -932,8 +755,8 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -951,9 +774,9 @@ func (a *BuildRecordAPIService) GetBuildRecordListExecute(r ApiGetBuildRecordLis
 }
 
 type ApiGetByCiBuildIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *BuildRecordAPIService
-	ciBuildId  string
+	ciBuildId string
 }
 
 func (r ApiGetByCiBuildIdRequest) Execute() (*BuildRecordDto, *http.Response, error) {
@@ -963,27 +786,26 @@ func (r ApiGetByCiBuildIdRequest) Execute() (*BuildRecordDto, *http.Response, er
 /*
 GetByCiBuildId Method for GetByCiBuildId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param ciBuildId
-	@return ApiGetByCiBuildIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param ciBuildId
+ @return ApiGetByCiBuildIdRequest
 */
 func (a *BuildRecordAPIService) GetByCiBuildId(ctx context.Context, ciBuildId string) ApiGetByCiBuildIdRequest {
 	return ApiGetByCiBuildIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		ciBuildId:  ciBuildId,
+		ctx: ctx,
+		ciBuildId: ciBuildId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
+//  @return BuildRecordDto
 func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.GetByCiBuildId")
@@ -1044,8 +866,8 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1055,8 +877,8 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1066,8 +888,8 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1077,8 +899,8 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1088,8 +910,8 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1099,8 +921,201 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest struct {
+	ctx context.Context
+	ApiService *BuildRecordAPIService
+	appId string
+	platform *AppPlatform
+	environment *string
+	architecture *string
+}
+
+func (r ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest) Platform(platform AppPlatform) ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest {
+	r.platform = &platform
+	return r
+}
+
+func (r ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest) Environment(environment string) ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest {
+	r.environment = &environment
+	return r
+}
+
+func (r ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest) Architecture(architecture string) ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest {
+	r.architecture = &architecture
+	return r
+}
+
+func (r ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest) Execute() (*BuildRecordDto, *http.Response, error) {
+	return r.ApiService.GetLatestGetApiAppBuildRecordLatestAppIdExecute(r)
+}
+
+/*
+GetLatestGetApiAppBuildRecordLatestAppId Method for GetLatestGetApiAppBuildRecordLatestAppId
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest
+*/
+func (a *BuildRecordAPIService) GetLatestGetApiAppBuildRecordLatestAppId(ctx context.Context, appId string) ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest {
+	return ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest{
+		ApiService: a,
+		ctx: ctx,
+		appId: appId,
+	}
+}
+
+// Execute executes the request
+//  @return BuildRecordDto
+func (a *BuildRecordAPIService) GetLatestGetApiAppBuildRecordLatestAppIdExecute(r ApiGetLatestGetApiAppBuildRecordLatestAppIdRequest) (*BuildRecordDto, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.GetLatestGetApiAppBuildRecordLatestAppId")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/api/app/build-record/latest/{appId}"
+	localVarPath = strings.Replace(localVarPath, "{"+"appId"+"}", url.PathEscape(parameterValueToString(r.appId, "appId")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.platform != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "platform", r.platform, "form", "")
+	}
+	if r.environment != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "environment", r.environment, "form", "")
+	}
+	if r.architecture != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "architecture", r.architecture, "form", "")
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode == 403 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 401 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 400 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 404 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 501 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode == 500 {
+			var v RemoteServiceErrorResponse
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1118,9 +1133,9 @@ func (a *BuildRecordAPIService) GetByCiBuildIdExecute(r ApiGetByCiBuildIdRequest
 }
 
 type ApiMarkAsBuildingRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *BuildRecordAPIService
-	id         string
+	id string
 }
 
 func (r ApiMarkAsBuildingRequest) Execute() (*BuildRecordDto, *http.Response, error) {
@@ -1130,27 +1145,26 @@ func (r ApiMarkAsBuildingRequest) Execute() (*BuildRecordDto, *http.Response, er
 /*
 MarkAsBuilding Method for MarkAsBuilding
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiMarkAsBuildingRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiMarkAsBuildingRequest
 */
 func (a *BuildRecordAPIService) MarkAsBuilding(ctx context.Context, id string) ApiMarkAsBuildingRequest {
 	return ApiMarkAsBuildingRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
+//  @return BuildRecordDto
 func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsBuilding")
@@ -1211,8 +1225,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1222,8 +1236,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1233,8 +1247,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1244,8 +1258,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1255,8 +1269,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1266,8 +1280,8 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1284,43 +1298,42 @@ func (a *BuildRecordAPIService) MarkAsBuildingExecute(r ApiMarkAsBuildingRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiMarkAsCanceledRequest struct {
-	ctx        context.Context
+type ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest struct {
+	ctx context.Context
 	ApiService *BuildRecordAPIService
-	id         string
+	id string
 }
 
-func (r ApiMarkAsCanceledRequest) Execute() (*BuildRecordDto, *http.Response, error) {
-	return r.ApiService.MarkAsCanceledExecute(r)
+func (r ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest) Execute() (*BuildRecordDto, *http.Response, error) {
+	return r.ApiService.MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledExecute(r)
 }
 
 /*
-MarkAsCanceled Method for MarkAsCanceled
+MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled Method for MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiMarkAsCanceledRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest
 */
-func (a *BuildRecordAPIService) MarkAsCanceled(ctx context.Context, id string) ApiMarkAsCanceledRequest {
-	return ApiMarkAsCanceledRequest{
+func (a *BuildRecordAPIService) MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled(ctx context.Context, id string) ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest {
+	return ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
-func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest) (*BuildRecordDto, *http.Response, error) {
+//  @return BuildRecordDto
+func (a *BuildRecordAPIService) MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledExecute(r ApiMarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceledRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsCanceled")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -1378,8 +1391,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1389,8 +1402,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1400,8 +1413,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1411,8 +1424,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1422,8 +1435,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1433,8 +1446,8 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1451,49 +1464,48 @@ func (a *BuildRecordAPIService) MarkAsCanceledExecute(r ApiMarkAsCanceledRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiMarkAsFailedRequest struct {
-	ctx          context.Context
-	ApiService   *BuildRecordAPIService
-	id           string
+type ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest struct {
+	ctx context.Context
+	ApiService *BuildRecordAPIService
+	id string
 	errorMessage *string
 }
 
-func (r ApiMarkAsFailedRequest) ErrorMessage(errorMessage string) ApiMarkAsFailedRequest {
+func (r ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest) ErrorMessage(errorMessage string) ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest {
 	r.errorMessage = &errorMessage
 	return r
 }
 
-func (r ApiMarkAsFailedRequest) Execute() (*BuildRecordDto, *http.Response, error) {
-	return r.ApiService.MarkAsFailedExecute(r)
+func (r ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest) Execute() (*BuildRecordDto, *http.Response, error) {
+	return r.ApiService.MarkAsFailedPostApiAppBuildRecordIdMarkAsFailedExecute(r)
 }
 
 /*
-MarkAsFailed Method for MarkAsFailed
+MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed Method for MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiMarkAsFailedRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest
 */
-func (a *BuildRecordAPIService) MarkAsFailed(ctx context.Context, id string) ApiMarkAsFailedRequest {
-	return ApiMarkAsFailedRequest{
+func (a *BuildRecordAPIService) MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed(ctx context.Context, id string) ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest {
+	return ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
-func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*BuildRecordDto, *http.Response, error) {
+//  @return BuildRecordDto
+func (a *BuildRecordAPIService) MarkAsFailedPostApiAppBuildRecordIdMarkAsFailedExecute(r ApiMarkAsFailedPostApiAppBuildRecordIdMarkAsFailedRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsFailed")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -1554,8 +1566,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1565,8 +1577,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1576,8 +1588,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1587,8 +1599,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1598,8 +1610,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1609,8 +1621,8 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1627,55 +1639,54 @@ func (a *BuildRecordAPIService) MarkAsFailedExecute(r ApiMarkAsFailedRequest) (*
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiMarkAsSucceededRequest struct {
-	ctx          context.Context
-	ApiService   *BuildRecordAPIService
-	id           string
-	artifactUrl  *string
+type ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest struct {
+	ctx context.Context
+	ApiService *BuildRecordAPIService
+	id string
+	artifactUrl *string
 	artifactSize *int64
 }
 
-func (r ApiMarkAsSucceededRequest) ArtifactUrl(artifactUrl string) ApiMarkAsSucceededRequest {
+func (r ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest) ArtifactUrl(artifactUrl string) ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest {
 	r.artifactUrl = &artifactUrl
 	return r
 }
 
-func (r ApiMarkAsSucceededRequest) ArtifactSize(artifactSize int64) ApiMarkAsSucceededRequest {
+func (r ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest) ArtifactSize(artifactSize int64) ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest {
 	r.artifactSize = &artifactSize
 	return r
 }
 
-func (r ApiMarkAsSucceededRequest) Execute() (*BuildRecordDto, *http.Response, error) {
-	return r.ApiService.MarkAsSucceededExecute(r)
+func (r ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest) Execute() (*BuildRecordDto, *http.Response, error) {
+	return r.ApiService.MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededExecute(r)
 }
 
 /*
-MarkAsSucceeded Method for MarkAsSucceeded
+MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded Method for MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiMarkAsSucceededRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest
 */
-func (a *BuildRecordAPIService) MarkAsSucceeded(ctx context.Context, id string) ApiMarkAsSucceededRequest {
-	return ApiMarkAsSucceededRequest{
+func (a *BuildRecordAPIService) MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded(ctx context.Context, id string) ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest {
+	return ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
-func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededRequest) (*BuildRecordDto, *http.Response, error) {
+//  @return BuildRecordDto
+func (a *BuildRecordAPIService) MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededExecute(r ApiMarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceededRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsSucceeded")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -1739,8 +1750,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1750,8 +1761,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1761,8 +1772,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1772,8 +1783,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1783,8 +1794,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1794,8 +1805,8 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1813,9 +1824,9 @@ func (a *BuildRecordAPIService) MarkAsSucceededExecute(r ApiMarkAsSucceededReque
 }
 
 type ApiUpdateBuildRecordRequest struct {
-	ctx                  context.Context
-	ApiService           *BuildRecordAPIService
-	id                   string
+	ctx context.Context
+	ApiService *BuildRecordAPIService
+	id string
 	updateBuildRecordDto *UpdateBuildRecordDto
 }
 
@@ -1831,27 +1842,26 @@ func (r ApiUpdateBuildRecordRequest) Execute() (*BuildRecordDto, *http.Response,
 /*
 UpdateBuildRecord Method for UpdateBuildRecord
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateBuildRecordRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateBuildRecordRequest
 */
 func (a *BuildRecordAPIService) UpdateBuildRecord(ctx context.Context, id string) ApiUpdateBuildRecordRequest {
 	return ApiUpdateBuildRecordRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return BuildRecordDto
+//  @return BuildRecordDto
 func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordRequest) (*BuildRecordDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *BuildRecordDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *BuildRecordDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BuildRecordAPIService.UpdateBuildRecord")
@@ -1914,8 +1924,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1925,8 +1935,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1936,8 +1946,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1947,8 +1957,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1958,8 +1968,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1969,8 +1979,8 @@ func (a *BuildRecordAPIService) UpdateBuildRecordExecute(r ApiUpdateBuildRecordR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

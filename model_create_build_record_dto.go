@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -28,10 +28,12 @@ type CreateBuildRecordDto struct {
 	// 分支名称
 	Branch string `json:"branch"`
 	// 提交哈希
-	CommitHash   string        `json:"commitHash"`
-	Trigger      *BuildTrigger `json:"trigger,omitempty"`
-	Platform     AppPlatform   `json:"platform"`
-	ArtifactType ArtifactType  `json:"artifactType"`
+	CommitHash string `json:"commitHash"`
+	Trigger *BuildTrigger `json:"trigger,omitempty"`
+	Platform AppPlatform `json:"platform"`
+	ArtifactType ArtifactType `json:"artifactType"`
+	// 目标架构（x64、arm64、arm、riscv64、universal 或 multiarch）。
+	Architecture NullableString `json:"architecture,omitempty"`
 	// 环境
 	Environment NullableString `json:"environment,omitempty"`
 	// CI/CD 系统信息
@@ -243,6 +245,48 @@ func (o *CreateBuildRecordDto) SetArtifactType(v ArtifactType) {
 	o.ArtifactType = v
 }
 
+// GetArchitecture returns the Architecture field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *CreateBuildRecordDto) GetArchitecture() string {
+	if o == nil || IsNil(o.Architecture.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Architecture.Get()
+}
+
+// GetArchitectureOk returns a tuple with the Architecture field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *CreateBuildRecordDto) GetArchitectureOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Architecture.Get(), o.Architecture.IsSet()
+}
+
+// HasArchitecture returns a boolean if a field has been set.
+func (o *CreateBuildRecordDto) HasArchitecture() bool {
+	if o != nil && o.Architecture.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetArchitecture gets a reference to the given NullableString and assigns it to the Architecture field.
+func (o *CreateBuildRecordDto) SetArchitecture(v string) {
+	o.Architecture.Set(&v)
+}
+// SetArchitectureNil sets the value for Architecture to be an explicit nil
+func (o *CreateBuildRecordDto) SetArchitectureNil() {
+	o.Architecture.Set(nil)
+}
+
+// UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
+func (o *CreateBuildRecordDto) UnsetArchitecture() {
+	o.Architecture.Unset()
+}
+
 // GetEnvironment returns the Environment field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CreateBuildRecordDto) GetEnvironment() string {
 	if o == nil || IsNil(o.Environment.Get()) {
@@ -275,7 +319,6 @@ func (o *CreateBuildRecordDto) HasEnvironment() bool {
 func (o *CreateBuildRecordDto) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *CreateBuildRecordDto) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -318,7 +361,6 @@ func (o *CreateBuildRecordDto) HasCiSystem() bool {
 func (o *CreateBuildRecordDto) SetCiSystem(v string) {
 	o.CiSystem.Set(&v)
 }
-
 // SetCiSystemNil sets the value for CiSystem to be an explicit nil
 func (o *CreateBuildRecordDto) SetCiSystemNil() {
 	o.CiSystem.Set(nil)
@@ -361,7 +403,6 @@ func (o *CreateBuildRecordDto) HasCiBuildId() bool {
 func (o *CreateBuildRecordDto) SetCiBuildId(v string) {
 	o.CiBuildId.Set(&v)
 }
-
 // SetCiBuildIdNil sets the value for CiBuildId to be an explicit nil
 func (o *CreateBuildRecordDto) SetCiBuildIdNil() {
 	o.CiBuildId.Set(nil)
@@ -404,7 +445,6 @@ func (o *CreateBuildRecordDto) HasCiBuildUrl() bool {
 func (o *CreateBuildRecordDto) SetCiBuildUrl(v string) {
 	o.CiBuildUrl.Set(&v)
 }
-
 // SetCiBuildUrlNil sets the value for CiBuildUrl to be an explicit nil
 func (o *CreateBuildRecordDto) SetCiBuildUrlNil() {
 	o.CiBuildUrl.Set(nil)
@@ -416,7 +456,7 @@ func (o *CreateBuildRecordDto) UnsetCiBuildUrl() {
 }
 
 func (o CreateBuildRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -434,6 +474,9 @@ func (o CreateBuildRecordDto) ToMap() (map[string]interface{}, error) {
 	}
 	toSerialize["platform"] = o.Platform
 	toSerialize["artifactType"] = o.ArtifactType
+	if o.Architecture.IsSet() {
+		toSerialize["architecture"] = o.Architecture.Get()
+	}
 	if o.Environment.IsSet() {
 		toSerialize["environment"] = o.Environment.Get()
 	}
@@ -467,10 +510,10 @@ func (o *CreateBuildRecordDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -526,3 +569,5 @@ func (v *NullableCreateBuildRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

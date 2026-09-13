@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageTemplateRelease**](MessageTemplateReleaseAPI.md#CreateMessageTemplateRelease) | **Post** /api/app/message-template-release |
-[**GetByTemplateNameAndVersion**](MessageTemplateReleaseAPI.md#GetByTemplateNameAndVersion) | **Get** /by-template |
-[**GetMessageTemplateReleaseById**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseById) | **Get** /api/app/message-template-release/{id} |
-[**GetMessageTemplateReleaseList**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseList) | **Get** /api/app/message-template-release |
+[**CreateMessageTemplateRelease**](MessageTemplateReleaseAPI.md#CreateMessageTemplateRelease) | **Post** /api/app/message-template-release | 
+[**GetByTemplateNameAndVersion**](MessageTemplateReleaseAPI.md#GetByTemplateNameAndVersion) | **Get** /by-template | 
+[**GetMessageTemplateReleaseById**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseById) | **Get** /api/app/message-template-release/{id} | 
+[**GetMessageTemplateReleaseList**](MessageTemplateReleaseAPI.md#GetMessageTemplateReleaseList) | **Get** /api/app/message-template-release | 
 
 
 
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiCreateMessageTemplateRelea
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md) |  |
+ **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md) |  | 
 
 ### Return type
 
@@ -120,8 +120,8 @@ Other parameters are passed through a pointer to a apiGetByTemplateNameAndVersio
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateName** | **string** |  |
- **version** | **int32** |  |
+ **templateName** | **string** |  | 
+ **version** | **int32** |  | 
 
 ### Return type
 
@@ -160,7 +160,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -180,7 +180,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -253,7 +253,7 @@ Other parameters are passed through a pointer to a apiGetMessageTemplateReleaseL
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **string** |  |
+ **templateId** | **string** |  | 
 
 ### Return type
 

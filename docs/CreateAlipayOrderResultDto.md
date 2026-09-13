@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderId** | Pointer to **string** | 本系统订单 ID。 | [optional]
-**OutTradeNo** | Pointer to **NullableString** | 支付宝商户订单号 out_trade_no。 | [optional]
-**CheckoutMode** | Pointer to **NullableString** | 支付入口：page、wap 或 app。 | [optional]
-**PaymentForm** | Pointer to **NullableString** | 电脑/手机网站支付的 HTML 表单，可由 Web 前端写入页面并提交。 | [optional]
-**PaymentUrl** | Pointer to **NullableString** | 从支付表单中提取出的跳转地址。桌面和 Android 可用外部浏览器打开。 | [optional]
-**OrderString** | Pointer to **NullableString** | App 支付订单串，原生客户端接支付宝 App SDK 时使用。 | [optional]
+**OrderId** | Pointer to **string** | 本系统订单 ID。 | [optional] 
+**OutTradeNo** | Pointer to **NullableString** | 支付宝商户订单号 out_trade_no。 | [optional] 
+**CheckoutMode** | Pointer to **NullableString** | 支付入口：page、wap 或 app。 | [optional] 
+**PaymentForm** | Pointer to **NullableString** | 电脑/手机网站支付的 HTML 表单，可由 Web 前端写入页面并提交。 | [optional] 
+**PaymentUrl** | Pointer to **NullableString** | 从支付表单中提取出的跳转地址。桌面和 Android 可用外部浏览器打开。 | [optional] 
+**OrderString** | Pointer to **NullableString** | App 支付订单串，原生客户端接支付宝 App SDK 时使用。 | [optional] 
 
 ## Methods
 

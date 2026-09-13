@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**Body** | Pointer to **NullableString** |  | [optional]
-**Url** | Pointer to **NullableString** |  | [optional]
-**FelorxId** | Pointer to **NullableString** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**App** | Pointer to **NullableString** |  | [optional]
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**Body** | Pointer to **NullableString** |  | [optional] 
+**Url** | Pointer to **NullableString** |  | [optional] 
+**FelorxId** | Pointer to **NullableString** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**App** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

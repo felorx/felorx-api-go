@@ -76,7 +76,6 @@ func (o *CdnDomainDto) HasName() bool {
 func (o *CdnDomainDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CdnDomainDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -119,7 +118,6 @@ func (o *CdnDomainDto) HasDescription() bool {
 func (o *CdnDomainDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CdnDomainDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -162,7 +160,6 @@ func (o *CdnDomainDto) HasCdnDomain() bool {
 func (o *CdnDomainDto) SetCdnDomain(v string) {
 	o.CdnDomain.Set(&v)
 }
-
 // SetCdnDomainNil sets the value for CdnDomain to be an explicit nil
 func (o *CdnDomainDto) SetCdnDomainNil() {
 	o.CdnDomain.Set(nil)
@@ -174,7 +171,7 @@ func (o *CdnDomainDto) UnsetCdnDomain() {
 }
 
 func (o CdnDomainDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,3 +227,5 @@ func (v *NullableCdnDomainDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

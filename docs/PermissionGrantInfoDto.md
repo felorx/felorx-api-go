@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**ParentName** | Pointer to **NullableString** |  | [optional]
-**IsGranted** | Pointer to **bool** |  | [optional]
-**AllowedProviders** | Pointer to **[]string** |  | [optional]
-**GrantedProviders** | Pointer to [**[]ProviderInfoDto**](ProviderInfoDto.md) |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**ParentName** | Pointer to **NullableString** |  | [optional] 
+**IsGranted** | Pointer to **bool** |  | [optional] 
+**AllowedProviders** | Pointer to **[]string** |  | [optional] 
+**GrantedProviders** | Pointer to [**[]ProviderInfoDto**](ProviderInfoDto.md) |  | [optional] 
 
 ## Methods
 

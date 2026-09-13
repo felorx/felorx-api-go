@@ -19,7 +19,7 @@ var _ MappedNullable = &ChangePasswordDto{}
 
 // ChangePasswordDto struct for ChangePasswordDto
 type ChangePasswordDto struct {
-	Code     NullableString `json:"code,omitempty"`
+	Code NullableString `json:"code,omitempty"`
 	Password NullableString `json:"password,omitempty"`
 }
 
@@ -72,7 +72,6 @@ func (o *ChangePasswordDto) HasCode() bool {
 func (o *ChangePasswordDto) SetCode(v string) {
 	o.Code.Set(&v)
 }
-
 // SetCodeNil sets the value for Code to be an explicit nil
 func (o *ChangePasswordDto) SetCodeNil() {
 	o.Code.Set(nil)
@@ -115,7 +114,6 @@ func (o *ChangePasswordDto) HasPassword() bool {
 func (o *ChangePasswordDto) SetPassword(v string) {
 	o.Password.Set(&v)
 }
-
 // SetPasswordNil sets the value for Password to be an explicit nil
 func (o *ChangePasswordDto) SetPasswordNil() {
 	o.Password.Set(nil)
@@ -127,7 +125,7 @@ func (o *ChangePasswordDto) UnsetPassword() {
 }
 
 func (o ChangePasswordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableChangePasswordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

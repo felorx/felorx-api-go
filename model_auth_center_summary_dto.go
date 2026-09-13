@@ -19,9 +19,9 @@ var _ MappedNullable = &AuthCenterSummaryDto{}
 
 // AuthCenterSummaryDto struct for AuthCenterSummaryDto
 type AuthCenterSummaryDto struct {
-	Account            *UserAuthProfileDto `json:"account,omitempty"`
-	DeviceCount        *int32              `json:"deviceCount,omitempty"`
-	AuthorizedAppCount *int32              `json:"authorizedAppCount,omitempty"`
+	Account *UserAuthProfileDto `json:"account,omitempty"`
+	DeviceCount *int32 `json:"deviceCount,omitempty"`
+	AuthorizedAppCount *int32 `json:"authorizedAppCount,omitempty"`
 }
 
 // NewAuthCenterSummaryDto instantiates a new AuthCenterSummaryDto object
@@ -138,7 +138,7 @@ func (o *AuthCenterSummaryDto) SetAuthorizedAppCount(v int32) {
 }
 
 func (o AuthCenterSummaryDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,3 +194,5 @@ func (v *NullableAuthCenterSummaryDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

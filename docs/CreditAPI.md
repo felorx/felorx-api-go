@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAlipayOrder**](CreditAPI.md#CreateAlipayOrder) | **Post** /api/app/credit/alipay-order |
-[**CreatePayPalOrder**](CreditAPI.md#CreatePayPalOrder) | **Post** /api/app/credit/pay-pal-order |
-[**CreditGetAccount**](CreditAPI.md#CreditGetAccount) | **Get** /api/app/credit/account/{appId} |
-[**GetPackages**](CreditAPI.md#GetPackages) | **Get** /api/app/credit/packages/{appId} |
-[**Refund**](CreditAPI.md#Refund) | **Post** /api/app/credit/refund |
-[**Spend**](CreditAPI.md#Spend) | **Post** /api/app/credit/spend |
+[**CreateAlipayOrderPostApiAppCreditAlipayOrder**](CreditAPI.md#CreateAlipayOrderPostApiAppCreditAlipayOrder) | **Post** /api/app/credit/alipay-order | 
+[**CreatePayPalOrderPostApiAppCreditPayPalOrder**](CreditAPI.md#CreatePayPalOrderPostApiAppCreditPayPalOrder) | **Post** /api/app/credit/pay-pal-order | 
+[**GetAccountGetApiAppCreditAccountAppId**](CreditAPI.md#GetAccountGetApiAppCreditAccountAppId) | **Get** /api/app/credit/account/{appId} | 
+[**GetPackages**](CreditAPI.md#GetPackages) | **Get** /api/app/credit/packages/{appId} | 
+[**Refund**](CreditAPI.md#Refund) | **Post** /api/app/credit/refund | 
+[**Spend**](CreditAPI.md#Spend) | **Post** /api/app/credit/spend | 
 
 
 
-## CreateAlipayOrder
+## CreateAlipayOrderPostApiAppCreditAlipayOrder
 
-> CreateCreditAlipayOrderResultDto CreateAlipayOrder(ctx).CreateCreditAlipayOrderDto(createCreditAlipayOrderDto).Execute()
+> CreateCreditAlipayOrderResultDto CreateAlipayOrderPostApiAppCreditAlipayOrder(ctx).CreateCreditAlipayOrderDto(createCreditAlipayOrderDto).Execute()
 
 
 
@@ -36,13 +36,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.CreditAPI.CreateAlipayOrder(context.Background()).CreateCreditAlipayOrderDto(createCreditAlipayOrderDto).Execute()
+	resp, r, err := apiClient.CreditAPI.CreateAlipayOrderPostApiAppCreditAlipayOrder(context.Background()).CreateCreditAlipayOrderDto(createCreditAlipayOrderDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.CreateAlipayOrder``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.CreateAlipayOrderPostApiAppCreditAlipayOrder``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `CreateAlipayOrder`: CreateCreditAlipayOrderResultDto
-	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.CreateAlipayOrder`: %v\n", resp)
+	// response from `CreateAlipayOrderPostApiAppCreditAlipayOrder`: CreateCreditAlipayOrderResultDto
+	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.CreateAlipayOrderPostApiAppCreditAlipayOrder`: %v\n", resp)
 }
 ```
 
@@ -52,12 +52,12 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiCreateAlipayOrderRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCreateAlipayOrderPostApiAppCreditAlipayOrderRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCreditAlipayOrderDto** | [**CreateCreditAlipayOrderDto**](CreateCreditAlipayOrderDto.md) |  |
+ **createCreditAlipayOrderDto** | [**CreateCreditAlipayOrderDto**](CreateCreditAlipayOrderDto.md) |  | 
 
 ### Return type
 
@@ -77,9 +77,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CreatePayPalOrder
+## CreatePayPalOrderPostApiAppCreditPayPalOrder
 
-> CreateCreditPayPalOrderResultDto CreatePayPalOrder(ctx).CreateCreditPayPalOrderDto(createCreditPayPalOrderDto).Execute()
+> CreateCreditPayPalOrderResultDto CreatePayPalOrderPostApiAppCreditPayPalOrder(ctx).CreateCreditPayPalOrderDto(createCreditPayPalOrderDto).Execute()
 
 
 
@@ -100,13 +100,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.CreditAPI.CreatePayPalOrder(context.Background()).CreateCreditPayPalOrderDto(createCreditPayPalOrderDto).Execute()
+	resp, r, err := apiClient.CreditAPI.CreatePayPalOrderPostApiAppCreditPayPalOrder(context.Background()).CreateCreditPayPalOrderDto(createCreditPayPalOrderDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.CreatePayPalOrder``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.CreatePayPalOrderPostApiAppCreditPayPalOrder``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `CreatePayPalOrder`: CreateCreditPayPalOrderResultDto
-	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.CreatePayPalOrder`: %v\n", resp)
+	// response from `CreatePayPalOrderPostApiAppCreditPayPalOrder`: CreateCreditPayPalOrderResultDto
+	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.CreatePayPalOrderPostApiAppCreditPayPalOrder`: %v\n", resp)
 }
 ```
 
@@ -116,12 +116,12 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiCreatePayPalOrderRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCreatePayPalOrderPostApiAppCreditPayPalOrderRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createCreditPayPalOrderDto** | [**CreateCreditPayPalOrderDto**](CreateCreditPayPalOrderDto.md) |  |
+ **createCreditPayPalOrderDto** | [**CreateCreditPayPalOrderDto**](CreateCreditPayPalOrderDto.md) |  | 
 
 ### Return type
 
@@ -141,9 +141,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CreditGetAccount
+## GetAccountGetApiAppCreditAccountAppId
 
-> CreditAccountDto CreditGetAccount(ctx, appId).Execute()
+> CreditAccountDto GetAccountGetApiAppCreditAccountAppId(ctx, appId).Execute()
 
 
 
@@ -160,17 +160,17 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.CreditAPI.CreditGetAccount(context.Background(), appId).Execute()
+	resp, r, err := apiClient.CreditAPI.GetAccountGetApiAppCreditAccountAppId(context.Background(), appId).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.CreditGetAccount``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `CreditAPI.GetAccountGetApiAppCreditAccountAppId``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `CreditGetAccount`: CreditAccountDto
-	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.CreditGetAccount`: %v\n", resp)
+	// response from `GetAccountGetApiAppCreditAccountAppId`: CreditAccountDto
+	fmt.Fprintf(os.Stdout, "Response from `CreditAPI.GetAccountGetApiAppCreditAccountAppId`: %v\n", resp)
 }
 ```
 
@@ -180,11 +180,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiCreditGetAccountRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetAccountGetApiAppCreditAccountAppIdRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -228,7 +228,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -248,7 +248,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -321,7 +321,7 @@ Other parameters are passed through a pointer to a apiRefundRequest struct via t
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adjustCreditsDto** | [**AdjustCreditsDto**](AdjustCreditsDto.md) |  |
+ **adjustCreditsDto** | [**AdjustCreditsDto**](AdjustCreditsDto.md) |  | 
 
 ### Return type
 
@@ -385,7 +385,7 @@ Other parameters are passed through a pointer to a apiSpendRequest struct via th
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **adjustCreditsDto** | [**AdjustCreditsDto**](AdjustCreditsDto.md) |  |
+ **adjustCreditsDto** | [**AdjustCreditsDto**](AdjustCreditsDto.md) |  | 
 
 ### Return type
 

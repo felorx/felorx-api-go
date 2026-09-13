@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**IsPublished** | Pointer to **bool** |  | [optional]
-**IconUrl** | Pointer to **NullableString** |  | [optional]
-**Routes** | Pointer to [**[]MessageSourceRouteSubDto**](MessageSourceRouteSubDto.md) |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CategoryId** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**IsPublished** | Pointer to **bool** |  | [optional] 
+**IconUrl** | Pointer to **NullableString** |  | [optional] 
+**Routes** | Pointer to [**[]MessageSourceRouteSubDto**](MessageSourceRouteSubDto.md) |  | [optional] 
 
 ## Methods
 
@@ -28,6 +30,56 @@ will change when the set of required properties is changed
 NewMessageSourceDtoWithDefaults instantiates a new MessageSourceDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *MessageSourceDto) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *MessageSourceDto) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *MessageSourceDto) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *MessageSourceDto) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetCategoryId
+
+`func (o *MessageSourceDto) GetCategoryId() string`
+
+GetCategoryId returns the CategoryId field if non-nil, zero value otherwise.
+
+### GetCategoryIdOk
+
+`func (o *MessageSourceDto) GetCategoryIdOk() (*string, bool)`
+
+GetCategoryIdOk returns a tuple with the CategoryId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategoryId
+
+`func (o *MessageSourceDto) SetCategoryId(v string)`
+
+SetCategoryId sets CategoryId field to given value.
+
+### HasCategoryId
+
+`func (o *MessageSourceDto) HasCategoryId() bool`
+
+HasCategoryId returns a boolean if a field has been set.
 
 ### GetName
 

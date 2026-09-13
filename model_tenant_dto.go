@@ -19,10 +19,10 @@ var _ MappedNullable = &TenantDto{}
 
 // TenantDto struct for TenantDto
 type TenantDto struct {
-	ExtraProperties  map[string]interface{} `json:"extraProperties,omitempty"`
-	Id               *string                `json:"id,omitempty"`
-	Name             NullableString         `json:"name,omitempty"`
-	ConcurrencyStamp NullableString         `json:"concurrencyStamp,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	Id *string `json:"id,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
 }
 
 // NewTenantDto instantiates a new TenantDto object
@@ -139,7 +139,6 @@ func (o *TenantDto) HasName() bool {
 func (o *TenantDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *TenantDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -182,7 +181,6 @@ func (o *TenantDto) HasConcurrencyStamp() bool {
 func (o *TenantDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *TenantDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -194,7 +192,7 @@ func (o *TenantDto) UnsetConcurrencyStamp() {
 }
 
 func (o TenantDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -253,3 +251,5 @@ func (v *NullableTenantDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

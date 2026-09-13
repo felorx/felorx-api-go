@@ -19,16 +19,16 @@ var _ MappedNullable = &CreateOrUpdateAppDto{}
 
 // CreateOrUpdateAppDto struct for CreateOrUpdateAppDto
 type CreateOrUpdateAppDto struct {
-	Name      NullableString `json:"name,omitempty"`
-	Framework *AppFramework  `json:"framework,omitempty"`
-	AppType   *AppType       `json:"appType,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Framework *AppFramework `json:"framework,omitempty"`
+	AppType *AppType `json:"appType,omitempty"`
 	// 产品首页
 	HomePage NullableString `json:"homePage,omitempty"`
 	// 显示排序
-	SortIndex         *int32             `json:"sortIndex,omitempty"`
-	GitRepository     NullableString     `json:"gitRepository,omitempty"`
+	SortIndex *int32 `json:"sortIndex,omitempty"`
+	GitRepository NullableString `json:"gitRepository,omitempty"`
 	GitRepositoryType *GitRepositoryType `json:"gitRepositoryType,omitempty"`
-	IsEnabled         *bool              `json:"isEnabled,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
 	// Webhook Url 各种事件回调地址
 	WebhookUrl NullableString `json:"webhookUrl,omitempty"`
 	// 业务域名
@@ -46,8 +46,8 @@ type CreateOrUpdateAppDto struct {
 	// 默认单文件最大大小
 	DefaultSingleFileMaxSize *int64 `json:"defaultSingleFileMaxSize,omitempty"`
 	// 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用
-	IsPublished *bool                           `json:"isPublished,omitempty"`
-	OpenClient  *CreateOpenIddictApplicationDto `json:"openClient,omitempty"`
+	IsPublished *bool `json:"isPublished,omitempty"`
+	OpenClient *CreateOpenIddictApplicationDto `json:"openClient,omitempty"`
 }
 
 // NewCreateOrUpdateAppDto instantiates a new CreateOrUpdateAppDto object
@@ -99,7 +99,6 @@ func (o *CreateOrUpdateAppDto) HasName() bool {
 func (o *CreateOrUpdateAppDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -206,7 +205,6 @@ func (o *CreateOrUpdateAppDto) HasHomePage() bool {
 func (o *CreateOrUpdateAppDto) SetHomePage(v string) {
 	o.HomePage.Set(&v)
 }
-
 // SetHomePageNil sets the value for HomePage to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetHomePageNil() {
 	o.HomePage.Set(nil)
@@ -281,7 +279,6 @@ func (o *CreateOrUpdateAppDto) HasGitRepository() bool {
 func (o *CreateOrUpdateAppDto) SetGitRepository(v string) {
 	o.GitRepository.Set(&v)
 }
-
 // SetGitRepositoryNil sets the value for GitRepository to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetGitRepositoryNil() {
 	o.GitRepository.Set(nil)
@@ -388,7 +385,6 @@ func (o *CreateOrUpdateAppDto) HasWebhookUrl() bool {
 func (o *CreateOrUpdateAppDto) SetWebhookUrl(v string) {
 	o.WebhookUrl.Set(&v)
 }
-
 // SetWebhookUrlNil sets the value for WebhookUrl to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetWebhookUrlNil() {
 	o.WebhookUrl.Set(nil)
@@ -431,7 +427,6 @@ func (o *CreateOrUpdateAppDto) HasBusinessDomain() bool {
 func (o *CreateOrUpdateAppDto) SetBusinessDomain(v string) {
 	o.BusinessDomain.Set(&v)
 }
-
 // SetBusinessDomainNil sets the value for BusinessDomain to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetBusinessDomainNil() {
 	o.BusinessDomain.Set(nil)
@@ -474,7 +469,6 @@ func (o *CreateOrUpdateAppDto) HasBusinessUrl() bool {
 func (o *CreateOrUpdateAppDto) SetBusinessUrl(v string) {
 	o.BusinessUrl.Set(&v)
 }
-
 // SetBusinessUrlNil sets the value for BusinessUrl to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetBusinessUrlNil() {
 	o.BusinessUrl.Set(nil)
@@ -517,7 +511,6 @@ func (o *CreateOrUpdateAppDto) HasSubscriptionPlatforms() bool {
 func (o *CreateOrUpdateAppDto) SetSubscriptionPlatforms(v string) {
 	o.SubscriptionPlatforms.Set(&v)
 }
-
 // SetSubscriptionPlatformsNil sets the value for SubscriptionPlatforms to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetSubscriptionPlatformsNil() {
 	o.SubscriptionPlatforms.Set(nil)
@@ -560,7 +553,6 @@ func (o *CreateOrUpdateAppDto) HasFreePlatforms() bool {
 func (o *CreateOrUpdateAppDto) SetFreePlatforms(v string) {
 	o.FreePlatforms.Set(&v)
 }
-
 // SetFreePlatformsNil sets the value for FreePlatforms to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetFreePlatformsNil() {
 	o.FreePlatforms.Set(nil)
@@ -603,7 +595,6 @@ func (o *CreateOrUpdateAppDto) HasSpecJsonSchema() bool {
 func (o *CreateOrUpdateAppDto) SetSpecJsonSchema(v string) {
 	o.SpecJsonSchema.Set(&v)
 }
-
 // SetSpecJsonSchemaNil sets the value for SpecJsonSchema to be an explicit nil
 func (o *CreateOrUpdateAppDto) SetSpecJsonSchemaNil() {
 	o.SpecJsonSchema.Set(nil)
@@ -743,7 +734,7 @@ func (o *CreateOrUpdateAppDto) SetOpenClient(v CreateOpenIddictApplicationDto) {
 }
 
 func (o CreateOrUpdateAppDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -844,3 +835,5 @@ func (v *NullableCreateOrUpdateAppDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

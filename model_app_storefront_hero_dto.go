@@ -19,7 +19,7 @@ var _ MappedNullable = &AppStorefrontHeroDto{}
 
 // AppStorefrontHeroDto struct for AppStorefrontHeroDto
 type AppStorefrontHeroDto struct {
-	PhoneUrl  NullableString `json:"phoneUrl,omitempty"`
+	PhoneUrl NullableString `json:"phoneUrl,omitempty"`
 	TabletUrl NullableString `json:"tabletUrl,omitempty"`
 }
 
@@ -72,7 +72,6 @@ func (o *AppStorefrontHeroDto) HasPhoneUrl() bool {
 func (o *AppStorefrontHeroDto) SetPhoneUrl(v string) {
 	o.PhoneUrl.Set(&v)
 }
-
 // SetPhoneUrlNil sets the value for PhoneUrl to be an explicit nil
 func (o *AppStorefrontHeroDto) SetPhoneUrlNil() {
 	o.PhoneUrl.Set(nil)
@@ -115,7 +114,6 @@ func (o *AppStorefrontHeroDto) HasTabletUrl() bool {
 func (o *AppStorefrontHeroDto) SetTabletUrl(v string) {
 	o.TabletUrl.Set(&v)
 }
-
 // SetTabletUrlNil sets the value for TabletUrl to be an explicit nil
 func (o *AppStorefrontHeroDto) SetTabletUrlNil() {
 	o.TabletUrl.Set(nil)
@@ -127,7 +125,7 @@ func (o *AppStorefrontHeroDto) UnsetTabletUrl() {
 }
 
 func (o AppStorefrontHeroDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableAppStorefrontHeroDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

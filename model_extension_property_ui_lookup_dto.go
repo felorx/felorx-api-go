@@ -19,11 +19,11 @@ var _ MappedNullable = &ExtensionPropertyUiLookupDto{}
 
 // ExtensionPropertyUiLookupDto struct for ExtensionPropertyUiLookupDto
 type ExtensionPropertyUiLookupDto struct {
-	Url                    NullableString `json:"url,omitempty"`
+	Url NullableString `json:"url,omitempty"`
 	ResultListPropertyName NullableString `json:"resultListPropertyName,omitempty"`
-	DisplayPropertyName    NullableString `json:"displayPropertyName,omitempty"`
-	ValuePropertyName      NullableString `json:"valuePropertyName,omitempty"`
-	FilterParamName        NullableString `json:"filterParamName,omitempty"`
+	DisplayPropertyName NullableString `json:"displayPropertyName,omitempty"`
+	ValuePropertyName NullableString `json:"valuePropertyName,omitempty"`
+	FilterParamName NullableString `json:"filterParamName,omitempty"`
 }
 
 // NewExtensionPropertyUiLookupDto instantiates a new ExtensionPropertyUiLookupDto object
@@ -75,7 +75,6 @@ func (o *ExtensionPropertyUiLookupDto) HasUrl() bool {
 func (o *ExtensionPropertyUiLookupDto) SetUrl(v string) {
 	o.Url.Set(&v)
 }
-
 // SetUrlNil sets the value for Url to be an explicit nil
 func (o *ExtensionPropertyUiLookupDto) SetUrlNil() {
 	o.Url.Set(nil)
@@ -118,7 +117,6 @@ func (o *ExtensionPropertyUiLookupDto) HasResultListPropertyName() bool {
 func (o *ExtensionPropertyUiLookupDto) SetResultListPropertyName(v string) {
 	o.ResultListPropertyName.Set(&v)
 }
-
 // SetResultListPropertyNameNil sets the value for ResultListPropertyName to be an explicit nil
 func (o *ExtensionPropertyUiLookupDto) SetResultListPropertyNameNil() {
 	o.ResultListPropertyName.Set(nil)
@@ -161,7 +159,6 @@ func (o *ExtensionPropertyUiLookupDto) HasDisplayPropertyName() bool {
 func (o *ExtensionPropertyUiLookupDto) SetDisplayPropertyName(v string) {
 	o.DisplayPropertyName.Set(&v)
 }
-
 // SetDisplayPropertyNameNil sets the value for DisplayPropertyName to be an explicit nil
 func (o *ExtensionPropertyUiLookupDto) SetDisplayPropertyNameNil() {
 	o.DisplayPropertyName.Set(nil)
@@ -204,7 +201,6 @@ func (o *ExtensionPropertyUiLookupDto) HasValuePropertyName() bool {
 func (o *ExtensionPropertyUiLookupDto) SetValuePropertyName(v string) {
 	o.ValuePropertyName.Set(&v)
 }
-
 // SetValuePropertyNameNil sets the value for ValuePropertyName to be an explicit nil
 func (o *ExtensionPropertyUiLookupDto) SetValuePropertyNameNil() {
 	o.ValuePropertyName.Set(nil)
@@ -247,7 +243,6 @@ func (o *ExtensionPropertyUiLookupDto) HasFilterParamName() bool {
 func (o *ExtensionPropertyUiLookupDto) SetFilterParamName(v string) {
 	o.FilterParamName.Set(&v)
 }
-
 // SetFilterParamNameNil sets the value for FilterParamName to be an explicit nil
 func (o *ExtensionPropertyUiLookupDto) SetFilterParamNameNil() {
 	o.FilterParamName.Set(nil)
@@ -259,7 +254,7 @@ func (o *ExtensionPropertyUiLookupDto) UnsetFilterParamName() {
 }
 
 func (o ExtensionPropertyUiLookupDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -321,3 +316,5 @@ func (v *NullableExtensionPropertyUiLookupDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

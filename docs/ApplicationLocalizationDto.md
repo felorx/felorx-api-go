@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Resources** | Pointer to [**map[string]ApplicationLocalizationResourceDto**](ApplicationLocalizationResourceDto.md) |  | [optional]
+**Resources** | Pointer to [**map[string]ApplicationLocalizationResourceDto**](ApplicationLocalizationResourceDto.md) |  | [optional] 
 
 ## Methods
 

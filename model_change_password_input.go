@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -22,7 +22,7 @@ var _ MappedNullable = &ChangePasswordInput{}
 // ChangePasswordInput struct for ChangePasswordInput
 type ChangePasswordInput struct {
 	CurrentPassword NullableString `json:"currentPassword,omitempty"`
-	NewPassword     string         `json:"newPassword"`
+	NewPassword string `json:"newPassword"`
 }
 
 type _ChangePasswordInput ChangePasswordInput
@@ -77,7 +77,6 @@ func (o *ChangePasswordInput) HasCurrentPassword() bool {
 func (o *ChangePasswordInput) SetCurrentPassword(v string) {
 	o.CurrentPassword.Set(&v)
 }
-
 // SetCurrentPasswordNil sets the value for CurrentPassword to be an explicit nil
 func (o *ChangePasswordInput) SetCurrentPasswordNil() {
 	o.CurrentPassword.Set(nil)
@@ -113,7 +112,7 @@ func (o *ChangePasswordInput) SetNewPassword(v string) {
 }
 
 func (o ChangePasswordInput) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -142,10 +141,10 @@ func (o *ChangePasswordInput) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -201,3 +200,5 @@ func (v *NullableChangePasswordInput) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

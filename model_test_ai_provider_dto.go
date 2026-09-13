@@ -19,9 +19,11 @@ var _ MappedNullable = &TestAiProviderDto{}
 
 // TestAiProviderDto struct for TestAiProviderDto
 type TestAiProviderDto struct {
-	Capability *AiCapability  `json:"capability,omitempty"`
-	Prompt     NullableString `json:"prompt,omitempty"`
-	ImageUrl   NullableString `json:"image_url,omitempty"`
+	ModelId NullableString `json:"model_id,omitempty"`
+	Protocol *AiProtocol `json:"protocol,omitempty"`
+	Capability *AiCapability `json:"capability,omitempty"`
+	Prompt NullableString `json:"prompt,omitempty"`
+	ImageUrl NullableString `json:"image_url,omitempty"`
 }
 
 // NewTestAiProviderDto instantiates a new TestAiProviderDto object
@@ -39,6 +41,80 @@ func NewTestAiProviderDto() *TestAiProviderDto {
 func NewTestAiProviderDtoWithDefaults() *TestAiProviderDto {
 	this := TestAiProviderDto{}
 	return &this
+}
+
+// GetModelId returns the ModelId field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *TestAiProviderDto) GetModelId() string {
+	if o == nil || IsNil(o.ModelId.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.ModelId.Get()
+}
+
+// GetModelIdOk returns a tuple with the ModelId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *TestAiProviderDto) GetModelIdOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ModelId.Get(), o.ModelId.IsSet()
+}
+
+// HasModelId returns a boolean if a field has been set.
+func (o *TestAiProviderDto) HasModelId() bool {
+	if o != nil && o.ModelId.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetModelId gets a reference to the given NullableString and assigns it to the ModelId field.
+func (o *TestAiProviderDto) SetModelId(v string) {
+	o.ModelId.Set(&v)
+}
+// SetModelIdNil sets the value for ModelId to be an explicit nil
+func (o *TestAiProviderDto) SetModelIdNil() {
+	o.ModelId.Set(nil)
+}
+
+// UnsetModelId ensures that no value is present for ModelId, not even an explicit nil
+func (o *TestAiProviderDto) UnsetModelId() {
+	o.ModelId.Unset()
+}
+
+// GetProtocol returns the Protocol field value if set, zero value otherwise.
+func (o *TestAiProviderDto) GetProtocol() AiProtocol {
+	if o == nil || IsNil(o.Protocol) {
+		var ret AiProtocol
+		return ret
+	}
+	return *o.Protocol
+}
+
+// GetProtocolOk returns a tuple with the Protocol field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *TestAiProviderDto) GetProtocolOk() (*AiProtocol, bool) {
+	if o == nil || IsNil(o.Protocol) {
+		return nil, false
+	}
+	return o.Protocol, true
+}
+
+// HasProtocol returns a boolean if a field has been set.
+func (o *TestAiProviderDto) HasProtocol() bool {
+	if o != nil && !IsNil(o.Protocol) {
+		return true
+	}
+
+	return false
+}
+
+// SetProtocol gets a reference to the given AiProtocol and assigns it to the Protocol field.
+func (o *TestAiProviderDto) SetProtocol(v AiProtocol) {
+	o.Protocol = &v
 }
 
 // GetCapability returns the Capability field value if set, zero value otherwise.
@@ -105,7 +181,6 @@ func (o *TestAiProviderDto) HasPrompt() bool {
 func (o *TestAiProviderDto) SetPrompt(v string) {
 	o.Prompt.Set(&v)
 }
-
 // SetPromptNil sets the value for Prompt to be an explicit nil
 func (o *TestAiProviderDto) SetPromptNil() {
 	o.Prompt.Set(nil)
@@ -148,7 +223,6 @@ func (o *TestAiProviderDto) HasImageUrl() bool {
 func (o *TestAiProviderDto) SetImageUrl(v string) {
 	o.ImageUrl.Set(&v)
 }
-
 // SetImageUrlNil sets the value for ImageUrl to be an explicit nil
 func (o *TestAiProviderDto) SetImageUrlNil() {
 	o.ImageUrl.Set(nil)
@@ -160,7 +234,7 @@ func (o *TestAiProviderDto) UnsetImageUrl() {
 }
 
 func (o TestAiProviderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -169,6 +243,12 @@ func (o TestAiProviderDto) MarshalJSON() ([]byte, error) {
 
 func (o TestAiProviderDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if o.ModelId.IsSet() {
+		toSerialize["model_id"] = o.ModelId.Get()
+	}
+	if !IsNil(o.Protocol) {
+		toSerialize["protocol"] = o.Protocol
+	}
 	if !IsNil(o.Capability) {
 		toSerialize["capability"] = o.Capability
 	}
@@ -216,3 +296,5 @@ func (v *NullableTestAiProviderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,24 +20,27 @@ var _ MappedNullable = &AiProviderDto{}
 
 // AiProviderDto struct for AiProviderDto
 type AiProviderDto struct {
-	Id                   *string           `json:"id,omitempty"`
-	CreationTime         *time.Time        `json:"creationTime,omitempty"`
-	CreatorId            NullableString    `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime      `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString    `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool             `json:"isDeleted,omitempty"`
-	DeleterId            NullableString    `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime      `json:"deletionTime,omitempty"`
-	Name                 NullableString    `json:"name,omitempty"`
-	DisplayName          NullableString    `json:"display_name,omitempty"`
-	ProviderType         *AiProviderType   `json:"provider_type,omitempty"`
-	BaseUrl              NullableString    `json:"base_url,omitempty"`
-	Region               NullableString    `json:"region,omitempty"`
-	Enabled              *bool             `json:"enabled,omitempty"`
-	Capabilities         []AiCapability    `json:"capabilities,omitempty"`
-	SecretConfigured     *bool             `json:"secret_configured,omitempty"`
-	Metadata             map[string]string `json:"metadata,omitempty"`
-	Models               []AiModelDto      `json:"models,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	VerifiedCapabilities []AiCapability `json:"verified_capabilities,omitempty"`
+	CapabilityCertificateVersion NullableString `json:"capability_certificate_version,omitempty"`
+	CapabilityTestedAt NullableTime `json:"capability_tested_at,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"display_name,omitempty"`
+	ProviderType *AiProviderType `json:"provider_type,omitempty"`
+	BaseUrl NullableString `json:"base_url,omitempty"`
+	Region NullableString `json:"region,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
+	Capabilities []AiCapability `json:"capabilities,omitempty"`
+	SecretConfigured *bool `json:"secret_configured,omitempty"`
+	Metadata map[string]string `json:"metadata,omitempty"`
+	Models []AiModelDto `json:"models,omitempty"`
 }
 
 // NewAiProviderDto instantiates a new AiProviderDto object
@@ -153,7 +156,6 @@ func (o *AiProviderDto) HasCreatorId() bool {
 func (o *AiProviderDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AiProviderDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -196,7 +198,6 @@ func (o *AiProviderDto) HasLastModificationTime() bool {
 func (o *AiProviderDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AiProviderDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -239,7 +240,6 @@ func (o *AiProviderDto) HasLastModifierId() bool {
 func (o *AiProviderDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AiProviderDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -314,7 +314,6 @@ func (o *AiProviderDto) HasDeleterId() bool {
 func (o *AiProviderDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AiProviderDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -357,7 +356,6 @@ func (o *AiProviderDto) HasDeletionTime() bool {
 func (o *AiProviderDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AiProviderDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -366,6 +364,123 @@ func (o *AiProviderDto) SetDeletionTimeNil() {
 // UnsetDeletionTime ensures that no value is present for DeletionTime, not even an explicit nil
 func (o *AiProviderDto) UnsetDeletionTime() {
 	o.DeletionTime.Unset()
+}
+
+// GetVerifiedCapabilities returns the VerifiedCapabilities field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AiProviderDto) GetVerifiedCapabilities() []AiCapability {
+	if o == nil {
+		var ret []AiCapability
+		return ret
+	}
+	return o.VerifiedCapabilities
+}
+
+// GetVerifiedCapabilitiesOk returns a tuple with the VerifiedCapabilities field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AiProviderDto) GetVerifiedCapabilitiesOk() ([]AiCapability, bool) {
+	if o == nil || IsNil(o.VerifiedCapabilities) {
+		return nil, false
+	}
+	return o.VerifiedCapabilities, true
+}
+
+// HasVerifiedCapabilities returns a boolean if a field has been set.
+func (o *AiProviderDto) HasVerifiedCapabilities() bool {
+	if o != nil && !IsNil(o.VerifiedCapabilities) {
+		return true
+	}
+
+	return false
+}
+
+// SetVerifiedCapabilities gets a reference to the given []AiCapability and assigns it to the VerifiedCapabilities field.
+func (o *AiProviderDto) SetVerifiedCapabilities(v []AiCapability) {
+	o.VerifiedCapabilities = v
+}
+
+// GetCapabilityCertificateVersion returns the CapabilityCertificateVersion field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AiProviderDto) GetCapabilityCertificateVersion() string {
+	if o == nil || IsNil(o.CapabilityCertificateVersion.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.CapabilityCertificateVersion.Get()
+}
+
+// GetCapabilityCertificateVersionOk returns a tuple with the CapabilityCertificateVersion field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AiProviderDto) GetCapabilityCertificateVersionOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.CapabilityCertificateVersion.Get(), o.CapabilityCertificateVersion.IsSet()
+}
+
+// HasCapabilityCertificateVersion returns a boolean if a field has been set.
+func (o *AiProviderDto) HasCapabilityCertificateVersion() bool {
+	if o != nil && o.CapabilityCertificateVersion.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetCapabilityCertificateVersion gets a reference to the given NullableString and assigns it to the CapabilityCertificateVersion field.
+func (o *AiProviderDto) SetCapabilityCertificateVersion(v string) {
+	o.CapabilityCertificateVersion.Set(&v)
+}
+// SetCapabilityCertificateVersionNil sets the value for CapabilityCertificateVersion to be an explicit nil
+func (o *AiProviderDto) SetCapabilityCertificateVersionNil() {
+	o.CapabilityCertificateVersion.Set(nil)
+}
+
+// UnsetCapabilityCertificateVersion ensures that no value is present for CapabilityCertificateVersion, not even an explicit nil
+func (o *AiProviderDto) UnsetCapabilityCertificateVersion() {
+	o.CapabilityCertificateVersion.Unset()
+}
+
+// GetCapabilityTestedAt returns the CapabilityTestedAt field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AiProviderDto) GetCapabilityTestedAt() time.Time {
+	if o == nil || IsNil(o.CapabilityTestedAt.Get()) {
+		var ret time.Time
+		return ret
+	}
+	return *o.CapabilityTestedAt.Get()
+}
+
+// GetCapabilityTestedAtOk returns a tuple with the CapabilityTestedAt field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AiProviderDto) GetCapabilityTestedAtOk() (*time.Time, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.CapabilityTestedAt.Get(), o.CapabilityTestedAt.IsSet()
+}
+
+// HasCapabilityTestedAt returns a boolean if a field has been set.
+func (o *AiProviderDto) HasCapabilityTestedAt() bool {
+	if o != nil && o.CapabilityTestedAt.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetCapabilityTestedAt gets a reference to the given NullableTime and assigns it to the CapabilityTestedAt field.
+func (o *AiProviderDto) SetCapabilityTestedAt(v time.Time) {
+	o.CapabilityTestedAt.Set(&v)
+}
+// SetCapabilityTestedAtNil sets the value for CapabilityTestedAt to be an explicit nil
+func (o *AiProviderDto) SetCapabilityTestedAtNil() {
+	o.CapabilityTestedAt.Set(nil)
+}
+
+// UnsetCapabilityTestedAt ensures that no value is present for CapabilityTestedAt, not even an explicit nil
+func (o *AiProviderDto) UnsetCapabilityTestedAt() {
+	o.CapabilityTestedAt.Unset()
 }
 
 // GetName returns the Name field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -400,7 +515,6 @@ func (o *AiProviderDto) HasName() bool {
 func (o *AiProviderDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AiProviderDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -443,7 +557,6 @@ func (o *AiProviderDto) HasDisplayName() bool {
 func (o *AiProviderDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AiProviderDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -518,7 +631,6 @@ func (o *AiProviderDto) HasBaseUrl() bool {
 func (o *AiProviderDto) SetBaseUrl(v string) {
 	o.BaseUrl.Set(&v)
 }
-
 // SetBaseUrlNil sets the value for BaseUrl to be an explicit nil
 func (o *AiProviderDto) SetBaseUrlNil() {
 	o.BaseUrl.Set(nil)
@@ -561,7 +673,6 @@ func (o *AiProviderDto) HasRegion() bool {
 func (o *AiProviderDto) SetRegion(v string) {
 	o.Region.Set(&v)
 }
-
 // SetRegionNil sets the value for Region to be an explicit nil
 func (o *AiProviderDto) SetRegionNil() {
 	o.Region.Set(nil)
@@ -736,7 +847,7 @@ func (o *AiProviderDto) SetModels(v []AiModelDto) {
 }
 
 func (o AiProviderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -768,6 +879,15 @@ func (o AiProviderDto) ToMap() (map[string]interface{}, error) {
 	}
 	if o.DeletionTime.IsSet() {
 		toSerialize["deletionTime"] = o.DeletionTime.Get()
+	}
+	if o.VerifiedCapabilities != nil {
+		toSerialize["verified_capabilities"] = o.VerifiedCapabilities
+	}
+	if o.CapabilityCertificateVersion.IsSet() {
+		toSerialize["capability_certificate_version"] = o.CapabilityCertificateVersion.Get()
+	}
+	if o.CapabilityTestedAt.IsSet() {
+		toSerialize["capability_tested_at"] = o.CapabilityTestedAt.Get()
 	}
 	if o.Name.IsSet() {
 		toSerialize["name"] = o.Name.Get()
@@ -837,3 +957,5 @@ func (v *NullableAiProviderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

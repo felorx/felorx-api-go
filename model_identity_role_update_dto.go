@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,11 +21,11 @@ var _ MappedNullable = &IdentityRoleUpdateDto{}
 
 // IdentityRoleUpdateDto struct for IdentityRoleUpdateDto
 type IdentityRoleUpdateDto struct {
-	ExtraProperties  map[string]interface{} `json:"extraProperties,omitempty"`
-	Name             string                 `json:"name"`
-	IsDefault        *bool                  `json:"isDefault,omitempty"`
-	IsPublic         *bool                  `json:"isPublic,omitempty"`
-	ConcurrencyStamp NullableString         `json:"concurrencyStamp,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	Name string `json:"name"`
+	IsDefault *bool `json:"isDefault,omitempty"`
+	IsPublic *bool `json:"isPublic,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
 }
 
 type _IdentityRoleUpdateDto IdentityRoleUpdateDto
@@ -201,7 +201,6 @@ func (o *IdentityRoleUpdateDto) HasConcurrencyStamp() bool {
 func (o *IdentityRoleUpdateDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *IdentityRoleUpdateDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -213,7 +212,7 @@ func (o *IdentityRoleUpdateDto) UnsetConcurrencyStamp() {
 }
 
 func (o IdentityRoleUpdateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -251,10 +250,10 @@ func (o *IdentityRoleUpdateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -310,3 +309,5 @@ func (v *NullableIdentityRoleUpdateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

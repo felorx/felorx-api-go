@@ -19,11 +19,11 @@ var _ MappedNullable = &CreateOrUpdateAppSdkDto{}
 
 // CreateOrUpdateAppSdkDto struct for CreateOrUpdateAppSdkDto
 type CreateOrUpdateAppSdkDto struct {
-	Name        NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Privacy     NullableString `json:"privacy,omitempty"`
-	PrivacyUrl  NullableString `json:"privacyUrl,omitempty"`
-	HomePage    NullableString `json:"homePage,omitempty"`
+	Privacy NullableString `json:"privacy,omitempty"`
+	PrivacyUrl NullableString `json:"privacyUrl,omitempty"`
+	HomePage NullableString `json:"homePage,omitempty"`
 }
 
 // NewCreateOrUpdateAppSdkDto instantiates a new CreateOrUpdateAppSdkDto object
@@ -75,7 +75,6 @@ func (o *CreateOrUpdateAppSdkDto) HasName() bool {
 func (o *CreateOrUpdateAppSdkDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAppSdkDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -118,7 +117,6 @@ func (o *CreateOrUpdateAppSdkDto) HasDescription() bool {
 func (o *CreateOrUpdateAppSdkDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateOrUpdateAppSdkDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -161,7 +159,6 @@ func (o *CreateOrUpdateAppSdkDto) HasPrivacy() bool {
 func (o *CreateOrUpdateAppSdkDto) SetPrivacy(v string) {
 	o.Privacy.Set(&v)
 }
-
 // SetPrivacyNil sets the value for Privacy to be an explicit nil
 func (o *CreateOrUpdateAppSdkDto) SetPrivacyNil() {
 	o.Privacy.Set(nil)
@@ -204,7 +201,6 @@ func (o *CreateOrUpdateAppSdkDto) HasPrivacyUrl() bool {
 func (o *CreateOrUpdateAppSdkDto) SetPrivacyUrl(v string) {
 	o.PrivacyUrl.Set(&v)
 }
-
 // SetPrivacyUrlNil sets the value for PrivacyUrl to be an explicit nil
 func (o *CreateOrUpdateAppSdkDto) SetPrivacyUrlNil() {
 	o.PrivacyUrl.Set(nil)
@@ -247,7 +243,6 @@ func (o *CreateOrUpdateAppSdkDto) HasHomePage() bool {
 func (o *CreateOrUpdateAppSdkDto) SetHomePage(v string) {
 	o.HomePage.Set(&v)
 }
-
 // SetHomePageNil sets the value for HomePage to be an explicit nil
 func (o *CreateOrUpdateAppSdkDto) SetHomePageNil() {
 	o.HomePage.Set(nil)
@@ -259,7 +254,7 @@ func (o *CreateOrUpdateAppSdkDto) UnsetHomePage() {
 }
 
 func (o CreateOrUpdateAppSdkDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -321,3 +316,5 @@ func (v *NullableCreateOrUpdateAppSdkDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

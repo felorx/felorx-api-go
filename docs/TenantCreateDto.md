@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
-**Name** | **string** |  |
-**AdminEmailAddress** | **string** |  |
-**AdminPassword** | **string** |  |
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**Name** | **string** |  | 
+**AdminEmailAddress** | **string** |  | 
+**AdminPassword** | **string** |  | 
 
 ## Methods
 

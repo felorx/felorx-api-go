@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,9 +21,9 @@ var _ MappedNullable = &ResetPasswordDto{}
 
 // ResetPasswordDto struct for ResetPasswordDto
 type ResetPasswordDto struct {
-	UserId     *string `json:"userId,omitempty"`
-	ResetToken string  `json:"resetToken"`
-	Password   string  `json:"password"`
+	UserId *string `json:"userId,omitempty"`
+	ResetToken string `json:"resetToken"`
+	Password string `json:"password"`
 }
 
 type _ResetPasswordDto ResetPasswordDto
@@ -128,7 +128,7 @@ func (o *ResetPasswordDto) SetPassword(v string) {
 }
 
 func (o ResetPasswordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,10 +159,10 @@ func (o *ResetPasswordDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -218,3 +218,5 @@ func (v *NullableResetPasswordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

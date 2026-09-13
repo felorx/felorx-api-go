@@ -19,12 +19,12 @@ var _ MappedNullable = &TypeApiDescriptionModel{}
 
 // TypeApiDescriptionModel struct for TypeApiDescriptionModel
 type TypeApiDescriptionModel struct {
-	BaseType         NullableString                `json:"baseType,omitempty"`
-	IsEnum           *bool                         `json:"isEnum,omitempty"`
-	EnumNames        []string                      `json:"enumNames,omitempty"`
-	EnumValues       []interface{}                 `json:"enumValues,omitempty"`
-	GenericArguments []string                      `json:"genericArguments,omitempty"`
-	Properties       []PropertyApiDescriptionModel `json:"properties,omitempty"`
+	BaseType NullableString `json:"baseType,omitempty"`
+	IsEnum *bool `json:"isEnum,omitempty"`
+	EnumNames []string `json:"enumNames,omitempty"`
+	EnumValues []interface{} `json:"enumValues,omitempty"`
+	GenericArguments []string `json:"genericArguments,omitempty"`
+	Properties []PropertyApiDescriptionModel `json:"properties,omitempty"`
 }
 
 // NewTypeApiDescriptionModel instantiates a new TypeApiDescriptionModel object
@@ -76,7 +76,6 @@ func (o *TypeApiDescriptionModel) HasBaseType() bool {
 func (o *TypeApiDescriptionModel) SetBaseType(v string) {
 	o.BaseType.Set(&v)
 }
-
 // SetBaseTypeNil sets the value for BaseType to be an explicit nil
 func (o *TypeApiDescriptionModel) SetBaseTypeNil() {
 	o.BaseType.Set(nil)
@@ -252,7 +251,7 @@ func (o *TypeApiDescriptionModel) SetProperties(v []PropertyApiDescriptionModel)
 }
 
 func (o TypeApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -317,3 +316,5 @@ func (v *NullableTypeApiDescriptionModel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

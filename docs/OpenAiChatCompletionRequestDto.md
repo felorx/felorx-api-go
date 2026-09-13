@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **NullableString** |  | [optional]
-**Provider** | Pointer to **NullableString** |  | [optional]
-**Messages** | Pointer to [**[]AiChatMessageDto**](AiChatMessageDto.md) |  | [optional]
-**Temperature** | Pointer to **NullableFloat64** |  | [optional]
-**TopP** | Pointer to **NullableFloat64** |  | [optional]
-**MaxTokens** | Pointer to **NullableInt32** |  | [optional]
-**Stream** | Pointer to **bool** |  | [optional]
-**Metadata** | Pointer to **map[string]string** |  | [optional]
+**Model** | Pointer to **NullableString** |  | [optional] 
+**Provider** | Pointer to **NullableString** |  | [optional] 
+**Messages** | Pointer to [**[]AiChatMessageDto**](AiChatMessageDto.md) |  | [optional] 
+**Temperature** | Pointer to **NullableFloat64** |  | [optional] 
+**TopP** | Pointer to **NullableFloat64** |  | [optional] 
+**MaxTokens** | Pointer to **NullableInt32** |  | [optional] 
+**Stream** | Pointer to **bool** |  | [optional] 
+**Metadata** | Pointer to **map[string]string** |  | [optional] 
 
 ## Methods
 

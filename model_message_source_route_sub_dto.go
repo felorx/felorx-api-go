@@ -19,9 +19,10 @@ var _ MappedNullable = &MessageSourceRouteSubDto{}
 
 // MessageSourceRouteSubDto struct for MessageSourceRouteSubDto
 type MessageSourceRouteSubDto struct {
-	RouteId *string        `json:"routeId,omitempty"`
-	Path    NullableString `json:"path,omitempty"`
-	Values  interface{}    `json:"values,omitempty"`
+	Id *string `json:"id,omitempty"`
+	RouteId *string `json:"routeId,omitempty"`
+	Path NullableString `json:"path,omitempty"`
+	Values map[string]interface{} `json:"values,omitempty"`
 }
 
 // NewMessageSourceRouteSubDto instantiates a new MessageSourceRouteSubDto object
@@ -39,6 +40,38 @@ func NewMessageSourceRouteSubDto() *MessageSourceRouteSubDto {
 func NewMessageSourceRouteSubDtoWithDefaults() *MessageSourceRouteSubDto {
 	this := MessageSourceRouteSubDto{}
 	return &this
+}
+
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *MessageSourceRouteSubDto) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *MessageSourceRouteSubDto) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *MessageSourceRouteSubDto) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *MessageSourceRouteSubDto) SetId(v string) {
+	o.Id = &v
 }
 
 // GetRouteId returns the RouteId field value if set, zero value otherwise.
@@ -105,7 +138,6 @@ func (o *MessageSourceRouteSubDto) HasPath() bool {
 func (o *MessageSourceRouteSubDto) SetPath(v string) {
 	o.Path.Set(&v)
 }
-
 // SetPathNil sets the value for Path to be an explicit nil
 func (o *MessageSourceRouteSubDto) SetPathNil() {
 	o.Path.Set(nil)
@@ -117,9 +149,9 @@ func (o *MessageSourceRouteSubDto) UnsetPath() {
 }
 
 // GetValues returns the Values field value if set, zero value otherwise (both if not set or set to explicit null).
-func (o *MessageSourceRouteSubDto) GetValues() interface{} {
+func (o *MessageSourceRouteSubDto) GetValues() map[string]interface{} {
 	if o == nil {
-		var ret interface{}
+		var ret map[string]interface{}
 		return ret
 	}
 	return o.Values
@@ -128,11 +160,11 @@ func (o *MessageSourceRouteSubDto) GetValues() interface{} {
 // GetValuesOk returns a tuple with the Values field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *MessageSourceRouteSubDto) GetValuesOk() (*interface{}, bool) {
+func (o *MessageSourceRouteSubDto) GetValuesOk() (map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Values) {
-		return nil, false
+		return map[string]interface{}{}, false
 	}
-	return &o.Values, true
+	return o.Values, true
 }
 
 // HasValues returns a boolean if a field has been set.
@@ -144,13 +176,13 @@ func (o *MessageSourceRouteSubDto) HasValues() bool {
 	return false
 }
 
-// SetValues gets a reference to the given interface{} and assigns it to the Values field.
-func (o *MessageSourceRouteSubDto) SetValues(v interface{}) {
+// SetValues gets a reference to the given map[string]interface{} and assigns it to the Values field.
+func (o *MessageSourceRouteSubDto) SetValues(v map[string]interface{}) {
 	o.Values = v
 }
 
 func (o MessageSourceRouteSubDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,6 +191,9 @@ func (o MessageSourceRouteSubDto) MarshalJSON() ([]byte, error) {
 
 func (o MessageSourceRouteSubDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 	if !IsNil(o.RouteId) {
 		toSerialize["routeId"] = o.RouteId
 	}
@@ -206,3 +241,5 @@ func (v *NullableMessageSourceRouteSubDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

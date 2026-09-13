@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Values** | Pointer to **map[string]string** |  | [optional]
+**Values** | Pointer to **map[string]string** |  | [optional] 
 
 ## Methods
 

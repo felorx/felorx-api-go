@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Key** | Pointer to **NullableString** | 收费点键，与 AppPricingItem.Key 对应（如 MaxListCount） | [optional]
-**IsAvailable** | Pointer to **bool** | 是否可用 | [optional]
-**HasValue** | Pointer to **bool** | 是否有值 | [optional]
-**IntValue** | Pointer to **int64** |  | [optional]
-**StringValue** | Pointer to **NullableString** |  | [optional]
-**BoolValue** | Pointer to **bool** |  | [optional]
-**IntValueType** | Pointer to **NullableString** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Key** | Pointer to **NullableString** | 收费点键，与 AppPricingItem.Key 对应（如 MaxListCount） | [optional] 
+**IsAvailable** | Pointer to **bool** | 是否可用 | [optional] 
+**HasValue** | Pointer to **bool** | 是否有值 | [optional] 
+**IntValue** | Pointer to **int64** |  | [optional] 
+**StringValue** | Pointer to **NullableString** |  | [optional] 
+**BoolValue** | Pointer to **bool** |  | [optional] 
+**IntValueType** | Pointer to **NullableString** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional] 
 
 ## Methods
 

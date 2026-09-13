@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,10 +21,10 @@ var _ MappedNullable = &SendTestEmailInput{}
 
 // SendTestEmailInput struct for SendTestEmailInput
 type SendTestEmailInput struct {
-	SenderEmailAddress string         `json:"senderEmailAddress"`
-	TargetEmailAddress string         `json:"targetEmailAddress"`
-	Subject            string         `json:"subject"`
-	Body               NullableString `json:"body,omitempty"`
+	SenderEmailAddress string `json:"senderEmailAddress"`
+	TargetEmailAddress string `json:"targetEmailAddress"`
+	Subject string `json:"subject"`
+	Body NullableString `json:"body,omitempty"`
 }
 
 type _SendTestEmailInput SendTestEmailInput
@@ -153,7 +153,6 @@ func (o *SendTestEmailInput) HasBody() bool {
 func (o *SendTestEmailInput) SetBody(v string) {
 	o.Body.Set(&v)
 }
-
 // SetBodyNil sets the value for Body to be an explicit nil
 func (o *SendTestEmailInput) SetBodyNil() {
 	o.Body.Set(nil)
@@ -165,7 +164,7 @@ func (o *SendTestEmailInput) UnsetBody() {
 }
 
 func (o SendTestEmailInput) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -198,10 +197,10 @@ func (o *SendTestEmailInput) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -257,3 +256,5 @@ func (v *NullableSendTestEmailInput) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

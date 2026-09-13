@@ -144,7 +144,6 @@ func (o *CreatePayPalOrderDto) HasPlanType() bool {
 func (o *CreatePayPalOrderDto) SetPlanType(v string) {
 	o.PlanType.Set(&v)
 }
-
 // SetPlanTypeNil sets the value for PlanType to be an explicit nil
 func (o *CreatePayPalOrderDto) SetPlanTypeNil() {
 	o.PlanType.Set(nil)
@@ -187,7 +186,6 @@ func (o *CreatePayPalOrderDto) HasReturnUrl() bool {
 func (o *CreatePayPalOrderDto) SetReturnUrl(v string) {
 	o.ReturnUrl.Set(&v)
 }
-
 // SetReturnUrlNil sets the value for ReturnUrl to be an explicit nil
 func (o *CreatePayPalOrderDto) SetReturnUrlNil() {
 	o.ReturnUrl.Set(nil)
@@ -230,7 +228,6 @@ func (o *CreatePayPalOrderDto) HasCancelUrl() bool {
 func (o *CreatePayPalOrderDto) SetCancelUrl(v string) {
 	o.CancelUrl.Set(&v)
 }
-
 // SetCancelUrlNil sets the value for CancelUrl to be an explicit nil
 func (o *CreatePayPalOrderDto) SetCancelUrlNil() {
 	o.CancelUrl.Set(nil)
@@ -242,7 +239,7 @@ func (o *CreatePayPalOrderDto) UnsetCancelUrl() {
 }
 
 func (o CreatePayPalOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -304,3 +301,5 @@ func (v *NullableCreatePayPalOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

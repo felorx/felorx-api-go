@@ -19,10 +19,10 @@ var _ MappedNullable = &RemoteServiceErrorInfo{}
 
 // RemoteServiceErrorInfo struct for RemoteServiceErrorInfo
 type RemoteServiceErrorInfo struct {
-	Code             NullableString                     `json:"code,omitempty"`
-	Message          NullableString                     `json:"message,omitempty"`
-	Details          NullableString                     `json:"details,omitempty"`
-	Data             map[string]interface{}             `json:"data,omitempty"`
+	Code NullableString `json:"code,omitempty"`
+	Message NullableString `json:"message,omitempty"`
+	Details NullableString `json:"details,omitempty"`
+	Data map[string]interface{} `json:"data,omitempty"`
 	ValidationErrors []RemoteServiceValidationErrorInfo `json:"validationErrors,omitempty"`
 }
 
@@ -75,7 +75,6 @@ func (o *RemoteServiceErrorInfo) HasCode() bool {
 func (o *RemoteServiceErrorInfo) SetCode(v string) {
 	o.Code.Set(&v)
 }
-
 // SetCodeNil sets the value for Code to be an explicit nil
 func (o *RemoteServiceErrorInfo) SetCodeNil() {
 	o.Code.Set(nil)
@@ -118,7 +117,6 @@ func (o *RemoteServiceErrorInfo) HasMessage() bool {
 func (o *RemoteServiceErrorInfo) SetMessage(v string) {
 	o.Message.Set(&v)
 }
-
 // SetMessageNil sets the value for Message to be an explicit nil
 func (o *RemoteServiceErrorInfo) SetMessageNil() {
 	o.Message.Set(nil)
@@ -161,7 +159,6 @@ func (o *RemoteServiceErrorInfo) HasDetails() bool {
 func (o *RemoteServiceErrorInfo) SetDetails(v string) {
 	o.Details.Set(&v)
 }
-
 // SetDetailsNil sets the value for Details to be an explicit nil
 func (o *RemoteServiceErrorInfo) SetDetailsNil() {
 	o.Details.Set(nil)
@@ -239,7 +236,7 @@ func (o *RemoteServiceErrorInfo) SetValidationErrors(v []RemoteServiceValidation
 }
 
 func (o RemoteServiceErrorInfo) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -301,3 +298,5 @@ func (v *NullableRemoteServiceErrorInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

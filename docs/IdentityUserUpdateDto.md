@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
-**UserName** | **string** |  |
-**Name** | Pointer to **NullableString** |  | [optional]
-**Surname** | Pointer to **NullableString** |  | [optional]
-**Email** | **string** |  |
-**PhoneNumber** | Pointer to **NullableString** |  | [optional]
-**IsActive** | Pointer to **bool** |  | [optional]
-**LockoutEnabled** | Pointer to **bool** |  | [optional]
-**RoleNames** | Pointer to **[]string** |  | [optional]
-**Password** | Pointer to **NullableString** |  | [optional]
-**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional]
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**UserName** | **string** |  | 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Surname** | Pointer to **NullableString** |  | [optional] 
+**Email** | **string** |  | 
+**PhoneNumber** | Pointer to **NullableString** |  | [optional] 
+**IsActive** | Pointer to **bool** |  | [optional] 
+**LockoutEnabled** | Pointer to **bool** |  | [optional] 
+**RoleNames** | Pointer to **[]string** |  | [optional] 
+**Password** | Pointer to **NullableString** |  | [optional] 
+**ConcurrencyStamp** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

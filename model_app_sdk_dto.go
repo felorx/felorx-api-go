@@ -20,19 +20,19 @@ var _ MappedNullable = &AppSdkDto{}
 
 // AppSdkDto struct for AppSdkDto
 type AppSdkDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Name                 NullableString `json:"name,omitempty"`
-	Description          NullableString `json:"description,omitempty"`
-	Privacy              NullableString `json:"privacy,omitempty"`
-	PrivacyUrl           NullableString `json:"privacyUrl,omitempty"`
-	HomePage             NullableString `json:"homePage,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	Privacy NullableString `json:"privacy,omitempty"`
+	PrivacyUrl NullableString `json:"privacyUrl,omitempty"`
+	HomePage NullableString `json:"homePage,omitempty"`
 }
 
 // NewAppSdkDto instantiates a new AppSdkDto object
@@ -148,7 +148,6 @@ func (o *AppSdkDto) HasCreatorId() bool {
 func (o *AppSdkDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppSdkDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -191,7 +190,6 @@ func (o *AppSdkDto) HasLastModificationTime() bool {
 func (o *AppSdkDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppSdkDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -234,7 +232,6 @@ func (o *AppSdkDto) HasLastModifierId() bool {
 func (o *AppSdkDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppSdkDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -309,7 +306,6 @@ func (o *AppSdkDto) HasDeleterId() bool {
 func (o *AppSdkDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppSdkDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -352,7 +348,6 @@ func (o *AppSdkDto) HasDeletionTime() bool {
 func (o *AppSdkDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppSdkDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -395,7 +390,6 @@ func (o *AppSdkDto) HasName() bool {
 func (o *AppSdkDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AppSdkDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -438,7 +432,6 @@ func (o *AppSdkDto) HasDescription() bool {
 func (o *AppSdkDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppSdkDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -481,7 +474,6 @@ func (o *AppSdkDto) HasPrivacy() bool {
 func (o *AppSdkDto) SetPrivacy(v string) {
 	o.Privacy.Set(&v)
 }
-
 // SetPrivacyNil sets the value for Privacy to be an explicit nil
 func (o *AppSdkDto) SetPrivacyNil() {
 	o.Privacy.Set(nil)
@@ -524,7 +516,6 @@ func (o *AppSdkDto) HasPrivacyUrl() bool {
 func (o *AppSdkDto) SetPrivacyUrl(v string) {
 	o.PrivacyUrl.Set(&v)
 }
-
 // SetPrivacyUrlNil sets the value for PrivacyUrl to be an explicit nil
 func (o *AppSdkDto) SetPrivacyUrlNil() {
 	o.PrivacyUrl.Set(nil)
@@ -567,7 +558,6 @@ func (o *AppSdkDto) HasHomePage() bool {
 func (o *AppSdkDto) SetHomePage(v string) {
 	o.HomePage.Set(&v)
 }
-
 // SetHomePageNil sets the value for HomePage to be an explicit nil
 func (o *AppSdkDto) SetHomePageNil() {
 	o.HomePage.Set(nil)
@@ -579,7 +569,7 @@ func (o *AppSdkDto) UnsetHomePage() {
 }
 
 func (o AppSdkDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -665,3 +655,5 @@ func (v *NullableAppSdkDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

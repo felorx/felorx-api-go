@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // AppSdkAPIService AppSdkAPI service
 type AppSdkAPIService service
 
 type ApiCreateAppSdkRequest struct {
-	ctx                     context.Context
-	ApiService              *AppSdkAPIService
+	ctx context.Context
+	ApiService *AppSdkAPIService
 	createOrUpdateAppSdkDto *CreateOrUpdateAppSdkDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateAppSdkRequest) Execute() (*AppSdkDto, *http.Response, error) {
 /*
 CreateAppSdk Method for CreateAppSdk
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppSdkRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppSdkRequest
 */
 func (a *AppSdkAPIService) CreateAppSdk(ctx context.Context) ApiCreateAppSdkRequest {
 	return ApiCreateAppSdkRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppSdkDto
+//  @return AppSdkDto
 func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSdkDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppSdkDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppSdkDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppSdkAPIService.CreateAppSdk")
@@ -120,8 +120,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *AppSdkAPIService) CreateAppSdkExecute(r ApiCreateAppSdkRequest) (*AppSd
 }
 
 type ApiDeleteAppSdkByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppSdkAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppSdkByIdRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeleteAppSdkByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppSdkById Method for DeleteAppSdkById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppSdkByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAppSdkByIdRequest
 */
 func (a *AppSdkAPIService) DeleteAppSdkById(ctx context.Context, id string) ApiDeleteAppSdkByIdRequest {
 	return ApiDeleteAppSdkByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppSdkAPIService.DeleteAppSdkById")
@@ -284,8 +284,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,11 +349,11 @@ func (a *AppSdkAPIService) DeleteAppSdkByIdExecute(r ApiDeleteAppSdkByIdRequest)
 }
 
 type ApiGetAppSdkListRequest struct {
-	ctx            context.Context
-	ApiService     *AppSdkAPIService
-	filter         *string
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AppSdkAPIService
+	filter *string
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -385,25 +385,24 @@ func (r ApiGetAppSdkListRequest) Execute() (*AppSdkDtoPagedResultDto, *http.Resp
 /*
 GetAppSdkList Method for GetAppSdkList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAppSdkListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAppSdkListRequest
 */
 func (a *AppSdkAPIService) GetAppSdkList(ctx context.Context) ApiGetAppSdkListRequest {
 	return ApiGetAppSdkListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppSdkDtoPagedResultDto
+//  @return AppSdkDtoPagedResultDto
 func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*AppSdkDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppSdkDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppSdkDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppSdkAPIService.GetAppSdkList")
@@ -475,8 +474,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -486,8 +485,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -497,8 +496,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -508,8 +507,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -519,8 +518,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -530,8 +529,8 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -549,9 +548,9 @@ func (a *AppSdkAPIService) GetAppSdkListExecute(r ApiGetAppSdkListRequest) (*App
 }
 
 type ApiUpdateAppSdkRequest struct {
-	ctx                     context.Context
-	ApiService              *AppSdkAPIService
-	id                      string
+	ctx context.Context
+	ApiService *AppSdkAPIService
+	id string
 	createOrUpdateAppSdkDto *CreateOrUpdateAppSdkDto
 }
 
@@ -567,27 +566,26 @@ func (r ApiUpdateAppSdkRequest) Execute() (*AppSdkDto, *http.Response, error) {
 /*
 UpdateAppSdk Method for UpdateAppSdk
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAppSdkRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateAppSdkRequest
 */
 func (a *AppSdkAPIService) UpdateAppSdk(ctx context.Context, id string) ApiUpdateAppSdkRequest {
 	return ApiUpdateAppSdkRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppSdkDto
+//  @return AppSdkDto
 func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSdkDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppSdkDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppSdkDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppSdkAPIService.UpdateAppSdk")
@@ -650,8 +648,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -661,8 +659,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -672,8 +670,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -683,8 +681,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -694,8 +692,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -705,8 +703,8 @@ func (a *AppSdkAPIService) UpdateAppSdkExecute(r ApiUpdateAppSdkRequest) (*AppSd
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

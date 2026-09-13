@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] [readonly]
-**Properties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
-**Validator** | Pointer to [**IValueValidator**](IValueValidator.md) |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] [readonly] 
+**Properties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**Validator** | Pointer to [**IValueValidator**](IValueValidator.md) |  | [optional] 
 
 ## Methods
 

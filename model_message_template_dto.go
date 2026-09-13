@@ -20,18 +20,18 @@ var _ MappedNullable = &MessageTemplateDto{}
 
 // MessageTemplateDto struct for MessageTemplateDto
 type MessageTemplateDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Name                 NullableString `json:"name,omitempty"`
-	DisplayName          NullableString `json:"displayName,omitempty"`
-	Description          NullableString `json:"description,omitempty"`
-	LatestVersion        *int32         `json:"latestVersion,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	Description NullableString `json:"description,omitempty"`
+	LatestVersion *int32 `json:"latestVersion,omitempty"`
 }
 
 // NewMessageTemplateDto instantiates a new MessageTemplateDto object
@@ -147,7 +147,6 @@ func (o *MessageTemplateDto) HasCreatorId() bool {
 func (o *MessageTemplateDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *MessageTemplateDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -190,7 +189,6 @@ func (o *MessageTemplateDto) HasLastModificationTime() bool {
 func (o *MessageTemplateDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *MessageTemplateDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -233,7 +231,6 @@ func (o *MessageTemplateDto) HasLastModifierId() bool {
 func (o *MessageTemplateDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *MessageTemplateDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -308,7 +305,6 @@ func (o *MessageTemplateDto) HasDeleterId() bool {
 func (o *MessageTemplateDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *MessageTemplateDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -351,7 +347,6 @@ func (o *MessageTemplateDto) HasDeletionTime() bool {
 func (o *MessageTemplateDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *MessageTemplateDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -394,7 +389,6 @@ func (o *MessageTemplateDto) HasName() bool {
 func (o *MessageTemplateDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *MessageTemplateDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -437,7 +431,6 @@ func (o *MessageTemplateDto) HasDisplayName() bool {
 func (o *MessageTemplateDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *MessageTemplateDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -480,7 +473,6 @@ func (o *MessageTemplateDto) HasDescription() bool {
 func (o *MessageTemplateDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *MessageTemplateDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -524,7 +516,7 @@ func (o *MessageTemplateDto) SetLatestVersion(v int32) {
 }
 
 func (o MessageTemplateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -607,3 +599,5 @@ func (v *NullableMessageTemplateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,32 +20,33 @@ var _ MappedNullable = &AppReleaseDto{}
 
 // AppReleaseDto struct for AppReleaseDto
 type AppReleaseDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Version              NullableString `json:"version,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Version NullableString `json:"version,omitempty"`
 	// 版本名称
 	VersionName NullableString `json:"versionName,omitempty"`
 	// 构建编号
-	VersionCode   *int64          `json:"versionCode,omitempty"`
-	Notes         NullableString  `json:"notes,omitempty"`
-	Platform      *AppPlatform    `json:"platform,omitempty"`
-	Key           NullableString  `json:"key,omitempty"`
-	RapidCode     NullableString  `json:"rapidCode,omitempty"`
-	Size          NullableInt64   `json:"size,omitempty"`
-	Hash          NullableString  `json:"hash,omitempty"`
-	DownloadUrl   NullableString  `json:"downloadUrl,omitempty"`
-	ArtifactType  *ArtifactType   `json:"artifactType,omitempty"`
-	Publisher     *AppPublisher   `json:"publisher,omitempty"`
-	IsForceUpdate *bool           `json:"isForceUpdate,omitempty"`
-	AppId         *string         `json:"appId,omitempty"`
-	IsEnabled     *bool           `json:"isEnabled,omitempty"`
-	Channel       *ReleaseChannel `json:"channel,omitempty"`
+	VersionCode *int64 `json:"versionCode,omitempty"`
+	Notes NullableString `json:"notes,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
+	Key NullableString `json:"key,omitempty"`
+	RapidCode NullableString `json:"rapidCode,omitempty"`
+	Size NullableInt64 `json:"size,omitempty"`
+	Hash NullableString `json:"hash,omitempty"`
+	DownloadUrl NullableString `json:"downloadUrl,omitempty"`
+	ArtifactType *ArtifactType `json:"artifactType,omitempty"`
+	Architecture NullableString `json:"architecture,omitempty"`
+	Publisher *AppPublisher `json:"publisher,omitempty"`
+	IsForceUpdate *bool `json:"isForceUpdate,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
+	Channel *ReleaseChannel `json:"channel,omitempty"`
 }
 
 // NewAppReleaseDto instantiates a new AppReleaseDto object
@@ -161,7 +162,6 @@ func (o *AppReleaseDto) HasCreatorId() bool {
 func (o *AppReleaseDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppReleaseDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -204,7 +204,6 @@ func (o *AppReleaseDto) HasLastModificationTime() bool {
 func (o *AppReleaseDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppReleaseDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -247,7 +246,6 @@ func (o *AppReleaseDto) HasLastModifierId() bool {
 func (o *AppReleaseDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppReleaseDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -322,7 +320,6 @@ func (o *AppReleaseDto) HasDeleterId() bool {
 func (o *AppReleaseDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppReleaseDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -365,7 +362,6 @@ func (o *AppReleaseDto) HasDeletionTime() bool {
 func (o *AppReleaseDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppReleaseDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -408,7 +404,6 @@ func (o *AppReleaseDto) HasVersion() bool {
 func (o *AppReleaseDto) SetVersion(v string) {
 	o.Version.Set(&v)
 }
-
 // SetVersionNil sets the value for Version to be an explicit nil
 func (o *AppReleaseDto) SetVersionNil() {
 	o.Version.Set(nil)
@@ -451,7 +446,6 @@ func (o *AppReleaseDto) HasVersionName() bool {
 func (o *AppReleaseDto) SetVersionName(v string) {
 	o.VersionName.Set(&v)
 }
-
 // SetVersionNameNil sets the value for VersionName to be an explicit nil
 func (o *AppReleaseDto) SetVersionNameNil() {
 	o.VersionName.Set(nil)
@@ -526,7 +520,6 @@ func (o *AppReleaseDto) HasNotes() bool {
 func (o *AppReleaseDto) SetNotes(v string) {
 	o.Notes.Set(&v)
 }
-
 // SetNotesNil sets the value for Notes to be an explicit nil
 func (o *AppReleaseDto) SetNotesNil() {
 	o.Notes.Set(nil)
@@ -601,7 +594,6 @@ func (o *AppReleaseDto) HasKey() bool {
 func (o *AppReleaseDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *AppReleaseDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -644,7 +636,6 @@ func (o *AppReleaseDto) HasRapidCode() bool {
 func (o *AppReleaseDto) SetRapidCode(v string) {
 	o.RapidCode.Set(&v)
 }
-
 // SetRapidCodeNil sets the value for RapidCode to be an explicit nil
 func (o *AppReleaseDto) SetRapidCodeNil() {
 	o.RapidCode.Set(nil)
@@ -687,7 +678,6 @@ func (o *AppReleaseDto) HasSize() bool {
 func (o *AppReleaseDto) SetSize(v int64) {
 	o.Size.Set(&v)
 }
-
 // SetSizeNil sets the value for Size to be an explicit nil
 func (o *AppReleaseDto) SetSizeNil() {
 	o.Size.Set(nil)
@@ -730,7 +720,6 @@ func (o *AppReleaseDto) HasHash() bool {
 func (o *AppReleaseDto) SetHash(v string) {
 	o.Hash.Set(&v)
 }
-
 // SetHashNil sets the value for Hash to be an explicit nil
 func (o *AppReleaseDto) SetHashNil() {
 	o.Hash.Set(nil)
@@ -773,7 +762,6 @@ func (o *AppReleaseDto) HasDownloadUrl() bool {
 func (o *AppReleaseDto) SetDownloadUrl(v string) {
 	o.DownloadUrl.Set(&v)
 }
-
 // SetDownloadUrlNil sets the value for DownloadUrl to be an explicit nil
 func (o *AppReleaseDto) SetDownloadUrlNil() {
 	o.DownloadUrl.Set(nil)
@@ -814,6 +802,48 @@ func (o *AppReleaseDto) HasArtifactType() bool {
 // SetArtifactType gets a reference to the given ArtifactType and assigns it to the ArtifactType field.
 func (o *AppReleaseDto) SetArtifactType(v ArtifactType) {
 	o.ArtifactType = &v
+}
+
+// GetArchitecture returns the Architecture field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *AppReleaseDto) GetArchitecture() string {
+	if o == nil || IsNil(o.Architecture.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Architecture.Get()
+}
+
+// GetArchitectureOk returns a tuple with the Architecture field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *AppReleaseDto) GetArchitectureOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Architecture.Get(), o.Architecture.IsSet()
+}
+
+// HasArchitecture returns a boolean if a field has been set.
+func (o *AppReleaseDto) HasArchitecture() bool {
+	if o != nil && o.Architecture.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetArchitecture gets a reference to the given NullableString and assigns it to the Architecture field.
+func (o *AppReleaseDto) SetArchitecture(v string) {
+	o.Architecture.Set(&v)
+}
+// SetArchitectureNil sets the value for Architecture to be an explicit nil
+func (o *AppReleaseDto) SetArchitectureNil() {
+	o.Architecture.Set(nil)
+}
+
+// UnsetArchitecture ensures that no value is present for Architecture, not even an explicit nil
+func (o *AppReleaseDto) UnsetArchitecture() {
+	o.Architecture.Unset()
 }
 
 // GetPublisher returns the Publisher field value if set, zero value otherwise.
@@ -977,7 +1007,7 @@ func (o *AppReleaseDto) SetChannel(v ReleaseChannel) {
 }
 
 func (o AppReleaseDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1043,6 +1073,9 @@ func (o AppReleaseDto) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ArtifactType) {
 		toSerialize["artifactType"] = o.ArtifactType
 	}
+	if o.Architecture.IsSet() {
+		toSerialize["architecture"] = o.Architecture.Get()
+	}
 	if !IsNil(o.Publisher) {
 		toSerialize["publisher"] = o.Publisher
 	}
@@ -1096,3 +1129,5 @@ func (v *NullableAppReleaseDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

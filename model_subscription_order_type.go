@@ -20,11 +20,11 @@ type SubscriptionOrderType string
 
 // List of SubscriptionOrderType
 const (
-	SUBSCRIPTIONORDERTYPE_APPLE_AUTO   SubscriptionOrderType = "AppleAuto"
-	SUBSCRIPTIONORDERTYPE_ALIPAY_ONCE  SubscriptionOrderType = "AlipayOnce"
-	SUBSCRIPTIONORDERTYPE_ALIPAY_AUTO  SubscriptionOrderType = "AlipayAuto"
-	SUBSCRIPTIONORDERTYPE_WECHAT_ONCE  SubscriptionOrderType = "WechatOnce"
-	SUBSCRIPTIONORDERTYPE_WECHAT_AUTO  SubscriptionOrderType = "WechatAuto"
+	SUBSCRIPTIONORDERTYPE_APPLE_AUTO SubscriptionOrderType = "AppleAuto"
+	SUBSCRIPTIONORDERTYPE_ALIPAY_ONCE SubscriptionOrderType = "AlipayOnce"
+	SUBSCRIPTIONORDERTYPE_ALIPAY_AUTO SubscriptionOrderType = "AlipayAuto"
+	SUBSCRIPTIONORDERTYPE_WECHAT_ONCE SubscriptionOrderType = "WechatOnce"
+	SUBSCRIPTIONORDERTYPE_WECHAT_AUTO SubscriptionOrderType = "WechatAuto"
 	SUBSCRIPTIONORDERTYPE_PAY_PAL_ONCE SubscriptionOrderType = "PayPalOnce"
 	SUBSCRIPTIONORDERTYPE_PAY_PAL_AUTO SubscriptionOrderType = "PayPalAuto"
 )
@@ -118,3 +118,4 @@ func (v *NullableSubscriptionOrderType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

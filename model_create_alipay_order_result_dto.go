@@ -114,7 +114,6 @@ func (o *CreateAlipayOrderResultDto) HasOutTradeNo() bool {
 func (o *CreateAlipayOrderResultDto) SetOutTradeNo(v string) {
 	o.OutTradeNo.Set(&v)
 }
-
 // SetOutTradeNoNil sets the value for OutTradeNo to be an explicit nil
 func (o *CreateAlipayOrderResultDto) SetOutTradeNoNil() {
 	o.OutTradeNo.Set(nil)
@@ -157,7 +156,6 @@ func (o *CreateAlipayOrderResultDto) HasCheckoutMode() bool {
 func (o *CreateAlipayOrderResultDto) SetCheckoutMode(v string) {
 	o.CheckoutMode.Set(&v)
 }
-
 // SetCheckoutModeNil sets the value for CheckoutMode to be an explicit nil
 func (o *CreateAlipayOrderResultDto) SetCheckoutModeNil() {
 	o.CheckoutMode.Set(nil)
@@ -200,7 +198,6 @@ func (o *CreateAlipayOrderResultDto) HasPaymentForm() bool {
 func (o *CreateAlipayOrderResultDto) SetPaymentForm(v string) {
 	o.PaymentForm.Set(&v)
 }
-
 // SetPaymentFormNil sets the value for PaymentForm to be an explicit nil
 func (o *CreateAlipayOrderResultDto) SetPaymentFormNil() {
 	o.PaymentForm.Set(nil)
@@ -243,7 +240,6 @@ func (o *CreateAlipayOrderResultDto) HasPaymentUrl() bool {
 func (o *CreateAlipayOrderResultDto) SetPaymentUrl(v string) {
 	o.PaymentUrl.Set(&v)
 }
-
 // SetPaymentUrlNil sets the value for PaymentUrl to be an explicit nil
 func (o *CreateAlipayOrderResultDto) SetPaymentUrlNil() {
 	o.PaymentUrl.Set(nil)
@@ -286,7 +282,6 @@ func (o *CreateAlipayOrderResultDto) HasOrderString() bool {
 func (o *CreateAlipayOrderResultDto) SetOrderString(v string) {
 	o.OrderString.Set(&v)
 }
-
 // SetOrderStringNil sets the value for OrderString to be an explicit nil
 func (o *CreateAlipayOrderResultDto) SetOrderStringNil() {
 	o.OrderString.Set(nil)
@@ -298,7 +293,7 @@ func (o *CreateAlipayOrderResultDto) UnsetOrderString() {
 }
 
 func (o CreateAlipayOrderResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -363,3 +358,5 @@ func (v *NullableCreateAlipayOrderResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,28 +20,28 @@ var _ MappedNullable = &SubscriptionDto{}
 
 // SubscriptionDto struct for SubscriptionDto
 type SubscriptionDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 会员过期时间
 	ExpireAt NullableTime `json:"expireAt,omitempty"`
 	// 应用 ID
-	AppId                  *string                        `json:"appId,omitempty"`
-	PriceNaming            *AppPriceNaming                `json:"priceNaming,omitempty"`
-	PricingId              *string                        `json:"pricingId,omitempty"`
-	PlanPriceId            NullableString                 `json:"planPriceId,omitempty"`
-	Provider               *BillingProvider               `json:"provider,omitempty"`
-	BillingPeriod          *SubBillingPeriod              `json:"billingPeriod,omitempty"`
-	BillingMode            *BillingMode                   `json:"billingMode,omitempty"`
-	Status                 *SubscriptionEntitlementStatus `json:"status,omitempty"`
-	IsLifetime             *bool                          `json:"isLifetime,omitempty"`
-	ExternalSubscriptionId NullableString                 `json:"externalSubscriptionId,omitempty"`
-	LastVerifiedAt         NullableTime                   `json:"lastVerifiedAt,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PriceNaming *AppPriceNaming `json:"priceNaming,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	PlanPriceId NullableString `json:"planPriceId,omitempty"`
+	Provider *BillingProvider `json:"provider,omitempty"`
+	BillingPeriod *SubBillingPeriod `json:"billingPeriod,omitempty"`
+	BillingMode *BillingMode `json:"billingMode,omitempty"`
+	Status *SubscriptionEntitlementStatus `json:"status,omitempty"`
+	IsLifetime *bool `json:"isLifetime,omitempty"`
+	ExternalSubscriptionId NullableString `json:"externalSubscriptionId,omitempty"`
+	LastVerifiedAt NullableTime `json:"lastVerifiedAt,omitempty"`
 }
 
 // NewSubscriptionDto instantiates a new SubscriptionDto object
@@ -157,7 +157,6 @@ func (o *SubscriptionDto) HasCreatorId() bool {
 func (o *SubscriptionDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *SubscriptionDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -200,7 +199,6 @@ func (o *SubscriptionDto) HasLastModificationTime() bool {
 func (o *SubscriptionDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *SubscriptionDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -243,7 +241,6 @@ func (o *SubscriptionDto) HasLastModifierId() bool {
 func (o *SubscriptionDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *SubscriptionDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -318,7 +315,6 @@ func (o *SubscriptionDto) HasDeleterId() bool {
 func (o *SubscriptionDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *SubscriptionDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -361,7 +357,6 @@ func (o *SubscriptionDto) HasDeletionTime() bool {
 func (o *SubscriptionDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *SubscriptionDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -404,7 +399,6 @@ func (o *SubscriptionDto) HasExpireAt() bool {
 func (o *SubscriptionDto) SetExpireAt(v time.Time) {
 	o.ExpireAt.Set(&v)
 }
-
 // SetExpireAtNil sets the value for ExpireAt to be an explicit nil
 func (o *SubscriptionDto) SetExpireAtNil() {
 	o.ExpireAt.Set(nil)
@@ -543,7 +537,6 @@ func (o *SubscriptionDto) HasPlanPriceId() bool {
 func (o *SubscriptionDto) SetPlanPriceId(v string) {
 	o.PlanPriceId.Set(&v)
 }
-
 // SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
 func (o *SubscriptionDto) SetPlanPriceIdNil() {
 	o.PlanPriceId.Set(nil)
@@ -746,7 +739,6 @@ func (o *SubscriptionDto) HasExternalSubscriptionId() bool {
 func (o *SubscriptionDto) SetExternalSubscriptionId(v string) {
 	o.ExternalSubscriptionId.Set(&v)
 }
-
 // SetExternalSubscriptionIdNil sets the value for ExternalSubscriptionId to be an explicit nil
 func (o *SubscriptionDto) SetExternalSubscriptionIdNil() {
 	o.ExternalSubscriptionId.Set(nil)
@@ -789,7 +781,6 @@ func (o *SubscriptionDto) HasLastVerifiedAt() bool {
 func (o *SubscriptionDto) SetLastVerifiedAt(v time.Time) {
 	o.LastVerifiedAt.Set(&v)
 }
-
 // SetLastVerifiedAtNil sets the value for LastVerifiedAt to be an explicit nil
 func (o *SubscriptionDto) SetLastVerifiedAtNil() {
 	o.LastVerifiedAt.Set(nil)
@@ -801,7 +792,7 @@ func (o *SubscriptionDto) UnsetLastVerifiedAt() {
 }
 
 func (o SubscriptionDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -908,3 +899,5 @@ func (v *NullableSubscriptionDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

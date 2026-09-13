@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserId** | Pointer to **string** |  | [optional]
-**ResetToken** | **string** |  |
+**UserId** | Pointer to **string** |  | [optional] 
+**ResetToken** | **string** |  | 
 
 ## Methods
 

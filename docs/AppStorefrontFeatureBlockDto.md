@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FeatureId** | Pointer to **string** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**PhoneUrl** | Pointer to **NullableString** |  | [optional]
-**TabletUrl** | Pointer to **NullableString** |  | [optional]
+**FeatureId** | Pointer to **string** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**PhoneUrl** | Pointer to **NullableString** |  | [optional] 
+**TabletUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

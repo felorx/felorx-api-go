@@ -7,15 +7,16 @@ Method | HTTP request | Description
 [**AlipayNotify**](SubscriptionAPI.md#AlipayNotify) | **Post** /api/app/alipay/notify | 支付宝异步通知。成功时必须返回纯文本 success，否则支付宝会重试通知。
 [**AppleNotifications**](SubscriptionAPI.md#AppleNotifications) | **Post** /api/app/subscription/apple-notifications | 苹果订阅 Callback 地址
 [**CapturePayPalOrder**](SubscriptionAPI.md#CapturePayPalOrder) | **Post** /api/app/subscription/capture-pay-pal-order | 捕获 PayPal 订单并完成订阅
-[**CreateOrder**](SubscriptionAPI.md#CreateOrder) | **Post** /api/app/subscription/order |
+[**CreateAlipayOrderPostApiAppSubscriptionAlipayOrder**](SubscriptionAPI.md#CreateAlipayOrderPostApiAppSubscriptionAlipayOrder) | **Post** /api/app/subscription/alipay-order | 创建支付宝一次性支付订单
+[**CreateOrder**](SubscriptionAPI.md#CreateOrder) | **Post** /api/app/subscription/order | 
+[**CreatePayPalOrderPostApiAppSubscriptionPayPalOrder**](SubscriptionAPI.md#CreatePayPalOrderPostApiAppSubscriptionPayPalOrder) | **Post** /api/app/subscription/pay-pal-order | 创建 PayPal 订单
 [**GetPlanPrices**](SubscriptionAPI.md#GetPlanPrices) | **Get** /api/app/subscription/plan-prices/by-app-id/{appId} | 获取应用对客户端开放的订阅售卖价格。
-[**GetSubscriptionById**](SubscriptionAPI.md#GetSubscriptionById) | **Get** /api/app/subscription |
+[**GetStoreProducts**](SubscriptionAPI.md#GetStoreProducts) | **Get** /api/app/subscription/store-products/by-app-id/{appId} | 获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
+[**GetSubscriptionById**](SubscriptionAPI.md#GetSubscriptionById) | **Get** /api/app/subscription | 
 [**GetSubscriptionList**](SubscriptionAPI.md#GetSubscriptionList) | **Get** /api/app/subscription/list | 获取用户订阅列表，每个应用只返回最新的一条订阅记录（含有效和已过期的）
 [**PayPalReturn**](SubscriptionAPI.md#PayPalReturn) | **Get** /api/app/paypal/notify | PayPal 浏览器审批后的返回入口。用于桌面/移动 App 跳转外部浏览器时免网站登录完成确认。
 [**PayPalWebhook**](SubscriptionAPI.md#PayPalWebhook) | **Post** /api/app/paypal/notify | PayPal webhook. Configure PayPal:WebhookId to enable signature verification.
-[**SubscriptionCreateAlipayOrder**](SubscriptionAPI.md#SubscriptionCreateAlipayOrder) | **Post** /api/app/subscription/alipay-order | 创建支付宝一次性支付订单
-[**SubscriptionCreatePayPalOrder**](SubscriptionAPI.md#SubscriptionCreatePayPalOrder) | **Post** /api/app/subscription/pay-pal-order | 创建 PayPal 订单
-[**VerifyReceipt**](SubscriptionAPI.md#VerifyReceipt) | **Post** /api/app/subscription/verify-receipt |
+[**VerifyReceipt**](SubscriptionAPI.md#VerifyReceipt) | **Post** /api/app/subscription/verify-receipt | 
 
 
 
@@ -120,7 +121,7 @@ Other parameters are passed through a pointer to a apiAppleNotificationsRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appleNotificaionDto** | [**AppleNotificaionDto**](AppleNotificaionDto.md) |  |
+ **appleNotificaionDto** | [**AppleNotificaionDto**](AppleNotificaionDto.md) |  | 
 
 ### Return type
 
@@ -184,11 +185,75 @@ Other parameters are passed through a pointer to a apiCapturePayPalOrderRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **capturePayPalOrderDto** | [**CapturePayPalOrderDto**](CapturePayPalOrderDto.md) |  |
+ **capturePayPalOrderDto** | [**CapturePayPalOrderDto**](CapturePayPalOrderDto.md) |  | 
 
 ### Return type
 
 [**SubscriptionDto**](SubscriptionDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateAlipayOrderPostApiAppSubscriptionAlipayOrder
+
+> CreateAlipayOrderResultDto CreateAlipayOrderPostApiAppSubscriptionAlipayOrder(ctx).CreateAlipayOrderDto(createAlipayOrderDto).Execute()
+
+创建支付宝一次性支付订单
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	createAlipayOrderDto := *openapiclient.NewCreateAlipayOrderDto() // CreateAlipayOrderDto |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SubscriptionAPI.CreateAlipayOrderPostApiAppSubscriptionAlipayOrder(context.Background()).CreateAlipayOrderDto(createAlipayOrderDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.CreateAlipayOrderPostApiAppSubscriptionAlipayOrder``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateAlipayOrderPostApiAppSubscriptionAlipayOrder`: CreateAlipayOrderResultDto
+	fmt.Fprintf(os.Stdout, "Response from `SubscriptionAPI.CreateAlipayOrderPostApiAppSubscriptionAlipayOrder`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateAlipayOrderPostApiAppSubscriptionAlipayOrderRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createAlipayOrderDto** | [**CreateAlipayOrderDto**](CreateAlipayOrderDto.md) |  | 
+
+### Return type
+
+[**CreateAlipayOrderResultDto**](CreateAlipayOrderResultDto.md)
 
 ### Authorization
 
@@ -248,11 +313,75 @@ Other parameters are passed through a pointer to a apiCreateOrderRequest struct 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrGetSubscriptionOrderDto** | [**CreateOrGetSubscriptionOrderDto**](CreateOrGetSubscriptionOrderDto.md) |  |
+ **createOrGetSubscriptionOrderDto** | [**CreateOrGetSubscriptionOrderDto**](CreateOrGetSubscriptionOrderDto.md) |  | 
 
 ### Return type
 
 [**SubscriptionOrderDto**](SubscriptionOrderDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreatePayPalOrderPostApiAppSubscriptionPayPalOrder
+
+> CreatePayPalOrderResultDto CreatePayPalOrderPostApiAppSubscriptionPayPalOrder(ctx).CreatePayPalOrderDto(createPayPalOrderDto).Execute()
+
+创建 PayPal 订单
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	createPayPalOrderDto := *openapiclient.NewCreatePayPalOrderDto() // CreatePayPalOrderDto |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SubscriptionAPI.CreatePayPalOrderPostApiAppSubscriptionPayPalOrder(context.Background()).CreatePayPalOrderDto(createPayPalOrderDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.CreatePayPalOrderPostApiAppSubscriptionPayPalOrder``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreatePayPalOrderPostApiAppSubscriptionPayPalOrder`: CreatePayPalOrderResultDto
+	fmt.Fprintf(os.Stdout, "Response from `SubscriptionAPI.CreatePayPalOrderPostApiAppSubscriptionPayPalOrder`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreatePayPalOrderPostApiAppSubscriptionPayPalOrderRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createPayPalOrderDto** | [**CreatePayPalOrderDto**](CreatePayPalOrderDto.md) |  | 
+
+### Return type
+
+[**CreatePayPalOrderResultDto**](CreatePayPalOrderResultDto.md)
 
 ### Authorization
 
@@ -287,7 +416,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -307,7 +436,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -321,6 +450,80 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]AppPlanPriceDto**](AppPlanPriceDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetStoreProducts
+
+> []StoreProductMappingDto GetStoreProducts(ctx, appId).Provider(provider).Platform(platform).Environment(environment).Execute()
+
+获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
+	provider := openapiclient.BillingProvider("Unknown") // BillingProvider |  (optional)
+	platform := openapiclient.AppPlatform("None") // AppPlatform |  (optional)
+	environment := "environment_example" // string |  (optional) (default to "production")
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.SubscriptionAPI.GetStoreProducts(context.Background(), appId).Provider(provider).Platform(platform).Environment(environment).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.GetStoreProducts``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetStoreProducts`: []StoreProductMappingDto
+	fmt.Fprintf(os.Stdout, "Response from `SubscriptionAPI.GetStoreProducts`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**appId** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetStoreProductsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **provider** | [**BillingProvider**](BillingProvider.md) |  | 
+ **platform** | [**AppPlatform**](AppPlatform.md) |  | 
+ **environment** | **string** |  | [default to &quot;production&quot;]
+
+### Return type
+
+[**[]StoreProductMappingDto**](StoreProductMappingDto.md)
 
 ### Authorization
 
@@ -380,7 +583,7 @@ Other parameters are passed through a pointer to a apiGetSubscriptionByIdRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **string** |  |
+ **appId** | **string** |  | 
 
 ### Return type
 
@@ -502,8 +705,8 @@ Other parameters are passed through a pointer to a apiPayPalReturnRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **string** |  |
- **subscriptionId** | **string** |  |
+ **token** | **string** |  | 
+ **subscriptionId** | **string** |  | 
 
 ### Return type
 
@@ -582,134 +785,6 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SubscriptionCreateAlipayOrder
-
-> CreateAlipayOrderResultDto SubscriptionCreateAlipayOrder(ctx).CreateAlipayOrderDto(createAlipayOrderDto).Execute()
-
-创建支付宝一次性支付订单
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	createAlipayOrderDto := *openapiclient.NewCreateAlipayOrderDto() // CreateAlipayOrderDto |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SubscriptionAPI.SubscriptionCreateAlipayOrder(context.Background()).CreateAlipayOrderDto(createAlipayOrderDto).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.SubscriptionCreateAlipayOrder``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `SubscriptionCreateAlipayOrder`: CreateAlipayOrderResultDto
-	fmt.Fprintf(os.Stdout, "Response from `SubscriptionAPI.SubscriptionCreateAlipayOrder`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSubscriptionCreateAlipayOrderRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createAlipayOrderDto** | [**CreateAlipayOrderDto**](CreateAlipayOrderDto.md) |  |
-
-### Return type
-
-[**CreateAlipayOrderResultDto**](CreateAlipayOrderResultDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## SubscriptionCreatePayPalOrder
-
-> CreatePayPalOrderResultDto SubscriptionCreatePayPalOrder(ctx).CreatePayPalOrderDto(createPayPalOrderDto).Execute()
-
-创建 PayPal 订单
-
-### Example
-
-```go
-package main
-
-import (
-	"context"
-	"fmt"
-	"os"
-	openapiclient "github.com/felorx/felorx-api-go"
-)
-
-func main() {
-	createPayPalOrderDto := *openapiclient.NewCreatePayPalOrderDto() // CreatePayPalOrderDto |  (optional)
-
-	configuration := openapiclient.NewConfiguration()
-	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SubscriptionAPI.SubscriptionCreatePayPalOrder(context.Background()).CreatePayPalOrderDto(createPayPalOrderDto).Execute()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionAPI.SubscriptionCreatePayPalOrder``: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-	}
-	// response from `SubscriptionCreatePayPalOrder`: CreatePayPalOrderResultDto
-	fmt.Fprintf(os.Stdout, "Response from `SubscriptionAPI.SubscriptionCreatePayPalOrder`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiSubscriptionCreatePayPalOrderRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createPayPalOrderDto** | [**CreatePayPalOrderDto**](CreatePayPalOrderDto.md) |  |
-
-### Return type
-
-[**CreatePayPalOrderResultDto**](CreatePayPalOrderResultDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## VerifyReceipt
 
 > VerifyReceiptResult VerifyReceipt(ctx).VerifyReceiptDto(verifyReceiptDto).Execute()
@@ -754,7 +829,7 @@ Other parameters are passed through a pointer to a apiVerifyReceiptRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyReceiptDto** | [**VerifyReceiptDto**](VerifyReceiptDto.md) |  |
+ **verifyReceiptDto** | [**VerifyReceiptDto**](VerifyReceiptDto.md) |  | 
 
 ### Return type
 

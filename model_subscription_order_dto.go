@@ -20,26 +20,26 @@ var _ MappedNullable = &SubscriptionOrderDto{}
 
 // SubscriptionOrderDto struct for SubscriptionOrderDto
 type SubscriptionOrderDto struct {
-	Id                   *string                  `json:"id,omitempty"`
-	CreationTime         *time.Time               `json:"creationTime,omitempty"`
-	CreatorId            NullableString           `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime             `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString           `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool                    `json:"isDeleted,omitempty"`
-	DeleterId            NullableString           `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime             `json:"deletionTime,omitempty"`
-	Type                 *SubscriptionOrderType   `json:"type,omitempty"`
-	Status               *SubscriptionOrderStatus `json:"status,omitempty"`
-	AppId                *string                  `json:"appId,omitempty"`
-	PricingId            *string                  `json:"pricingId,omitempty"`
-	PlanPriceId          NullableString           `json:"planPriceId,omitempty"`
-	ProductId            NullableString           `json:"productId,omitempty"`
-	Provider             *BillingProvider         `json:"provider,omitempty"`
-	BillingPeriod        *SubBillingPeriod        `json:"billingPeriod,omitempty"`
-	BillingMode          *BillingMode             `json:"billingMode,omitempty"`
-	Amount               *float64                 `json:"amount,omitempty"`
-	Currency             NullableString           `json:"currency,omitempty"`
-	ApprovalUrl          NullableString           `json:"approvalUrl,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Type *SubscriptionOrderType `json:"type,omitempty"`
+	Status *SubscriptionOrderStatus `json:"status,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	PlanPriceId NullableString `json:"planPriceId,omitempty"`
+	ProductId NullableString `json:"productId,omitempty"`
+	Provider *BillingProvider `json:"provider,omitempty"`
+	BillingPeriod *SubBillingPeriod `json:"billingPeriod,omitempty"`
+	BillingMode *BillingMode `json:"billingMode,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	Currency NullableString `json:"currency,omitempty"`
+	ApprovalUrl NullableString `json:"approvalUrl,omitempty"`
 }
 
 // NewSubscriptionOrderDto instantiates a new SubscriptionOrderDto object
@@ -155,7 +155,6 @@ func (o *SubscriptionOrderDto) HasCreatorId() bool {
 func (o *SubscriptionOrderDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *SubscriptionOrderDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -198,7 +197,6 @@ func (o *SubscriptionOrderDto) HasLastModificationTime() bool {
 func (o *SubscriptionOrderDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *SubscriptionOrderDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -241,7 +239,6 @@ func (o *SubscriptionOrderDto) HasLastModifierId() bool {
 func (o *SubscriptionOrderDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *SubscriptionOrderDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -316,7 +313,6 @@ func (o *SubscriptionOrderDto) HasDeleterId() bool {
 func (o *SubscriptionOrderDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *SubscriptionOrderDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -359,7 +355,6 @@ func (o *SubscriptionOrderDto) HasDeletionTime() bool {
 func (o *SubscriptionOrderDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *SubscriptionOrderDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -530,7 +525,6 @@ func (o *SubscriptionOrderDto) HasPlanPriceId() bool {
 func (o *SubscriptionOrderDto) SetPlanPriceId(v string) {
 	o.PlanPriceId.Set(&v)
 }
-
 // SetPlanPriceIdNil sets the value for PlanPriceId to be an explicit nil
 func (o *SubscriptionOrderDto) SetPlanPriceIdNil() {
 	o.PlanPriceId.Set(nil)
@@ -573,7 +567,6 @@ func (o *SubscriptionOrderDto) HasProductId() bool {
 func (o *SubscriptionOrderDto) SetProductId(v string) {
 	o.ProductId.Set(&v)
 }
-
 // SetProductIdNil sets the value for ProductId to be an explicit nil
 func (o *SubscriptionOrderDto) SetProductIdNil() {
 	o.ProductId.Set(nil)
@@ -744,7 +737,6 @@ func (o *SubscriptionOrderDto) HasCurrency() bool {
 func (o *SubscriptionOrderDto) SetCurrency(v string) {
 	o.Currency.Set(&v)
 }
-
 // SetCurrencyNil sets the value for Currency to be an explicit nil
 func (o *SubscriptionOrderDto) SetCurrencyNil() {
 	o.Currency.Set(nil)
@@ -787,7 +779,6 @@ func (o *SubscriptionOrderDto) HasApprovalUrl() bool {
 func (o *SubscriptionOrderDto) SetApprovalUrl(v string) {
 	o.ApprovalUrl.Set(&v)
 }
-
 // SetApprovalUrlNil sets the value for ApprovalUrl to be an explicit nil
 func (o *SubscriptionOrderDto) SetApprovalUrlNil() {
 	o.ApprovalUrl.Set(nil)
@@ -799,7 +790,7 @@ func (o *SubscriptionOrderDto) UnsetApprovalUrl() {
 }
 
 func (o SubscriptionOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -906,3 +897,5 @@ func (v *NullableSubscriptionOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

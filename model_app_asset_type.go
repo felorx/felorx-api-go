@@ -20,10 +20,10 @@ type AppAssetType string
 
 // List of AppAssetType
 const (
-	APPASSETTYPE_ICON            AppAssetType = "Icon"
-	APPASSETTYPE_SCREENSHOT      AppAssetType = "Screenshot"
+	APPASSETTYPE_ICON AppAssetType = "Icon"
+	APPASSETTYPE_SCREENSHOT AppAssetType = "Screenshot"
 	APPASSETTYPE_FEATURE_GRAPHIC AppAssetType = "FeatureGraphic"
-	APPASSETTYPE_VIDEO           AppAssetType = "Video"
+	APPASSETTYPE_VIDEO AppAssetType = "Video"
 )
 
 // All allowed values of AppAssetType enum
@@ -112,3 +112,4 @@ func (v *NullableAppAssetType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

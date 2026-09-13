@@ -19,13 +19,13 @@ var _ MappedNullable = &CreatePushNotificationDto{}
 
 // CreatePushNotificationDto struct for CreatePushNotificationDto
 type CreatePushNotificationDto struct {
-	Title       NullableString `json:"title,omitempty"`
+	Title NullableString `json:"title,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Body        NullableString `json:"body,omitempty"`
-	Url         NullableString `json:"url,omitempty"`
-	FelorxId    NullableString `json:"felorxId,omitempty"`
-	CreatorId   NullableString `json:"creatorId,omitempty"`
-	App         NullableString `json:"app,omitempty"`
+	Body NullableString `json:"body,omitempty"`
+	Url NullableString `json:"url,omitempty"`
+	FelorxId NullableString `json:"felorxId,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	App NullableString `json:"app,omitempty"`
 }
 
 // NewCreatePushNotificationDto instantiates a new CreatePushNotificationDto object
@@ -77,7 +77,6 @@ func (o *CreatePushNotificationDto) HasTitle() bool {
 func (o *CreatePushNotificationDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *CreatePushNotificationDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -120,7 +119,6 @@ func (o *CreatePushNotificationDto) HasDescription() bool {
 func (o *CreatePushNotificationDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreatePushNotificationDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -163,7 +161,6 @@ func (o *CreatePushNotificationDto) HasBody() bool {
 func (o *CreatePushNotificationDto) SetBody(v string) {
 	o.Body.Set(&v)
 }
-
 // SetBodyNil sets the value for Body to be an explicit nil
 func (o *CreatePushNotificationDto) SetBodyNil() {
 	o.Body.Set(nil)
@@ -206,7 +203,6 @@ func (o *CreatePushNotificationDto) HasUrl() bool {
 func (o *CreatePushNotificationDto) SetUrl(v string) {
 	o.Url.Set(&v)
 }
-
 // SetUrlNil sets the value for Url to be an explicit nil
 func (o *CreatePushNotificationDto) SetUrlNil() {
 	o.Url.Set(nil)
@@ -249,7 +245,6 @@ func (o *CreatePushNotificationDto) HasFelorxId() bool {
 func (o *CreatePushNotificationDto) SetFelorxId(v string) {
 	o.FelorxId.Set(&v)
 }
-
 // SetFelorxIdNil sets the value for FelorxId to be an explicit nil
 func (o *CreatePushNotificationDto) SetFelorxIdNil() {
 	o.FelorxId.Set(nil)
@@ -292,7 +287,6 @@ func (o *CreatePushNotificationDto) HasCreatorId() bool {
 func (o *CreatePushNotificationDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *CreatePushNotificationDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -335,7 +329,6 @@ func (o *CreatePushNotificationDto) HasApp() bool {
 func (o *CreatePushNotificationDto) SetApp(v string) {
 	o.App.Set(&v)
 }
-
 // SetAppNil sets the value for App to be an explicit nil
 func (o *CreatePushNotificationDto) SetAppNil() {
 	o.App.Set(nil)
@@ -347,7 +340,7 @@ func (o *CreatePushNotificationDto) UnsetApp() {
 }
 
 func (o CreatePushNotificationDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -415,3 +408,5 @@ func (v *NullableCreatePushNotificationDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

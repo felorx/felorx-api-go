@@ -19,18 +19,18 @@ var _ MappedNullable = &StorageObjectCredentials{}
 
 // StorageObjectCredentials struct for StorageObjectCredentials
 type StorageObjectCredentials struct {
-	StorageClass    NullableString `json:"storageClass,omitempty"`
-	EndPoint        NullableString `json:"endPoint,omitempty"`
-	Protocal        NullableString `json:"protocal,omitempty"`
-	BucketName      NullableString `json:"bucketName,omitempty"`
-	RegionId        NullableString `json:"regionId,omitempty"`
-	SecurityToken   NullableString `json:"securityToken,omitempty"`
-	AccessKeyId     NullableString `json:"accessKeyId,omitempty"`
+	StorageClass NullableString `json:"storageClass,omitempty"`
+	EndPoint NullableString `json:"endPoint,omitempty"`
+	Protocal NullableString `json:"protocal,omitempty"`
+	BucketName NullableString `json:"bucketName,omitempty"`
+	RegionId NullableString `json:"regionId,omitempty"`
+	SecurityToken NullableString `json:"securityToken,omitempty"`
+	AccessKeyId NullableString `json:"accessKeyId,omitempty"`
 	AccessKeySecret NullableString `json:"accessKeySecret,omitempty"`
-	Expiration      NullableString `json:"expiration,omitempty"`
-	ExpiredTime     *int64         `json:"expiredTime,omitempty"`
-	AppId           NullableString `json:"appId,omitempty"`
-	CdnDomain       NullableString `json:"cdnDomain,omitempty"`
+	Expiration NullableString `json:"expiration,omitempty"`
+	ExpiredTime *int64 `json:"expiredTime,omitempty"`
+	AppId NullableString `json:"appId,omitempty"`
+	CdnDomain NullableString `json:"cdnDomain,omitempty"`
 }
 
 // NewStorageObjectCredentials instantiates a new StorageObjectCredentials object
@@ -82,7 +82,6 @@ func (o *StorageObjectCredentials) HasStorageClass() bool {
 func (o *StorageObjectCredentials) SetStorageClass(v string) {
 	o.StorageClass.Set(&v)
 }
-
 // SetStorageClassNil sets the value for StorageClass to be an explicit nil
 func (o *StorageObjectCredentials) SetStorageClassNil() {
 	o.StorageClass.Set(nil)
@@ -125,7 +124,6 @@ func (o *StorageObjectCredentials) HasEndPoint() bool {
 func (o *StorageObjectCredentials) SetEndPoint(v string) {
 	o.EndPoint.Set(&v)
 }
-
 // SetEndPointNil sets the value for EndPoint to be an explicit nil
 func (o *StorageObjectCredentials) SetEndPointNil() {
 	o.EndPoint.Set(nil)
@@ -168,7 +166,6 @@ func (o *StorageObjectCredentials) HasProtocal() bool {
 func (o *StorageObjectCredentials) SetProtocal(v string) {
 	o.Protocal.Set(&v)
 }
-
 // SetProtocalNil sets the value for Protocal to be an explicit nil
 func (o *StorageObjectCredentials) SetProtocalNil() {
 	o.Protocal.Set(nil)
@@ -211,7 +208,6 @@ func (o *StorageObjectCredentials) HasBucketName() bool {
 func (o *StorageObjectCredentials) SetBucketName(v string) {
 	o.BucketName.Set(&v)
 }
-
 // SetBucketNameNil sets the value for BucketName to be an explicit nil
 func (o *StorageObjectCredentials) SetBucketNameNil() {
 	o.BucketName.Set(nil)
@@ -254,7 +250,6 @@ func (o *StorageObjectCredentials) HasRegionId() bool {
 func (o *StorageObjectCredentials) SetRegionId(v string) {
 	o.RegionId.Set(&v)
 }
-
 // SetRegionIdNil sets the value for RegionId to be an explicit nil
 func (o *StorageObjectCredentials) SetRegionIdNil() {
 	o.RegionId.Set(nil)
@@ -297,7 +292,6 @@ func (o *StorageObjectCredentials) HasSecurityToken() bool {
 func (o *StorageObjectCredentials) SetSecurityToken(v string) {
 	o.SecurityToken.Set(&v)
 }
-
 // SetSecurityTokenNil sets the value for SecurityToken to be an explicit nil
 func (o *StorageObjectCredentials) SetSecurityTokenNil() {
 	o.SecurityToken.Set(nil)
@@ -340,7 +334,6 @@ func (o *StorageObjectCredentials) HasAccessKeyId() bool {
 func (o *StorageObjectCredentials) SetAccessKeyId(v string) {
 	o.AccessKeyId.Set(&v)
 }
-
 // SetAccessKeyIdNil sets the value for AccessKeyId to be an explicit nil
 func (o *StorageObjectCredentials) SetAccessKeyIdNil() {
 	o.AccessKeyId.Set(nil)
@@ -383,7 +376,6 @@ func (o *StorageObjectCredentials) HasAccessKeySecret() bool {
 func (o *StorageObjectCredentials) SetAccessKeySecret(v string) {
 	o.AccessKeySecret.Set(&v)
 }
-
 // SetAccessKeySecretNil sets the value for AccessKeySecret to be an explicit nil
 func (o *StorageObjectCredentials) SetAccessKeySecretNil() {
 	o.AccessKeySecret.Set(nil)
@@ -426,7 +418,6 @@ func (o *StorageObjectCredentials) HasExpiration() bool {
 func (o *StorageObjectCredentials) SetExpiration(v string) {
 	o.Expiration.Set(&v)
 }
-
 // SetExpirationNil sets the value for Expiration to be an explicit nil
 func (o *StorageObjectCredentials) SetExpirationNil() {
 	o.Expiration.Set(nil)
@@ -501,7 +492,6 @@ func (o *StorageObjectCredentials) HasAppId() bool {
 func (o *StorageObjectCredentials) SetAppId(v string) {
 	o.AppId.Set(&v)
 }
-
 // SetAppIdNil sets the value for AppId to be an explicit nil
 func (o *StorageObjectCredentials) SetAppIdNil() {
 	o.AppId.Set(nil)
@@ -544,7 +534,6 @@ func (o *StorageObjectCredentials) HasCdnDomain() bool {
 func (o *StorageObjectCredentials) SetCdnDomain(v string) {
 	o.CdnDomain.Set(&v)
 }
-
 // SetCdnDomainNil sets the value for CdnDomain to be an explicit nil
 func (o *StorageObjectCredentials) SetCdnDomainNil() {
 	o.CdnDomain.Set(nil)
@@ -556,7 +545,7 @@ func (o *StorageObjectCredentials) UnsetCdnDomain() {
 }
 
 func (o StorageObjectCredentials) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -639,3 +628,5 @@ func (v *NullableStorageObjectCredentials) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

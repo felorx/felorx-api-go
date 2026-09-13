@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**AppId** | Pointer to **string** |  | [optional]
-**Template** | Pointer to **NullableString** | 模板名称, 包含版本号  felorx/wechat-app-msg?version&#x3D;1 微信应用消息模板  felorx/wechat-official-msg?version&#x3D;2 微信公众号消息模板 | [optional]
-**Data** | Pointer to **map[string]interface{}** | JSON格式数据 | [optional]
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**AppId** | Pointer to **string** |  | [optional] 
+**Template** | Pointer to **NullableString** | 模板名称, 包含版本号  felorx/wechat-app-msg?version&#x3D;1 微信应用消息模板  felorx/wechat-official-msg?version&#x3D;2 微信公众号消息模板 | [optional] 
+**Data** | Pointer to **map[string]interface{}** | JSON格式数据 | [optional] 
 
 ## Methods
 

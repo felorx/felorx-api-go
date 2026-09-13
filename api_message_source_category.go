@@ -18,11 +18,12 @@ import (
 	"net/url"
 )
 
+
 // MessageSourceCategoryAPIService MessageSourceCategoryAPI service
 type MessageSourceCategoryAPIService service
 
 type ApiGetMessageSourceCategoryListRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *MessageSourceCategoryAPIService
 }
 
@@ -33,25 +34,24 @@ func (r ApiGetMessageSourceCategoryListRequest) Execute() ([]MessageSourceCatego
 /*
 GetMessageSourceCategoryList Method for GetMessageSourceCategoryList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetMessageSourceCategoryListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetMessageSourceCategoryListRequest
 */
 func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryList(ctx context.Context) ApiGetMessageSourceCategoryListRequest {
 	return ApiGetMessageSourceCategoryListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []MessageSourceCategoryDto
+//  @return []MessageSourceCategoryDto
 func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r ApiGetMessageSourceCategoryListRequest) ([]MessageSourceCategoryDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []MessageSourceCategoryDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []MessageSourceCategoryDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MessageSourceCategoryAPIService.GetMessageSourceCategoryList")
@@ -111,8 +111,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -122,8 +122,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -133,8 +133,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -144,8 +144,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -155,8 +155,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -166,8 +166,8 @@ func (a *MessageSourceCategoryAPIService) GetMessageSourceCategoryListExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

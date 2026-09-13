@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** | 配置名称 | [optional]
-**Description** | Pointer to **NullableString** | 配置描述 | [optional]
-**CdnDomain** | Pointer to **NullableString** | CDN 域名 | [optional]
+**Name** | Pointer to **NullableString** | 配置名称 | [optional] 
+**Description** | Pointer to **NullableString** | 配置描述 | [optional] 
+**CdnDomain** | Pointer to **NullableString** | CDN 域名 | [optional] 
 
 ## Methods
 

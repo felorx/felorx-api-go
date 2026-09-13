@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTenant**](TenantAPI.md#CreateTenant) | **Post** /api/multi-tenancy/tenants |
-[**DeleteDefaultConnectionString**](TenantAPI.md#DeleteDefaultConnectionString) | **Delete** /api/multi-tenancy/tenants/{id}/default-connection-string |
-[**DeleteTenantById**](TenantAPI.md#DeleteTenantById) | **Delete** /api/multi-tenancy/tenants/{id} |
-[**GetDefaultConnectionString**](TenantAPI.md#GetDefaultConnectionString) | **Get** /api/multi-tenancy/tenants/{id}/default-connection-string |
-[**GetTenantById**](TenantAPI.md#GetTenantById) | **Get** /api/multi-tenancy/tenants/{id} |
-[**GetTenantList**](TenantAPI.md#GetTenantList) | **Get** /api/multi-tenancy/tenants |
-[**UpdateDefaultConnectionString**](TenantAPI.md#UpdateDefaultConnectionString) | **Put** /api/multi-tenancy/tenants/{id}/default-connection-string |
-[**UpdateTenant**](TenantAPI.md#UpdateTenant) | **Put** /api/multi-tenancy/tenants/{id} |
+[**CreateTenant**](TenantAPI.md#CreateTenant) | **Post** /api/multi-tenancy/tenants | 
+[**DeleteDefaultConnectionString**](TenantAPI.md#DeleteDefaultConnectionString) | **Delete** /api/multi-tenancy/tenants/{id}/default-connection-string | 
+[**DeleteTenantById**](TenantAPI.md#DeleteTenantById) | **Delete** /api/multi-tenancy/tenants/{id} | 
+[**GetDefaultConnectionString**](TenantAPI.md#GetDefaultConnectionString) | **Get** /api/multi-tenancy/tenants/{id}/default-connection-string | 
+[**GetTenantById**](TenantAPI.md#GetTenantById) | **Get** /api/multi-tenancy/tenants/{id} | 
+[**GetTenantList**](TenantAPI.md#GetTenantList) | **Get** /api/multi-tenancy/tenants | 
+[**UpdateDefaultConnectionString**](TenantAPI.md#UpdateDefaultConnectionString) | **Put** /api/multi-tenancy/tenants/{id}/default-connection-string | 
+[**UpdateTenant**](TenantAPI.md#UpdateTenant) | **Put** /api/multi-tenancy/tenants/{id} | 
 
 
 
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiCreateTenantRequest struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantCreateDto** | [**TenantCreateDto**](TenantCreateDto.md) |  |
+ **tenantCreateDto** | [**TenantCreateDto**](TenantCreateDto.md) |  | 
 
 ### Return type
 
@@ -98,7 +98,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -116,7 +116,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -164,7 +164,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -182,7 +182,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -230,7 +230,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -250,7 +250,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -298,7 +298,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -318,7 +318,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -394,10 +394,10 @@ Other parameters are passed through a pointer to a apiGetTenantListRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **filter** | **string** |  | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -436,7 +436,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	defaultConnectionString := "defaultConnectionString_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -455,7 +455,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -465,7 +465,7 @@ Other parameters are passed through a pointer to a apiUpdateDefaultConnectionStr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **defaultConnectionString** | **string** |  |
+ **defaultConnectionString** | **string** |  | 
 
 ### Return type
 
@@ -504,7 +504,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	tenantUpdateDto := *openapiclient.NewTenantUpdateDto("Name_example") // TenantUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -525,7 +525,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -535,7 +535,7 @@ Other parameters are passed through a pointer to a apiUpdateTenantRequest struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **tenantUpdateDto** | [**TenantUpdateDto**](TenantUpdateDto.md) |  |
+ **tenantUpdateDto** | [**TenantUpdateDto**](TenantUpdateDto.md) |  | 
 
 ### Return type
 

@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // MessageTemplateReleaseAPIService MessageTemplateReleaseAPI service
 type MessageTemplateReleaseAPIService service
 
 type ApiCreateMessageTemplateReleaseRequest struct {
-	ctx                             context.Context
-	ApiService                      *MessageTemplateReleaseAPIService
+	ctx context.Context
+	ApiService *MessageTemplateReleaseAPIService
 	createMessageTemplateReleaseDto *CreateMessageTemplateReleaseDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreateMessageTemplateReleaseRequest) Execute() (*MessageTemplateRelea
 /*
 CreateMessageTemplateRelease Method for CreateMessageTemplateRelease
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateMessageTemplateReleaseRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateMessageTemplateReleaseRequest
 */
 func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateRelease(ctx context.Context) ApiCreateMessageTemplateReleaseRequest {
 	return ApiCreateMessageTemplateReleaseRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return MessageTemplateReleaseDto
+//  @return MessageTemplateReleaseDto
 func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r ApiCreateMessageTemplateReleaseRequest) (*MessageTemplateReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *MessageTemplateReleaseDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *MessageTemplateReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MessageTemplateReleaseAPIService.CreateMessageTemplateRelease")
@@ -120,8 +120,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,10 +194,10 @@ func (a *MessageTemplateReleaseAPIService) CreateMessageTemplateReleaseExecute(r
 }
 
 type ApiGetByTemplateNameAndVersionRequest struct {
-	ctx          context.Context
-	ApiService   *MessageTemplateReleaseAPIService
+	ctx context.Context
+	ApiService *MessageTemplateReleaseAPIService
 	templateName *string
-	version      *int32
+	version *int32
 }
 
 func (r ApiGetByTemplateNameAndVersionRequest) TemplateName(templateName string) ApiGetByTemplateNameAndVersionRequest {
@@ -217,25 +217,24 @@ func (r ApiGetByTemplateNameAndVersionRequest) Execute() (*MessageTemplateReleas
 /*
 GetByTemplateNameAndVersion Method for GetByTemplateNameAndVersion
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetByTemplateNameAndVersionRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetByTemplateNameAndVersionRequest
 */
 func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersion(ctx context.Context) ApiGetByTemplateNameAndVersionRequest {
 	return ApiGetByTemplateNameAndVersionRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return MessageTemplateReleaseDto
+//  @return MessageTemplateReleaseDto
 func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r ApiGetByTemplateNameAndVersionRequest) (*MessageTemplateReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *MessageTemplateReleaseDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *MessageTemplateReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MessageTemplateReleaseAPIService.GetByTemplateNameAndVersion")
@@ -301,8 +300,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -312,8 +311,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -323,8 +322,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -334,8 +333,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -345,8 +344,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -356,8 +355,8 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -375,9 +374,9 @@ func (a *MessageTemplateReleaseAPIService) GetByTemplateNameAndVersionExecute(r 
 }
 
 type ApiGetMessageTemplateReleaseByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *MessageTemplateReleaseAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetMessageTemplateReleaseByIdRequest) Execute() (*MessageTemplateReleaseDto, *http.Response, error) {
@@ -387,27 +386,26 @@ func (r ApiGetMessageTemplateReleaseByIdRequest) Execute() (*MessageTemplateRele
 /*
 GetMessageTemplateReleaseById Method for GetMessageTemplateReleaseById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetMessageTemplateReleaseByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetMessageTemplateReleaseByIdRequest
 */
 func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseById(ctx context.Context, id string) ApiGetMessageTemplateReleaseByIdRequest {
 	return ApiGetMessageTemplateReleaseByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return MessageTemplateReleaseDto
+//  @return MessageTemplateReleaseDto
 func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(r ApiGetMessageTemplateReleaseByIdRequest) (*MessageTemplateReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *MessageTemplateReleaseDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *MessageTemplateReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MessageTemplateReleaseAPIService.GetMessageTemplateReleaseById")
@@ -468,8 +466,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -479,8 +477,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -490,8 +488,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -501,8 +499,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -512,8 +510,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -523,8 +521,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -542,7 +540,7 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseByIdExecute(
 }
 
 type ApiGetMessageTemplateReleaseListRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *MessageTemplateReleaseAPIService
 	templateId *string
 }
@@ -559,25 +557,24 @@ func (r ApiGetMessageTemplateReleaseListRequest) Execute() ([]MessageTemplateRel
 /*
 GetMessageTemplateReleaseList Method for GetMessageTemplateReleaseList
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetMessageTemplateReleaseListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetMessageTemplateReleaseListRequest
 */
 func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseList(ctx context.Context) ApiGetMessageTemplateReleaseListRequest {
 	return ApiGetMessageTemplateReleaseListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []MessageTemplateReleaseDto
+//  @return []MessageTemplateReleaseDto
 func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(r ApiGetMessageTemplateReleaseListRequest) ([]MessageTemplateReleaseDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []MessageTemplateReleaseDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []MessageTemplateReleaseDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MessageTemplateReleaseAPIService.GetMessageTemplateReleaseList")
@@ -640,8 +637,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -651,8 +648,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -662,8 +659,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -673,8 +670,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -684,8 +681,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -695,8 +692,8 @@ func (a *MessageTemplateReleaseAPIService) GetMessageTemplateReleaseListExecute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

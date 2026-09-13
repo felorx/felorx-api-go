@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,8 +21,8 @@ var _ MappedNullable = &CreateCreditPayPalOrderDto{}
 
 // CreateCreditPayPalOrderDto struct for CreateCreditPayPalOrderDto
 type CreateCreditPayPalOrderDto struct {
-	AppId     string         `json:"appId"`
-	PackageId string         `json:"packageId"`
+	AppId string `json:"appId"`
+	PackageId string `json:"packageId"`
 	ReturnUrl NullableString `json:"returnUrl,omitempty"`
 	CancelUrl NullableString `json:"cancelUrl,omitempty"`
 }
@@ -128,7 +128,6 @@ func (o *CreateCreditPayPalOrderDto) HasReturnUrl() bool {
 func (o *CreateCreditPayPalOrderDto) SetReturnUrl(v string) {
 	o.ReturnUrl.Set(&v)
 }
-
 // SetReturnUrlNil sets the value for ReturnUrl to be an explicit nil
 func (o *CreateCreditPayPalOrderDto) SetReturnUrlNil() {
 	o.ReturnUrl.Set(nil)
@@ -171,7 +170,6 @@ func (o *CreateCreditPayPalOrderDto) HasCancelUrl() bool {
 func (o *CreateCreditPayPalOrderDto) SetCancelUrl(v string) {
 	o.CancelUrl.Set(&v)
 }
-
 // SetCancelUrlNil sets the value for CancelUrl to be an explicit nil
 func (o *CreateCreditPayPalOrderDto) SetCancelUrlNil() {
 	o.CancelUrl.Set(nil)
@@ -183,7 +181,7 @@ func (o *CreateCreditPayPalOrderDto) UnsetCancelUrl() {
 }
 
 func (o CreateCreditPayPalOrderDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,10 +215,10 @@ func (o *CreateCreditPayPalOrderDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -276,3 +274,5 @@ func (v *NullableCreateCreditPayPalOrderDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

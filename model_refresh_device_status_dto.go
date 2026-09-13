@@ -19,8 +19,8 @@ var _ MappedNullable = &RefreshDeviceStatusDto{}
 
 // RefreshDeviceStatusDto struct for RefreshDeviceStatusDto
 type RefreshDeviceStatusDto struct {
-	Token  NullableString `json:"token,omitempty"`
-	Status *DeviceStatus  `json:"status,omitempty"`
+	Token NullableString `json:"token,omitempty"`
+	Status *DeviceStatus `json:"status,omitempty"`
 }
 
 // NewRefreshDeviceStatusDto instantiates a new RefreshDeviceStatusDto object
@@ -72,7 +72,6 @@ func (o *RefreshDeviceStatusDto) HasToken() bool {
 func (o *RefreshDeviceStatusDto) SetToken(v string) {
 	o.Token.Set(&v)
 }
-
 // SetTokenNil sets the value for Token to be an explicit nil
 func (o *RefreshDeviceStatusDto) SetTokenNil() {
 	o.Token.Set(nil)
@@ -116,7 +115,7 @@ func (o *RefreshDeviceStatusDto) SetStatus(v DeviceStatus) {
 }
 
 func (o RefreshDeviceStatusDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -169,3 +168,5 @@ func (v *NullableRefreshDeviceStatusDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

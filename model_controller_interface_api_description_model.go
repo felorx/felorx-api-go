@@ -19,8 +19,8 @@ var _ MappedNullable = &ControllerInterfaceApiDescriptionModel{}
 
 // ControllerInterfaceApiDescriptionModel struct for ControllerInterfaceApiDescriptionModel
 type ControllerInterfaceApiDescriptionModel struct {
-	Type    NullableString                       `json:"type,omitempty"`
-	Name    NullableString                       `json:"name,omitempty"`
+	Type NullableString `json:"type,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Methods []InterfaceMethodApiDescriptionModel `json:"methods,omitempty"`
 }
 
@@ -73,7 +73,6 @@ func (o *ControllerInterfaceApiDescriptionModel) HasType() bool {
 func (o *ControllerInterfaceApiDescriptionModel) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *ControllerInterfaceApiDescriptionModel) SetTypeNil() {
 	o.Type.Set(nil)
@@ -116,7 +115,6 @@ func (o *ControllerInterfaceApiDescriptionModel) HasName() bool {
 func (o *ControllerInterfaceApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *ControllerInterfaceApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -161,7 +159,7 @@ func (o *ControllerInterfaceApiDescriptionModel) SetMethods(v []InterfaceMethodA
 }
 
 func (o ControllerInterfaceApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,3 +215,5 @@ func (v *NullableControllerInterfaceApiDescriptionModel) UnmarshalJSON(src []byt
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

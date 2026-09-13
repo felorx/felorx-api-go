@@ -19,14 +19,15 @@ import (
 	"strings"
 )
 
+
 // AppTesterAPIService AppTesterAPI service
 type AppTesterAPIService service
 
 type ApiCheckIsAppTesterRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppTesterAPIService
-	appId      *string
-	userId     *string
+	appId *string
+	userId *string
 }
 
 func (r ApiCheckIsAppTesterRequest) AppId(appId string) ApiCheckIsAppTesterRequest {
@@ -46,25 +47,24 @@ func (r ApiCheckIsAppTesterRequest) Execute() (bool, *http.Response, error) {
 /*
 CheckIsAppTester 检查用户是否是内测用户
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCheckIsAppTesterRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCheckIsAppTesterRequest
 */
 func (a *AppTesterAPIService) CheckIsAppTester(ctx context.Context) ApiCheckIsAppTesterRequest {
 	return ApiCheckIsAppTesterRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return bool
+//  @return bool
 func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterRequest) (bool, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue bool
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  bool
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.CheckIsAppTester")
@@ -130,8 +130,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -141,8 +141,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -152,8 +152,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -163,8 +163,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -174,8 +174,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -185,8 +185,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -204,8 +204,8 @@ func (a *AppTesterAPIService) CheckIsAppTesterExecute(r ApiCheckIsAppTesterReque
 }
 
 type ApiCreateAppTesterRequest struct {
-	ctx                      context.Context
-	ApiService               *AppTesterAPIService
+	ctx context.Context
+	ApiService *AppTesterAPIService
 	createUpdateAppTesterDto *CreateUpdateAppTesterDto
 }
 
@@ -221,25 +221,24 @@ func (r ApiCreateAppTesterRequest) Execute() (*AppTesterDto, *http.Response, err
 /*
 CreateAppTester 创建内测用户
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreateAppTesterRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreateAppTesterRequest
 */
 func (a *AppTesterAPIService) CreateAppTester(ctx context.Context) ApiCreateAppTesterRequest {
 	return ApiCreateAppTesterRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppTesterDto
+//  @return AppTesterDto
 func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest) (*AppTesterDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppTesterDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppTesterDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.CreateAppTester")
@@ -301,8 +300,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -312,8 +311,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -323,8 +322,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -334,8 +333,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -345,8 +344,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -356,8 +355,8 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -375,9 +374,9 @@ func (a *AppTesterAPIService) CreateAppTesterExecute(r ApiCreateAppTesterRequest
 }
 
 type ApiDeleteAppTesterByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppTesterAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteAppTesterByIdRequest) Execute() (*http.Response, error) {
@@ -387,24 +386,24 @@ func (r ApiDeleteAppTesterByIdRequest) Execute() (*http.Response, error) {
 /*
 DeleteAppTesterById 删除内测用户
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteAppTesterByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteAppTesterByIdRequest
 */
 func (a *AppTesterAPIService) DeleteAppTesterById(ctx context.Context, id string) ApiDeleteAppTesterByIdRequest {
 	return ApiDeleteAppTesterByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.DeleteAppTesterById")
@@ -465,8 +464,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -476,8 +475,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -487,8 +486,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -498,8 +497,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -509,8 +508,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -520,8 +519,8 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -530,9 +529,9 @@ func (a *AppTesterAPIService) DeleteAppTesterByIdExecute(r ApiDeleteAppTesterByI
 }
 
 type ApiGetAppTesterByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AppTesterAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetAppTesterByIdRequest) Execute() (*AppTesterDto, *http.Response, error) {
@@ -542,27 +541,26 @@ func (r ApiGetAppTesterByIdRequest) Execute() (*AppTesterDto, *http.Response, er
 /*
 GetAppTesterById 获取内测用户
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetAppTesterByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetAppTesterByIdRequest
 */
 func (a *AppTesterAPIService) GetAppTesterById(ctx context.Context, id string) ApiGetAppTesterByIdRequest {
 	return ApiGetAppTesterByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppTesterDto
+//  @return AppTesterDto
 func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdRequest) (*AppTesterDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppTesterDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppTesterDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.GetAppTesterById")
@@ -623,8 +621,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -634,8 +632,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -645,8 +643,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -656,8 +654,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -667,8 +665,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -678,8 +676,8 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -697,10 +695,10 @@ func (a *AppTesterAPIService) GetAppTesterByIdExecute(r ApiGetAppTesterByIdReque
 }
 
 type ApiGetAppTesterListRequest struct {
-	ctx            context.Context
-	ApiService     *AppTesterAPIService
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *AppTesterAPIService
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -726,25 +724,24 @@ func (r ApiGetAppTesterListRequest) Execute() (*AppTesterDtoPagedResultDto, *htt
 /*
 GetAppTesterList 获取内测用户列表
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAppTesterListRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAppTesterListRequest
 */
 func (a *AppTesterAPIService) GetAppTesterList(ctx context.Context) ApiGetAppTesterListRequest {
 	return ApiGetAppTesterListRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppTesterDtoPagedResultDto
+//  @return AppTesterDtoPagedResultDto
 func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListRequest) (*AppTesterDtoPagedResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppTesterDtoPagedResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppTesterDtoPagedResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.GetAppTesterList")
@@ -813,8 +810,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -824,8 +821,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -835,8 +832,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -846,8 +843,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -857,8 +854,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -868,8 +865,8 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -887,9 +884,9 @@ func (a *AppTesterAPIService) GetAppTesterListExecute(r ApiGetAppTesterListReque
 }
 
 type ApiUpdateAppTesterRequest struct {
-	ctx                      context.Context
-	ApiService               *AppTesterAPIService
-	id                       string
+	ctx context.Context
+	ApiService *AppTesterAPIService
+	id string
 	createUpdateAppTesterDto *CreateUpdateAppTesterDto
 }
 
@@ -905,27 +902,26 @@ func (r ApiUpdateAppTesterRequest) Execute() (*AppTesterDto, *http.Response, err
 /*
 UpdateAppTester 更新内测用户
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdateAppTesterRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdateAppTesterRequest
 */
 func (a *AppTesterAPIService) UpdateAppTester(ctx context.Context, id string) ApiUpdateAppTesterRequest {
 	return ApiUpdateAppTesterRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppTesterDto
+//  @return AppTesterDto
 func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest) (*AppTesterDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppTesterDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppTesterDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AppTesterAPIService.UpdateAppTester")
@@ -988,8 +984,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -999,8 +995,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1010,8 +1006,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1021,8 +1017,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1032,8 +1028,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1043,8 +1039,8 @@ func (a *AppTesterAPIService) UpdateAppTesterExecute(r ApiUpdateAppTesterRequest
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

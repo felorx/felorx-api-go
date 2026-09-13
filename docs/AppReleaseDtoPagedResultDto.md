@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]AppReleaseDto**](AppReleaseDto.md) |  | [optional]
-**TotalCount** | Pointer to **int64** |  | [optional]
+**Items** | Pointer to [**[]AppReleaseDto**](AppReleaseDto.md) |  | [optional] 
+**TotalCount** | Pointer to **int64** |  | [optional] 
 
 ## Methods
 

@@ -20,19 +20,19 @@ var _ MappedNullable = &AppWithUserDto{}
 
 // AppWithUserDto struct for AppWithUserDto
 type AppWithUserDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	Name                 NullableString `json:"name,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	// 根据 Accept-Language 解析的展示标题（非持久化字段，来自语言包）。
 	DisplayName NullableString `json:"displayName,omitempty"`
-	Framework   *AppFramework  `json:"framework,omitempty"`
-	AppType     *AppType       `json:"appType,omitempty"`
+	Framework *AppFramework `json:"framework,omitempty"`
+	AppType *AppType `json:"appType,omitempty"`
 	// 根据 Accept-Language 解析的短描述（非持久化字段）。
 	Description NullableString `json:"description,omitempty"`
 	// 根据 Accept-Language 解析的图标存储键或 URL（非持久化字段）。
@@ -40,10 +40,10 @@ type AppWithUserDto struct {
 	// 产品首页
 	HomePage NullableString `json:"homePage,omitempty"`
 	// 显示排序
-	SortIndex         *int32             `json:"sortIndex,omitempty"`
-	GitRepository     NullableString     `json:"gitRepository,omitempty"`
+	SortIndex *int32 `json:"sortIndex,omitempty"`
+	GitRepository NullableString `json:"gitRepository,omitempty"`
 	GitRepositoryType *GitRepositoryType `json:"gitRepositoryType,omitempty"`
-	IsEnabled         *bool              `json:"isEnabled,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
 	// 是否已经发布, 决定了是否给终端用户看见, 主要有一些 APP 自己使用
 	IsPublished *bool `json:"isPublished,omitempty"`
 	// Webhook Url 各种事件回调地址
@@ -61,9 +61,9 @@ type AppWithUserDto struct {
 	// 默认存储空间大小
 	DefaultStorageSize *int64 `json:"defaultStorageSize,omitempty"`
 	// 默认单文件最大大小
-	DefaultSingleFileMaxSize *int64           `json:"defaultSingleFileMaxSize,omitempty"`
-	LatestReleases           []AppReleaseDto  `json:"latestReleases,omitempty"`
-	Creator                  *IdentityUserDto `json:"creator,omitempty"`
+	DefaultSingleFileMaxSize *int64 `json:"defaultSingleFileMaxSize,omitempty"`
+	LatestReleases []AppReleaseDto `json:"latestReleases,omitempty"`
+	Creator *IdentityUserDto `json:"creator,omitempty"`
 	// 是否已经订阅
 	Subscribed *bool `json:"subscribed,omitempty"`
 }
@@ -181,7 +181,6 @@ func (o *AppWithUserDto) HasCreatorId() bool {
 func (o *AppWithUserDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppWithUserDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -224,7 +223,6 @@ func (o *AppWithUserDto) HasLastModificationTime() bool {
 func (o *AppWithUserDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppWithUserDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -267,7 +265,6 @@ func (o *AppWithUserDto) HasLastModifierId() bool {
 func (o *AppWithUserDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppWithUserDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -342,7 +339,6 @@ func (o *AppWithUserDto) HasDeleterId() bool {
 func (o *AppWithUserDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppWithUserDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -385,7 +381,6 @@ func (o *AppWithUserDto) HasDeletionTime() bool {
 func (o *AppWithUserDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppWithUserDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -428,7 +423,6 @@ func (o *AppWithUserDto) HasName() bool {
 func (o *AppWithUserDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AppWithUserDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -471,7 +465,6 @@ func (o *AppWithUserDto) HasDisplayName() bool {
 func (o *AppWithUserDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AppWithUserDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -578,7 +571,6 @@ func (o *AppWithUserDto) HasDescription() bool {
 func (o *AppWithUserDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppWithUserDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -621,7 +613,6 @@ func (o *AppWithUserDto) HasIcon() bool {
 func (o *AppWithUserDto) SetIcon(v string) {
 	o.Icon.Set(&v)
 }
-
 // SetIconNil sets the value for Icon to be an explicit nil
 func (o *AppWithUserDto) SetIconNil() {
 	o.Icon.Set(nil)
@@ -664,7 +655,6 @@ func (o *AppWithUserDto) HasHomePage() bool {
 func (o *AppWithUserDto) SetHomePage(v string) {
 	o.HomePage.Set(&v)
 }
-
 // SetHomePageNil sets the value for HomePage to be an explicit nil
 func (o *AppWithUserDto) SetHomePageNil() {
 	o.HomePage.Set(nil)
@@ -739,7 +729,6 @@ func (o *AppWithUserDto) HasGitRepository() bool {
 func (o *AppWithUserDto) SetGitRepository(v string) {
 	o.GitRepository.Set(&v)
 }
-
 // SetGitRepositoryNil sets the value for GitRepository to be an explicit nil
 func (o *AppWithUserDto) SetGitRepositoryNil() {
 	o.GitRepository.Set(nil)
@@ -878,7 +867,6 @@ func (o *AppWithUserDto) HasWebhookUrl() bool {
 func (o *AppWithUserDto) SetWebhookUrl(v string) {
 	o.WebhookUrl.Set(&v)
 }
-
 // SetWebhookUrlNil sets the value for WebhookUrl to be an explicit nil
 func (o *AppWithUserDto) SetWebhookUrlNil() {
 	o.WebhookUrl.Set(nil)
@@ -921,7 +909,6 @@ func (o *AppWithUserDto) HasBusinessDomain() bool {
 func (o *AppWithUserDto) SetBusinessDomain(v string) {
 	o.BusinessDomain.Set(&v)
 }
-
 // SetBusinessDomainNil sets the value for BusinessDomain to be an explicit nil
 func (o *AppWithUserDto) SetBusinessDomainNil() {
 	o.BusinessDomain.Set(nil)
@@ -964,7 +951,6 @@ func (o *AppWithUserDto) HasBusinessUrl() bool {
 func (o *AppWithUserDto) SetBusinessUrl(v string) {
 	o.BusinessUrl.Set(&v)
 }
-
 // SetBusinessUrlNil sets the value for BusinessUrl to be an explicit nil
 func (o *AppWithUserDto) SetBusinessUrlNil() {
 	o.BusinessUrl.Set(nil)
@@ -1007,7 +993,6 @@ func (o *AppWithUserDto) HasSubscriptionPlatforms() bool {
 func (o *AppWithUserDto) SetSubscriptionPlatforms(v string) {
 	o.SubscriptionPlatforms.Set(&v)
 }
-
 // SetSubscriptionPlatformsNil sets the value for SubscriptionPlatforms to be an explicit nil
 func (o *AppWithUserDto) SetSubscriptionPlatformsNil() {
 	o.SubscriptionPlatforms.Set(nil)
@@ -1050,7 +1035,6 @@ func (o *AppWithUserDto) HasFreePlatforms() bool {
 func (o *AppWithUserDto) SetFreePlatforms(v string) {
 	o.FreePlatforms.Set(&v)
 }
-
 // SetFreePlatformsNil sets the value for FreePlatforms to be an explicit nil
 func (o *AppWithUserDto) SetFreePlatformsNil() {
 	o.FreePlatforms.Set(nil)
@@ -1093,7 +1077,6 @@ func (o *AppWithUserDto) HasSpecJsonSchema() bool {
 func (o *AppWithUserDto) SetSpecJsonSchema(v string) {
 	o.SpecJsonSchema.Set(&v)
 }
-
 // SetSpecJsonSchemaNil sets the value for SpecJsonSchema to be an explicit nil
 func (o *AppWithUserDto) SetSpecJsonSchemaNil() {
 	o.SpecJsonSchema.Set(nil)
@@ -1266,7 +1249,7 @@ func (o *AppWithUserDto) SetSubscribed(v bool) {
 }
 
 func (o AppWithUserDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1406,3 +1389,5 @@ func (v *NullableAppWithUserDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

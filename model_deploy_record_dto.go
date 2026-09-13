@@ -20,14 +20,14 @@ var _ MappedNullable = &DeployRecordDto{}
 
 // DeployRecordDto 部署记录DTO
 type DeployRecordDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 应用ID
 	AppId *string `json:"appId,omitempty"`
 	// 应用名称
@@ -37,11 +37,11 @@ type DeployRecordDto struct {
 	// 构建记录版本
 	BuildRecordVersion NullableString `json:"buildRecordVersion,omitempty"`
 	// 版本号
-	Version  NullableString `json:"version,omitempty"`
-	Platform *AppPlatform   `json:"platform,omitempty"`
+	Version NullableString `json:"version,omitempty"`
+	Platform *AppPlatform `json:"platform,omitempty"`
 	// 部署环境
 	Environment NullableString `json:"environment,omitempty"`
-	Status      *DeployStatus  `json:"status,omitempty"`
+	Status *DeployStatus `json:"status,omitempty"`
 	// 开始时间
 	StartedAt *time.Time `json:"startedAt,omitempty"`
 	// 结束时间
@@ -177,7 +177,6 @@ func (o *DeployRecordDto) HasCreatorId() bool {
 func (o *DeployRecordDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *DeployRecordDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -220,7 +219,6 @@ func (o *DeployRecordDto) HasLastModificationTime() bool {
 func (o *DeployRecordDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *DeployRecordDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -263,7 +261,6 @@ func (o *DeployRecordDto) HasLastModifierId() bool {
 func (o *DeployRecordDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *DeployRecordDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -338,7 +335,6 @@ func (o *DeployRecordDto) HasDeleterId() bool {
 func (o *DeployRecordDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *DeployRecordDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -381,7 +377,6 @@ func (o *DeployRecordDto) HasDeletionTime() bool {
 func (o *DeployRecordDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *DeployRecordDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -456,7 +451,6 @@ func (o *DeployRecordDto) HasAppName() bool {
 func (o *DeployRecordDto) SetAppName(v string) {
 	o.AppName.Set(&v)
 }
-
 // SetAppNameNil sets the value for AppName to be an explicit nil
 func (o *DeployRecordDto) SetAppNameNil() {
 	o.AppName.Set(nil)
@@ -531,7 +525,6 @@ func (o *DeployRecordDto) HasBuildRecordVersion() bool {
 func (o *DeployRecordDto) SetBuildRecordVersion(v string) {
 	o.BuildRecordVersion.Set(&v)
 }
-
 // SetBuildRecordVersionNil sets the value for BuildRecordVersion to be an explicit nil
 func (o *DeployRecordDto) SetBuildRecordVersionNil() {
 	o.BuildRecordVersion.Set(nil)
@@ -574,7 +567,6 @@ func (o *DeployRecordDto) HasVersion() bool {
 func (o *DeployRecordDto) SetVersion(v string) {
 	o.Version.Set(&v)
 }
-
 // SetVersionNil sets the value for Version to be an explicit nil
 func (o *DeployRecordDto) SetVersionNil() {
 	o.Version.Set(nil)
@@ -649,7 +641,6 @@ func (o *DeployRecordDto) HasEnvironment() bool {
 func (o *DeployRecordDto) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *DeployRecordDto) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -756,7 +747,6 @@ func (o *DeployRecordDto) HasCompletedAt() bool {
 func (o *DeployRecordDto) SetCompletedAt(v time.Time) {
 	o.CompletedAt.Set(&v)
 }
-
 // SetCompletedAtNil sets the value for CompletedAt to be an explicit nil
 func (o *DeployRecordDto) SetCompletedAtNil() {
 	o.CompletedAt.Set(nil)
@@ -799,7 +789,6 @@ func (o *DeployRecordDto) HasErrorMessage() bool {
 func (o *DeployRecordDto) SetErrorMessage(v string) {
 	o.ErrorMessage.Set(&v)
 }
-
 // SetErrorMessageNil sets the value for ErrorMessage to be an explicit nil
 func (o *DeployRecordDto) SetErrorMessageNil() {
 	o.ErrorMessage.Set(nil)
@@ -842,7 +831,6 @@ func (o *DeployRecordDto) HasDeployUrl() bool {
 func (o *DeployRecordDto) SetDeployUrl(v string) {
 	o.DeployUrl.Set(&v)
 }
-
 // SetDeployUrlNil sets the value for DeployUrl to be an explicit nil
 func (o *DeployRecordDto) SetDeployUrlNil() {
 	o.DeployUrl.Set(nil)
@@ -885,7 +873,6 @@ func (o *DeployRecordDto) HasDeployTarget() bool {
 func (o *DeployRecordDto) SetDeployTarget(v string) {
 	o.DeployTarget.Set(&v)
 }
-
 // SetDeployTargetNil sets the value for DeployTarget to be an explicit nil
 func (o *DeployRecordDto) SetDeployTargetNil() {
 	o.DeployTarget.Set(nil)
@@ -928,7 +915,6 @@ func (o *DeployRecordDto) HasDeployChannel() bool {
 func (o *DeployRecordDto) SetDeployChannel(v string) {
 	o.DeployChannel.Set(&v)
 }
-
 // SetDeployChannelNil sets the value for DeployChannel to be an explicit nil
 func (o *DeployRecordDto) SetDeployChannelNil() {
 	o.DeployChannel.Set(nil)
@@ -971,7 +957,6 @@ func (o *DeployRecordDto) HasCiSystem() bool {
 func (o *DeployRecordDto) SetCiSystem(v string) {
 	o.CiSystem.Set(&v)
 }
-
 // SetCiSystemNil sets the value for CiSystem to be an explicit nil
 func (o *DeployRecordDto) SetCiSystemNil() {
 	o.CiSystem.Set(nil)
@@ -1014,7 +999,6 @@ func (o *DeployRecordDto) HasCiDeployId() bool {
 func (o *DeployRecordDto) SetCiDeployId(v string) {
 	o.CiDeployId.Set(&v)
 }
-
 // SetCiDeployIdNil sets the value for CiDeployId to be an explicit nil
 func (o *DeployRecordDto) SetCiDeployIdNil() {
 	o.CiDeployId.Set(nil)
@@ -1057,7 +1041,6 @@ func (o *DeployRecordDto) HasCiDeployUrl() bool {
 func (o *DeployRecordDto) SetCiDeployUrl(v string) {
 	o.CiDeployUrl.Set(&v)
 }
-
 // SetCiDeployUrlNil sets the value for CiDeployUrl to be an explicit nil
 func (o *DeployRecordDto) SetCiDeployUrlNil() {
 	o.CiDeployUrl.Set(nil)
@@ -1100,7 +1083,6 @@ func (o *DeployRecordDto) HasDuration() bool {
 func (o *DeployRecordDto) SetDuration(v int32) {
 	o.Duration.Set(&v)
 }
-
 // SetDurationNil sets the value for Duration to be an explicit nil
 func (o *DeployRecordDto) SetDurationNil() {
 	o.Duration.Set(nil)
@@ -1112,7 +1094,7 @@ func (o *DeployRecordDto) UnsetDuration() {
 }
 
 func (o DeployRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1237,3 +1219,5 @@ func (v *NullableDeployRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

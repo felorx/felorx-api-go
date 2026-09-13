@@ -20,11 +20,11 @@ type SubscriptionEntitlementStatus string
 
 // List of SubscriptionEntitlementStatus
 const (
-	SUBSCRIPTIONENTITLEMENTSTATUS_INACTIVE     SubscriptionEntitlementStatus = "Inactive"
-	SUBSCRIPTIONENTITLEMENTSTATUS_ACTIVE       SubscriptionEntitlementStatus = "Active"
+	SUBSCRIPTIONENTITLEMENTSTATUS_INACTIVE SubscriptionEntitlementStatus = "Inactive"
+	SUBSCRIPTIONENTITLEMENTSTATUS_ACTIVE SubscriptionEntitlementStatus = "Active"
 	SUBSCRIPTIONENTITLEMENTSTATUS_GRACE_PERIOD SubscriptionEntitlementStatus = "GracePeriod"
-	SUBSCRIPTIONENTITLEMENTSTATUS_EXPIRED      SubscriptionEntitlementStatus = "Expired"
-	SUBSCRIPTIONENTITLEMENTSTATUS_REVOKED      SubscriptionEntitlementStatus = "Revoked"
+	SUBSCRIPTIONENTITLEMENTSTATUS_EXPIRED SubscriptionEntitlementStatus = "Expired"
+	SUBSCRIPTIONENTITLEMENTSTATUS_REVOKED SubscriptionEntitlementStatus = "Revoked"
 )
 
 // All allowed values of SubscriptionEntitlementStatus enum
@@ -114,3 +114,4 @@ func (v *NullableSubscriptionEntitlementStatus) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

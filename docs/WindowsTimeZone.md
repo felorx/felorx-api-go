@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TimeZoneId** | Pointer to **NullableString** |  | [optional]
+**TimeZoneId** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

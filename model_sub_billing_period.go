@@ -20,11 +20,11 @@ type SubBillingPeriod string
 
 // List of SubBillingPeriod
 const (
-	SUBBILLINGPERIOD_UNKNOWN     SubBillingPeriod = "Unknown"
-	SUBBILLINGPERIOD_MONTH       SubBillingPeriod = "Month"
-	SUBBILLINGPERIOD_YEAR        SubBillingPeriod = "Year"
+	SUBBILLINGPERIOD_UNKNOWN SubBillingPeriod = "Unknown"
+	SUBBILLINGPERIOD_MONTH SubBillingPeriod = "Month"
+	SUBBILLINGPERIOD_YEAR SubBillingPeriod = "Year"
 	SUBBILLINGPERIOD_THREE_YEARS SubBillingPeriod = "ThreeYears"
-	SUBBILLINGPERIOD_LIFETIME    SubBillingPeriod = "Lifetime"
+	SUBBILLINGPERIOD_LIFETIME SubBillingPeriod = "Lifetime"
 )
 
 // All allowed values of SubBillingPeriod enum
@@ -114,3 +114,4 @@ func (v *NullableSubBillingPeriod) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

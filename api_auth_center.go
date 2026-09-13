@@ -19,11 +19,12 @@ import (
 	"strings"
 )
 
+
 // AuthCenterAPIService AuthCenterAPI service
 type AuthCenterAPIService service
 
 type ApiGetAuthorizedAppsRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AuthCenterAPIService
 }
 
@@ -34,25 +35,24 @@ func (r ApiGetAuthorizedAppsRequest) Execute() ([]AuthorizedAppDto, *http.Respon
 /*
 GetAuthorizedApps Method for GetAuthorizedApps
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAuthorizedAppsRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAuthorizedAppsRequest
 */
 func (a *AuthCenterAPIService) GetAuthorizedApps(ctx context.Context) ApiGetAuthorizedAppsRequest {
 	return ApiGetAuthorizedAppsRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []AuthorizedAppDto
+//  @return []AuthorizedAppDto
 func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRequest) ([]AuthorizedAppDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []AuthorizedAppDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []AuthorizedAppDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.GetAuthorizedApps")
@@ -112,8 +112,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -123,8 +123,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -134,8 +134,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -145,8 +145,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -156,8 +156,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -167,8 +167,8 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -185,40 +185,39 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiGetSummaryRequest struct {
-	ctx        context.Context
+type ApiGetSummaryGetApiAppAuthCenterSummaryRequest struct {
+	ctx context.Context
 	ApiService *AuthCenterAPIService
 }
 
-func (r ApiGetSummaryRequest) Execute() (*AuthCenterSummaryDto, *http.Response, error) {
-	return r.ApiService.GetSummaryExecute(r)
+func (r ApiGetSummaryGetApiAppAuthCenterSummaryRequest) Execute() (*AuthCenterSummaryDto, *http.Response, error) {
+	return r.ApiService.GetSummaryGetApiAppAuthCenterSummaryExecute(r)
 }
 
 /*
-GetSummary Method for GetSummary
+GetSummaryGetApiAppAuthCenterSummary Method for GetSummaryGetApiAppAuthCenterSummary
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSummaryRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetSummaryGetApiAppAuthCenterSummaryRequest
 */
-func (a *AuthCenterAPIService) GetSummary(ctx context.Context) ApiGetSummaryRequest {
-	return ApiGetSummaryRequest{
+func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummary(ctx context.Context) ApiGetSummaryGetApiAppAuthCenterSummaryRequest {
+	return ApiGetSummaryGetApiAppAuthCenterSummaryRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AuthCenterSummaryDto
-func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthCenterSummaryDto, *http.Response, error) {
+//  @return AuthCenterSummaryDto
+func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummaryExecute(r ApiGetSummaryGetApiAppAuthCenterSummaryRequest) (*AuthCenterSummaryDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AuthCenterSummaryDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AuthCenterSummaryDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.GetSummary")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.GetSummaryGetApiAppAuthCenterSummary")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -275,8 +274,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -286,8 +285,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -297,8 +296,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -308,8 +307,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -319,8 +318,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -330,8 +329,8 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -349,9 +348,9 @@ func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthC
 }
 
 type ApiRevokeAuthorizedAppRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *AuthCenterAPIService
-	clientId   string
+	clientId string
 }
 
 func (r ApiRevokeAuthorizedAppRequest) Execute() (*http.Response, error) {
@@ -361,24 +360,24 @@ func (r ApiRevokeAuthorizedAppRequest) Execute() (*http.Response, error) {
 /*
 RevokeAuthorizedApp Method for RevokeAuthorizedApp
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param clientId
-	@return ApiRevokeAuthorizedAppRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param clientId
+ @return ApiRevokeAuthorizedAppRequest
 */
 func (a *AuthCenterAPIService) RevokeAuthorizedApp(ctx context.Context, clientId string) ApiRevokeAuthorizedAppRequest {
 	return ApiRevokeAuthorizedAppRequest{
 		ApiService: a,
-		ctx:        ctx,
-		clientId:   clientId,
+		ctx: ctx,
+		clientId: clientId,
 	}
 }
 
 // Execute executes the request
 func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedAppRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.RevokeAuthorizedApp")
@@ -439,8 +438,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -450,8 +449,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -461,8 +460,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -472,8 +471,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -483,8 +482,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -494,8 +493,8 @@ func (a *AuthCenterAPIService) RevokeAuthorizedAppExecute(r ApiRevokeAuthorizedA
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

@@ -20,7 +20,7 @@ var _ MappedNullable = &ProviderInfoDto{}
 // ProviderInfoDto struct for ProviderInfoDto
 type ProviderInfoDto struct {
 	ProviderName NullableString `json:"providerName,omitempty"`
-	ProviderKey  NullableString `json:"providerKey,omitempty"`
+	ProviderKey NullableString `json:"providerKey,omitempty"`
 }
 
 // NewProviderInfoDto instantiates a new ProviderInfoDto object
@@ -72,7 +72,6 @@ func (o *ProviderInfoDto) HasProviderName() bool {
 func (o *ProviderInfoDto) SetProviderName(v string) {
 	o.ProviderName.Set(&v)
 }
-
 // SetProviderNameNil sets the value for ProviderName to be an explicit nil
 func (o *ProviderInfoDto) SetProviderNameNil() {
 	o.ProviderName.Set(nil)
@@ -115,7 +114,6 @@ func (o *ProviderInfoDto) HasProviderKey() bool {
 func (o *ProviderInfoDto) SetProviderKey(v string) {
 	o.ProviderKey.Set(&v)
 }
-
 // SetProviderKeyNil sets the value for ProviderKey to be an explicit nil
 func (o *ProviderInfoDto) SetProviderKeyNil() {
 	o.ProviderKey.Set(nil)
@@ -127,7 +125,7 @@ func (o *ProviderInfoDto) UnsetProviderKey() {
 }
 
 func (o ProviderInfoDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -180,3 +178,5 @@ func (v *NullableProviderInfoDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

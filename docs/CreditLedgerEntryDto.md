@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**Amount** | Pointer to **int32** |  | [optional]
-**BalanceAfter** | Pointer to **int32** |  | [optional]
-**Type** | Pointer to **NullableString** |  | [optional]
-**ReferenceId** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**Amount** | Pointer to **int32** |  | [optional] 
+**BalanceAfter** | Pointer to **int32** |  | [optional] 
+**Type** | Pointer to **NullableString** |  | [optional] 
+**ReferenceId** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **NullableString** |  | [optional]
-**TypeSimple** | Pointer to **NullableString** |  | [optional]
+**Type** | Pointer to **NullableString** |  | [optional] 
+**TypeSimple** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

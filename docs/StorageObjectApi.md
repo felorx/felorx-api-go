@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetCdnDomains**](StorageObjectAPI.md#GetCdnDomains) | **Get** /api/app/storage-object/cdn-domains | 获取所有 CDN Domain 配置
-[**GetFileCredential**](StorageObjectAPI.md#GetFileCredential) | **Get** /api/app/storage-object/file-credential |
-[**GetUserStorages**](StorageObjectAPI.md#GetUserStorages) | **Get** /api/app/storage-object/user-storages |
-[**PreSignUrl**](StorageObjectAPI.md#PreSignUrl) | **Post** /api/app/storage-object/pre-sign-url |
+[**GetFileCredential**](StorageObjectAPI.md#GetFileCredential) | **Get** /api/app/storage-object/file-credential | 
+[**GetUserStorages**](StorageObjectAPI.md#GetUserStorages) | **Get** /api/app/storage-object/user-storages | 
+[**PreSignUrl**](StorageObjectAPI.md#PreSignUrl) | **Post** /api/app/storage-object/pre-sign-url | 
 
 
 
@@ -117,10 +117,10 @@ Other parameters are passed through a pointer to a apiGetFileCredentialRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userTotalSize** | **int64** |  |
- **rapidCode** | **string** |  |
- **usage** | **string** |  |
- **key** | **string** |  |
+ **userTotalSize** | **int64** |  | 
+ **rapidCode** | **string** |  | 
+ **usage** | **string** |  | 
+ **key** | **string** |  | 
 
 ### Return type
 
@@ -244,8 +244,8 @@ Other parameters are passed through a pointer to a apiPreSignUrlRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bucket** | **string** |  |
- **key** | **string** |  |
+ **bucket** | **string** |  | 
+ **key** | **string** |  | 
 
 ### Return type
 

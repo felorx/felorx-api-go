@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FelorxId** | Pointer to **string** |  | [optional]
+**FelorxId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 

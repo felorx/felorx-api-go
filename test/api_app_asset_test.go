@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AppAssetAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AppAssetAPIService(t *testing.T) {
 
 	t.Run("Test AppAssetAPIService CreateAppAsset", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAssetAPI.CreateAppAsset(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_AppAssetAPIService(t *testing.T) {
 
 	t.Run("Test AppAssetAPIService DeleteAppAssetById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_AppAssetAPIService(t *testing.T) {
 
 	t.Run("Test AppAssetAPIService GetListByAppLocaleId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appLocaleId string
 
@@ -63,7 +63,7 @@ func Test_felorx_AppAssetAPIService(t *testing.T) {
 
 	t.Run("Test AppAssetAPIService UpdateAppAsset", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

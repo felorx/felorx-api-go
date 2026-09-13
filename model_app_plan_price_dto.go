@@ -20,28 +20,28 @@ var _ MappedNullable = &AppPlanPriceDto{}
 
 // AppPlanPriceDto struct for AppPlanPriceDto
 type AppPlanPriceDto struct {
-	Id                   *string           `json:"id,omitempty"`
-	CreationTime         *time.Time        `json:"creationTime,omitempty"`
-	CreatorId            NullableString    `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime      `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString    `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool             `json:"isDeleted,omitempty"`
-	DeleterId            NullableString    `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime      `json:"deletionTime,omitempty"`
-	AppId                *string           `json:"appId,omitempty"`
-	PricingId            *string           `json:"pricingId,omitempty"`
-	Period               *SubBillingPeriod `json:"period,omitempty"`
-	Mode                 *BillingMode      `json:"mode,omitempty"`
-	Market               *BillingMarket    `json:"market,omitempty"`
-	Currency             NullableString    `json:"currency,omitempty"`
-	Amount               *float64          `json:"amount,omitempty"`
-	DiscountAmount       NullableFloat64   `json:"discountAmount,omitempty"`
-	EffectiveAmount      *float64          `json:"effectiveAmount,omitempty"`
-	DurationDays         NullableInt32     `json:"durationDays,omitempty"`
-	IsEnabled            *bool             `json:"isEnabled,omitempty"`
-	SortIndex            *int32            `json:"sortIndex,omitempty"`
-	DisplayName          NullableString    `json:"displayName,omitempty"`
-	Description          NullableString    `json:"description,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	Period *SubBillingPeriod `json:"period,omitempty"`
+	Mode *BillingMode `json:"mode,omitempty"`
+	Market *BillingMarket `json:"market,omitempty"`
+	Currency NullableString `json:"currency,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	DiscountAmount NullableFloat64 `json:"discountAmount,omitempty"`
+	EffectiveAmount *float64 `json:"effectiveAmount,omitempty"`
+	DurationDays NullableInt32 `json:"durationDays,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
+	SortIndex *int32 `json:"sortIndex,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	Description NullableString `json:"description,omitempty"`
 }
 
 // NewAppPlanPriceDto instantiates a new AppPlanPriceDto object
@@ -157,7 +157,6 @@ func (o *AppPlanPriceDto) HasCreatorId() bool {
 func (o *AppPlanPriceDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppPlanPriceDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -200,7 +199,6 @@ func (o *AppPlanPriceDto) HasLastModificationTime() bool {
 func (o *AppPlanPriceDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppPlanPriceDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -243,7 +241,6 @@ func (o *AppPlanPriceDto) HasLastModifierId() bool {
 func (o *AppPlanPriceDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppPlanPriceDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -318,7 +315,6 @@ func (o *AppPlanPriceDto) HasDeleterId() bool {
 func (o *AppPlanPriceDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppPlanPriceDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -361,7 +357,6 @@ func (o *AppPlanPriceDto) HasDeletionTime() bool {
 func (o *AppPlanPriceDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppPlanPriceDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -564,7 +559,6 @@ func (o *AppPlanPriceDto) HasCurrency() bool {
 func (o *AppPlanPriceDto) SetCurrency(v string) {
 	o.Currency.Set(&v)
 }
-
 // SetCurrencyNil sets the value for Currency to be an explicit nil
 func (o *AppPlanPriceDto) SetCurrencyNil() {
 	o.Currency.Set(nil)
@@ -639,7 +633,6 @@ func (o *AppPlanPriceDto) HasDiscountAmount() bool {
 func (o *AppPlanPriceDto) SetDiscountAmount(v float64) {
 	o.DiscountAmount.Set(&v)
 }
-
 // SetDiscountAmountNil sets the value for DiscountAmount to be an explicit nil
 func (o *AppPlanPriceDto) SetDiscountAmountNil() {
 	o.DiscountAmount.Set(nil)
@@ -714,7 +707,6 @@ func (o *AppPlanPriceDto) HasDurationDays() bool {
 func (o *AppPlanPriceDto) SetDurationDays(v int32) {
 	o.DurationDays.Set(&v)
 }
-
 // SetDurationDaysNil sets the value for DurationDays to be an explicit nil
 func (o *AppPlanPriceDto) SetDurationDaysNil() {
 	o.DurationDays.Set(nil)
@@ -821,7 +813,6 @@ func (o *AppPlanPriceDto) HasDisplayName() bool {
 func (o *AppPlanPriceDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *AppPlanPriceDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -864,7 +855,6 @@ func (o *AppPlanPriceDto) HasDescription() bool {
 func (o *AppPlanPriceDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppPlanPriceDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -876,7 +866,7 @@ func (o *AppPlanPriceDto) UnsetDescription() {
 }
 
 func (o AppPlanPriceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -989,3 +979,5 @@ func (v *NullableAppPlanPriceDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

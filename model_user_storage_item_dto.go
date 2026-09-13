@@ -19,10 +19,10 @@ var _ MappedNullable = &UserStorageItemDto{}
 
 // UserStorageItemDto struct for UserStorageItemDto
 type UserStorageItemDto struct {
-	Name  NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Title NullableString `json:"title,omitempty"`
-	Count *int32         `json:"count,omitempty"`
-	Size  *int64         `json:"size,omitempty"`
+	Count *int32 `json:"count,omitempty"`
+	Size *int64 `json:"size,omitempty"`
 }
 
 // NewUserStorageItemDto instantiates a new UserStorageItemDto object
@@ -74,7 +74,6 @@ func (o *UserStorageItemDto) HasName() bool {
 func (o *UserStorageItemDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *UserStorageItemDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -117,7 +116,6 @@ func (o *UserStorageItemDto) HasTitle() bool {
 func (o *UserStorageItemDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *UserStorageItemDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -193,7 +191,7 @@ func (o *UserStorageItemDto) SetSize(v int64) {
 }
 
 func (o UserStorageItemDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -252,3 +250,5 @@ func (v *NullableUserStorageItemDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

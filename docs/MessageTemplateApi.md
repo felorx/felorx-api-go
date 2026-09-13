@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageTemplate**](MessageTemplateAPI.md#CreateMessageTemplate) | **Post** /api/app/message-template |
-[**DeleteMessageTemplateById**](MessageTemplateAPI.md#DeleteMessageTemplateById) | **Delete** /api/app/message-template/{id} |
-[**GetMessageTemplateById**](MessageTemplateAPI.md#GetMessageTemplateById) | **Get** /api/app/message-template/{id} |
-[**GetMessageTemplateList**](MessageTemplateAPI.md#GetMessageTemplateList) | **Get** /api/app/message-template |
-[**UpdateMessageTemplate**](MessageTemplateAPI.md#UpdateMessageTemplate) | **Put** /api/app/message-template/{id} |
+[**CreateMessageTemplate**](MessageTemplateAPI.md#CreateMessageTemplate) | **Post** /api/app/message-template | 
+[**DeleteMessageTemplateById**](MessageTemplateAPI.md#DeleteMessageTemplateById) | **Delete** /api/app/message-template/{id} | 
+[**GetMessageTemplateById**](MessageTemplateAPI.md#GetMessageTemplateById) | **Get** /api/app/message-template/{id} | 
+[**GetMessageTemplateList**](MessageTemplateAPI.md#GetMessageTemplateList) | **Get** /api/app/message-template | 
+[**UpdateMessageTemplate**](MessageTemplateAPI.md#UpdateMessageTemplate) | **Put** /api/app/message-template/{id} | 
 
 
 
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateMessageTemplateReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  |
+ **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
 
 ### Return type
 
@@ -95,7 +95,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +113,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -161,7 +161,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -288,7 +288,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateMessageTemplateDto := *openapiclient.NewCreateOrUpdateMessageTemplateDto() // CreateOrUpdateMessageTemplateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -309,7 +309,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -319,7 +319,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageTemplateReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  |
+ **createOrUpdateMessageTemplateDto** | [**CreateOrUpdateMessageTemplateDto**](CreateOrUpdateMessageTemplateDto.md) |  | 
 
 ### Return type
 

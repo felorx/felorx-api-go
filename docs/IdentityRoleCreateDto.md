@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly]
-**Name** | **string** |  |
-**IsDefault** | Pointer to **bool** |  | [optional]
-**IsPublic** | Pointer to **bool** |  | [optional]
+**ExtraProperties** | Pointer to **map[string]interface{}** |  | [optional] [readonly] 
+**Name** | **string** |  | 
+**IsDefault** | Pointer to **bool** |  | [optional] 
+**IsPublic** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

@@ -19,9 +19,9 @@ var _ MappedNullable = &InterfaceMethodApiDescriptionModel{}
 
 // InterfaceMethodApiDescriptionModel struct for InterfaceMethodApiDescriptionModel
 type InterfaceMethodApiDescriptionModel struct {
-	Name               NullableString                       `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	ParametersOnMethod []MethodParameterApiDescriptionModel `json:"parametersOnMethod,omitempty"`
-	ReturnValue        *ReturnValueApiDescriptionModel      `json:"returnValue,omitempty"`
+	ReturnValue *ReturnValueApiDescriptionModel `json:"returnValue,omitempty"`
 }
 
 // NewInterfaceMethodApiDescriptionModel instantiates a new InterfaceMethodApiDescriptionModel object
@@ -73,7 +73,6 @@ func (o *InterfaceMethodApiDescriptionModel) HasName() bool {
 func (o *InterfaceMethodApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *InterfaceMethodApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -150,7 +149,7 @@ func (o *InterfaceMethodApiDescriptionModel) SetReturnValue(v ReturnValueApiDesc
 }
 
 func (o InterfaceMethodApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -206,3 +205,5 @@ func (v *NullableInterfaceMethodApiDescriptionModel) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Content** | Pointer to **NullableString** |  | [optional]
-**SchemaVersion** | Pointer to **int32** |  | [optional]
-**Status** | Pointer to **NullableString** |  | [optional]
-**TemplateId** | Pointer to **string** |  | [optional]
+**Content** | Pointer to **NullableString** |  | [optional] 
+**SchemaVersion** | Pointer to **int32** |  | [optional] 
+**Status** | Pointer to **NullableString** |  | [optional] 
+**TemplateId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 

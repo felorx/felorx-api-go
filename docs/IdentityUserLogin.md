@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | Pointer to **NullableString** |  | [optional] [readonly]
-**UserId** | Pointer to **string** |  | [optional] [readonly]
-**LoginProvider** | Pointer to **NullableString** |  | [optional] [readonly]
-**ProviderKey** | Pointer to **NullableString** |  | [optional] [readonly]
-**ProviderDisplayName** | Pointer to **NullableString** |  | [optional] [readonly]
+**TenantId** | Pointer to **NullableString** |  | [optional] [readonly] 
+**UserId** | Pointer to **string** |  | [optional] [readonly] 
+**LoginProvider** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ProviderKey** | Pointer to **NullableString** |  | [optional] [readonly] 
+**ProviderDisplayName** | Pointer to **NullableString** |  | [optional] [readonly] 
 
 ## Methods
 

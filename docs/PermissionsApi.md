@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetPermissions**](PermissionsAPI.md#GetPermissions) | **Get** /api/permission-management/permissions |
-[**UpdatePermissions**](PermissionsAPI.md#UpdatePermissions) | **Put** /api/permission-management/permissions |
+[**GetPermissions**](PermissionsAPI.md#GetPermissions) | **Get** /api/permission-management/permissions | 
+[**UpdatePermissions**](PermissionsAPI.md#UpdatePermissions) | **Put** /api/permission-management/permissions | 
 
 
 
@@ -54,8 +54,8 @@ Other parameters are passed through a pointer to a apiGetPermissionsRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **string** |  |
- **providerKey** | **string** |  |
+ **providerName** | **string** |  | 
+ **providerKey** | **string** |  | 
 
 ### Return type
 
@@ -119,9 +119,9 @@ Other parameters are passed through a pointer to a apiUpdatePermissionsRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **string** |  |
- **providerKey** | **string** |  |
- **updatePermissionsDto** | [**UpdatePermissionsDto**](UpdatePermissionsDto.md) |  |
+ **providerName** | **string** |  | 
+ **providerKey** | **string** |  | 
+ **updatePermissionsDto** | [**UpdatePermissionsDto**](UpdatePermissionsDto.md) |  | 
 
 ### Return type
 

@@ -20,9 +20,9 @@ type AppFeedbackType string
 
 // List of AppFeedbackType
 const (
-	APPFEEDBACKTYPE_ISSUE      AppFeedbackType = "Issue"
+	APPFEEDBACKTYPE_ISSUE AppFeedbackType = "Issue"
 	APPFEEDBACKTYPE_SUGGESTION AppFeedbackType = "Suggestion"
-	APPFEEDBACKTYPE_OTHER      AppFeedbackType = "Other"
+	APPFEEDBACKTYPE_OTHER AppFeedbackType = "Other"
 )
 
 // All allowed values of AppFeedbackType enum
@@ -110,3 +110,4 @@ func (v *NullableAppFeedbackType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

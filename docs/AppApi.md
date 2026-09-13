@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateApp**](AppAPI.md#CreateApp) | **Post** /api/app/app |
-[**DeleteAppById**](AppAPI.md#DeleteAppById) | **Delete** /api/app/app/{id} |
-[**GetAppById**](AppAPI.md#GetAppById) | **Get** /api/app/app/{id} |
-[**GetAppList**](AppAPI.md#GetAppList) | **Get** /api/app/app |
-[**GetByName**](AppAPI.md#GetByName) | **Get** /api/app/app/by-name |
-[**GetFeatureList**](AppAPI.md#GetFeatureList) | **Get** /api/app/app/feature-list/{appId} |
-[**GetListByDeveloperAll**](AppAPI.md#GetListByDeveloperAll) | **Get** /api/app/app/by-developer-all |
-[**GetListPublic**](AppAPI.md#GetListPublic) | **Get** /api/app/app/public |
-[**GetListWithUser**](AppAPI.md#GetListWithUser) | **Get** /api/app/app/with-user |
-[**GetSdksById**](AppAPI.md#GetSdksById) | **Get** /api/app/app/sdks-by-id/{appId} |
-[**GetStorefrontLanding**](AppAPI.md#GetStorefrontLanding) | **Get** /api/app/app/storefront-landing/{appId} |
-[**GetUploadCredentials**](AppAPI.md#GetUploadCredentials) | **Get** /api/app/app/upload-credentials |
-[**GetWithUser**](AppAPI.md#GetWithUser) | **Get** /api/app/app/{id}/with-user |
-[**Run**](AppAPI.md#Run) | **Post** /api/app/app/run |
-[**SetLinkedSdks**](AppAPI.md#SetLinkedSdks) | **Post** /api/app/app/set-linked-sdks/{appId} |
-[**UpdateApp**](AppAPI.md#UpdateApp) | **Put** /api/app/app/{id} |
-[**UpdateRunState**](AppAPI.md#UpdateRunState) | **Put** /api/app/app/{id}/run-state |
+[**CreateApp**](AppAPI.md#CreateApp) | **Post** /api/app/app | 
+[**DeleteAppById**](AppAPI.md#DeleteAppById) | **Delete** /api/app/app/{id} | 
+[**GetAppById**](AppAPI.md#GetAppById) | **Get** /api/app/app/{id} | 
+[**GetAppList**](AppAPI.md#GetAppList) | **Get** /api/app/app | 
+[**GetByName**](AppAPI.md#GetByName) | **Get** /api/app/app/by-name | 
+[**GetFeatureList**](AppAPI.md#GetFeatureList) | **Get** /api/app/app/feature-list/{appId} | 
+[**GetListByDeveloperAll**](AppAPI.md#GetListByDeveloperAll) | **Get** /api/app/app/by-developer-all | 
+[**GetListPublic**](AppAPI.md#GetListPublic) | **Get** /api/app/app/public | 
+[**GetListWithUser**](AppAPI.md#GetListWithUser) | **Get** /api/app/app/with-user | 
+[**GetSdksById**](AppAPI.md#GetSdksById) | **Get** /api/app/app/sdks-by-id/{appId} | 
+[**GetStorefrontLanding**](AppAPI.md#GetStorefrontLanding) | **Get** /api/app/app/storefront-landing/{appId} | 
+[**GetUploadCredentials**](AppAPI.md#GetUploadCredentials) | **Get** /api/app/app/upload-credentials | 
+[**GetWithUser**](AppAPI.md#GetWithUser) | **Get** /api/app/app/{id}/with-user | 
+[**Run**](AppAPI.md#Run) | **Post** /api/app/app/run | 
+[**SetLinkedSdks**](AppAPI.md#SetLinkedSdks) | **Post** /api/app/app/set-linked-sdks/{appId} | 
+[**UpdateApp**](AppAPI.md#UpdateApp) | **Put** /api/app/app/{id} | 
+[**UpdateRunState**](AppAPI.md#UpdateRunState) | **Put** /api/app/app/{id}/run-state | 
 
 
 
@@ -68,7 +68,7 @@ Other parameters are passed through a pointer to a apiCreateAppRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  |
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  | 
 
 ### Return type
 
@@ -107,7 +107,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -173,7 +173,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -193,7 +193,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -269,10 +269,10 @@ Other parameters are passed through a pointer to a apiGetAppListRequest struct v
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **creatorId** | **string** |  |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **creatorId** | **string** |  | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -336,7 +336,7 @@ Other parameters are passed through a pointer to a apiGetByNameRequest struct vi
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string** |  |
+ **name** | **string** |  | 
 
 ### Return type
 
@@ -375,7 +375,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	env := "env_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -396,7 +396,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -406,7 +406,7 @@ Other parameters are passed through a pointer to a apiGetFeatureListRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **env** | **string** |  |
+ **env** | **string** |  | 
 
 ### Return type
 
@@ -470,7 +470,7 @@ Other parameters are passed through a pointer to a apiGetListByDeveloperAllReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **developerAccount** | **string** |  |
+ **developerAccount** | **string** |  | 
 
 ### Return type
 
@@ -536,9 +536,9 @@ Other parameters are passed through a pointer to a apiGetListPublicRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_** | **string** |  |
- **developerAccount** | **string** |  |
- **currentAppName** | **string** |  |
+ **type_** | **string** |  | 
+ **developerAccount** | **string** |  | 
+ **currentAppName** | **string** |  | 
 
 ### Return type
 
@@ -606,11 +606,11 @@ Other parameters are passed through a pointer to a apiGetListWithUserRequest str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_** | **string** |  |
- **searchKey** | **string** |  |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **type_** | **string** |  | 
+ **searchKey** | **string** |  | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -649,7 +649,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	env := "env_example" // string |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -670,7 +670,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -680,7 +680,7 @@ Other parameters are passed through a pointer to a apiGetSdksByIdRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **env** | **string** |  |
+ **env** | **string** |  | 
 
 ### Return type
 
@@ -719,7 +719,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -739,7 +739,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -812,7 +812,7 @@ Other parameters are passed through a pointer to a apiGetUploadCredentialsReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **string** |  |
+ **key** | **string** |  | 
 
 ### Return type
 
@@ -851,7 +851,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -871,7 +871,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -944,7 +944,7 @@ Other parameters are passed through a pointer to a apiRunRequest struct via the 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appRunDto** | [**AppRunDto**](AppRunDto.md) |  |
+ **appRunDto** | [**AppRunDto**](AppRunDto.md) |  | 
 
 ### Return type
 
@@ -983,7 +983,7 @@ import (
 )
 
 func main() {
-	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	appId := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	setAppLinkedSdksDto := *openapiclient.NewSetAppLinkedSdksDto() // SetAppLinkedSdksDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1002,7 +1002,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**appId** | **string** |  |
+**appId** | **string** |  | 
 
 ### Other Parameters
 
@@ -1012,7 +1012,7 @@ Other parameters are passed through a pointer to a apiSetLinkedSdksRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **setAppLinkedSdksDto** | [**SetAppLinkedSdksDto**](SetAppLinkedSdksDto.md) |  |
+ **setAppLinkedSdksDto** | [**SetAppLinkedSdksDto**](SetAppLinkedSdksDto.md) |  | 
 
 ### Return type
 
@@ -1051,7 +1051,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAppDto := *openapiclient.NewCreateOrUpdateAppDto() // CreateOrUpdateAppDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1072,7 +1072,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -1082,7 +1082,7 @@ Other parameters are passed through a pointer to a apiUpdateAppRequest struct vi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  |
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md) |  | 
 
 ### Return type
 
@@ -1121,7 +1121,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	appRunRecordUpdateDto := *openapiclient.NewAppRunRecordUpdateDto(openapiclient.AppRunStatus("Pending"), "WorkerId_example", "WorkerName_example") // AppRunRecordUpdateDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -1142,7 +1142,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -1152,7 +1152,7 @@ Other parameters are passed through a pointer to a apiUpdateRunStateRequest stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md) |  |
+ **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md) |  | 
 
 ### Return type
 

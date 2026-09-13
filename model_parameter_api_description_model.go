@@ -19,16 +19,16 @@ var _ MappedNullable = &ParameterApiDescriptionModel{}
 
 // ParameterApiDescriptionModel struct for ParameterApiDescriptionModel
 type ParameterApiDescriptionModel struct {
-	NameOnMethod    NullableString `json:"nameOnMethod,omitempty"`
-	Name            NullableString `json:"name,omitempty"`
-	JsonName        NullableString `json:"jsonName,omitempty"`
-	Type            NullableString `json:"type,omitempty"`
-	TypeSimple      NullableString `json:"typeSimple,omitempty"`
-	IsOptional      *bool          `json:"isOptional,omitempty"`
-	DefaultValue    interface{}    `json:"defaultValue,omitempty"`
-	ConstraintTypes []string       `json:"constraintTypes,omitempty"`
+	NameOnMethod NullableString `json:"nameOnMethod,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	JsonName NullableString `json:"jsonName,omitempty"`
+	Type NullableString `json:"type,omitempty"`
+	TypeSimple NullableString `json:"typeSimple,omitempty"`
+	IsOptional *bool `json:"isOptional,omitempty"`
+	DefaultValue interface{} `json:"defaultValue,omitempty"`
+	ConstraintTypes []string `json:"constraintTypes,omitempty"`
 	BindingSourceId NullableString `json:"bindingSourceId,omitempty"`
-	DescriptorName  NullableString `json:"descriptorName,omitempty"`
+	DescriptorName NullableString `json:"descriptorName,omitempty"`
 }
 
 // NewParameterApiDescriptionModel instantiates a new ParameterApiDescriptionModel object
@@ -80,7 +80,6 @@ func (o *ParameterApiDescriptionModel) HasNameOnMethod() bool {
 func (o *ParameterApiDescriptionModel) SetNameOnMethod(v string) {
 	o.NameOnMethod.Set(&v)
 }
-
 // SetNameOnMethodNil sets the value for NameOnMethod to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetNameOnMethodNil() {
 	o.NameOnMethod.Set(nil)
@@ -123,7 +122,6 @@ func (o *ParameterApiDescriptionModel) HasName() bool {
 func (o *ParameterApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -166,7 +164,6 @@ func (o *ParameterApiDescriptionModel) HasJsonName() bool {
 func (o *ParameterApiDescriptionModel) SetJsonName(v string) {
 	o.JsonName.Set(&v)
 }
-
 // SetJsonNameNil sets the value for JsonName to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetJsonNameNil() {
 	o.JsonName.Set(nil)
@@ -209,7 +206,6 @@ func (o *ParameterApiDescriptionModel) HasType() bool {
 func (o *ParameterApiDescriptionModel) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetTypeNil() {
 	o.Type.Set(nil)
@@ -252,7 +248,6 @@ func (o *ParameterApiDescriptionModel) HasTypeSimple() bool {
 func (o *ParameterApiDescriptionModel) SetTypeSimple(v string) {
 	o.TypeSimple.Set(&v)
 }
-
 // SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetTypeSimpleNil() {
 	o.TypeSimple.Set(nil)
@@ -393,7 +388,6 @@ func (o *ParameterApiDescriptionModel) HasBindingSourceId() bool {
 func (o *ParameterApiDescriptionModel) SetBindingSourceId(v string) {
 	o.BindingSourceId.Set(&v)
 }
-
 // SetBindingSourceIdNil sets the value for BindingSourceId to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetBindingSourceIdNil() {
 	o.BindingSourceId.Set(nil)
@@ -436,7 +430,6 @@ func (o *ParameterApiDescriptionModel) HasDescriptorName() bool {
 func (o *ParameterApiDescriptionModel) SetDescriptorName(v string) {
 	o.DescriptorName.Set(&v)
 }
-
 // SetDescriptorNameNil sets the value for DescriptorName to be an explicit nil
 func (o *ParameterApiDescriptionModel) SetDescriptorNameNil() {
 	o.DescriptorName.Set(nil)
@@ -448,7 +441,7 @@ func (o *ParameterApiDescriptionModel) UnsetDescriptorName() {
 }
 
 func (o ParameterApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -525,3 +518,5 @@ func (v *NullableParameterApiDescriptionModel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

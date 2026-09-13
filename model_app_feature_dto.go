@@ -20,19 +20,19 @@ var _ MappedNullable = &AppFeatureDto{}
 
 // AppFeatureDto struct for AppFeatureDto
 type AppFeatureDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 	// 所属应用ID
 	AppId *string `json:"appId,omitempty"`
 	// 功能名称（唯一标识，同一应用内唯一）
-	Name           NullableString        `json:"name,omitempty"`
-	Sort           *int32                `json:"sort,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Sort *int32 `json:"sort,omitempty"`
 	FeatureLocales []AppFeatureLocaleDto `json:"featureLocales,omitempty"`
 }
 
@@ -149,7 +149,6 @@ func (o *AppFeatureDto) HasCreatorId() bool {
 func (o *AppFeatureDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppFeatureDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -192,7 +191,6 @@ func (o *AppFeatureDto) HasLastModificationTime() bool {
 func (o *AppFeatureDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppFeatureDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -235,7 +233,6 @@ func (o *AppFeatureDto) HasLastModifierId() bool {
 func (o *AppFeatureDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppFeatureDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -310,7 +307,6 @@ func (o *AppFeatureDto) HasDeleterId() bool {
 func (o *AppFeatureDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppFeatureDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -353,7 +349,6 @@ func (o *AppFeatureDto) HasDeletionTime() bool {
 func (o *AppFeatureDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppFeatureDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -428,7 +423,6 @@ func (o *AppFeatureDto) HasName() bool {
 func (o *AppFeatureDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *AppFeatureDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -505,7 +499,7 @@ func (o *AppFeatureDto) SetFeatureLocales(v []AppFeatureLocaleDto) {
 }
 
 func (o AppFeatureDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -588,3 +582,5 @@ func (v *NullableAppFeatureDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

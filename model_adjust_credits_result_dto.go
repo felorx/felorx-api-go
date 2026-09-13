@@ -19,7 +19,7 @@ var _ MappedNullable = &AdjustCreditsResultDto{}
 
 // AdjustCreditsResultDto struct for AdjustCreditsResultDto
 type AdjustCreditsResultDto struct {
-	Balance     *int32                `json:"balance,omitempty"`
+	Balance *int32 `json:"balance,omitempty"`
 	LedgerEntry *CreditLedgerEntryDto `json:"ledgerEntry,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *AdjustCreditsResultDto) SetLedgerEntry(v CreditLedgerEntryDto) {
 }
 
 func (o AdjustCreditsResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,3 +158,5 @@ func (v *NullableAdjustCreditsResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

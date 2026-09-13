@@ -20,22 +20,22 @@ type AppPublisher string
 
 // List of AppPublisher
 const (
-	APPPUBLISHER_WEB              AppPublisher = "Web"
-	APPPUBLISHER_SERVICE          AppPublisher = "Service"
-	APPPUBLISHER_APP_STORE        AppPublisher = "AppStore"
-	APPPUBLISHER_PLAY_STORE       AppPublisher = "PlayStore"
-	APPPUBLISHER_MAC_APP_STORE    AppPublisher = "MacAppStore"
-	APPPUBLISHER_MICROSOFT_STORE  AppPublisher = "MicrosoftStore"
-	APPPUBLISHER_APP_GALLERY      AppPublisher = "AppGallery"
-	APPPUBLISHER_FIR              AppPublisher = "Fir"
+	APPPUBLISHER_WEB AppPublisher = "Web"
+	APPPUBLISHER_SERVICE AppPublisher = "Service"
+	APPPUBLISHER_APP_STORE AppPublisher = "AppStore"
+	APPPUBLISHER_PLAY_STORE AppPublisher = "PlayStore"
+	APPPUBLISHER_MAC_APP_STORE AppPublisher = "MacAppStore"
+	APPPUBLISHER_MICROSOFT_STORE AppPublisher = "MicrosoftStore"
+	APPPUBLISHER_APP_GALLERY AppPublisher = "AppGallery"
+	APPPUBLISHER_FIR AppPublisher = "Fir"
 	APPPUBLISHER_FIREBASE_HOSTING AppPublisher = "FirebaseHosting"
-	APPPUBLISHER_FIREBASE         AppPublisher = "Firebase"
-	APPPUBLISHER_GIT_HUB          AppPublisher = "GitHub"
-	APPPUBLISHER_PGYER            AppPublisher = "Pgyer"
-	APPPUBLISHER_QINIU            AppPublisher = "Qiniu"
-	APPPUBLISHER_VERCEL           AppPublisher = "Vercel"
-	APPPUBLISHER_FELORX           AppPublisher = "Felorx"
-	APPPUBLISHER_OTHER            AppPublisher = "Other"
+	APPPUBLISHER_FIREBASE AppPublisher = "Firebase"
+	APPPUBLISHER_GIT_HUB AppPublisher = "GitHub"
+	APPPUBLISHER_PGYER AppPublisher = "Pgyer"
+	APPPUBLISHER_QINIU AppPublisher = "Qiniu"
+	APPPUBLISHER_VERCEL AppPublisher = "Vercel"
+	APPPUBLISHER_FELORX AppPublisher = "Felorx"
+	APPPUBLISHER_OTHER AppPublisher = "Other"
 )
 
 // All allowed values of AppPublisher enum
@@ -136,3 +136,4 @@ func (v *NullableAppPublisher) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

@@ -18,12 +18,13 @@ import (
 	"net/url"
 )
 
+
 // AbpApplicationConfigurationAPIService AbpApplicationConfigurationAPI service
 type AbpApplicationConfigurationAPIService service
 
 type ApiGetAbpApplicationConfigurationRequest struct {
-	ctx                          context.Context
-	ApiService                   *AbpApplicationConfigurationAPIService
+	ctx context.Context
+	ApiService *AbpApplicationConfigurationAPIService
 	includeLocalizationResources *bool
 }
 
@@ -39,25 +40,24 @@ func (r ApiGetAbpApplicationConfigurationRequest) Execute() (*ApplicationConfigu
 /*
 GetAbpApplicationConfiguration Method for GetAbpApplicationConfiguration
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAbpApplicationConfigurationRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetAbpApplicationConfigurationRequest
 */
 func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfiguration(ctx context.Context) ApiGetAbpApplicationConfigurationRequest {
 	return ApiGetAbpApplicationConfigurationRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return ApplicationConfigurationDto
+//  @return ApplicationConfigurationDto
 func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationExecute(r ApiGetAbpApplicationConfigurationRequest) (*ApplicationConfigurationDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *ApplicationConfigurationDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ApplicationConfigurationDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AbpApplicationConfigurationAPIService.GetAbpApplicationConfiguration")
@@ -120,8 +120,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *AbpApplicationConfigurationAPIService) GetAbpApplicationConfigurationEx
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

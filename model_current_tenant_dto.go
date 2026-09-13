@@ -19,9 +19,9 @@ var _ MappedNullable = &CurrentTenantDto{}
 
 // CurrentTenantDto struct for CurrentTenantDto
 type CurrentTenantDto struct {
-	Id          NullableString `json:"id,omitempty"`
-	Name        NullableString `json:"name,omitempty"`
-	IsAvailable *bool          `json:"isAvailable,omitempty"`
+	Id NullableString `json:"id,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	IsAvailable *bool `json:"isAvailable,omitempty"`
 }
 
 // NewCurrentTenantDto instantiates a new CurrentTenantDto object
@@ -73,7 +73,6 @@ func (o *CurrentTenantDto) HasId() bool {
 func (o *CurrentTenantDto) SetId(v string) {
 	o.Id.Set(&v)
 }
-
 // SetIdNil sets the value for Id to be an explicit nil
 func (o *CurrentTenantDto) SetIdNil() {
 	o.Id.Set(nil)
@@ -116,7 +115,6 @@ func (o *CurrentTenantDto) HasName() bool {
 func (o *CurrentTenantDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CurrentTenantDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -160,7 +158,7 @@ func (o *CurrentTenantDto) SetIsAvailable(v bool) {
 }
 
 func (o CurrentTenantDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -216,3 +214,5 @@ func (v *NullableCurrentTenantDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

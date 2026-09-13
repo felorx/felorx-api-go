@@ -19,12 +19,13 @@ import (
 	"strings"
 )
 
+
 // SubscriptionBillingAdminAPIService SubscriptionBillingAdminAPI service
 type SubscriptionBillingAdminAPIService service
 
 type ApiCreatePlanPriceRequest struct {
-	ctx                           context.Context
-	ApiService                    *SubscriptionBillingAdminAPIService
+	ctx context.Context
+	ApiService *SubscriptionBillingAdminAPIService
 	createOrUpdateAppPlanPriceDto *CreateOrUpdateAppPlanPriceDto
 }
 
@@ -40,25 +41,24 @@ func (r ApiCreatePlanPriceRequest) Execute() (*AppPlanPriceDto, *http.Response, 
 /*
 CreatePlanPrice Method for CreatePlanPrice
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiCreatePlanPriceRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCreatePlanPriceRequest
 */
 func (a *SubscriptionBillingAdminAPIService) CreatePlanPrice(ctx context.Context) ApiCreatePlanPriceRequest {
 	return ApiCreatePlanPriceRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPlanPriceDto
+//  @return AppPlanPriceDto
 func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreatePlanPriceRequest) (*AppPlanPriceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPlanPriceDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPlanPriceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.CreatePlanPrice")
@@ -120,8 +120,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -131,8 +131,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -142,8 +142,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -153,8 +153,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -164,8 +164,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -175,8 +175,8 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -194,9 +194,9 @@ func (a *SubscriptionBillingAdminAPIService) CreatePlanPriceExecute(r ApiCreateP
 }
 
 type ApiDeletePlanPriceRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeletePlanPriceRequest) Execute() (*http.Response, error) {
@@ -206,24 +206,24 @@ func (r ApiDeletePlanPriceRequest) Execute() (*http.Response, error) {
 /*
 DeletePlanPrice Method for DeletePlanPrice
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeletePlanPriceRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeletePlanPriceRequest
 */
 func (a *SubscriptionBillingAdminAPIService) DeletePlanPrice(ctx context.Context, id string) ApiDeletePlanPriceRequest {
 	return ApiDeletePlanPriceRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeletePlanPriceRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.DeletePlanPrice")
@@ -284,8 +284,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -295,8 +295,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -306,8 +306,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -317,8 +317,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -328,8 +328,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -339,8 +339,8 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -349,9 +349,9 @@ func (a *SubscriptionBillingAdminAPIService) DeletePlanPriceExecute(r ApiDeleteP
 }
 
 type ApiDeleteStoreMappingRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	id         string
+	id string
 }
 
 func (r ApiDeleteStoreMappingRequest) Execute() (*http.Response, error) {
@@ -361,24 +361,24 @@ func (r ApiDeleteStoreMappingRequest) Execute() (*http.Response, error) {
 /*
 DeleteStoreMapping Method for DeleteStoreMapping
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteStoreMappingRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiDeleteStoreMappingRequest
 */
 func (a *SubscriptionBillingAdminAPIService) DeleteStoreMapping(ctx context.Context, id string) ApiDeleteStoreMappingRequest {
 	return ApiDeleteStoreMappingRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
 func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDeleteStoreMappingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodDelete
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodDelete
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.DeleteStoreMapping")
@@ -439,8 +439,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -450,8 +450,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -461,8 +461,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -472,8 +472,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -483,8 +483,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -494,8 +494,8 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -504,9 +504,9 @@ func (a *SubscriptionBillingAdminAPIService) DeleteStoreMappingExecute(r ApiDele
 }
 
 type ApiGetPlanPriceRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	id         string
+	id string
 }
 
 func (r ApiGetPlanPriceRequest) Execute() (*AppPlanPriceDto, *http.Response, error) {
@@ -516,27 +516,26 @@ func (r ApiGetPlanPriceRequest) Execute() (*AppPlanPriceDto, *http.Response, err
 /*
 GetPlanPrice Method for GetPlanPrice
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetPlanPriceRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiGetPlanPriceRequest
 */
 func (a *SubscriptionBillingAdminAPIService) GetPlanPrice(ctx context.Context, id string) ApiGetPlanPriceRequest {
 	return ApiGetPlanPriceRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPlanPriceDto
+//  @return AppPlanPriceDto
 func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPriceRequest) (*AppPlanPriceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPlanPriceDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPlanPriceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.GetPlanPrice")
@@ -597,8 +596,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -608,8 +607,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -619,8 +618,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -630,8 +629,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -641,8 +640,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -652,8 +651,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -671,9 +670,9 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPriceExecute(r ApiGetPlanPri
 }
 
 type ApiGetPlanPricesByAppIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	appId      string
+	appId string
 }
 
 func (r ApiGetPlanPricesByAppIdRequest) Execute() ([]AppPlanPriceDto, *http.Response, error) {
@@ -683,27 +682,26 @@ func (r ApiGetPlanPricesByAppIdRequest) Execute() ([]AppPlanPriceDto, *http.Resp
 /*
 GetPlanPricesByAppId Method for GetPlanPricesByAppId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiGetPlanPricesByAppIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetPlanPricesByAppIdRequest
 */
 func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppId(ctx context.Context, appId string) ApiGetPlanPricesByAppIdRequest {
 	return ApiGetPlanPricesByAppIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
+		ctx: ctx,
+		appId: appId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []AppPlanPriceDto
+//  @return []AppPlanPriceDto
 func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGetPlanPricesByAppIdRequest) ([]AppPlanPriceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []AppPlanPriceDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []AppPlanPriceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.GetPlanPricesByAppId")
@@ -764,8 +762,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -775,8 +773,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -786,8 +784,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -797,8 +795,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -808,8 +806,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -819,8 +817,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -838,9 +836,9 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByAppIdExecute(r ApiGe
 }
 
 type ApiGetPlanPricesByPricingIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	pricingId  string
+	pricingId string
 }
 
 func (r ApiGetPlanPricesByPricingIdRequest) Execute() ([]AppPlanPriceDto, *http.Response, error) {
@@ -850,27 +848,26 @@ func (r ApiGetPlanPricesByPricingIdRequest) Execute() ([]AppPlanPriceDto, *http.
 /*
 GetPlanPricesByPricingId Method for GetPlanPricesByPricingId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param pricingId
-	@return ApiGetPlanPricesByPricingIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param pricingId
+ @return ApiGetPlanPricesByPricingIdRequest
 */
 func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingId(ctx context.Context, pricingId string) ApiGetPlanPricesByPricingIdRequest {
 	return ApiGetPlanPricesByPricingIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		pricingId:  pricingId,
+		ctx: ctx,
+		pricingId: pricingId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []AppPlanPriceDto
+//  @return []AppPlanPriceDto
 func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r ApiGetPlanPricesByPricingIdRequest) ([]AppPlanPriceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []AppPlanPriceDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []AppPlanPriceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.GetPlanPricesByPricingId")
@@ -931,8 +928,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -942,8 +939,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -953,8 +950,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -964,8 +961,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -975,8 +972,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -986,8 +983,8 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1005,9 +1002,9 @@ func (a *SubscriptionBillingAdminAPIService) GetPlanPricesByPricingIdExecute(r A
 }
 
 type ApiGetStoreMappingsByAppIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *SubscriptionBillingAdminAPIService
-	appId      string
+	appId string
 }
 
 func (r ApiGetStoreMappingsByAppIdRequest) Execute() ([]StoreProductMappingDto, *http.Response, error) {
@@ -1017,27 +1014,26 @@ func (r ApiGetStoreMappingsByAppIdRequest) Execute() ([]StoreProductMappingDto, 
 /*
 GetStoreMappingsByAppId Method for GetStoreMappingsByAppId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param appId
-	@return ApiGetStoreMappingsByAppIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param appId
+ @return ApiGetStoreMappingsByAppIdRequest
 */
 func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppId(ctx context.Context, appId string) ApiGetStoreMappingsByAppIdRequest {
 	return ApiGetStoreMappingsByAppIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		appId:      appId,
+		ctx: ctx,
+		appId: appId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []StoreProductMappingDto
+//  @return []StoreProductMappingDto
 func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r ApiGetStoreMappingsByAppIdRequest) ([]StoreProductMappingDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []StoreProductMappingDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []StoreProductMappingDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.GetStoreMappingsByAppId")
@@ -1098,8 +1094,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1109,8 +1105,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1120,8 +1116,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1131,8 +1127,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1142,8 +1138,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1153,8 +1149,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1172,8 +1168,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByAppIdExecute(r Ap
 }
 
 type ApiGetStoreMappingsByPlanPriceIdRequest struct {
-	ctx         context.Context
-	ApiService  *SubscriptionBillingAdminAPIService
+	ctx context.Context
+	ApiService *SubscriptionBillingAdminAPIService
 	planPriceId string
 }
 
@@ -1184,27 +1180,26 @@ func (r ApiGetStoreMappingsByPlanPriceIdRequest) Execute() ([]StoreProductMappin
 /*
 GetStoreMappingsByPlanPriceId Method for GetStoreMappingsByPlanPriceId
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param planPriceId
-	@return ApiGetStoreMappingsByPlanPriceIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param planPriceId
+ @return ApiGetStoreMappingsByPlanPriceIdRequest
 */
 func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceId(ctx context.Context, planPriceId string) ApiGetStoreMappingsByPlanPriceIdRequest {
 	return ApiGetStoreMappingsByPlanPriceIdRequest{
-		ApiService:  a,
-		ctx:         ctx,
+		ApiService: a,
+		ctx: ctx,
 		planPriceId: planPriceId,
 	}
 }
 
 // Execute executes the request
-//
-//	@return []StoreProductMappingDto
+//  @return []StoreProductMappingDto
 func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecute(r ApiGetStoreMappingsByPlanPriceIdRequest) ([]StoreProductMappingDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue []StoreProductMappingDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []StoreProductMappingDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.GetStoreMappingsByPlanPriceId")
@@ -1265,8 +1260,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1276,8 +1271,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1287,8 +1282,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1298,8 +1293,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1309,8 +1304,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1320,8 +1315,8 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1339,9 +1334,9 @@ func (a *SubscriptionBillingAdminAPIService) GetStoreMappingsByPlanPriceIdExecut
 }
 
 type ApiUpdatePlanPriceRequest struct {
-	ctx                           context.Context
-	ApiService                    *SubscriptionBillingAdminAPIService
-	id                            string
+	ctx context.Context
+	ApiService *SubscriptionBillingAdminAPIService
+	id string
 	createOrUpdateAppPlanPriceDto *CreateOrUpdateAppPlanPriceDto
 }
 
@@ -1357,27 +1352,26 @@ func (r ApiUpdatePlanPriceRequest) Execute() (*AppPlanPriceDto, *http.Response, 
 /*
 UpdatePlanPrice Method for UpdatePlanPrice
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiUpdatePlanPriceRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiUpdatePlanPriceRequest
 */
 func (a *SubscriptionBillingAdminAPIService) UpdatePlanPrice(ctx context.Context, id string) ApiUpdatePlanPriceRequest {
 	return ApiUpdatePlanPriceRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return AppPlanPriceDto
+//  @return AppPlanPriceDto
 func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdatePlanPriceRequest) (*AppPlanPriceDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *AppPlanPriceDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *AppPlanPriceDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.UpdatePlanPrice")
@@ -1440,8 +1434,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1451,8 +1445,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1462,8 +1456,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1473,8 +1467,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1484,8 +1478,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1495,8 +1489,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1514,8 +1508,8 @@ func (a *SubscriptionBillingAdminAPIService) UpdatePlanPriceExecute(r ApiUpdateP
 }
 
 type ApiUpsertStoreMappingRequest struct {
-	ctx                                  context.Context
-	ApiService                           *SubscriptionBillingAdminAPIService
+	ctx context.Context
+	ApiService *SubscriptionBillingAdminAPIService
 	createOrUpdateStoreProductMappingDto *CreateOrUpdateStoreProductMappingDto
 }
 
@@ -1531,25 +1525,24 @@ func (r ApiUpsertStoreMappingRequest) Execute() (*StoreProductMappingDto, *http.
 /*
 UpsertStoreMapping Method for UpsertStoreMapping
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiUpsertStoreMappingRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpsertStoreMappingRequest
 */
 func (a *SubscriptionBillingAdminAPIService) UpsertStoreMapping(ctx context.Context) ApiUpsertStoreMappingRequest {
 	return ApiUpsertStoreMappingRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return StoreProductMappingDto
+//  @return StoreProductMappingDto
 func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpsertStoreMappingRequest) (*StoreProductMappingDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPost
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *StoreProductMappingDto
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *StoreProductMappingDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubscriptionBillingAdminAPIService.UpsertStoreMapping")
@@ -1611,8 +1604,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -1622,8 +1615,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -1633,8 +1626,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -1644,8 +1637,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -1655,8 +1648,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1666,8 +1659,8 @@ func (a *SubscriptionBillingAdminAPIService) UpsertStoreMappingExecute(r ApiUpse
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

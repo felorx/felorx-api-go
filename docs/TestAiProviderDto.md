@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Capability** | Pointer to [**AiCapability**](AiCapability.md) |  | [optional]
-**Prompt** | Pointer to **NullableString** |  | [optional]
-**ImageUrl** | Pointer to **NullableString** |  | [optional]
+**ModelId** | Pointer to **NullableString** |  | [optional] 
+**Protocol** | Pointer to [**AiProtocol**](AiProtocol.md) |  | [optional] 
+**Capability** | Pointer to [**AiCapability**](AiCapability.md) |  | [optional] 
+**Prompt** | Pointer to **NullableString** |  | [optional] 
+**ImageUrl** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 
@@ -26,6 +28,66 @@ will change when the set of required properties is changed
 NewTestAiProviderDtoWithDefaults instantiates a new TestAiProviderDto object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetModelId
+
+`func (o *TestAiProviderDto) GetModelId() string`
+
+GetModelId returns the ModelId field if non-nil, zero value otherwise.
+
+### GetModelIdOk
+
+`func (o *TestAiProviderDto) GetModelIdOk() (*string, bool)`
+
+GetModelIdOk returns a tuple with the ModelId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModelId
+
+`func (o *TestAiProviderDto) SetModelId(v string)`
+
+SetModelId sets ModelId field to given value.
+
+### HasModelId
+
+`func (o *TestAiProviderDto) HasModelId() bool`
+
+HasModelId returns a boolean if a field has been set.
+
+### SetModelIdNil
+
+`func (o *TestAiProviderDto) SetModelIdNil(b bool)`
+
+ SetModelIdNil sets the value for ModelId to be an explicit nil
+
+### UnsetModelId
+`func (o *TestAiProviderDto) UnsetModelId()`
+
+UnsetModelId ensures that no value is present for ModelId, not even an explicit nil
+### GetProtocol
+
+`func (o *TestAiProviderDto) GetProtocol() AiProtocol`
+
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+
+### GetProtocolOk
+
+`func (o *TestAiProviderDto) GetProtocolOk() (*AiProtocol, bool)`
+
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocol
+
+`func (o *TestAiProviderDto) SetProtocol(v AiProtocol)`
+
+SetProtocol sets Protocol field to given value.
+
+### HasProtocol
+
+`func (o *TestAiProviderDto) HasProtocol() bool`
+
+HasProtocol returns a boolean if a field has been set.
 
 ### GetCapability
 

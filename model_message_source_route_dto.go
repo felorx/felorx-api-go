@@ -19,16 +19,17 @@ var _ MappedNullable = &MessageSourceRouteDto{}
 
 // MessageSourceRouteDto struct for MessageSourceRouteDto
 type MessageSourceRouteDto struct {
-	Title       NullableString `json:"title,omitempty"`
+	Id *string `json:"id,omitempty"`
+	Title NullableString `json:"title,omitempty"`
 	Description NullableString `json:"description,omitempty"`
-	Path        NullableString `json:"path,omitempty"`
-	SourceId    *string        `json:"sourceId,omitempty"`
-	Extra       NullableString `json:"extra,omitempty"`
-	Anticrawler *bool          `json:"anticrawler,omitempty"`
-	Radar       *bool          `json:"radar,omitempty"`
-	Rssbud      *bool          `json:"rssbud,omitempty"`
-	IsPublished *bool          `json:"isPublished,omitempty"`
-	IconUrl     NullableString `json:"iconUrl,omitempty"`
+	Path NullableString `json:"path,omitempty"`
+	SourceId *string `json:"sourceId,omitempty"`
+	Extra NullableString `json:"extra,omitempty"`
+	Anticrawler *bool `json:"anticrawler,omitempty"`
+	Radar *bool `json:"radar,omitempty"`
+	Rssbud *bool `json:"rssbud,omitempty"`
+	IsPublished *bool `json:"isPublished,omitempty"`
+	IconUrl NullableString `json:"iconUrl,omitempty"`
 }
 
 // NewMessageSourceRouteDto instantiates a new MessageSourceRouteDto object
@@ -46,6 +47,38 @@ func NewMessageSourceRouteDto() *MessageSourceRouteDto {
 func NewMessageSourceRouteDtoWithDefaults() *MessageSourceRouteDto {
 	this := MessageSourceRouteDto{}
 	return &this
+}
+
+// GetId returns the Id field value if set, zero value otherwise.
+func (o *MessageSourceRouteDto) GetId() string {
+	if o == nil || IsNil(o.Id) {
+		var ret string
+		return ret
+	}
+	return *o.Id
+}
+
+// GetIdOk returns a tuple with the Id field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *MessageSourceRouteDto) GetIdOk() (*string, bool) {
+	if o == nil || IsNil(o.Id) {
+		return nil, false
+	}
+	return o.Id, true
+}
+
+// HasId returns a boolean if a field has been set.
+func (o *MessageSourceRouteDto) HasId() bool {
+	if o != nil && !IsNil(o.Id) {
+		return true
+	}
+
+	return false
+}
+
+// SetId gets a reference to the given string and assigns it to the Id field.
+func (o *MessageSourceRouteDto) SetId(v string) {
+	o.Id = &v
 }
 
 // GetTitle returns the Title field value if set, zero value otherwise (both if not set or set to explicit null).
@@ -80,7 +113,6 @@ func (o *MessageSourceRouteDto) HasTitle() bool {
 func (o *MessageSourceRouteDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *MessageSourceRouteDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -123,7 +155,6 @@ func (o *MessageSourceRouteDto) HasDescription() bool {
 func (o *MessageSourceRouteDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *MessageSourceRouteDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -166,7 +197,6 @@ func (o *MessageSourceRouteDto) HasPath() bool {
 func (o *MessageSourceRouteDto) SetPath(v string) {
 	o.Path.Set(&v)
 }
-
 // SetPathNil sets the value for Path to be an explicit nil
 func (o *MessageSourceRouteDto) SetPathNil() {
 	o.Path.Set(nil)
@@ -241,7 +271,6 @@ func (o *MessageSourceRouteDto) HasExtra() bool {
 func (o *MessageSourceRouteDto) SetExtra(v string) {
 	o.Extra.Set(&v)
 }
-
 // SetExtraNil sets the value for Extra to be an explicit nil
 func (o *MessageSourceRouteDto) SetExtraNil() {
 	o.Extra.Set(nil)
@@ -412,7 +441,6 @@ func (o *MessageSourceRouteDto) HasIconUrl() bool {
 func (o *MessageSourceRouteDto) SetIconUrl(v string) {
 	o.IconUrl.Set(&v)
 }
-
 // SetIconUrlNil sets the value for IconUrl to be an explicit nil
 func (o *MessageSourceRouteDto) SetIconUrlNil() {
 	o.IconUrl.Set(nil)
@@ -424,7 +452,7 @@ func (o *MessageSourceRouteDto) UnsetIconUrl() {
 }
 
 func (o MessageSourceRouteDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -433,6 +461,9 @@ func (o MessageSourceRouteDto) MarshalJSON() ([]byte, error) {
 
 func (o MessageSourceRouteDto) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.Id) {
+		toSerialize["id"] = o.Id
+	}
 	if o.Title.IsSet() {
 		toSerialize["title"] = o.Title.Get()
 	}
@@ -501,3 +532,5 @@ func (v *NullableMessageSourceRouteDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_VerificationAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_VerificationAPIService(t *testing.T) {
 
 	t.Run("Test VerificationAPIService SendCode", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.VerificationAPI.SendCode(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_VerificationAPIService(t *testing.T) {
 
 	t.Run("Test VerificationAPIService SendCodeAnonymous", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.VerificationAPI.SendCodeAnonymous(context.Background()).Execute()
 

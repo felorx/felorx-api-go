@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_SubscriptionAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService AlipayNotify", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.AlipayNotify(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService AppleNotifications", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.SubscriptionAPI.AppleNotifications(context.Background()).Execute()
 
@@ -47,7 +47,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService CapturePayPalOrder", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.CapturePayPalOrder(context.Background()).Execute()
 
@@ -57,9 +57,21 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test SubscriptionAPIService CreateAlipayOrderPostApiAppSubscriptionAlipayOrder", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SubscriptionAPI.CreateAlipayOrderPostApiAppSubscriptionAlipayOrder(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test SubscriptionAPIService CreateOrder", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.CreateOrder(context.Background()).Execute()
 
@@ -69,9 +81,21 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test SubscriptionAPIService CreatePayPalOrderPostApiAppSubscriptionPayPalOrder", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.SubscriptionAPI.CreatePayPalOrderPostApiAppSubscriptionPayPalOrder(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test SubscriptionAPIService GetPlanPrices", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -83,9 +107,23 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test SubscriptionAPIService GetStoreProducts", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var appId string
+
+		resp, httpRes, err := apiClient.SubscriptionAPI.GetStoreProducts(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test SubscriptionAPIService GetSubscriptionById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.GetSubscriptionById(context.Background()).Execute()
 
@@ -97,7 +135,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService GetSubscriptionList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.GetSubscriptionList(context.Background()).Execute()
 
@@ -109,7 +147,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService PayPalReturn", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.SubscriptionAPI.PayPalReturn(context.Background()).Execute()
 
@@ -120,7 +158,7 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	t.Run("Test SubscriptionAPIService PayPalWebhook", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.PayPalWebhook(context.Background()).Execute()
 
@@ -130,33 +168,9 @@ func Test_felorx_SubscriptionAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test SubscriptionAPIService SubscriptionCreateAlipayOrder", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		resp, httpRes, err := apiClient.SubscriptionAPI.SubscriptionCreateAlipayOrder(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test SubscriptionAPIService SubscriptionCreatePayPalOrder", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		resp, httpRes, err := apiClient.SubscriptionAPI.SubscriptionCreatePayPalOrder(context.Background()).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
 	t.Run("Test SubscriptionAPIService VerifyReceipt", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.SubscriptionAPI.VerifyReceipt(context.Background()).Execute()
 

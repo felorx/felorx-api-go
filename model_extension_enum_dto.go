@@ -19,8 +19,8 @@ var _ MappedNullable = &ExtensionEnumDto{}
 
 // ExtensionEnumDto struct for ExtensionEnumDto
 type ExtensionEnumDto struct {
-	Fields               []ExtensionEnumFieldDto `json:"fields,omitempty"`
-	LocalizationResource NullableString          `json:"localizationResource,omitempty"`
+	Fields []ExtensionEnumFieldDto `json:"fields,omitempty"`
+	LocalizationResource NullableString `json:"localizationResource,omitempty"`
 }
 
 // NewExtensionEnumDto instantiates a new ExtensionEnumDto object
@@ -105,7 +105,6 @@ func (o *ExtensionEnumDto) HasLocalizationResource() bool {
 func (o *ExtensionEnumDto) SetLocalizationResource(v string) {
 	o.LocalizationResource.Set(&v)
 }
-
 // SetLocalizationResourceNil sets the value for LocalizationResource to be an explicit nil
 func (o *ExtensionEnumDto) SetLocalizationResourceNil() {
 	o.LocalizationResource.Set(nil)
@@ -117,7 +116,7 @@ func (o *ExtensionEnumDto) UnsetLocalizationResource() {
 }
 
 func (o ExtensionEnumDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -170,3 +169,5 @@ func (v *NullableExtensionEnumDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

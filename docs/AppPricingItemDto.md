@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional]
-**CreationTime** | Pointer to **time.Time** |  | [optional]
-**CreatorId** | Pointer to **NullableString** |  | [optional]
-**LastModificationTime** | Pointer to **NullableTime** |  | [optional]
-**LastModifierId** | Pointer to **NullableString** |  | [optional]
-**IsDeleted** | Pointer to **bool** |  | [optional]
-**DeleterId** | Pointer to **NullableString** |  | [optional]
-**DeletionTime** | Pointer to **NullableTime** |  | [optional]
-**Key** | Pointer to **NullableString** | 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxFelorxCount, 见 AppPricingItemKeys.cs | [optional]
-**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional]
-**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional]
-**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional]
-**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional]
-**IsAvailable** | Pointer to **bool** | 是否可用 | [optional]
-**SortIndex** | Pointer to **int32** | 排序 | [optional]
+**Id** | Pointer to **string** |  | [optional] 
+**CreationTime** | Pointer to **time.Time** |  | [optional] 
+**CreatorId** | Pointer to **NullableString** |  | [optional] 
+**LastModificationTime** | Pointer to **NullableTime** |  | [optional] 
+**LastModifierId** | Pointer to **NullableString** |  | [optional] 
+**IsDeleted** | Pointer to **bool** |  | [optional] 
+**DeleterId** | Pointer to **NullableString** |  | [optional] 
+**DeletionTime** | Pointer to **NullableTime** |  | [optional] 
+**Key** | Pointer to **NullableString** | 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxFelorxCount, 见 AppPricingItemKeys.cs | [optional] 
+**Name** | Pointer to **NullableString** | 名称: 坐席 | [optional] 
+**Description** | Pointer to **NullableString** | 描述, 使用 Markdown 格式, 允许包含图片 | [optional] 
+**LinkUrl** | Pointer to **NullableString** | 链接地址 | [optional] 
+**Display** | Pointer to **NullableString** | 显示模板: 包括{0}个坐席 | [optional] 
+**IsAvailable** | Pointer to **bool** | 是否可用 | [optional] 
+**SortIndex** | Pointer to **int32** | 排序 | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Fields** | Pointer to [**[]ExtensionEnumFieldDto**](ExtensionEnumFieldDto.md) |  | [optional]
-**LocalizationResource** | Pointer to **NullableString** |  | [optional]
+**Fields** | Pointer to [**[]ExtensionEnumFieldDto**](ExtensionEnumFieldDto.md) |  | [optional] 
+**LocalizationResource** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

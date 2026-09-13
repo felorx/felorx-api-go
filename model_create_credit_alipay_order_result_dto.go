@@ -19,12 +19,12 @@ var _ MappedNullable = &CreateCreditAlipayOrderResultDto{}
 
 // CreateCreditAlipayOrderResultDto struct for CreateCreditAlipayOrderResultDto
 type CreateCreditAlipayOrderResultDto struct {
-	OrderId      *string        `json:"orderId,omitempty"`
-	OutTradeNo   NullableString `json:"outTradeNo,omitempty"`
+	OrderId *string `json:"orderId,omitempty"`
+	OutTradeNo NullableString `json:"outTradeNo,omitempty"`
 	CheckoutMode NullableString `json:"checkoutMode,omitempty"`
-	PaymentForm  NullableString `json:"paymentForm,omitempty"`
-	PaymentUrl   NullableString `json:"paymentUrl,omitempty"`
-	OrderString  NullableString `json:"orderString,omitempty"`
+	PaymentForm NullableString `json:"paymentForm,omitempty"`
+	PaymentUrl NullableString `json:"paymentUrl,omitempty"`
+	OrderString NullableString `json:"orderString,omitempty"`
 }
 
 // NewCreateCreditAlipayOrderResultDto instantiates a new CreateCreditAlipayOrderResultDto object
@@ -108,7 +108,6 @@ func (o *CreateCreditAlipayOrderResultDto) HasOutTradeNo() bool {
 func (o *CreateCreditAlipayOrderResultDto) SetOutTradeNo(v string) {
 	o.OutTradeNo.Set(&v)
 }
-
 // SetOutTradeNoNil sets the value for OutTradeNo to be an explicit nil
 func (o *CreateCreditAlipayOrderResultDto) SetOutTradeNoNil() {
 	o.OutTradeNo.Set(nil)
@@ -151,7 +150,6 @@ func (o *CreateCreditAlipayOrderResultDto) HasCheckoutMode() bool {
 func (o *CreateCreditAlipayOrderResultDto) SetCheckoutMode(v string) {
 	o.CheckoutMode.Set(&v)
 }
-
 // SetCheckoutModeNil sets the value for CheckoutMode to be an explicit nil
 func (o *CreateCreditAlipayOrderResultDto) SetCheckoutModeNil() {
 	o.CheckoutMode.Set(nil)
@@ -194,7 +192,6 @@ func (o *CreateCreditAlipayOrderResultDto) HasPaymentForm() bool {
 func (o *CreateCreditAlipayOrderResultDto) SetPaymentForm(v string) {
 	o.PaymentForm.Set(&v)
 }
-
 // SetPaymentFormNil sets the value for PaymentForm to be an explicit nil
 func (o *CreateCreditAlipayOrderResultDto) SetPaymentFormNil() {
 	o.PaymentForm.Set(nil)
@@ -237,7 +234,6 @@ func (o *CreateCreditAlipayOrderResultDto) HasPaymentUrl() bool {
 func (o *CreateCreditAlipayOrderResultDto) SetPaymentUrl(v string) {
 	o.PaymentUrl.Set(&v)
 }
-
 // SetPaymentUrlNil sets the value for PaymentUrl to be an explicit nil
 func (o *CreateCreditAlipayOrderResultDto) SetPaymentUrlNil() {
 	o.PaymentUrl.Set(nil)
@@ -280,7 +276,6 @@ func (o *CreateCreditAlipayOrderResultDto) HasOrderString() bool {
 func (o *CreateCreditAlipayOrderResultDto) SetOrderString(v string) {
 	o.OrderString.Set(&v)
 }
-
 // SetOrderStringNil sets the value for OrderString to be an explicit nil
 func (o *CreateCreditAlipayOrderResultDto) SetOrderStringNil() {
 	o.OrderString.Set(nil)
@@ -292,7 +287,7 @@ func (o *CreateCreditAlipayOrderResultDto) UnsetOrderString() {
 }
 
 func (o CreateCreditAlipayOrderResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -357,3 +352,5 @@ func (v *NullableCreateCreditAlipayOrderResultDto) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

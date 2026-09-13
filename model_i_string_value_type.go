@@ -19,9 +19,9 @@ var _ MappedNullable = &IStringValueType{}
 
 // IStringValueType struct for IStringValueType
 type IStringValueType struct {
-	Name       NullableString         `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	Properties map[string]interface{} `json:"properties,omitempty"`
-	Validator  *IValueValidator       `json:"validator,omitempty"`
+	Validator *IValueValidator `json:"validator,omitempty"`
 }
 
 // NewIStringValueType instantiates a new IStringValueType object
@@ -73,7 +73,6 @@ func (o *IStringValueType) HasName() bool {
 func (o *IStringValueType) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IStringValueType) SetNameNil() {
 	o.Name.Set(nil)
@@ -150,7 +149,7 @@ func (o *IStringValueType) SetValidator(v IValueValidator) {
 }
 
 func (o IStringValueType) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -206,3 +205,5 @@ func (v *NullableIStringValueType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SaltBase64** | Pointer to **NullableString** |  | [optional]
-**WrappedUserKeyJson** | Pointer to **NullableString** |  | [optional]
-**PublicKeyJwkJson** | Pointer to **NullableString** |  | [optional]
-**WrappedRsaPrivateJson** | Pointer to **NullableString** |  | [optional]
+**SaltBase64** | Pointer to **NullableString** |  | [optional] 
+**WrappedUserKeyJson** | Pointer to **NullableString** |  | [optional] 
+**PublicKeyJwkJson** | Pointer to **NullableString** |  | [optional] 
+**WrappedRsaPrivateJson** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

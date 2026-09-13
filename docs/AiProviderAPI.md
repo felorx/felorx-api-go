@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAiProvider**](AiProviderAPI.md#CreateAiProvider) | **Post** /api/app/ai-provider |
-[**DeleteAiProviderById**](AiProviderAPI.md#DeleteAiProviderById) | **Delete** /api/app/ai-provider/{id} |
-[**GetAiProviderById**](AiProviderAPI.md#GetAiProviderById) | **Get** /api/app/ai-provider/{id} |
-[**GetAiProviderList**](AiProviderAPI.md#GetAiProviderList) | **Get** /api/app/ai-provider |
-[**SetDefaultModel**](AiProviderAPI.md#SetDefaultModel) | **Post** /api/app/ai-provider/set-default-model |
-[**SetEnabled**](AiProviderAPI.md#SetEnabled) | **Post** /api/app/ai-provider/{id}/set-enabled |
-[**Test**](AiProviderAPI.md#Test) | **Post** /api/app/ai-provider/{id}/test |
-[**UpdateAiProvider**](AiProviderAPI.md#UpdateAiProvider) | **Put** /api/app/ai-provider/{id} |
+[**CreateAiProvider**](AiProviderAPI.md#CreateAiProvider) | **Post** /api/app/ai-provider | 
+[**DeleteAiProviderById**](AiProviderAPI.md#DeleteAiProviderById) | **Delete** /api/app/ai-provider/{id} | 
+[**GetAiProviderById**](AiProviderAPI.md#GetAiProviderById) | **Get** /api/app/ai-provider/{id} | 
+[**GetAiProviderList**](AiProviderAPI.md#GetAiProviderList) | **Get** /api/app/ai-provider | 
+[**SetDefaultModelPostApiAppAiProviderSetDefaultModel**](AiProviderAPI.md#SetDefaultModelPostApiAppAiProviderSetDefaultModel) | **Post** /api/app/ai-provider/set-default-model | 
+[**SetEnabledPostApiAppAiProviderIdSetEnabled**](AiProviderAPI.md#SetEnabledPostApiAppAiProviderIdSetEnabled) | **Post** /api/app/ai-provider/{id}/set-enabled | 
+[**TestPostApiAppAiProviderIdTest**](AiProviderAPI.md#TestPostApiAppAiProviderIdTest) | **Post** /api/app/ai-provider/{id}/test | 
+[**UpdateAiProvider**](AiProviderAPI.md#UpdateAiProvider) | **Put** /api/app/ai-provider/{id} | 
 
 
 
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiCreateAiProviderRequest st
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md) |  |
+ **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md) |  | 
 
 ### Return type
 
@@ -98,7 +98,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -116,7 +116,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -164,7 +164,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -184,7 +184,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -263,13 +263,13 @@ Other parameters are passed through a pointer to a apiGetAiProviderListRequest s
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string** |  |
- **providerType** | [**AiProviderType**](AiProviderType.md) |  |
- **capability** | [**AiCapability**](AiCapability.md) |  |
- **enabled** | **bool** |  |
- **sorting** | **string** |  |
- **skipCount** | **int32** |  |
- **maxResultCount** | **int32** |  |
+ **filter** | **string** |  | 
+ **providerType** | [**AiProviderType**](AiProviderType.md) |  | 
+ **capability** | [**AiCapability**](AiCapability.md) |  | 
+ **enabled** | **bool** |  | 
+ **sorting** | **string** |  | 
+ **skipCount** | **int32** |  | 
+ **maxResultCount** | **int32** |  | 
 
 ### Return type
 
@@ -289,9 +289,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SetDefaultModel
+## SetDefaultModelPostApiAppAiProviderSetDefaultModel
 
-> AiProviderDto SetDefaultModel(ctx).SetDefaultAiModelDto(setDefaultAiModelDto).Execute()
+> AiProviderDto SetDefaultModelPostApiAppAiProviderSetDefaultModel(ctx).SetDefaultAiModelDto(setDefaultAiModelDto).Execute()
 
 
 
@@ -312,13 +312,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AiProviderAPI.SetDefaultModel(context.Background()).SetDefaultAiModelDto(setDefaultAiModelDto).Execute()
+	resp, r, err := apiClient.AiProviderAPI.SetDefaultModelPostApiAppAiProviderSetDefaultModel(context.Background()).SetDefaultAiModelDto(setDefaultAiModelDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.SetDefaultModel``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.SetDefaultModelPostApiAppAiProviderSetDefaultModel``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SetDefaultModel`: AiProviderDto
-	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.SetDefaultModel`: %v\n", resp)
+	// response from `SetDefaultModelPostApiAppAiProviderSetDefaultModel`: AiProviderDto
+	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.SetDefaultModelPostApiAppAiProviderSetDefaultModel`: %v\n", resp)
 }
 ```
 
@@ -328,12 +328,12 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSetDefaultModelRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSetDefaultModelPostApiAppAiProviderSetDefaultModelRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md) |  |
+ **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md) |  | 
 
 ### Return type
 
@@ -353,9 +353,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SetEnabled
+## SetEnabledPostApiAppAiProviderIdSetEnabled
 
-> AiProviderDto SetEnabled(ctx, id).SetAiProviderEnabledDto(setAiProviderEnabledDto).Execute()
+> AiProviderDto SetEnabledPostApiAppAiProviderIdSetEnabled(ctx, id).SetAiProviderEnabledDto(setAiProviderEnabledDto).Execute()
 
 
 
@@ -372,18 +372,18 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	setAiProviderEnabledDto := *openapiclient.NewSetAiProviderEnabledDto() // SetAiProviderEnabledDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AiProviderAPI.SetEnabled(context.Background(), id).SetAiProviderEnabledDto(setAiProviderEnabledDto).Execute()
+	resp, r, err := apiClient.AiProviderAPI.SetEnabledPostApiAppAiProviderIdSetEnabled(context.Background(), id).SetAiProviderEnabledDto(setAiProviderEnabledDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.SetEnabled``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.SetEnabledPostApiAppAiProviderIdSetEnabled``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `SetEnabled`: AiProviderDto
-	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.SetEnabled`: %v\n", resp)
+	// response from `SetEnabledPostApiAppAiProviderIdSetEnabled`: AiProviderDto
+	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.SetEnabledPostApiAppAiProviderIdSetEnabled`: %v\n", resp)
 }
 ```
 
@@ -393,17 +393,17 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSetEnabledRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSetEnabledPostApiAppAiProviderIdSetEnabledRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md) |  |
+ **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md) |  | 
 
 ### Return type
 
@@ -423,9 +423,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## Test
+## TestPostApiAppAiProviderIdTest
 
-> AiProviderDto Test(ctx, id).TestAiProviderDto(testAiProviderDto).Execute()
+> AiProviderDto TestPostApiAppAiProviderIdTest(ctx, id).TestAiProviderDto(testAiProviderDto).Execute()
 
 
 
@@ -442,18 +442,18 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	testAiProviderDto := *openapiclient.NewTestAiProviderDto() // TestAiProviderDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AiProviderAPI.Test(context.Background(), id).TestAiProviderDto(testAiProviderDto).Execute()
+	resp, r, err := apiClient.AiProviderAPI.TestPostApiAppAiProviderIdTest(context.Background(), id).TestAiProviderDto(testAiProviderDto).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.Test``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AiProviderAPI.TestPostApiAppAiProviderIdTest``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `Test`: AiProviderDto
-	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.Test`: %v\n", resp)
+	// response from `TestPostApiAppAiProviderIdTest`: AiProviderDto
+	fmt.Fprintf(os.Stdout, "Response from `AiProviderAPI.TestPostApiAppAiProviderIdTest`: %v\n", resp)
 }
 ```
 
@@ -463,17 +463,17 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiTestRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiTestPostApiAppAiProviderIdTestRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md) |  |
+ **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md) |  | 
 
 ### Return type
 
@@ -512,7 +512,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createOrUpdateAiProviderDto := *openapiclient.NewCreateOrUpdateAiProviderDto() // CreateOrUpdateAiProviderDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -533,7 +533,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -543,7 +543,7 @@ Other parameters are passed through a pointer to a apiUpdateAiProviderRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md) |  |
+ **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md) |  | 
 
 ### Return type
 

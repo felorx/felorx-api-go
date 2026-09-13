@@ -20,7 +20,7 @@ type SubscriptionOrderStatus string
 
 // List of SubscriptionOrderStatus
 const (
-	SUBSCRIPTIONORDERSTATUS_WAITING  SubscriptionOrderStatus = "Waiting"
+	SUBSCRIPTIONORDERSTATUS_WAITING SubscriptionOrderStatus = "Waiting"
 	SUBSCRIPTIONORDERSTATUS_OVERTIME SubscriptionOrderStatus = "Overtime"
 	SUBSCRIPTIONORDERSTATUS_FINISHED SubscriptionOrderStatus = "Finished"
 )
@@ -110,3 +110,4 @@ func (v *NullableSubscriptionOrderStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

@@ -20,10 +20,10 @@ type BillingProvider string
 
 // List of BillingProvider
 const (
-	BILLINGPROVIDER_UNKNOWN         BillingProvider = "Unknown"
+	BILLINGPROVIDER_UNKNOWN BillingProvider = "Unknown"
 	BILLINGPROVIDER_APPLE_APP_STORE BillingProvider = "AppleAppStore"
-	BILLINGPROVIDER_PAY_PAL         BillingProvider = "PayPal"
-	BILLINGPROVIDER_ALIPAY          BillingProvider = "Alipay"
+	BILLINGPROVIDER_PAY_PAL BillingProvider = "PayPal"
+	BILLINGPROVIDER_ALIPAY BillingProvider = "Alipay"
 )
 
 // All allowed values of BillingProvider enum
@@ -112,3 +112,4 @@ func (v *NullableBillingProvider) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

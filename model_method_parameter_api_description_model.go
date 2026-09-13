@@ -19,12 +19,12 @@ var _ MappedNullable = &MethodParameterApiDescriptionModel{}
 
 // MethodParameterApiDescriptionModel struct for MethodParameterApiDescriptionModel
 type MethodParameterApiDescriptionModel struct {
-	Name         NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	TypeAsString NullableString `json:"typeAsString,omitempty"`
-	Type         NullableString `json:"type,omitempty"`
-	TypeSimple   NullableString `json:"typeSimple,omitempty"`
-	IsOptional   *bool          `json:"isOptional,omitempty"`
-	DefaultValue interface{}    `json:"defaultValue,omitempty"`
+	Type NullableString `json:"type,omitempty"`
+	TypeSimple NullableString `json:"typeSimple,omitempty"`
+	IsOptional *bool `json:"isOptional,omitempty"`
+	DefaultValue interface{} `json:"defaultValue,omitempty"`
 }
 
 // NewMethodParameterApiDescriptionModel instantiates a new MethodParameterApiDescriptionModel object
@@ -76,7 +76,6 @@ func (o *MethodParameterApiDescriptionModel) HasName() bool {
 func (o *MethodParameterApiDescriptionModel) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *MethodParameterApiDescriptionModel) SetNameNil() {
 	o.Name.Set(nil)
@@ -119,7 +118,6 @@ func (o *MethodParameterApiDescriptionModel) HasTypeAsString() bool {
 func (o *MethodParameterApiDescriptionModel) SetTypeAsString(v string) {
 	o.TypeAsString.Set(&v)
 }
-
 // SetTypeAsStringNil sets the value for TypeAsString to be an explicit nil
 func (o *MethodParameterApiDescriptionModel) SetTypeAsStringNil() {
 	o.TypeAsString.Set(nil)
@@ -162,7 +160,6 @@ func (o *MethodParameterApiDescriptionModel) HasType() bool {
 func (o *MethodParameterApiDescriptionModel) SetType(v string) {
 	o.Type.Set(&v)
 }
-
 // SetTypeNil sets the value for Type to be an explicit nil
 func (o *MethodParameterApiDescriptionModel) SetTypeNil() {
 	o.Type.Set(nil)
@@ -205,7 +202,6 @@ func (o *MethodParameterApiDescriptionModel) HasTypeSimple() bool {
 func (o *MethodParameterApiDescriptionModel) SetTypeSimple(v string) {
 	o.TypeSimple.Set(&v)
 }
-
 // SetTypeSimpleNil sets the value for TypeSimple to be an explicit nil
 func (o *MethodParameterApiDescriptionModel) SetTypeSimpleNil() {
 	o.TypeSimple.Set(nil)
@@ -282,7 +278,7 @@ func (o *MethodParameterApiDescriptionModel) SetDefaultValue(v interface{}) {
 }
 
 func (o MethodParameterApiDescriptionModel) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -347,3 +343,5 @@ func (v *NullableMethodParameterApiDescriptionModel) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

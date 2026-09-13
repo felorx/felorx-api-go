@@ -19,24 +19,24 @@ var _ MappedNullable = &Receipt{}
 
 // Receipt struct for Receipt
 type Receipt struct {
-	ReceiptType                NullableString `json:"receipt_type,omitempty"`
-	AdamId                     *int64         `json:"adam_id,omitempty"`
-	AppItemId                  *int64         `json:"app_item_id,omitempty"`
-	BundleId                   NullableString `json:"bundle_id,omitempty"`
-	ApplicationVersion         NullableString `json:"application_version,omitempty"`
-	DownloadId                 *int64         `json:"download_id,omitempty"`
-	VersionExternalIdentifier  *int32         `json:"version_external_identifier,omitempty"`
-	ReceiptCreationDate        NullableString `json:"receipt_creation_date,omitempty"`
-	ReceiptCreationDateMs      NullableString `json:"receipt_creation_date_ms,omitempty"`
-	ReceiptCreationDatePst     NullableString `json:"receipt_creation_date_pst,omitempty"`
-	RequestDate                NullableString `json:"request_date,omitempty"`
-	RequestDateMs              NullableString `json:"request_date_ms,omitempty"`
-	RequestDatePst             NullableString `json:"request_date_pst,omitempty"`
-	OriginalPurchaseDate       NullableString `json:"original_purchase_date,omitempty"`
-	OriginalPurchaseDateMs     NullableString `json:"original_purchase_date_ms,omitempty"`
-	OriginalPurchaseDatePst    NullableString `json:"original_purchase_date_pst,omitempty"`
+	ReceiptType NullableString `json:"receipt_type,omitempty"`
+	AdamId *int64 `json:"adam_id,omitempty"`
+	AppItemId *int64 `json:"app_item_id,omitempty"`
+	BundleId NullableString `json:"bundle_id,omitempty"`
+	ApplicationVersion NullableString `json:"application_version,omitempty"`
+	DownloadId *int64 `json:"download_id,omitempty"`
+	VersionExternalIdentifier *int32 `json:"version_external_identifier,omitempty"`
+	ReceiptCreationDate NullableString `json:"receipt_creation_date,omitempty"`
+	ReceiptCreationDateMs NullableString `json:"receipt_creation_date_ms,omitempty"`
+	ReceiptCreationDatePst NullableString `json:"receipt_creation_date_pst,omitempty"`
+	RequestDate NullableString `json:"request_date,omitempty"`
+	RequestDateMs NullableString `json:"request_date_ms,omitempty"`
+	RequestDatePst NullableString `json:"request_date_pst,omitempty"`
+	OriginalPurchaseDate NullableString `json:"original_purchase_date,omitempty"`
+	OriginalPurchaseDateMs NullableString `json:"original_purchase_date_ms,omitempty"`
+	OriginalPurchaseDatePst NullableString `json:"original_purchase_date_pst,omitempty"`
 	OriginalApplicationVersion NullableString `json:"original_application_version,omitempty"`
-	InApp                      []InApp        `json:"in_app,omitempty"`
+	InApp []InApp `json:"in_app,omitempty"`
 }
 
 // NewReceipt instantiates a new Receipt object
@@ -88,7 +88,6 @@ func (o *Receipt) HasReceiptType() bool {
 func (o *Receipt) SetReceiptType(v string) {
 	o.ReceiptType.Set(&v)
 }
-
 // SetReceiptTypeNil sets the value for ReceiptType to be an explicit nil
 func (o *Receipt) SetReceiptTypeNil() {
 	o.ReceiptType.Set(nil)
@@ -195,7 +194,6 @@ func (o *Receipt) HasBundleId() bool {
 func (o *Receipt) SetBundleId(v string) {
 	o.BundleId.Set(&v)
 }
-
 // SetBundleIdNil sets the value for BundleId to be an explicit nil
 func (o *Receipt) SetBundleIdNil() {
 	o.BundleId.Set(nil)
@@ -238,7 +236,6 @@ func (o *Receipt) HasApplicationVersion() bool {
 func (o *Receipt) SetApplicationVersion(v string) {
 	o.ApplicationVersion.Set(&v)
 }
-
 // SetApplicationVersionNil sets the value for ApplicationVersion to be an explicit nil
 func (o *Receipt) SetApplicationVersionNil() {
 	o.ApplicationVersion.Set(nil)
@@ -345,7 +342,6 @@ func (o *Receipt) HasReceiptCreationDate() bool {
 func (o *Receipt) SetReceiptCreationDate(v string) {
 	o.ReceiptCreationDate.Set(&v)
 }
-
 // SetReceiptCreationDateNil sets the value for ReceiptCreationDate to be an explicit nil
 func (o *Receipt) SetReceiptCreationDateNil() {
 	o.ReceiptCreationDate.Set(nil)
@@ -388,7 +384,6 @@ func (o *Receipt) HasReceiptCreationDateMs() bool {
 func (o *Receipt) SetReceiptCreationDateMs(v string) {
 	o.ReceiptCreationDateMs.Set(&v)
 }
-
 // SetReceiptCreationDateMsNil sets the value for ReceiptCreationDateMs to be an explicit nil
 func (o *Receipt) SetReceiptCreationDateMsNil() {
 	o.ReceiptCreationDateMs.Set(nil)
@@ -431,7 +426,6 @@ func (o *Receipt) HasReceiptCreationDatePst() bool {
 func (o *Receipt) SetReceiptCreationDatePst(v string) {
 	o.ReceiptCreationDatePst.Set(&v)
 }
-
 // SetReceiptCreationDatePstNil sets the value for ReceiptCreationDatePst to be an explicit nil
 func (o *Receipt) SetReceiptCreationDatePstNil() {
 	o.ReceiptCreationDatePst.Set(nil)
@@ -474,7 +468,6 @@ func (o *Receipt) HasRequestDate() bool {
 func (o *Receipt) SetRequestDate(v string) {
 	o.RequestDate.Set(&v)
 }
-
 // SetRequestDateNil sets the value for RequestDate to be an explicit nil
 func (o *Receipt) SetRequestDateNil() {
 	o.RequestDate.Set(nil)
@@ -517,7 +510,6 @@ func (o *Receipt) HasRequestDateMs() bool {
 func (o *Receipt) SetRequestDateMs(v string) {
 	o.RequestDateMs.Set(&v)
 }
-
 // SetRequestDateMsNil sets the value for RequestDateMs to be an explicit nil
 func (o *Receipt) SetRequestDateMsNil() {
 	o.RequestDateMs.Set(nil)
@@ -560,7 +552,6 @@ func (o *Receipt) HasRequestDatePst() bool {
 func (o *Receipt) SetRequestDatePst(v string) {
 	o.RequestDatePst.Set(&v)
 }
-
 // SetRequestDatePstNil sets the value for RequestDatePst to be an explicit nil
 func (o *Receipt) SetRequestDatePstNil() {
 	o.RequestDatePst.Set(nil)
@@ -603,7 +594,6 @@ func (o *Receipt) HasOriginalPurchaseDate() bool {
 func (o *Receipt) SetOriginalPurchaseDate(v string) {
 	o.OriginalPurchaseDate.Set(&v)
 }
-
 // SetOriginalPurchaseDateNil sets the value for OriginalPurchaseDate to be an explicit nil
 func (o *Receipt) SetOriginalPurchaseDateNil() {
 	o.OriginalPurchaseDate.Set(nil)
@@ -646,7 +636,6 @@ func (o *Receipt) HasOriginalPurchaseDateMs() bool {
 func (o *Receipt) SetOriginalPurchaseDateMs(v string) {
 	o.OriginalPurchaseDateMs.Set(&v)
 }
-
 // SetOriginalPurchaseDateMsNil sets the value for OriginalPurchaseDateMs to be an explicit nil
 func (o *Receipt) SetOriginalPurchaseDateMsNil() {
 	o.OriginalPurchaseDateMs.Set(nil)
@@ -689,7 +678,6 @@ func (o *Receipt) HasOriginalPurchaseDatePst() bool {
 func (o *Receipt) SetOriginalPurchaseDatePst(v string) {
 	o.OriginalPurchaseDatePst.Set(&v)
 }
-
 // SetOriginalPurchaseDatePstNil sets the value for OriginalPurchaseDatePst to be an explicit nil
 func (o *Receipt) SetOriginalPurchaseDatePstNil() {
 	o.OriginalPurchaseDatePst.Set(nil)
@@ -732,7 +720,6 @@ func (o *Receipt) HasOriginalApplicationVersion() bool {
 func (o *Receipt) SetOriginalApplicationVersion(v string) {
 	o.OriginalApplicationVersion.Set(&v)
 }
-
 // SetOriginalApplicationVersionNil sets the value for OriginalApplicationVersion to be an explicit nil
 func (o *Receipt) SetOriginalApplicationVersionNil() {
 	o.OriginalApplicationVersion.Set(nil)
@@ -777,7 +764,7 @@ func (o *Receipt) SetInApp(v []InApp) {
 }
 
 func (o Receipt) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -878,3 +865,5 @@ func (v *NullableReceipt) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

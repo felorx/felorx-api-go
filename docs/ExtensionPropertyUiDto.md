@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OnTable** | Pointer to [**ExtensionPropertyUiTableDto**](ExtensionPropertyUiTableDto.md) |  | [optional]
-**OnCreateForm** | Pointer to [**ExtensionPropertyUiFormDto**](ExtensionPropertyUiFormDto.md) |  | [optional]
-**OnEditForm** | Pointer to [**ExtensionPropertyUiFormDto**](ExtensionPropertyUiFormDto.md) |  | [optional]
-**Lookup** | Pointer to [**ExtensionPropertyUiLookupDto**](ExtensionPropertyUiLookupDto.md) |  | [optional]
+**OnTable** | Pointer to [**ExtensionPropertyUiTableDto**](ExtensionPropertyUiTableDto.md) |  | [optional] 
+**OnCreateForm** | Pointer to [**ExtensionPropertyUiFormDto**](ExtensionPropertyUiFormDto.md) |  | [optional] 
+**OnEditForm** | Pointer to [**ExtensionPropertyUiFormDto**](ExtensionPropertyUiFormDto.md) |  | [optional] 
+**Lookup** | Pointer to [**ExtensionPropertyUiLookupDto**](ExtensionPropertyUiLookupDto.md) |  | [optional] 
 
 ## Methods
 

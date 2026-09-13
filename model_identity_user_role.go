@@ -20,8 +20,8 @@ var _ MappedNullable = &IdentityUserRole{}
 // IdentityUserRole struct for IdentityUserRole
 type IdentityUserRole struct {
 	TenantId NullableString `json:"tenantId,omitempty"`
-	UserId   *string        `json:"userId,omitempty"`
-	RoleId   *string        `json:"roleId,omitempty"`
+	UserId *string `json:"userId,omitempty"`
+	RoleId *string `json:"roleId,omitempty"`
 }
 
 // NewIdentityUserRole instantiates a new IdentityUserRole object
@@ -73,7 +73,6 @@ func (o *IdentityUserRole) HasTenantId() bool {
 func (o *IdentityUserRole) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUserRole) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -149,7 +148,7 @@ func (o *IdentityUserRole) SetRoleId(v string) {
 }
 
 func (o IdentityUserRole) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -205,3 +204,5 @@ func (v *NullableIdentityUserRole) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

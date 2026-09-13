@@ -20,17 +20,17 @@ type AppFramework string
 
 // List of AppFramework
 const (
-	APPFRAMEWORK_FLUTTER        AppFramework = "Flutter"
-	APPFRAMEWORK_REACT_NATIVE   AppFramework = "ReactNative"
-	APPFRAMEWORK_REACT          AppFramework = "React"
-	APPFRAMEWORK_NATIVE_IOS     AppFramework = "NativeIOS"
+	APPFRAMEWORK_FLUTTER AppFramework = "Flutter"
+	APPFRAMEWORK_REACT_NATIVE AppFramework = "ReactNative"
+	APPFRAMEWORK_REACT AppFramework = "React"
+	APPFRAMEWORK_NATIVE_IOS AppFramework = "NativeIOS"
 	APPFRAMEWORK_NATIVE_ANDROID AppFramework = "NativeAndroid"
 	APPFRAMEWORK_NATIVE_WINDOWS AppFramework = "NativeWindows"
-	APPFRAMEWORK_NATIVE_MAC_OS  AppFramework = "NativeMacOS"
-	APPFRAMEWORK_IONIC          AppFramework = "Ionic"
-	APPFRAMEWORK_ASP_NET_CORE   AppFramework = "AspNetCore"
-	APPFRAMEWORK_OTHER          AppFramework = "Other"
-	APPFRAMEWORK_GOLANG         AppFramework = "Golang"
+	APPFRAMEWORK_NATIVE_MAC_OS AppFramework = "NativeMacOS"
+	APPFRAMEWORK_IONIC AppFramework = "Ionic"
+	APPFRAMEWORK_ASP_NET_CORE AppFramework = "AspNetCore"
+	APPFRAMEWORK_OTHER AppFramework = "Other"
+	APPFRAMEWORK_GOLANG AppFramework = "Golang"
 )
 
 // All allowed values of AppFramework enum
@@ -126,3 +126,4 @@ func (v *NullableAppFramework) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

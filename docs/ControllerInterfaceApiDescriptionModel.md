@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **NullableString** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**Methods** | Pointer to [**[]InterfaceMethodApiDescriptionModel**](InterfaceMethodApiDescriptionModel.md) |  | [optional]
+**Type** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**Methods** | Pointer to [**[]InterfaceMethodApiDescriptionModel**](InterfaceMethodApiDescriptionModel.md) |  | [optional] 
 
 ## Methods
 

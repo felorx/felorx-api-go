@@ -19,19 +19,19 @@ var _ MappedNullable = &CreateOrUpdateAppPlanPriceDto{}
 
 // CreateOrUpdateAppPlanPriceDto struct for CreateOrUpdateAppPlanPriceDto
 type CreateOrUpdateAppPlanPriceDto struct {
-	AppId          *string           `json:"appId,omitempty"`
-	PricingId      *string           `json:"pricingId,omitempty"`
-	Period         *SubBillingPeriod `json:"period,omitempty"`
-	Mode           *BillingMode      `json:"mode,omitempty"`
-	Market         *BillingMarket    `json:"market,omitempty"`
-	Currency       NullableString    `json:"currency,omitempty"`
-	Amount         *float64          `json:"amount,omitempty"`
-	DiscountAmount NullableFloat64   `json:"discountAmount,omitempty"`
-	DurationDays   NullableInt32     `json:"durationDays,omitempty"`
-	IsEnabled      *bool             `json:"isEnabled,omitempty"`
-	SortIndex      *int32            `json:"sortIndex,omitempty"`
-	DisplayName    NullableString    `json:"displayName,omitempty"`
-	Description    NullableString    `json:"description,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	PricingId *string `json:"pricingId,omitempty"`
+	Period *SubBillingPeriod `json:"period,omitempty"`
+	Mode *BillingMode `json:"mode,omitempty"`
+	Market *BillingMarket `json:"market,omitempty"`
+	Currency NullableString `json:"currency,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	DiscountAmount NullableFloat64 `json:"discountAmount,omitempty"`
+	DurationDays NullableInt32 `json:"durationDays,omitempty"`
+	IsEnabled *bool `json:"isEnabled,omitempty"`
+	SortIndex *int32 `json:"sortIndex,omitempty"`
+	DisplayName NullableString `json:"displayName,omitempty"`
+	Description NullableString `json:"description,omitempty"`
 }
 
 // NewCreateOrUpdateAppPlanPriceDto instantiates a new CreateOrUpdateAppPlanPriceDto object
@@ -243,7 +243,6 @@ func (o *CreateOrUpdateAppPlanPriceDto) HasCurrency() bool {
 func (o *CreateOrUpdateAppPlanPriceDto) SetCurrency(v string) {
 	o.Currency.Set(&v)
 }
-
 // SetCurrencyNil sets the value for Currency to be an explicit nil
 func (o *CreateOrUpdateAppPlanPriceDto) SetCurrencyNil() {
 	o.Currency.Set(nil)
@@ -318,7 +317,6 @@ func (o *CreateOrUpdateAppPlanPriceDto) HasDiscountAmount() bool {
 func (o *CreateOrUpdateAppPlanPriceDto) SetDiscountAmount(v float64) {
 	o.DiscountAmount.Set(&v)
 }
-
 // SetDiscountAmountNil sets the value for DiscountAmount to be an explicit nil
 func (o *CreateOrUpdateAppPlanPriceDto) SetDiscountAmountNil() {
 	o.DiscountAmount.Set(nil)
@@ -361,7 +359,6 @@ func (o *CreateOrUpdateAppPlanPriceDto) HasDurationDays() bool {
 func (o *CreateOrUpdateAppPlanPriceDto) SetDurationDays(v int32) {
 	o.DurationDays.Set(&v)
 }
-
 // SetDurationDaysNil sets the value for DurationDays to be an explicit nil
 func (o *CreateOrUpdateAppPlanPriceDto) SetDurationDaysNil() {
 	o.DurationDays.Set(nil)
@@ -468,7 +465,6 @@ func (o *CreateOrUpdateAppPlanPriceDto) HasDisplayName() bool {
 func (o *CreateOrUpdateAppPlanPriceDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOrUpdateAppPlanPriceDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -511,7 +507,6 @@ func (o *CreateOrUpdateAppPlanPriceDto) HasDescription() bool {
 func (o *CreateOrUpdateAppPlanPriceDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *CreateOrUpdateAppPlanPriceDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -523,7 +518,7 @@ func (o *CreateOrUpdateAppPlanPriceDto) UnsetDescription() {
 }
 
 func (o CreateOrUpdateAppPlanPriceDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -609,3 +604,5 @@ func (v *NullableCreateOrUpdateAppPlanPriceDto) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

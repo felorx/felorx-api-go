@@ -19,15 +19,15 @@ var _ MappedNullable = &EmailSettingsDto{}
 
 // EmailSettingsDto struct for EmailSettingsDto
 type EmailSettingsDto struct {
-	SmtpHost                  NullableString `json:"smtpHost,omitempty"`
-	SmtpPort                  *int32         `json:"smtpPort,omitempty"`
-	SmtpUserName              NullableString `json:"smtpUserName,omitempty"`
-	SmtpPassword              NullableString `json:"smtpPassword,omitempty"`
-	SmtpDomain                NullableString `json:"smtpDomain,omitempty"`
-	SmtpEnableSsl             *bool          `json:"smtpEnableSsl,omitempty"`
-	SmtpUseDefaultCredentials *bool          `json:"smtpUseDefaultCredentials,omitempty"`
-	DefaultFromAddress        NullableString `json:"defaultFromAddress,omitempty"`
-	DefaultFromDisplayName    NullableString `json:"defaultFromDisplayName,omitempty"`
+	SmtpHost NullableString `json:"smtpHost,omitempty"`
+	SmtpPort *int32 `json:"smtpPort,omitempty"`
+	SmtpUserName NullableString `json:"smtpUserName,omitempty"`
+	SmtpPassword NullableString `json:"smtpPassword,omitempty"`
+	SmtpDomain NullableString `json:"smtpDomain,omitempty"`
+	SmtpEnableSsl *bool `json:"smtpEnableSsl,omitempty"`
+	SmtpUseDefaultCredentials *bool `json:"smtpUseDefaultCredentials,omitempty"`
+	DefaultFromAddress NullableString `json:"defaultFromAddress,omitempty"`
+	DefaultFromDisplayName NullableString `json:"defaultFromDisplayName,omitempty"`
 }
 
 // NewEmailSettingsDto instantiates a new EmailSettingsDto object
@@ -79,7 +79,6 @@ func (o *EmailSettingsDto) HasSmtpHost() bool {
 func (o *EmailSettingsDto) SetSmtpHost(v string) {
 	o.SmtpHost.Set(&v)
 }
-
 // SetSmtpHostNil sets the value for SmtpHost to be an explicit nil
 func (o *EmailSettingsDto) SetSmtpHostNil() {
 	o.SmtpHost.Set(nil)
@@ -154,7 +153,6 @@ func (o *EmailSettingsDto) HasSmtpUserName() bool {
 func (o *EmailSettingsDto) SetSmtpUserName(v string) {
 	o.SmtpUserName.Set(&v)
 }
-
 // SetSmtpUserNameNil sets the value for SmtpUserName to be an explicit nil
 func (o *EmailSettingsDto) SetSmtpUserNameNil() {
 	o.SmtpUserName.Set(nil)
@@ -197,7 +195,6 @@ func (o *EmailSettingsDto) HasSmtpPassword() bool {
 func (o *EmailSettingsDto) SetSmtpPassword(v string) {
 	o.SmtpPassword.Set(&v)
 }
-
 // SetSmtpPasswordNil sets the value for SmtpPassword to be an explicit nil
 func (o *EmailSettingsDto) SetSmtpPasswordNil() {
 	o.SmtpPassword.Set(nil)
@@ -240,7 +237,6 @@ func (o *EmailSettingsDto) HasSmtpDomain() bool {
 func (o *EmailSettingsDto) SetSmtpDomain(v string) {
 	o.SmtpDomain.Set(&v)
 }
-
 // SetSmtpDomainNil sets the value for SmtpDomain to be an explicit nil
 func (o *EmailSettingsDto) SetSmtpDomainNil() {
 	o.SmtpDomain.Set(nil)
@@ -347,7 +343,6 @@ func (o *EmailSettingsDto) HasDefaultFromAddress() bool {
 func (o *EmailSettingsDto) SetDefaultFromAddress(v string) {
 	o.DefaultFromAddress.Set(&v)
 }
-
 // SetDefaultFromAddressNil sets the value for DefaultFromAddress to be an explicit nil
 func (o *EmailSettingsDto) SetDefaultFromAddressNil() {
 	o.DefaultFromAddress.Set(nil)
@@ -390,7 +385,6 @@ func (o *EmailSettingsDto) HasDefaultFromDisplayName() bool {
 func (o *EmailSettingsDto) SetDefaultFromDisplayName(v string) {
 	o.DefaultFromDisplayName.Set(&v)
 }
-
 // SetDefaultFromDisplayNameNil sets the value for DefaultFromDisplayName to be an explicit nil
 func (o *EmailSettingsDto) SetDefaultFromDisplayNameNil() {
 	o.DefaultFromDisplayName.Set(nil)
@@ -402,7 +396,7 @@ func (o *EmailSettingsDto) UnsetDefaultFromDisplayName() {
 }
 
 func (o EmailSettingsDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -476,3 +470,5 @@ func (v *NullableEmailSettingsDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -20,14 +20,14 @@ var _ MappedNullable = &NotificationInfoDto{}
 
 // NotificationInfoDto struct for NotificationInfoDto
 type NotificationInfoDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
 }
 
 // NewNotificationInfoDto instantiates a new NotificationInfoDto object
@@ -143,7 +143,6 @@ func (o *NotificationInfoDto) HasCreatorId() bool {
 func (o *NotificationInfoDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *NotificationInfoDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -186,7 +185,6 @@ func (o *NotificationInfoDto) HasLastModificationTime() bool {
 func (o *NotificationInfoDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *NotificationInfoDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -229,7 +227,6 @@ func (o *NotificationInfoDto) HasLastModifierId() bool {
 func (o *NotificationInfoDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *NotificationInfoDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -304,7 +301,6 @@ func (o *NotificationInfoDto) HasDeleterId() bool {
 func (o *NotificationInfoDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *NotificationInfoDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -347,7 +343,6 @@ func (o *NotificationInfoDto) HasDeletionTime() bool {
 func (o *NotificationInfoDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *NotificationInfoDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -359,7 +354,7 @@ func (o *NotificationInfoDto) UnsetDeletionTime() {
 }
 
 func (o NotificationInfoDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -430,3 +425,5 @@ func (v *NullableNotificationInfoDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

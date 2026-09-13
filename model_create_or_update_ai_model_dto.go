@@ -19,12 +19,12 @@ var _ MappedNullable = &CreateOrUpdateAiModelDto{}
 
 // CreateOrUpdateAiModelDto struct for CreateOrUpdateAiModelDto
 type CreateOrUpdateAiModelDto struct {
-	RouteName         NullableString    `json:"route_name,omitempty"`
-	Name              NullableString    `json:"name,omitempty"`
-	DisplayName       NullableString    `json:"display_name,omitempty"`
-	Capabilities      []AiCapability    `json:"capabilities,omitempty"`
-	Enabled           *bool             `json:"enabled,omitempty"`
-	IsDefault         *bool             `json:"is_default,omitempty"`
+	RouteName NullableString `json:"route_name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	DisplayName NullableString `json:"display_name,omitempty"`
+	Capabilities []AiCapability `json:"capabilities,omitempty"`
+	Enabled *bool `json:"enabled,omitempty"`
+	IsDefault *bool `json:"is_default,omitempty"`
 	DefaultParameters map[string]string `json:"default_parameters,omitempty"`
 }
 
@@ -77,7 +77,6 @@ func (o *CreateOrUpdateAiModelDto) HasRouteName() bool {
 func (o *CreateOrUpdateAiModelDto) SetRouteName(v string) {
 	o.RouteName.Set(&v)
 }
-
 // SetRouteNameNil sets the value for RouteName to be an explicit nil
 func (o *CreateOrUpdateAiModelDto) SetRouteNameNil() {
 	o.RouteName.Set(nil)
@@ -120,7 +119,6 @@ func (o *CreateOrUpdateAiModelDto) HasName() bool {
 func (o *CreateOrUpdateAiModelDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *CreateOrUpdateAiModelDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -163,7 +161,6 @@ func (o *CreateOrUpdateAiModelDto) HasDisplayName() bool {
 func (o *CreateOrUpdateAiModelDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *CreateOrUpdateAiModelDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -305,7 +302,7 @@ func (o *CreateOrUpdateAiModelDto) SetDefaultParameters(v map[string]string) {
 }
 
 func (o CreateOrUpdateAiModelDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -373,3 +370,5 @@ func (v *NullableCreateOrUpdateAiModelDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

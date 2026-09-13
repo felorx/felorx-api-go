@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,15 +21,15 @@ var _ MappedNullable = &UpdateEmailSettingsDto{}
 
 // UpdateEmailSettingsDto struct for UpdateEmailSettingsDto
 type UpdateEmailSettingsDto struct {
-	SmtpHost                  NullableString `json:"smtpHost,omitempty"`
-	SmtpPort                  *int32         `json:"smtpPort,omitempty"`
-	SmtpUserName              NullableString `json:"smtpUserName,omitempty"`
-	SmtpPassword              NullableString `json:"smtpPassword,omitempty"`
-	SmtpDomain                NullableString `json:"smtpDomain,omitempty"`
-	SmtpEnableSsl             *bool          `json:"smtpEnableSsl,omitempty"`
-	SmtpUseDefaultCredentials *bool          `json:"smtpUseDefaultCredentials,omitempty"`
-	DefaultFromAddress        string         `json:"defaultFromAddress"`
-	DefaultFromDisplayName    string         `json:"defaultFromDisplayName"`
+	SmtpHost NullableString `json:"smtpHost,omitempty"`
+	SmtpPort *int32 `json:"smtpPort,omitempty"`
+	SmtpUserName NullableString `json:"smtpUserName,omitempty"`
+	SmtpPassword NullableString `json:"smtpPassword,omitempty"`
+	SmtpDomain NullableString `json:"smtpDomain,omitempty"`
+	SmtpEnableSsl *bool `json:"smtpEnableSsl,omitempty"`
+	SmtpUseDefaultCredentials *bool `json:"smtpUseDefaultCredentials,omitempty"`
+	DefaultFromAddress string `json:"defaultFromAddress"`
+	DefaultFromDisplayName string `json:"defaultFromDisplayName"`
 }
 
 type _UpdateEmailSettingsDto UpdateEmailSettingsDto
@@ -85,7 +85,6 @@ func (o *UpdateEmailSettingsDto) HasSmtpHost() bool {
 func (o *UpdateEmailSettingsDto) SetSmtpHost(v string) {
 	o.SmtpHost.Set(&v)
 }
-
 // SetSmtpHostNil sets the value for SmtpHost to be an explicit nil
 func (o *UpdateEmailSettingsDto) SetSmtpHostNil() {
 	o.SmtpHost.Set(nil)
@@ -160,7 +159,6 @@ func (o *UpdateEmailSettingsDto) HasSmtpUserName() bool {
 func (o *UpdateEmailSettingsDto) SetSmtpUserName(v string) {
 	o.SmtpUserName.Set(&v)
 }
-
 // SetSmtpUserNameNil sets the value for SmtpUserName to be an explicit nil
 func (o *UpdateEmailSettingsDto) SetSmtpUserNameNil() {
 	o.SmtpUserName.Set(nil)
@@ -203,7 +201,6 @@ func (o *UpdateEmailSettingsDto) HasSmtpPassword() bool {
 func (o *UpdateEmailSettingsDto) SetSmtpPassword(v string) {
 	o.SmtpPassword.Set(&v)
 }
-
 // SetSmtpPasswordNil sets the value for SmtpPassword to be an explicit nil
 func (o *UpdateEmailSettingsDto) SetSmtpPasswordNil() {
 	o.SmtpPassword.Set(nil)
@@ -246,7 +243,6 @@ func (o *UpdateEmailSettingsDto) HasSmtpDomain() bool {
 func (o *UpdateEmailSettingsDto) SetSmtpDomain(v string) {
 	o.SmtpDomain.Set(&v)
 }
-
 // SetSmtpDomainNil sets the value for SmtpDomain to be an explicit nil
 func (o *UpdateEmailSettingsDto) SetSmtpDomainNil() {
 	o.SmtpDomain.Set(nil)
@@ -370,7 +366,7 @@ func (o *UpdateEmailSettingsDto) SetDefaultFromDisplayName(v string) {
 }
 
 func (o UpdateEmailSettingsDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -419,10 +415,10 @@ func (o *UpdateEmailSettingsDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -478,3 +474,5 @@ func (v *NullableUpdateEmailSettingsDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

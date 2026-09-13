@@ -20,30 +20,30 @@ var _ MappedNullable = &IdentityUserDto{}
 
 // IdentityUserDto struct for IdentityUserDto
 type IdentityUserDto struct {
-	ExtraProperties        map[string]interface{} `json:"extraProperties,omitempty"`
-	Id                     *string                `json:"id,omitempty"`
-	CreationTime           *time.Time             `json:"creationTime,omitempty"`
-	CreatorId              NullableString         `json:"creatorId,omitempty"`
-	LastModificationTime   NullableTime           `json:"lastModificationTime,omitempty"`
-	LastModifierId         NullableString         `json:"lastModifierId,omitempty"`
-	IsDeleted              *bool                  `json:"isDeleted,omitempty"`
-	DeleterId              NullableString         `json:"deleterId,omitempty"`
-	DeletionTime           NullableTime           `json:"deletionTime,omitempty"`
-	TenantId               NullableString         `json:"tenantId,omitempty"`
-	UserName               NullableString         `json:"userName,omitempty"`
-	Name                   NullableString         `json:"name,omitempty"`
-	Surname                NullableString         `json:"surname,omitempty"`
-	Email                  NullableString         `json:"email,omitempty"`
-	EmailConfirmed         *bool                  `json:"emailConfirmed,omitempty"`
-	PhoneNumber            NullableString         `json:"phoneNumber,omitempty"`
-	PhoneNumberConfirmed   *bool                  `json:"phoneNumberConfirmed,omitempty"`
-	IsActive               *bool                  `json:"isActive,omitempty"`
-	LockoutEnabled         *bool                  `json:"lockoutEnabled,omitempty"`
-	AccessFailedCount      *int32                 `json:"accessFailedCount,omitempty"`
-	LockoutEnd             NullableTime           `json:"lockoutEnd,omitempty"`
-	ConcurrencyStamp       NullableString         `json:"concurrencyStamp,omitempty"`
-	EntityVersion          *int32                 `json:"entityVersion,omitempty"`
-	LastPasswordChangeTime NullableTime           `json:"lastPasswordChangeTime,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	TenantId NullableString `json:"tenantId,omitempty"`
+	UserName NullableString `json:"userName,omitempty"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	Email NullableString `json:"email,omitempty"`
+	EmailConfirmed *bool `json:"emailConfirmed,omitempty"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	PhoneNumberConfirmed *bool `json:"phoneNumberConfirmed,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
+	LockoutEnabled *bool `json:"lockoutEnabled,omitempty"`
+	AccessFailedCount *int32 `json:"accessFailedCount,omitempty"`
+	LockoutEnd NullableTime `json:"lockoutEnd,omitempty"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
+	EntityVersion *int32 `json:"entityVersion,omitempty"`
+	LastPasswordChangeTime NullableTime `json:"lastPasswordChangeTime,omitempty"`
 }
 
 // NewIdentityUserDto instantiates a new IdentityUserDto object
@@ -192,7 +192,6 @@ func (o *IdentityUserDto) HasCreatorId() bool {
 func (o *IdentityUserDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *IdentityUserDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -235,7 +234,6 @@ func (o *IdentityUserDto) HasLastModificationTime() bool {
 func (o *IdentityUserDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *IdentityUserDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -278,7 +276,6 @@ func (o *IdentityUserDto) HasLastModifierId() bool {
 func (o *IdentityUserDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *IdentityUserDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -353,7 +350,6 @@ func (o *IdentityUserDto) HasDeleterId() bool {
 func (o *IdentityUserDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *IdentityUserDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -396,7 +392,6 @@ func (o *IdentityUserDto) HasDeletionTime() bool {
 func (o *IdentityUserDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *IdentityUserDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -439,7 +434,6 @@ func (o *IdentityUserDto) HasTenantId() bool {
 func (o *IdentityUserDto) SetTenantId(v string) {
 	o.TenantId.Set(&v)
 }
-
 // SetTenantIdNil sets the value for TenantId to be an explicit nil
 func (o *IdentityUserDto) SetTenantIdNil() {
 	o.TenantId.Set(nil)
@@ -482,7 +476,6 @@ func (o *IdentityUserDto) HasUserName() bool {
 func (o *IdentityUserDto) SetUserName(v string) {
 	o.UserName.Set(&v)
 }
-
 // SetUserNameNil sets the value for UserName to be an explicit nil
 func (o *IdentityUserDto) SetUserNameNil() {
 	o.UserName.Set(nil)
@@ -525,7 +518,6 @@ func (o *IdentityUserDto) HasName() bool {
 func (o *IdentityUserDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IdentityUserDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -568,7 +560,6 @@ func (o *IdentityUserDto) HasSurname() bool {
 func (o *IdentityUserDto) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *IdentityUserDto) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -611,7 +602,6 @@ func (o *IdentityUserDto) HasEmail() bool {
 func (o *IdentityUserDto) SetEmail(v string) {
 	o.Email.Set(&v)
 }
-
 // SetEmailNil sets the value for Email to be an explicit nil
 func (o *IdentityUserDto) SetEmailNil() {
 	o.Email.Set(nil)
@@ -686,7 +676,6 @@ func (o *IdentityUserDto) HasPhoneNumber() bool {
 func (o *IdentityUserDto) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *IdentityUserDto) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -857,7 +846,6 @@ func (o *IdentityUserDto) HasLockoutEnd() bool {
 func (o *IdentityUserDto) SetLockoutEnd(v time.Time) {
 	o.LockoutEnd.Set(&v)
 }
-
 // SetLockoutEndNil sets the value for LockoutEnd to be an explicit nil
 func (o *IdentityUserDto) SetLockoutEndNil() {
 	o.LockoutEnd.Set(nil)
@@ -900,7 +888,6 @@ func (o *IdentityUserDto) HasConcurrencyStamp() bool {
 func (o *IdentityUserDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *IdentityUserDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -975,7 +962,6 @@ func (o *IdentityUserDto) HasLastPasswordChangeTime() bool {
 func (o *IdentityUserDto) SetLastPasswordChangeTime(v time.Time) {
 	o.LastPasswordChangeTime.Set(&v)
 }
-
 // SetLastPasswordChangeTimeNil sets the value for LastPasswordChangeTime to be an explicit nil
 func (o *IdentityUserDto) SetLastPasswordChangeTimeNil() {
 	o.LastPasswordChangeTime.Set(nil)
@@ -987,7 +973,7 @@ func (o *IdentityUserDto) UnsetLastPasswordChangeTime() {
 }
 
 func (o IdentityUserDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1106,3 +1092,5 @@ func (v *NullableIdentityUserDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

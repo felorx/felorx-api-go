@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Entities** | Pointer to [**map[string]EntityExtensionDto**](EntityExtensionDto.md) |  | [optional]
-**Configuration** | Pointer to **map[string]interface{}** |  | [optional]
+**Entities** | Pointer to [**map[string]EntityExtensionDto**](EntityExtensionDto.md) |  | [optional] 
+**Configuration** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods
 

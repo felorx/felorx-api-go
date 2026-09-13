@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_DeployRecordAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	t.Run("Test DeployRecordAPIService CreateDeployRecord", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.DeployRecordAPI.CreateDeployRecord(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	t.Run("Test DeployRecordAPIService DeleteDeployRecordById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -47,65 +47,9 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test DeployRecordAPIService DeployRecordGetLatest", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var appId string
-
-		resp, httpRes, err := apiClient.DeployRecordAPI.DeployRecordGetLatest(context.Background(), appId).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test DeployRecordAPIService DeployRecordMarkAsCanceled", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var id string
-
-		resp, httpRes, err := apiClient.DeployRecordAPI.DeployRecordMarkAsCanceled(context.Background(), id).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test DeployRecordAPIService DeployRecordMarkAsFailed", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var id string
-
-		resp, httpRes, err := apiClient.DeployRecordAPI.DeployRecordMarkAsFailed(context.Background(), id).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
-	t.Run("Test DeployRecordAPIService DeployRecordMarkAsSucceeded", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var id string
-
-		resp, httpRes, err := apiClient.DeployRecordAPI.DeployRecordMarkAsSucceeded(context.Background(), id).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
 	t.Run("Test DeployRecordAPIService GetByCiDeployId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var ciDeployId string
 
@@ -119,7 +63,7 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	t.Run("Test DeployRecordAPIService GetDeployRecordById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -133,7 +77,7 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	t.Run("Test DeployRecordAPIService GetDeployRecordList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.DeployRecordAPI.GetDeployRecordList(context.Background()).Execute()
 
@@ -143,9 +87,23 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test DeployRecordAPIService GetLatestGetApiAppDeployRecordLatestAppId", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var appId string
+
+		resp, httpRes, err := apiClient.DeployRecordAPI.GetLatestGetApiAppDeployRecordLatestAppId(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DeployRecordAPIService GetListByBuildRecordId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var buildRecordId string
 
@@ -157,9 +115,23 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test DeployRecordAPIService MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.DeployRecordAPI.MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DeployRecordAPIService MarkAsDeploying", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -171,9 +143,37 @@ func Test_felorx_DeployRecordAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test DeployRecordAPIService MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.DeployRecordAPI.MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test DeployRecordAPIService MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var id string
+
+		resp, httpRes, err := apiClient.DeployRecordAPI.MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(context.Background(), id).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test DeployRecordAPIService UpdateDeployRecord", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

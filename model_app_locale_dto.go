@@ -20,26 +20,26 @@ var _ MappedNullable = &AppLocaleDto{}
 
 // AppLocaleDto struct for AppLocaleDto
 type AppLocaleDto struct {
-	Id                   *string        `json:"id,omitempty"`
-	CreationTime         *time.Time     `json:"creationTime,omitempty"`
-	CreatorId            NullableString `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime   `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool          `json:"isDeleted,omitempty"`
-	DeleterId            NullableString `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime   `json:"deletionTime,omitempty"`
-	AppId                *string        `json:"appId,omitempty"`
-	LangCode             NullableString `json:"langCode,omitempty"`
-	CountryCode          NullableString `json:"countryCode,omitempty"`
-	Title                NullableString `json:"title,omitempty"`
-	Subtitle             NullableString `json:"subtitle,omitempty"`
-	ShortDesc            NullableString `json:"shortDesc,omitempty"`
-	FullDesc             NullableString `json:"fullDesc,omitempty"`
-	Keywords             NullableString `json:"keywords,omitempty"`
-	PromoText            NullableString `json:"promoText,omitempty"`
-	SupportUrl           NullableString `json:"supportUrl,omitempty"`
-	PrivacyUrl           NullableString `json:"privacyUrl,omitempty"`
-	ReleaseNote          NullableString `json:"releaseNote,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	LangCode NullableString `json:"langCode,omitempty"`
+	CountryCode NullableString `json:"countryCode,omitempty"`
+	Title NullableString `json:"title,omitempty"`
+	Subtitle NullableString `json:"subtitle,omitempty"`
+	ShortDesc NullableString `json:"shortDesc,omitempty"`
+	FullDesc NullableString `json:"fullDesc,omitempty"`
+	Keywords NullableString `json:"keywords,omitempty"`
+	PromoText NullableString `json:"promoText,omitempty"`
+	SupportUrl NullableString `json:"supportUrl,omitempty"`
+	PrivacyUrl NullableString `json:"privacyUrl,omitempty"`
+	ReleaseNote NullableString `json:"releaseNote,omitempty"`
 }
 
 // NewAppLocaleDto instantiates a new AppLocaleDto object
@@ -155,7 +155,6 @@ func (o *AppLocaleDto) HasCreatorId() bool {
 func (o *AppLocaleDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppLocaleDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -198,7 +197,6 @@ func (o *AppLocaleDto) HasLastModificationTime() bool {
 func (o *AppLocaleDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppLocaleDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -241,7 +239,6 @@ func (o *AppLocaleDto) HasLastModifierId() bool {
 func (o *AppLocaleDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppLocaleDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -316,7 +313,6 @@ func (o *AppLocaleDto) HasDeleterId() bool {
 func (o *AppLocaleDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppLocaleDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -359,7 +355,6 @@ func (o *AppLocaleDto) HasDeletionTime() bool {
 func (o *AppLocaleDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppLocaleDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -434,7 +429,6 @@ func (o *AppLocaleDto) HasLangCode() bool {
 func (o *AppLocaleDto) SetLangCode(v string) {
 	o.LangCode.Set(&v)
 }
-
 // SetLangCodeNil sets the value for LangCode to be an explicit nil
 func (o *AppLocaleDto) SetLangCodeNil() {
 	o.LangCode.Set(nil)
@@ -477,7 +471,6 @@ func (o *AppLocaleDto) HasCountryCode() bool {
 func (o *AppLocaleDto) SetCountryCode(v string) {
 	o.CountryCode.Set(&v)
 }
-
 // SetCountryCodeNil sets the value for CountryCode to be an explicit nil
 func (o *AppLocaleDto) SetCountryCodeNil() {
 	o.CountryCode.Set(nil)
@@ -520,7 +513,6 @@ func (o *AppLocaleDto) HasTitle() bool {
 func (o *AppLocaleDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *AppLocaleDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -563,7 +555,6 @@ func (o *AppLocaleDto) HasSubtitle() bool {
 func (o *AppLocaleDto) SetSubtitle(v string) {
 	o.Subtitle.Set(&v)
 }
-
 // SetSubtitleNil sets the value for Subtitle to be an explicit nil
 func (o *AppLocaleDto) SetSubtitleNil() {
 	o.Subtitle.Set(nil)
@@ -606,7 +597,6 @@ func (o *AppLocaleDto) HasShortDesc() bool {
 func (o *AppLocaleDto) SetShortDesc(v string) {
 	o.ShortDesc.Set(&v)
 }
-
 // SetShortDescNil sets the value for ShortDesc to be an explicit nil
 func (o *AppLocaleDto) SetShortDescNil() {
 	o.ShortDesc.Set(nil)
@@ -649,7 +639,6 @@ func (o *AppLocaleDto) HasFullDesc() bool {
 func (o *AppLocaleDto) SetFullDesc(v string) {
 	o.FullDesc.Set(&v)
 }
-
 // SetFullDescNil sets the value for FullDesc to be an explicit nil
 func (o *AppLocaleDto) SetFullDescNil() {
 	o.FullDesc.Set(nil)
@@ -692,7 +681,6 @@ func (o *AppLocaleDto) HasKeywords() bool {
 func (o *AppLocaleDto) SetKeywords(v string) {
 	o.Keywords.Set(&v)
 }
-
 // SetKeywordsNil sets the value for Keywords to be an explicit nil
 func (o *AppLocaleDto) SetKeywordsNil() {
 	o.Keywords.Set(nil)
@@ -735,7 +723,6 @@ func (o *AppLocaleDto) HasPromoText() bool {
 func (o *AppLocaleDto) SetPromoText(v string) {
 	o.PromoText.Set(&v)
 }
-
 // SetPromoTextNil sets the value for PromoText to be an explicit nil
 func (o *AppLocaleDto) SetPromoTextNil() {
 	o.PromoText.Set(nil)
@@ -778,7 +765,6 @@ func (o *AppLocaleDto) HasSupportUrl() bool {
 func (o *AppLocaleDto) SetSupportUrl(v string) {
 	o.SupportUrl.Set(&v)
 }
-
 // SetSupportUrlNil sets the value for SupportUrl to be an explicit nil
 func (o *AppLocaleDto) SetSupportUrlNil() {
 	o.SupportUrl.Set(nil)
@@ -821,7 +807,6 @@ func (o *AppLocaleDto) HasPrivacyUrl() bool {
 func (o *AppLocaleDto) SetPrivacyUrl(v string) {
 	o.PrivacyUrl.Set(&v)
 }
-
 // SetPrivacyUrlNil sets the value for PrivacyUrl to be an explicit nil
 func (o *AppLocaleDto) SetPrivacyUrlNil() {
 	o.PrivacyUrl.Set(nil)
@@ -864,7 +849,6 @@ func (o *AppLocaleDto) HasReleaseNote() bool {
 func (o *AppLocaleDto) SetReleaseNote(v string) {
 	o.ReleaseNote.Set(&v)
 }
-
 // SetReleaseNoteNil sets the value for ReleaseNote to be an explicit nil
 func (o *AppLocaleDto) SetReleaseNoteNil() {
 	o.ReleaseNote.Set(nil)
@@ -876,7 +860,7 @@ func (o *AppLocaleDto) UnsetReleaseNote() {
 }
 
 func (o AppLocaleDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -983,3 +967,5 @@ func (v *NullableAppLocaleDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -21,9 +21,9 @@ var _ MappedNullable = &TenantUpdateDto{}
 
 // TenantUpdateDto struct for TenantUpdateDto
 type TenantUpdateDto struct {
-	ExtraProperties  map[string]interface{} `json:"extraProperties,omitempty"`
-	Name             string                 `json:"name"`
-	ConcurrencyStamp NullableString         `json:"concurrencyStamp,omitempty"`
+	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
+	Name string `json:"name"`
+	ConcurrencyStamp NullableString `json:"concurrencyStamp,omitempty"`
 }
 
 type _TenantUpdateDto TenantUpdateDto
@@ -135,7 +135,6 @@ func (o *TenantUpdateDto) HasConcurrencyStamp() bool {
 func (o *TenantUpdateDto) SetConcurrencyStamp(v string) {
 	o.ConcurrencyStamp.Set(&v)
 }
-
 // SetConcurrencyStampNil sets the value for ConcurrencyStamp to be an explicit nil
 func (o *TenantUpdateDto) SetConcurrencyStampNil() {
 	o.ConcurrencyStamp.Set(nil)
@@ -147,7 +146,7 @@ func (o *TenantUpdateDto) UnsetConcurrencyStamp() {
 }
 
 func (o TenantUpdateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -179,10 +178,10 @@ func (o *TenantUpdateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -238,3 +237,5 @@ func (v *NullableTenantUpdateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

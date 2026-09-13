@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional]
-**IsGranted** | Pointer to **bool** |  | [optional]
+**Name** | Pointer to **NullableString** |  | [optional] 
+**IsGranted** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

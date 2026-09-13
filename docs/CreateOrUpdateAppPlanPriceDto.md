@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
-**PricingId** | Pointer to **string** |  | [optional]
-**Period** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
-**Mode** | Pointer to [**BillingMode**](BillingMode.md) |  | [optional]
-**Market** | Pointer to [**BillingMarket**](BillingMarket.md) |  | [optional]
-**Currency** | Pointer to **NullableString** |  | [optional]
-**Amount** | Pointer to **float64** |  | [optional]
-**DiscountAmount** | Pointer to **NullableFloat64** |  | [optional]
-**DurationDays** | Pointer to **NullableInt32** |  | [optional]
-**IsEnabled** | Pointer to **bool** |  | [optional]
-**SortIndex** | Pointer to **int32** |  | [optional]
-**DisplayName** | Pointer to **NullableString** |  | [optional]
-**Description** | Pointer to **NullableString** |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
+**PricingId** | Pointer to **string** |  | [optional] 
+**Period** | Pointer to [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional] 
+**Mode** | Pointer to [**BillingMode**](BillingMode.md) |  | [optional] 
+**Market** | Pointer to [**BillingMarket**](BillingMarket.md) |  | [optional] 
+**Currency** | Pointer to **NullableString** |  | [optional] 
+**Amount** | Pointer to **float64** |  | [optional] 
+**DiscountAmount** | Pointer to **NullableFloat64** |  | [optional] 
+**DurationDays** | Pointer to **NullableInt32** |  | [optional] 
+**IsEnabled** | Pointer to **bool** |  | [optional] 
+**SortIndex** | Pointer to **int32** |  | [optional] 
+**DisplayName** | Pointer to **NullableString** |  | [optional] 
+**Description** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

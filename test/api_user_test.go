@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_UserAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService CreateIdentityUser", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UserAPI.CreateIdentityUser(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService DeleteIdentityUserById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService FindByEmail", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var email string
 
@@ -61,13 +61,13 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test UserAPIService FindByUsername", func(t *testing.T) {
+	t.Run("Test UserAPIService FindByUsernameGetApiIdentityUsersByUsernameUserName", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var userName string
 
-		resp, httpRes, err := apiClient.UserAPI.FindByUsername(context.Background(), userName).Execute()
+		resp, httpRes, err := apiClient.UserAPI.FindByUsernameGetApiIdentityUsersByUsernameUserName(context.Background(), userName).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -77,7 +77,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService GetAssignableRoles", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UserAPI.GetAssignableRoles(context.Background()).Execute()
 
@@ -89,7 +89,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService GetIdentityUserById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -103,7 +103,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService GetIdentityUserList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.UserAPI.GetIdentityUserList(context.Background()).Execute()
 
@@ -115,7 +115,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService GetRoles", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -129,7 +129,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService UpdateIdentityUser", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -143,7 +143,7 @@ func Test_felorx_UserAPIService(t *testing.T) {
 
 	t.Run("Test UserAPIService UpdateRoles", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

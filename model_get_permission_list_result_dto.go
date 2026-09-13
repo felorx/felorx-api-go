@@ -19,8 +19,8 @@ var _ MappedNullable = &GetPermissionListResultDto{}
 
 // GetPermissionListResultDto struct for GetPermissionListResultDto
 type GetPermissionListResultDto struct {
-	EntityDisplayName NullableString       `json:"entityDisplayName,omitempty"`
-	Groups            []PermissionGroupDto `json:"groups,omitempty"`
+	EntityDisplayName NullableString `json:"entityDisplayName,omitempty"`
+	Groups []PermissionGroupDto `json:"groups,omitempty"`
 }
 
 // NewGetPermissionListResultDto instantiates a new GetPermissionListResultDto object
@@ -72,7 +72,6 @@ func (o *GetPermissionListResultDto) HasEntityDisplayName() bool {
 func (o *GetPermissionListResultDto) SetEntityDisplayName(v string) {
 	o.EntityDisplayName.Set(&v)
 }
-
 // SetEntityDisplayNameNil sets the value for EntityDisplayName to be an explicit nil
 func (o *GetPermissionListResultDto) SetEntityDisplayNameNil() {
 	o.EntityDisplayName.Set(nil)
@@ -117,7 +116,7 @@ func (o *GetPermissionListResultDto) SetGroups(v []PermissionGroupDto) {
 }
 
 func (o GetPermissionListResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -170,3 +169,5 @@ func (v *NullableGetPermissionListResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

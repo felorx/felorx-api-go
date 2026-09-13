@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Refresh**](DynamicClaimsAPI.md#Refresh) | **Post** /api/account/dynamic-claims/refresh |
+[**Refresh**](DynamicClaimsAPI.md#Refresh) | **Post** /api/account/dynamic-claims/refresh | 
 
 
 

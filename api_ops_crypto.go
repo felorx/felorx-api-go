@@ -18,11 +18,12 @@ import (
 	"net/url"
 )
 
+
 // OpsCryptoAPIService OpsCryptoAPI service
 type OpsCryptoAPIService service
 
 type ApiGetVaultRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *OpsCryptoAPIService
 }
 
@@ -33,25 +34,24 @@ func (r ApiGetVaultRequest) Execute() (*OpsCryptoVaultDto, *http.Response, error
 /*
 GetVault Method for GetVault
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetVaultRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetVaultRequest
 */
 func (a *OpsCryptoAPIService) GetVault(ctx context.Context) ApiGetVaultRequest {
 	return ApiGetVaultRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return OpsCryptoVaultDto
+//  @return OpsCryptoVaultDto
 func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoVaultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *OpsCryptoVaultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *OpsCryptoVaultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpsCryptoAPIService.GetVault")
@@ -111,8 +111,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -122,8 +122,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -133,8 +133,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -144,8 +144,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -155,8 +155,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -166,8 +166,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -185,8 +185,8 @@ func (a *OpsCryptoAPIService) GetVaultExecute(r ApiGetVaultRequest) (*OpsCryptoV
 }
 
 type ApiPutVaultRequest struct {
-	ctx               context.Context
-	ApiService        *OpsCryptoAPIService
+	ctx context.Context
+	ApiService *OpsCryptoAPIService
 	opsCryptoVaultDto *OpsCryptoVaultDto
 }
 
@@ -202,22 +202,22 @@ func (r ApiPutVaultRequest) Execute() (*http.Response, error) {
 /*
 PutVault Method for PutVault
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPutVaultRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiPutVaultRequest
 */
 func (a *OpsCryptoAPIService) PutVault(ctx context.Context) ApiPutVaultRequest {
 	return ApiPutVaultRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPut
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpsCryptoAPIService.PutVault")
@@ -279,8 +279,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -290,8 +290,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -301,8 +301,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -312,8 +312,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -323,8 +323,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -334,8 +334,8 @@ func (a *OpsCryptoAPIService) PutVaultExecute(r ApiPutVaultRequest) (*http.Respo
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}

@@ -19,13 +19,13 @@ var _ MappedNullable = &CreateOrUpdateAppAssetDto{}
 
 // CreateOrUpdateAppAssetDto struct for CreateOrUpdateAppAssetDto
 type CreateOrUpdateAppAssetDto struct {
-	AppId        *string             `json:"appId,omitempty"`
-	AppLocaleId  *string             `json:"appLocaleId,omitempty"`
-	AppFeatureId NullableString      `json:"appFeatureId,omitempty"`
-	AssetType    *AppAssetType       `json:"assetType,omitempty"`
-	DeviceType   *AppAssetDeviceType `json:"deviceType,omitempty"`
-	Url          NullableString      `json:"url,omitempty"`
-	Sort         *int32              `json:"sort,omitempty"`
+	AppId *string `json:"appId,omitempty"`
+	AppLocaleId *string `json:"appLocaleId,omitempty"`
+	AppFeatureId NullableString `json:"appFeatureId,omitempty"`
+	AssetType *AppAssetType `json:"assetType,omitempty"`
+	DeviceType *AppAssetDeviceType `json:"deviceType,omitempty"`
+	Url NullableString `json:"url,omitempty"`
+	Sort *int32 `json:"sort,omitempty"`
 }
 
 // NewCreateOrUpdateAppAssetDto instantiates a new CreateOrUpdateAppAssetDto object
@@ -141,7 +141,6 @@ func (o *CreateOrUpdateAppAssetDto) HasAppFeatureId() bool {
 func (o *CreateOrUpdateAppAssetDto) SetAppFeatureId(v string) {
 	o.AppFeatureId.Set(&v)
 }
-
 // SetAppFeatureIdNil sets the value for AppFeatureId to be an explicit nil
 func (o *CreateOrUpdateAppAssetDto) SetAppFeatureIdNil() {
 	o.AppFeatureId.Set(nil)
@@ -248,7 +247,6 @@ func (o *CreateOrUpdateAppAssetDto) HasUrl() bool {
 func (o *CreateOrUpdateAppAssetDto) SetUrl(v string) {
 	o.Url.Set(&v)
 }
-
 // SetUrlNil sets the value for Url to be an explicit nil
 func (o *CreateOrUpdateAppAssetDto) SetUrlNil() {
 	o.Url.Set(nil)
@@ -292,7 +290,7 @@ func (o *CreateOrUpdateAppAssetDto) SetSort(v int32) {
 }
 
 func (o CreateOrUpdateAppAssetDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -360,3 +358,5 @@ func (v *NullableCreateOrUpdateAppAssetDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

@@ -18,12 +18,13 @@ import (
 	"net/url"
 )
 
+
 // ProfileAPIService ProfileAPI service
 type ProfileAPIService service
 
 type ApiChangePasswordRequest struct {
-	ctx                 context.Context
-	ApiService          *ProfileAPIService
+	ctx context.Context
+	ApiService *ProfileAPIService
 	changePasswordInput *ChangePasswordInput
 }
 
@@ -39,22 +40,22 @@ func (r ApiChangePasswordRequest) Execute() (*http.Response, error) {
 /*
 ChangePassword Method for ChangePassword
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiChangePasswordRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiChangePasswordRequest
 */
 func (a *ProfileAPIService) ChangePassword(ctx context.Context) ApiChangePasswordRequest {
 	return ApiChangePasswordRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod = http.MethodPost
-		localVarPostBody   interface{}
-		formFiles          []formFile
+		localVarHTTPMethod   = http.MethodPost
+		localVarPostBody     interface{}
+		formFiles            []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProfileAPIService.ChangePassword")
@@ -116,8 +117,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -127,8 +128,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -138,8 +139,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -149,8 +150,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -160,8 +161,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -171,8 +172,8 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 				newErr.error = err.Error()
 				return localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarHTTPResponse, newErr
 	}
@@ -181,7 +182,7 @@ func (a *ProfileAPIService) ChangePasswordExecute(r ApiChangePasswordRequest) (*
 }
 
 type ApiGetProfileRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *ProfileAPIService
 }
 
@@ -192,25 +193,24 @@ func (r ApiGetProfileRequest) Execute() (*ProfileDto, *http.Response, error) {
 /*
 GetProfile Method for GetProfile
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetProfileRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetProfileRequest
 */
 func (a *ProfileAPIService) GetProfile(ctx context.Context) ApiGetProfileRequest {
 	return ApiGetProfileRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return ProfileDto
+//  @return ProfileDto
 func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *ProfileDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ProfileDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProfileAPIService.GetProfile")
@@ -270,8 +270,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -281,8 +281,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -292,8 +292,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -303,8 +303,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -314,8 +314,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -325,8 +325,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -344,8 +344,8 @@ func (a *ProfileAPIService) GetProfileExecute(r ApiGetProfileRequest) (*ProfileD
 }
 
 type ApiUpdateProfileRequest struct {
-	ctx              context.Context
-	ApiService       *ProfileAPIService
+	ctx context.Context
+	ApiService *ProfileAPIService
 	updateProfileDto *UpdateProfileDto
 }
 
@@ -361,25 +361,24 @@ func (r ApiUpdateProfileRequest) Execute() (*ProfileDto, *http.Response, error) 
 /*
 UpdateProfile Method for UpdateProfile
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiUpdateProfileRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUpdateProfileRequest
 */
 func (a *ProfileAPIService) UpdateProfile(ctx context.Context) ApiUpdateProfileRequest {
 	return ApiUpdateProfileRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return ProfileDto
+//  @return ProfileDto
 func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*ProfileDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodPut
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *ProfileDto
+		localVarHTTPMethod   = http.MethodPut
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *ProfileDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ProfileAPIService.UpdateProfile")
@@ -441,8 +440,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -452,8 +451,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -463,8 +462,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -474,8 +473,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -485,8 +484,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -496,8 +495,8 @@ func (a *ProfileAPIService) UpdateProfileExecute(r ApiUpdateProfileRequest) (*Pr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateMessageSource**](MessageSourceAPI.md#CreateMessageSource) | **Post** /api/app/message-source |
-[**DeleteMessageSourceById**](MessageSourceAPI.md#DeleteMessageSourceById) | **Delete** /api/app/message-source/{id} |
-[**GetMessageSourceById**](MessageSourceAPI.md#GetMessageSourceById) | **Get** /api/app/message-source/{id} |
-[**GetMessageSourceList**](MessageSourceAPI.md#GetMessageSourceList) | **Get** /api/app/message-source |
-[**UpdateMessageSource**](MessageSourceAPI.md#UpdateMessageSource) | **Put** /api/app/message-source/{id} |
+[**CreateMessageSource**](MessageSourceAPI.md#CreateMessageSource) | **Post** /api/app/message-source | 
+[**DeleteMessageSourceById**](MessageSourceAPI.md#DeleteMessageSourceById) | **Delete** /api/app/message-source/{id} | 
+[**GetMessageSourceById**](MessageSourceAPI.md#GetMessageSourceById) | **Get** /api/app/message-source/{id} | 
+[**GetMessageSourceList**](MessageSourceAPI.md#GetMessageSourceList) | **Get** /api/app/message-source | 
+[**UpdateMessageSource**](MessageSourceAPI.md#UpdateMessageSource) | **Put** /api/app/message-source/{id} | 
 
 
 
@@ -56,7 +56,7 @@ Other parameters are passed through a pointer to a apiCreateMessageSourceRequest
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  |
+ **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
 
 ### Return type
 
@@ -95,7 +95,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +113,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -161,7 +161,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -254,7 +254,7 @@ Other parameters are passed through a pointer to a apiGetMessageSourceListReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categoryId** | **string** |  |
+ **categoryId** | **string** |  | 
 
 ### Return type
 
@@ -293,7 +293,7 @@ import (
 )
 
 func main() {
-	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string |
+	id := "38400000-8cf0-11bd-b23e-10b96e4ef00d" // string | 
 	createUpdateMessageSourceDto := *openapiclient.NewCreateUpdateMessageSourceDto() // CreateUpdateMessageSourceDto |  (optional)
 
 	configuration := openapiclient.NewConfiguration()
@@ -314,7 +314,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**id** | **string** |  |
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -324,7 +324,7 @@ Other parameters are passed through a pointer to a apiUpdateMessageSourceRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  |
+ **createUpdateMessageSourceDto** | [**CreateUpdateMessageSourceDto**](CreateUpdateMessageSourceDto.md) |  | 
 
 ### Return type
 

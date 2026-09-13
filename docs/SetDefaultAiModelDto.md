@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ModelId** | Pointer to **string** |  | [optional]
-**Capability** | Pointer to [**AiCapability**](AiCapability.md) |  | [optional]
+**ModelId** | Pointer to **string** |  | [optional] 
+**Capability** | Pointer to [**AiCapability**](AiCapability.md) |  | [optional] 
 
 ## Methods
 

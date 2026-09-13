@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** | 应用 ID。 | [optional]
-**PricingId** | Pointer to **string** | 定价方案 ID。 | [optional]
-**PlanType** | Pointer to **NullableString** | 计划类型：month&#x3D;月度, year&#x3D;年度, three_year&#x3D;三年, lifetime&#x3D;终身。 | [optional]
-**CheckoutMode** | Pointer to **NullableString** | 支付入口：page&#x3D;电脑网站支付, wap&#x3D;手机网站支付, app&#x3D;App 支付订单串。 | [optional]
-**ReturnUrl** | Pointer to **NullableString** | 支付完成后的同步跳转地址。 | [optional]
-**QuitUrl** | Pointer to **NullableString** | 手机网站支付中用户取消后的返回地址。 | [optional]
+**AppId** | Pointer to **string** | 应用 ID。 | [optional] 
+**PricingId** | Pointer to **string** | 定价方案 ID。 | [optional] 
+**PlanType** | Pointer to **NullableString** | 计划类型：month&#x3D;月度, year&#x3D;年度, three_year&#x3D;三年, lifetime&#x3D;终身。 | [optional] 
+**CheckoutMode** | Pointer to **NullableString** | 支付入口：page&#x3D;电脑网站支付, wap&#x3D;手机网站支付, app&#x3D;App 支付订单串。 | [optional] 
+**ReturnUrl** | Pointer to **NullableString** | 支付完成后的同步跳转地址。 | [optional] 
+**QuitUrl** | Pointer to **NullableString** | 手机网站支付中用户取消后的返回地址。 | [optional] 
 
 ## Methods
 

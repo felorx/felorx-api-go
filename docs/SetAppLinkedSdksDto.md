@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SdkIds** | Pointer to **[]string** | 要关联到应用的 SDK Id 列表（顺序保留）；空列表表示清除全部关联。 | [optional]
+**SdkIds** | Pointer to **[]string** | 要关联到应用的 SDK Id 列表（顺序保留）；空列表表示清除全部关联。 | [optional] 
 
 ## Methods
 

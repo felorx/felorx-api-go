@@ -19,13 +19,14 @@ import (
 	"strings"
 )
 
+
 // UserLookupAPIService UserLookupAPI service
 type UserLookupAPIService service
 
 type ApiFindByIdRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *UserLookupAPIService
-	id         string
+	id string
 }
 
 func (r ApiFindByIdRequest) Execute() (*UserData, *http.Response, error) {
@@ -35,27 +36,26 @@ func (r ApiFindByIdRequest) Execute() (*UserData, *http.Response, error) {
 /*
 FindById Method for FindById
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiFindByIdRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param id
+ @return ApiFindByIdRequest
 */
 func (a *UserLookupAPIService) FindById(ctx context.Context, id string) ApiFindByIdRequest {
 	return ApiFindByIdRequest{
 		ApiService: a,
-		ctx:        ctx,
-		id:         id,
+		ctx: ctx,
+		id: id,
 	}
 }
 
 // Execute executes the request
-//
-//	@return UserData
+//  @return UserData
 func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *UserData
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *UserData
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserLookupAPIService.FindById")
@@ -116,8 +116,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -127,8 +127,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -138,8 +138,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -149,8 +149,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -160,8 +160,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -171,8 +171,8 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -189,43 +189,42 @@ func (a *UserLookupAPIService) FindByIdExecute(r ApiFindByIdRequest) (*UserData,
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiFindByUserNameRequest struct {
-	ctx        context.Context
+type ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest struct {
+	ctx context.Context
 	ApiService *UserLookupAPIService
-	userName   string
+	userName string
 }
 
-func (r ApiFindByUserNameRequest) Execute() (*UserData, *http.Response, error) {
-	return r.ApiService.FindByUserNameExecute(r)
+func (r ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest) Execute() (*UserData, *http.Response, error) {
+	return r.ApiService.FindByUserNameGetApiIdentityUsersLookupByUsernameUserNameExecute(r)
 }
 
 /*
-FindByUserName Method for FindByUserName
+FindByUserNameGetApiIdentityUsersLookupByUsernameUserName Method for FindByUserNameGetApiIdentityUsersLookupByUsernameUserName
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userName
-	@return ApiFindByUserNameRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param userName
+ @return ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest
 */
-func (a *UserLookupAPIService) FindByUserName(ctx context.Context, userName string) ApiFindByUserNameRequest {
-	return ApiFindByUserNameRequest{
+func (a *UserLookupAPIService) FindByUserNameGetApiIdentityUsersLookupByUsernameUserName(ctx context.Context, userName string) ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest {
+	return ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest{
 		ApiService: a,
-		ctx:        ctx,
-		userName:   userName,
+		ctx: ctx,
+		userName: userName,
 	}
 }
 
 // Execute executes the request
-//
-//	@return UserData
-func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest) (*UserData, *http.Response, error) {
+//  @return UserData
+func (a *UserLookupAPIService) FindByUserNameGetApiIdentityUsersLookupByUsernameUserNameExecute(r ApiFindByUserNameGetApiIdentityUsersLookupByUsernameUserNameRequest) (*UserData, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *UserData
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *UserData
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserLookupAPIService.FindByUserName")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserLookupAPIService.FindByUserNameGetApiIdentityUsersLookupByUsernameUserName")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
@@ -283,8 +282,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -294,8 +293,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -305,8 +304,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -316,8 +315,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -327,8 +326,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -338,8 +337,8 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -357,9 +356,9 @@ func (a *UserLookupAPIService) FindByUserNameExecute(r ApiFindByUserNameRequest)
 }
 
 type ApiGetCountRequest struct {
-	ctx        context.Context
+	ctx context.Context
 	ApiService *UserLookupAPIService
-	filter     *string
+	filter *string
 }
 
 func (r ApiGetCountRequest) Filter(filter string) ApiGetCountRequest {
@@ -374,25 +373,24 @@ func (r ApiGetCountRequest) Execute() (int64, *http.Response, error) {
 /*
 GetCount Method for GetCount
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetCountRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetCountRequest
 */
 func (a *UserLookupAPIService) GetCount(ctx context.Context) ApiGetCountRequest {
 	return ApiGetCountRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return int64
+//  @return int64
 func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue int64
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  int64
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserLookupAPIService.GetCount")
@@ -455,8 +453,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -466,8 +464,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -477,8 +475,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -488,8 +486,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -499,8 +497,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -510,8 +508,8 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -529,11 +527,11 @@ func (a *UserLookupAPIService) GetCountExecute(r ApiGetCountRequest) (int64, *ht
 }
 
 type ApiSearchRequest struct {
-	ctx            context.Context
-	ApiService     *UserLookupAPIService
-	filter         *string
-	sorting        *string
-	skipCount      *int32
+	ctx context.Context
+	ApiService *UserLookupAPIService
+	filter *string
+	sorting *string
+	skipCount *int32
 	maxResultCount *int32
 }
 
@@ -564,25 +562,24 @@ func (r ApiSearchRequest) Execute() (*UserDataListResultDto, *http.Response, err
 /*
 Search Method for Search
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiSearchRequest
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiSearchRequest
 */
 func (a *UserLookupAPIService) Search(ctx context.Context) ApiSearchRequest {
 	return ApiSearchRequest{
 		ApiService: a,
-		ctx:        ctx,
+		ctx: ctx,
 	}
 }
 
 // Execute executes the request
-//
-//	@return UserDataListResultDto
+//  @return UserDataListResultDto
 func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListResultDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod  = http.MethodGet
-		localVarPostBody    interface{}
-		formFiles           []formFile
-		localVarReturnValue *UserDataListResultDto
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *UserDataListResultDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserLookupAPIService.Search")
@@ -654,8 +651,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 401 {
@@ -665,8 +662,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 400 {
@@ -676,8 +673,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 404 {
@@ -687,8 +684,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 501 {
@@ -698,8 +695,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -709,8 +706,8 @@ func (a *UserLookupAPIService) SearchExecute(r ApiSearchRequest) (*UserDataListR
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-			newErr.model = v
+					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+					newErr.model = v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

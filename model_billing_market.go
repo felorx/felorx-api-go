@@ -21,8 +21,8 @@ type BillingMarket string
 // List of BillingMarket
 const (
 	BILLINGMARKET_UNKNOWN BillingMarket = "Unknown"
-	BILLINGMARKET_CHINA   BillingMarket = "China"
-	BILLINGMARKET_GLOBAL  BillingMarket = "Global"
+	BILLINGMARKET_CHINA BillingMarket = "China"
+	BILLINGMARKET_GLOBAL BillingMarket = "Global"
 )
 
 // All allowed values of BillingMarket enum
@@ -110,3 +110,4 @@ func (v *NullableBillingMarket) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+

@@ -4,14 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password |
+[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password | 
 [**CheckSyncAuth**](AccountAPI.md#CheckSyncAuth) | **Post** /api/app/account/check-sync-auth | 检查同步认证
-[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account |
-[**GetAccount**](AccountAPI.md#GetAccount) | **Get** /api/app/account |
-[**Register**](AccountAPI.md#Register) | **Post** /api/account/register |
-[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password |
-[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code |
-[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token |
+[**DeletionStatus**](AccountAPI.md#DeletionStatus) | **Post** /api/app/account/deletion-status | 
+[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account | 
+[**GetAccountGetApiAppAccount**](AccountAPI.md#GetAccountGetApiAppAccount) | **Get** /api/app/account | 
+[**Register**](AccountAPI.md#Register) | **Post** /api/account/register | 
+[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password | 
+[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code | 
+[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token | 
 
 
 
@@ -57,7 +58,7 @@ Other parameters are passed through a pointer to a apiChangeAccountPasswordReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  |
+ **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  | 
 
 ### Return type
 
@@ -136,9 +137,73 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## DeletionStatus
+
+> AccountDeletionStatusDto DeletionStatus(ctx).AccountDeletionStatusQueryDto(accountDeletionStatusQueryDto).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	accountDeletionStatusQueryDto := *openapiclient.NewAccountDeletionStatusQueryDto("StatusToken_example") // AccountDeletionStatusQueryDto |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AccountAPI.DeletionStatus(context.Background()).AccountDeletionStatusQueryDto(accountDeletionStatusQueryDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.DeletionStatus``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DeletionStatus`: AccountDeletionStatusDto
+	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.DeletionStatus`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeletionStatusRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountDeletionStatusQueryDto** | [**AccountDeletionStatusQueryDto**](AccountDeletionStatusQueryDto.md) |  | 
+
+### Return type
+
+[**AccountDeletionStatusDto**](AccountDeletionStatusDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DestroyAccount
 
-> DestroyAccount(ctx).AccountDeletionDto(accountDeletionDto).Execute()
+> AccountDeletionStatusDto DestroyAccount(ctx).AccountDeletionDto(accountDeletionDto).Execute()
 
 
 
@@ -159,11 +224,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	r, err := apiClient.AccountAPI.DestroyAccount(context.Background()).AccountDeletionDto(accountDeletionDto).Execute()
+	resp, r, err := apiClient.AccountAPI.DestroyAccount(context.Background()).AccountDeletionDto(accountDeletionDto).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.DestroyAccount``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
+	// response from `DestroyAccount`: AccountDeletionStatusDto
+	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.DestroyAccount`: %v\n", resp)
 }
 ```
 
@@ -178,11 +245,11 @@ Other parameters are passed through a pointer to a apiDestroyAccountRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  |
+ **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  | 
 
 ### Return type
 
- (empty response body)
+[**AccountDeletionStatusDto**](AccountDeletionStatusDto.md)
 
 ### Authorization
 
@@ -198,9 +265,9 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## GetAccount
+## GetAccountGetApiAppAccount
 
-> UserProfileDto GetAccount(ctx).Execute()
+> UserProfileDto GetAccountGetApiAppAccount(ctx).Execute()
 
 
 
@@ -220,13 +287,13 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.AccountAPI.GetAccount(context.Background()).Execute()
+	resp, r, err := apiClient.AccountAPI.GetAccountGetApiAppAccount(context.Background()).Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.GetAccount``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.GetAccountGetApiAppAccount``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetAccount`: UserProfileDto
-	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.GetAccount`: %v\n", resp)
+	// response from `GetAccountGetApiAppAccount`: UserProfileDto
+	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.GetAccountGetApiAppAccount`: %v\n", resp)
 }
 ```
 
@@ -236,7 +303,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetAccountRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetAccountGetApiAppAccountRequest struct via the builder pattern
 
 
 ### Return type
@@ -301,7 +368,7 @@ Other parameters are passed through a pointer to a apiRegisterRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registerDto** | [**RegisterDto**](RegisterDto.md) |  |
+ **registerDto** | [**RegisterDto**](RegisterDto.md) |  | 
 
 ### Return type
 
@@ -363,7 +430,7 @@ Other parameters are passed through a pointer to a apiResetPasswordRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  |
+ **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  | 
 
 ### Return type
 
@@ -425,7 +492,7 @@ Other parameters are passed through a pointer to a apiSendPasswordResetCodeReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  |
+ **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  | 
 
 ### Return type
 
@@ -489,7 +556,7 @@ Other parameters are passed through a pointer to a apiVerifyPasswordResetTokenRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  |
+ **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  | 
 
 ### Return type
 

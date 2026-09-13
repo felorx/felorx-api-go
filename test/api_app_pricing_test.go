@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AppPricingAPIService(t *testing.T) {
@@ -22,23 +22,9 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
 
-	t.Run("Test AppPricingAPIService AppPricingGetListByAppId", func(t *testing.T) {
-
-		t.Skip("skip test") // remove to run test
-
-		var appId string
-
-		resp, httpRes, err := apiClient.AppPricingAPI.AppPricingGetListByAppId(context.Background(), appId).Execute()
-
-		require.Nil(t, err)
-		require.NotNil(t, resp)
-		assert.Equal(t, 200, httpRes.StatusCode)
-
-	})
-
 	t.Run("Test AppPricingAPIService CreateAppPricing", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppPricingAPI.CreateAppPricing(context.Background()).Execute()
 
@@ -50,7 +36,7 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 
 	t.Run("Test AppPricingAPIService DeleteAppPricingById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +49,7 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 
 	t.Run("Test AppPricingAPIService GetAppPricingById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -77,7 +63,7 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 
 	t.Run("Test AppPricingAPIService GetAppPricingList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppPricingAPI.GetAppPricingList(context.Background()).Execute()
 
@@ -87,9 +73,23 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test AppPricingAPIService GetListByAppIdGetApiAppAppPricingByAppIdAppId", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var appId string
+
+		resp, httpRes, err := apiClient.AppPricingAPI.GetListByAppIdGetApiAppAppPricingByAppIdAppId(context.Background(), appId).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test AppPricingAPIService GetPricingItemsByAppId", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -103,7 +103,7 @@ func Test_felorx_AppPricingAPIService(t *testing.T) {
 
 	t.Run("Test AppPricingAPIService UpdateAppPricing", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

@@ -11,10 +11,10 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
-	"fmt"
 	"time"
+	"bytes"
+	"fmt"
 )
 
 // checks if the ApiKeyCreateDto type satisfies the MappedNullable interface at compile time
@@ -22,8 +22,8 @@ var _ MappedNullable = &ApiKeyCreateDto{}
 
 // ApiKeyCreateDto struct for ApiKeyCreateDto
 type ApiKeyCreateDto struct {
-	Name     string       `json:"name"`
-	Active   *bool        `json:"active,omitempty"`
+	Name string `json:"name"`
+	Active *bool `json:"active,omitempty"`
 	ExpireAt NullableTime `json:"expireAt,omitempty"`
 }
 
@@ -135,7 +135,6 @@ func (o *ApiKeyCreateDto) HasExpireAt() bool {
 func (o *ApiKeyCreateDto) SetExpireAt(v time.Time) {
 	o.ExpireAt.Set(&v)
 }
-
 // SetExpireAtNil sets the value for ExpireAt to be an explicit nil
 func (o *ApiKeyCreateDto) SetExpireAtNil() {
 	o.ExpireAt.Set(nil)
@@ -147,7 +146,7 @@ func (o *ApiKeyCreateDto) UnsetExpireAt() {
 }
 
 func (o ApiKeyCreateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -179,10 +178,10 @@ func (o *ApiKeyCreateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -238,3 +237,5 @@ func (v *NullableApiKeyCreateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

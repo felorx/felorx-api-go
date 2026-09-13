@@ -71,7 +71,6 @@ func (o *CreateAvatarDto) HasKey() bool {
 func (o *CreateAvatarDto) SetKey(v string) {
 	o.Key.Set(&v)
 }
-
 // SetKeyNil sets the value for Key to be an explicit nil
 func (o *CreateAvatarDto) SetKeyNil() {
 	o.Key.Set(nil)
@@ -83,7 +82,7 @@ func (o *CreateAvatarDto) UnsetKey() {
 }
 
 func (o CreateAvatarDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -133,3 +132,5 @@ func (v *NullableCreateAvatarDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

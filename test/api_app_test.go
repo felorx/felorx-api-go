@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AppAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService CreateApp", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.CreateApp(context.Background()).Execute()
 
@@ -36,7 +36,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService DeleteAppById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -49,7 +49,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetAppById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -63,7 +63,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetAppList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetAppList(context.Background()).Execute()
 
@@ -75,7 +75,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetByName", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetByName(context.Background()).Execute()
 
@@ -87,7 +87,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetFeatureList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -101,7 +101,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetListByDeveloperAll", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetListByDeveloperAll(context.Background()).Execute()
 
@@ -113,7 +113,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetListPublic", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetListPublic(context.Background()).Execute()
 
@@ -125,7 +125,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetListWithUser", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetListWithUser(context.Background()).Execute()
 
@@ -137,7 +137,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetSdksById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -151,7 +151,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetStorefrontLanding", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -165,7 +165,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetUploadCredentials", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.GetUploadCredentials(context.Background()).Execute()
 
@@ -177,7 +177,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService GetWithUser", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -191,7 +191,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService Run", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AppAPI.Run(context.Background()).Execute()
 
@@ -203,7 +203,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService SetLinkedSdks", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var appId string
 
@@ -216,7 +216,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService UpdateApp", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -230,7 +230,7 @@ func Test_felorx_AppAPIService(t *testing.T) {
 
 	t.Run("Test AppAPIService UpdateRunState", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 

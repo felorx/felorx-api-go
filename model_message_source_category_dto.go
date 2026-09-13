@@ -19,7 +19,7 @@ var _ MappedNullable = &MessageSourceCategoryDto{}
 
 // MessageSourceCategoryDto struct for MessageSourceCategoryDto
 type MessageSourceCategoryDto struct {
-	Id    *string        `json:"id,omitempty"`
+	Id *string `json:"id,omitempty"`
 	Title NullableString `json:"title,omitempty"`
 }
 
@@ -104,7 +104,6 @@ func (o *MessageSourceCategoryDto) HasTitle() bool {
 func (o *MessageSourceCategoryDto) SetTitle(v string) {
 	o.Title.Set(&v)
 }
-
 // SetTitleNil sets the value for Title to be an explicit nil
 func (o *MessageSourceCategoryDto) SetTitleNil() {
 	o.Title.Set(nil)
@@ -116,7 +115,7 @@ func (o *MessageSourceCategoryDto) UnsetTitle() {
 }
 
 func (o MessageSourceCategoryDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -169,3 +168,5 @@ func (v *NullableMessageSourceCategoryDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

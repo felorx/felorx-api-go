@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -26,7 +26,7 @@ type CreateDeployRecordDto struct {
 	// 构建记录ID
 	BuildRecordId string `json:"buildRecordId"`
 	// 版本号
-	Version  string      `json:"version"`
+	Version string `json:"version"`
 	Platform AppPlatform `json:"platform"`
 	// 部署环境
 	Environment string `json:"environment"`
@@ -220,7 +220,6 @@ func (o *CreateDeployRecordDto) HasDeployUrl() bool {
 func (o *CreateDeployRecordDto) SetDeployUrl(v string) {
 	o.DeployUrl.Set(&v)
 }
-
 // SetDeployUrlNil sets the value for DeployUrl to be an explicit nil
 func (o *CreateDeployRecordDto) SetDeployUrlNil() {
 	o.DeployUrl.Set(nil)
@@ -263,7 +262,6 @@ func (o *CreateDeployRecordDto) HasDeployTarget() bool {
 func (o *CreateDeployRecordDto) SetDeployTarget(v string) {
 	o.DeployTarget.Set(&v)
 }
-
 // SetDeployTargetNil sets the value for DeployTarget to be an explicit nil
 func (o *CreateDeployRecordDto) SetDeployTargetNil() {
 	o.DeployTarget.Set(nil)
@@ -306,7 +304,6 @@ func (o *CreateDeployRecordDto) HasDeployChannel() bool {
 func (o *CreateDeployRecordDto) SetDeployChannel(v string) {
 	o.DeployChannel.Set(&v)
 }
-
 // SetDeployChannelNil sets the value for DeployChannel to be an explicit nil
 func (o *CreateDeployRecordDto) SetDeployChannelNil() {
 	o.DeployChannel.Set(nil)
@@ -349,7 +346,6 @@ func (o *CreateDeployRecordDto) HasCiSystem() bool {
 func (o *CreateDeployRecordDto) SetCiSystem(v string) {
 	o.CiSystem.Set(&v)
 }
-
 // SetCiSystemNil sets the value for CiSystem to be an explicit nil
 func (o *CreateDeployRecordDto) SetCiSystemNil() {
 	o.CiSystem.Set(nil)
@@ -392,7 +388,6 @@ func (o *CreateDeployRecordDto) HasCiDeployId() bool {
 func (o *CreateDeployRecordDto) SetCiDeployId(v string) {
 	o.CiDeployId.Set(&v)
 }
-
 // SetCiDeployIdNil sets the value for CiDeployId to be an explicit nil
 func (o *CreateDeployRecordDto) SetCiDeployIdNil() {
 	o.CiDeployId.Set(nil)
@@ -435,7 +430,6 @@ func (o *CreateDeployRecordDto) HasCiDeployUrl() bool {
 func (o *CreateDeployRecordDto) SetCiDeployUrl(v string) {
 	o.CiDeployUrl.Set(&v)
 }
-
 // SetCiDeployUrlNil sets the value for CiDeployUrl to be an explicit nil
 func (o *CreateDeployRecordDto) SetCiDeployUrlNil() {
 	o.CiDeployUrl.Set(nil)
@@ -447,7 +441,7 @@ func (o *CreateDeployRecordDto) UnsetCiDeployUrl() {
 }
 
 func (o CreateDeployRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -499,10 +493,10 @@ func (o *CreateDeployRecordDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -558,3 +552,5 @@ func (v *NullableCreateDeployRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

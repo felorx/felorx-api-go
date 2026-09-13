@@ -19,10 +19,10 @@ var _ MappedNullable = &ExtensionPropertyUiDto{}
 
 // ExtensionPropertyUiDto struct for ExtensionPropertyUiDto
 type ExtensionPropertyUiDto struct {
-	OnTable      *ExtensionPropertyUiTableDto  `json:"onTable,omitempty"`
-	OnCreateForm *ExtensionPropertyUiFormDto   `json:"onCreateForm,omitempty"`
-	OnEditForm   *ExtensionPropertyUiFormDto   `json:"onEditForm,omitempty"`
-	Lookup       *ExtensionPropertyUiLookupDto `json:"lookup,omitempty"`
+	OnTable *ExtensionPropertyUiTableDto `json:"onTable,omitempty"`
+	OnCreateForm *ExtensionPropertyUiFormDto `json:"onCreateForm,omitempty"`
+	OnEditForm *ExtensionPropertyUiFormDto `json:"onEditForm,omitempty"`
+	Lookup *ExtensionPropertyUiLookupDto `json:"lookup,omitempty"`
 }
 
 // NewExtensionPropertyUiDto instantiates a new ExtensionPropertyUiDto object
@@ -171,7 +171,7 @@ func (o *ExtensionPropertyUiDto) SetLookup(v ExtensionPropertyUiLookupDto) {
 }
 
 func (o ExtensionPropertyUiDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,3 +230,5 @@ func (v *NullableExtensionPropertyUiDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

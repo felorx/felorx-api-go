@@ -19,9 +19,9 @@ var _ MappedNullable = &FeatureGroupDto{}
 
 // FeatureGroupDto struct for FeatureGroupDto
 type FeatureGroupDto struct {
-	Name        NullableString `json:"name,omitempty"`
+	Name NullableString `json:"name,omitempty"`
 	DisplayName NullableString `json:"displayName,omitempty"`
-	Features    []FeatureDto   `json:"features,omitempty"`
+	Features []FeatureDto `json:"features,omitempty"`
 }
 
 // NewFeatureGroupDto instantiates a new FeatureGroupDto object
@@ -73,7 +73,6 @@ func (o *FeatureGroupDto) HasName() bool {
 func (o *FeatureGroupDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *FeatureGroupDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -116,7 +115,6 @@ func (o *FeatureGroupDto) HasDisplayName() bool {
 func (o *FeatureGroupDto) SetDisplayName(v string) {
 	o.DisplayName.Set(&v)
 }
-
 // SetDisplayNameNil sets the value for DisplayName to be an explicit nil
 func (o *FeatureGroupDto) SetDisplayNameNil() {
 	o.DisplayName.Set(nil)
@@ -161,7 +159,7 @@ func (o *FeatureGroupDto) SetFeatures(v []FeatureDto) {
 }
 
 func (o FeatureGroupDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -217,3 +215,5 @@ func (v *NullableFeatureGroupDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

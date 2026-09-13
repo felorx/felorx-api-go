@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** | 应用ID |
-**BuildRecordId** | **string** | 构建记录ID |
-**Version** | **string** | 版本号 |
-**Platform** | [**AppPlatform**](AppPlatform.md) |  |
-**Environment** | **string** | 部署环境 |
-**DeployUrl** | Pointer to **NullableString** | 部署地址 | [optional]
-**DeployTarget** | Pointer to **NullableString** | 部署目标 | [optional]
-**DeployChannel** | Pointer to **NullableString** | 部署渠道 | [optional]
-**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional]
-**CiDeployId** | Pointer to **NullableString** | CI/CD 部署ID | [optional]
-**CiDeployUrl** | Pointer to **NullableString** | CI/CD 部署URL | [optional]
+**AppId** | **string** | 应用ID | 
+**BuildRecordId** | **string** | 构建记录ID | 
+**Version** | **string** | 版本号 | 
+**Platform** | [**AppPlatform**](AppPlatform.md) |  | 
+**Environment** | **string** | 部署环境 | 
+**DeployUrl** | Pointer to **NullableString** | 部署地址 | [optional] 
+**DeployTarget** | Pointer to **NullableString** | 部署目标 | [optional] 
+**DeployChannel** | Pointer to **NullableString** | 部署渠道 | [optional] 
+**CiSystem** | Pointer to **NullableString** | CI/CD 系统信息 | [optional] 
+**CiDeployId** | Pointer to **NullableString** | CI/CD 部署ID | [optional] 
+**CiDeployUrl** | Pointer to **NullableString** | CI/CD 部署URL | [optional] 
 
 ## Methods
 

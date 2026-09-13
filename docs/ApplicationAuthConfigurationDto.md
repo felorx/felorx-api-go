@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GrantedPolicies** | Pointer to **map[string]bool** |  | [optional]
+**GrantedPolicies** | Pointer to **map[string]bool** |  | [optional] 
 
 ## Methods
 

@@ -76,7 +76,6 @@ func (o *SendVerificationCodeDto) HasCodeSender() bool {
 func (o *SendVerificationCodeDto) SetCodeSender(v string) {
 	o.CodeSender.Set(&v)
 }
-
 // SetCodeSenderNil sets the value for CodeSender to be an explicit nil
 func (o *SendVerificationCodeDto) SetCodeSenderNil() {
 	o.CodeSender.Set(nil)
@@ -119,7 +118,6 @@ func (o *SendVerificationCodeDto) HasAccount() bool {
 func (o *SendVerificationCodeDto) SetAccount(v string) {
 	o.Account.Set(&v)
 }
-
 // SetAccountNil sets the value for Account to be an explicit nil
 func (o *SendVerificationCodeDto) SetAccountNil() {
 	o.Account.Set(nil)
@@ -162,7 +160,6 @@ func (o *SendVerificationCodeDto) HasPurpose() bool {
 func (o *SendVerificationCodeDto) SetPurpose(v string) {
 	o.Purpose.Set(&v)
 }
-
 // SetPurposeNil sets the value for Purpose to be an explicit nil
 func (o *SendVerificationCodeDto) SetPurposeNil() {
 	o.Purpose.Set(nil)
@@ -174,7 +171,7 @@ func (o *SendVerificationCodeDto) UnsetPurpose() {
 }
 
 func (o SendVerificationCodeDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,3 +227,5 @@ func (v *NullableSendVerificationCodeDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

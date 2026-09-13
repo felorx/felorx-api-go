@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_AccountAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService ChangeAccountPassword", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.AccountAPI.ChangeAccountPassword(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService CheckSyncAuth", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AccountAPI.CheckSyncAuth(context.Background()).Execute()
 
@@ -45,22 +45,35 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AccountAPIService DestroyAccount", func(t *testing.T) {
+	t.Run("Test AccountAPIService DeletionStatus", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		httpRes, err := apiClient.AccountAPI.DestroyAccount(context.Background()).Execute()
+		resp, httpRes, err := apiClient.AccountAPI.DeletionStatus(context.Background()).Execute()
 
 		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
 
-	t.Run("Test AccountAPIService GetAccount", func(t *testing.T) {
+	t.Run("Test AccountAPIService DestroyAccount", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AccountAPI.GetAccount(context.Background()).Execute()
+		resp, httpRes, err := apiClient.AccountAPI.DestroyAccount(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test AccountAPIService GetAccountGetApiAppAccount", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.AccountAPI.GetAccountGetApiAppAccount(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -70,7 +83,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService Register", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AccountAPI.Register(context.Background()).Execute()
 
@@ -82,7 +95,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService ResetPassword", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.AccountAPI.ResetPassword(context.Background()).Execute()
 
@@ -93,7 +106,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService SendPasswordResetCode", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.AccountAPI.SendPasswordResetCode(context.Background()).Execute()
 
@@ -104,7 +117,7 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	t.Run("Test AccountAPIService VerifyPasswordResetToken", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AccountAPI.VerifyPasswordResetToken(context.Background()).Execute()
 

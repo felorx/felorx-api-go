@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_FeaturesAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_FeaturesAPIService(t *testing.T) {
 
 	t.Run("Test FeaturesAPIService DeleteFeatures", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.FeaturesAPI.DeleteFeatures(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_FeaturesAPIService(t *testing.T) {
 
 	t.Run("Test FeaturesAPIService GetFeatures", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.FeaturesAPI.GetFeatures(context.Background()).Execute()
 
@@ -47,7 +47,7 @@ func Test_felorx_FeaturesAPIService(t *testing.T) {
 
 	t.Run("Test FeaturesAPIService UpdateFeatures", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.FeaturesAPI.UpdateFeatures(context.Background()).Execute()
 

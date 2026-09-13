@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | **string** |  |
-**Amount** | Pointer to **int32** |  | [optional]
-**ReferenceId** | **string** |  |
-**Description** | **string** |  |
+**AppId** | **string** |  | 
+**Amount** | Pointer to **int32** |  | [optional] 
+**ReferenceId** | **string** |  | 
+**Description** | **string** |  | 
 
 ## Methods
 

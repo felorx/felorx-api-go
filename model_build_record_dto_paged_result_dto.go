@@ -19,8 +19,8 @@ var _ MappedNullable = &BuildRecordDtoPagedResultDto{}
 
 // BuildRecordDtoPagedResultDto struct for BuildRecordDtoPagedResultDto
 type BuildRecordDtoPagedResultDto struct {
-	Items      []BuildRecordDto `json:"items,omitempty"`
-	TotalCount *int64           `json:"totalCount,omitempty"`
+	Items []BuildRecordDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewBuildRecordDtoPagedResultDto instantiates a new BuildRecordDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *BuildRecordDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o BuildRecordDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableBuildRecordDtoPagedResultDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

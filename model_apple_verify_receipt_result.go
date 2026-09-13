@@ -20,13 +20,13 @@ var _ MappedNullable = &AppleVerifyReceiptResult{}
 // AppleVerifyReceiptResult struct for AppleVerifyReceiptResult
 type AppleVerifyReceiptResult struct {
 	Environment NullableString `json:"environment,omitempty"`
-	IsRetryable *bool          `json:"is_retryable,omitempty"`
+	IsRetryable *bool `json:"is_retryable,omitempty"`
 	// 订阅订单状态
-	Status             *int32               `json:"status,omitempty"`
-	LatestReceiptInfo  []LatestReceiptInfo  `json:"latest_receipt_info,omitempty"`
-	LatestReceipt      NullableString       `json:"latest_receipt,omitempty"`
+	Status *int32 `json:"status,omitempty"`
+	LatestReceiptInfo []LatestReceiptInfo `json:"latest_receipt_info,omitempty"`
+	LatestReceipt NullableString `json:"latest_receipt,omitempty"`
 	PendingRenewalInfo []PendingRenewalInfo `json:"pending_renewal_info,omitempty"`
-	Receipt            *Receipt             `json:"receipt,omitempty"`
+	Receipt *Receipt `json:"receipt,omitempty"`
 }
 
 // NewAppleVerifyReceiptResult instantiates a new AppleVerifyReceiptResult object
@@ -78,7 +78,6 @@ func (o *AppleVerifyReceiptResult) HasEnvironment() bool {
 func (o *AppleVerifyReceiptResult) SetEnvironment(v string) {
 	o.Environment.Set(&v)
 }
-
 // SetEnvironmentNil sets the value for Environment to be an explicit nil
 func (o *AppleVerifyReceiptResult) SetEnvironmentNil() {
 	o.Environment.Set(nil)
@@ -218,7 +217,6 @@ func (o *AppleVerifyReceiptResult) HasLatestReceipt() bool {
 func (o *AppleVerifyReceiptResult) SetLatestReceipt(v string) {
 	o.LatestReceipt.Set(&v)
 }
-
 // SetLatestReceiptNil sets the value for LatestReceipt to be an explicit nil
 func (o *AppleVerifyReceiptResult) SetLatestReceiptNil() {
 	o.LatestReceipt.Set(nil)
@@ -295,7 +293,7 @@ func (o *AppleVerifyReceiptResult) SetReceipt(v Receipt) {
 }
 
 func (o AppleVerifyReceiptResult) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -363,3 +361,5 @@ func (v *NullableAppleVerifyReceiptResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

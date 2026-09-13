@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -108,7 +108,6 @@ func (o *UpdateBuildRecordDto) HasLogs() bool {
 func (o *UpdateBuildRecordDto) SetLogs(v string) {
 	o.Logs.Set(&v)
 }
-
 // SetLogsNil sets the value for Logs to be an explicit nil
 func (o *UpdateBuildRecordDto) SetLogsNil() {
 	o.Logs.Set(nil)
@@ -151,7 +150,6 @@ func (o *UpdateBuildRecordDto) HasErrorMessage() bool {
 func (o *UpdateBuildRecordDto) SetErrorMessage(v string) {
 	o.ErrorMessage.Set(&v)
 }
-
 // SetErrorMessageNil sets the value for ErrorMessage to be an explicit nil
 func (o *UpdateBuildRecordDto) SetErrorMessageNil() {
 	o.ErrorMessage.Set(nil)
@@ -194,7 +192,6 @@ func (o *UpdateBuildRecordDto) HasArtifactUrl() bool {
 func (o *UpdateBuildRecordDto) SetArtifactUrl(v string) {
 	o.ArtifactUrl.Set(&v)
 }
-
 // SetArtifactUrlNil sets the value for ArtifactUrl to be an explicit nil
 func (o *UpdateBuildRecordDto) SetArtifactUrlNil() {
 	o.ArtifactUrl.Set(nil)
@@ -237,7 +234,6 @@ func (o *UpdateBuildRecordDto) HasArtifactSize() bool {
 func (o *UpdateBuildRecordDto) SetArtifactSize(v int64) {
 	o.ArtifactSize.Set(&v)
 }
-
 // SetArtifactSizeNil sets the value for ArtifactSize to be an explicit nil
 func (o *UpdateBuildRecordDto) SetArtifactSizeNil() {
 	o.ArtifactSize.Set(nil)
@@ -249,7 +245,7 @@ func (o *UpdateBuildRecordDto) UnsetArtifactSize() {
 }
 
 func (o UpdateBuildRecordDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -287,10 +283,10 @@ func (o *UpdateBuildRecordDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -346,3 +342,5 @@ func (v *NullableUpdateBuildRecordDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

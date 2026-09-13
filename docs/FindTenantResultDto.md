@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** |  | [optional]
-**TenantId** | Pointer to **NullableString** |  | [optional]
-**Name** | Pointer to **NullableString** |  | [optional]
-**NormalizedName** | Pointer to **NullableString** |  | [optional]
-**IsActive** | Pointer to **bool** |  | [optional]
+**Success** | Pointer to **bool** |  | [optional] 
+**TenantId** | Pointer to **NullableString** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional] 
+**NormalizedName** | Pointer to **NullableString** |  | [optional] 
+**IsActive** | Pointer to **bool** |  | [optional] 
 
 ## Methods
 

@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** |  | [optional]
-**LangCode** | Pointer to **NullableString** |  | [optional]
-**CountryCode** | Pointer to **NullableString** |  | [optional]
-**Title** | Pointer to **NullableString** |  | [optional]
-**Subtitle** | Pointer to **NullableString** |  | [optional]
-**ShortDesc** | Pointer to **NullableString** |  | [optional]
-**FullDesc** | Pointer to **NullableString** |  | [optional]
-**Keywords** | Pointer to **NullableString** |  | [optional]
-**PromoText** | Pointer to **NullableString** |  | [optional]
-**SupportUrl** | Pointer to **NullableString** |  | [optional]
-**PrivacyUrl** | Pointer to **NullableString** |  | [optional]
-**ReleaseNote** | Pointer to **NullableString** |  | [optional]
+**AppId** | Pointer to **string** |  | [optional] 
+**LangCode** | Pointer to **NullableString** |  | [optional] 
+**CountryCode** | Pointer to **NullableString** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional] 
+**Subtitle** | Pointer to **NullableString** |  | [optional] 
+**ShortDesc** | Pointer to **NullableString** |  | [optional] 
+**FullDesc** | Pointer to **NullableString** |  | [optional] 
+**Keywords** | Pointer to **NullableString** |  | [optional] 
+**PromoText** | Pointer to **NullableString** |  | [optional] 
+**SupportUrl** | Pointer to **NullableString** |  | [optional] 
+**PrivacyUrl** | Pointer to **NullableString** |  | [optional] 
+**ReleaseNote** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

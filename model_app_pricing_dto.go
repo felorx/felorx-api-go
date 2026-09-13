@@ -20,15 +20,15 @@ var _ MappedNullable = &AppPricingDto{}
 
 // AppPricingDto struct for AppPricingDto
 type AppPricingDto struct {
-	Id                   *string         `json:"id,omitempty"`
-	CreationTime         *time.Time      `json:"creationTime,omitempty"`
-	CreatorId            NullableString  `json:"creatorId,omitempty"`
-	LastModificationTime NullableTime    `json:"lastModificationTime,omitempty"`
-	LastModifierId       NullableString  `json:"lastModifierId,omitempty"`
-	IsDeleted            *bool           `json:"isDeleted,omitempty"`
-	DeleterId            NullableString  `json:"deleterId,omitempty"`
-	DeletionTime         NullableTime    `json:"deletionTime,omitempty"`
-	Naming               *AppPriceNaming `json:"naming,omitempty"`
+	Id *string `json:"id,omitempty"`
+	CreationTime *time.Time `json:"creationTime,omitempty"`
+	CreatorId NullableString `json:"creatorId,omitempty"`
+	LastModificationTime NullableTime `json:"lastModificationTime,omitempty"`
+	LastModifierId NullableString `json:"lastModifierId,omitempty"`
+	IsDeleted *bool `json:"isDeleted,omitempty"`
+	DeleterId NullableString `json:"deleterId,omitempty"`
+	DeletionTime NullableTime `json:"deletionTime,omitempty"`
+	Naming *AppPriceNaming `json:"naming,omitempty"`
 	// 简单描述  适用于个人网站和任何想用基本的聊天方式与游客交流的人。  适用于希望改善客户关系的早期创业公司。  为需要全功能解决方案与客户沟通的公司而设。
 	Description NullableString `json:"description,omitempty"`
 	// APPID
@@ -152,7 +152,6 @@ func (o *AppPricingDto) HasCreatorId() bool {
 func (o *AppPricingDto) SetCreatorId(v string) {
 	o.CreatorId.Set(&v)
 }
-
 // SetCreatorIdNil sets the value for CreatorId to be an explicit nil
 func (o *AppPricingDto) SetCreatorIdNil() {
 	o.CreatorId.Set(nil)
@@ -195,7 +194,6 @@ func (o *AppPricingDto) HasLastModificationTime() bool {
 func (o *AppPricingDto) SetLastModificationTime(v time.Time) {
 	o.LastModificationTime.Set(&v)
 }
-
 // SetLastModificationTimeNil sets the value for LastModificationTime to be an explicit nil
 func (o *AppPricingDto) SetLastModificationTimeNil() {
 	o.LastModificationTime.Set(nil)
@@ -238,7 +236,6 @@ func (o *AppPricingDto) HasLastModifierId() bool {
 func (o *AppPricingDto) SetLastModifierId(v string) {
 	o.LastModifierId.Set(&v)
 }
-
 // SetLastModifierIdNil sets the value for LastModifierId to be an explicit nil
 func (o *AppPricingDto) SetLastModifierIdNil() {
 	o.LastModifierId.Set(nil)
@@ -313,7 +310,6 @@ func (o *AppPricingDto) HasDeleterId() bool {
 func (o *AppPricingDto) SetDeleterId(v string) {
 	o.DeleterId.Set(&v)
 }
-
 // SetDeleterIdNil sets the value for DeleterId to be an explicit nil
 func (o *AppPricingDto) SetDeleterIdNil() {
 	o.DeleterId.Set(nil)
@@ -356,7 +352,6 @@ func (o *AppPricingDto) HasDeletionTime() bool {
 func (o *AppPricingDto) SetDeletionTime(v time.Time) {
 	o.DeletionTime.Set(&v)
 }
-
 // SetDeletionTimeNil sets the value for DeletionTime to be an explicit nil
 func (o *AppPricingDto) SetDeletionTimeNil() {
 	o.DeletionTime.Set(nil)
@@ -431,7 +426,6 @@ func (o *AppPricingDto) HasDescription() bool {
 func (o *AppPricingDto) SetDescription(v string) {
 	o.Description.Set(&v)
 }
-
 // SetDescriptionNil sets the value for Description to be an explicit nil
 func (o *AppPricingDto) SetDescriptionNil() {
 	o.Description.Set(nil)
@@ -540,7 +534,7 @@ func (o *AppPricingDto) SetItems(v []AppPricingItemValueDto) {
 }
 
 func (o AppPricingDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -626,3 +620,5 @@ func (v *NullableAppPricingDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

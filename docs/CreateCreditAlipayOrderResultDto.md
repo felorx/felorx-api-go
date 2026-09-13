@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrderId** | Pointer to **string** |  | [optional]
-**OutTradeNo** | Pointer to **NullableString** |  | [optional]
-**CheckoutMode** | Pointer to **NullableString** |  | [optional]
-**PaymentForm** | Pointer to **NullableString** |  | [optional]
-**PaymentUrl** | Pointer to **NullableString** |  | [optional]
-**OrderString** | Pointer to **NullableString** |  | [optional]
+**OrderId** | Pointer to **string** |  | [optional] 
+**OutTradeNo** | Pointer to **NullableString** |  | [optional] 
+**CheckoutMode** | Pointer to **NullableString** |  | [optional] 
+**PaymentForm** | Pointer to **NullableString** |  | [optional] 
+**PaymentUrl** | Pointer to **NullableString** |  | [optional] 
+**OrderString** | Pointer to **NullableString** |  | [optional] 
 
 ## Methods
 

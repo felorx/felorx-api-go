@@ -19,15 +19,15 @@ var _ MappedNullable = &PendingRenewalInfo{}
 
 // PendingRenewalInfo struct for PendingRenewalInfo
 type PendingRenewalInfo struct {
-	AutoRenewProductId        NullableString `json:"auto_renew_product_id,omitempty"`
-	AutoRenewStatus           NullableString `json:"auto_renew_status,omitempty"`
-	IsInBillingRetryPeriod    NullableString `json:"is_in_billing_retry_period,omitempty"`
-	OriginalTransactionId     NullableString `json:"original_transaction_id,omitempty"`
-	ProductId                 NullableString `json:"product_id,omitempty"`
-	ExpirationIntent          NullableString `json:"expiration_intent,omitempty"`
-	PriceConsentStatus        NullableString `json:"price_consent_status,omitempty"`
-	GracePeriodExpiresDate    NullableString `json:"grace_period_expires_date,omitempty"`
-	GracePeriodExpiresDateMs  NullableString `json:"grace_period_expires_date_ms,omitempty"`
+	AutoRenewProductId NullableString `json:"auto_renew_product_id,omitempty"`
+	AutoRenewStatus NullableString `json:"auto_renew_status,omitempty"`
+	IsInBillingRetryPeriod NullableString `json:"is_in_billing_retry_period,omitempty"`
+	OriginalTransactionId NullableString `json:"original_transaction_id,omitempty"`
+	ProductId NullableString `json:"product_id,omitempty"`
+	ExpirationIntent NullableString `json:"expiration_intent,omitempty"`
+	PriceConsentStatus NullableString `json:"price_consent_status,omitempty"`
+	GracePeriodExpiresDate NullableString `json:"grace_period_expires_date,omitempty"`
+	GracePeriodExpiresDateMs NullableString `json:"grace_period_expires_date_ms,omitempty"`
 	GracePeriodExpiresDatePst NullableString `json:"grace_period_expires_date_pst,omitempty"`
 }
 
@@ -80,7 +80,6 @@ func (o *PendingRenewalInfo) HasAutoRenewProductId() bool {
 func (o *PendingRenewalInfo) SetAutoRenewProductId(v string) {
 	o.AutoRenewProductId.Set(&v)
 }
-
 // SetAutoRenewProductIdNil sets the value for AutoRenewProductId to be an explicit nil
 func (o *PendingRenewalInfo) SetAutoRenewProductIdNil() {
 	o.AutoRenewProductId.Set(nil)
@@ -123,7 +122,6 @@ func (o *PendingRenewalInfo) HasAutoRenewStatus() bool {
 func (o *PendingRenewalInfo) SetAutoRenewStatus(v string) {
 	o.AutoRenewStatus.Set(&v)
 }
-
 // SetAutoRenewStatusNil sets the value for AutoRenewStatus to be an explicit nil
 func (o *PendingRenewalInfo) SetAutoRenewStatusNil() {
 	o.AutoRenewStatus.Set(nil)
@@ -166,7 +164,6 @@ func (o *PendingRenewalInfo) HasIsInBillingRetryPeriod() bool {
 func (o *PendingRenewalInfo) SetIsInBillingRetryPeriod(v string) {
 	o.IsInBillingRetryPeriod.Set(&v)
 }
-
 // SetIsInBillingRetryPeriodNil sets the value for IsInBillingRetryPeriod to be an explicit nil
 func (o *PendingRenewalInfo) SetIsInBillingRetryPeriodNil() {
 	o.IsInBillingRetryPeriod.Set(nil)
@@ -209,7 +206,6 @@ func (o *PendingRenewalInfo) HasOriginalTransactionId() bool {
 func (o *PendingRenewalInfo) SetOriginalTransactionId(v string) {
 	o.OriginalTransactionId.Set(&v)
 }
-
 // SetOriginalTransactionIdNil sets the value for OriginalTransactionId to be an explicit nil
 func (o *PendingRenewalInfo) SetOriginalTransactionIdNil() {
 	o.OriginalTransactionId.Set(nil)
@@ -252,7 +248,6 @@ func (o *PendingRenewalInfo) HasProductId() bool {
 func (o *PendingRenewalInfo) SetProductId(v string) {
 	o.ProductId.Set(&v)
 }
-
 // SetProductIdNil sets the value for ProductId to be an explicit nil
 func (o *PendingRenewalInfo) SetProductIdNil() {
 	o.ProductId.Set(nil)
@@ -295,7 +290,6 @@ func (o *PendingRenewalInfo) HasExpirationIntent() bool {
 func (o *PendingRenewalInfo) SetExpirationIntent(v string) {
 	o.ExpirationIntent.Set(&v)
 }
-
 // SetExpirationIntentNil sets the value for ExpirationIntent to be an explicit nil
 func (o *PendingRenewalInfo) SetExpirationIntentNil() {
 	o.ExpirationIntent.Set(nil)
@@ -338,7 +332,6 @@ func (o *PendingRenewalInfo) HasPriceConsentStatus() bool {
 func (o *PendingRenewalInfo) SetPriceConsentStatus(v string) {
 	o.PriceConsentStatus.Set(&v)
 }
-
 // SetPriceConsentStatusNil sets the value for PriceConsentStatus to be an explicit nil
 func (o *PendingRenewalInfo) SetPriceConsentStatusNil() {
 	o.PriceConsentStatus.Set(nil)
@@ -381,7 +374,6 @@ func (o *PendingRenewalInfo) HasGracePeriodExpiresDate() bool {
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDate(v string) {
 	o.GracePeriodExpiresDate.Set(&v)
 }
-
 // SetGracePeriodExpiresDateNil sets the value for GracePeriodExpiresDate to be an explicit nil
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDateNil() {
 	o.GracePeriodExpiresDate.Set(nil)
@@ -424,7 +416,6 @@ func (o *PendingRenewalInfo) HasGracePeriodExpiresDateMs() bool {
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDateMs(v string) {
 	o.GracePeriodExpiresDateMs.Set(&v)
 }
-
 // SetGracePeriodExpiresDateMsNil sets the value for GracePeriodExpiresDateMs to be an explicit nil
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDateMsNil() {
 	o.GracePeriodExpiresDateMs.Set(nil)
@@ -467,7 +458,6 @@ func (o *PendingRenewalInfo) HasGracePeriodExpiresDatePst() bool {
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDatePst(v string) {
 	o.GracePeriodExpiresDatePst.Set(&v)
 }
-
 // SetGracePeriodExpiresDatePstNil sets the value for GracePeriodExpiresDatePst to be an explicit nil
 func (o *PendingRenewalInfo) SetGracePeriodExpiresDatePstNil() {
 	o.GracePeriodExpiresDatePst.Set(nil)
@@ -479,7 +469,7 @@ func (o *PendingRenewalInfo) UnsetGracePeriodExpiresDatePst() {
 }
 
 func (o PendingRenewalInfo) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -556,3 +546,5 @@ func (v *NullablePendingRenewalInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

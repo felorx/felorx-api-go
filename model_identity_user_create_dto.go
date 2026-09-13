@@ -11,8 +11,8 @@ API version: 1.0.0
 package felorx
 
 import (
-	"bytes"
 	"encoding/json"
+	"bytes"
 	"fmt"
 )
 
@@ -22,15 +22,15 @@ var _ MappedNullable = &IdentityUserCreateDto{}
 // IdentityUserCreateDto struct for IdentityUserCreateDto
 type IdentityUserCreateDto struct {
 	ExtraProperties map[string]interface{} `json:"extraProperties,omitempty"`
-	UserName        string                 `json:"userName"`
-	Name            NullableString         `json:"name,omitempty"`
-	Surname         NullableString         `json:"surname,omitempty"`
-	Email           string                 `json:"email"`
-	PhoneNumber     NullableString         `json:"phoneNumber,omitempty"`
-	IsActive        *bool                  `json:"isActive,omitempty"`
-	LockoutEnabled  *bool                  `json:"lockoutEnabled,omitempty"`
-	RoleNames       []string               `json:"roleNames,omitempty"`
-	Password        string                 `json:"password"`
+	UserName string `json:"userName"`
+	Name NullableString `json:"name,omitempty"`
+	Surname NullableString `json:"surname,omitempty"`
+	Email string `json:"email"`
+	PhoneNumber NullableString `json:"phoneNumber,omitempty"`
+	IsActive *bool `json:"isActive,omitempty"`
+	LockoutEnabled *bool `json:"lockoutEnabled,omitempty"`
+	RoleNames []string `json:"roleNames,omitempty"`
+	Password string `json:"password"`
 }
 
 type _IdentityUserCreateDto IdentityUserCreateDto
@@ -144,7 +144,6 @@ func (o *IdentityUserCreateDto) HasName() bool {
 func (o *IdentityUserCreateDto) SetName(v string) {
 	o.Name.Set(&v)
 }
-
 // SetNameNil sets the value for Name to be an explicit nil
 func (o *IdentityUserCreateDto) SetNameNil() {
 	o.Name.Set(nil)
@@ -187,7 +186,6 @@ func (o *IdentityUserCreateDto) HasSurname() bool {
 func (o *IdentityUserCreateDto) SetSurname(v string) {
 	o.Surname.Set(&v)
 }
-
 // SetSurnameNil sets the value for Surname to be an explicit nil
 func (o *IdentityUserCreateDto) SetSurnameNil() {
 	o.Surname.Set(nil)
@@ -254,7 +252,6 @@ func (o *IdentityUserCreateDto) HasPhoneNumber() bool {
 func (o *IdentityUserCreateDto) SetPhoneNumber(v string) {
 	o.PhoneNumber.Set(&v)
 }
-
 // SetPhoneNumberNil sets the value for PhoneNumber to be an explicit nil
 func (o *IdentityUserCreateDto) SetPhoneNumberNil() {
 	o.PhoneNumber.Set(nil)
@@ -387,7 +384,7 @@ func (o *IdentityUserCreateDto) SetPassword(v string) {
 }
 
 func (o IdentityUserCreateDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -438,10 +435,10 @@ func (o *IdentityUserCreateDto) UnmarshalJSON(data []byte) (err error) {
 	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
-		return err
+		return err;
 	}
 
-	for _, requiredProperty := range requiredProperties {
+	for _, requiredProperty := range(requiredProperties) {
 		if _, exists := allProperties[requiredProperty]; !exists {
 			return fmt.Errorf("no value given for required property %v", requiredProperty)
 		}
@@ -497,3 +494,5 @@ func (v *NullableIdentityUserCreateDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

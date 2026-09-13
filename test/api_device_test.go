@@ -11,10 +11,10 @@ package felorx
 
 import (
 	"context"
-	openapiclient "github.com/felorx/felorx-api-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
+	openapiclient "github.com/felorx/felorx-api-go"
 )
 
 func Test_felorx_DeviceAPIService(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService Bind", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.DeviceAPI.Bind(context.Background()).Execute()
 
@@ -35,7 +35,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService GetByToken", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceAPI.GetByToken(context.Background()).Execute()
 
@@ -47,7 +47,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService GetDeviceById", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var id string
 
@@ -61,7 +61,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService GetDeviceList", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceAPI.GetDeviceList(context.Background()).Execute()
 
@@ -73,7 +73,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService Logout", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.DeviceAPI.Logout(context.Background()).Execute()
 
@@ -84,7 +84,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService RefreshDevice", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.DeviceAPI.RefreshDevice(context.Background()).Execute()
 
@@ -95,7 +95,7 @@ func Test_felorx_DeviceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceAPIService Remove", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		httpRes, err := apiClient.DeviceAPI.Remove(context.Background()).Execute()
 

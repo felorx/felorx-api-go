@@ -71,7 +71,6 @@ func (o *WindowsTimeZone) HasTimeZoneId() bool {
 func (o *WindowsTimeZone) SetTimeZoneId(v string) {
 	o.TimeZoneId.Set(&v)
 }
-
 // SetTimeZoneIdNil sets the value for TimeZoneId to be an explicit nil
 func (o *WindowsTimeZone) SetTimeZoneIdNil() {
 	o.TimeZoneId.Set(nil)
@@ -83,7 +82,7 @@ func (o *WindowsTimeZone) UnsetTimeZoneId() {
 }
 
 func (o WindowsTimeZone) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -133,3 +132,5 @@ func (v *NullableWindowsTimeZone) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

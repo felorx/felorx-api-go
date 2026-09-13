@@ -19,8 +19,8 @@ var _ MappedNullable = &DeployRecordDtoPagedResultDto{}
 
 // DeployRecordDtoPagedResultDto struct for DeployRecordDtoPagedResultDto
 type DeployRecordDtoPagedResultDto struct {
-	Items      []DeployRecordDto `json:"items,omitempty"`
-	TotalCount *int64            `json:"totalCount,omitempty"`
+	Items []DeployRecordDto `json:"items,omitempty"`
+	TotalCount *int64 `json:"totalCount,omitempty"`
 }
 
 // NewDeployRecordDtoPagedResultDto instantiates a new DeployRecordDtoPagedResultDto object
@@ -106,7 +106,7 @@ func (o *DeployRecordDtoPagedResultDto) SetTotalCount(v int64) {
 }
 
 func (o DeployRecordDtoPagedResultDto) MarshalJSON() ([]byte, error) {
-	toSerialize, err := o.ToMap()
+	toSerialize,err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,3 +159,5 @@ func (v *NullableDeployRecordDtoPagedResultDto) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+

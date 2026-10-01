@@ -45,6 +45,17 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test AccountAPIService ConfirmEmail", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		httpRes, err := apiClient.AccountAPI.ConfirmEmail(context.Background()).Execute()
+
+		require.Nil(t, err)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test AccountAPIService DeletionStatus", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
@@ -100,6 +111,30 @@ func Test_felorx_AccountAPIService(t *testing.T) {
 		httpRes, err := apiClient.AccountAPI.ResetPassword(context.Background()).Execute()
 
 		require.Nil(t, err)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test AccountAPIService SendDeletionCode", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.AccountAPI.SendDeletionCode(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test AccountAPIService SendEmailConfirmationCode", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.AccountAPI.SendEmailConfirmationCode(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

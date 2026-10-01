@@ -4,15 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password | 
+[**ChangeAccountPassword**](AccountAPI.md#ChangeAccountPassword) | **Post** /api/app/account/change-password |
 [**CheckSyncAuth**](AccountAPI.md#CheckSyncAuth) | **Post** /api/app/account/check-sync-auth | 检查同步认证
-[**DeletionStatus**](AccountAPI.md#DeletionStatus) | **Post** /api/app/account/deletion-status | 
-[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account | 
-[**GetAccountGetApiAppAccount**](AccountAPI.md#GetAccountGetApiAppAccount) | **Get** /api/app/account | 
-[**Register**](AccountAPI.md#Register) | **Post** /api/account/register | 
-[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password | 
-[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code | 
-[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token | 
+[**ConfirmEmail**](AccountAPI.md#ConfirmEmail) | **Post** /api/app/account/confirm-email |
+[**DeletionStatus**](AccountAPI.md#DeletionStatus) | **Post** /api/app/account/deletion-status |
+[**DestroyAccount**](AccountAPI.md#DestroyAccount) | **Post** /api/app/account/destroy-account |
+[**GetAccountGetApiAppAccount**](AccountAPI.md#GetAccountGetApiAppAccount) | **Get** /api/app/account |
+[**Register**](AccountAPI.md#Register) | **Post** /api/account/register |
+[**ResetPassword**](AccountAPI.md#ResetPassword) | **Post** /api/account/reset-password |
+[**SendDeletionCode**](AccountAPI.md#SendDeletionCode) | **Post** /api/app/account/send-deletion-code |
+[**SendEmailConfirmationCode**](AccountAPI.md#SendEmailConfirmationCode) | **Post** /api/app/account/send-email-confirmation-code |
+[**SendPasswordResetCode**](AccountAPI.md#SendPasswordResetCode) | **Post** /api/account/send-password-reset-code |
+[**VerifyPasswordResetToken**](AccountAPI.md#VerifyPasswordResetToken) | **Post** /api/account/verify-password-reset-token |
 
 
 
@@ -58,7 +61,7 @@ Other parameters are passed through a pointer to a apiChangeAccountPasswordReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  | 
+ **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md) |  |
 
 ### Return type
 
@@ -137,6 +140,68 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## ConfirmEmail
+
+> ConfirmEmail(ctx).ConfirmAccountEmailDto(confirmAccountEmailDto).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+	confirmAccountEmailDto := *openapiclient.NewConfirmAccountEmailDto("Code_example") // ConfirmAccountEmailDto |  (optional)
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	r, err := apiClient.AccountAPI.ConfirmEmail(context.Background()).ConfirmAccountEmailDto(confirmAccountEmailDto).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.ConfirmEmail``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiConfirmEmailRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **confirmAccountEmailDto** | [**ConfirmAccountEmailDto**](ConfirmAccountEmailDto.md) |  |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## DeletionStatus
 
 > AccountDeletionStatusDto DeletionStatus(ctx).AccountDeletionStatusQueryDto(accountDeletionStatusQueryDto).Execute()
@@ -181,7 +246,7 @@ Other parameters are passed through a pointer to a apiDeletionStatusRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountDeletionStatusQueryDto** | [**AccountDeletionStatusQueryDto**](AccountDeletionStatusQueryDto.md) |  | 
+ **accountDeletionStatusQueryDto** | [**AccountDeletionStatusQueryDto**](AccountDeletionStatusQueryDto.md) |  |
 
 ### Return type
 
@@ -245,7 +310,7 @@ Other parameters are passed through a pointer to a apiDestroyAccountRequest stru
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  | 
+ **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md) |  |
 
 ### Return type
 
@@ -368,7 +433,7 @@ Other parameters are passed through a pointer to a apiRegisterRequest struct via
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registerDto** | [**RegisterDto**](RegisterDto.md) |  | 
+ **registerDto** | [**RegisterDto**](RegisterDto.md) |  |
 
 ### Return type
 
@@ -430,7 +495,7 @@ Other parameters are passed through a pointer to a apiResetPasswordRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  | 
+ **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md) |  |
 
 ### Return type
 
@@ -443,6 +508,124 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json, text/json, application/*+json
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SendDeletionCode
+
+> string SendDeletionCode(ctx).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AccountAPI.SendDeletionCode(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.SendDeletionCode``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SendDeletionCode`: string
+	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.SendDeletionCode`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSendDeletionCodeRequest struct via the builder pattern
+
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SendEmailConfirmationCode
+
+> string SendEmailConfirmationCode(ctx).Execute()
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/felorx/felorx-api-go"
+)
+
+func main() {
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AccountAPI.SendEmailConfirmationCode(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AccountAPI.SendEmailConfirmationCode``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SendEmailConfirmationCode`: string
+	fmt.Fprintf(os.Stdout, "Response from `AccountAPI.SendEmailConfirmationCode`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSendEmailConfirmationCodeRequest struct via the builder pattern
+
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
@@ -492,7 +675,7 @@ Other parameters are passed through a pointer to a apiSendPasswordResetCodeReque
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  | 
+ **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md) |  |
 
 ### Return type
 
@@ -556,7 +739,7 @@ Other parameters are passed through a pointer to a apiVerifyPasswordResetTokenRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  | 
+ **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md) |  |
 
 ### Return type
 
@@ -574,4 +757,3 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to README]](../README.md)
-

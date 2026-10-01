@@ -185,23 +185,23 @@ func (a *AuthCenterAPIService) GetAuthorizedAppsExecute(r ApiGetAuthorizedAppsRe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiGetSummaryGetApiAppAuthCenterSummaryRequest struct {
+type ApiGetSummaryRequest struct {
 	ctx context.Context
 	ApiService *AuthCenterAPIService
 }
 
-func (r ApiGetSummaryGetApiAppAuthCenterSummaryRequest) Execute() (*AuthCenterSummaryDto, *http.Response, error) {
-	return r.ApiService.GetSummaryGetApiAppAuthCenterSummaryExecute(r)
+func (r ApiGetSummaryRequest) Execute() (*AuthCenterSummaryDto, *http.Response, error) {
+	return r.ApiService.GetSummaryExecute(r)
 }
 
 /*
-GetSummaryGetApiAppAuthCenterSummary Method for GetSummaryGetApiAppAuthCenterSummary
+GetSummary Method for GetSummary
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSummaryGetApiAppAuthCenterSummaryRequest
+ @return ApiGetSummaryRequest
 */
-func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummary(ctx context.Context) ApiGetSummaryGetApiAppAuthCenterSummaryRequest {
-	return ApiGetSummaryGetApiAppAuthCenterSummaryRequest{
+func (a *AuthCenterAPIService) GetSummary(ctx context.Context) ApiGetSummaryRequest {
+	return ApiGetSummaryRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -209,7 +209,7 @@ func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummary(ctx context.
 
 // Execute executes the request
 //  @return AuthCenterSummaryDto
-func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummaryExecute(r ApiGetSummaryGetApiAppAuthCenterSummaryRequest) (*AuthCenterSummaryDto, *http.Response, error) {
+func (a *AuthCenterAPIService) GetSummaryExecute(r ApiGetSummaryRequest) (*AuthCenterSummaryDto, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -217,7 +217,7 @@ func (a *AuthCenterAPIService) GetSummaryGetApiAppAuthCenterSummaryExecute(r Api
 		localVarReturnValue  *AuthCenterSummaryDto
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.GetSummaryGetApiAppAuthCenterSummary")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AuthCenterAPIService.GetSummary")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}

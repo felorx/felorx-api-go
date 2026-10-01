@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **NullableString** |  | [optional] 
-**Title** | Pointer to **NullableString** |  | [optional] 
-**Count** | Pointer to **int32** |  | [optional] 
-**Size** | Pointer to **int64** |  | [optional] 
+**Name** | Pointer to **NullableString** |  | [optional]
+**Title** | Pointer to **NullableString** |  | [optional]
+**Key** | Pointer to **NullableString** | 云空间类型标识（image/video/document/todo/note/billing…），  与同步节点 GET /sync/storage 返回的 items[].key 保持一致。  客户端据此渲染本地化类型名称，不再依赖服务端返回的英文名称。 | [optional]
+**Count** | Pointer to **int32** |  | [optional]
+**Size** | Pointer to **int64** |  | [optional]
 
 ## Methods
 
@@ -98,6 +99,41 @@ HasTitle returns a boolean if a field has been set.
 `func (o *UserStorageItemDto) UnsetTitle()`
 
 UnsetTitle ensures that no value is present for Title, not even an explicit nil
+### GetKey
+
+`func (o *UserStorageItemDto) GetKey() string`
+
+GetKey returns the Key field if non-nil, zero value otherwise.
+
+### GetKeyOk
+
+`func (o *UserStorageItemDto) GetKeyOk() (*string, bool)`
+
+GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKey
+
+`func (o *UserStorageItemDto) SetKey(v string)`
+
+SetKey sets Key field to given value.
+
+### HasKey
+
+`func (o *UserStorageItemDto) HasKey() bool`
+
+HasKey returns a boolean if a field has been set.
+
+### SetKeyNil
+
+`func (o *UserStorageItemDto) SetKeyNil(b bool)`
+
+ SetKeyNil sets the value for Key to be an explicit nil
+
+### UnsetKey
+`func (o *UserStorageItemDto) UnsetKey()`
+
+UnsetKey ensures that no value is present for Key, not even an explicit nil
 ### GetCount
 
 `func (o *UserStorageItemDto) GetCount() int32`
@@ -150,5 +186,3 @@ HasSize returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

@@ -34,11 +34,11 @@ func Test_felorx_AuthCenterAPIService(t *testing.T) {
 
 	})
 
-	t.Run("Test AuthCenterAPIService GetSummaryGetApiAppAuthCenterSummary", func(t *testing.T) {
+	t.Run("Test AuthCenterAPIService GetSummary", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.AuthCenterAPI.GetSummaryGetApiAppAuthCenterSummary(context.Background()).Execute()
+		resp, httpRes, err := apiClient.AuthCenterAPI.GetSummary(context.Background()).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

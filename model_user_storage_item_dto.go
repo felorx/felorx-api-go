@@ -21,6 +21,8 @@ var _ MappedNullable = &UserStorageItemDto{}
 type UserStorageItemDto struct {
 	Name NullableString `json:"name,omitempty"`
 	Title NullableString `json:"title,omitempty"`
+	// 云空间类型标识（image/video/document/todo/note/billing…），  与同步节点 GET /sync/storage 返回的 items[].key 保持一致。  客户端据此渲染本地化类型名称，不再依赖服务端返回的英文名称。
+	Key NullableString `json:"key,omitempty"`
 	Count *int32 `json:"count,omitempty"`
 	Size *int64 `json:"size,omitempty"`
 }
@@ -126,6 +128,48 @@ func (o *UserStorageItemDto) UnsetTitle() {
 	o.Title.Unset()
 }
 
+// GetKey returns the Key field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *UserStorageItemDto) GetKey() string {
+	if o == nil || IsNil(o.Key.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.Key.Get()
+}
+
+// GetKeyOk returns a tuple with the Key field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *UserStorageItemDto) GetKeyOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Key.Get(), o.Key.IsSet()
+}
+
+// HasKey returns a boolean if a field has been set.
+func (o *UserStorageItemDto) HasKey() bool {
+	if o != nil && o.Key.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetKey gets a reference to the given NullableString and assigns it to the Key field.
+func (o *UserStorageItemDto) SetKey(v string) {
+	o.Key.Set(&v)
+}
+// SetKeyNil sets the value for Key to be an explicit nil
+func (o *UserStorageItemDto) SetKeyNil() {
+	o.Key.Set(nil)
+}
+
+// UnsetKey ensures that no value is present for Key, not even an explicit nil
+func (o *UserStorageItemDto) UnsetKey() {
+	o.Key.Unset()
+}
+
 // GetCount returns the Count field value if set, zero value otherwise.
 func (o *UserStorageItemDto) GetCount() int32 {
 	if o == nil || IsNil(o.Count) {
@@ -206,6 +250,9 @@ func (o UserStorageItemDto) ToMap() (map[string]interface{}, error) {
 	if o.Title.IsSet() {
 		toSerialize["title"] = o.Title.Get()
 	}
+	if o.Key.IsSet() {
+		toSerialize["key"] = o.Key.Get()
+	}
 	if !IsNil(o.Count) {
 		toSerialize["count"] = o.Count
 	}
@@ -250,5 +297,3 @@ func (v *NullableUserStorageItemDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -59,12 +59,6 @@ type APIClient struct {
 
 	AccountAPI *AccountAPIService
 
-	AiProviderAPI *AiProviderAPIService
-
-	AiProvidersAPI *AiProvidersAPIService
-
-	AiUsageAPI *AiUsageAPIService
-
 	ApiKeysAPI *ApiKeysAPIService
 
 	AppAPI *AppAPIService
@@ -123,8 +117,6 @@ type APIClient struct {
 
 	NotificationAPI *NotificationAPIService
 
-	OpenAiCompatibleChatAPI *OpenAiCompatibleChatAPIService
-
 	OpsCryptoAPI *OpsCryptoAPIService
 
 	PermissionsAPI *PermissionsAPIService
@@ -132,8 +124,6 @@ type APIClient struct {
 	ProfileAPI *ProfileAPIService
 
 	RemotePairingAPI *RemotePairingAPIService
-
-	ResponsesAPI *ResponsesAPIService
 
 	RoleAPI *RoleAPIService
 
@@ -175,9 +165,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.AbpApplicationLocalizationAPI = (*AbpApplicationLocalizationAPIService)(&c.common)
 	c.AbpTenantAPI = (*AbpTenantAPIService)(&c.common)
 	c.AccountAPI = (*AccountAPIService)(&c.common)
-	c.AiProviderAPI = (*AiProviderAPIService)(&c.common)
-	c.AiProvidersAPI = (*AiProvidersAPIService)(&c.common)
-	c.AiUsageAPI = (*AiUsageAPIService)(&c.common)
 	c.ApiKeysAPI = (*ApiKeysAPIService)(&c.common)
 	c.AppAPI = (*AppAPIService)(&c.common)
 	c.AppAssetAPI = (*AppAssetAPIService)(&c.common)
@@ -207,12 +194,10 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.MessageTemplateAPI = (*MessageTemplateAPIService)(&c.common)
 	c.MessageTemplateReleaseAPI = (*MessageTemplateReleaseAPIService)(&c.common)
 	c.NotificationAPI = (*NotificationAPIService)(&c.common)
-	c.OpenAiCompatibleChatAPI = (*OpenAiCompatibleChatAPIService)(&c.common)
 	c.OpsCryptoAPI = (*OpsCryptoAPIService)(&c.common)
 	c.PermissionsAPI = (*PermissionsAPIService)(&c.common)
 	c.ProfileAPI = (*ProfileAPIService)(&c.common)
 	c.RemotePairingAPI = (*RemotePairingAPIService)(&c.common)
-	c.ResponsesAPI = (*ResponsesAPIService)(&c.common)
 	c.RoleAPI = (*RoleAPIService)(&c.common)
 	c.StorageObjectAPI = (*StorageObjectAPIService)(&c.common)
 	c.SubscriptionAPI = (*SubscriptionAPIService)(&c.common)

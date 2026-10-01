@@ -78,90 +78,75 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AbpApiDefinitionAPI* | [**GetAbpApiDefinition**](docs/AbpApiDefinitionAPI.md#getabpapidefinition) | **Get** /api/abp/api-definition | 
-*AbpApplicationConfigurationAPI* | [**GetAbpApplicationConfiguration**](docs/AbpApplicationConfigurationAPI.md#getabpapplicationconfiguration) | **Get** /api/abp/application-configuration | 
-*AbpApplicationLocalizationAPI* | [**GetAbpApplicationLocalization**](docs/AbpApplicationLocalizationAPI.md#getabpapplicationlocalization) | **Get** /api/abp/application-localization | 
-*AbpTenantAPI* | [**FindTenantById**](docs/AbpTenantAPI.md#findtenantbyid) | **Get** /api/abp/multi-tenancy/tenants/by-id/{id} | 
-*AbpTenantAPI* | [**FindTenantByName**](docs/AbpTenantAPI.md#findtenantbyname) | **Get** /api/abp/multi-tenancy/tenants/by-name/{name} | 
-*AccountAPI* | [**ChangeAccountPassword**](docs/AccountAPI.md#changeaccountpassword) | **Post** /api/app/account/change-password | 
+*AbpApiDefinitionAPI* | [**GetAbpApiDefinition**](docs/AbpApiDefinitionAPI.md#getabpapidefinition) | **Get** /api/abp/api-definition |
+*AbpApplicationConfigurationAPI* | [**GetAbpApplicationConfiguration**](docs/AbpApplicationConfigurationAPI.md#getabpapplicationconfiguration) | **Get** /api/abp/application-configuration |
+*AbpApplicationLocalizationAPI* | [**GetAbpApplicationLocalization**](docs/AbpApplicationLocalizationAPI.md#getabpapplicationlocalization) | **Get** /api/abp/application-localization |
+*AbpTenantAPI* | [**FindTenantById**](docs/AbpTenantAPI.md#findtenantbyid) | **Get** /api/abp/multi-tenancy/tenants/by-id/{id} |
+*AbpTenantAPI* | [**FindTenantByName**](docs/AbpTenantAPI.md#findtenantbyname) | **Get** /api/abp/multi-tenancy/tenants/by-name/{name} |
+*AccountAPI* | [**ChangeAccountPassword**](docs/AccountAPI.md#changeaccountpassword) | **Post** /api/app/account/change-password |
 *AccountAPI* | [**CheckSyncAuth**](docs/AccountAPI.md#checksyncauth) | **Post** /api/app/account/check-sync-auth | 检查同步认证
-*AccountAPI* | [**DeletionStatus**](docs/AccountAPI.md#deletionstatus) | **Post** /api/app/account/deletion-status | 
-*AccountAPI* | [**DestroyAccount**](docs/AccountAPI.md#destroyaccount) | **Post** /api/app/account/destroy-account | 
-*AccountAPI* | [**GetAccountGetApiAppAccount**](docs/AccountAPI.md#getaccountgetapiappaccount) | **Get** /api/app/account | 
-*AccountAPI* | [**Register**](docs/AccountAPI.md#register) | **Post** /api/account/register | 
-*AccountAPI* | [**ResetPassword**](docs/AccountAPI.md#resetpassword) | **Post** /api/account/reset-password | 
-*AccountAPI* | [**SendPasswordResetCode**](docs/AccountAPI.md#sendpasswordresetcode) | **Post** /api/account/send-password-reset-code | 
-*AccountAPI* | [**VerifyPasswordResetToken**](docs/AccountAPI.md#verifypasswordresettoken) | **Post** /api/account/verify-password-reset-token | 
-*AiProviderAPI* | [**CreateAiProvider**](docs/AiProviderAPI.md#createaiprovider) | **Post** /api/app/ai-provider | 
-*AiProviderAPI* | [**DeleteAiProviderById**](docs/AiProviderAPI.md#deleteaiproviderbyid) | **Delete** /api/app/ai-provider/{id} | 
-*AiProviderAPI* | [**GetAiProviderById**](docs/AiProviderAPI.md#getaiproviderbyid) | **Get** /api/app/ai-provider/{id} | 
-*AiProviderAPI* | [**GetAiProviderList**](docs/AiProviderAPI.md#getaiproviderlist) | **Get** /api/app/ai-provider | 
-*AiProviderAPI* | [**SetDefaultModelPostApiAppAiProviderSetDefaultModel**](docs/AiProviderAPI.md#setdefaultmodelpostapiappaiprovidersetdefaultmodel) | **Post** /api/app/ai-provider/set-default-model | 
-*AiProviderAPI* | [**SetEnabledPostApiAppAiProviderIdSetEnabled**](docs/AiProviderAPI.md#setenabledpostapiappaiprovideridsetenabled) | **Post** /api/app/ai-provider/{id}/set-enabled | 
-*AiProviderAPI* | [**TestPostApiAppAiProviderIdTest**](docs/AiProviderAPI.md#testpostapiappaiprovideridtest) | **Post** /api/app/ai-provider/{id}/test | 
-*AiProviderAPI* | [**UpdateAiProvider**](docs/AiProviderAPI.md#updateaiprovider) | **Put** /api/app/ai-provider/{id} | 
-*AiProvidersAPI* | [**CreatePostApiAiProviders**](docs/AiProvidersAPI.md#createpostapiaiproviders) | **Post** /api/ai/providers | 
-*AiProvidersAPI* | [**DeleteById**](docs/AiProvidersAPI.md#deletebyid) | **Delete** /api/ai/providers/{id} | 
-*AiProvidersAPI* | [**GetById**](docs/AiProvidersAPI.md#getbyid) | **Get** /api/ai/providers/{id} | 
-*AiProvidersAPI* | [**GetList**](docs/AiProvidersAPI.md#getlist) | **Get** /api/ai/providers | 
-*AiProvidersAPI* | [**SetDefaultModelPostApiAiProvidersDefaultModel**](docs/AiProvidersAPI.md#setdefaultmodelpostapiaiprovidersdefaultmodel) | **Post** /api/ai/providers/default-model | 
-*AiProvidersAPI* | [**SetEnabledPostApiAiProvidersIdEnabled**](docs/AiProvidersAPI.md#setenabledpostapiaiprovidersidenabled) | **Post** /api/ai/providers/{id}/enabled | 
-*AiProvidersAPI* | [**TestPostApiAiProvidersIdTest**](docs/AiProvidersAPI.md#testpostapiaiprovidersidtest) | **Post** /api/ai/providers/{id}/test | 
-*AiProvidersAPI* | [**Update**](docs/AiProvidersAPI.md#update) | **Put** /api/ai/providers/{id} | 
-*AiUsageAPI* | [**GetRecords**](docs/AiUsageAPI.md#getrecords) | **Get** /api/ai/usage/records | 
-*AiUsageAPI* | [**GetSummaryGetApiAiUsageSummary**](docs/AiUsageAPI.md#getsummarygetapiaiusagesummary) | **Get** /api/ai/usage/summary | 
-*ApiKeysAPI* | [**CreateApiKeys**](docs/ApiKeysAPI.md#createapikeys) | **Post** /api/api-keys | 
-*ApiKeysAPI* | [**DeleteApiKeysById**](docs/ApiKeysAPI.md#deleteapikeysbyid) | **Delete** /api/api-keys/{id} | 
-*ApiKeysAPI* | [**GetApiKeysById**](docs/ApiKeysAPI.md#getapikeysbyid) | **Get** /api/api-keys/{id} | 
-*ApiKeysAPI* | [**GetApiKeysList**](docs/ApiKeysAPI.md#getapikeyslist) | **Get** /api/api-keys | 
-*ApiKeysAPI* | [**UpdateApiKeys**](docs/ApiKeysAPI.md#updateapikeys) | **Put** /api/api-keys/{id} | 
-*AppAPI* | [**CreateApp**](docs/AppAPI.md#createapp) | **Post** /api/app/app | 
-*AppAPI* | [**DeleteAppById**](docs/AppAPI.md#deleteappbyid) | **Delete** /api/app/app/{id} | 
-*AppAPI* | [**GetAppById**](docs/AppAPI.md#getappbyid) | **Get** /api/app/app/{id} | 
-*AppAPI* | [**GetAppList**](docs/AppAPI.md#getapplist) | **Get** /api/app/app | 
-*AppAPI* | [**GetByName**](docs/AppAPI.md#getbyname) | **Get** /api/app/app/by-name | 
-*AppAPI* | [**GetFeatureList**](docs/AppAPI.md#getfeaturelist) | **Get** /api/app/app/feature-list/{appId} | 
-*AppAPI* | [**GetListByDeveloperAll**](docs/AppAPI.md#getlistbydeveloperall) | **Get** /api/app/app/by-developer-all | 
-*AppAPI* | [**GetListPublic**](docs/AppAPI.md#getlistpublic) | **Get** /api/app/app/public | 
-*AppAPI* | [**GetListWithUser**](docs/AppAPI.md#getlistwithuser) | **Get** /api/app/app/with-user | 
-*AppAPI* | [**GetSdksById**](docs/AppAPI.md#getsdksbyid) | **Get** /api/app/app/sdks-by-id/{appId} | 
-*AppAPI* | [**GetStorefrontLanding**](docs/AppAPI.md#getstorefrontlanding) | **Get** /api/app/app/storefront-landing/{appId} | 
-*AppAPI* | [**GetUploadCredentials**](docs/AppAPI.md#getuploadcredentials) | **Get** /api/app/app/upload-credentials | 
-*AppAPI* | [**GetWithUser**](docs/AppAPI.md#getwithuser) | **Get** /api/app/app/{id}/with-user | 
-*AppAPI* | [**Run**](docs/AppAPI.md#run) | **Post** /api/app/app/run | 
-*AppAPI* | [**SetLinkedSdks**](docs/AppAPI.md#setlinkedsdks) | **Post** /api/app/app/set-linked-sdks/{appId} | 
-*AppAPI* | [**UpdateApp**](docs/AppAPI.md#updateapp) | **Put** /api/app/app/{id} | 
-*AppAPI* | [**UpdateRunState**](docs/AppAPI.md#updaterunstate) | **Put** /api/app/app/{id}/run-state | 
-*AppAssetAPI* | [**CreateAppAsset**](docs/AppAssetAPI.md#createappasset) | **Post** /api/app/app-asset | 
-*AppAssetAPI* | [**DeleteAppAssetById**](docs/AppAssetAPI.md#deleteappassetbyid) | **Delete** /api/app/app-asset/{id} | 
-*AppAssetAPI* | [**GetListByAppLocaleId**](docs/AppAssetAPI.md#getlistbyapplocaleid) | **Get** /api/app/app-asset/by-app-locale-id/{appLocaleId} | 
-*AppAssetAPI* | [**UpdateAppAsset**](docs/AppAssetAPI.md#updateappasset) | **Put** /api/app/app-asset/{id} | 
-*AppFeatureAPI* | [**CreateAppFeature**](docs/AppFeatureAPI.md#createappfeature) | **Post** /api/app/app-feature | 
-*AppFeatureAPI* | [**DeleteAppFeatureById**](docs/AppFeatureAPI.md#deleteappfeaturebyid) | **Delete** /api/app/app-feature/{id} | 
-*AppFeatureAPI* | [**GetAppFeatureList**](docs/AppFeatureAPI.md#getappfeaturelist) | **Get** /api/app/app-feature | 
-*AppFeatureAPI* | [**UpdateAppFeature**](docs/AppFeatureAPI.md#updateappfeature) | **Put** /api/app/app-feature/{id} | 
+*AccountAPI* | [**ConfirmEmail**](docs/AccountAPI.md#confirmemail) | **Post** /api/app/account/confirm-email |
+*AccountAPI* | [**DeletionStatus**](docs/AccountAPI.md#deletionstatus) | **Post** /api/app/account/deletion-status |
+*AccountAPI* | [**DestroyAccount**](docs/AccountAPI.md#destroyaccount) | **Post** /api/app/account/destroy-account |
+*AccountAPI* | [**GetAccountGetApiAppAccount**](docs/AccountAPI.md#getaccountgetapiappaccount) | **Get** /api/app/account |
+*AccountAPI* | [**Register**](docs/AccountAPI.md#register) | **Post** /api/account/register |
+*AccountAPI* | [**ResetPassword**](docs/AccountAPI.md#resetpassword) | **Post** /api/account/reset-password |
+*AccountAPI* | [**SendDeletionCode**](docs/AccountAPI.md#senddeletioncode) | **Post** /api/app/account/send-deletion-code |
+*AccountAPI* | [**SendEmailConfirmationCode**](docs/AccountAPI.md#sendemailconfirmationcode) | **Post** /api/app/account/send-email-confirmation-code |
+*AccountAPI* | [**SendPasswordResetCode**](docs/AccountAPI.md#sendpasswordresetcode) | **Post** /api/account/send-password-reset-code |
+*AccountAPI* | [**VerifyPasswordResetToken**](docs/AccountAPI.md#verifypasswordresettoken) | **Post** /api/account/verify-password-reset-token |
+*ApiKeysAPI* | [**CreateApiKeys**](docs/ApiKeysAPI.md#createapikeys) | **Post** /api/api-keys |
+*ApiKeysAPI* | [**DeleteApiKeysById**](docs/ApiKeysAPI.md#deleteapikeysbyid) | **Delete** /api/api-keys/{id} |
+*ApiKeysAPI* | [**GetApiKeysById**](docs/ApiKeysAPI.md#getapikeysbyid) | **Get** /api/api-keys/{id} |
+*ApiKeysAPI* | [**GetApiKeysList**](docs/ApiKeysAPI.md#getapikeyslist) | **Get** /api/api-keys |
+*ApiKeysAPI* | [**UpdateApiKeys**](docs/ApiKeysAPI.md#updateapikeys) | **Put** /api/api-keys/{id} |
+*AppAPI* | [**CreateApp**](docs/AppAPI.md#createapp) | **Post** /api/app/app |
+*AppAPI* | [**DeleteAppById**](docs/AppAPI.md#deleteappbyid) | **Delete** /api/app/app/{id} |
+*AppAPI* | [**GetAppById**](docs/AppAPI.md#getappbyid) | **Get** /api/app/app/{id} |
+*AppAPI* | [**GetAppList**](docs/AppAPI.md#getapplist) | **Get** /api/app/app |
+*AppAPI* | [**GetByName**](docs/AppAPI.md#getbyname) | **Get** /api/app/app/by-name |
+*AppAPI* | [**GetFeatureList**](docs/AppAPI.md#getfeaturelist) | **Get** /api/app/app/feature-list/{appId} |
+*AppAPI* | [**GetListByDeveloperAll**](docs/AppAPI.md#getlistbydeveloperall) | **Get** /api/app/app/by-developer-all |
+*AppAPI* | [**GetListPublic**](docs/AppAPI.md#getlistpublic) | **Get** /api/app/app/public |
+*AppAPI* | [**GetListWithUser**](docs/AppAPI.md#getlistwithuser) | **Get** /api/app/app/with-user |
+*AppAPI* | [**GetSdksById**](docs/AppAPI.md#getsdksbyid) | **Get** /api/app/app/sdks-by-id/{appId} |
+*AppAPI* | [**GetStorefrontLanding**](docs/AppAPI.md#getstorefrontlanding) | **Get** /api/app/app/storefront-landing/{appId} |
+*AppAPI* | [**GetUploadCredentials**](docs/AppAPI.md#getuploadcredentials) | **Get** /api/app/app/upload-credentials |
+*AppAPI* | [**GetWithUser**](docs/AppAPI.md#getwithuser) | **Get** /api/app/app/{id}/with-user |
+*AppAPI* | [**Run**](docs/AppAPI.md#run) | **Post** /api/app/app/run |
+*AppAPI* | [**SetLinkedSdks**](docs/AppAPI.md#setlinkedsdks) | **Post** /api/app/app/set-linked-sdks/{appId} |
+*AppAPI* | [**UpdateApp**](docs/AppAPI.md#updateapp) | **Put** /api/app/app/{id} |
+*AppAPI* | [**UpdateRunState**](docs/AppAPI.md#updaterunstate) | **Put** /api/app/app/{id}/run-state |
+*AppAssetAPI* | [**CreateAppAsset**](docs/AppAssetAPI.md#createappasset) | **Post** /api/app/app-asset |
+*AppAssetAPI* | [**DeleteAppAssetById**](docs/AppAssetAPI.md#deleteappassetbyid) | **Delete** /api/app/app-asset/{id} |
+*AppAssetAPI* | [**GetListByAppLocaleId**](docs/AppAssetAPI.md#getlistbyapplocaleid) | **Get** /api/app/app-asset/by-app-locale-id/{appLocaleId} |
+*AppAssetAPI* | [**UpdateAppAsset**](docs/AppAssetAPI.md#updateappasset) | **Put** /api/app/app-asset/{id} |
+*AppFeatureAPI* | [**CreateAppFeature**](docs/AppFeatureAPI.md#createappfeature) | **Post** /api/app/app-feature |
+*AppFeatureAPI* | [**DeleteAppFeatureById**](docs/AppFeatureAPI.md#deleteappfeaturebyid) | **Delete** /api/app/app-feature/{id} |
+*AppFeatureAPI* | [**GetAppFeatureList**](docs/AppFeatureAPI.md#getappfeaturelist) | **Get** /api/app/app-feature |
+*AppFeatureAPI* | [**UpdateAppFeature**](docs/AppFeatureAPI.md#updateappfeature) | **Put** /api/app/app-feature/{id} |
 *AppFeedbackAPI* | [**CreateAppFeedback**](docs/AppFeedbackAPI.md#createappfeedback) | **Post** /api/app/app-feedback | 创建反馈（允许匿名用户提交）
-*AppFeedbackAPI* | [**DeleteAppFeedbackById**](docs/AppFeedbackAPI.md#deleteappfeedbackbyid) | **Delete** /api/app/app-feedback/{id} | 
-*AppFeedbackAPI* | [**GetAppFeedbackById**](docs/AppFeedbackAPI.md#getappfeedbackbyid) | **Get** /api/app/app-feedback/{id} | 
-*AppFeedbackAPI* | [**GetAppFeedbackList**](docs/AppFeedbackAPI.md#getappfeedbacklist) | **Get** /api/app/app-feedback | 
-*AppFeedbackAPI* | [**MarkAsProcessed**](docs/AppFeedbackAPI.md#markasprocessed) | **Post** /api/app/app-feedback/{id}/mark-as-processed | 
-*AppFeedbackAPI* | [**Reply**](docs/AppFeedbackAPI.md#reply) | **Post** /api/app/app-feedback/{id}/reply | 
-*AppLocaleAPI* | [**CreateAppLocale**](docs/AppLocaleAPI.md#createapplocale) | **Post** /api/app/app-locale | 
-*AppLocaleAPI* | [**DeleteAppLocaleById**](docs/AppLocaleAPI.md#deleteapplocalebyid) | **Delete** /api/app/app-locale/{id} | 
-*AppLocaleAPI* | [**GetListByAppIdGetApiAppAppLocaleByAppIdAppId**](docs/AppLocaleAPI.md#getlistbyappidgetapiappapplocalebyappidappid) | **Get** /api/app/app-locale/by-app-id/{appId} | 
-*AppLocaleAPI* | [**UpdateAppLocale**](docs/AppLocaleAPI.md#updateapplocale) | **Put** /api/app/app-locale/{id} | 
-*AppPricingAPI* | [**CreateAppPricing**](docs/AppPricingAPI.md#createapppricing) | **Post** /api/app/app-pricing | 
-*AppPricingAPI* | [**DeleteAppPricingById**](docs/AppPricingAPI.md#deleteapppricingbyid) | **Delete** /api/app/app-pricing/{id} | 
+*AppFeedbackAPI* | [**DeleteAppFeedbackById**](docs/AppFeedbackAPI.md#deleteappfeedbackbyid) | **Delete** /api/app/app-feedback/{id} |
+*AppFeedbackAPI* | [**GetAppFeedbackById**](docs/AppFeedbackAPI.md#getappfeedbackbyid) | **Get** /api/app/app-feedback/{id} |
+*AppFeedbackAPI* | [**GetAppFeedbackList**](docs/AppFeedbackAPI.md#getappfeedbacklist) | **Get** /api/app/app-feedback |
+*AppFeedbackAPI* | [**MarkAsProcessed**](docs/AppFeedbackAPI.md#markasprocessed) | **Post** /api/app/app-feedback/{id}/mark-as-processed |
+*AppFeedbackAPI* | [**Reply**](docs/AppFeedbackAPI.md#reply) | **Post** /api/app/app-feedback/{id}/reply |
+*AppLocaleAPI* | [**CreateAppLocale**](docs/AppLocaleAPI.md#createapplocale) | **Post** /api/app/app-locale |
+*AppLocaleAPI* | [**DeleteAppLocaleById**](docs/AppLocaleAPI.md#deleteapplocalebyid) | **Delete** /api/app/app-locale/{id} |
+*AppLocaleAPI* | [**GetListByAppIdGetApiAppAppLocaleByAppIdAppId**](docs/AppLocaleAPI.md#getlistbyappidgetapiappapplocalebyappidappid) | **Get** /api/app/app-locale/by-app-id/{appId} |
+*AppLocaleAPI* | [**UpdateAppLocale**](docs/AppLocaleAPI.md#updateapplocale) | **Put** /api/app/app-locale/{id} |
+*AppPricingAPI* | [**CreateAppPricing**](docs/AppPricingAPI.md#createapppricing) | **Post** /api/app/app-pricing |
+*AppPricingAPI* | [**DeleteAppPricingById**](docs/AppPricingAPI.md#deleteapppricingbyid) | **Delete** /api/app/app-pricing/{id} |
 *AppPricingAPI* | [**GetAppPricingById**](docs/AppPricingAPI.md#getapppricingbyid) | **Get** /api/app/app-pricing/{id} | 获取单条定价方案详情，允许匿名访问（与列表/商店展示一致）
 *AppPricingAPI* | [**GetAppPricingList**](docs/AppPricingAPI.md#getapppricinglist) | **Get** /api/app/app-pricing | 分页获取定价方案列表，允许匿名访问
 *AppPricingAPI* | [**GetListByAppIdGetApiAppAppPricingByAppIdAppId**](docs/AppPricingAPI.md#getlistbyappidgetapiappapppricingbyappidappid) | **Get** /api/app/app-pricing/by-app-id/{appId} | 获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
 *AppPricingAPI* | [**GetPricingItemsByAppId**](docs/AppPricingAPI.md#getpricingitemsbyappid) | **Get** /api/app/app-pricing/pricing-items-by-app-id/{appId} | 获取应用定价功能项定义（与客户端「功能对比」行一致），允许匿名访问供官网等场景展示
-*AppPricingAPI* | [**UpdateAppPricing**](docs/AppPricingAPI.md#updateapppricing) | **Put** /api/app/app-pricing/{id} | 
-*AppPricingItemAPI* | [**CreateAppPricingItem**](docs/AppPricingItemAPI.md#createapppricingitem) | **Post** /api/app/app-pricing-item | 
-*AppPricingItemAPI* | [**DeleteAppPricingItemById**](docs/AppPricingItemAPI.md#deleteapppricingitembyid) | **Delete** /api/app/app-pricing-item/{id} | 
-*AppPricingItemAPI* | [**GetAppPricingItemById**](docs/AppPricingItemAPI.md#getapppricingitembyid) | **Get** /api/app/app-pricing-item/{id} | 
-*AppPricingItemAPI* | [**GetAppPricingItemList**](docs/AppPricingItemAPI.md#getapppricingitemlist) | **Get** /api/app/app-pricing-item | 
-*AppPricingItemAPI* | [**UpdateAppPricingItem**](docs/AppPricingItemAPI.md#updateapppricingitem) | **Put** /api/app/app-pricing-item/{id} | 
+*AppPricingAPI* | [**UpdateAppPricing**](docs/AppPricingAPI.md#updateapppricing) | **Put** /api/app/app-pricing/{id} |
+*AppPricingItemAPI* | [**CreateAppPricingItem**](docs/AppPricingItemAPI.md#createapppricingitem) | **Post** /api/app/app-pricing-item |
+*AppPricingItemAPI* | [**DeleteAppPricingItemById**](docs/AppPricingItemAPI.md#deleteapppricingitembyid) | **Delete** /api/app/app-pricing-item/{id} |
+*AppPricingItemAPI* | [**GetAppPricingItemById**](docs/AppPricingItemAPI.md#getapppricingitembyid) | **Get** /api/app/app-pricing-item/{id} |
+*AppPricingItemAPI* | [**GetAppPricingItemList**](docs/AppPricingItemAPI.md#getapppricingitemlist) | **Get** /api/app/app-pricing-item |
+*AppPricingItemAPI* | [**UpdateAppPricingItem**](docs/AppPricingItemAPI.md#updateapppricingitem) | **Put** /api/app/app-pricing-item/{id} |
 *AppReleaseAPI* | [**CreateAppRelease**](docs/AppReleaseAPI.md#createapprelease) | **Post** /api/app/app-release | 创建新版本
 *AppReleaseAPI* | [**DeleteAppReleaseById**](docs/AppReleaseAPI.md#deleteappreleasebyid) | **Delete** /api/app/app-release/{id} | 删除版本
 *AppReleaseAPI* | [**GetAppReleaseById**](docs/AppReleaseAPI.md#getappreleasebyid) | **Get** /api/app/app-release/{id} | 获取版本
@@ -169,181 +154,166 @@ Class | Method | HTTP request | Description
 *AppReleaseAPI* | [**GetLatestGetApiAppAppReleaseLatest**](docs/AppReleaseAPI.md#getlatestgetapiappappreleaselatest) | **Get** /api/app/app-release/latest | 获取最新版本
 *AppReleaseAPI* | [**GetListByDeveloper**](docs/AppReleaseAPI.md#getlistbydeveloper) | **Get** /api/app/app-release/by-developer | 开发者获取版本列表（版本的创建者为当前用户）
 *AppReleaseAPI* | [**UpdateAppRelease**](docs/AppReleaseAPI.md#updateapprelease) | **Put** /api/app/app-release/{id} | 更新版本
-*AppSdkAPI* | [**CreateAppSdk**](docs/AppSdkAPI.md#createappsdk) | **Post** /api/app/app-sdk | 
-*AppSdkAPI* | [**DeleteAppSdkById**](docs/AppSdkAPI.md#deleteappsdkbyid) | **Delete** /api/app/app-sdk/{id} | 
-*AppSdkAPI* | [**GetAppSdkList**](docs/AppSdkAPI.md#getappsdklist) | **Get** /api/app/app-sdk | 
-*AppSdkAPI* | [**UpdateAppSdk**](docs/AppSdkAPI.md#updateappsdk) | **Put** /api/app/app-sdk/{id} | 
+*AppSdkAPI* | [**CreateAppSdk**](docs/AppSdkAPI.md#createappsdk) | **Post** /api/app/app-sdk |
+*AppSdkAPI* | [**DeleteAppSdkById**](docs/AppSdkAPI.md#deleteappsdkbyid) | **Delete** /api/app/app-sdk/{id} |
+*AppSdkAPI* | [**GetAppSdkList**](docs/AppSdkAPI.md#getappsdklist) | **Get** /api/app/app-sdk |
+*AppSdkAPI* | [**UpdateAppSdk**](docs/AppSdkAPI.md#updateappsdk) | **Put** /api/app/app-sdk/{id} |
 *AppTesterAPI* | [**CheckIsAppTester**](docs/AppTesterAPI.md#checkisapptester) | **Post** /api/app/app-tester/check-is-app-tester | 检查用户是否是内测用户
 *AppTesterAPI* | [**CreateAppTester**](docs/AppTesterAPI.md#createapptester) | **Post** /api/app/app-tester | 创建内测用户
 *AppTesterAPI* | [**DeleteAppTesterById**](docs/AppTesterAPI.md#deleteapptesterbyid) | **Delete** /api/app/app-tester/{id} | 删除内测用户
 *AppTesterAPI* | [**GetAppTesterById**](docs/AppTesterAPI.md#getapptesterbyid) | **Get** /api/app/app-tester/{id} | 获取内测用户
 *AppTesterAPI* | [**GetAppTesterList**](docs/AppTesterAPI.md#getapptesterlist) | **Get** /api/app/app-tester | 获取内测用户列表
 *AppTesterAPI* | [**UpdateAppTester**](docs/AppTesterAPI.md#updateapptester) | **Put** /api/app/app-tester/{id} | 更新内测用户
-*AppUserScoreAPI* | [**CreateAppUserScore**](docs/AppUserScoreAPI.md#createappuserscore) | **Post** /api/app/app-user-score | 
-*AuthCenterAPI* | [**GetAuthorizedApps**](docs/AuthCenterAPI.md#getauthorizedapps) | **Get** /api/app/auth-center/authorized-apps | 
-*AuthCenterAPI* | [**GetSummaryGetApiAppAuthCenterSummary**](docs/AuthCenterAPI.md#getsummarygetapiappauthcentersummary) | **Get** /api/app/auth-center/summary | 
-*AuthCenterAPI* | [**RevokeAuthorizedApp**](docs/AuthCenterAPI.md#revokeauthorizedapp) | **Post** /api/app/auth-center/revoke-authorized-app/{clientId} | 
-*AvatarAPI* | [**CreateAvatar**](docs/AvatarAPI.md#createavatar) | **Post** /api/app/avatar | 
-*AvatarAPI* | [**GetCredentials**](docs/AvatarAPI.md#getcredentials) | **Get** /api/app/avatar/credentials | 
-*BuildRecordAPI* | [**CreateBuildRecord**](docs/BuildRecordAPI.md#createbuildrecord) | **Post** /api/app/build-record | 
-*BuildRecordAPI* | [**DeleteBuildRecordById**](docs/BuildRecordAPI.md#deletebuildrecordbyid) | **Delete** /api/app/build-record/{id} | 
-*BuildRecordAPI* | [**GetBuildRecordById**](docs/BuildRecordAPI.md#getbuildrecordbyid) | **Get** /api/app/build-record/{id} | 
-*BuildRecordAPI* | [**GetBuildRecordList**](docs/BuildRecordAPI.md#getbuildrecordlist) | **Get** /api/app/build-record | 
-*BuildRecordAPI* | [**GetByCiBuildId**](docs/BuildRecordAPI.md#getbycibuildid) | **Get** /api/app/build-record/by-ci-build-id/{ciBuildId} | 
-*BuildRecordAPI* | [**GetLatestGetApiAppBuildRecordLatestAppId**](docs/BuildRecordAPI.md#getlatestgetapiappbuildrecordlatestappid) | **Get** /api/app/build-record/latest/{appId} | 
-*BuildRecordAPI* | [**MarkAsBuilding**](docs/BuildRecordAPI.md#markasbuilding) | **Post** /api/app/build-record/{id}/mark-as-building | 
-*BuildRecordAPI* | [**MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled**](docs/BuildRecordAPI.md#markascanceledpostapiappbuildrecordidmarkascanceled) | **Post** /api/app/build-record/{id}/mark-as-canceled | 
-*BuildRecordAPI* | [**MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed**](docs/BuildRecordAPI.md#markasfailedpostapiappbuildrecordidmarkasfailed) | **Post** /api/app/build-record/{id}/mark-as-failed | 
-*BuildRecordAPI* | [**MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded**](docs/BuildRecordAPI.md#markassucceededpostapiappbuildrecordidmarkassucceeded) | **Post** /api/app/build-record/{id}/mark-as-succeeded | 
-*BuildRecordAPI* | [**UpdateBuildRecord**](docs/BuildRecordAPI.md#updatebuildrecord) | **Put** /api/app/build-record/{id} | 
-*CreditAPI* | [**CreateAlipayOrderPostApiAppCreditAlipayOrder**](docs/CreditAPI.md#createalipayorderpostapiappcreditalipayorder) | **Post** /api/app/credit/alipay-order | 
-*CreditAPI* | [**CreatePayPalOrderPostApiAppCreditPayPalOrder**](docs/CreditAPI.md#createpaypalorderpostapiappcreditpaypalorder) | **Post** /api/app/credit/pay-pal-order | 
-*CreditAPI* | [**GetAccountGetApiAppCreditAccountAppId**](docs/CreditAPI.md#getaccountgetapiappcreditaccountappid) | **Get** /api/app/credit/account/{appId} | 
-*CreditAPI* | [**GetPackages**](docs/CreditAPI.md#getpackages) | **Get** /api/app/credit/packages/{appId} | 
-*CreditAPI* | [**Refund**](docs/CreditAPI.md#refund) | **Post** /api/app/credit/refund | 
-*CreditAPI* | [**Spend**](docs/CreditAPI.md#spend) | **Post** /api/app/credit/spend | 
-*DeployRecordAPI* | [**CreateDeployRecord**](docs/DeployRecordAPI.md#createdeployrecord) | **Post** /api/app/deploy-record | 
-*DeployRecordAPI* | [**DeleteDeployRecordById**](docs/DeployRecordAPI.md#deletedeployrecordbyid) | **Delete** /api/app/deploy-record/{id} | 
-*DeployRecordAPI* | [**GetByCiDeployId**](docs/DeployRecordAPI.md#getbycideployid) | **Get** /api/app/deploy-record/by-ci-deploy-id/{ciDeployId} | 
-*DeployRecordAPI* | [**GetDeployRecordById**](docs/DeployRecordAPI.md#getdeployrecordbyid) | **Get** /api/app/deploy-record/{id} | 
-*DeployRecordAPI* | [**GetDeployRecordList**](docs/DeployRecordAPI.md#getdeployrecordlist) | **Get** /api/app/deploy-record | 
-*DeployRecordAPI* | [**GetLatestGetApiAppDeployRecordLatestAppId**](docs/DeployRecordAPI.md#getlatestgetapiappdeployrecordlatestappid) | **Get** /api/app/deploy-record/latest/{appId} | 
-*DeployRecordAPI* | [**GetListByBuildRecordId**](docs/DeployRecordAPI.md#getlistbybuildrecordid) | **Get** /api/app/deploy-record/by-build-record-id/{buildRecordId} | 
-*DeployRecordAPI* | [**MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled**](docs/DeployRecordAPI.md#markascanceledpostapiappdeployrecordidmarkascanceled) | **Post** /api/app/deploy-record/{id}/mark-as-canceled | 
-*DeployRecordAPI* | [**MarkAsDeploying**](docs/DeployRecordAPI.md#markasdeploying) | **Post** /api/app/deploy-record/{id}/mark-as-deploying | 
-*DeployRecordAPI* | [**MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed**](docs/DeployRecordAPI.md#markasfailedpostapiappdeployrecordidmarkasfailed) | **Post** /api/app/deploy-record/{id}/mark-as-failed | 
-*DeployRecordAPI* | [**MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded**](docs/DeployRecordAPI.md#markassucceededpostapiappdeployrecordidmarkassucceeded) | **Post** /api/app/deploy-record/{id}/mark-as-succeeded | 
-*DeployRecordAPI* | [**UpdateDeployRecord**](docs/DeployRecordAPI.md#updatedeployrecord) | **Put** /api/app/deploy-record/{id} | 
-*DeviceAPI* | [**Bind**](docs/DeviceAPI.md#bind) | **Post** /api/app/device/bind | 
-*DeviceAPI* | [**GetByToken**](docs/DeviceAPI.md#getbytoken) | **Get** /api/app/device/by-token | 
-*DeviceAPI* | [**GetDeviceById**](docs/DeviceAPI.md#getdevicebyid) | **Get** /api/app/device/{id} | 
-*DeviceAPI* | [**GetDeviceList**](docs/DeviceAPI.md#getdevicelist) | **Get** /api/app/device | 
-*DeviceAPI* | [**Logout**](docs/DeviceAPI.md#logout) | **Post** /api/app/device/logout | 
-*DeviceAPI* | [**RefreshDevice**](docs/DeviceAPI.md#refreshdevice) | **Post** /api/app/device/refresh-device | 
-*DeviceAPI* | [**Remove**](docs/DeviceAPI.md#remove) | **Delete** /api/app/device | 
-*DynamicClaimsAPI* | [**Refresh**](docs/DynamicClaimsAPI.md#refresh) | **Post** /api/account/dynamic-claims/refresh | 
-*EmailSettingsAPI* | [**GetEmailSettings**](docs/EmailSettingsAPI.md#getemailsettings) | **Get** /api/setting-management/emailing | 
-*EmailSettingsAPI* | [**SendTestEmail**](docs/EmailSettingsAPI.md#sendtestemail) | **Post** /api/setting-management/emailing/send-test-email | 
-*EmailSettingsAPI* | [**UpdateEmailSettings**](docs/EmailSettingsAPI.md#updateemailsettings) | **Post** /api/setting-management/emailing | 
-*FeaturesAPI* | [**DeleteFeatures**](docs/FeaturesAPI.md#deletefeatures) | **Delete** /api/feature-management/features | 
-*FeaturesAPI* | [**GetFeatures**](docs/FeaturesAPI.md#getfeatures) | **Get** /api/feature-management/features | 
-*FeaturesAPI* | [**UpdateFeatures**](docs/FeaturesAPI.md#updatefeatures) | **Put** /api/feature-management/features | 
-*MessageAPI* | [**Publish**](docs/MessageAPI.md#publish) | **Post** /api/app/message/publish | 
-*MessageAPI* | [**Recall**](docs/MessageAPI.md#recall) | **Post** /api/app/message/recall | 
-*MessageAPI* | [**Subscribe**](docs/MessageAPI.md#subscribe) | **Post** /api/app/message/subscribe | 
-*MessageAPI* | [**Unsubscribe**](docs/MessageAPI.md#unsubscribe) | **Post** /api/app/message/unsubscribe | 
-*MessageSourceAPI* | [**CreateMessageSource**](docs/MessageSourceAPI.md#createmessagesource) | **Post** /api/app/message-source | 
-*MessageSourceAPI* | [**DeleteMessageSourceById**](docs/MessageSourceAPI.md#deletemessagesourcebyid) | **Delete** /api/app/message-source/{id} | 
-*MessageSourceAPI* | [**GetMessageSourceById**](docs/MessageSourceAPI.md#getmessagesourcebyid) | **Get** /api/app/message-source/{id} | 
-*MessageSourceAPI* | [**GetMessageSourceList**](docs/MessageSourceAPI.md#getmessagesourcelist) | **Get** /api/app/message-source | 
-*MessageSourceAPI* | [**UpdateMessageSource**](docs/MessageSourceAPI.md#updatemessagesource) | **Put** /api/app/message-source/{id} | 
-*MessageSourceCategoryAPI* | [**GetMessageSourceCategoryList**](docs/MessageSourceCategoryAPI.md#getmessagesourcecategorylist) | **Get** /api/app/message-source-category | 
-*MessageSourceRouteAPI* | [**CreateMessageSourceRoute**](docs/MessageSourceRouteAPI.md#createmessagesourceroute) | **Post** /api/app/message-source-route | 
-*MessageSourceRouteAPI* | [**DeleteMessageSourceRouteById**](docs/MessageSourceRouteAPI.md#deletemessagesourceroutebyid) | **Delete** /api/app/message-source-route/{id} | 
-*MessageSourceRouteAPI* | [**GetMessageSourceRouteById**](docs/MessageSourceRouteAPI.md#getmessagesourceroutebyid) | **Get** /api/app/message-source-route/{id} | 
-*MessageSourceRouteAPI* | [**GetMessageSourceRouteList**](docs/MessageSourceRouteAPI.md#getmessagesourceroutelist) | **Get** /api/app/message-source-route | 
-*MessageSourceRouteAPI* | [**UpdateMessageSourceRoute**](docs/MessageSourceRouteAPI.md#updatemessagesourceroute) | **Put** /api/app/message-source-route/{id} | 
-*MessageSourceRouteSubAPI* | [**CreateMessageSourceRouteSub**](docs/MessageSourceRouteSubAPI.md#createmessagesourceroutesub) | **Post** /api/app/message-source-route-sub | 
-*MessageSourceRouteSubAPI* | [**DeleteMessageSourceRouteSubById**](docs/MessageSourceRouteSubAPI.md#deletemessagesourceroutesubbyid) | **Delete** /api/app/message-source-route-sub/{id} | 
-*MessageSourceRouteSubAPI* | [**GetMessageSourceRouteSubById**](docs/MessageSourceRouteSubAPI.md#getmessagesourceroutesubbyid) | **Get** /api/app/message-source-route-sub/{id} | 
-*MessageSourceRouteSubAPI* | [**GetMessageSourceRouteSubList**](docs/MessageSourceRouteSubAPI.md#getmessagesourceroutesublist) | **Get** /api/app/message-source-route-sub | 
-*MessageSourceRouteSubAPI* | [**UpdateMessageSourceRouteSub**](docs/MessageSourceRouteSubAPI.md#updatemessagesourceroutesub) | **Put** /api/app/message-source-route-sub/{id} | 
-*MessageTemplateAPI* | [**CreateMessageTemplate**](docs/MessageTemplateAPI.md#createmessagetemplate) | **Post** /api/app/message-template | 
-*MessageTemplateAPI* | [**DeleteMessageTemplateById**](docs/MessageTemplateAPI.md#deletemessagetemplatebyid) | **Delete** /api/app/message-template/{id} | 
-*MessageTemplateAPI* | [**GetMessageTemplateById**](docs/MessageTemplateAPI.md#getmessagetemplatebyid) | **Get** /api/app/message-template/{id} | 
-*MessageTemplateAPI* | [**GetMessageTemplateList**](docs/MessageTemplateAPI.md#getmessagetemplatelist) | **Get** /api/app/message-template | 
-*MessageTemplateAPI* | [**UpdateMessageTemplate**](docs/MessageTemplateAPI.md#updatemessagetemplate) | **Put** /api/app/message-template/{id} | 
-*MessageTemplateReleaseAPI* | [**CreateMessageTemplateRelease**](docs/MessageTemplateReleaseAPI.md#createmessagetemplaterelease) | **Post** /api/app/message-template-release | 
-*MessageTemplateReleaseAPI* | [**GetByTemplateNameAndVersion**](docs/MessageTemplateReleaseAPI.md#getbytemplatenameandversion) | **Get** /by-template | 
-*MessageTemplateReleaseAPI* | [**GetMessageTemplateReleaseById**](docs/MessageTemplateReleaseAPI.md#getmessagetemplatereleasebyid) | **Get** /api/app/message-template-release/{id} | 
-*MessageTemplateReleaseAPI* | [**GetMessageTemplateReleaseList**](docs/MessageTemplateReleaseAPI.md#getmessagetemplatereleaselist) | **Get** /api/app/message-template-release | 
+*AppUserScoreAPI* | [**CreateAppUserScore**](docs/AppUserScoreAPI.md#createappuserscore) | **Post** /api/app/app-user-score |
+*AuthCenterAPI* | [**GetAuthorizedApps**](docs/AuthCenterAPI.md#getauthorizedapps) | **Get** /api/app/auth-center/authorized-apps |
+*AuthCenterAPI* | [**GetSummary**](docs/AuthCenterAPI.md#getsummary) | **Get** /api/app/auth-center/summary |
+*AuthCenterAPI* | [**RevokeAuthorizedApp**](docs/AuthCenterAPI.md#revokeauthorizedapp) | **Post** /api/app/auth-center/revoke-authorized-app/{clientId} |
+*AvatarAPI* | [**CreateAvatar**](docs/AvatarAPI.md#createavatar) | **Post** /api/app/avatar |
+*AvatarAPI* | [**GetCredentials**](docs/AvatarAPI.md#getcredentials) | **Get** /api/app/avatar/credentials |
+*BuildRecordAPI* | [**CreateBuildRecord**](docs/BuildRecordAPI.md#createbuildrecord) | **Post** /api/app/build-record |
+*BuildRecordAPI* | [**DeleteBuildRecordById**](docs/BuildRecordAPI.md#deletebuildrecordbyid) | **Delete** /api/app/build-record/{id} |
+*BuildRecordAPI* | [**GetBuildRecordById**](docs/BuildRecordAPI.md#getbuildrecordbyid) | **Get** /api/app/build-record/{id} |
+*BuildRecordAPI* | [**GetBuildRecordList**](docs/BuildRecordAPI.md#getbuildrecordlist) | **Get** /api/app/build-record |
+*BuildRecordAPI* | [**GetByCiBuildId**](docs/BuildRecordAPI.md#getbycibuildid) | **Get** /api/app/build-record/by-ci-build-id/{ciBuildId} |
+*BuildRecordAPI* | [**GetLatestGetApiAppBuildRecordLatestAppId**](docs/BuildRecordAPI.md#getlatestgetapiappbuildrecordlatestappid) | **Get** /api/app/build-record/latest/{appId} |
+*BuildRecordAPI* | [**MarkAsBuilding**](docs/BuildRecordAPI.md#markasbuilding) | **Post** /api/app/build-record/{id}/mark-as-building |
+*BuildRecordAPI* | [**MarkAsCanceledPostApiAppBuildRecordIdMarkAsCanceled**](docs/BuildRecordAPI.md#markascanceledpostapiappbuildrecordidmarkascanceled) | **Post** /api/app/build-record/{id}/mark-as-canceled |
+*BuildRecordAPI* | [**MarkAsFailedPostApiAppBuildRecordIdMarkAsFailed**](docs/BuildRecordAPI.md#markasfailedpostapiappbuildrecordidmarkasfailed) | **Post** /api/app/build-record/{id}/mark-as-failed |
+*BuildRecordAPI* | [**MarkAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded**](docs/BuildRecordAPI.md#markassucceededpostapiappbuildrecordidmarkassucceeded) | **Post** /api/app/build-record/{id}/mark-as-succeeded |
+*BuildRecordAPI* | [**UpdateBuildRecord**](docs/BuildRecordAPI.md#updatebuildrecord) | **Put** /api/app/build-record/{id} |
+*CreditAPI* | [**CreateAlipayOrderPostApiAppCreditAlipayOrder**](docs/CreditAPI.md#createalipayorderpostapiappcreditalipayorder) | **Post** /api/app/credit/alipay-order |
+*CreditAPI* | [**CreatePayPalOrderPostApiAppCreditPayPalOrder**](docs/CreditAPI.md#createpaypalorderpostapiappcreditpaypalorder) | **Post** /api/app/credit/pay-pal-order |
+*CreditAPI* | [**GetAccountGetApiAppCreditAccountAppId**](docs/CreditAPI.md#getaccountgetapiappcreditaccountappid) | **Get** /api/app/credit/account/{appId} |
+*CreditAPI* | [**GetPackages**](docs/CreditAPI.md#getpackages) | **Get** /api/app/credit/packages/{appId} |
+*CreditAPI* | [**Refund**](docs/CreditAPI.md#refund) | **Post** /api/app/credit/refund |
+*CreditAPI* | [**Spend**](docs/CreditAPI.md#spend) | **Post** /api/app/credit/spend |
+*DeployRecordAPI* | [**CreateDeployRecord**](docs/DeployRecordAPI.md#createdeployrecord) | **Post** /api/app/deploy-record |
+*DeployRecordAPI* | [**DeleteDeployRecordById**](docs/DeployRecordAPI.md#deletedeployrecordbyid) | **Delete** /api/app/deploy-record/{id} |
+*DeployRecordAPI* | [**GetByCiDeployId**](docs/DeployRecordAPI.md#getbycideployid) | **Get** /api/app/deploy-record/by-ci-deploy-id/{ciDeployId} |
+*DeployRecordAPI* | [**GetDeployRecordById**](docs/DeployRecordAPI.md#getdeployrecordbyid) | **Get** /api/app/deploy-record/{id} |
+*DeployRecordAPI* | [**GetDeployRecordList**](docs/DeployRecordAPI.md#getdeployrecordlist) | **Get** /api/app/deploy-record |
+*DeployRecordAPI* | [**GetLatestGetApiAppDeployRecordLatestAppId**](docs/DeployRecordAPI.md#getlatestgetapiappdeployrecordlatestappid) | **Get** /api/app/deploy-record/latest/{appId} |
+*DeployRecordAPI* | [**GetListByBuildRecordId**](docs/DeployRecordAPI.md#getlistbybuildrecordid) | **Get** /api/app/deploy-record/by-build-record-id/{buildRecordId} |
+*DeployRecordAPI* | [**MarkAsCanceledPostApiAppDeployRecordIdMarkAsCanceled**](docs/DeployRecordAPI.md#markascanceledpostapiappdeployrecordidmarkascanceled) | **Post** /api/app/deploy-record/{id}/mark-as-canceled |
+*DeployRecordAPI* | [**MarkAsDeploying**](docs/DeployRecordAPI.md#markasdeploying) | **Post** /api/app/deploy-record/{id}/mark-as-deploying |
+*DeployRecordAPI* | [**MarkAsFailedPostApiAppDeployRecordIdMarkAsFailed**](docs/DeployRecordAPI.md#markasfailedpostapiappdeployrecordidmarkasfailed) | **Post** /api/app/deploy-record/{id}/mark-as-failed |
+*DeployRecordAPI* | [**MarkAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded**](docs/DeployRecordAPI.md#markassucceededpostapiappdeployrecordidmarkassucceeded) | **Post** /api/app/deploy-record/{id}/mark-as-succeeded |
+*DeployRecordAPI* | [**UpdateDeployRecord**](docs/DeployRecordAPI.md#updatedeployrecord) | **Put** /api/app/deploy-record/{id} |
+*DeviceAPI* | [**Bind**](docs/DeviceAPI.md#bind) | **Post** /api/app/device/bind |
+*DeviceAPI* | [**GetByToken**](docs/DeviceAPI.md#getbytoken) | **Get** /api/app/device/by-token |
+*DeviceAPI* | [**GetDeviceById**](docs/DeviceAPI.md#getdevicebyid) | **Get** /api/app/device/{id} |
+*DeviceAPI* | [**GetDeviceList**](docs/DeviceAPI.md#getdevicelist) | **Get** /api/app/device |
+*DeviceAPI* | [**Logout**](docs/DeviceAPI.md#logout) | **Post** /api/app/device/logout |
+*DeviceAPI* | [**RefreshDevice**](docs/DeviceAPI.md#refreshdevice) | **Post** /api/app/device/refresh-device |
+*DeviceAPI* | [**Remove**](docs/DeviceAPI.md#remove) | **Delete** /api/app/device |
+*DynamicClaimsAPI* | [**Refresh**](docs/DynamicClaimsAPI.md#refresh) | **Post** /api/account/dynamic-claims/refresh |
+*EmailSettingsAPI* | [**GetEmailSettings**](docs/EmailSettingsAPI.md#getemailsettings) | **Get** /api/setting-management/emailing |
+*EmailSettingsAPI* | [**SendTestEmail**](docs/EmailSettingsAPI.md#sendtestemail) | **Post** /api/setting-management/emailing/send-test-email |
+*EmailSettingsAPI* | [**UpdateEmailSettings**](docs/EmailSettingsAPI.md#updateemailsettings) | **Post** /api/setting-management/emailing |
+*FeaturesAPI* | [**DeleteFeatures**](docs/FeaturesAPI.md#deletefeatures) | **Delete** /api/feature-management/features |
+*FeaturesAPI* | [**GetFeatures**](docs/FeaturesAPI.md#getfeatures) | **Get** /api/feature-management/features |
+*FeaturesAPI* | [**UpdateFeatures**](docs/FeaturesAPI.md#updatefeatures) | **Put** /api/feature-management/features |
+*MessageAPI* | [**Publish**](docs/MessageAPI.md#publish) | **Post** /api/app/message/publish |
+*MessageAPI* | [**Recall**](docs/MessageAPI.md#recall) | **Post** /api/app/message/recall |
+*MessageAPI* | [**Subscribe**](docs/MessageAPI.md#subscribe) | **Post** /api/app/message/subscribe |
+*MessageAPI* | [**Unsubscribe**](docs/MessageAPI.md#unsubscribe) | **Post** /api/app/message/unsubscribe |
+*MessageSourceAPI* | [**CreateMessageSource**](docs/MessageSourceAPI.md#createmessagesource) | **Post** /api/app/message-source |
+*MessageSourceAPI* | [**DeleteMessageSourceById**](docs/MessageSourceAPI.md#deletemessagesourcebyid) | **Delete** /api/app/message-source/{id} |
+*MessageSourceAPI* | [**GetMessageSourceById**](docs/MessageSourceAPI.md#getmessagesourcebyid) | **Get** /api/app/message-source/{id} |
+*MessageSourceAPI* | [**GetMessageSourceList**](docs/MessageSourceAPI.md#getmessagesourcelist) | **Get** /api/app/message-source |
+*MessageSourceAPI* | [**UpdateMessageSource**](docs/MessageSourceAPI.md#updatemessagesource) | **Put** /api/app/message-source/{id} |
+*MessageSourceCategoryAPI* | [**GetMessageSourceCategoryList**](docs/MessageSourceCategoryAPI.md#getmessagesourcecategorylist) | **Get** /api/app/message-source-category |
+*MessageSourceRouteAPI* | [**CreateMessageSourceRoute**](docs/MessageSourceRouteAPI.md#createmessagesourceroute) | **Post** /api/app/message-source-route |
+*MessageSourceRouteAPI* | [**DeleteMessageSourceRouteById**](docs/MessageSourceRouteAPI.md#deletemessagesourceroutebyid) | **Delete** /api/app/message-source-route/{id} |
+*MessageSourceRouteAPI* | [**GetMessageSourceRouteById**](docs/MessageSourceRouteAPI.md#getmessagesourceroutebyid) | **Get** /api/app/message-source-route/{id} |
+*MessageSourceRouteAPI* | [**GetMessageSourceRouteList**](docs/MessageSourceRouteAPI.md#getmessagesourceroutelist) | **Get** /api/app/message-source-route |
+*MessageSourceRouteAPI* | [**UpdateMessageSourceRoute**](docs/MessageSourceRouteAPI.md#updatemessagesourceroute) | **Put** /api/app/message-source-route/{id} |
+*MessageSourceRouteSubAPI* | [**CreateMessageSourceRouteSub**](docs/MessageSourceRouteSubAPI.md#createmessagesourceroutesub) | **Post** /api/app/message-source-route-sub |
+*MessageSourceRouteSubAPI* | [**DeleteMessageSourceRouteSubById**](docs/MessageSourceRouteSubAPI.md#deletemessagesourceroutesubbyid) | **Delete** /api/app/message-source-route-sub/{id} |
+*MessageSourceRouteSubAPI* | [**GetMessageSourceRouteSubById**](docs/MessageSourceRouteSubAPI.md#getmessagesourceroutesubbyid) | **Get** /api/app/message-source-route-sub/{id} |
+*MessageSourceRouteSubAPI* | [**GetMessageSourceRouteSubList**](docs/MessageSourceRouteSubAPI.md#getmessagesourceroutesublist) | **Get** /api/app/message-source-route-sub |
+*MessageSourceRouteSubAPI* | [**UpdateMessageSourceRouteSub**](docs/MessageSourceRouteSubAPI.md#updatemessagesourceroutesub) | **Put** /api/app/message-source-route-sub/{id} |
+*MessageTemplateAPI* | [**CreateMessageTemplate**](docs/MessageTemplateAPI.md#createmessagetemplate) | **Post** /api/app/message-template |
+*MessageTemplateAPI* | [**DeleteMessageTemplateById**](docs/MessageTemplateAPI.md#deletemessagetemplatebyid) | **Delete** /api/app/message-template/{id} |
+*MessageTemplateAPI* | [**GetMessageTemplateById**](docs/MessageTemplateAPI.md#getmessagetemplatebyid) | **Get** /api/app/message-template/{id} |
+*MessageTemplateAPI* | [**GetMessageTemplateList**](docs/MessageTemplateAPI.md#getmessagetemplatelist) | **Get** /api/app/message-template |
+*MessageTemplateAPI* | [**UpdateMessageTemplate**](docs/MessageTemplateAPI.md#updatemessagetemplate) | **Put** /api/app/message-template/{id} |
+*MessageTemplateReleaseAPI* | [**CreateMessageTemplateRelease**](docs/MessageTemplateReleaseAPI.md#createmessagetemplaterelease) | **Post** /api/app/message-template-release |
+*MessageTemplateReleaseAPI* | [**GetByTemplateNameAndVersion**](docs/MessageTemplateReleaseAPI.md#getbytemplatenameandversion) | **Get** /by-template |
+*MessageTemplateReleaseAPI* | [**GetMessageTemplateReleaseById**](docs/MessageTemplateReleaseAPI.md#getmessagetemplatereleasebyid) | **Get** /api/app/message-template-release/{id} |
+*MessageTemplateReleaseAPI* | [**GetMessageTemplateReleaseList**](docs/MessageTemplateReleaseAPI.md#getmessagetemplatereleaselist) | **Get** /api/app/message-template-release |
 *NotificationAPI* | [**Bark**](docs/NotificationAPI.md#bark) | **Get** /api/app/notification/bark/{apiKey}/{message} | Bark 推送，兼容 Bark 推送协议  TODO: 验证 API KEY 功能, 添加[个人访问令牌]功能
-*NotificationAPI* | [**GetNotificationList**](docs/NotificationAPI.md#getnotificationlist) | **Get** /api/app/notification | 
-*NotificationAPI* | [**Push**](docs/NotificationAPI.md#push) | **Post** /api/app/notification/push | 
-*OpenAiCompatibleChatAPI* | [**CreatePostApiAiV1ChatCompletions**](docs/OpenAiCompatibleChatAPI.md#createpostapiaiv1chatcompletions) | **Post** /api/ai/v1/chat/completions | 
-*OpsCryptoAPI* | [**GetVault**](docs/OpsCryptoAPI.md#getvault) | **Get** /api/app/ops-crypto/vault | 
-*OpsCryptoAPI* | [**PutVault**](docs/OpsCryptoAPI.md#putvault) | **Put** /api/app/ops-crypto/vault | 
-*PermissionsAPI* | [**GetPermissions**](docs/PermissionsAPI.md#getpermissions) | **Get** /api/permission-management/permissions | 
-*PermissionsAPI* | [**UpdatePermissions**](docs/PermissionsAPI.md#updatepermissions) | **Put** /api/permission-management/permissions | 
-*ProfileAPI* | [**ChangePassword**](docs/ProfileAPI.md#changepassword) | **Post** /api/account/my-profile/change-password | 
-*ProfileAPI* | [**GetProfile**](docs/ProfileAPI.md#getprofile) | **Get** /api/account/my-profile | 
-*ProfileAPI* | [**UpdateProfile**](docs/ProfileAPI.md#updateprofile) | **Put** /api/account/my-profile | 
-*RemotePairingAPI* | [**IssueAssertion**](docs/RemotePairingAPI.md#issueassertion) | **Post** /api/app/remote-pairing/issue-assertion | 
-*RemotePairingAPI* | [**VerifyAssertion**](docs/RemotePairingAPI.md#verifyassertion) | **Post** /api/app/remote-pairing/verify-assertion | 
-*ResponsesAPI* | [**CancelResponse**](docs/ResponsesAPI.md#cancelresponse) | **Post** /api/ai/v1/responses/{id}/cancel | 
-*ResponsesAPI* | [**CancelResponseLegacy**](docs/ResponsesAPI.md#cancelresponselegacy) | **Post** /api/ai/openai/responses/{id}/cancel | 
-*ResponsesAPI* | [**CompactResponse**](docs/ResponsesAPI.md#compactresponse) | **Post** /api/ai/v1/responses/compact | 
-*ResponsesAPI* | [**CompactResponseLegacy**](docs/ResponsesAPI.md#compactresponselegacy) | **Post** /api/ai/openai/responses/compact | 
-*ResponsesAPI* | [**CountResponseInputTokens**](docs/ResponsesAPI.md#countresponseinputtokens) | **Post** /api/ai/v1/responses/input_tokens | 
-*ResponsesAPI* | [**CountResponseInputTokensLegacy**](docs/ResponsesAPI.md#countresponseinputtokenslegacy) | **Post** /api/ai/openai/responses/input_tokens | 
-*ResponsesAPI* | [**CreateResponse**](docs/ResponsesAPI.md#createresponse) | **Post** /api/ai/v1/responses | 
-*ResponsesAPI* | [**CreateResponseLegacy**](docs/ResponsesAPI.md#createresponselegacy) | **Post** /api/ai/openai/responses | 
-*ResponsesAPI* | [**DeleteResponse**](docs/ResponsesAPI.md#deleteresponse) | **Delete** /api/ai/v1/responses/{id} | 
-*ResponsesAPI* | [**DeleteResponseLegacy**](docs/ResponsesAPI.md#deleteresponselegacy) | **Delete** /api/ai/openai/responses/{id} | 
-*ResponsesAPI* | [**ListResponseInputItems**](docs/ResponsesAPI.md#listresponseinputitems) | **Get** /api/ai/v1/responses/{id}/input_items | 
-*ResponsesAPI* | [**ListResponseInputItemsLegacy**](docs/ResponsesAPI.md#listresponseinputitemslegacy) | **Get** /api/ai/openai/responses/{id}/input_items | 
-*ResponsesAPI* | [**RetrieveResponse**](docs/ResponsesAPI.md#retrieveresponse) | **Get** /api/ai/v1/responses/{id} | 
-*ResponsesAPI* | [**RetrieveResponseLegacy**](docs/ResponsesAPI.md#retrieveresponselegacy) | **Get** /api/ai/openai/responses/{id} | 
-*RoleAPI* | [**CreateIdentityRole**](docs/RoleAPI.md#createidentityrole) | **Post** /api/identity/roles | 
-*RoleAPI* | [**DeleteIdentityRoleById**](docs/RoleAPI.md#deleteidentityrolebyid) | **Delete** /api/identity/roles/{id} | 
-*RoleAPI* | [**GetAllList**](docs/RoleAPI.md#getalllist) | **Get** /api/identity/roles/all | 
-*RoleAPI* | [**GetIdentityRoleById**](docs/RoleAPI.md#getidentityrolebyid) | **Get** /api/identity/roles/{id} | 
-*RoleAPI* | [**GetIdentityRoleList**](docs/RoleAPI.md#getidentityrolelist) | **Get** /api/identity/roles | 
-*RoleAPI* | [**UpdateIdentityRole**](docs/RoleAPI.md#updateidentityrole) | **Put** /api/identity/roles/{id} | 
+*NotificationAPI* | [**GetNotificationList**](docs/NotificationAPI.md#getnotificationlist) | **Get** /api/app/notification |
+*NotificationAPI* | [**Push**](docs/NotificationAPI.md#push) | **Post** /api/app/notification/push |
+*OpsCryptoAPI* | [**GetVault**](docs/OpsCryptoAPI.md#getvault) | **Get** /api/app/ops-crypto/vault |
+*OpsCryptoAPI* | [**PutVault**](docs/OpsCryptoAPI.md#putvault) | **Put** /api/app/ops-crypto/vault |
+*PermissionsAPI* | [**GetPermissions**](docs/PermissionsAPI.md#getpermissions) | **Get** /api/permission-management/permissions |
+*PermissionsAPI* | [**UpdatePermissions**](docs/PermissionsAPI.md#updatepermissions) | **Put** /api/permission-management/permissions |
+*ProfileAPI* | [**ChangePassword**](docs/ProfileAPI.md#changepassword) | **Post** /api/account/my-profile/change-password |
+*ProfileAPI* | [**GetProfile**](docs/ProfileAPI.md#getprofile) | **Get** /api/account/my-profile |
+*ProfileAPI* | [**UpdateProfile**](docs/ProfileAPI.md#updateprofile) | **Put** /api/account/my-profile |
+*RemotePairingAPI* | [**IssueAssertion**](docs/RemotePairingAPI.md#issueassertion) | **Post** /api/app/remote-pairing/issue-assertion |
+*RemotePairingAPI* | [**VerifyAssertion**](docs/RemotePairingAPI.md#verifyassertion) | **Post** /api/app/remote-pairing/verify-assertion |
+*RoleAPI* | [**CreateIdentityRole**](docs/RoleAPI.md#createidentityrole) | **Post** /api/identity/roles |
+*RoleAPI* | [**DeleteIdentityRoleById**](docs/RoleAPI.md#deleteidentityrolebyid) | **Delete** /api/identity/roles/{id} |
+*RoleAPI* | [**GetAllList**](docs/RoleAPI.md#getalllist) | **Get** /api/identity/roles/all |
+*RoleAPI* | [**GetIdentityRoleById**](docs/RoleAPI.md#getidentityrolebyid) | **Get** /api/identity/roles/{id} |
+*RoleAPI* | [**GetIdentityRoleList**](docs/RoleAPI.md#getidentityrolelist) | **Get** /api/identity/roles |
+*RoleAPI* | [**UpdateIdentityRole**](docs/RoleAPI.md#updateidentityrole) | **Put** /api/identity/roles/{id} |
 *StorageObjectAPI* | [**GetCdnDomains**](docs/StorageObjectAPI.md#getcdndomains) | **Get** /api/app/storage-object/cdn-domains | 获取所有 CDN Domain 配置
-*StorageObjectAPI* | [**GetFileCredential**](docs/StorageObjectAPI.md#getfilecredential) | **Get** /api/app/storage-object/file-credential | 
-*StorageObjectAPI* | [**GetUserStorages**](docs/StorageObjectAPI.md#getuserstorages) | **Get** /api/app/storage-object/user-storages | 
-*StorageObjectAPI* | [**PreSignUrl**](docs/StorageObjectAPI.md#presignurl) | **Post** /api/app/storage-object/pre-sign-url | 
+*StorageObjectAPI* | [**GetFileCredential**](docs/StorageObjectAPI.md#getfilecredential) | **Get** /api/app/storage-object/file-credential |
+*StorageObjectAPI* | [**GetUserStorages**](docs/StorageObjectAPI.md#getuserstorages) | **Get** /api/app/storage-object/user-storages |
+*StorageObjectAPI* | [**PreSignUrl**](docs/StorageObjectAPI.md#presignurl) | **Post** /api/app/storage-object/pre-sign-url |
 *SubscriptionAPI* | [**AlipayNotify**](docs/SubscriptionAPI.md#alipaynotify) | **Post** /api/app/alipay/notify | 支付宝异步通知。成功时必须返回纯文本 success，否则支付宝会重试通知。
 *SubscriptionAPI* | [**AppleNotifications**](docs/SubscriptionAPI.md#applenotifications) | **Post** /api/app/subscription/apple-notifications | 苹果订阅 Callback 地址
 *SubscriptionAPI* | [**CapturePayPalOrder**](docs/SubscriptionAPI.md#capturepaypalorder) | **Post** /api/app/subscription/capture-pay-pal-order | 捕获 PayPal 订单并完成订阅
 *SubscriptionAPI* | [**CreateAlipayOrderPostApiAppSubscriptionAlipayOrder**](docs/SubscriptionAPI.md#createalipayorderpostapiappsubscriptionalipayorder) | **Post** /api/app/subscription/alipay-order | 创建支付宝一次性支付订单
-*SubscriptionAPI* | [**CreateOrder**](docs/SubscriptionAPI.md#createorder) | **Post** /api/app/subscription/order | 
+*SubscriptionAPI* | [**CreateOrder**](docs/SubscriptionAPI.md#createorder) | **Post** /api/app/subscription/order |
 *SubscriptionAPI* | [**CreatePayPalOrderPostApiAppSubscriptionPayPalOrder**](docs/SubscriptionAPI.md#createpaypalorderpostapiappsubscriptionpaypalorder) | **Post** /api/app/subscription/pay-pal-order | 创建 PayPal 订单
 *SubscriptionAPI* | [**GetPlanPrices**](docs/SubscriptionAPI.md#getplanprices) | **Get** /api/app/subscription/plan-prices/by-app-id/{appId} | 获取应用对客户端开放的订阅售卖价格。
 *SubscriptionAPI* | [**GetStoreProducts**](docs/SubscriptionAPI.md#getstoreproducts) | **Get** /api/app/subscription/store-products/by-app-id/{appId} | 获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
-*SubscriptionAPI* | [**GetSubscriptionById**](docs/SubscriptionAPI.md#getsubscriptionbyid) | **Get** /api/app/subscription | 
+*SubscriptionAPI* | [**GetSubscriptionById**](docs/SubscriptionAPI.md#getsubscriptionbyid) | **Get** /api/app/subscription |
 *SubscriptionAPI* | [**GetSubscriptionList**](docs/SubscriptionAPI.md#getsubscriptionlist) | **Get** /api/app/subscription/list | 获取用户订阅列表，每个应用只返回最新的一条订阅记录（含有效和已过期的）
 *SubscriptionAPI* | [**PayPalReturn**](docs/SubscriptionAPI.md#paypalreturn) | **Get** /api/app/paypal/notify | PayPal 浏览器审批后的返回入口。用于桌面/移动 App 跳转外部浏览器时免网站登录完成确认。
 *SubscriptionAPI* | [**PayPalWebhook**](docs/SubscriptionAPI.md#paypalwebhook) | **Post** /api/app/paypal/notify | PayPal webhook. Configure PayPal:WebhookId to enable signature verification.
-*SubscriptionAPI* | [**VerifyReceipt**](docs/SubscriptionAPI.md#verifyreceipt) | **Post** /api/app/subscription/verify-receipt | 
-*SubscriptionBillingAdminAPI* | [**CreatePlanPrice**](docs/SubscriptionBillingAdminAPI.md#createplanprice) | **Post** /api/app/subscription-billing-admin/plan-prices | 
-*SubscriptionBillingAdminAPI* | [**DeletePlanPrice**](docs/SubscriptionBillingAdminAPI.md#deleteplanprice) | **Delete** /api/app/subscription-billing-admin/plan-prices/{id} | 
-*SubscriptionBillingAdminAPI* | [**DeleteStoreMapping**](docs/SubscriptionBillingAdminAPI.md#deletestoremapping) | **Delete** /api/app/subscription-billing-admin/store-mappings/{id} | 
-*SubscriptionBillingAdminAPI* | [**GetPlanPrice**](docs/SubscriptionBillingAdminAPI.md#getplanprice) | **Get** /api/app/subscription-billing-admin/plan-prices/{id} | 
-*SubscriptionBillingAdminAPI* | [**GetPlanPricesByAppId**](docs/SubscriptionBillingAdminAPI.md#getplanpricesbyappid) | **Get** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} | 
-*SubscriptionBillingAdminAPI* | [**GetPlanPricesByPricingId**](docs/SubscriptionBillingAdminAPI.md#getplanpricesbypricingid) | **Get** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} | 
-*SubscriptionBillingAdminAPI* | [**GetStoreMappingsByAppId**](docs/SubscriptionBillingAdminAPI.md#getstoremappingsbyappid) | **Get** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} | 
-*SubscriptionBillingAdminAPI* | [**GetStoreMappingsByPlanPriceId**](docs/SubscriptionBillingAdminAPI.md#getstoremappingsbyplanpriceid) | **Get** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} | 
-*SubscriptionBillingAdminAPI* | [**UpdatePlanPrice**](docs/SubscriptionBillingAdminAPI.md#updateplanprice) | **Put** /api/app/subscription-billing-admin/plan-prices/{id} | 
-*SubscriptionBillingAdminAPI* | [**UpsertStoreMapping**](docs/SubscriptionBillingAdminAPI.md#upsertstoremapping) | **Post** /api/app/subscription-billing-admin/store-mappings/upsert | 
-*TenantAPI* | [**CreateTenant**](docs/TenantAPI.md#createtenant) | **Post** /api/multi-tenancy/tenants | 
-*TenantAPI* | [**DeleteDefaultConnectionString**](docs/TenantAPI.md#deletedefaultconnectionstring) | **Delete** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-*TenantAPI* | [**DeleteTenantById**](docs/TenantAPI.md#deletetenantbyid) | **Delete** /api/multi-tenancy/tenants/{id} | 
-*TenantAPI* | [**GetDefaultConnectionString**](docs/TenantAPI.md#getdefaultconnectionstring) | **Get** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-*TenantAPI* | [**GetTenantById**](docs/TenantAPI.md#gettenantbyid) | **Get** /api/multi-tenancy/tenants/{id} | 
-*TenantAPI* | [**GetTenantList**](docs/TenantAPI.md#gettenantlist) | **Get** /api/multi-tenancy/tenants | 
-*TenantAPI* | [**UpdateDefaultConnectionString**](docs/TenantAPI.md#updatedefaultconnectionstring) | **Put** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-*TenantAPI* | [**UpdateTenant**](docs/TenantAPI.md#updatetenant) | **Put** /api/multi-tenancy/tenants/{id} | 
-*TimeZoneSettingsAPI* | [**GetTimeZoneSettings**](docs/TimeZoneSettingsAPI.md#gettimezonesettings) | **Get** /api/setting-management/timezone | 
-*TimeZoneSettingsAPI* | [**GetTimezones**](docs/TimeZoneSettingsAPI.md#gettimezones) | **Get** /api/setting-management/timezone/timezones | 
-*TimeZoneSettingsAPI* | [**UpdateTimeZoneSettings**](docs/TimeZoneSettingsAPI.md#updatetimezonesettings) | **Post** /api/setting-management/timezone | 
-*UserAPI* | [**CreateIdentityUser**](docs/UserAPI.md#createidentityuser) | **Post** /api/identity/users | 
-*UserAPI* | [**DeleteIdentityUserById**](docs/UserAPI.md#deleteidentityuserbyid) | **Delete** /api/identity/users/{id} | 
-*UserAPI* | [**FindByEmail**](docs/UserAPI.md#findbyemail) | **Get** /api/identity/users/by-email/{email} | 
-*UserAPI* | [**FindByUsernameGetApiIdentityUsersByUsernameUserName**](docs/UserAPI.md#findbyusernamegetapiidentityusersbyusernameusername) | **Get** /api/identity/users/by-username/{userName} | 
-*UserAPI* | [**GetAssignableRoles**](docs/UserAPI.md#getassignableroles) | **Get** /api/identity/users/assignable-roles | 
-*UserAPI* | [**GetIdentityUserById**](docs/UserAPI.md#getidentityuserbyid) | **Get** /api/identity/users/{id} | 
-*UserAPI* | [**GetIdentityUserList**](docs/UserAPI.md#getidentityuserlist) | **Get** /api/identity/users | 
-*UserAPI* | [**GetRoles**](docs/UserAPI.md#getroles) | **Get** /api/identity/users/{id}/roles | 
-*UserAPI* | [**UpdateIdentityUser**](docs/UserAPI.md#updateidentityuser) | **Put** /api/identity/users/{id} | 
-*UserAPI* | [**UpdateRoles**](docs/UserAPI.md#updateroles) | **Put** /api/identity/users/{id}/roles | 
-*UserLookupAPI* | [**FindById**](docs/UserLookupAPI.md#findbyid) | **Get** /api/identity/users/lookup/{id} | 
-*UserLookupAPI* | [**FindByUserNameGetApiIdentityUsersLookupByUsernameUserName**](docs/UserLookupAPI.md#findbyusernamegetapiidentityuserslookupbyusernameusername) | **Get** /api/identity/users/lookup/by-username/{userName} | 
-*UserLookupAPI* | [**GetCount**](docs/UserLookupAPI.md#getcount) | **Get** /api/identity/users/lookup/count | 
-*UserLookupAPI* | [**Search**](docs/UserLookupAPI.md#search) | **Get** /api/identity/users/lookup/search | 
-*VerificationAPI* | [**SendCode**](docs/VerificationAPI.md#sendcode) | **Post** /api/app/verification/send-code | 
-*VerificationAPI* | [**SendCodeAnonymous**](docs/VerificationAPI.md#sendcodeanonymous) | **Post** /api/app/verification/send-code-anonymous | 
+*SubscriptionAPI* | [**VerifyReceipt**](docs/SubscriptionAPI.md#verifyreceipt) | **Post** /api/app/subscription/verify-receipt |
+*SubscriptionBillingAdminAPI* | [**CreatePlanPrice**](docs/SubscriptionBillingAdminAPI.md#createplanprice) | **Post** /api/app/subscription-billing-admin/plan-prices |
+*SubscriptionBillingAdminAPI* | [**DeletePlanPrice**](docs/SubscriptionBillingAdminAPI.md#deleteplanprice) | **Delete** /api/app/subscription-billing-admin/plan-prices/{id} |
+*SubscriptionBillingAdminAPI* | [**DeleteStoreMapping**](docs/SubscriptionBillingAdminAPI.md#deletestoremapping) | **Delete** /api/app/subscription-billing-admin/store-mappings/{id} |
+*SubscriptionBillingAdminAPI* | [**GetPlanPrice**](docs/SubscriptionBillingAdminAPI.md#getplanprice) | **Get** /api/app/subscription-billing-admin/plan-prices/{id} |
+*SubscriptionBillingAdminAPI* | [**GetPlanPricesByAppId**](docs/SubscriptionBillingAdminAPI.md#getplanpricesbyappid) | **Get** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} |
+*SubscriptionBillingAdminAPI* | [**GetPlanPricesByPricingId**](docs/SubscriptionBillingAdminAPI.md#getplanpricesbypricingid) | **Get** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} |
+*SubscriptionBillingAdminAPI* | [**GetStoreMappingsByAppId**](docs/SubscriptionBillingAdminAPI.md#getstoremappingsbyappid) | **Get** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} |
+*SubscriptionBillingAdminAPI* | [**GetStoreMappingsByPlanPriceId**](docs/SubscriptionBillingAdminAPI.md#getstoremappingsbyplanpriceid) | **Get** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} |
+*SubscriptionBillingAdminAPI* | [**UpdatePlanPrice**](docs/SubscriptionBillingAdminAPI.md#updateplanprice) | **Put** /api/app/subscription-billing-admin/plan-prices/{id} |
+*SubscriptionBillingAdminAPI* | [**UpsertStoreMapping**](docs/SubscriptionBillingAdminAPI.md#upsertstoremapping) | **Post** /api/app/subscription-billing-admin/store-mappings/upsert |
+*TenantAPI* | [**CreateTenant**](docs/TenantAPI.md#createtenant) | **Post** /api/multi-tenancy/tenants |
+*TenantAPI* | [**DeleteDefaultConnectionString**](docs/TenantAPI.md#deletedefaultconnectionstring) | **Delete** /api/multi-tenancy/tenants/{id}/default-connection-string |
+*TenantAPI* | [**DeleteTenantById**](docs/TenantAPI.md#deletetenantbyid) | **Delete** /api/multi-tenancy/tenants/{id} |
+*TenantAPI* | [**GetDefaultConnectionString**](docs/TenantAPI.md#getdefaultconnectionstring) | **Get** /api/multi-tenancy/tenants/{id}/default-connection-string |
+*TenantAPI* | [**GetTenantById**](docs/TenantAPI.md#gettenantbyid) | **Get** /api/multi-tenancy/tenants/{id} |
+*TenantAPI* | [**GetTenantList**](docs/TenantAPI.md#gettenantlist) | **Get** /api/multi-tenancy/tenants |
+*TenantAPI* | [**UpdateDefaultConnectionString**](docs/TenantAPI.md#updatedefaultconnectionstring) | **Put** /api/multi-tenancy/tenants/{id}/default-connection-string |
+*TenantAPI* | [**UpdateTenant**](docs/TenantAPI.md#updatetenant) | **Put** /api/multi-tenancy/tenants/{id} |
+*TimeZoneSettingsAPI* | [**GetTimeZoneSettings**](docs/TimeZoneSettingsAPI.md#gettimezonesettings) | **Get** /api/setting-management/timezone |
+*TimeZoneSettingsAPI* | [**GetTimezones**](docs/TimeZoneSettingsAPI.md#gettimezones) | **Get** /api/setting-management/timezone/timezones |
+*TimeZoneSettingsAPI* | [**UpdateTimeZoneSettings**](docs/TimeZoneSettingsAPI.md#updatetimezonesettings) | **Post** /api/setting-management/timezone |
+*UserAPI* | [**CreateIdentityUser**](docs/UserAPI.md#createidentityuser) | **Post** /api/identity/users |
+*UserAPI* | [**DeleteIdentityUserById**](docs/UserAPI.md#deleteidentityuserbyid) | **Delete** /api/identity/users/{id} |
+*UserAPI* | [**FindByEmail**](docs/UserAPI.md#findbyemail) | **Get** /api/identity/users/by-email/{email} |
+*UserAPI* | [**FindByUsernameGetApiIdentityUsersByUsernameUserName**](docs/UserAPI.md#findbyusernamegetapiidentityusersbyusernameusername) | **Get** /api/identity/users/by-username/{userName} |
+*UserAPI* | [**GetAssignableRoles**](docs/UserAPI.md#getassignableroles) | **Get** /api/identity/users/assignable-roles |
+*UserAPI* | [**GetIdentityUserById**](docs/UserAPI.md#getidentityuserbyid) | **Get** /api/identity/users/{id} |
+*UserAPI* | [**GetIdentityUserList**](docs/UserAPI.md#getidentityuserlist) | **Get** /api/identity/users |
+*UserAPI* | [**GetRoles**](docs/UserAPI.md#getroles) | **Get** /api/identity/users/{id}/roles |
+*UserAPI* | [**UpdateIdentityUser**](docs/UserAPI.md#updateidentityuser) | **Put** /api/identity/users/{id} |
+*UserAPI* | [**UpdateRoles**](docs/UserAPI.md#updateroles) | **Put** /api/identity/users/{id}/roles |
+*UserLookupAPI* | [**FindById**](docs/UserLookupAPI.md#findbyid) | **Get** /api/identity/users/lookup/{id} |
+*UserLookupAPI* | [**FindByUserNameGetApiIdentityUsersLookupByUsernameUserName**](docs/UserLookupAPI.md#findbyusernamegetapiidentityuserslookupbyusernameusername) | **Get** /api/identity/users/lookup/by-username/{userName} |
+*UserLookupAPI* | [**GetCount**](docs/UserLookupAPI.md#getcount) | **Get** /api/identity/users/lookup/count |
+*UserLookupAPI* | [**Search**](docs/UserLookupAPI.md#search) | **Get** /api/identity/users/lookup/search |
+*VerificationAPI* | [**SendCode**](docs/VerificationAPI.md#sendcode) | **Post** /api/app/verification/send-code |
+*VerificationAPI* | [**SendCodeAnonymous**](docs/VerificationAPI.md#sendcodeanonymous) | **Post** /api/app/verification/send-code-anonymous |
 
 
 ## Documentation For Models
@@ -354,20 +324,6 @@ Class | Method | HTTP request | Description
  - [ActionApiDescriptionModel](docs/ActionApiDescriptionModel.md)
  - [AdjustCreditsDto](docs/AdjustCreditsDto.md)
  - [AdjustCreditsResultDto](docs/AdjustCreditsResultDto.md)
- - [AiCapability](docs/AiCapability.md)
- - [AiChatChoiceDto](docs/AiChatChoiceDto.md)
- - [AiChatCompletionDto](docs/AiChatCompletionDto.md)
- - [AiChatMessageDto](docs/AiChatMessageDto.md)
- - [AiModelDto](docs/AiModelDto.md)
- - [AiModelUsageDto](docs/AiModelUsageDto.md)
- - [AiProtocol](docs/AiProtocol.md)
- - [AiProviderDto](docs/AiProviderDto.md)
- - [AiProviderDtoPagedResultDto](docs/AiProviderDtoPagedResultDto.md)
- - [AiProviderType](docs/AiProviderType.md)
- - [AiUsageDto](docs/AiUsageDto.md)
- - [AiUsageRecordDto](docs/AiUsageRecordDto.md)
- - [AiUsageRecordDtoPagedResultDto](docs/AiUsageRecordDtoPagedResultDto.md)
- - [AiUsageSummaryDto](docs/AiUsageSummaryDto.md)
  - [ApiKeyCreateDto](docs/ApiKeyCreateDto.md)
  - [ApiKeyDto](docs/ApiKeyDto.md)
  - [ApiKeyDtoPagedResultDto](docs/ApiKeyDtoPagedResultDto.md)
@@ -440,6 +396,7 @@ Class | Method | HTTP request | Description
  - [ChangePasswordInput](docs/ChangePasswordInput.md)
  - [CheckSyncAuthResultDto](docs/CheckSyncAuthResultDto.md)
  - [ClockDto](docs/ClockDto.md)
+ - [ConfirmAccountEmailDto](docs/ConfirmAccountEmailDto.md)
  - [ControllerApiDescriptionModel](docs/ControllerApiDescriptionModel.md)
  - [ControllerInterfaceApiDescriptionModel](docs/ControllerInterfaceApiDescriptionModel.md)
  - [CreateAlipayOrderDto](docs/CreateAlipayOrderDto.md)
@@ -455,8 +412,6 @@ Class | Method | HTTP request | Description
  - [CreateMessageTemplateReleaseDto](docs/CreateMessageTemplateReleaseDto.md)
  - [CreateOpenIddictApplicationDto](docs/CreateOpenIddictApplicationDto.md)
  - [CreateOrGetSubscriptionOrderDto](docs/CreateOrGetSubscriptionOrderDto.md)
- - [CreateOrUpdateAiModelDto](docs/CreateOrUpdateAiModelDto.md)
- - [CreateOrUpdateAiProviderDto](docs/CreateOrUpdateAiProviderDto.md)
  - [CreateOrUpdateAppAssetDto](docs/CreateOrUpdateAppAssetDto.md)
  - [CreateOrUpdateAppDto](docs/CreateOrUpdateAppDto.md)
  - [CreateOrUpdateAppFeatureDto](docs/CreateOrUpdateAppFeatureDto.md)
@@ -507,23 +462,6 @@ Class | Method | HTTP request | Description
  - [FeatureDto](docs/FeatureDto.md)
  - [FeatureGroupDto](docs/FeatureGroupDto.md)
  - [FeatureProviderDto](docs/FeatureProviderDto.md)
- - [FelorxCompactedResponse](docs/FelorxCompactedResponse.md)
- - [FelorxDeletedResponse](docs/FelorxDeletedResponse.md)
- - [FelorxResponse](docs/FelorxResponse.md)
- - [FelorxResponseInput](docs/FelorxResponseInput.md)
- - [FelorxResponseInputItems](docs/FelorxResponseInputItems.md)
- - [FelorxResponseInputTokens](docs/FelorxResponseInputTokens.md)
- - [FelorxResponseToolChoice](docs/FelorxResponseToolChoice.md)
- - [FelorxResponseToolChoiceOneOf](docs/FelorxResponseToolChoiceOneOf.md)
- - [FelorxResponseUsage](docs/FelorxResponseUsage.md)
- - [FelorxResponseUsageInputTokensDetails](docs/FelorxResponseUsageInputTokensDetails.md)
- - [FelorxResponseUsageOutputTokensDetails](docs/FelorxResponseUsageOutputTokensDetails.md)
- - [FelorxResponsesCompactRequest](docs/FelorxResponsesCompactRequest.md)
- - [FelorxResponsesCountRequest](docs/FelorxResponsesCountRequest.md)
- - [FelorxResponsesCountRequestToolsInner](docs/FelorxResponsesCountRequestToolsInner.md)
- - [FelorxResponsesCreateRequest](docs/FelorxResponsesCreateRequest.md)
- - [FelorxResponsesError](docs/FelorxResponsesError.md)
- - [FelorxResponsesErrorError](docs/FelorxResponsesErrorError.md)
  - [FindTenantResultDto](docs/FindTenantResultDto.md)
  - [GetFeatureListResultDto](docs/GetFeatureListResultDto.md)
  - [GetPermissionListResultDto](docs/GetPermissionListResultDto.md)
@@ -570,7 +508,6 @@ Class | Method | HTTP request | Description
  - [NotificationInfoDto](docs/NotificationInfoDto.md)
  - [NotificationInfoDtoPagedResultDto](docs/NotificationInfoDtoPagedResultDto.md)
  - [ObjectExtensionsDto](docs/ObjectExtensionsDto.md)
- - [OpenAiChatCompletionRequestDto](docs/OpenAiChatCompletionRequestDto.md)
  - [OpsCryptoVaultDto](docs/OpsCryptoVaultDto.md)
  - [ParameterApiDescriptionModel](docs/ParameterApiDescriptionModel.md)
  - [PayPalWebhookProcessResultDto](docs/PayPalWebhookProcessResultDto.md)
@@ -596,9 +533,7 @@ Class | Method | HTTP request | Description
  - [SendPasswordResetCodeDto](docs/SendPasswordResetCodeDto.md)
  - [SendTestEmailInput](docs/SendTestEmailInput.md)
  - [SendVerificationCodeDto](docs/SendVerificationCodeDto.md)
- - [SetAiProviderEnabledDto](docs/SetAiProviderEnabledDto.md)
  - [SetAppLinkedSdksDto](docs/SetAppLinkedSdksDto.md)
- - [SetDefaultAiModelDto](docs/SetDefaultAiModelDto.md)
  - [StorageObjectCredentials](docs/StorageObjectCredentials.md)
  - [StoreProductMappingDto](docs/StoreProductMappingDto.md)
  - [SubBillingPeriod](docs/SubBillingPeriod.md)
@@ -611,7 +546,6 @@ Class | Method | HTTP request | Description
  - [TenantDto](docs/TenantDto.md)
  - [TenantDtoPagedResultDto](docs/TenantDtoPagedResultDto.md)
  - [TenantUpdateDto](docs/TenantUpdateDto.md)
- - [TestAiProviderDto](docs/TestAiProviderDto.md)
  - [TimeZone](docs/TimeZone.md)
  - [TimingDto](docs/TimingDto.md)
  - [TypeApiDescriptionModel](docs/TypeApiDescriptionModel.md)
@@ -669,6 +603,3 @@ Each of these functions takes a value of the given basic type and returns a poin
 * `PtrTime`
 
 ## Author
-
-
-

@@ -27773,6 +27773,7 @@ components:
       - Bin
       - Other
       - Fdu
+      - Fapp
       type: string
     AuthCenterSummaryDto:
       additionalProperties: false

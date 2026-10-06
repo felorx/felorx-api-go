@@ -38,6 +38,7 @@ const (
 	ARTIFACTTYPE_BIN ArtifactType = "Bin"
 	ARTIFACTTYPE_OTHER ArtifactType = "Other"
 	ARTIFACTTYPE_FDU ArtifactType = "Fdu"
+	ARTIFACTTYPE_FAPP ArtifactType = "Fapp"
 )
 
 // All allowed values of ArtifactType enum
@@ -60,6 +61,7 @@ var AllowedArtifactTypeEnumValues = []ArtifactType{
 	"Bin",
 	"Other",
 	"Fdu",
+	"Fapp",
 }
 
 func (v *ArtifactType) UnmarshalJSON(src []byte) error {

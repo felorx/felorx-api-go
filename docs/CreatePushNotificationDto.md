@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **NullableString** |  | [optional] 
-**Description** | Pointer to **NullableString** |  | [optional] 
-**Body** | Pointer to **NullableString** |  | [optional] 
-**Url** | Pointer to **NullableString** |  | [optional] 
-**FelorxId** | Pointer to **NullableString** |  | [optional] 
-**CreatorId** | Pointer to **NullableString** |  | [optional] 
-**App** | Pointer to **NullableString** |  | [optional] 
+**Title** | Pointer to **NullableString** |  | [optional]
+**Description** | Pointer to **NullableString** |  | [optional]
+**Body** | Pointer to **NullableString** |  | [optional]
+**Url** | Pointer to **NullableString** |  | [optional]
+**FelorxId** | Pointer to **NullableString** |  | [optional]
+**SenderId** | Pointer to **NullableString** |  | [optional]
+**CreatorId** | Pointer to **NullableString** |  | [optional]
+**App** | Pointer to **NullableString** |  | [optional]
 
 ## Methods
 
@@ -206,6 +207,41 @@ HasFelorxId returns a boolean if a field has been set.
 `func (o *CreatePushNotificationDto) UnsetFelorxId()`
 
 UnsetFelorxId ensures that no value is present for FelorxId, not even an explicit nil
+### GetSenderId
+
+`func (o *CreatePushNotificationDto) GetSenderId() string`
+
+GetSenderId returns the SenderId field if non-nil, zero value otherwise.
+
+### GetSenderIdOk
+
+`func (o *CreatePushNotificationDto) GetSenderIdOk() (*string, bool)`
+
+GetSenderIdOk returns a tuple with the SenderId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSenderId
+
+`func (o *CreatePushNotificationDto) SetSenderId(v string)`
+
+SetSenderId sets SenderId field to given value.
+
+### HasSenderId
+
+`func (o *CreatePushNotificationDto) HasSenderId() bool`
+
+HasSenderId returns a boolean if a field has been set.
+
+### SetSenderIdNil
+
+`func (o *CreatePushNotificationDto) SetSenderIdNil(b bool)`
+
+ SetSenderIdNil sets the value for SenderId to be an explicit nil
+
+### UnsetSenderId
+`func (o *CreatePushNotificationDto) UnsetSenderId()`
+
+UnsetSenderId ensures that no value is present for SenderId, not even an explicit nil
 ### GetCreatorId
 
 `func (o *CreatePushNotificationDto) GetCreatorId() string`

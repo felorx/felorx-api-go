@@ -29613,14 +29613,6 @@ components:
       type: object
     CreatePushNotificationDto:
       additionalProperties: false
-      example:
-        app: app
-        creatorId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        description: description
-        felorxId: 046b6c7f-0b8a-43b9-b35d-6489e6daee91
-        title: title
-        body: body
-        url: url
       properties:
         title:
           nullable: true
@@ -29635,6 +29627,9 @@ components:
           nullable: true
           type: string
         felorxId:
+          nullable: true
+          type: string
+        senderId:
           format: uuid
           nullable: true
           type: string

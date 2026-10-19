@@ -24,6 +24,7 @@ type CreatePushNotificationDto struct {
 	Body NullableString `json:"body,omitempty"`
 	Url NullableString `json:"url,omitempty"`
 	FelorxId NullableString `json:"felorxId,omitempty"`
+	SenderId NullableString `json:"senderId,omitempty"`
 	CreatorId NullableString `json:"creatorId,omitempty"`
 	App NullableString `json:"app,omitempty"`
 }
@@ -255,6 +256,48 @@ func (o *CreatePushNotificationDto) UnsetFelorxId() {
 	o.FelorxId.Unset()
 }
 
+// GetSenderId returns the SenderId field value if set, zero value otherwise (both if not set or set to explicit null).
+func (o *CreatePushNotificationDto) GetSenderId() string {
+	if o == nil || IsNil(o.SenderId.Get()) {
+		var ret string
+		return ret
+	}
+	return *o.SenderId.Get()
+}
+
+// GetSenderIdOk returns a tuple with the SenderId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *CreatePushNotificationDto) GetSenderIdOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.SenderId.Get(), o.SenderId.IsSet()
+}
+
+// HasSenderId returns a boolean if a field has been set.
+func (o *CreatePushNotificationDto) HasSenderId() bool {
+	if o != nil && o.SenderId.IsSet() {
+		return true
+	}
+
+	return false
+}
+
+// SetSenderId gets a reference to the given NullableString and assigns it to the SenderId field.
+func (o *CreatePushNotificationDto) SetSenderId(v string) {
+	o.SenderId.Set(&v)
+}
+// SetSenderIdNil sets the value for SenderId to be an explicit nil
+func (o *CreatePushNotificationDto) SetSenderIdNil() {
+	o.SenderId.Set(nil)
+}
+
+// UnsetSenderId ensures that no value is present for SenderId, not even an explicit nil
+func (o *CreatePushNotificationDto) UnsetSenderId() {
+	o.SenderId.Unset()
+}
+
 // GetCreatorId returns the CreatorId field value if set, zero value otherwise (both if not set or set to explicit null).
 func (o *CreatePushNotificationDto) GetCreatorId() string {
 	if o == nil || IsNil(o.CreatorId.Get()) {
@@ -363,6 +406,9 @@ func (o CreatePushNotificationDto) ToMap() (map[string]interface{}, error) {
 	}
 	if o.FelorxId.IsSet() {
 		toSerialize["felorxId"] = o.FelorxId.Get()
+	}
+	if o.SenderId.IsSet() {
+		toSerialize["senderId"] = o.SenderId.Get()
 	}
 	if o.CreatorId.IsSet() {
 		toSerialize["creatorId"] = o.CreatorId.Get()
